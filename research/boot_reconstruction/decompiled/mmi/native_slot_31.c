@@ -29,7 +29,7 @@ undefined4 native_slot_31(int param_1)
   puVar1 = DAT_002de4e4;
   if (param_1 == 7 || param_1 == 0xc) {
     *DAT_002de4e4 = 1;
-    iVar3 = FUN_00312f98((int)DAT_002de4d4);
+    iVar3 = gfx_stage_312f98((int)DAT_002de4d4);
     if (iVar3 != 0) {
       FUN_00312f48(DAT_002de4d4,DAT_002de4e8,(uint)*puVar1);
     }

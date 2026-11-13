@@ -65,7 +65,7 @@ undefined4 native_slot_48(ushort *param_1,undefined2 *param_2,undefined4 *param_
       }
       FUN_0031429c(DAT_002dd800,*param_1,param_1[1],param_1[2],param_1[3],(ushort)*DAT_002dd804,
                    *DAT_002dd808);
-      FUN_002e479c();
+      native_graphics_finish();
       uVar1 = 0;
     }
     else {

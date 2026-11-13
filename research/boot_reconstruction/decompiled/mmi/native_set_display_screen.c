@@ -29,7 +29,7 @@ undefined4 native_set_display_screen(short *param_1)
   *(undefined4 *)(iVar7 + 4) = uVar5;
   uVar6 = (*(code *)*puVar2)();
   uVar4 = (*(code *)*puVar3)();
-  FUN_00312ce8(iVar7,uVar6,uVar4);
+  gfx_context_dimensions(iVar7,uVar6,uVar4);
   return 0;
 }
 

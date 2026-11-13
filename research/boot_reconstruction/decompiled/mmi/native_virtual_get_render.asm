@@ -1,0 +1,6 @@
+002def30 ldr r3,[0x2def3c]
+002def34 ldr r0,[r3,#0x0]
+002def38 bx lr
+REFERENCES TO ENTRY:
+002df074 DATA
+002df0d4 DATA

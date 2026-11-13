@@ -49,8 +49,8 @@ LAB_002df14c:
   FUN_002de1ac();
   puVar5 = (ushort *)FUN_00313430();
   FUN_002dd110(puVar5);
-  FUN_00312fb0(DAT_002df204);
-  FUN_00312fb0(DAT_002df208);
+  gfx_context_initialize(DAT_002df204);
+  gfx_context_initialize(DAT_002df208);
   puVar1 = DAT_002df20c;
   *DAT_002df20c = 0;
   puVar1[1] = 0;
@@ -68,8 +68,8 @@ LAB_002df14c:
   puVar1[3] = 0;
   puVar1[4] = 0;
   puVar1[5] = 0;
-  FUN_00312ec8(DAT_002df204);
-  FUN_00312ec8(DAT_002df208);
+  gfx_context_reset(DAT_002df204);
+  gfx_context_reset(DAT_002df208);
   return 0;
 }
 

@@ -1,0 +1,528 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "checks": [
+    {
+      "address": "0x2e83a4",
+      "word": "0xe1d300b6"
+    },
+    {
+      "address": "0x2e83b4",
+      "word": "0xe1d300b4"
+    },
+    {
+      "address": "0x2e83c4",
+      "word": "0xe593000c"
+    },
+    {
+      "address": "0x2e83f4",
+      "word": "0xe583000c"
+    },
+    {
+      "address": "0x2e8400",
+      "word": "0xe5830000"
+    },
+    {
+      "address": "0x2e841c",
+      "word": "0x15832000"
+    },
+    {
+      "address": "0x2a400c",
+      "word": "0xe5940000"
+    },
+    {
+      "address": "0x2a4014",
+      "word": "0xe5845000"
+    },
+    {
+      "address": "0x2e47c4",
+      "word": "0xe203303b"
+    },
+    {
+      "address": "0x2e47c8",
+      "word": "0xe3530010"
+    },
+    {
+      "address": "0x2e47e4",
+      "word": "0x9afffff5"
+    },
+    {
+      "address": "0x2dd5bc",
+      "word": "0xe1d410f0"
+    },
+    {
+      "address": "0x2dd5c0",
+      "word": "0xe1d420f2"
+    },
+    {
+      "address": "0x2dd61c",
+      "word": "0xe3a00000"
+    },
+    {
+      "address": "0x2a1504",
+      "word": "0xe2411004"
+    },
+    {
+      "address": "0x2a1530",
+      "word": "0xe2433004"
+    },
+    {
+      "address": "0x2a1550",
+      "word": "0xe78c3002"
+    },
+    {
+      "address": "0x2a1560",
+      "word": "0xe3130601"
+    },
+    {
+      "address": "0x2c56cc",
+      "word": "0xe1a00084"
+    },
+    {
+      "address": "0x2c5718",
+      "word": "0xe18350b0"
+    },
+    {
+      "address": "0x2c5720",
+      "word": "0xe1c120b2"
+    },
+    {
+      "address": "0x2c5784",
+      "word": "0xe5832000"
+    },
+    {
+      "address": "0x294a64",
+      "word": "0xe15c0001"
+    },
+    {
+      "address": "0x294a68",
+      "word": "0xc59f3038"
+    },
+    {
+      "address": "0x2a43e4",
+      "word": "0x2a315c"
+    },
+    {
+      "address": "0x2a43f0",
+      "word": "0x2a3020"
+    },
+    {
+      "address": "0x55bc44",
+      "word": "0x34c384"
+    },
+    {
+      "address": "0x55bc48",
+      "word": "0x34c38c"
+    },
+    {
+      "address": "0x34c384",
+      "word": "0xe3a00d05"
+    },
+    {
+      "address": "0x34c38c",
+      "word": "0xe3a000f0"
+    },
+    {
+      "address": "0x514198",
+      "word": "0x42000"
+    },
+    {
+      "address": "0x5141b8",
+      "word": "0x588b60"
+    },
+    {
+      "address": "0x42f92c",
+      "word": "0xe3a00601"
+    },
+    {
+      "address": "0x42f930",
+      "word": "0xe2800010"
+    },
+    {
+      "address": "0x430a6c",
+      "word": "0xe2833003"
+    },
+    {
+      "address": "0x430a70",
+      "word": "0xe3c33003"
+    },
+    {
+      "address": "0x430a78",
+      "word": "0xe3a03601"
+    },
+    {
+      "address": "0x430a84",
+      "word": "0xe2800001"
+    },
+    {
+      "address": "0x430a8c",
+      "word": "0xe3a02014"
+    },
+    {
+      "address": "0x2a3fe0",
+      "direct_call": "0x2e83c0"
+    },
+    {
+      "address": "0x2a4010",
+      "direct_call": "0x2e83f0"
+    },
+    {
+      "address": "0x2a4020",
+      "direct_call": "0x2a3e98"
+    },
+    {
+      "address": "0x2a3ec4",
+      "direct_call": "0x339f50"
+    },
+    {
+      "address": "0x2a3ed4",
+      "direct_call": "0x339f64"
+    },
+    {
+      "address": "0x2a3170",
+      "direct_call": "0x339f3c"
+    },
+    {
+      "address": "0x2a4300",
+      "direct_call": "0x339c10"
+    },
+    {
+      "address": "0x2a4310",
+      "direct_call": "0x339cd8"
+    },
+    {
+      "address": "0x2dd5f0",
+      "direct_call": "0x313f40"
+    },
+    {
+      "address": "0x2dd5f4",
+      "direct_call": "0x2e479c"
+    },
+    {
+      "address": "0x2a1598",
+      "direct_call": "0x2a12b8"
+    },
+    {
+      "address": "0x2a2fac",
+      "direct_call": "0x339c10"
+    },
+    {
+      "address": "0x2a2fbc",
+      "direct_call": "0x339cd8"
+    },
+    {
+      "address": "0x2953f0",
+      "direct_call": "0x294f74"
+    },
+    {
+      "address": "0x2b9834",
+      "direct_call": "0x2e3724"
+    },
+    {
+      "address": "0x2b9890",
+      "direct_call": "0x2e3724"
+    },
+    {
+      "address": "0x42f934",
+      "direct_call": "0x2e3724"
+    },
+    {
+      "address": "0x42f970",
+      "direct_call": "0x2e3784"
+    },
+    {
+      "address": "0x430a90",
+      "direct_call": "0x2d6d60"
+    }
+  ],
+  "contracts": [
+    {
+      "slot": 4,
+      "offset": "0x10",
+      "target": "0x2dd20c",
+      "export": "native_paint",
+      "typedef": "mmi_paint_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 5,
+      "offset": "0x14",
+      "target": "0x2dd80c",
+      "export": "native_load_image",
+      "typedef": "mmi_load_image_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 6,
+      "offset": "0x18",
+      "target": "0x2dda44",
+      "export": "native_free_image",
+      "typedef": "mmi_free_image_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 14,
+      "offset": "0x38",
+      "target": "0x2df000",
+      "export": "native_init_graph",
+      "typedef": "mmi_init_graph_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 15,
+      "offset": "0x3c",
+      "target": "0x2dde1c",
+      "export": "native_set_rop",
+      "typedef": "mmi_set_rop_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 16,
+      "offset": "0x40",
+      "target": "0x2dde34",
+      "export": "native_get_rop",
+      "typedef": "mmi_get_rop_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 17,
+      "offset": "0x44",
+      "target": "0x2dde4c",
+      "export": "native_set_fg_color",
+      "typedef": "mmi_set_fg_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 18,
+      "offset": "0x48",
+      "target": "0x2ddea0",
+      "export": "native_get_fg_color",
+      "typedef": "mmi_get_fg_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 21,
+      "offset": "0x54",
+      "target": "0x2ddf70",
+      "export": "native_set_display_screen",
+      "typedef": "mmi_set_display_origin_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 22,
+      "offset": "0x58",
+      "target": "0x2de020",
+      "export": "native_get_display_rect",
+      "typedef": "mmi_get_display_rect_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 36,
+      "offset": "0x90",
+      "target": "0x2de06c",
+      "export": "native_set_framebuffer",
+      "typedef": "mmi_set_framebuffer_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 37,
+      "offset": "0x94",
+      "target": "0x2de124",
+      "export": "native_get_framebuffer_dimensions",
+      "typedef": "mmi_get_dimensions_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 41,
+      "offset": "0xa4",
+      "target": "0x2ddb80",
+      "export": "native_query_image",
+      "typedef": "mmi_query_image_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 42,
+      "offset": "0xa8",
+      "target": "0x2deab8",
+      "export": "native_enable_double_buffer",
+      "typedef": "mmi_enable_double_buffer_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 49,
+      "offset": "0xc4",
+      "target": "0x2dd52c",
+      "export": "native_fill_rect",
+      "typedef": "mmi_fill_rect_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 53,
+      "offset": "0xd4",
+      "target": "0x461e7c",
+      "export": "native_resource_init",
+      "typedef": "mmi_resource_init_fn",
+      "header": "mmi_native_resources_abi.h"
+    },
+    {
+      "slot": 54,
+      "offset": "0xd8",
+      "target": "0x461fb4",
+      "export": "native_resource_get",
+      "typedef": "mmi_resource_get_fn",
+      "header": "mmi_native_resources_abi.h"
+    },
+    {
+      "slot": 55,
+      "offset": "0xdc",
+      "target": "0x462118",
+      "export": "native_resource_play",
+      "typedef": "mmi_resource_play_fn",
+      "header": "mmi_native_resources_abi.h"
+    },
+    {
+      "slot": 56,
+      "offset": "0xe0",
+      "target": "0x4623bc",
+      "export": "native_resource_pause",
+      "typedef": "mmi_resource_pause_fn",
+      "header": "mmi_native_resources_abi.h"
+    },
+    {
+      "slot": 57,
+      "offset": "0xe4",
+      "target": "0x462448",
+      "export": "native_resource_resume",
+      "typedef": "mmi_resource_resume_fn",
+      "header": "mmi_native_resources_abi.h"
+    },
+    {
+      "slot": 58,
+      "offset": "0xe8",
+      "target": "0x4624d4",
+      "export": "native_resource_stop",
+      "typedef": "mmi_resource_stop_fn",
+      "header": "mmi_native_resources_abi.h"
+    },
+    {
+      "slot": 64,
+      "offset": "0x100",
+      "target": "0x2d2f7c",
+      "export": "native_get_key_input",
+      "typedef": "mmi_get_keys_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 76,
+      "offset": "0x130",
+      "target": "0x4619ac",
+      "export": "native_exit_control",
+      "typedef": "mmi_game_exit_control_fn",
+      "header": "mmi_native_resources_abi.h"
+    },
+    {
+      "slot": 79,
+      "offset": "0x13c",
+      "target": "0x462a74",
+      "export": "native_fs_open",
+      "typedef": "mmi_fs_open_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 80,
+      "offset": "0x140",
+      "target": "0x462b48",
+      "export": "native_fs_read",
+      "typedef": "mmi_fs_read_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 81,
+      "offset": "0x144",
+      "target": "0x462bb0",
+      "export": "native_fs_write",
+      "typedef": "mmi_fs_write_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 82,
+      "offset": "0x148",
+      "target": "0x462c14",
+      "export": "native_fs_close",
+      "typedef": "mmi_fs_close_fn",
+      "header": "mmi_native_abi.h"
+    },
+    {
+      "slot": 83,
+      "offset": "0x14c",
+      "target": "0x462c64",
+      "export": "native_fs_seek_status32",
+      "typedef": "mmi_fs_seek_status32_fn",
+      "header": "mmi_native_abi.h"
+    }
+  ],
+  "display_table": {
+    "base": "0x557658",
+    "words": [
+      "0x2a4460",
+      "0x2a4538",
+      "0x2e83a0",
+      "0x2e83b0",
+      "0x2a4268",
+      "0x2e83f0",
+      "0x2a3fd4",
+      "0x2a3e5c",
+      "0x2a4248",
+      "0x2e83c0",
+      "0x0",
+      "0x0"
+    ]
+  },
+  "lcd_state": {
+    "base": "0x60640c",
+    "flags_offset": 0,
+    "height_u16_offset": 4,
+    "width_u16_offset": 6,
+    "scanout_offset": 12,
+    "secondary_scanout_offset": 24
+  },
+  "lcd_irq": {
+    "vector": 23,
+    "isr": "0x2a3020",
+    "dsr": "0x2a315c",
+    "event_object": "0x5dce1c",
+    "event_bits": 1
+  },
+  "game_thread_stack": {
+    "pointer_global": "0x6769b0",
+    "allocation_bytes": "0x100010",
+    "thread_stack_bytes": "0x100000",
+    "stack_base_expression": "(allocation_pointer + 3) & ~3",
+    "launch_request": "0xd01",
+    "request_bytes": 20,
+    "scope": "shell launcher path; stack allocation is cached, address depends on pool history"
+  },
+  "pcm_queue": {
+    "base": "0x588b60",
+    "capacity": "0x42000",
+    "within_mmi_bss": true
+  },
+  "pcm_dma": {
+    "irq_vector_expression": "24 + allocated_channel",
+    "allocator_channel_indices": [
+      0,
+      1
+    ],
+    "first_base": "0x93010008",
+    "first_end": "0x93010018",
+    "second_base": "0x9301004c",
+    "second_end": "0x9301005c",
+    "channel_stride": 4,
+    "fifo": "0x93012004",
+    "engine_control": "0x93012000"
+  },
+  "limits": [
+    "Register roles follow original instruction dataflow; no peripheral timings or physical board certification.",
+    "Raw DMA arithmetic fixtures include channels 2/3; allocator only establishes indices 0/1.",
+    "Typed adapter has no numeric-slot resolver or device entry. No launchable image generated."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "native_kind": 6,
+  "origin": "Synthetic RAM-only scenario: default LCD buffers and shell stack before Game thread; not a device memory capture.",
+  "allocation": {
+    "base": 10485520,
+    "bytes": 19902436
+  },
+  "framebuffers": [
+    {
+      "base": 30541584,
+      "bytes": 153600
+    },
+    {
+      "base": 30387968,
+      "bytes": 153600
+    }
+  ],
+  "lcd_buffers": [
+    {
+      "base": 32802736,
+      "bytes": 751680
+    },
+    {
+      "base": 32051040,
+      "bytes": 751680
+    },
+    {
+      "base": 31897424,
+      "bytes": 153600
+    },
+    {
+      "base": 31743808,
+      "bytes": 153600
+    }
+  ],
+  "oem_stack": {
+    "base": 30695200,
+    "bytes": 1048576
+  },
+  "oem_stack_allocation": {
+    "base": 30695200,
+    "bytes": 1048592
+  },
+  "sizes": {
+    "payload_bytes": 73728,
+    "tail_bytes": 0,
+    "bss_bytes": 16384,
+    "heap_bytes": 524288,
+    "private_stack_reserve_bytes": 16384
+  }
+}

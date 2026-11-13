@@ -1,0 +1,45 @@
+002949f0 cpy r12,sp
+002949f4 stmdb sp!,{r11,r12,lr,pc}
+002949f8 sub r11,r12,#0x4
+002949fc cpy r1,r0
+00294a00 ldr r3,[0x294a94]
+00294a04 ldr r0,[r3,#0x0]
+00294a08 ldr r3,[0x294a98]
+00294a0c ldr r2,[r3,#0x0]
+00294a10 subs r12,r0,r2
+00294a14 ldrmi r3,[0x294a9c]
+00294a18 ldrmi r3,[r3,#0x0]
+00294a1c rsbmi r12,r2,r3
+00294a20 addmi r12,r12,r0
+00294a24 ldr r3,[0x294aa0]
+00294a28 ldr r3,[r3,#0x0]
+00294a2c cmp r12,r3
+00294a30 movlt r0,#0x0
+00294a34 ldmialt sp,{r11,sp,pc}
+00294a38 cmp r1,#0x0
+00294a3c bne 0x00294a5c
+00294a40 cmp r12,#0x2000
+00294a44 ldrgt r3,[0x294a98]
+00294a48 ldrgt r2,[r3,#0x0]
+00294a4c ldrgt r3,[0x294aa4]
+00294a50 addgt r0,r2,r3
+00294a54 movle r0,#0x0
+00294a58 ldmia sp,{r11,sp,pc}
+00294a5c cmp r1,#0x0
+00294a60 ble 0x00294a84
+00294a64 cmp r12,r1
+00294a68 ldrgt r3,[0x294aa8]
+00294a6c ldrgt r2,[r3,#0x0]
+00294a70 ldrgt r3,[0x294a98]
+00294a74 ldrgt r3,[r3,#0x0]
+00294a78 addgt r0,r2,r3
+00294a7c movle r0,#0x0
+00294a80 ldmia sp,{r11,sp,pc}
+00294a84 ldr r0,[0x294aac]
+00294a88 bl 0x00298b64
+00294a8c mvn r0,#0x0
+00294a90 ldmia sp,{r11,sp,pc}
+REFERENCES TO ENTRY:
+00294adc UNCONDITIONAL_CALL
+00294b60 UNCONDITIONAL_CALL
+00294b98 UNCONDITIONAL_CALL

@@ -28,7 +28,7 @@ undefined4 native_slot_32(int param_1)
   puVar1 = DAT_002de610;
   if (param_1 == 7 || param_1 == 0xc) {
     *DAT_002de610 = 0;
-    iVar2 = FUN_00312f98((int)DAT_002de60c);
+    iVar2 = gfx_stage_312f98((int)DAT_002de60c);
     if (iVar2 != 0) {
       FUN_00312f48(DAT_002de60c,DAT_002de614,(uint)*puVar1);
     }

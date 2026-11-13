@@ -26,7 +26,7 @@ undefined4 native_slot_51(short *param_1,int param_2,uint param_3,uint param_4)
     uVar1 = param_4;
   }
   if (uVar1 < 0x19) {
-    uVar4 = FUN_00312f98((int)DAT_002dd4dc);
+    uVar4 = gfx_stage_312f98((int)DAT_002dd4dc);
     FUN_00298d34(auStack_74,0,0x48);
     uVar1 = (int)(uVar9 + 7) >> 3;
     uVar2 = (int)(param_4 + 7) >> 3;
@@ -66,18 +66,18 @@ undefined4 native_slot_51(short *param_1,int param_2,uint param_3,uint param_4)
         if (uVar1 != 0) {
           do {
             puStack_7c = auStack_74 + (uVar8 * 3 + uVar9) * 2;
-            FUN_00313f40(DAT_002dd4dc,*param_1 + (short)uVar8 * 8,param_1[1] + (short)uVar9 * 8,8,8,
-                         DAT_002dd4e0,0,0,*DAT_002dd4e4);
+            gfx_blit_dispatch(DAT_002dd4dc,*param_1 + (short)uVar8 * 8,param_1[1] + (short)uVar9 * 8
+                              ,8,8,DAT_002dd4e0,0,0,*DAT_002dd4e4);
             uVar8 = uVar8 + 1;
           } while (uVar8 < uVar1);
         }
         uVar9 = uVar9 + 1;
       } while (uVar9 < uVar2);
     }
-    FUN_002e479c();
+    native_graphics_finish();
     FUN_00312f48(DAT_002dd4dc,0,0);
     if (uVar4 == 0) {
-      FUN_00312fa0(DAT_002dd4dc);
+      gfx_stage_312fa0(DAT_002dd4dc);
     }
     else {
       FUN_00312f48(DAT_002dd4dc,uVar4,1);

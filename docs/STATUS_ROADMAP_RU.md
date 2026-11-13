@@ -1,3 +1,25 @@
+# Этап 6: LCD/PCM, stack-owner, memory planner и прототип
+
+Экспортированы 284 выбранные функции (253 MMI + 31 RedBoot). Новый этап:
+58 точных ARM/data checks, 53 сценария оригинального ARM с синтетическими
+register cells, 28 типизированных объявлений API суммарно. Уточнены отдельные
+boot LCD allocations, virtual game buffers, переключение scanout, IRQ/DSR,
+PCM queue и DMA dataflow. Найден pool-owner стека: allocation 0x100010,
+в Game thread передаётся 1 МиБ с динамической базой.
+
+Добавлены фазовый host memory planner и минимальный C-прототип полос/курсора,
+ввода и обычного возврата, с typed adapter и host-тестами. ARM ET_REL objects
+проверяются в CI; рабочего пакета NGame/target entry нет. FillRect скрывает GPU
+timeout, PCM submit имеет слабые проверки размера/первого старта; оригинал не менялся.
+
+[Отчёт этапа 6](../research/boot_reconstruction/STAGE6_REPORT_RU.md).
+Следующее: довести candidate HAL/startup/linking по контрольному рабочему OEM BIN,
+получить runtime allocations/stack и подтвердить IRQ/GPU/worker completion на
+конкретной плате. Для RedBoot остаются board variant, bootcfg/customize и
+размещение секций. Полных собираемых OEM sources/аппаратной проверки SPMP-OS нет.
+
+---
+
 # Этап 5: игровой пул, звуковые ресурсы и возврат BIN
 
 Экспортированы 206 выбранных функций (175 MMI + 31 RedBoot). Новый этап:

@@ -1,0 +1,152 @@
+{
+  "status": "model_consistent",
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "allocation": {
+    "name": "supplied_game_allocation",
+    "start": 10485520,
+    "end_exclusive": 30387956,
+    "bytes": 19902436,
+    "phase": "run"
+  },
+  "container_bytes": 73856,
+  "derived_loader_capacity": 19902196,
+  "load_phase": [
+    {
+      "name": "temporary_container_read",
+      "start": 10485760,
+      "end_exclusive": 10559616,
+      "bytes": 73856,
+      "phase": "load"
+    }
+  ],
+  "run_phase": [
+    {
+      "name": "decoded_payload_span",
+      "start": 10485760,
+      "end_exclusive": 10559488,
+      "bytes": 73728,
+      "phase": "run"
+    },
+    {
+      "name": "caller_initialized_bss",
+      "start": 10559488,
+      "end_exclusive": 10575872,
+      "bytes": 16384,
+      "phase": "run"
+    },
+    {
+      "name": "private_heap_reserve",
+      "start": 10575872,
+      "end_exclusive": 11100160,
+      "bytes": 524288,
+      "phase": "run"
+    },
+    {
+      "name": "private_stack_reserve",
+      "start": 15712256,
+      "end_exclusive": 15728640,
+      "bytes": 16384,
+      "phase": "run"
+    }
+  ],
+  "protected": [
+    {
+      "name": "mmi_code_data",
+      "start": 2621440,
+      "end_exclusive": 5680528,
+      "bytes": 3059088,
+      "phase": "run"
+    },
+    {
+      "name": "mmi_bss",
+      "start": 5680528,
+      "end_exclusive": 7114720,
+      "bytes": 1434192,
+      "phase": "run"
+    },
+    {
+      "name": "mmi_extra_data",
+      "start": 7114720,
+      "end_exclusive": 7338016,
+      "bytes": 223296,
+      "phase": "run"
+    },
+    {
+      "name": "audio_workspace_and_tonelib",
+      "start": 15728640,
+      "end_exclusive": 16982016,
+      "bytes": 1253376,
+      "phase": "run"
+    },
+    {
+      "name": "game_virtual_framebuffer_0",
+      "start": 30541584,
+      "end_exclusive": 30695184,
+      "bytes": 153600,
+      "phase": "run"
+    },
+    {
+      "name": "game_virtual_framebuffer_1",
+      "start": 30387968,
+      "end_exclusive": 30541568,
+      "bytes": 153600,
+      "phase": "run"
+    },
+    {
+      "name": "supplied_lcd_buffer_0",
+      "start": 32802736,
+      "end_exclusive": 33554416,
+      "bytes": 751680,
+      "phase": "run"
+    },
+    {
+      "name": "supplied_lcd_buffer_1",
+      "start": 32051040,
+      "end_exclusive": 32802720,
+      "bytes": 751680,
+      "phase": "run"
+    },
+    {
+      "name": "supplied_lcd_buffer_2",
+      "start": 31897424,
+      "end_exclusive": 32051024,
+      "bytes": 153600,
+      "phase": "run"
+    },
+    {
+      "name": "supplied_lcd_buffer_3",
+      "start": 31743808,
+      "end_exclusive": 31897408,
+      "bytes": 153600,
+      "phase": "run"
+    },
+    {
+      "name": "supplied_oem_thread_stack",
+      "start": 30695200,
+      "end_exclusive": 31743776,
+      "bytes": 1048576,
+      "phase": "run"
+    },
+    {
+      "name": "supplied_oem_stack_allocation",
+      "start": 30695200,
+      "end_exclusive": 31743792,
+      "bytes": 1048592,
+      "phase": "run"
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Supplied allocation/framebuffer ranges are assumptions until captured on the actual device.",
+    "Physical RAM, package acceptance, IRQ/cache ABI and worker termination are not certified.",
+    "Audio reservation is conservative host policy, not an extra OEM loader check.",
+    "BSS must be initialized by future application startup; original BIN-loader does not provide an ELF BSS loader.",
+    "Private stack reserve does not change SP; the actual application inherits the OEM Game thread stack.",
+    "Temporary load and run regions can overlap across phases; simultaneous run regions may not overlap."
+  ],
+  "unresolved": [
+    "runtime allocation ownership",
+    "board RAM",
+    "RTOS/cache context"
+  ]
+}

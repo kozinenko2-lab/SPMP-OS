@@ -21,6 +21,17 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y clang llvm lld
       - name: Check reconstructed declarations for ARMv5TE soft-float
         run: clang --target=arm-none-eabi -march=armv5te -mfloat-abi=soft -std=c11 -ffreestanding -Wall -Wextra -Werror -fsyntax-only -x c research/boot_reconstruction/src/mmi_native_abi.h research/boot_reconstruction/src/mmi_native_resources_abi.h
+      - name: Compile portable probe and typed adapter as ARMv5TE objects
+        run: make -C research/boot_reconstruction arm-probe
+      - name: Save research probe objects and host frame
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-probe-armv5-objects
+          retention-days: 14
+          path: |
+            research/boot_reconstruction/build/native_probe_armv5.o
+            research/boot_reconstruction/build/native_probe_adapter_armv5.o
+            research/boot_reconstruction/build/native_probe_frame.ppm
       - name: File manager component checks
         run: |
           for n in 01 02 03 04 05; do

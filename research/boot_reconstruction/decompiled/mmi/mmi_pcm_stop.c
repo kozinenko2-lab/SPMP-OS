@@ -15,18 +15,19 @@ void mmi_pcm_stop(void)
   undefined4 extraout_r3;
   
   *DAT_002c5904 = 0;
-  FUN_00294ab0(0x1000,1);
-  while ((iVar2 = FUN_00292fd8(), iVar2 != 4 && (iVar2 = FUN_00292fd8(), iVar2 != 0))) {
+  pcm_queue_reserve(0x1000,1);
+  while ((iVar2 = pcm_driver_get_state(), iVar2 != 4 && (iVar2 = pcm_driver_get_state(), iVar2 != 0)
+         )) {
     if ((*(uint *)*DAT_002c5908 & 1) != 0) {
-      FUN_00292fd8();
+      pcm_driver_get_state();
       MMI_diag_stub_00298B64();
     }
-    iVar2 = FUN_00292fd8();
+    iVar2 = pcm_driver_get_state();
     if (iVar2 == 4) {
-      FUN_0029307c(4,extraout_r1);
+      pcm_driver_control(4,extraout_r1);
     }
     else {
-      iVar2 = FUN_00292fd8();
+      iVar2 = pcm_driver_get_state();
       if (iVar2 == 1) {
         FUN_00293308();
       }
@@ -41,7 +42,7 @@ void mmi_pcm_stop(void)
     *puVar1 = 0xffffffff;
     uVar4 = extraout_r1_01;
   }
-  FUN_00294440(uVar3,uVar4);
+  pcm_queue_shutdown(uVar3,uVar4);
   return;
 }
 

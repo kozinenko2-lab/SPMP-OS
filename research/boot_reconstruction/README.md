@@ -2,11 +2,13 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE5_REPORT_RU.md](STAGE5_REPORT_RU.md) — экспорт
-206 выбранных функций из трёх пользовательских GZF, память Game thread,
-resource/audio API, возврат BIN и две подтверждённые ошибки звуковых wrapper/worker.
-24 объявления API суммарно; на новом этапе 119 сценариев ARM в RAM-only VM.
+**Текущий этап:** [STAGE6_REPORT_RU.md](STAGE6_REPORT_RU.md) — экспорт
+284 выбранных функций из трёх пользовательских GZF, LCD/PCM, stack-owner,
+план размещения и минимальный host-прототип с typed OEM adapter.
+28 объявлений API суммарно; на новом этапе 53 ARM-сценария с синтетическими
+register cells. Никакого доступа к физическим MMIO/консоли.
 Псевдокод: `decompiled/`. Предыдущие результаты:
+[память/ресурсы/возврат](STAGE5_REPORT_RU.md),
 [файлы/графика/ввод](STAGE4_REPORT_RU.md),
 [GUI/NGame/85 слотов](STAGE3_REPORT_RU.md), [bootcfg/customize](STAGE2_REPORT_RU.md).
 
@@ -47,3 +49,10 @@ resource/audio API, возврат BIN и две подтверждённые о
 - `tools/audit_stage5.py` — 75 точных ARM-проверок, 21 constructor и resource/exit slots.
 - `tools/emulate_native_lifecycle.py` — 119 новых сценариев: настоящий allocator,
   Game thread, WAV/resource wrappers, worker и возврат подставного BIN entry.
+- `tools/native_memory_plan.py` — bounded planner для supplied kind-6 allocation,
+  загрузочной/runtime фаз, heap/stack и protected OEM ranges; результат только model_consistent.
+- `tools/emulate_display_pcm.py` / `display_pcm_models.py` — 53 сценария LCD/PCM/delete;
+  отдельные allowlisted register cells в Unicorn, реальный DMA/IRQ не исполняется.
+- `tools/audit_stage6.py` — 58 ARM/data checks, объединённые JSON/CSV 28 объявлений.
+- [examples/native_probe](examples/native_probe/README_RU.md) — freestanding core,
+  typed adapter и host-пример с экраном/вводом/возвратом. Нет target entry/пакета.

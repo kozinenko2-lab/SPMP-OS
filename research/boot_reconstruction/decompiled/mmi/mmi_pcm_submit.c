@@ -15,10 +15,10 @@ void mmi_pcm_submit(undefined4 *param_1,uint param_2)
       MMI_diag_stub_00298B64();
     }
     if (*DAT_002c5848 == 1) {
-      puVar2 = (undefined4 *)FUN_00294ab0(param_2 << 1,0);
+      puVar2 = (undefined4 *)pcm_queue_reserve(param_2 << 1,0);
     }
     else {
-      puVar2 = (undefined4 *)FUN_00294ab0(param_2,0);
+      puVar2 = (undefined4 *)pcm_queue_reserve(param_2,0);
     }
     if (0 < (int)puVar2) {
       iVar4 = 0;
@@ -36,9 +36,9 @@ void mmi_pcm_submit(undefined4 *param_1,uint param_2)
       }
     }
     puVar1 = DAT_002c584c;
-    FUN_00294f30(*DAT_002c584c,0);
+    pcm_queue_commit(*DAT_002c584c,0);
     *puVar1 = 0;
-    FUN_00292d44();
+    pcm_driver_start();
     *DAT_002c583c = 1;
     return;
   }
@@ -48,7 +48,7 @@ void mmi_pcm_submit(undefined4 *param_1,uint param_2)
   else {
     uVar3 = param_2;
   }
-  puVar2 = (undefined4 *)FUN_00294ab0(uVar3,1);
+  puVar2 = (undefined4 *)pcm_queue_reserve(uVar3,1);
   if ((int)puVar2 < 1) {
     return;
   }
@@ -64,13 +64,13 @@ void mmi_pcm_submit(undefined4 *param_1,uint param_2)
     FUN_00298c6c(puVar2,param_1,uVar3);
   }
   if ((int)param_2 < 1) {
-    FUN_00294f30(uVar3,0);
+    pcm_queue_commit(uVar3,0);
     return;
   }
-  FUN_00294f30(uVar3,0);
-  iVar4 = FUN_00292fd8();
+  pcm_queue_commit(uVar3,0);
+  iVar4 = pcm_driver_get_state();
   if (iVar4 == 4) {
-    FUN_0029307c(4,extraout_r1);
+    pcm_driver_control(4,extraout_r1);
     return;
   }
   return;

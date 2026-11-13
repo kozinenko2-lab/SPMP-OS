@@ -12,9 +12,11 @@ SPMP-OS и проверка будущих модификаций. Поддер�
 - `project/spmp-os/` — импорт исходников Stage49, интеграций FM01–FM05,
   мультимедиа и тем. Исторические README/STATUS сохранены как материалы
   передачи проекта; содержащиеся в них результаты не являются новой проверкой.
-- `research/boot_reconstruction/` — [206 выбранных функций, память Game thread и звук](research/boot_reconstruction/STAGE5_REPORT_RU.md),
+- `research/boot_reconstruction/` — [декомпиляция 284 функций, карта памяти и LCD/PCM](research/boot_reconstruction/STAGE6_REPORT_RU.md),
   текущие результаты анализа загрузки,
   восстановленный на C инспектор MMPi и проверки по оригинальным образам.
+- [Минимальный host-прототип экрана, ввода и возврата](research/boot_reconstruction/examples/native_probe/README_RU.md)
+  и typed adapter; ARM ET_REL objects, аппаратный запуск не подтверждён.
 - `research/Stage53_to_55/` — прежние инструменты исследования потоков и GUI,
   скрипты экспорта Ghidra и статические свидетельства.
 - `docs/STATUS_ROADMAP_RU.md` — ограничения и дальнейшие задачи.

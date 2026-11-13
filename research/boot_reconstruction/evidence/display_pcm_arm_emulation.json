@@ -1,0 +1,1212 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "case_count": 53,
+  "cases": [
+    {
+      "group": "lcd_pool_before_game",
+      "inputs": {},
+      "original_arm": {
+        "lcd_buffers": [
+          {
+            "kind": 1,
+            "index": 0,
+            "base": 32802736,
+            "bytes": 751680
+          },
+          {
+            "kind": 1,
+            "index": 1,
+            "base": 32051040,
+            "bytes": 751680
+          },
+          {
+            "kind": 0,
+            "index": 0,
+            "base": 31897424,
+            "bytes": 153600
+          },
+          {
+            "kind": 0,
+            "index": 1,
+            "base": 31743808,
+            "bytes": 153600
+          }
+        ],
+        "oem_stack_allocation": {
+          "base": 30695200,
+          "bytes": 1048592
+        },
+        "oem_stack": {
+          "base": 30695200,
+          "bytes": 1048576
+        },
+        "allocation": {
+          "base": 10485520,
+          "bytes": 19902436
+        },
+        "framebuffers": [
+          {
+            "base": 30541584,
+            "bytes": 153600
+          },
+          {
+            "base": 30387968,
+            "bytes": 153600
+          }
+        ],
+        "remaining_pool_restored": true
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": false,
+        "update": 0,
+        "sync": 0
+      },
+      "original_arm": {
+        "render": 17055744,
+        "scanout": 16793600,
+        "writes": [
+          [
+            2466250836,
+            16793600
+          ]
+        ],
+        "status": 0,
+        "copied_bytes": 153600,
+        "waited": false
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": false,
+        "update": 0,
+        "sync": 1
+      },
+      "original_arm": {
+        "render": 17055744,
+        "scanout": 16793600,
+        "writes": [
+          [
+            2466250836,
+            16793600
+          ]
+        ],
+        "status": 0,
+        "copied_bytes": 153600,
+        "waited": true
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": false,
+        "update": 1,
+        "sync": 0
+      },
+      "original_arm": {
+        "render": 17055744,
+        "scanout": 16793600,
+        "writes": [
+          [
+            2466250836,
+            16793600
+          ],
+          [
+            2466250872,
+            1
+          ]
+        ],
+        "status": 0,
+        "copied_bytes": 153600,
+        "waited": false
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": false,
+        "update": 1,
+        "sync": 1
+      },
+      "original_arm": {
+        "render": 17055744,
+        "scanout": 16793600,
+        "writes": [
+          [
+            2466250836,
+            16793600
+          ],
+          [
+            2466250872,
+            1
+          ]
+        ],
+        "status": 0,
+        "copied_bytes": 153600,
+        "waited": true
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": true,
+        "update": 0,
+        "sync": 0
+      },
+      "original_arm": {
+        "render": 16793600,
+        "scanout": 16793600,
+        "writes": [],
+        "status": 0,
+        "copied_bytes": 0,
+        "waited": false
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": true,
+        "update": 0,
+        "sync": 1
+      },
+      "original_arm": {
+        "render": 16793600,
+        "scanout": 16793600,
+        "writes": [],
+        "status": 0,
+        "copied_bytes": 0,
+        "waited": false
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": true,
+        "update": 1,
+        "sync": 0
+      },
+      "original_arm": {
+        "render": 16793600,
+        "scanout": 16793600,
+        "writes": [],
+        "status": 0,
+        "copied_bytes": 0,
+        "waited": false
+      }
+    },
+    {
+      "group": "lcd_paint",
+      "inputs": {
+        "same": true,
+        "update": 1,
+        "sync": 1
+      },
+      "original_arm": {
+        "render": 16793600,
+        "scanout": 16793600,
+        "writes": [],
+        "status": 0,
+        "copied_bytes": 0,
+        "waited": false
+      }
+    },
+    {
+      "group": "lcd_init_graph",
+      "inputs": {
+        "width": 320,
+        "height": 240
+      },
+      "original_arm": {
+        "callback_addresses": [
+          2769512,
+          3048384,
+          3048352,
+          3048368,
+          2768852
+        ],
+        "virtual": false,
+        "configured_context": [
+          320,
+          240
+        ],
+        "render_buffer": 16793600
+      }
+    },
+    {
+      "group": "lcd_init_graph",
+      "inputs": {
+        "width": 640,
+        "height": 480
+      },
+      "original_arm": {
+        "callback_addresses": [
+          3010352,
+          3010368,
+          3010384,
+          3010392,
+          3010400
+        ],
+        "virtual": true,
+        "configured_context": [
+          320,
+          240
+        ],
+        "render_buffer": 17055744
+      }
+    },
+    {
+      "group": "graphics_wait",
+      "inputs": {
+        "status_word": 16
+      },
+      "original_arm": {
+        "return": 0,
+        "polls": 1,
+        "delays": 0
+      }
+    },
+    {
+      "group": "graphics_wait",
+      "inputs": {
+        "status_word": 20
+      },
+      "original_arm": {
+        "return": 0,
+        "polls": 1,
+        "delays": 0
+      }
+    },
+    {
+      "group": "graphics_wait",
+      "inputs": {
+        "status_word": 0
+      },
+      "original_arm": {
+        "return": 1,
+        "polls": 300,
+        "delays": 300
+      }
+    },
+    {
+      "group": "graphics_wait",
+      "inputs": {
+        "status_word": 4294967295
+      },
+      "original_arm": {
+        "return": 1,
+        "polls": 300,
+        "delays": 300
+      }
+    },
+    {
+      "group": "fill_rect",
+      "inputs": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 240,
+        "gpu_busy": false
+      },
+      "original_arm": {
+        "status": 0,
+        "blitter_called": true,
+        "coordinates_forwarded": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "delay_calls": 0
+      }
+    },
+    {
+      "group": "fill_rect",
+      "inputs": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 240,
+        "gpu_busy": true
+      },
+      "original_arm": {
+        "status": 0,
+        "blitter_called": true,
+        "coordinates_forwarded": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "delay_calls": 300
+      }
+    },
+    {
+      "group": "fill_rect",
+      "inputs": {
+        "x": -1024,
+        "y": -1024,
+        "width": 1,
+        "height": 1,
+        "gpu_busy": false
+      },
+      "original_arm": {
+        "status": 0,
+        "blitter_called": true,
+        "coordinates_forwarded": [
+          4294966272,
+          4294966272,
+          1,
+          1
+        ],
+        "delay_calls": 0
+      }
+    },
+    {
+      "group": "fill_rect",
+      "inputs": {
+        "x": 1023,
+        "y": 1023,
+        "width": 0,
+        "height": 0,
+        "gpu_busy": false
+      },
+      "original_arm": {
+        "status": 0,
+        "blitter_called": true,
+        "coordinates_forwarded": [
+          1023,
+          1023,
+          0,
+          0
+        ],
+        "delay_calls": 0
+      }
+    },
+    {
+      "group": "fill_rect",
+      "inputs": {
+        "x": -1025,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "gpu_busy": false
+      },
+      "original_arm": {
+        "status": 1879049217,
+        "blitter_called": false,
+        "coordinates_forwarded": null,
+        "delay_calls": 0
+      }
+    },
+    {
+      "group": "fill_rect",
+      "inputs": {
+        "x": 0,
+        "y": 1024,
+        "width": 1,
+        "height": 1,
+        "gpu_busy": false
+      },
+      "original_arm": {
+        "status": 1879049217,
+        "blitter_called": false,
+        "coordinates_forwarded": null,
+        "delay_calls": 0
+      }
+    },
+    {
+      "group": "fill_rect",
+      "inputs": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1,
+        "gpu_busy": false
+      },
+      "original_arm": {
+        "status": 1879049217,
+        "blitter_called": false,
+        "coordinates_forwarded": null,
+        "delay_calls": 0
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 0,
+        "control": 0,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316296,
+            16793600
+          ],
+          [
+            2466316312,
+            16794620
+          ],
+          [
+            2466316364,
+            17055744
+          ],
+          [
+            2466316380,
+            17057788
+          ],
+          [
+            2466316328,
+            2466324484
+          ],
+          [
+            2466316396,
+            222
+          ],
+          [
+            2466324480,
+            0
+          ],
+          [
+            2466324480,
+            1
+          ]
+        ],
+        "allocator_supported_channel": true
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 0,
+        "control": 1056768,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316296,
+            16793600
+          ],
+          [
+            2466316312,
+            16794620
+          ],
+          [
+            2466316364,
+            17055744
+          ],
+          [
+            2466316380,
+            17057788
+          ],
+          [
+            2466316328,
+            2466324484
+          ],
+          [
+            2466316396,
+            254
+          ],
+          [
+            2466324480,
+            1048576
+          ],
+          [
+            2466324480,
+            1048577
+          ]
+        ],
+        "allocator_supported_channel": true
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 1,
+        "control": 0,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316300,
+            16793600
+          ],
+          [
+            2466316316,
+            16794620
+          ],
+          [
+            2466316368,
+            17055744
+          ],
+          [
+            2466316384,
+            17057788
+          ],
+          [
+            2466316332,
+            2466324484
+          ],
+          [
+            2466316400,
+            222
+          ],
+          [
+            2466324480,
+            0
+          ],
+          [
+            2466324480,
+            1
+          ]
+        ],
+        "allocator_supported_channel": true
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 1,
+        "control": 1056768,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316300,
+            16793600
+          ],
+          [
+            2466316316,
+            16794620
+          ],
+          [
+            2466316368,
+            17055744
+          ],
+          [
+            2466316384,
+            17057788
+          ],
+          [
+            2466316332,
+            2466324484
+          ],
+          [
+            2466316400,
+            254
+          ],
+          [
+            2466324480,
+            1048576
+          ],
+          [
+            2466324480,
+            1048577
+          ]
+        ],
+        "allocator_supported_channel": true
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 2,
+        "control": 0,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316304,
+            16793600
+          ],
+          [
+            2466316320,
+            16794620
+          ],
+          [
+            2466316372,
+            17055744
+          ],
+          [
+            2466316388,
+            17057788
+          ],
+          [
+            2466316336,
+            2466324484
+          ],
+          [
+            2466316404,
+            222
+          ],
+          [
+            2466324480,
+            0
+          ],
+          [
+            2466324480,
+            1
+          ]
+        ],
+        "allocator_supported_channel": false
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 2,
+        "control": 1056768,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316304,
+            16793600
+          ],
+          [
+            2466316320,
+            16794620
+          ],
+          [
+            2466316372,
+            17055744
+          ],
+          [
+            2466316388,
+            17057788
+          ],
+          [
+            2466316336,
+            2466324484
+          ],
+          [
+            2466316404,
+            254
+          ],
+          [
+            2466324480,
+            1048576
+          ],
+          [
+            2466324480,
+            1048577
+          ]
+        ],
+        "allocator_supported_channel": false
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 3,
+        "control": 0,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316308,
+            16793600
+          ],
+          [
+            2466316324,
+            16794620
+          ],
+          [
+            2466316376,
+            17055744
+          ],
+          [
+            2466316392,
+            17057788
+          ],
+          [
+            2466316340,
+            2466324484
+          ],
+          [
+            2466316408,
+            222
+          ],
+          [
+            2466324480,
+            0
+          ],
+          [
+            2466324480,
+            1
+          ]
+        ],
+        "allocator_supported_channel": false
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 3,
+        "control": 1056768,
+        "first": 16793600,
+        "first_bytes": 1024,
+        "second": 17055744,
+        "second_bytes": 2048
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316308,
+            16793600
+          ],
+          [
+            2466316324,
+            16794620
+          ],
+          [
+            2466316376,
+            17055744
+          ],
+          [
+            2466316392,
+            17057788
+          ],
+          [
+            2466316340,
+            2466324484
+          ],
+          [
+            2466316408,
+            254
+          ],
+          [
+            2466324480,
+            1048576
+          ],
+          [
+            2466324480,
+            1048577
+          ]
+        ],
+        "allocator_supported_channel": false
+      }
+    },
+    {
+      "group": "pcm_dma",
+      "inputs": {
+        "channel": 0,
+        "control": 0,
+        "first": 16793600,
+        "first_bytes": 0,
+        "second": 17055744,
+        "second_bytes": 4
+      },
+      "original_arm": {
+        "writes": [
+          [
+            2466316296,
+            16793600
+          ],
+          [
+            2466316312,
+            16793596
+          ],
+          [
+            2466316364,
+            17055744
+          ],
+          [
+            2466316380,
+            17055744
+          ],
+          [
+            2466316328,
+            2466324484
+          ],
+          [
+            2466316396,
+            222
+          ],
+          [
+            2466324480,
+            0
+          ],
+          [
+            2466324480,
+            1
+          ]
+        ],
+        "allocator_supported_channel": true
+      }
+    },
+    {
+      "group": "pcm_reserve",
+      "inputs": {
+        "request": 4,
+        "read": 100,
+        "write": 0,
+        "capacity": 65536,
+        "threshold": 16,
+        "base": 16793600
+      },
+      "original_arm": {
+        "return": 16793600
+      }
+    },
+    {
+      "group": "pcm_reserve",
+      "inputs": {
+        "request": 100,
+        "read": 100,
+        "write": 0,
+        "capacity": 65536,
+        "threshold": 16,
+        "base": 16793600
+      },
+      "original_arm": {
+        "return": 0
+      }
+    },
+    {
+      "group": "pcm_reserve",
+      "inputs": {
+        "request": 0,
+        "read": 8192,
+        "write": 0,
+        "capacity": 65536,
+        "threshold": 16,
+        "base": 16793600
+      },
+      "original_arm": {
+        "return": 0
+      }
+    },
+    {
+      "group": "pcm_reserve",
+      "inputs": {
+        "request": 0,
+        "read": 8193,
+        "write": 0,
+        "capacity": 65536,
+        "threshold": 16,
+        "base": 16793600
+      },
+      "original_arm": {
+        "return": 5802848
+      }
+    },
+    {
+      "group": "pcm_reserve",
+      "inputs": {
+        "request": -1,
+        "read": 100,
+        "write": 0,
+        "capacity": 65536,
+        "threshold": 16,
+        "base": 16793600
+      },
+      "original_arm": {
+        "return": 4294967295
+      }
+    },
+    {
+      "group": "pcm_reserve",
+      "inputs": {
+        "request": 4,
+        "read": 8,
+        "write": 0,
+        "capacity": 65536,
+        "threshold": 16,
+        "base": 16793600
+      },
+      "original_arm": {
+        "return": 0
+      }
+    },
+    {
+      "group": "pcm_reserve",
+      "inputs": {
+        "request": 4,
+        "read": 8,
+        "write": 65530,
+        "capacity": 65536,
+        "threshold": 1,
+        "base": 16793600
+      },
+      "original_arm": {
+        "return": 16859130
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 0,
+        "channels": 1,
+        "count": 2,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 4,
+        "prefix_hex": "00010001",
+        "commits": [
+          4
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 0,
+        "channels": 1,
+        "count": 4,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 8,
+        "prefix_hex": "0001000102030203",
+        "commits": [
+          8
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 0,
+        "channels": 2,
+        "count": 2,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 2,
+        "prefix_hex": "0001aaaa",
+        "commits": [
+          2
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 0,
+        "channels": 2,
+        "count": 4,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 4,
+        "prefix_hex": "00010203",
+        "commits": [
+          4
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 1,
+        "channels": 1,
+        "count": 2,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 4,
+        "prefix_hex": "00010001",
+        "commits": [
+          4
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 1,
+        "channels": 1,
+        "count": 4,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 8,
+        "prefix_hex": "0001000102030203",
+        "commits": [
+          8
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 1,
+        "channels": 2,
+        "count": 2,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 2,
+        "prefix_hex": "0001aaaa",
+        "commits": [
+          2
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 1,
+        "channels": 2,
+        "count": 4,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 4,
+        "prefix_hex": "00010203",
+        "commits": [
+          4
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 0,
+        "channels": 1,
+        "count": 4,
+        "available": false
+      },
+      "original_arm": {
+        "copied_bytes": 0,
+        "prefix_hex": "aaaaaaaa",
+        "commits": [
+          0
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 1,
+        "channels": 1,
+        "count": 4,
+        "available": false
+      },
+      "original_arm": {
+        "copied_bytes": 0,
+        "prefix_hex": "aaaaaaaa",
+        "commits": [],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 0,
+        "channels": 1,
+        "count": 0,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 4,
+        "prefix_hex": "00010001",
+        "commits": [
+          0
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "pcm_submit",
+      "inputs": {
+        "started": 1,
+        "channels": 1,
+        "count": 1,
+        "available": true
+      },
+      "original_arm": {
+        "copied_bytes": 4,
+        "prefix_hex": "00010001",
+        "commits": [
+          2
+        ],
+        "started_after": 1
+      }
+    },
+    {
+      "group": "thread_delete",
+      "inputs": {
+        "state": 16,
+        "kill_exits": false
+      },
+      "original_arm": {
+        "return": 1,
+        "destructed": true,
+        "kill_called": false
+      }
+    },
+    {
+      "group": "thread_delete",
+      "inputs": {
+        "state": 0,
+        "kill_exits": true
+      },
+      "original_arm": {
+        "return": 1,
+        "destructed": true,
+        "kill_called": true
+      }
+    },
+    {
+      "group": "thread_delete",
+      "inputs": {
+        "state": 0,
+        "kill_exits": false
+      },
+      "original_arm": {
+        "return": 0,
+        "destructed": false,
+        "kill_called": true
+      }
+    }
+  ],
+  "limits": [
+    "Only synthetic register cells are mapped; accesses are allowlisted and no physical device is accessed.",
+    "Register writes verify instruction arithmetic/order, not LCD latching, DMA completion, IRQs or real PCM output.",
+    "RTOS mutex/wait, allocator scheduler unlock, blitter and PCM queue/driver backends are explicitly mocked per scenario.",
+    "Pool scenario assumes default panel table, one shell stack allocation and an otherwise empty pool.",
+    "VM Game thread uses the harness stack; real RTOS stack initialization/scheduling is not executed."
+  ]
+}

@@ -1,3 +1,29 @@
+# Проверки этапа 6
+
+- Ghidra 12.2/JDK 25: 284 выбранные функции (253 MMI + 27/4 RedBoot), mapped
+  bytes совпадают; три исходных GZF сохранили хеши.
+- `audit_stage6.py`: 58 ARM/data checks; таблица из 28 typed native slots — PASS.
+- `emulate_display_pcm.py`: 53 ARM-сценария — PASS. Synthetic register cells
+  проверяют адреса/значения/порядок, не физические MMIO, LCD latch или DMA.
+- Реальный pool allocator с default LCD allocations, shell stack и Game thread:
+  cache/выделение/освобождение, восстановление оставшегося пула — PASS.
+- Публичные тесты: 51 Python (один optional private), 3 C-модели,
+  host-прототип и typed host-injected OEM adapter — PASS. С RAP все 51 без SKIP.
+- Memory planner: load-vs-run, audio/header crossing, heap/stack collision,
+  stale/NULL/wrapped allocation, LCD/framebuffer overlap и strict loader bound — PASS.
+- Host-прототип: RGB565 bars/cursor, scripted input, ограничение шагов,
+  ошибки размеров/present, восстановление FG и однократный finish — PASS.
+- CI компилирует два freestanding ARMv5TE soft-float ET_REL object и проверяет
+  отсутствие undefined symbols. Это не target entry/контейнер/прошивка.
+
+Выход FillRect при GPU timeout и PCM submit при ошибке первого reserve/zero/odd
+size сохранены как OEM-наблюдения. Thread-delete изучен до точного условия
+TCB.state==0x10; реальное завершение/вытеснение RTOS не сертифицировано.
+Аппаратного запуска, записи Flash/NAND и изменения оригиналов нет.
+[Полный отчёт](../research/boot_reconstruction/STAGE6_REPORT_RU.md).
+
+---
+
 # Проверки этапа 5
 
 - Ghidra 12.2/JDK 25: 206 выбранных функций (175 MMI + 27/4 RedBoot),

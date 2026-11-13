@@ -18,7 +18,8 @@ int native_slot_38(uint param_1)
   if (param_1 == 1) {
     uVar3 = (*(code *)*DAT_002de350)(0);
     *(undefined4 *)(iVar1 + 4) = uVar3;
-    FUN_00312ce8(iVar1,(uint)*(ushort *)(*DAT_002de354 + 8),*(undefined2 *)(*DAT_002de354 + 10));
+    gfx_context_dimensions
+              (iVar1,(uint)*(ushort *)(*DAT_002de354 + 8),*(undefined2 *)(*DAT_002de354 + 10));
   }
   else {
     if ((param_1 < 2) || (*DAT_002de358 <= param_1)) {
@@ -32,7 +33,7 @@ int native_slot_38(uint param_1)
     }
     iVar4 = *DAT_002de354 + param_1 * 0x24;
     *(undefined4 *)(DAT_002de34c + 4) = *(undefined4 *)(iVar4 + -0x18);
-    FUN_00312ce8(iVar1,(uint)*(ushort *)(iVar4 + -0x1c),*(undefined2 *)(iVar4 + -0x1a));
+    gfx_context_dimensions(iVar1,(uint)*(ushort *)(iVar4 + -0x1c),*(undefined2 *)(iVar4 + -0x1a));
   }
   return 0;
 }

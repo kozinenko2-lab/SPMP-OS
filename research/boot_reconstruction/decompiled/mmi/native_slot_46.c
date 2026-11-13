@@ -54,7 +54,8 @@ undefined4 native_slot_46(uint param_1,ushort *param_2,ushort *param_3,byte *par
   sStack_32 = (param_4[9] & 0xfc) * 8 + (param_4[8] & 0xf8) * 0x100 + (ushort)(param_4[10] >> 3);
   bVar1 = param_4[0x10];
   DAT_002def00[1] = *(uint *)(iVar5 + -0x18);
-  FUN_00312ce8((int)puVar2,(uint)*(ushort *)(iVar5 + -0x1c),*(undefined2 *)(iVar5 + -0x1a));
+  gfx_context_dimensions
+            ((int)puVar2,(uint)*(ushort *)(iVar5 + -0x1c),*(undefined2 *)(iVar5 + -0x1a));
   uVar4 = native_image_pixel_format(*(undefined4 *)(iVar5 + -0x20));
   FUN_00312e38((int)puVar2,(char)uVar4);
   switch(*(undefined4 *)(iVar5 + -0x20)) {
@@ -89,7 +90,7 @@ undefined4 native_slot_46(uint param_1,ushort *param_2,ushort *param_3,byte *par
     FUN_00314068(DAT_002def04,*param_3,param_3[1],param_2[2],param_2[3],DAT_002def00,*param_2,
                  param_2[1],&uStack_34,&uStack_30,*DAT_002def0c | (ushort)((bVar1 & 0xf) << 8));
   }
-  FUN_002e479c();
+  native_graphics_finish();
   if (*(int *)(iVar5 + -0x20) != 4) {
     bVar7 = bVar7 ^ 1;
     if (*(int *)(iVar5 + -0x20) != 3) {

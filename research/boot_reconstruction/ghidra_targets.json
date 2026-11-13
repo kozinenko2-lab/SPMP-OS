@@ -693,7 +693,7 @@
         {
           "address": "002dd52c",
           "first_word": "e1a0c00d",
-          "label": "native_slot_49"
+          "label": "native_fill_rect"
         },
         {
           "address": "002def10",
@@ -1054,6 +1054,396 @@
           "address": "00299a98",
           "first_word": "e1a0c00d",
           "label": "mmi_run_constructors"
+        },
+        {
+          "address": "002e8310",
+          "first_word": "e1a0c00d",
+          "label": "lcd_state_initialize"
+        },
+        {
+          "address": "002e8380",
+          "first_word": "e59f3004",
+          "label": "lcd_aligned_width"
+        },
+        {
+          "address": "002e8390",
+          "first_word": "e59f3004",
+          "label": "lcd_aligned_height"
+        },
+        {
+          "address": "002e83a0",
+          "first_word": "e59f3004",
+          "label": "lcd_get_width"
+        },
+        {
+          "address": "002e83b0",
+          "first_word": "e59f3004",
+          "label": "lcd_get_height"
+        },
+        {
+          "address": "002e83c0",
+          "first_word": "e59f3004",
+          "label": "lcd_get_scanout"
+        },
+        {
+          "address": "002e83d0",
+          "first_word": "e59f3004",
+          "label": "lcd_secondary_get_scanout"
+        },
+        {
+          "address": "002e83e0",
+          "first_word": "e59f3004",
+          "label": "lcd_get_flags"
+        },
+        {
+          "address": "002e83f0",
+          "first_word": "e59f302c",
+          "label": "lcd_set_scanout"
+        },
+        {
+          "address": "002e842c",
+          "first_word": "e59f302c",
+          "label": "lcd_secondary_set_scanout"
+        },
+        {
+          "address": "002e8468",
+          "first_word": "e59f3004",
+          "label": "lcd_set_flags"
+        },
+        {
+          "address": "002a4248",
+          "first_word": "e59f3004",
+          "label": "lcd_set_render_buffer"
+        },
+        {
+          "address": "002a4258",
+          "first_word": "e59f3004",
+          "label": "lcd_secondary_set_render_buffer"
+        },
+        {
+          "address": "002a4268",
+          "first_word": "e59f3004",
+          "label": "lcd_get_render_buffer"
+        },
+        {
+          "address": "002a4278",
+          "first_word": "e59f3004",
+          "label": "lcd_secondary_get_render_buffer"
+        },
+        {
+          "address": "002a3fd4",
+          "first_word": "e1a0c00d",
+          "label": "lcd_present"
+        },
+        {
+          "address": "002a3e98",
+          "first_word": "e1a0c00d",
+          "label": "lcd_wait_sync"
+        },
+        {
+          "address": "002a3e5c",
+          "first_word": "e1a0c00d",
+          "label": "lcd_clear_render_buffer"
+        },
+        {
+          "address": "002a4288",
+          "first_word": "e1a0c00d",
+          "label": "lcd_initialize"
+        },
+        {
+          "address": "002a43f4",
+          "first_word": "e1a0c00d",
+          "label": "lcd_secondary_initialize"
+        },
+        {
+          "address": "002a4460",
+          "first_word": "e1a0c00d",
+          "label": "lcd_set_pixel_mode"
+        },
+        {
+          "address": "002a4538",
+          "first_word": "e1a0c00d",
+          "label": "lcd_get_pixel_mode"
+        },
+        {
+          "address": "002a4034",
+          "first_word": "e1a0c00d",
+          "label": "lcd_select_main_span_ops"
+        },
+        {
+          "address": "002a4180",
+          "first_word": "e1a0c00d",
+          "label": "lcd_select_secondary_span_ops"
+        },
+        {
+          "address": "002a4aa0",
+          "first_word": "e1a0c00d",
+          "label": "lcd_stage_2a4aa0"
+        },
+        {
+          "address": "002a5138",
+          "first_word": "e1a0c00d",
+          "label": "lcd_render_clear_core"
+        },
+        {
+          "address": "002def30",
+          "first_word": "e59f3004",
+          "label": "native_virtual_get_render"
+        },
+        {
+          "address": "002def40",
+          "first_word": "e59f3004",
+          "label": "native_virtual_get_scanout"
+        },
+        {
+          "address": "002def60",
+          "first_word": "e1a0c00d",
+          "label": "native_virtual_present"
+        },
+        {
+          "address": "002e5c60",
+          "first_word": "e1a0c00d",
+          "label": "blitter_command_reset"
+        },
+        {
+          "address": "002e6004",
+          "first_word": "e1a0c00d",
+          "label": "blitter_transfer"
+        },
+        {
+          "address": "002e65e4",
+          "first_word": "e1a0c00d",
+          "label": "blitter_control"
+        },
+        {
+          "address": "002e479c",
+          "first_word": "e1a0c00d",
+          "label": "native_graphics_finish"
+        },
+        {
+          "address": "00312ce8",
+          "first_word": "e1c010b8",
+          "label": "gfx_context_dimensions"
+        },
+        {
+          "address": "00312d18",
+          "first_word": "e1c012b4",
+          "label": "gfx_set_fg_color"
+        },
+        {
+          "address": "00312d20",
+          "first_word": "e1d002b4",
+          "label": "gfx_get_fg_color"
+        },
+        {
+          "address": "00312fb0",
+          "first_word": "e3a03000",
+          "label": "gfx_context_initialize"
+        },
+        {
+          "address": "00312ec8",
+          "first_word": "e5903000",
+          "label": "gfx_context_reset"
+        },
+        {
+          "address": "00312f98",
+          "first_word": "e5900014",
+          "label": "gfx_stage_312f98"
+        },
+        {
+          "address": "00312fa0",
+          "first_word": "e5903000",
+          "label": "gfx_stage_312fa0"
+        },
+        {
+          "address": "00313f40",
+          "first_word": "e1a0c00d",
+          "label": "gfx_blit_dispatch"
+        },
+        {
+          "address": "00294ab0",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_reserve"
+        },
+        {
+          "address": "00294f30",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_commit"
+        },
+        {
+          "address": "002948fc",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_initialize"
+        },
+        {
+          "address": "00294878",
+          "first_word": "e1a0c00d",
+          "label": "pcm_set_chunk_size"
+        },
+        {
+          "address": "00292058",
+          "first_word": "e1a0c00d",
+          "label": "pcm_stage_292058"
+        },
+        {
+          "address": "00292198",
+          "first_word": "e92d4010",
+          "label": "pcm_stage_292198"
+        },
+        {
+          "address": "00292720",
+          "first_word": "e1a0c00d",
+          "label": "pcm_driver_configure"
+        },
+        {
+          "address": "00292d44",
+          "first_word": "e1a0c00d",
+          "label": "pcm_driver_start"
+        },
+        {
+          "address": "00292fd8",
+          "first_word": "e59f3004",
+          "label": "pcm_driver_get_state"
+        },
+        {
+          "address": "0029307c",
+          "first_word": "e1a0c00d",
+          "label": "pcm_driver_control"
+        },
+        {
+          "address": "00294f74",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_take_core"
+        },
+        {
+          "address": "00294bb8",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_publish_core"
+        },
+        {
+          "address": "00294dfc",
+          "first_word": "e1a0c00d",
+          "label": "pcm_stage_294dfc"
+        },
+        {
+          "address": "0029440c",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_reset"
+        },
+        {
+          "address": "00294440",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_shutdown"
+        },
+        {
+          "address": "00292bec",
+          "first_word": "e1a0c00d",
+          "label": "pcm_stage_292bec"
+        },
+        {
+          "address": "002a3020",
+          "first_word": "e1a0c00d",
+          "label": "lcd_irq_isr"
+        },
+        {
+          "address": "002a315c",
+          "first_word": "e1a0c00d",
+          "label": "lcd_irq_dsr"
+        },
+        {
+          "address": "002b97cc",
+          "first_word": "e1a0c00d",
+          "label": "lcd_pool_buffer_get"
+        },
+        {
+          "address": "002a4be8",
+          "first_word": "e1a0c00d",
+          "label": "lcd_bind_pool_buffers"
+        },
+        {
+          "address": "0034c384",
+          "first_word": "e3a00d05",
+          "label": "panel_default_width"
+        },
+        {
+          "address": "0034c38c",
+          "first_word": "e3a000f0",
+          "label": "panel_default_height"
+        },
+        {
+          "address": "002e77c0",
+          "first_word": "e1a0c00d",
+          "label": "lcd_enable"
+        },
+        {
+          "address": "002e7cf0",
+          "first_word": "e1a0c00d",
+          "label": "lcd_register_initialize"
+        },
+        {
+          "address": "002e796c",
+          "first_word": "e59f31c8",
+          "label": "lcd_apply_pixel_mode"
+        },
+        {
+          "address": "002a14d0",
+          "first_word": "e1a0c00d",
+          "label": "pcm_dma_program"
+        },
+        {
+          "address": "002a12b8",
+          "first_word": "e3a03493",
+          "label": "pcm_engine_enable"
+        },
+        {
+          "address": "002953cc",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_acquire_for_dma"
+        },
+        {
+          "address": "002949f0",
+          "first_word": "e1a0c00d",
+          "label": "pcm_queue_reserve_try"
+        },
+        {
+          "address": "0029477c",
+          "first_word": "e2602a42",
+          "label": "pcm_queue_commit_limit"
+        },
+        {
+          "address": "00290c5c",
+          "first_word": "e1a0c00d",
+          "label": "pcm_dma_isr"
+        },
+        {
+          "address": "00291238",
+          "first_word": "e1a0c00d",
+          "label": "pcm_dma_dsr"
+        },
+        {
+          "address": "002a2e88",
+          "first_word": "e1a0c00d",
+          "label": "pcm_dma_channel_allocate"
+        },
+        {
+          "address": "002a2f64",
+          "first_word": "e1a0c00d",
+          "label": "pcm_dma_attach_handlers"
+        },
+        {
+          "address": "0042f910",
+          "first_word": "e1a0c00d",
+          "label": "shell_game_stack_allocate"
+        },
+        {
+          "address": "0042f954",
+          "first_word": "e1a0c00d",
+          "label": "shell_game_stack_free"
+        },
+        {
+          "address": "00430694",
+          "first_word": "e1a0c00d",
+          "label": "shell_game_launch"
         }
       ],
       "repairs": [
