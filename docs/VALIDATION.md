@@ -1,5 +1,12 @@
 # Проверки этапа 9
 
+**Аппаратное подтверждение пользователя, 14 ноября 2026:** опубликованный
+SPMP_PROBE_VM.bin (artifact 14076639604) запустился на консоли, показал кадр
+с тремя цветными полосами и вышел. Статус USER_CONFIRMED_ON_CONSOLE относится
+к этому frame/exit. [Запись свидетельства](../research/boot_reconstruction/evidence/native_probe_hardware_user_report.json).
+Физический input, повторные запуски, длительная стабильность и RTOS cleanup
+пользователь этим сообщением отдельно не проверял.
+
 - Exact-SHA RAP extraction: 85 slots + девять prefix CRC32, generated headers
   consistent; оригинал до/после прогона неизменён — PASS.
 - Собственный NGame: structural check + decode round-trip; actual RAP loader
@@ -17,8 +24,9 @@
 
 Runtime CRC32/table checks не являются полной SHA-проверкой прошивки в RAM.
 Cache/CP15, file/audio/thread/command/message и все девять graphics/input API
-backends в private chain подменены. Аппаратный frontend, LCD/GPU/IRQ/cache и
-RTOS liveness не подтверждены. Это RAM NGame, не Flash/NAND image.
+backends в private chain подменены. Отдельное аппаратное наблюдение выше
+подтверждает запуск/видимый кадр/выход; per-call GPU/IRQ/cache semantics и
+RTOS liveness оно не измеряет. Это RAM NGame, не Flash/NAND image.
 [Полный отчёт](../research/boot_reconstruction/STAGE9_REPORT_RU.md).
 
 ---

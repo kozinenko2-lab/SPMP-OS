@@ -7,7 +7,11 @@ Runtime checks — совместимость выбранных интерфе�
 
 116 public synthetic ARM926 scenarios и 6 actual-RAP loader/entry/return cases
 прошли. Оригинальный RAP принимает собственный container/decode/footer;
-cache/file/audio/OS/graphics/input backends подменены. Аппаратного запуска нет.
+cache/file/audio/OS/graphics/input backends в VM подменены.
+**14 ноября 2026 пользователь подтвердил аппаратный запуск artifact 14076639604:
+кадр с тремя разноцветными полосами и выход из приложения.**
+[Аппаратное свидетельство](../research/boot_reconstruction/evidence/native_probe_hardware_user_report.json)
+имеет статус USER_CONFIRMED_ON_CONSOLE; это пользовательское наблюдение, не RAM/IRQ trace.
 
 Точный опубликованный CI BIN (artifact 14076639604, 3704 байта) скачан и
 отдельно прошёл те же 6 original-RAP сценариев; SHA и provenance сохранены.
@@ -15,8 +19,9 @@ cache/file/audio/OS/graphics/input backends подменены. Аппаратн
 [Отчёт этапа 9](../research/boot_reconstruction/STAGE9_REPORT_RU.md).
 CI собирает BIN/ELF/maps/manifest в artifact `native-probe-ngame-vm-tested`.
 Это диагностическое RAM-приложение, не готовая оболочка или Flash-прошивка.
-Далее — frontend metadata/LCM, runtime и LCD/cache/IRQ/cleanup на плате, затем
-перенос UI SPMP-OS. Экспорты OEM/API прежние: 284/28.
+Далее — интерактивный ввод и сопоставление кнопок, повторные запуски и
+длительная работа, расширение UI SPMP-OS. Детали cache/IRQ/cleanup и универсальная
+metadata/LCM совместимость требуют дальнейших проверок. Экспорты OEM/API прежние: 284/28.
 
 ---
 

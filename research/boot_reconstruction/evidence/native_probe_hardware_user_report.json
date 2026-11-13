@@ -1,0 +1,39 @@
+{
+  "status": "USER_CONFIRMED_ON_CONSOLE",
+  "evidence_kind": "User report in this conversation; not an instrumented device trace",
+  "report_date_local": "2026-11-14",
+  "report_timezone": "Europe/Moscow",
+  "console_model_from_task": "Defender MultiMix Magic / Sunplus SPMP8000",
+  "user_report_ru": "Пакет скачал, запустил на консоли, там был кадр с тремя разноцветными полосками и выход из приложения. Всё работает.",
+  "referenced_package": {
+    "file_name": "SPMP_PROBE_VM.bin",
+    "source_revision": "ac3d59b07b16e9c622bc8f3fa2a1ae18b71c934a",
+    "run_id": 43510486747,
+    "artifact_id": 14076639604,
+    "artifact_url": "https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43510486747/artifacts/14076639604",
+    "container_bytes": 3704,
+    "container_sha256_from_artifact_manifest": "9dcef4e8593ef44b93c69d44d570e78e947bae9e35905107a89f286f2fc35782",
+    "association": "User refers to the package linked in the preceding reply. No independent console-side digest was supplied."
+  },
+  "directly_reported": [
+    "Package launched on the console",
+    "One frame with three colored bars appeared",
+    "Application exited"
+  ],
+  "inferred_from_source_and_observation": [
+    "Device launch route accepted this NGame package",
+    "Startup and preflight allowed the graphics path",
+    "The tested native graphics path produced visible output",
+    "Exit is consistent with the ordinary return path in this one-frame build"
+  ],
+  "not_verified": [
+    "Physical button mapping and interactive input",
+    "Repeated launches and long-running stability",
+    "Audio, files and the full SPMP-OS UI",
+    "Per-call return values, RAM/stack addresses or firmware digest measured on device",
+    "IRQ/cache timing, RTOS worker termination or leak freedom",
+    "RedBoot variant, standalone SD boot or Flash/NAND modifications"
+  ],
+  "expected_oem_profile_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "scope": "Hardware confirmation applies to this diagnostic package and observed frame/exit only."
+}

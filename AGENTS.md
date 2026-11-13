@@ -35,7 +35,8 @@ For a full archive checksum audit use `python3 tools/verify_integrity.py --full`
 - Add descriptive Ghidra symbols and export decompilation with evidence. State facts, hypotheses and confidence separately.
 - Trace FAT, UART, GPIO, LCD, audio, power and game loader interfaces. Provide a documented HAL ABI and map of writable/overwritten RAM; do not execute guessed bindings.
 - Integrate installed FM01–FM05 and theme v9 into a host-level SPMP-OS UI harness; compile/run host tests before ARM cross build. Native hardware integration is incomplete.
-- For device diagnostics, prefer a verified MMI-hosted app under the correct OEM container format. Previous NGame test failed with «неверный формат» on Defender; do not reuse it as known-good.
+- For device diagnostics, prefer a verified MMI-hosted app under the correct OEM container format. The older `MMI_DIAG.bin` failed with «неверный формат»; do not reuse that file as known-good.
+- The user confirmed on 2026-11-14 that `SPMP_PROBE_VM.bin` from artifact 14076639604 displayed three colored bars and exited on the console. See `research/boot_reconstruction/evidence/native_probe_hardware_user_report.json`. Hardware confirmation is limited to that one-frame/exit observation; buttons, repeated/long runs, full UI and RTOS cleanup remain unverified.
 
 ## Reporting discipline
 Produce patches, tests, disassembly evidence and updated `docs/STATUS_ROADMAP_RU.md` for each task. Keep original binaries unchanged. A working host preview is not a working firmware.
