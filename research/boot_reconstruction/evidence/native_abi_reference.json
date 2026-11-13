@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/uli/libspmp8k",
+  "commit": "5498e63cbe828f04dd3a7a2b8fb46da84e83d7cb",
+  "files": [
+    {
+      "path": "libgame/libgame.c",
+      "git_blob_sha1": "bfa0a394bcec6602e8c0f93a906a5ed23377e867",
+      "url": "https://github.com/uli/libspmp8k/blob/5498e63cbe828f04dd3a7a2b8fb46da84e83d7cb/libgame/libgame.c"
+    },
+    {
+      "path": "libgame/libgame.h",
+      "git_blob_sha1": "4da89549f790cb461530df984158b4adb07778e2",
+      "url": "https://github.com/uli/libspmp8k/blob/5498e63cbe828f04dd3a7a2b8fb46da84e83d7cb/libgame/libgame.h"
+    },
+    {
+      "path": "libgame/mcatch_types.h",
+      "git_blob_sha1": "df56e9482d4cc1e9d9169147e3688ee2ec798bd0",
+      "url": "https://github.com/uli/libspmp8k/blob/5498e63cbe828f04dd3a7a2b8fb46da84e83d7cb/libgame/mcatch_types.h"
+    }
+  ],
+  "use": "Comparison reference for names, slot offsets and ABI candidates. No reference implementation imported. OEM signatures verified separately from original ARM.",
+  "attribution": "libgame: Ulrich Hecht (2012, 2013), based on alemaxx (2010); zlib-style license in libgame.c.",
+  "differences_in_this_image": [
+    "MCatchQueryImage consumes three arguments: id, field, uint16_t *output.",
+    "NativeGE_fsSeek returns 32-bit status (0/2), not uint64_t position.",
+    "MCatchGetFrameBuffer writes dimensions through two uint16_t pointers.",
+    "Offset 0x138 returns 0xff in this image; do not treat it as a zero-return stub.",
+    "Native API ends at 0x150 (NULL); offset 0x154 is outside this 85-slot table."
+  ]
+}

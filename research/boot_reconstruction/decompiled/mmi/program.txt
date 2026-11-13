@@ -1,7 +1,7 @@
 program=ghidra_analysis_ONLY.elf
 language=ARM:LE:32:v8
 compiler=default
-functions=7449
+functions=7489
 block=.spmp_seg_0,00280000,0056ad8f,execute=true
 block=.spmp_seg_1,006c8fe0,006ff81f,execute=false
 block=.shstrtab,.shstrtab::00000000,.shstrtab::00000032,execute=false

@@ -1,0 +1,53 @@
+002ddd48 cpy r12,sp
+002ddd4c stmdb sp!,{r11,r12,lr,pc}
+002ddd50 sub r11,r12,#0x4
+002ddd54 cpy lr,r3
+002ddd58 and r0,r0,#0xff
+002ddd5c and r1,r1,#0xff
+002ddd60 and r12,r2,#0xff
+002ddd64 cmp r0,#0x1
+002ddd68 bls 0x002ddd7c
+002ddd6c ldr r3,[0x2dde14]
+002ddd70 ldrh r3,[r3,#0x0]
+002ddd74 cmp r3,r0
+002ddd78 bhi 0x002ddd88
+002ddd7c mov r0,#0x400
+002ddd80 add r0,r0,#0x70000006
+002ddd84 ldmia sp,{r11,sp,pc}
+002ddd88 add r2,r0,r0, lsl #0x3
+002ddd8c ldr r3,[0x2dde18]
+002ddd90 ldr r3,[r3,#0x0]
+002ddd94 add r0,r3,r2, lsl #0x2
+002ddd98 ldrb r3,[r0,#-0x24]!
+002ddd9c cmp r3,#0x0
+002ddda0 moveq r0,#0x400
+002ddda4 addeq r0,r0,#0x70000006
+002ddda8 ldmiaeq sp,{r11,sp,pc}
+002dddac ldr r3,[r0,#0x4]
+002dddb0 sub r3,r3,#0x1
+002dddb4 cmp r3,#0x1
+002dddb8 movhi r0,#0x400
+002dddbc addhi r0,r0,#0x70000006
+002dddc0 ldmiahi sp,{r11,sp,pc}
+002dddc4 ldrb r3,[r0,#0x11]
+002dddc8 cmp r3,#0x0
+002dddcc movne r0,#0x400
+002dddd0 addne r0,r0,#0x70000006
+002dddd4 ldmiane sp,{r11,sp,pc}
+002dddd8 ldrb r3,[r0,#0x10]
+002ddddc cmp r3,#0x0
+002ddde0 moveq r0,#0x400
+002ddde4 addeq r0,r0,#0x70000006
+002ddde8 ldmiaeq sp,{r11,sp,pc}
+002dddec ldr r2,[r0,#0x14]
+002dddf0 add r2,r2,r1, lsl #0x1
+002dddf4 ldrb r3,[r0,#0x10]
+002dddf8 cmp r3,#0x1
+002dddfc cpyeq r0,r2
+002dde00 cpyeq r1,lr
+002dde04 cpyeq r2,r12
+002dde08 bleq 0x00298c6c
+002dde0c mov r0,#0x0
+002dde10 ldmia sp,{r11,sp,pc}
+REFERENCES TO ENTRY:
+002d3490 DATA

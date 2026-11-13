@@ -2,11 +2,11 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE3_REPORT_RU.md](STAGE3_REPORT_RU.md) — экспорт
-99 функций из трёх пользовательских GZF, реальный GUI callback/циклы,
-NGame с восстановлением преобразования префикса и 85 слотов native API.
-Псевдокод: `decompiled/`. Предыдущие результаты bootcfg/customize:
-[STAGE2_REPORT_RU.md](STAGE2_REPORT_RU.md).
+**Текущий этап:** [STAGE4_REPORT_RU.md](STAGE4_REPORT_RU.md) — экспорт
+170 выбранных функций из трёх пользовательских GZF, 17 объявлений native API
+для файлов, графики и ввода, различия двух allocator; 99 сценариев ARM в RAM-only VM.
+Псевдокод: `decompiled/`. Предыдущие результаты:
+[GUI/NGame/85 слотов](STAGE3_REPORT_RU.md), [bootcfg/customize](STAGE2_REPORT_RU.md).
 
 В `src/` добавлены проверяемые host-модели boot policy, релокаций и flag poll.
 Это отдельные алгоритмы, а не собираемый исходник всей заводской прошивки.
@@ -33,3 +33,9 @@ NGame с восстановлением преобразования префи�
   и `requirements-emulation.txt`. Не запускает прошивку на устройстве.
 - `tools/audit_stage3.py` — точные ARM-проверки GUI/NGame/API по оригиналу.
 - `src/oem_layouts.h` — числовые 32-битные структуры, не callable bindings.
+- `src/mmi_native_abi.h` — типизированное подмножество native ABI без привязки адресов.
+- `tools/native_abi_models.py` — host-модели выбранных файловых, графических,
+  клавиатурных и allocator-предикатов.
+- `tools/audit_stage4.py` — 56 точных ARM-проверок и 17 объявлений/слотов.
+- `tools/emulate_native_abi.py` / `arm_abi_vm.py` — отдельная проверка 99 сценариев
+  оригинальными ARM-wrapper с явными backend-заглушками, требует Unicorn и RAP.

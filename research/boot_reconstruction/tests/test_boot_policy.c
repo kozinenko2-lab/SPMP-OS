@@ -1,5 +1,6 @@
 #include "redboot_boot_policy.h"
 #include "oem_layouts.h"
+#include "mmi_native_abi.h"
 #include <assert.h>
 #include <stdio.h>
 static void gates(void)

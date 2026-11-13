@@ -16,7 +16,7 @@ void native_api_init(void)
     puVar1[iVar3] = uVar2;
     iVar3 = iVar3 + 1;
   } while (iVar3 < 0x55);
-  uVar4 = FUN_00339d18();
+  uVar4 = ecos_current_ticks();
   *DAT_002d3548 = (int)uVar4;
   *puVar1 = DAT_002d354c;
   puVar1[1] = DAT_002d3550;

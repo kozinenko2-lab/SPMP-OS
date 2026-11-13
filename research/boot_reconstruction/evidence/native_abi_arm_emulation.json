@@ -1,0 +1,1506 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "cases": [
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 0,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 0,
+        "count": 4,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 32,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 0,
+        "count": 4,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 33,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 0,
+        "count": 4,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 4294967295,
+        "count": 4,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": -1,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": 2
+      },
+      "original_arm": {
+        "status": 2,
+        "count": 2,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": -1,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_read",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "status": 2,
+        "count": 0,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 0,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 0,
+        "count": 4,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 0,
+        "count": 4,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 32,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 0,
+        "count": 4,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 33,
+        "count": 4,
+        "backend_result": 4
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 4294967295,
+        "count": 4,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": 2
+      },
+      "original_arm": {
+        "status": 2,
+        "count": 2,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": -1,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_write",
+      "inputs": {
+        "fd": 1,
+        "count": 4,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "status": 2,
+        "count": 0,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_close",
+      "inputs": {
+        "fd": 0,
+        "count": 0,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "status": 0,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_close",
+      "inputs": {
+        "fd": 32,
+        "count": 0,
+        "backend_result": 17
+      },
+      "original_arm": {
+        "status": 0,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_close",
+      "inputs": {
+        "fd": 33,
+        "count": 0,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_close",
+      "inputs": {
+        "fd": 4294967295,
+        "count": 0,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_close",
+      "inputs": {
+        "fd": 1,
+        "count": 0,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_seek",
+      "inputs": {
+        "fd": 0,
+        "count": 0,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "status": 0,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_seek",
+      "inputs": {
+        "fd": 32,
+        "count": 0,
+        "backend_result": 17
+      },
+      "original_arm": {
+        "status": 0,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_seek",
+      "inputs": {
+        "fd": 33,
+        "count": 0,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "status": 0,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_seek",
+      "inputs": {
+        "fd": 4294967295,
+        "count": 0,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_seek",
+      "inputs": {
+        "fd": 1,
+        "count": 0,
+        "backend_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "count": null,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_open",
+      "inputs": {
+        "backend_fd": 0,
+        "stat_result": 0
+      },
+      "original_arm": {
+        "status": 0,
+        "fd": 0,
+        "stat_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_open",
+      "inputs": {
+        "backend_fd": 4,
+        "stat_result": 0
+      },
+      "original_arm": {
+        "status": 0,
+        "fd": 4,
+        "stat_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_open",
+      "inputs": {
+        "backend_fd": -1,
+        "stat_result": 0
+      },
+      "original_arm": {
+        "status": 2,
+        "fd": null,
+        "stat_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "file_open",
+      "inputs": {
+        "backend_fd": 4,
+        "stat_result": -1
+      },
+      "original_arm": {
+        "status": 2,
+        "fd": null,
+        "stat_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_get_framebuffer_dimensions",
+      "inputs": {},
+      "original_arm": {
+        "status": 0,
+        "output_u16": [
+          320,
+          240
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_get_display_rect",
+      "inputs": {},
+      "original_arm": {
+        "status": 0,
+        "output_u16": [
+          0,
+          0,
+          320,
+          240
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_framebuffer",
+      "inputs": {
+        "requested_width": 1,
+        "requested_height": 1,
+        "driver_width": 2,
+        "driver_height": 3
+      },
+      "original_arm": {
+        "status": 0,
+        "bytes_cleared": 12
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_framebuffer",
+      "inputs": {
+        "requested_width": 0,
+        "requested_height": 0,
+        "driver_width": 2,
+        "driver_height": 3
+      },
+      "original_arm": {
+        "status": 0,
+        "bytes_cleared": 12
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_framebuffer",
+      "inputs": {
+        "requested_width": 1024,
+        "requested_height": 3,
+        "driver_width": 2,
+        "driver_height": 3
+      },
+      "original_arm": {
+        "status": 1879049217,
+        "bytes_cleared": 0
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_framebuffer",
+      "inputs": {
+        "requested_width": 2,
+        "requested_height": 1024,
+        "driver_width": 2,
+        "driver_height": 3
+      },
+      "original_arm": {
+        "status": 1879049217,
+        "bytes_cleared": 0
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_framebuffer",
+      "inputs": {
+        "requested_width": 65538,
+        "requested_height": 65539,
+        "driver_width": 2,
+        "driver_height": 3
+      },
+      "original_arm": {
+        "status": 0,
+        "bytes_cleared": 12
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_framebuffer",
+      "inputs": {
+        "requested_width": 65535,
+        "requested_height": 1,
+        "driver_width": 2,
+        "driver_height": 3
+      },
+      "original_arm": {
+        "status": 1879049217,
+        "bytes_cleared": 0
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_fg",
+      "inputs": {
+        "rgb": [
+          0,
+          0,
+          0
+        ]
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb565": 0
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_fg",
+      "inputs": {
+        "rgb": [
+          255,
+          255,
+          255
+        ]
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb565": 65535
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_fg",
+      "inputs": {
+        "rgb": [
+          255,
+          0,
+          255
+        ]
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb565": 63519
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_set_fg",
+      "inputs": {
+        "rgb": [
+          12,
+          129,
+          250
+        ]
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb565": 3103
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_get_fg",
+      "inputs": {
+        "rgb565": 0
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb": [
+          0,
+          0,
+          0
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_get_fg",
+      "inputs": {
+        "rgb565": 65535
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb": [
+          248,
+          252,
+          248
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_get_fg",
+      "inputs": {
+        "rgb565": 63519
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb": [
+          248,
+          0,
+          248
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_get_fg",
+      "inputs": {
+        "rgb565": 4660
+      },
+      "original_arm": {
+        "status": 0,
+        "rgb": [
+          16,
+          68,
+          160
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 2,
+        "field": 1,
+        "active": true
+      },
+      "original_arm": {
+        "status": 0,
+        "value": 320
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 2,
+        "field": 2,
+        "active": true
+      },
+      "original_arm": {
+        "status": 0,
+        "value": 240
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 2,
+        "field": 3,
+        "active": true
+      },
+      "original_arm": {
+        "status": 0,
+        "value": 3
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 2,
+        "field": 4,
+        "active": true
+      },
+      "original_arm": {
+        "status": 0,
+        "value": 85
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 2,
+        "field": 5,
+        "active": true
+      },
+      "original_arm": {
+        "status": 1030,
+        "value": null
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 1,
+        "field": 1,
+        "active": true
+      },
+      "original_arm": {
+        "status": 1030,
+        "value": null
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 4,
+        "field": 1,
+        "active": true
+      },
+      "original_arm": {
+        "status": 1030,
+        "value": null
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 2,
+        "field": 1,
+        "active": false
+      },
+      "original_arm": {
+        "status": 1030,
+        "value": null
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_query_image",
+      "inputs": {
+        "image_id": 258,
+        "field": 257,
+        "active": true
+      },
+      "original_arm": {
+        "status": 0,
+        "value": 320
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_paint",
+      "inputs": {
+        "same_buffer": false
+      },
+      "original_arm": {
+        "status": 0,
+        "copied_bytes": 12,
+        "events": [
+          "flip",
+          "cache_sync"
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_paint",
+      "inputs": {
+        "same_buffer": true
+      },
+      "original_arm": {
+        "status": 0,
+        "copied_bytes": 0,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_load_free_image",
+      "inputs": {
+        "pixel_type": 1,
+        "width": 3
+      },
+      "original_arm": {
+        "status": 1030,
+        "image_id": null,
+        "borrowed_pixels": false,
+        "free_status": null,
+        "pixel_free_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_load_free_image",
+      "inputs": {
+        "pixel_type": 1,
+        "width": 4
+      },
+      "original_arm": {
+        "status": 0,
+        "image_id": 2,
+        "borrowed_pixels": true,
+        "free_status": 0,
+        "pixel_free_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_load_free_image",
+      "inputs": {
+        "pixel_type": 2,
+        "width": 6
+      },
+      "original_arm": {
+        "status": 1030,
+        "image_id": null,
+        "borrowed_pixels": false,
+        "free_status": null,
+        "pixel_free_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_load_free_image",
+      "inputs": {
+        "pixel_type": 2,
+        "width": 8
+      },
+      "original_arm": {
+        "status": 0,
+        "image_id": 2,
+        "borrowed_pixels": true,
+        "free_status": 0,
+        "pixel_free_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "graphics_load_free_image",
+      "inputs": {
+        "pixel_type": 3,
+        "width": 3
+      },
+      "original_arm": {
+        "status": 0,
+        "image_id": 2,
+        "borrowed_pixels": true,
+        "free_status": 0,
+        "pixel_free_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 0,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 1,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 1,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 16,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 65536,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 32,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 131072,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 2048,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 8192,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 524288,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 524288,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 4097,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 15,
+        "events": [
+          [
+            "command",
+            [
+              3335,
+              0,
+              0
+            ]
+          ],
+          [
+            "gui_action",
+            []
+          ],
+          [
+            "message",
+            [
+              1385,
+              0,
+              0
+            ]
+          ],
+          [
+            "pause",
+            [
+              0
+            ]
+          ],
+          [
+            "delay",
+            [
+              30,
+              0
+            ]
+          ]
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 513,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 1,
+        "volume": 16,
+        "events": [
+          [
+            "save_volume",
+            [
+              16
+            ]
+          ],
+          [
+            "set_volume",
+            [
+              16
+            ]
+          ]
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 512,
+        "volume": 31,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 31,
+        "events": [
+          [
+            "save_volume",
+            [
+              31
+            ]
+          ],
+          [
+            "set_volume",
+            [
+              31
+            ]
+          ]
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 256,
+        "volume": 0,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 0,
+        "events": [
+          [
+            "save_volume",
+            [
+              0
+            ]
+          ],
+          [
+            "set_volume",
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 2560,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 16,
+        "events": [
+          [
+            "save_volume",
+            [
+              16
+            ]
+          ],
+          [
+            "set_volume",
+            [
+              16
+            ]
+          ]
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 2304,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 14,
+        "events": [
+          [
+            "save_volume",
+            [
+              14
+            ]
+          ],
+          [
+            "set_volume",
+            [
+              14
+            ]
+          ]
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 768,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 16,
+        "events": [
+          [
+            "save_volume",
+            [
+              16
+            ]
+          ],
+          [
+            "set_volume",
+            [
+              16
+            ]
+          ]
+        ]
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 6,
+        "raw": 2560,
+        "volume": 15,
+        "volume_gate": 1
+      },
+      "original_arm": {
+        "keys": 8192,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 0,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 1,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 7168,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 2,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 7680,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 4,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 512,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 8,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 1024,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 2048,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 6656,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 32,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 32768,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 16,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 16384,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 3,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 7168,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 48,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 32768,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys",
+      "inputs": {
+        "kind": 8,
+        "raw": 4096,
+        "volume": 15,
+        "volume_gate": 0
+      },
+      "original_arm": {
+        "keys": 0,
+        "volume": 15,
+        "events": []
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys_alternate",
+      "inputs": {
+        "raw": 0
+      },
+      "original_arm": {
+        "keys": 305419896,
+        "fallback_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "keys_alternate",
+      "inputs": {
+        "raw": 1
+      },
+      "original_arm": {
+        "keys": 1,
+        "fallback_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "game_pool_alloc",
+      "inputs": {
+        "bytes": 0,
+        "backend_result": 16793600
+      },
+      "original_arm": {
+        "result": 0,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "game_pool_alloc",
+      "inputs": {
+        "bytes": 1,
+        "backend_result": 16793600
+      },
+      "original_arm": {
+        "result": 0,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "game_pool_alloc",
+      "inputs": {
+        "bytes": 32767,
+        "backend_result": 16793600
+      },
+      "original_arm": {
+        "result": 0,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "game_pool_alloc",
+      "inputs": {
+        "bytes": 32768,
+        "backend_result": 16793600
+      },
+      "original_arm": {
+        "result": 16793600,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "game_pool_alloc",
+      "inputs": {
+        "bytes": 65536,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "result": 0,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "general_alloc",
+      "inputs": {
+        "bytes": 0,
+        "backend_result": 16785408
+      },
+      "original_arm": {
+        "result": 0,
+        "backend_called": false
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "general_alloc",
+      "inputs": {
+        "bytes": 1,
+        "backend_result": 16785408
+      },
+      "original_arm": {
+        "result": 16785408,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "general_alloc",
+      "inputs": {
+        "bytes": 32767,
+        "backend_result": 16785408
+      },
+      "original_arm": {
+        "result": 16785408,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "general_alloc",
+      "inputs": {
+        "bytes": 32768,
+        "backend_result": 16785408
+      },
+      "original_arm": {
+        "result": 16785408,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    },
+    {
+      "group": "general_alloc",
+      "inputs": {
+        "bytes": 65536,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "result": 0,
+        "backend_called": true
+      },
+      "host_model_matches": true
+    }
+  ],
+  "case_count": 99,
+  "limits": [
+    "Original ARM wrappers only; explicitly mocked backends and RAM fixtures.",
+    "No device framebuffer, file I/O, actual key input, audio or console execution.",
+    "SP and r4-r11 sentinel preservation checked on these paths with mocked backends only.",
+    "Not an all-path ABI, concurrency or complete HAL certification."
+  ]
+}

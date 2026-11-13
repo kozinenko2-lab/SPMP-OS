@@ -1,0 +1,20 @@
+00462c14 cpy r12,sp
+00462c18 stmdb sp!,{r11,r12,lr,pc}
+00462c1c sub r11,r12,#0x4
+00462c20 cpy r1,r0
+00462c24 cmp r0,#0x20
+00462c28 bls 0x00462c3c
+00462c2c ldr r0,[0x462c5c]
+00462c30 bl 0x00298b64
+00462c34 mov r0,#0x2
+00462c38 ldmia sp,{r11,sp,pc}
+00462c3c bl 0x002eb640
+00462c40 subs r1,r0,#0x0
+00462c44 movge r0,#0x0
+00462c48 ldmiage sp,{r11,sp,pc}
+00462c4c ldr r0,[0x462c60]
+00462c50 bl 0x00298b64
+00462c54 mov r0,#0x2
+00462c58 ldmia sp,{r11,sp,pc}
+REFERENCES TO ENTRY:
+002d3528 DATA

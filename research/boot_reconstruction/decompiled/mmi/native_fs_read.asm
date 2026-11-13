@@ -1,0 +1,26 @@
+00462b48 cpy r12,sp
+00462b4c stmdb sp!,{r4,r5,r6,r7,r11,r12,lr,pc}
+00462b50 sub r11,r12,#0x4
+00462b54 cpy r6,r1
+00462b58 cpy r5,r2
+00462b5c cpy r7,r3
+00462b60 subs r4,r0,#0x0
+00462b64 addeq r0,r0,#0x2
+00462b68 ldmiaeq sp,{r4,r5,r6,r7,r11,sp,pc}
+00462b6c ldr r0,[0x462ba8]
+00462b70 bl 0x00298b64
+00462b74 cpy r0,r4
+00462b78 cpy r1,r6
+00462b7c cpy r2,r5
+00462b80 bl 0x002eb5e0
+00462b84 cpy r1,r0
+00462b88 str r0,[r7,#0x0]
+00462b8c cmp r0,r5
+00462b90 moveq r0,#0x0
+00462b94 ldmiaeq sp,{r4,r5,r6,r7,r11,sp,pc}
+00462b98 ldr r0,[0x462bac]
+00462b9c bl 0x00298b64
+00462ba0 mov r0,#0x2
+00462ba4 ldmia sp,{r4,r5,r6,r7,r11,sp,pc}
+REFERENCES TO ENTRY:
+002d3518 DATA

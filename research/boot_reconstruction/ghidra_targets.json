@@ -519,6 +519,361 @@
           "address": "004ae52c",
           "first_word": "e590b000",
           "label": "ecos_context_restore"
+        },
+        {
+          "address": "002dd20c",
+          "first_word": "e1a0c00d",
+          "label": "native_paint"
+        },
+        {
+          "address": "002dd80c",
+          "first_word": "e1a0c00d",
+          "label": "native_load_image"
+        },
+        {
+          "address": "002dda44",
+          "first_word": "e1a0c00d",
+          "label": "native_free_image"
+        },
+        {
+          "address": "002df000",
+          "first_word": "e1a0c00d",
+          "label": "native_init_graph"
+        },
+        {
+          "address": "002dde1c",
+          "first_word": "e20000ff",
+          "label": "native_set_rop"
+        },
+        {
+          "address": "002dde34",
+          "first_word": "e59f300c",
+          "label": "native_get_rop"
+        },
+        {
+          "address": "002dde4c",
+          "first_word": "e1a0c00d",
+          "label": "native_set_fg_color"
+        },
+        {
+          "address": "002ddea0",
+          "first_word": "e1a0c00d",
+          "label": "native_get_fg_color"
+        },
+        {
+          "address": "002ddeec",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_19"
+        },
+        {
+          "address": "002ddf2c",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_20"
+        },
+        {
+          "address": "002ddf70",
+          "first_word": "e1a0c00d",
+          "label": "native_set_display_screen"
+        },
+        {
+          "address": "002de020",
+          "first_word": "e1a0c00d",
+          "label": "native_get_display_rect"
+        },
+        {
+          "address": "002de6d8",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_23"
+        },
+        {
+          "address": "002de7d0",
+          "first_word": "e59f3024",
+          "label": "native_slot_24"
+        },
+        {
+          "address": "002de800",
+          "first_word": "e59f3038",
+          "label": "native_slot_25"
+        },
+        {
+          "address": "002de848",
+          "first_word": "e59f1024",
+          "label": "native_slot_26"
+        },
+        {
+          "address": "002de878",
+          "first_word": "e59f3038",
+          "label": "native_slot_27"
+        },
+        {
+          "address": "002de8c0",
+          "first_word": "e59f1024",
+          "label": "native_slot_28"
+        },
+        {
+          "address": "002de618",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_29"
+        },
+        {
+          "address": "002de69c",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_30"
+        },
+        {
+          "address": "002de35c",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_31"
+        },
+        {
+          "address": "002de4fc",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_32"
+        },
+        {
+          "address": "002de8f0",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_33"
+        },
+        {
+          "address": "002de1b4",
+          "first_word": "e1a0c00d",
+          "label": "native_camera_mode"
+        },
+        {
+          "address": "002de06c",
+          "first_word": "e1a0c00d",
+          "label": "native_set_framebuffer"
+        },
+        {
+          "address": "002de124",
+          "first_word": "e1a0c00d",
+          "label": "native_get_framebuffer_dimensions"
+        },
+        {
+          "address": "002de24c",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_38"
+        },
+        {
+          "address": "002de168",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_39"
+        },
+        {
+          "address": "002de944",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_40"
+        },
+        {
+          "address": "002ddb80",
+          "first_word": "e1a0c002",
+          "label": "native_query_image"
+        },
+        {
+          "address": "002deab8",
+          "first_word": "e1a0c00d",
+          "label": "native_enable_double_buffer"
+        },
+        {
+          "address": "002dce18",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_45"
+        },
+        {
+          "address": "002deb1c",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_46"
+        },
+        {
+          "address": "002dd630",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_48"
+        },
+        {
+          "address": "002dd52c",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_49"
+        },
+        {
+          "address": "002def10",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_50"
+        },
+        {
+          "address": "002dd2bc",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_51"
+        },
+        {
+          "address": "002ddd48",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_52"
+        },
+        {
+          "address": "00461e7c",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_53"
+        },
+        {
+          "address": "00461fb4",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_54"
+        },
+        {
+          "address": "00462118",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_55"
+        },
+        {
+          "address": "004623bc",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_56"
+        },
+        {
+          "address": "00462448",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_57"
+        },
+        {
+          "address": "004624d4",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_58"
+        },
+        {
+          "address": "00461c24",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_60"
+        },
+        {
+          "address": "002d2f7c",
+          "first_word": "e1a0c00d",
+          "label": "native_get_key_input"
+        },
+        {
+          "address": "002d3254",
+          "first_word": "e1a0c00d",
+          "label": "native_slot_73"
+        },
+        {
+          "address": "002d329c",
+          "first_word": "e3a000ff",
+          "label": "native_slot_78"
+        },
+        {
+          "address": "00462a74",
+          "first_word": "e1a0c00d",
+          "label": "native_fs_open"
+        },
+        {
+          "address": "00462b48",
+          "first_word": "e1a0c00d",
+          "label": "native_fs_read"
+        },
+        {
+          "address": "00462bb0",
+          "first_word": "e1a0c00d",
+          "label": "native_fs_write"
+        },
+        {
+          "address": "00462c14",
+          "first_word": "e1a0c00d",
+          "label": "native_fs_close"
+        },
+        {
+          "address": "00462c64",
+          "first_word": "e1a0c00d",
+          "label": "native_fs_seek_status32"
+        },
+        {
+          "address": "002d2ffc",
+          "first_word": "e1a0c00d",
+          "label": "native_cooked_key_core"
+        },
+        {
+          "address": "002d2e6c",
+          "first_word": "e1a0c00d",
+          "label": "native_key_event_collector"
+        },
+        {
+          "address": "002e3724",
+          "first_word": "e1a0c00d",
+          "label": "mmi_game_pool_alloc"
+        },
+        {
+          "address": "002e3784",
+          "first_word": "e1a0c00d",
+          "label": "mmi_game_pool_free"
+        },
+        {
+          "address": "002e37c0",
+          "first_word": "e1a0c00d",
+          "label": "mmi_game_pool_info"
+        },
+        {
+          "address": "00299588",
+          "first_word": "e1a0c00d",
+          "label": "mmi_general_alloc"
+        },
+        {
+          "address": "002995d0",
+          "first_word": "e1a0c00d",
+          "label": "mmi_general_free"
+        },
+        {
+          "address": "002eb5e0",
+          "first_word": "e1a0c00d",
+          "label": "ecos_read"
+        },
+        {
+          "address": "002eb610",
+          "first_word": "e1a0c00d",
+          "label": "ecos_write"
+        },
+        {
+          "address": "002eb640",
+          "first_word": "e1a0c00d",
+          "label": "ecos_close"
+        },
+        {
+          "address": "002eb69c",
+          "first_word": "e1a0c00d",
+          "label": "ecos_seek32"
+        },
+        {
+          "address": "002a5ed4",
+          "first_word": "e1a0c00d",
+          "label": "ecos_open"
+        },
+        {
+          "address": "002ddc40",
+          "first_word": "e1a0c00d",
+          "label": "native_image_find_slot"
+        },
+        {
+          "address": "002df218",
+          "first_word": "e3500005",
+          "label": "native_image_pixel_format"
+        },
+        {
+          "address": "002def50",
+          "first_word": "e3a00d05",
+          "label": "native_fixed_width"
+        },
+        {
+          "address": "002def58",
+          "first_word": "e3a000f0",
+          "label": "native_fixed_height"
+        },
+        {
+          "address": "002eb454",
+          "first_word": "e1a0c00d",
+          "label": "ecos_io_vector_transfer"
+        },
+        {
+          "address": "00339d18",
+          "first_word": "e59f300c",
+          "label": "ecos_current_ticks"
         }
       ],
       "repairs": [

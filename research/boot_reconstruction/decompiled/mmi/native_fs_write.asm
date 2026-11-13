@@ -1,0 +1,25 @@
+00462bb0 cpy r12,sp
+00462bb4 stmdb sp!,{r4,r5,r11,r12,lr,pc}
+00462bb8 sub r11,r12,#0x4
+00462bbc cpy r12,r0
+00462bc0 cpy r4,r2
+00462bc4 cpy r5,r3
+00462bc8 cmp r0,#0x20
+00462bcc bls 0x00462be4
+00462bd0 ldr r0,[0x462c0c]
+00462bd4 cpy r1,r12
+00462bd8 bl 0x00298b64
+00462bdc mov r0,#0x2
+00462be0 ldmia sp,{r4,r5,r11,sp,pc}
+00462be4 bl 0x002eb610
+00462be8 cpy r1,r0
+00462bec str r0,[r5,#0x0]
+00462bf0 cmp r0,r4
+00462bf4 moveq r0,#0x0
+00462bf8 ldmiaeq sp,{r4,r5,r11,sp,pc}
+00462bfc ldr r0,[0x462c10]
+00462c00 bl 0x00298b64
+00462c04 mov r0,#0x2
+00462c08 ldmia sp,{r4,r5,r11,sp,pc}
+REFERENCES TO ENTRY:
+002d3520 DATA

@@ -13,7 +13,7 @@ undefined4 native_exit_control(int param_1)
   if (*DAT_00461a44 == 0) {
     return 0;
   }
-  FUN_004623bc((uint)*DAT_00461a48);
+  native_slot_56((uint)*DAT_00461a48);
   FUN_00339b58(*DAT_00461a4c,extraout_r1);
   if (-1 < param_1) {
     FUN_00339b58(*DAT_00461a44,extraout_r1_00);

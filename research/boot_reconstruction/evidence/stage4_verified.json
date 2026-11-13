@@ -1,0 +1,377 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "checks": [
+    {
+      "address": "0x462a8c",
+      "word": "0xe1a08002"
+    },
+    {
+      "address": "0x462a9c",
+      "word": "0xe3a02c02"
+    },
+    {
+      "address": "0x462b1c",
+      "word": "0xa5884000"
+    },
+    {
+      "address": "0x462b60",
+      "word": "0xe2504000"
+    },
+    {
+      "address": "0x462b88",
+      "word": "0xe5870000"
+    },
+    {
+      "address": "0x462b8c",
+      "word": "0xe1500005"
+    },
+    {
+      "address": "0x462bc8",
+      "word": "0xe3500020"
+    },
+    {
+      "address": "0x462bcc",
+      "word": "0x9a000004"
+    },
+    {
+      "address": "0x462bec",
+      "word": "0xe5850000"
+    },
+    {
+      "address": "0x462c24",
+      "word": "0xe3500020"
+    },
+    {
+      "address": "0x462c28",
+      "word": "0x9a000003"
+    },
+    {
+      "address": "0x462c74",
+      "word": "0xe2501000"
+    },
+    {
+      "address": "0x462c78",
+      "word": "0xa3a00000"
+    },
+    {
+      "address": "0x462c88",
+      "word": "0xe3a00002"
+    },
+    {
+      "address": "0x2eb6ac",
+      "word": "0xe50b1018"
+    },
+    {
+      "address": "0x2eb6e8",
+      "word": "0xe24b1018"
+    },
+    {
+      "address": "0x2eb714",
+      "word": "0x51b0018"
+    },
+    {
+      "address": "0x2ddb80",
+      "word": "0xe1a0c002"
+    },
+    {
+      "address": "0x2ddb84",
+      "word": "0xe20000ff"
+    },
+    {
+      "address": "0x2ddb88",
+      "word": "0xe20110ff"
+    },
+    {
+      "address": "0x2ddbf8",
+      "word": "0xe1cc00b0"
+    },
+    {
+      "address": "0x2de144",
+      "word": "0xe1c400b0"
+    },
+    {
+      "address": "0x2de154",
+      "word": "0xe1c500b0"
+    },
+    {
+      "address": "0x2de088",
+      "word": "0xe2833003"
+    },
+    {
+      "address": "0x2de0cc",
+      "word": "0xe1a05085"
+    },
+    {
+      "address": "0x2dd270",
+      "word": "0xe1a04084"
+    },
+    {
+      "address": "0x2dd29c",
+      "word": "0xe5830004"
+    },
+    {
+      "address": "0x2d2fe0",
+      "word": "0xe5850004"
+    },
+    {
+      "address": "0x2d2fec",
+      "word": "0xe3a00001"
+    },
+    {
+      "address": "0x2d3128",
+      "word": "0xe3140a01"
+    },
+    {
+      "address": "0x2d31dc",
+      "word": "0xe3a04000"
+    },
+    {
+      "address": "0x2e373c",
+      "word": "0xe3510902"
+    },
+    {
+      "address": "0x299594",
+      "word": "0xe2501000"
+    },
+    {
+      "address": "0x462b04",
+      "direct_call": "0x2a5ed4"
+    },
+    {
+      "address": "0x462b14",
+      "direct_call": "0x2eb7b0"
+    },
+    {
+      "address": "0x462b80",
+      "direct_call": "0x2eb5e0"
+    },
+    {
+      "address": "0x462be4",
+      "direct_call": "0x2eb610"
+    },
+    {
+      "address": "0x462c3c",
+      "direct_call": "0x2eb640"
+    },
+    {
+      "address": "0x462c70",
+      "direct_call": "0x2eb69c"
+    },
+    {
+      "address": "0x2dd288",
+      "direct_call": "0x298c6c"
+    },
+    {
+      "address": "0x2dd28c",
+      "direct_call": "0x29e450"
+    },
+    {
+      "address": "0x2de104",
+      "direct_call": "0x298d34"
+    },
+    {
+      "address": "0x2ddeb4",
+      "direct_call": "0x312d20"
+    },
+    {
+      "address": "0x2d300c",
+      "direct_call": "0x2d2e6c"
+    },
+    {
+      "address": "0x2d3014",
+      "direct_call": "0x45ffbc"
+    },
+    {
+      "address": "0x2d3148",
+      "direct_call": "0x2d6d60"
+    },
+    {
+      "address": "0x2d314c",
+      "direct_call": "0x3c4c5c"
+    },
+    {
+      "address": "0x2d3160",
+      "direct_call": "0x2d8b88"
+    },
+    {
+      "address": "0x2d3168",
+      "direct_call": "0x46190c"
+    },
+    {
+      "address": "0x2d3174",
+      "direct_call": "0x339be8"
+    },
+    {
+      "address": "0x2d31d0",
+      "direct_call": "0x3e30cc"
+    },
+    {
+      "address": "0x2d31d8",
+      "direct_call": "0x2c4de8"
+    },
+    {
+      "address": "0x2d2fd0",
+      "direct_call": "0x350630"
+    },
+    {
+      "address": "0x2d2fdc",
+      "direct_call": "0x350758"
+    },
+    {
+      "address": "0x2e3758",
+      "direct_call": "0x32e5bc"
+    },
+    {
+      "address": "0x2995a8",
+      "direct_call": "0x4cdab0"
+    }
+  ],
+  "contracts": [
+    {
+      "slot": 4,
+      "offset": "0x10",
+      "target": "0x2dd20c",
+      "export": "native_paint",
+      "typedef": "mmi_paint_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 5,
+      "offset": "0x14",
+      "target": "0x2dd80c",
+      "export": "native_load_image",
+      "typedef": "mmi_load_image_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 6,
+      "offset": "0x18",
+      "target": "0x2dda44",
+      "export": "native_free_image",
+      "typedef": "mmi_free_image_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 15,
+      "offset": "0x3c",
+      "target": "0x2dde1c",
+      "export": "native_set_rop",
+      "typedef": "mmi_set_rop_fn",
+      "scope": "static_arm"
+    },
+    {
+      "slot": 16,
+      "offset": "0x40",
+      "target": "0x2dde34",
+      "export": "native_get_rop",
+      "typedef": "mmi_get_rop_fn",
+      "scope": "static_arm"
+    },
+    {
+      "slot": 17,
+      "offset": "0x44",
+      "target": "0x2dde4c",
+      "export": "native_set_fg_color",
+      "typedef": "mmi_set_fg_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 18,
+      "offset": "0x48",
+      "target": "0x2ddea0",
+      "export": "native_get_fg_color",
+      "typedef": "mmi_get_fg_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 22,
+      "offset": "0x58",
+      "target": "0x2de020",
+      "export": "native_get_display_rect",
+      "typedef": "mmi_get_display_rect_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 36,
+      "offset": "0x90",
+      "target": "0x2de06c",
+      "export": "native_set_framebuffer",
+      "typedef": "mmi_set_framebuffer_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 37,
+      "offset": "0x94",
+      "target": "0x2de124",
+      "export": "native_get_framebuffer_dimensions",
+      "typedef": "mmi_get_dimensions_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 41,
+      "offset": "0xa4",
+      "target": "0x2ddb80",
+      "export": "native_query_image",
+      "typedef": "mmi_query_image_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 64,
+      "offset": "0x100",
+      "target": "0x2d2f7c",
+      "export": "native_get_key_input",
+      "typedef": "mmi_get_keys_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 79,
+      "offset": "0x13c",
+      "target": "0x462a74",
+      "export": "native_fs_open",
+      "typedef": "mmi_fs_open_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 80,
+      "offset": "0x140",
+      "target": "0x462b48",
+      "export": "native_fs_read",
+      "typedef": "mmi_fs_read_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 81,
+      "offset": "0x144",
+      "target": "0x462bb0",
+      "export": "native_fs_write",
+      "typedef": "mmi_fs_write_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 82,
+      "offset": "0x148",
+      "target": "0x462c14",
+      "export": "native_fs_close",
+      "typedef": "mmi_fs_close_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    },
+    {
+      "slot": 83,
+      "offset": "0x14c",
+      "target": "0x462c64",
+      "export": "native_fs_seek_status32",
+      "typedef": "mmi_fs_seek_status32_fn",
+      "scope": "arm_and_mocked_backend_vm"
+    }
+  ],
+  "allocators_not_in_native_api": [
+    "0x299588",
+    "0x2995d0",
+    "0x2e3724",
+    "0x2e3784"
+  ],
+  "limits": [
+    "Image-specific wrapper contracts; not callable fixed-address bindings.",
+    "Backend behavior, ownership on all paths and hardware operation are not certified."
+  ]
+}

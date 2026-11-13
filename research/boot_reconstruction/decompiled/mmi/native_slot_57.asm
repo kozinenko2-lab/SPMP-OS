@@ -1,0 +1,33 @@
+00462448 cpy r12,sp
+0046244c stmdb sp!,{r4,r11,r12,lr,pc}
+00462450 sub r11,r12,#0x4
+00462454 cpy r4,r0
+00462458 ldr r0,[0x4624bc]
+0046245c bl 0x00298b64
+00462460 tst r4,#0x2
+00462464 beq 0x0046248c
+00462468 ldr r3,[0x4624c0]
+0046246c ldr r3,[r3,#0x0]
+00462470 tst r3,#0x2
+00462474 beq 0x0046248c
+00462478 ldr r0,[0x4624c4]
+0046247c bl 0x00298b64
+00462480 mov r2,#0x1
+00462484 ldr r3,[0x4624c8]
+00462488 strb r2,[r3,#0x0]
+0046248c tst r4,#0x1
+00462490 ldmiaeq sp,{r4,r11,sp,pc}
+00462494 ldr r3,[0x4624c0]
+00462498 ldr r3,[r3,#0x0]
+0046249c tst r3,#0x1
+004624a0 ldmiaeq sp,{r4,r11,sp,pc}
+004624a4 ldr r0,[0x4624cc]
+004624a8 bl 0x00298b64
+004624ac mov r2,#0xb
+004624b0 ldr r3,[0x4624d0]
+004624b4 strb r2,[r3,#0x0]
+004624b8 ldmia sp,{r4,r11,sp,pc}
+REFERENCES TO ENTRY:
+004a7d50 UNCONDITIONAL_CALL
+00461978 UNCONDITIONAL_CALL
+002d34b8 DATA

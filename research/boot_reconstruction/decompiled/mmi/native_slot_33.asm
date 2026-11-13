@@ -1,0 +1,20 @@
+002de8f0 cpy r12,sp
+002de8f4 stmdb sp!,{r4,r11,r12,lr,pc}
+002de8f8 sub r11,r12,#0x4
+002de8fc and r4,r0,#0xff
+002de900 tst r1,#0xff
+002de904 beq 0x002de918
+002de908 ldr r0,[0x2de938]
+002de90c mov r1,#0x1
+002de910 bl 0x003133d0
+002de914 b 0x002de924
+002de918 ldr r0,[0x2de938]
+002de91c mov r1,#0x0
+002de920 bl 0x003133d0
+002de924 mov r0,#0x400
+002de928 add r0,r0,#0x70000001
+002de92c cmp r4,#0x40
+002de930 movcc r0,#0x0
+002de934 ldmia sp,{r4,r11,sp,pc}
+REFERENCES TO ENTRY:
+002d33f8 DATA

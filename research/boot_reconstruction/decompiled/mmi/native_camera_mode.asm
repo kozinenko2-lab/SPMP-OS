@@ -1,0 +1,37 @@
+002de1b4 cpy r12,sp
+002de1b8 stmdb sp!,{r4,r11,r12,lr,pc}
+002de1bc sub r11,r12,#0x4
+002de1c0 and r0,r0,#0xff
+002de1c4 cmp r0,#0x20
+002de1c8 beq 0x002de1d8
+002de1cc cmp r0,#0x21
+002de1d0 beq 0x002de1e4
+002de1d4 b 0x002de22c
+002de1d8 mov r0,#0x1
+002de1dc bl 0x002deab8
+002de1e0 b 0x002de238
+002de1e4 mov r0,#0x1
+002de1e8 bl 0x002deab8
+002de1ec ldr r3,[0x2de240]
+002de1f0 mov lr,pc
+002de1f4 ldr pc,[r3,#0x0]
+002de1f8 cpy r4,r0
+002de1fc ldr r3,[0x2de244]
+002de200 mov lr,pc
+002de204 ldr pc,[r3,#0x0]
+002de208 mul r4,r0,r4
+002de20c mov r4,r4, lsl #0x1
+002de210 ldr r3,[0x2de248]
+002de214 mov lr,pc
+002de218 ldr pc,[r3,#0x0]
+002de21c mov r1,#0x0
+002de220 cpy r2,r4
+002de224 bl 0x00298d34
+002de228 b 0x002de238
+002de22c mov r0,#0x400
+002de230 add r0,r0,#0x70000006
+002de234 ldmia sp,{r4,r11,sp,pc}
+002de238 mov r0,#0x0
+002de23c ldmia sp,{r4,r11,sp,pc}
+REFERENCES TO ENTRY:
+002d3408 DATA

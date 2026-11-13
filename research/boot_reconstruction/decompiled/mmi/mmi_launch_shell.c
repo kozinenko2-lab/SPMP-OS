@@ -46,7 +46,7 @@ undefined4 mmi_launch_shell(undefined4 param_1,int param_2)
   if (piVar4 != (int *)0x0) {
     piVar5 = FUN_003db49c((int)piVar4,aiStack_5c);
     *DAT_003e4c74 = (int)piVar5;
-    FUN_002995d0((uint)piVar4);
+    mmi_general_free((uint)piVar4);
   }
   FUN_003e3a08();
   MMI_diag_stub_00298B64();

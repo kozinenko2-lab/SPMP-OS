@@ -1,0 +1,4 @@
+002d329c mov r0,#0xff
+002d32a0 bx lr
+REFERENCES TO ENTRY:
+002d3508 DATA

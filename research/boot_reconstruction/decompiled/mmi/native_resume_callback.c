@@ -10,7 +10,7 @@ undefined4 native_resume_callback(void)
   undefined4 extraout_r2_00;
   
   MMI_diag_stub_00298B64();
-  FUN_00462448((uint)*DAT_004619a0);
+  native_slot_57((uint)*DAT_004619a0);
   ecos_thread_resume_wrapper((int *)*DAT_004619a4,extraout_r1,extraout_r2);
   ecos_thread_resume_wrapper((int *)*DAT_004619a8,extraout_r1_00,extraout_r2_00);
   return 0;

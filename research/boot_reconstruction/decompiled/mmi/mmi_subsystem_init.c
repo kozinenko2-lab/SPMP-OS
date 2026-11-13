@@ -54,15 +54,15 @@ undefined4 mmi_subsystem_init(void)
     psVar2[3] = psVar3[3];
     *psVar2 = *psVar3;
     MMI_diag_stub_00298B64();
-    piVar8 = FUN_00299588((ushort)psVar3[2] + 0x40);
+    piVar8 = mmi_general_alloc((ushort)psVar3[2] + 0x40);
     *piVar9 = (int)piVar8;
     puVar4 = DAT_002888d4;
     *DAT_002888d4 = (int)piVar8 + 0x3fU & 0xffffffc0;
-    piVar9 = FUN_00299588((ushort)psVar3[2] + 0x40);
+    piVar9 = mmi_general_alloc((ushort)psVar3[2] + 0x40);
     *DAT_002888d8 = piVar9;
     puVar5 = DAT_002888dc;
     *DAT_002888dc = (int)piVar9 + 0x3fU & 0xffffffc0;
-    piVar9 = FUN_00299588((ushort)psVar3[2] + 0x40);
+    piVar9 = mmi_general_alloc((ushort)psVar3[2] + 0x40);
     *DAT_002888e0 = piVar9;
     *DAT_002888e4 = (int)piVar9 + 0x3fU & 0xffffffc0;
     *DAT_002888e8 = *puVar5;
