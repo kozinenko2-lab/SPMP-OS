@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check public snapshot
         run: python3 tools/verify_integrity.py --full
-      - name: Test reconstructed MMP inspector (no private firmware)
+      - name: Test recovered boot and NGame logic (no private firmware)
         run: make -C research/boot_reconstruction test
       - name: Build host prototype
         run: make -C project/spmp-os host

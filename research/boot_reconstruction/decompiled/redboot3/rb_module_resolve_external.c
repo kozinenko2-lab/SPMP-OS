@@ -15,8 +15,8 @@ undefined4 rb_module_resolve_external(int param_1,int param_2)
   uint uVar7;
   uint *puVar8;
   
-  iVar1 = FUN_000409e4(param_1,*(int *)(param_1 + 0x24));
-  iVar2 = FUN_000409e4(param_1,*(int *)(param_1 + 0x28));
+  iVar1 = rb_module_get_section(param_1,*(int *)(param_1 + 0x24));
+  iVar2 = rb_module_get_section(param_1,*(int *)(param_1 + 0x28));
   puVar8 = (uint *)(iVar2 + *(int *)(iVar1 + param_2 * 0x10));
   uVar7 = *DAT_00040f90;
   uVar3 = extraout_r2;

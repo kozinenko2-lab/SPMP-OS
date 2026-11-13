@@ -1,0 +1,41 @@
+004619ac cpy r12,sp
+004619b0 stmdb sp!,{r4,r11,r12,lr,pc}
+004619b4 sub r11,r12,#0x4
+004619b8 cpy r4,r0
+004619bc ldr r0,[0x461a40]
+004619c0 bl 0x00298b64
+004619c4 ldr r3,[0x461a44]
+004619c8 ldr r0,[r3,#0x0]
+004619cc cmp r0,#0x0
+004619d0 ldmiaeq sp,{r4,r11,sp,pc}
+004619d4 ldr r3,[0x461a48]
+004619d8 ldrb r0,[r3,#0x0]
+004619dc bl 0x004623bc
+004619e0 ldr r3,[0x461a4c]
+004619e4 ldr r0,[r3,#0x0]
+004619e8 bl 0x00339b58
+004619ec cmp r4,#0x0
+004619f0 ldrge r3,[0x461a44]
+004619f4 ldrge r0,[r3,#0x0]
+004619f8 blge 0x00339b58
+004619fc ldr r0,[0x461a50]
+00461a00 bl 0x00298b64
+00461a04 bl 0x004629cc
+00461a08 mov r0,#0xd00
+00461a0c add r0,r0,#0x7
+00461a10 mov r1,#0x0
+00461a14 cpy r2,r1
+00461a18 bl 0x002d6d60
+00461a1c cmp r4,#0x0
+00461a20 blt 0x00461a38
+00461a24 ldr r4,[0x461a44]
+00461a28 ldr r0,[r4,#0x0]
+00461a2c bl 0x00339b94
+00461a30 mov r3,#0x0
+00461a34 str r3,[r4,#0x0]
+00461a38 mov r0,#0x0
+00461a3c ldmia sp,{r4,r11,sp,pc}
+REFERENCES TO ENTRY:
+004608f0 UNCONDITIONAL_CALL
+002d34f8 DATA
+0046089c DATA

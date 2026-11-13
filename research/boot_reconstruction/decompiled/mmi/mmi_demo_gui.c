@@ -16,7 +16,7 @@ void mmi_demo_gui(void)
                     /* WARNING: Subroutine does not return */
     FUN_004be95c(1);
   }
-  iVar3 = FUN_003c6044();
+  iVar3 = gui_early_init();
   iVar2 = DAT_003be690;
   if (iVar3 < 0) {
                     /* WARNING: Subroutine does not return */
@@ -37,7 +37,7 @@ void mmi_demo_gui(void)
   if ((code *)*DAT_003be69c != (code *)0x0) {
     (*(code *)*DAT_003be69c)(0,0,0,5);
   }
-  mmi_gui_dispatch();
+  mmi_gui_shutdown_wrapper();
   return;
 }
 

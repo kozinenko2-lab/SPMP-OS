@@ -22,10 +22,10 @@ int * rb_module_open_candidate(int param_1,uint param_2,undefined4 param_3)
   
   uVar9 = param_2 & 0xff;
   if (uVar9 == 0) {
-    unaff_r6 = FUN_00041264(param_1);
+    unaff_r6 = rb_module_file_open(param_1);
   }
   else if (uVar9 == 3) {
-    unaff_r6 = FUN_00041154(param_1,(int)param_2 >> 8);
+    unaff_r6 = rb_module_memory_open(param_1,(int)param_2 >> 8);
   }
   else {
     FUN_0004563c(DAT_00040eac,param_2,param_3,uVar9);
@@ -58,9 +58,9 @@ int * rb_module_open_candidate(int param_1,uint param_2,undefined4 param_3)
                      *(undefined2 *)(unaff_r6[7] + 0x30),unaff_r6[8]);
           uVar1 = *(ushort *)(unaff_r6[7] + 0x32);
           iVar12 = unaff_r6[0xb];
-          iVar2 = FUN_00040950((int)unaff_r6,(uint)uVar1);
+          iVar2 = rb_module_load_section((int)unaff_r6,(uint)uVar1);
           *(int *)((uint)uVar1 * 4 + iVar12) = iVar2;
-          iVar2 = FUN_000409e4((int)unaff_r6,(uint)*(ushort *)(unaff_r6[7] + 0x32));
+          iVar2 = rb_module_get_section((int)unaff_r6,(uint)*(ushort *)(unaff_r6[7] + 0x32));
           if (iVar2 == 0) {
             FUN_00040898((int)unaff_r6);
             return (int *)0x0;
@@ -74,7 +74,7 @@ int * rb_module_open_candidate(int param_1,uint param_2,undefined4 param_3)
               if (iVar3 == 0) {
                 unaff_r6[9] = iVar12;
                 iVar11 = unaff_r6[0xb];
-                iVar3 = FUN_00040950((int)unaff_r6,iVar12);
+                iVar3 = rb_module_load_section((int)unaff_r6,iVar12);
                 *(int *)(iVar12 * 4 + iVar11) = iVar3;
                 if (*(int *)(unaff_r6[0xb] + iVar12 * 4) == 0) {
                   FUN_00040898((int)unaff_r6);
@@ -85,7 +85,7 @@ int * rb_module_open_candidate(int param_1,uint param_2,undefined4 param_3)
               if (iVar3 == 0) {
                 unaff_r6[10] = iVar12;
                 iVar11 = unaff_r6[0xb];
-                iVar3 = FUN_00040950((int)unaff_r6,iVar12);
+                iVar3 = rb_module_load_section((int)unaff_r6,iVar12);
                 *(int *)(iVar12 * 4 + iVar11) = iVar3;
                 if (*(int *)(unaff_r6[0xb] + iVar12 * 4) == 0) {
                   FUN_00040898((int)unaff_r6);
@@ -155,7 +155,7 @@ int * rb_module_open_candidate(int param_1,uint param_2,undefined4 param_3)
               iVar12 = iVar12 + 0x28;
             } while (iVar2 < (int)(uint)*(ushort *)(unaff_r6[7] + 0x30));
           }
-          FUN_00041350();
+          rb_module_cache_sync();
           pcVar6 = (code *)rb_module_find_symbol((int)unaff_r6,DAT_00040ed0);
           if (pcVar6 == (code *)0x0) {
             return unaff_r6;

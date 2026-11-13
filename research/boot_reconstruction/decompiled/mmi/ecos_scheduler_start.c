@@ -1,8 +1,6 @@
 /* Ghidra pseudocode; not recovered buildable OEM source. */
 /* entry=0033c0fc; original_symbol=ecos_scheduler_start */
 
-/* WARNING: Control flow encountered bad instruction data */
-
 void ecos_scheduler_start(undefined4 param_1,uint param_2,undefined4 param_3)
 
 {
@@ -17,8 +15,7 @@ void ecos_scheduler_start(undefined4 param_1,uint param_2,undefined4 param_3)
   }
   *DAT_0033c150 = 0;
   *DAT_0033c154 = iVar1;
-  FUN_004ae52c((undefined4 *)(iVar1 + 0xc));
-                    /* WARNING: Bad instruction - Truncating control flow here */
-  halt_baddata();
+                    /* WARNING: Subroutine does not return */
+  ecos_context_restore((undefined4 *)(iVar1 + 0xc));
 }
 

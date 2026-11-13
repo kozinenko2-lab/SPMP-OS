@@ -1,0 +1,10 @@
+003c6044 cpy r12,sp
+003c6048 stmdb sp!,{r11,r12,lr,pc}
+003c604c sub r11,r12,#0x4
+003c6050 bl 0x003bea60
+003c6054 bl 0x003c28c0
+003c6058 bl 0x003c2f70
+003c605c mov r0,#0x0
+003c6060 ldmia sp,{r11,sp,pc}
+REFERENCES TO ENTRY:
+003be5f0 UNCONDITIONAL_CALL

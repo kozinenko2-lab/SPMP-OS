@@ -1,0 +1,3 @@
+# Optional: only for isolated execution of the local original ARM routines.
+# Public synthetic tests and ngame_inspect.py use the Python standard library.
+unicorn==2.1.4

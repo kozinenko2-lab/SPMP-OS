@@ -1,0 +1,5 @@
+003be5a0 ldr r3,[0x3be5ac]
+003be5a4 str r0,[r3,#0x0]
+003be5a8 bx lr
+REFERENCES TO ENTRY:
+002807dc UNCONDITIONAL_CALL

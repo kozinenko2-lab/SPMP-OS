@@ -1,0 +1,26 @@
+00280590 cpy r12,sp
+00280594 stmdb sp!,{r4,r11,r12,lr,pc}
+00280598 sub r11,r12,#0x4
+0028059c sub sp,sp,#0x58
+002805a0 mov r3,#0xb
+002805a4 str r3,[r11,#-0x60]
+002805a8 ldr r3,[0x2805f0]
+002805ac str r3,[r11,#-0x5c]
+002805b0 mov r4,#0x0
+002805b4 str r4,[r11,#-0x58]
+002805b8 str r4,[r11,#-0x54]
+002805bc str r4,[r11,#-0x50]
+002805c0 str r4,[r11,#-0x4c]
+002805c4 str r4,[r11,#-0x48]
+002805c8 mvn r0,#0x0
+002805cc bl 0x003c1fc4
+002805d0 str r0,[r11,#-0x44]
+002805d4 str r4,[r11,#-0x40]
+002805d8 ldr r3,[0x2805f4]
+002805dc str r3,[r11,#-0x3c]
+002805e0 sub r0,r11,#0x68
+002805e4 bl 0x003bf5ac
+002805e8 sub sp,r11,#0x10
+002805ec ldmia sp,{r4,r11,sp,pc}
+REFERENCES TO ENTRY:
+0028060c UNCONDITIONAL_CALL

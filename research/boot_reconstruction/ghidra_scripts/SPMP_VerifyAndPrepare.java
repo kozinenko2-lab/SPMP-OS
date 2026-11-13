@@ -36,6 +36,35 @@ public class SPMP_VerifyAndPrepare extends GhidraScript {
   if(matched==0)throw new IllegalStateException("No matching raw segments");
   Path out=Paths.get(a[2]);Files.createDirectories(out.getParent());Files.writeString(out,report.toString());
   for(int i=3;i<a.length;i++) {
+   if(a[i].startsWith("noreturn:")) {
+    String[] n=a[i].split(":");Address addr=toAddr(n[1]), last=toAddr(n[3]);
+    if(Integer.toUnsignedLong(currentProgram.getMemory().getInt(addr))!=Long.parseUnsignedLong(n[2],16) ||
+       Integer.toUnsignedLong(currentProgram.getMemory().getInt(last))!=Long.parseUnsignedLong(n[4],16))
+       throw new IllegalStateException("No-return function word mismatch");
+    Function f=getFunctionAt(addr);
+    if(f==null)throw new IllegalStateException("No-return function missing");
+    f.setNoReturn(true);println("NORETURN "+addr);continue;
+   }
+   if(a[i].startsWith("merge:")) {
+    String[] m=a[i].split(":");
+    Address real=toAddr(m[1]), bad=toAddr(m[2]), end=toAddr(m[3]);
+    if(Integer.toUnsignedLong(currentProgram.getMemory().getInt(real))!=Long.parseUnsignedLong(m[4],16) ||
+       Integer.toUnsignedLong(currentProgram.getMemory().getInt(bad))!=Long.parseUnsignedLong(m[5],16) ||
+       Integer.toUnsignedLong(currentProgram.getMemory().getInt(end.subtract(4)))!=Long.parseUnsignedLong(m[6],16))
+       throw new IllegalStateException("Merge boundary word mismatch");
+    Function parent=getFunctionAt(real), fragment=getFunctionAt(bad);
+    if(parent==null || fragment==null || end.compareTo(bad)<=0 || bad.compareTo(real)<=0)
+       throw new IllegalStateException("Unexpected merge functions");
+    FunctionIterator all=currentProgram.getFunctionManager().getFunctions(new AddressSet(real,end.subtract(1)),true);
+    while(all.hasNext()) {
+     Address entry=all.next().getEntryPoint();
+     if(!entry.equals(real) && !entry.equals(bad))throw new IllegalStateException("Third function inside merge range");
+    }
+    currentProgram.getFunctionManager().removeFunction(bad);
+    parent.setBody(new AddressSet(real,end.subtract(1)));
+    println("MERGED "+bad+" into "+real+" end="+end);
+    continue;
+   }
    String[] item=a[i].split(":",3);Address addr=toAddr(item[0]);long expected=Long.parseUnsignedLong(item[1],16);
    if(Integer.toUnsignedLong(currentProgram.getMemory().getInt(addr))!=expected)throw new IllegalStateException("Prologue mismatch at "+addr);
    Function f=getFunctionAt(addr);

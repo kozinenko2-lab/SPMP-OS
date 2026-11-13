@@ -28,7 +28,7 @@ def run(inputs,ghidra,jdk,scratch,output):
             raw=workspace/(plan['id']+'.raw');raw.write_bytes(blob)
             if digest(raw)!=plan['raw_sha256']:raise ValueError('Raw slice hash mismatch')
             out=output/plan['id'];out.mkdir()
-            pre=[t['address']+':'+t['first_word']+':'+t['label'] for t in plan['targets']]
+            pre=[r['argument'] for r in plan.get('repairs',[])] + [t['address']+':'+t['first_word']+':'+t['label'] for t in plan['targets']]
             post=[t['address']+':'+t['label'] for t in plan['targets']]
             command=[str(ghidra/'support/analyzeHeadless'),str(projects),plan['id'],
                 '-import',str(gzf),'-noanalysis','-scriptPath',str(BASE/'ghidra_scripts'),
@@ -46,10 +46,12 @@ def run(inputs,ghidra,jdk,scratch,output):
                 if not (out/(t['label']+'.c')).is_file():raise RuntimeError('Missing pseudo-C export')
             results.append({'program':plan['id'],'gzf_sha256':plan['gzf_sha256'],
                 'raw_sha256':plan['raw_sha256'],'successful_targets':len(rows),
-                'program_metadata':(out/'program.txt').read_text()})
+                'program_metadata':(out/'program.txt').read_text(),
+                'pseudocode_warnings':{t['label']:[line.strip() for line in (out/(t['label']+'.c')).read_text().splitlines() if 'WARNING:' in line] for t in plan['targets'] if 'WARNING:' in (out/(t['label']+'.c')).read_text()}})
             print(plan['id'],len(rows),'verified selected functions',flush=True)
     metadata={'ghidra_application_properties':(ghidra/'Ghidra/application.properties').read_text(),
-              'source_hashes':H,'programs':results,'limits':['Static decompiler output; not buildable OEM sources.',
+              'source_hashes':H,'programs':results,'limits':['Export success means text was produced, not complete or verified decompilation; see pseudocode_warnings.',
+              'Static decompiler output; not buildable OEM sources.',
               'Original GZF language is ARM:LE:32:v8; target hardware is ARMv5TE. CP15/status-register semantics need manual ARMv5 review.',
               'No console execution or original GZF changes.']}
     (output/'export_summary.json').write_text(json.dumps(metadata,indent=2)+'\n')

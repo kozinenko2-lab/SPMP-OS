@@ -5,7 +5,7 @@ all: build/mmp_inspect
 build/mmp_inspect: src/mmp_inspect.c
 	mkdir -p build
 	$(CC) $(CFLAGS) $< -o $@
-build/test_boot_policy: src/redboot_boot_policy.c src/redboot_boot_policy.h tests/test_boot_policy.c
+build/test_boot_policy: src/redboot_boot_policy.c src/redboot_boot_policy.h src/oem_layouts.h tests/test_boot_policy.c
 	mkdir -p build
 	$(CC) $(CFLAGS) -Isrc src/redboot_boot_policy.c tests/test_boot_policy.c -o $@
 build/test_reloc_model: src/redboot_reloc_model.c src/redboot_reloc_model.h tests/test_reloc_model.c

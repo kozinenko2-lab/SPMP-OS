@@ -13,9 +13,9 @@ undefined4 rb_module_relocation_section(int param_1,int param_2)
   int iVar6;
   uint uVar7;
   
-  iVar1 = FUN_00040950(param_1,param_2);
+  iVar1 = rb_module_load_section(param_1,param_2);
   *(int *)(*(int *)(param_1 + 0x2c) + param_2 * 4) = iVar1;
-  iVar2 = FUN_000409e4(param_1,*(int *)(*(int *)(param_1 + 0x20) + param_2 * 0x28 + 0x1c));
+  iVar2 = rb_module_get_section(param_1,*(int *)(*(int *)(param_1 + 0x20) + param_2 * 0x28 + 0x1c));
   iVar4 = param_2 * 0x28 + *(int *)(param_1 + 0x20);
   uVar3 = FUN_0004bc08(*(uint *)(iVar4 + 0x14),*(uint *)(iVar4 + 0x24));
   if (uVar3 != 0) {

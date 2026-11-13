@@ -1,7 +1,7 @@
 /* Ghidra pseudocode; not recovered buildable OEM source. */
-/* entry=003be9e4; original_symbol=mmi_gui_run_impl */
+/* entry=003be9e4; original_symbol=mmi_gui_shutdown_impl */
 
-void mmi_gui_run_impl(void)
+void mmi_gui_shutdown_impl(void)
 
 {
   FUN_003ba174(DAT_003bea08);

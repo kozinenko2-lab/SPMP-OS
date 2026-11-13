@@ -20,3 +20,9 @@ address	label	status
 000413d0	rb_module_relocate_word	OK
 00040f9c	rb_module_resolve_symbol	OK
 00040f08	rb_module_resolve_external	OK
+00040ed4	rb_module_resolve_defined	OK
+00040950	rb_module_load_section	OK
+000409e4	rb_module_get_section	OK
+00041264	rb_module_file_open	OK
+00041154	rb_module_memory_open	OK
+00041350	rb_module_cache_sync	OK

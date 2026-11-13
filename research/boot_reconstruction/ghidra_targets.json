@@ -111,6 +111,36 @@
           "address": "00040f08",
           "first_word": "e92d40f0",
           "label": "rb_module_resolve_external"
+        },
+        {
+          "address": "00040ed4",
+          "first_word": "e92d4030",
+          "label": "rb_module_resolve_defined"
+        },
+        {
+          "address": "00040950",
+          "first_word": "e92d4070",
+          "label": "rb_module_load_section"
+        },
+        {
+          "address": "000409e4",
+          "first_word": "e92d4070",
+          "label": "rb_module_get_section"
+        },
+        {
+          "address": "00041264",
+          "first_word": "e92d4030",
+          "label": "rb_module_file_open"
+        },
+        {
+          "address": "00041154",
+          "first_word": "e92d4030",
+          "label": "rb_module_memory_open"
+        },
+        {
+          "address": "00041350",
+          "first_word": "e92d0090",
+          "label": "rb_module_cache_sync"
         }
       ]
     },
@@ -293,7 +323,7 @@
         {
           "address": "003be6c0",
           "first_word": "e1a0c00d",
-          "label": "mmi_gui_dispatch"
+          "label": "mmi_gui_shutdown_wrapper"
         },
         {
           "address": "003be70c",
@@ -303,12 +333,206 @@
         {
           "address": "003be9e4",
           "first_word": "e1a0c00d",
-          "label": "mmi_gui_run_impl"
+          "label": "mmi_gui_shutdown_impl"
         },
         {
           "address": "0033ce74",
           "first_word": "e1a0c00d",
           "label": "ecos_flag_poll_core"
+        },
+        {
+          "address": "002805f8",
+          "first_word": "e1a0c00d",
+          "label": "mmi_application_main"
+        },
+        {
+          "address": "003be5a0",
+          "first_word": "e59f3004",
+          "label": "mmi_set_application_callback"
+        },
+        {
+          "address": "00280590",
+          "first_word": "e1a0c00d",
+          "label": "mmi_register_demo_class"
+        },
+        {
+          "address": "00280550",
+          "first_word": "e1a0c00d",
+          "label": "mmi_demo_window_proc"
+        },
+        {
+          "address": "003e48a8",
+          "first_word": "e1a0c00d",
+          "label": "mmi_launch_shell"
+        },
+        {
+          "address": "003bf470",
+          "first_word": "e1a0c00d",
+          "label": "gui_get_message"
+        },
+        {
+          "address": "003bf4c4",
+          "first_word": "e1a0c00d",
+          "label": "gui_translate_message"
+        },
+        {
+          "address": "003bf500",
+          "first_word": "e1a0c00d",
+          "label": "gui_dispatch_message"
+        },
+        {
+          "address": "003c6044",
+          "first_word": "e1a0c00d",
+          "label": "gui_early_init"
+        },
+        {
+          "address": "00460120",
+          "first_word": "e1a0c00d",
+          "label": "native_n1_loader"
+        },
+        {
+          "address": "0045ffcc",
+          "first_word": "e1a0c00d",
+          "label": "native_read_file"
+        },
+        {
+          "address": "004617e4",
+          "first_word": "e1a0c00d",
+          "label": "native_load_ngame"
+        },
+        {
+          "address": "004611bc",
+          "first_word": "e1a0c00d",
+          "label": "native_parse_ngame_header"
+        },
+        {
+          "address": "00461130",
+          "first_word": "e1a0c00d",
+          "label": "native_decode_prefix"
+        },
+        {
+          "address": "00462cd0",
+          "first_word": "e1a0c00d",
+          "label": "native_prefix_transform"
+        },
+        {
+          "address": "00460ab0",
+          "first_word": "e1a0c00d",
+          "label": "native_game_thread"
+        },
+        {
+          "address": "00461a54",
+          "first_word": "e1a0c00d",
+          "label": "native_file_transfer"
+        },
+        {
+          "address": "00460800",
+          "first_word": "e1a0c00d",
+          "label": "native_bin_loader"
+        },
+        {
+          "address": "002d32b0",
+          "first_word": "e1a0c00d",
+          "label": "native_api_init"
+        },
+        {
+          "address": "004628b8",
+          "first_word": "e1a0c00d",
+          "label": "native_sound_start"
+        },
+        {
+          "address": "0046190c",
+          "first_word": "e1a0c00d",
+          "label": "native_pause_callback"
+        },
+        {
+          "address": "0046195c",
+          "first_word": "e1a0c00d",
+          "label": "native_resume_callback"
+        },
+        {
+          "address": "004619ac",
+          "first_word": "e1a0c00d",
+          "label": "native_exit_control"
+        },
+        {
+          "address": "00462de4",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_key_init"
+        },
+        {
+          "address": "00462e68",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_block"
+        },
+        {
+          "address": "00462fa8",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_key_schedule"
+        },
+        {
+          "address": "0046304c",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_round"
+        },
+        {
+          "address": "004630b4",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_sbox"
+        },
+        {
+          "address": "0046313c",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_permutation"
+        },
+        {
+          "address": "00463194",
+          "first_word": "e52de004",
+          "label": "native_cipher_xor"
+        },
+        {
+          "address": "004631c8",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_rotate"
+        },
+        {
+          "address": "0046321c",
+          "first_word": "e52de004",
+          "label": "native_cipher_unpack_bits"
+        },
+        {
+          "address": "00463254",
+          "first_word": "e1a0c00d",
+          "label": "native_cipher_pack_bits"
+        },
+        {
+          "address": "002d3d38",
+          "first_word": "e1a0c00d",
+          "label": "mmi_game_request_handler"
+        },
+        {
+          "address": "003e1c4c",
+          "first_word": "e1a0c00d",
+          "label": "mmi_shell_message_dispatch"
+        },
+        {
+          "address": "004ae52c",
+          "first_word": "e590b000",
+          "label": "ecos_context_restore"
+        }
+      ],
+      "repairs": [
+        {
+          "argument": "merge:00460120:0046018c:00460260:e1a0c00d:e59f10d0:e89da830",
+          "reason": "False interior function split, ROM fallback is in same stack frame."
+        },
+        {
+          "argument": "merge:004617e4:004618c4:004618f0:e1a0c00d:e1a00004:e89da870",
+          "reason": "False interior footer function split, r4 is a local from outer function."
+        },
+        {
+          "argument": "noreturn:004ae52c:e590b000:004ae548:e1b0f00e",
+          "reason": "Thread context restore transfers PC from saved LR; scheduler must not fall through into literal pool."
         }
       ]
     }

@@ -1,0 +1,23 @@
+004631c8 cpy r12,sp
+004631cc stmdb sp!,{r4,r5,r6,r7,r11,r12,lr,pc}
+004631d0 sub r11,r12,#0x4
+004631d4 cpy r4,r0
+004631d8 cpy r6,r1
+004631dc cpy r5,r2
+004631e0 ldr r7,[0x463218]
+004631e4 cpy r0,r7
+004631e8 cpy r1,r4
+004631ec bl 0x00298c6c
+004631f0 cpy r0,r4
+004631f4 add r1,r4,r5
+004631f8 rsb r2,r5,r6
+004631fc bl 0x00298c6c
+00463200 add r4,r4,r6
+00463204 rsb r0,r5,r4
+00463208 cpy r1,r7
+0046320c cpy r2,r5
+00463210 bl 0x00298c6c
+00463214 ldmia sp,{r4,r5,r6,r7,r11,sp,pc}
+REFERENCES TO ENTRY:
+00462ff4 UNCONDITIONAL_CALL
+00463008 UNCONDITIONAL_CALL

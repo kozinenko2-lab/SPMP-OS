@@ -9,25 +9,64 @@
       "program": "redboot3",
       "gzf_sha256": "771630d4f5bcb06637ebaab186f1c2dc062f721a06092e0e544170679ca8cf97",
       "raw_sha256": "1723e3cebdb012e46c014a7215c9cb58978c081b25ba58738687d64b116b1034",
-      "successful_targets": 21,
-      "program_metadata": "program=ghidra_analysis_ONLY v3.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=602\nblock=.spmp_seg_0,00000000,0000015f,execute=false\nblock=.spmp_seg_1,000174f0,000193df,execute=false\nblock=.spmp_seg_2,00030000,00055fcf,execute=true\nblock=.spmp_seg_3,00060000,000643ff,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::0000004a,execute=false\nblock=.strtab,.strtab::00000000,.strtab::00000054,execute=false\nblock=.symtab,.symtab::00000000,.symtab::0000003f,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000007f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::0000013f,execute=false\n"
+      "successful_targets": 27,
+      "program_metadata": "program=ghidra_analysis_ONLY v3.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=602\nblock=.spmp_seg_0,00000000,0000015f,execute=false\nblock=.spmp_seg_1,000174f0,000193df,execute=false\nblock=.spmp_seg_2,00030000,00055fcf,execute=true\nblock=.spmp_seg_3,00060000,000643ff,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::0000004a,execute=false\nblock=.strtab,.strtab::00000000,.strtab::00000054,execute=false\nblock=.symtab,.symtab::00000000,.symtab::0000003f,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000007f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::0000013f,execute=false\n",
+      "pseudocode_warnings": {
+        "rb_mount_romfs": [
+          "/* WARNING: Could not recover jumptable at 0x00036a28. Too many branches */",
+          "/* WARNING: Treating indirect jump as call */"
+        ]
+      }
     },
     {
       "program": "redboot1",
       "gzf_sha256": "2df35c35d07f569d04c67ae5b97e1ec8581a7fbbd160bb6b625a1dc74442c02c",
       "raw_sha256": "eb989ab73900835fdfaf8d9f8ebb43b0d510a9548332bfc0d4fc6548728e3f9d",
       "successful_targets": 4,
-      "program_metadata": "program=ghidra_analysis_ONLY v1.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=668\nblock=.spmp_seg_0,00000000,0000015f,execute=false\nblock=.spmp_seg_1,00015b30,00017ee7,execute=false\nblock=.spmp_seg_2,00030000,0005b27b,execute=true\nblock=.spmp_seg_3,00060000,000643ff,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::0000004a,execute=false\nblock=.strtab,.strtab::00000000,.strtab::00000054,execute=false\nblock=.symtab,.symtab::00000000,.symtab::0000003f,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000007f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::0000013f,execute=false\n"
+      "program_metadata": "program=ghidra_analysis_ONLY v1.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=668\nblock=.spmp_seg_0,00000000,0000015f,execute=false\nblock=.spmp_seg_1,00015b30,00017ee7,execute=false\nblock=.spmp_seg_2,00030000,0005b27b,execute=true\nblock=.spmp_seg_3,00060000,000643ff,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::0000004a,execute=false\nblock=.strtab,.strtab::00000000,.strtab::00000054,execute=false\nblock=.symtab,.symtab::00000000,.symtab::0000003f,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000007f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::0000013f,execute=false\n",
+      "pseudocode_warnings": {
+        "rb_go": [
+          "/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */"
+        ]
+      }
     },
     {
       "program": "mmi",
       "gzf_sha256": "5e05914d9afa899f4211f2317c1abd0b2963683ce3b42a8f2b7d0eed5732f40c",
       "raw_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
-      "successful_targets": 32,
-      "program_metadata": "program=ghidra_analysis_ONLY.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=7447\nblock=.spmp_seg_0,00280000,0056ad8f,execute=true\nblock=.spmp_seg_1,006c8fe0,006ff81f,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::00000032,execute=false\nblock=.strtab,.strtab::00000000,.strtab::0000010e,execute=false\nblock=.symtab,.symtab::00000000,.symtab::000000af,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000003f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::000000ef,execute=false\n"
+      "successful_targets": 68,
+      "program_metadata": "program=ghidra_analysis_ONLY.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=7449\nblock=.spmp_seg_0,00280000,0056ad8f,execute=true\nblock=.spmp_seg_1,006c8fe0,006ff81f,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::00000032,execute=false\nblock=.strtab,.strtab::00000000,.strtab::0000010e,execute=false\nblock=.symtab,.symtab::00000000,.symtab::000000af,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000003f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::000000ef,execute=false\n",
+      "pseudocode_warnings": {
+        "mmi_reset": [
+          "/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */",
+          "/* WARNING: Do nothing block with infinite loop */"
+        ],
+        "ecos_scheduler_start": [
+          "/* WARNING: Subroutine does not return */"
+        ],
+        "mmi_demo_gui": [
+          "/* WARNING: Subroutine does not return */",
+          "/* WARNING: Subroutine does not return */",
+          "/* WARNING: Subroutine does not return */"
+        ],
+        "mmi_system_coordinator": [
+          "/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */"
+        ],
+        "mmi_hal_stage_299df8": [
+          "/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */"
+        ],
+        "mmi_gui_shutdown_impl": [
+          "/* WARNING: Subroutine does not return */"
+        ],
+        "ecos_context_restore": [
+          "/* WARNING: Could not recover jumptable at 0x004ae548. Too many branches */",
+          "/* WARNING: Treating indirect jump as call */"
+        ]
+      }
     }
   ],
   "limits": [
+    "Export success means text was produced, not complete or verified decompilation; see pseudocode_warnings.",
     "Static decompiler output; not buildable OEM sources.",
     "Original GZF language is ARM:LE:32:v8; target hardware is ARMv5TE. CP15/status-register semantics need manual ARMv5 review.",
     "No console execution or original GZF changes."

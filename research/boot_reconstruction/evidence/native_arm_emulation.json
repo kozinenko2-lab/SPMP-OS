@@ -1,0 +1,154 @@
+{
+  "native_api_initializer": {
+    "entry": "0x2d32b0",
+    "base": "0x5efb74",
+    "slots_verified": 85,
+    "vm_clock_stub": "0x339d18 returns r0=r1=0; VM RAM only",
+    "table_sha256": "43184f3b65b85e2d6723a696ca70799429bbf115c622e7d08df99321cc1e4d3c"
+  },
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "entry": "0x462cd0",
+  "isolated_vm": "Unicorn ARM; RAM-only mappings; original crypto helpers execute from RAP",
+  "max_instructions_per_case": 20000000,
+  "timeout_microseconds_per_case": 30000000,
+  "cases": [
+    {
+      "case": 0,
+      "bytes": 8,
+      "mode": 0,
+      "key_hex": "133457799bbcdff1",
+      "input_sha256": "55c53f5d490297900cefa825d0c8e8e9532ee8a118abe7d8570762cd38be9818",
+      "output_sha256": "a8ee86b28d881858bce2ae6264dce78d6e78bbd0460bd6d219dc0d437b9e7557",
+      "exact_match": true,
+      "input_hex": "0123456789abcdef",
+      "output_hex": "d172a2135bdccb97"
+    },
+    {
+      "case": 0,
+      "bytes": 8,
+      "mode": 1,
+      "key_hex": "133457799bbcdff1",
+      "input_sha256": "55c53f5d490297900cefa825d0c8e8e9532ee8a118abe7d8570762cd38be9818",
+      "output_sha256": "806f7b8454353d3d1c271ef70fd33de41c6bf2ace76963d2070d43f6056a5f68",
+      "exact_match": true,
+      "input_hex": "0123456789abcdef",
+      "output_hex": "f413b81e856a38f0"
+    },
+    {
+      "case": 1,
+      "bytes": 8,
+      "mode": 0,
+      "key_hex": "6a04cad7dac7db42",
+      "input_sha256": "a66692810abea03e685ba520d9b4682f0ab5c22d3f47215c5e50f8d820d0409b",
+      "output_sha256": "e298541c81cc3664a2e46a629e69c88e1020c8b52687ff540d033f4296e4be78",
+      "exact_match": true,
+      "input_hex": "1dc8f1ddefd0902f",
+      "output_hex": "adcb645bed7e06d5"
+    },
+    {
+      "case": 1,
+      "bytes": 8,
+      "mode": 1,
+      "key_hex": "6a04cad7dac7db42",
+      "input_sha256": "a66692810abea03e685ba520d9b4682f0ab5c22d3f47215c5e50f8d820d0409b",
+      "output_sha256": "12ef72a7f9621b23c70807fb2a2afe960ff18a15a4f4e5c1851947cc6f39c375",
+      "exact_match": true,
+      "input_hex": "1dc8f1ddefd0902f",
+      "output_hex": "642c2e7e2a596526"
+    },
+    {
+      "case": 2,
+      "bytes": 16,
+      "mode": 0,
+      "key_hex": "591745ea17701e7a",
+      "input_sha256": "ab3c6184223defa7331e210438b812172b4d19a92ac174ac00a88c1f69a27fa9",
+      "output_sha256": "d46113bbd07664111ac08d7f11c5afde55b04a91ea23bc0575362206c664f060",
+      "exact_match": true
+    },
+    {
+      "case": 2,
+      "bytes": 16,
+      "mode": 1,
+      "key_hex": "591745ea17701e7a",
+      "input_sha256": "ab3c6184223defa7331e210438b812172b4d19a92ac174ac00a88c1f69a27fa9",
+      "output_sha256": "d8498e2a626c8966aa51b077eb04b7d3d8b2aeb5979c1bbb37ff750a9d166d85",
+      "exact_match": true
+    },
+    {
+      "case": 3,
+      "bytes": 24,
+      "mode": 0,
+      "key_hex": "27984d7babbcd594",
+      "input_sha256": "d3f737d7963d9a4dca8da747cf20632240240ac3a5c5d59fa2f9a7309f2ea05b",
+      "output_sha256": "85cb0f344b51c3eda5064c570606556029e7ff14f21a060fdc0136b1eab982a0",
+      "exact_match": true
+    },
+    {
+      "case": 3,
+      "bytes": 24,
+      "mode": 1,
+      "key_hex": "27984d7babbcd594",
+      "input_sha256": "d3f737d7963d9a4dca8da747cf20632240240ac3a5c5d59fa2f9a7309f2ea05b",
+      "output_sha256": "5ed0f532b996630c7035596a8177a97164f5c1bbbaaf8e7b6c6b68f10beb6515",
+      "exact_match": true
+    },
+    {
+      "case": 4,
+      "bytes": 64,
+      "mode": 0,
+      "key_hex": "20fad79882fb50e7",
+      "input_sha256": "ecbfed94e0d5f0021cf864631643f363a6cc563dbbeb6d46f805ceca582b4b3a",
+      "output_sha256": "088650aa5e1b9e5606c6eb3725db2a29db38e93eb70350b26d4938c6fae6a94b",
+      "exact_match": true
+    },
+    {
+      "case": 4,
+      "bytes": 64,
+      "mode": 1,
+      "key_hex": "20fad79882fb50e7",
+      "input_sha256": "ecbfed94e0d5f0021cf864631643f363a6cc563dbbeb6d46f805ceca582b4b3a",
+      "output_sha256": "4af69cd18baa5ac8f313b988428644fa982d966777e80d697b26543ecd798c08",
+      "exact_match": true
+    },
+    {
+      "case": 5,
+      "bytes": 128,
+      "mode": 0,
+      "key_hex": "0022c83e305b8bc8",
+      "input_sha256": "50928ab886b3a08029706f4ac080ea290c2d7272e5aa7de1cd541a25f8fc01f0",
+      "output_sha256": "73e9f504cd0d4cb18f28c522694e35bffa0083e189ccb52c00467c558a32c06e",
+      "exact_match": true
+    },
+    {
+      "case": 5,
+      "bytes": 128,
+      "mode": 1,
+      "key_hex": "0022c83e305b8bc8",
+      "input_sha256": "50928ab886b3a08029706f4ac080ea290c2d7272e5aa7de1cd541a25f8fc01f0",
+      "output_sha256": "c2270d308af9b92a2810707bdc99cc7937aab29ebe17465c2392fae4104ce55d",
+      "exact_match": true
+    },
+    {
+      "case": 6,
+      "bytes": 1024,
+      "mode": 0,
+      "key_hex": "9ea5af25fb35c415",
+      "input_sha256": "9c9f31fb81f7a469282cb7d5f080e5f50abf5c0686fd0c343f2193728168e7cf",
+      "output_sha256": "8fa5951a95811a796d13875c1ed9d697bce912c1c3e969444ade23e418cc6415",
+      "exact_match": true
+    },
+    {
+      "case": 6,
+      "bytes": 1024,
+      "mode": 1,
+      "key_hex": "9ea5af25fb35c415",
+      "input_sha256": "9c9f31fb81f7a469282cb7d5f080e5f50abf5c0686fd0c343f2193728168e7cf",
+      "output_sha256": "099ecb3e0a567306c2add53815c33177b8c15e3c7c091c4f9bc0bf1b754eb8a3",
+      "exact_match": true
+    }
+  ],
+  "limits": [
+    "Cipher routine only, no GUI, RTOS, MMIO or console execution.",
+    "Eight-byte key path verified; 16-byte-key triple path not reconstructed."
+  ]
+}
