@@ -2,11 +2,12 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE6_REPORT_RU.md](STAGE6_REPORT_RU.md) — экспорт
-284 выбранных функций из трёх пользовательских GZF, LCD/PCM, stack-owner,
-план размещения и минимальный host-прототип с typed OEM adapter.
-28 объявлений API суммарно; на новом этапе 53 ARM-сценария с синтетическими
-register cells. Никакого доступа к физическим MMIO/консоли.
+**Текущий этап:** [STAGE7_REPORT_RU.md](STAGE7_REPORT_RU.md) — рабочий
+контрольный BattleGround BIN от пользователя: оригинальный NGame loader из RAP,
+побайтное сравнение decode, BSS/heap/API и два ограниченных ARM startup-сценария.
+Игровой бинарник, assets, C/ASM и database остаются приватными. Число экспортов
+OEM-прошивки прежнее: 284, typed declarations — 28. Аппаратного запуска SPMP-OS нет.
+[Предыдущий этап: LCD/PCM, память и прототип](STAGE6_REPORT_RU.md).
 Псевдокод: `decompiled/`. Предыдущие результаты:
 [память/ресурсы/возврат](STAGE5_REPORT_RU.md),
 [файлы/графика/ввод](STAGE4_REPORT_RU.md),
@@ -56,3 +57,13 @@ register cells. Никакого доступа к физическим MMIO/к�
 - `tools/audit_stage6.py` — 58 ARM/data checks, объединённые JSON/CSV 28 объявлений.
 - [examples/native_probe](examples/native_probe/README_RU.md) — freestanding core,
   typed adapter и host-пример с экраном/вводом/возвратом. Нет target entry/пакета.
+
+Контрольный рабочий образец:
+
+- `tools/control_game_inspect.py` — exact-SHA structural/startup/resource audit,
+  сравнение наблюдённых диапазонов с supplied allocation assumptions.
+- `tools/emulate_control_game.py` — actual RAP loader и два bounded startup
+  сценария, с явными RAM-only backend mocks; нужны оба приватных файла.
+- `tools/run_control_ghidra.py` — приватный Ghidra import вне checkout.
+- `evidence/control_game_*.json` — метаданные и traces без игрового кода/ресурсов.
+- `SPMP_CONTROL_GAME` вместе с `SPMP_MMI_RAP` включает optional private tests.

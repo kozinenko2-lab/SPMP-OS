@@ -1,3 +1,24 @@
+# Этап 7: рабочий контрольный BIN
+
+Пользователь предоставил запускающийся на его консоли BattleGround BIN.
+Оригинальный NGame loader из RAP в RAM-only ARM VM принял файл; payload
+побайтно совпал с host decode. Подтверждены entry 0xA00000, API в r0,
+очистка 963 слов BSS, собственный allocator ниже 0xE00000 и обычный return.
+Два bounded startup-сценария проверяют SP/r4–r11; графика/ресурсы/ввод подменены.
+
+Исследованы реальная последовательность графических API и таблица 12 WAV /
+9 MIDI. Все WAV: mono PCM 8000 Hz / 8 bit. Учтено временное пересечение extra
+JPEG tail с будущим BSS. Новые инструменты exact-SHA, публичные метаданные и
+10 regression tests; private game/Ghidra/asset exports остаются вне checkout.
+
+[Отчёт этапа 7](../research/boot_reconstruction/STAGE7_REPORT_RU.md).
+Далее: собственный startup/linker layout SPMP-OS по подтверждённым правилам,
+проверка runtime allocation/stack на плате, нижние LCD/IRQ/cache backend.
+Рабочий образец не устанавливает вариант RedBoot и не подтверждает запуск
+SPMP-OS. Публичных OEM exports по-прежнему 284, typed declarations — 28.
+
+---
+
 # Этап 6: LCD/PCM, stack-owner, memory planner и прототип
 
 Экспортированы 284 выбранные функции (253 MMI + 31 RedBoot). Новый этап:

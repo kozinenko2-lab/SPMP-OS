@@ -2,6 +2,11 @@
 
 **Состояние:** 13 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
 
+Рабочий контрольный `BattleGround-1.2.2_P_new.bin` от пользователя разобран:
+оригинальный loader RAP в ARM VM подтвердил NGame decode, startup BSS/heap,
+API и возврат. [Отчёт этапа 7](research/boot_reconstruction/STAGE7_REPORT_RU.md).
+Игра и её ресурсы остаются приватными; запускаемого пакета SPMP-OS пока нет.
+
 ## С чего начать
 
 1. Прочитайте `AGENTS.md` (правила безопасности для Codex) и `docs/STATUS_ROADMAP_RU.md`.

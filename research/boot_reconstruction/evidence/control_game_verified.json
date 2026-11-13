@@ -1,0 +1,401 @@
+{
+  "source_sha256": "ffb5dd9fc4f26f299010a78e9be96ab3c7d05c6c64630f68caa21f315ff2e017",
+  "decoded_payload_sha256": "f312eafba8f7dbf93afb5897ed127d1081e929181b15386bbaf191912ab539da",
+  "provenance": "User reports this exact uploaded game runs on the console; no new hardware test by us.",
+  "container_bytes": 3400494,
+  "ngame": {
+    "payload_bytes": 3375568,
+    "extra_bytes": 24798,
+    "lcm_index": 5,
+    "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+    "status": "structural_match",
+    "decoded_prefix_bytes": 1024
+  },
+  "tail_format": "JPEG; contents and EXIF not exported",
+  "load_regions": [
+    {
+      "name": "raw_container_read",
+      "start": 10485760,
+      "end_exclusive": 13886254,
+      "bytes": 3400494,
+      "phase": "load"
+    },
+    {
+      "name": "after_header_shift_including_tail",
+      "start": 10485760,
+      "end_exclusive": 13886126,
+      "bytes": 3400366,
+      "phase": "load"
+    }
+  ],
+  "run_regions": [
+    {
+      "name": "decoded_payload",
+      "start": 10485760,
+      "end_exclusive": 13861328,
+      "bytes": 3375568,
+      "phase": "run"
+    },
+    {
+      "name": "payload_to_bss_gap",
+      "start": 13861328,
+      "end_exclusive": 13885440,
+      "bytes": 24112,
+      "phase": "run"
+    },
+    {
+      "name": "startup_zeroed_bss",
+      "start": 13885440,
+      "end_exclusive": 13889292,
+      "bytes": 3852,
+      "phase": "run"
+    },
+    {
+      "name": "bss_end_to_linker_end_unresolved",
+      "start": 13889292,
+      "end_exclusive": 13891084,
+      "bytes": 1792,
+      "phase": "run"
+    },
+    {
+      "name": "heap_alignment_gap",
+      "start": 13891084,
+      "end_exclusive": 13891584,
+      "bytes": 500,
+      "phase": "run"
+    },
+    {
+      "name": "private_heap_arena",
+      "start": 13891584,
+      "end_exclusive": 14680064,
+      "bytes": 788480,
+      "phase": "run"
+    }
+  ],
+  "startup": {
+    "entry": "0xa00000",
+    "api_argument": "r0",
+    "api_saved_at": "0xd3e000",
+    "bss_clear_start": "0xd3e000",
+    "bss_clear_end_exclusive": "0xd3ef0c",
+    "bss_zero_words": 963,
+    "linker_end_literal": "0xd3f60c",
+    "heap_base": "0xd3f800",
+    "heap_limit_exclusive": "0xe00000",
+    "main_entry": "0xa322e0",
+    "returns_zero_after_main": true,
+    "stack": "inherits caller SP; no startup stack switch"
+  },
+  "verified_api_calls": [
+    {
+      "address": "0xa00044",
+      "slot_offset": "0x4",
+      "base_register": 12
+    },
+    {
+      "address": "0xa0005c",
+      "slot_offset": "0x4",
+      "base_register": 3
+    },
+    {
+      "address": "0xa00070",
+      "slot_offset": "0x4",
+      "base_register": 3
+    },
+    {
+      "address": "0xa00084",
+      "slot_offset": "0x4",
+      "base_register": 3
+    },
+    {
+      "address": "0xa000a8",
+      "slot_offset": "0x4",
+      "base_register": 3
+    },
+    {
+      "address": "0xa000b8",
+      "slot_offset": "0x4",
+      "base_register": 2
+    },
+    {
+      "address": "0xa212c4",
+      "slot_offset": "0x38",
+      "base_register": 2
+    },
+    {
+      "address": "0xa212e8",
+      "slot_offset": "0x90",
+      "base_register": 3
+    },
+    {
+      "address": "0xa21308",
+      "slot_offset": "0x54",
+      "base_register": 3
+    },
+    {
+      "address": "0xa21318",
+      "slot_offset": "0x8c",
+      "base_register": 3
+    },
+    {
+      "address": "0xa21334",
+      "slot_offset": "0x44",
+      "base_register": 3
+    },
+    {
+      "address": "0xa21344",
+      "slot_offset": "0x3c",
+      "base_register": 2
+    },
+    {
+      "address": "0xa21364",
+      "slot_offset": "0xc4",
+      "base_register": 3
+    },
+    {
+      "address": "0xa21374",
+      "slot_offset": "0x10",
+      "base_register": 2
+    },
+    {
+      "address": "0xa32358",
+      "slot_offset": "0xd4",
+      "base_register": 3
+    },
+    {
+      "address": "0xa32374",
+      "slot_offset": "0x124",
+      "base_register": 2
+    },
+    {
+      "address": "0xa323c8",
+      "slot_offset": "0x100",
+      "base_register": 3
+    },
+    {
+      "address": "0xa323e0",
+      "slot_offset": "0x108",
+      "base_register": 1
+    }
+  ],
+  "resources": {
+    "table": "0xd33820",
+    "entry_bytes": 20,
+    "entries": 21,
+    "terminator": "0xd339c4",
+    "counts": {
+      "wave": 12,
+      "midi": 9,
+      "other": 0
+    },
+    "wave_formats": [
+      {
+        "format_tag": 1,
+        "channels": 1,
+        "rate_hz": 8000,
+        "bits": 8
+      }
+    ],
+    "assets_exported": false
+  },
+  "private_allocator": {
+    "configuration_table": "0xd379f4",
+    "fixed_blocks": [
+      {
+        "payload_bytes": 128,
+        "count": 32
+      },
+      {
+        "payload_bytes": 512,
+        "count": 32
+      },
+      {
+        "payload_bytes": 2048,
+        "count": 8
+      },
+      {
+        "payload_bytes": 16384,
+        "count": 4
+      },
+      {
+        "payload_bytes": 32768,
+        "count": 2
+      }
+    ],
+    "general_heap_metadata_base": "0xd68ce0"
+  },
+  "limits": [
+    "Private Ghidra text/data split at 0xa3b6ac is an analysis partition, not recovered ELF sections.",
+    "The 0x700 bytes after the BSS-clear end are reserved conservatively; their purpose remains unresolved.",
+    "This inspection neither runs gameplay nor certifies another NGame file or SPMP-OS on hardware."
+  ],
+  "memory_comparison": {
+    "status": "model_consistent",
+    "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+    "allocation": {
+      "name": "supplied_game_allocation",
+      "start": 10485520,
+      "end_exclusive": 30387956,
+      "bytes": 19902436,
+      "phase": "run"
+    },
+    "container_bytes": 3400494,
+    "derived_loader_capacity": 19902196,
+    "load_phase": [
+      {
+        "name": "temporary_container_read",
+        "start": 10485760,
+        "end_exclusive": 13886254,
+        "bytes": 3400494,
+        "phase": "load"
+      }
+    ],
+    "run_phase": [
+      {
+        "name": "decoded_payload",
+        "start": 10485760,
+        "end_exclusive": 13861328,
+        "bytes": 3375568,
+        "phase": "run"
+      },
+      {
+        "name": "payload_to_bss_gap",
+        "start": 13861328,
+        "end_exclusive": 13885440,
+        "bytes": 24112,
+        "phase": "run"
+      },
+      {
+        "name": "startup_zeroed_bss",
+        "start": 13885440,
+        "end_exclusive": 13889292,
+        "bytes": 3852,
+        "phase": "run"
+      },
+      {
+        "name": "bss_end_to_linker_end_unresolved",
+        "start": 13889292,
+        "end_exclusive": 13891084,
+        "bytes": 1792,
+        "phase": "run"
+      },
+      {
+        "name": "heap_alignment_gap",
+        "start": 13891084,
+        "end_exclusive": 13891584,
+        "bytes": 500,
+        "phase": "run"
+      },
+      {
+        "name": "private_heap_arena",
+        "start": 13891584,
+        "end_exclusive": 14680064,
+        "bytes": 788480,
+        "phase": "run"
+      }
+    ],
+    "protected": [
+      {
+        "name": "mmi_code_data",
+        "start": 2621440,
+        "end_exclusive": 5680528,
+        "bytes": 3059088,
+        "phase": "run"
+      },
+      {
+        "name": "mmi_bss",
+        "start": 5680528,
+        "end_exclusive": 7114720,
+        "bytes": 1434192,
+        "phase": "run"
+      },
+      {
+        "name": "mmi_extra_data",
+        "start": 7114720,
+        "end_exclusive": 7338016,
+        "bytes": 223296,
+        "phase": "run"
+      },
+      {
+        "name": "audio_workspace_and_tonelib",
+        "start": 15728640,
+        "end_exclusive": 16982016,
+        "bytes": 1253376,
+        "phase": "run"
+      },
+      {
+        "name": "game_virtual_framebuffer_0",
+        "start": 30541584,
+        "end_exclusive": 30695184,
+        "bytes": 153600,
+        "phase": "run"
+      },
+      {
+        "name": "game_virtual_framebuffer_1",
+        "start": 30387968,
+        "end_exclusive": 30541568,
+        "bytes": 153600,
+        "phase": "run"
+      },
+      {
+        "name": "supplied_lcd_buffer_0",
+        "start": 32802736,
+        "end_exclusive": 33554416,
+        "bytes": 751680,
+        "phase": "run"
+      },
+      {
+        "name": "supplied_lcd_buffer_1",
+        "start": 32051040,
+        "end_exclusive": 32802720,
+        "bytes": 751680,
+        "phase": "run"
+      },
+      {
+        "name": "supplied_lcd_buffer_2",
+        "start": 31897424,
+        "end_exclusive": 32051024,
+        "bytes": 153600,
+        "phase": "run"
+      },
+      {
+        "name": "supplied_lcd_buffer_3",
+        "start": 31743808,
+        "end_exclusive": 31897408,
+        "bytes": 153600,
+        "phase": "run"
+      },
+      {
+        "name": "supplied_oem_thread_stack",
+        "start": 30695200,
+        "end_exclusive": 31743776,
+        "bytes": 1048576,
+        "phase": "run"
+      },
+      {
+        "name": "supplied_oem_stack_allocation",
+        "start": 30695200,
+        "end_exclusive": 31743792,
+        "bytes": 1048592,
+        "phase": "run"
+      }
+    ],
+    "errors": [],
+    "limits": [
+      "Supplied allocation/framebuffer ranges are assumptions until captured on the actual device.",
+      "Physical RAM, package acceptance, IRQ/cache ABI and worker termination are not certified.",
+      "Audio reservation is conservative host policy, not an extra OEM loader check.",
+      "BSS must be initialized by future application startup; original BIN-loader does not provide an ELF BSS loader.",
+      "Private stack reserve does not change SP; the actual application inherits the OEM Game thread stack.",
+      "Temporary load and run regions can overlap across phases; simultaneous run regions may not overlap."
+    ],
+    "unresolved": [
+      "runtime allocation ownership",
+      "board RAM",
+      "RTOS/cache context"
+    ],
+    "game_source_sha256": "ffb5dd9fc4f26f299010a78e9be96ab3c7d05c6c64630f68caa21f315ff2e017",
+    "origin": "Observed control-game ranges compared with supplied allocation assumptions; not a device RAM capture.",
+    "load_tail_overlaps_future_bss": true
+  }
+}

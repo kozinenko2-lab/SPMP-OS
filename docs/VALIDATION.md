@@ -1,3 +1,26 @@
+# Проверки этапа 7
+
+- Рабочий контрольный game SHA и decoded payload SHA сверены; private originals
+  сохранили хеши. Ghidra 12.2/JDK 25 воспроизвела 7 private game exports.
+- Оригинальный RAP NGame loader 0x4617E4: status 0, payload побайтно совпал с
+  host decoder, extra tail сохранён при сдвиге заголовка — PASS.
+- Два bounded ARM startup-сценария: main-stub и early input exit. BSS bounds,
+  private allocator, 14 вызовов API без diagnostics во втором сценарии,
+  SP/r4–r11 и return — PASS. Все game API перехвачены.
+- 61 Python-тест: 58 PASS + 3 optional SKIP без private inputs; 61 PASS с RAP
+  и контрольной игрой. Три C-модели, host probe и typed adapter — PASS.
+- Control memory comparison: реальные fixed game ranges + синтетические
+  allocation assumptions, tail/load-vs-BSS/run, тесный allocation и audio overlap — PASS.
+- Exact-SHA private Ghidra runner запрещает output внутри публичного checkout.
+
+Backend file-read/bulk-copy/decoder scratch/delay для loader и все backend
+игры подменены явно. Это не gameplay/hardware test. В Git нет игры, assets,
+C/ASM или database игры. Число OEM exports остаётся 284. Контейнер SPMP-OS,
+прошивка и запись Flash/NAND не создавались/не выполнялись.
+[Полный отчёт](../research/boot_reconstruction/STAGE7_REPORT_RU.md).
+
+---
+
 # Проверки этапа 6
 
 - Ghidra 12.2/JDK 25: 284 выбранные функции (253 MMI + 27/4 RedBoot), mapped

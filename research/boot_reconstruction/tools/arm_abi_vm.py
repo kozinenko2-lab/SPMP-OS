@@ -31,7 +31,8 @@ class ArmVM:
     def get32(self,address):return struct.unpack('<I',self.u.mem_read(address,4))[0]
     def get16(self,address):return struct.unpack('<H',self.u.mem_read(address,2))[0]
     def string(self,address):return bytes(self.u.mem_read(address,512)).split(b'\0')[0].decode('ascii')
-    def run(self,entry,args=(),stack=()):
+    def run(self,entry,args=(),stack=(),*,max_instructions=1000000,timeout_us=10000000):
+        if max_instructions<=0 or timeout_us<=0:raise ValueError('Finite positive VM limits required')
         from unicorn.arm_const import (UC_ARM_REG_SP,UC_ARM_REG_R4,UC_ARM_REG_R5,
             UC_ARM_REG_R6,UC_ARM_REG_R7,UC_ARM_REG_R8,UC_ARM_REG_R9,
             UC_ARM_REG_R10,UC_ARM_REG_R11)
@@ -42,7 +43,7 @@ class ArmVM:
         for i,r in enumerate(self.regs):self.u.reg_write(r,(args[i] if i<len(args) else 0x13572468)&0xffffffff)
         self.u.reg_write(UC_ARM_REG_SP,0x1110000);self.u.reg_write(self.lr,0x1200000)
         for i,value in enumerate(stack):self.put32(0x1110000+4*i,value)
-        self.u.emu_start(entry,0x1200000,timeout=10000000,count=1000000)
+        self.u.emu_start(entry,0x1200000,timeout=timeout_us,count=max_instructions)
         if self.u.reg_read(self.pc)!=0x1200000:raise RuntimeError('VM execution limit reached')
         if self.u.reg_read(UC_ARM_REG_SP)!=0x1110000:raise RuntimeError('SP not restored')
         if [self.u.reg_read(r) for r in saved]!=sentinels:

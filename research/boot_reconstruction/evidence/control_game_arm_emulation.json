@@ -1,0 +1,230 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "game_sha256": "ffb5dd9fc4f26f299010a78e9be96ab3c7d05c6c64630f68caa21f315ff2e017",
+  "execution": "Unicorn ARM, synthetic RAM only; not console execution",
+  "loader": {
+    "entry": "0x4617e4",
+    "status": 0,
+    "decoded_payload_sha256": "f312eafba8f7dbf93afb5897ed127d1081e929181b15386bbaf191912ab539da",
+    "exact_host_match": true,
+    "tail_preserved_after_header_shift": true,
+    "read_backend": [
+      {
+        "bytes": 3400494,
+        "capacity": 4194304
+      }
+    ],
+    "mocked": [
+      "0x45ffcc file-read wrapper supplies private uploaded bytes in RAM",
+      "0x298c6c large overlapping header-shift copy replaced with bounded RAM copy; small copies execute original ARM",
+      "0x298b64 bare-return diagnostic intercepted, preserves r0",
+      "0x299588/0x2995d0 1024-byte decoder scratch supplied in synthetic RAM; general heap not initialized",
+      "0x339be8 RTOS delay omitted"
+    ],
+    "original_execution": "header parser, prefix decoder, crypto helpers, footer comparison and loader branches",
+    "max_instructions": 20000000,
+    "timeout_us": 30000000
+  },
+  "startup_cases": [
+    {
+      "mode": "main_stub",
+      "return": 0,
+      "bss": {
+        "bytes": 3852,
+        "words": 963,
+        "all_zero": true,
+        "boundary_guards_preserved": true
+      },
+      "heap": {
+        "limit": 14680064,
+        "base": 13891584,
+        "general_blocks": 14060768
+      },
+      "api_pointer_saved": "0x5efb74",
+      "sp_and_callee_saved_registers_restored": true,
+      "calls": [
+        {
+          "callsite": "0xa00044",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa0005c",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa00070",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa00084",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa000a8",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa000b8",
+          "slot": "0x4"
+        }
+      ],
+      "limits": "All game API calls mocked; no rendering, real input, resources, audio or RTOS. Main replaced with return stub."
+    },
+    {
+      "mode": "first_poll_exit_key",
+      "return": 0,
+      "bss": {
+        "bytes": 3852,
+        "words": 963,
+        "all_zero": true,
+        "boundary_guards_preserved": true
+      },
+      "heap": {
+        "limit": 14680064,
+        "base": 13891584,
+        "general_blocks": 14060768
+      },
+      "api_pointer_saved": "0x5efb74",
+      "sp_and_callee_saved_registers_restored": true,
+      "calls": [
+        {
+          "callsite": "0xa00044",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa0005c",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa00070",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa00084",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa000a8",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa000b8",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa32320",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa212c4",
+          "slot": "0x38",
+          "r0_r1": [
+            14060832,
+            153600
+          ]
+        },
+        {
+          "callsite": "0xa212e8",
+          "slot": "0x90",
+          "r0_r1": [
+            320,
+            240
+          ]
+        },
+        {
+          "callsite": "0xa21308",
+          "slot": "0x54",
+          "input_u16": [
+            0,
+            0,
+            320,
+            240
+          ]
+        },
+        {
+          "callsite": "0xa21318",
+          "slot": "0x8c",
+          "r0": 32
+        },
+        {
+          "callsite": "0xa21334",
+          "slot": "0x44",
+          "rgb": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "callsite": "0xa21344",
+          "slot": "0x3c",
+          "r0": 240
+        },
+        {
+          "callsite": "0xa21364",
+          "slot": "0xc4",
+          "rect": [
+            0,
+            0,
+            320,
+            240
+          ]
+        },
+        {
+          "callsite": "0xa21374",
+          "slot": "0x10"
+        },
+        {
+          "callsite": "0xa32334",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa32344",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa32358",
+          "slot": "0xd4",
+          "r0_r1": [
+            3,
+            13842464
+          ]
+        },
+        {
+          "callsite": "0xa32368",
+          "slot": "0x4"
+        },
+        {
+          "callsite": "0xa32374",
+          "slot": "0x124"
+        },
+        {
+          "callsite": "0xa323c8",
+          "slot": "0x100",
+          "first_word_before": 0,
+          "first_word_after": 0,
+          "injected_keys": 524288
+        },
+        {
+          "callsite": "0xa323e0",
+          "slot": "0x108"
+        },
+        {
+          "callsite": "0xa32aa0",
+          "slot": "0xe8",
+          "r0": 0
+        },
+        {
+          "callsite": "0xa32ab8",
+          "slot": "0xe8",
+          "r0": 0
+        },
+        {
+          "callsite": "0xa32b24",
+          "slot": "0x4"
+        }
+      ],
+      "limits": "All game API calls mocked; no rendering, real input, resources, audio or RTOS. Main uses injected quit key on first poll."
+    }
+  ]
+}
