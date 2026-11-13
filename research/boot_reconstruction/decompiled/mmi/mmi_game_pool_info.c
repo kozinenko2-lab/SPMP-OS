@@ -38,7 +38,7 @@ int * mmi_game_pool_info(int *param_1)
   local_20 = 0xffffffff;
   local_1c = 0xffffffff;
   local_18 = 0xff;
-  FUN_0032e5e4(DAT_002e3894,0x5e,&local_40);
+  ecos_pool_info_wrapper(DAT_002e3894,0x5e,&local_40);
   if (0 < local_3c) {
     *param_1 = local_3c;
   }

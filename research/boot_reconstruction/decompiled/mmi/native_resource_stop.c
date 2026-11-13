@@ -1,7 +1,7 @@
 /* Ghidra pseudocode; not recovered buildable OEM source. */
-/* entry=004624d4; original_symbol=native_slot_58 */
+/* entry=004624d4; original_symbol=native_resource_stop */
 
-void native_slot_58(byte param_1)
+void native_resource_stop(byte param_1)
 
 {
   *DAT_00462590 = *DAT_00462590 & ~param_1;

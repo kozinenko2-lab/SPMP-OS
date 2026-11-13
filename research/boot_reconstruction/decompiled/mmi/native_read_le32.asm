@@ -1,0 +1,12 @@
+004614ec ldrb r2,[r0,#0x3]
+004614f0 ldrb r3,[r0,#0x2]
+004614f4 mov r3,r3, lsl #0x10
+004614f8 add r2,r3,r2, lsl #0x18
+004614fc ldrb r3,[r0,#0x1]
+00461500 add r2,r2,r3, lsl #0x8
+00461504 ldrb r0,[r0,#0x0]
+00461508 add r0,r2,r0
+0046150c bx lr
+REFERENCES TO ENTRY:
+004616ac UNCONDITIONAL_CALL
+00461678 UNCONDITIONAL_CALL

@@ -1,0 +1,425 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "checks": [
+    {
+      "address": "0x299abc",
+      "word": "0xe414f004"
+    },
+    {
+      "address": "0x4ce050",
+      "word": "0xe355000b"
+    },
+    {
+      "address": "0x4ce05c",
+      "word": "0xe1a03083"
+    },
+    {
+      "address": "0x4ce2cc",
+      "word": "0xe0035002"
+    },
+    {
+      "address": "0x4ce344",
+      "word": "0xe0653003"
+    },
+    {
+      "address": "0x4ce3a4",
+      "word": "0xe284400c"
+    },
+    {
+      "address": "0x4ce9bc",
+      "word": "0xe246300c"
+    },
+    {
+      "address": "0x2e3884",
+      "word": "0xc5843028"
+    },
+    {
+      "address": "0x460dc4",
+      "word": "0xe350060a"
+    },
+    {
+      "address": "0x460dc8",
+      "word": "0x8a000007"
+    },
+    {
+      "address": "0x460dd4",
+      "word": "0xe241160a"
+    },
+    {
+      "address": "0x460ddc",
+      "word": "0xe5831000"
+    },
+    {
+      "address": "0x4608ec",
+      "word": "0xe3a00102"
+    },
+    {
+      "address": "0x4619ec",
+      "word": "0xe3540000"
+    },
+    {
+      "address": "0x4619f8",
+      "word": "0xabfb6056"
+    },
+    {
+      "address": "0x461a20",
+      "word": "0xba000004"
+    },
+    {
+      "address": "0x461e20",
+      "word": "0xe3a0460f"
+    },
+    {
+      "address": "0x461e3c",
+      "word": "0x1a00000a"
+    },
+    {
+      "address": "0x461ee0",
+      "word": "0xeafffffe"
+    },
+    {
+      "address": "0x461ef0",
+      "word": "0xe3a02601"
+    },
+    {
+      "address": "0x46201c",
+      "word": "0xe5832000"
+    },
+    {
+      "address": "0x462088",
+      "word": "0xe2844014"
+    },
+    {
+      "address": "0x462138",
+      "word": "0xe1853003"
+    },
+    {
+      "address": "0x4621b0",
+      "word": "0x3e0220f"
+    },
+    {
+      "address": "0x4622fc",
+      "word": "0xa000001"
+    },
+    {
+      "address": "0x462300",
+      "word": "0xe3e00000"
+    },
+    {
+      "address": "0x462520",
+      "word": "0x89da810"
+    },
+    {
+      "address": "0x4626e0",
+      "word": "0xe2822080"
+    },
+    {
+      "address": "0x4627cc",
+      "word": "0xa1a00003"
+    },
+    {
+      "address": "0x4627dc",
+      "word": "0xb1a00003"
+    },
+    {
+      "address": "0x462838",
+      "word": "0xe59a0000"
+    },
+    {
+      "address": "0x462840",
+      "word": "0xe2632b01"
+    },
+    {
+      "address": "0x462ca8",
+      "word": "0xe2804601"
+    },
+    {
+      "address": "0x462cb4",
+      "word": "0xe3a02a32"
+    },
+    {
+      "address": "0x462cc0",
+      "word": "0xe1a00004"
+    },
+    {
+      "address": "0x339b28",
+      "word": "0xe5903038"
+    },
+    {
+      "address": "0x33aac4",
+      "word": "0xe1530000"
+    },
+    {
+      "address": "0x33aac8",
+      "word": "0xbffffdc"
+    },
+    {
+      "address": "0x280144",
+      "direct_call": "0x299a98"
+    },
+    {
+      "address": "0x2e3920",
+      "direct_call": "0x2e3898"
+    },
+    {
+      "address": "0x2e38d8",
+      "direct_call": "0x32e594"
+    },
+    {
+      "address": "0x32e5a0",
+      "direct_call": "0x4cdff0"
+    },
+    {
+      "address": "0x32e5c8",
+      "direct_call": "0x4ce274"
+    },
+    {
+      "address": "0x32e5dc",
+      "direct_call": "0x4ce478"
+    },
+    {
+      "address": "0x32e600",
+      "direct_call": "0x4ce8d0"
+    },
+    {
+      "address": "0x460cc0",
+      "direct_call": "0x2e3724"
+    },
+    {
+      "address": "0x460cd0",
+      "direct_call": "0x2e3724"
+    },
+    {
+      "address": "0x460db0",
+      "direct_call": "0x2e37c0"
+    },
+    {
+      "address": "0x460db8",
+      "direct_call": "0x2e3724"
+    },
+    {
+      "address": "0x460ec4",
+      "direct_call": "0x460800"
+    },
+    {
+      "address": "0x460f8c",
+      "direct_call": "0x2e3784"
+    },
+    {
+      "address": "0x4608f0",
+      "direct_call": "0x4619ac"
+    },
+    {
+      "address": "0x4619e8",
+      "direct_call": "0x339b58"
+    },
+    {
+      "address": "0x461a04",
+      "direct_call": "0x4629cc"
+    },
+    {
+      "address": "0x461a2c",
+      "direct_call": "0x339b94"
+    },
+    {
+      "address": "0x339b64",
+      "direct_call": "0x33a720"
+    },
+    {
+      "address": "0x339ba0",
+      "direct_call": "0x33aaac"
+    },
+    {
+      "address": "0x461ef4",
+      "direct_call": "0x298d34"
+    },
+    {
+      "address": "0x461ef8",
+      "direct_call": "0x462c94"
+    },
+    {
+      "address": "0x462cbc",
+      "direct_call": "0x45ffcc"
+    },
+    {
+      "address": "0x462cc4",
+      "direct_call": "0x464f78"
+    },
+    {
+      "address": "0x4621c0",
+      "direct_call": "0x46438c"
+    },
+    {
+      "address": "0x4622cc",
+      "direct_call": "0x461510"
+    },
+    {
+      "address": "0x462810",
+      "direct_call": "0x2c567c"
+    },
+    {
+      "address": "0x462844",
+      "direct_call": "0x298d34"
+    },
+    {
+      "address": "0x462850",
+      "direct_call": "0x2c567c"
+    },
+    {
+      "address": "0x462a18",
+      "direct_call": "0x339b18"
+    },
+    {
+      "address": "0x299aa4",
+      "literal": "0x56ad58"
+    },
+    {
+      "address": "0x299aa8",
+      "literal": "0x56ad08"
+    },
+    {
+      "address": "0x2e38c0",
+      "literal": "0x9fff00"
+    },
+    {
+      "address": "0x2e38c4",
+      "literal": "0x606348"
+    },
+    {
+      "address": "0x2e38cc",
+      "literal": "0x2000000"
+    },
+    {
+      "address": "0x462018",
+      "literal": "0x5641fc"
+    },
+    {
+      "address": "0x462cb0",
+      "literal": "0x50b9e8"
+    },
+    {
+      "address": "0x33aabc",
+      "literal": "0x63e0f0"
+    }
+  ],
+  "contracts": [
+    {
+      "offset": "0xd4",
+      "target": "0x461e7c",
+      "export": "native_resource_init",
+      "typedef": "mmi_resource_init_fn"
+    },
+    {
+      "offset": "0xd8",
+      "target": "0x461fb4",
+      "export": "native_resource_get",
+      "typedef": "mmi_resource_get_fn"
+    },
+    {
+      "offset": "0xdc",
+      "target": "0x462118",
+      "export": "native_resource_play",
+      "typedef": "mmi_resource_play_fn"
+    },
+    {
+      "offset": "0xe0",
+      "target": "0x4623bc",
+      "export": "native_resource_pause",
+      "typedef": "mmi_resource_pause_fn"
+    },
+    {
+      "offset": "0xe4",
+      "target": "0x462448",
+      "export": "native_resource_resume",
+      "typedef": "mmi_resource_resume_fn"
+    },
+    {
+      "offset": "0xe8",
+      "target": "0x4624d4",
+      "export": "native_resource_stop",
+      "typedef": "mmi_resource_stop_fn"
+    },
+    {
+      "offset": "0x130",
+      "target": "0x4619ac",
+      "export": "native_exit_control",
+      "typedef": "mmi_game_exit_control_fn"
+    }
+  ],
+  "constructors": {
+    "table_start": "0x56ad08",
+    "table_end_exclusive": "0x56ad5c",
+    "invoked_reverse": [
+      "0x298c4c",
+      "0x33c434",
+      "0x33b7fc",
+      "0x33b288",
+      "0x3399b4",
+      "0x299944",
+      "0x33b184",
+      "0x2818b0",
+      "0x281558",
+      "0x299864",
+      "0x28090c",
+      "0x29618c",
+      "0x2a6d94",
+      "0x28247c",
+      "0x4bec74",
+      "0x4be890",
+      "0x33e684",
+      "0x33e5f4",
+      "0x33ec44",
+      "0x33e468",
+      "0x2e3908"
+    ]
+  },
+  "configured_pool": {
+    "object": "0x606348",
+    "start": "0x9fff00",
+    "end_exclusive": "0x2000000",
+    "requested_alignment": 8
+  },
+  "fresh_pool_model": {
+    "initial": {
+      "managed": 23068912,
+      "used": 0,
+      "free": 23068912,
+      "max_request": 23068900
+    },
+    "allocations": [
+      {
+        "requested": 153600,
+        "charged": 153616,
+        "address": 33400816
+      },
+      {
+        "requested": 153600,
+        "charged": 153616,
+        "address": 33247200
+      },
+      {
+        "requested": 22761668,
+        "charged": 22761680,
+        "address": 10485520
+      }
+    ],
+    "frames": [
+      33400816,
+      33247200
+    ],
+    "main": 10485520,
+    "requested": 22761668,
+    "capacity": 22761428
+  },
+  "audio_workspace": {
+    "default_base": "0xf00000",
+    "cleared_bytes": "0x100000",
+    "tonelib_destination": "0x1000000",
+    "tonelib_capacity": "0x32000"
+  },
+  "limits": [
+    "Static exact-build evidence; configured range is not physical RAM certification.",
+    "Fresh-pool addresses change with allocation history; no reserved SPMP-OS region is established.",
+    "See separate RAM-only VM observations and mocked-backend limits."
+  ]
+}

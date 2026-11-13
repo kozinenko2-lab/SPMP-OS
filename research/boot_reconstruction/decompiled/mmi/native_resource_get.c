@@ -1,7 +1,7 @@
 /* Ghidra pseudocode; not recovered buildable OEM source. */
-/* entry=00461fb4; original_symbol=native_slot_54 */
+/* entry=00461fb4; original_symbol=native_resource_get */
 
-int native_slot_54(uint *param_1,uint *param_2)
+int native_resource_get(uint *param_1,uint *param_2)
 
 {
   int iVar1;
@@ -45,7 +45,7 @@ LAB_004620a0:
     }
     iVar1 = FUN_00345f54(puVar3,param_1);
     if (iVar1 == 0) {
-      uVar2 = FUN_00461268((undefined4 *)puVar3[4]);
+      uVar2 = native_resource_length((undefined4 *)puVar3[4]);
       param_2[1] = uVar2;
       *param_2 = puVar3[4];
       goto LAB_004620a0;

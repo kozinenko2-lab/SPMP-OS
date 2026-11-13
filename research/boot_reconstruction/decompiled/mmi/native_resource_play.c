@@ -1,7 +1,7 @@
 /* Ghidra pseudocode; not recovered buildable OEM source. */
-/* entry=00462118; original_symbol=native_slot_55 */
+/* entry=00462118; original_symbol=native_resource_play */
 
-undefined4 native_slot_55(byte param_1,uint param_2,int *param_3)
+undefined4 native_resource_play(byte param_1,uint param_2,int *param_3)
 
 {
   int *piVar1;
@@ -43,13 +43,13 @@ undefined4 native_slot_55(byte param_1,uint param_2,int *param_3)
           uVar4 = 0xfffffff;
         }
         *DAT_0046238c = uVar4;
-        FUN_0046438c();
+        native_midi_decode();
         piVar1 = DAT_00462390;
         *DAT_00462390 = 0;
         do {
-          iVar3 = FUN_00464d9c();
+          iVar3 = native_midi_samples_pending();
           if (iVar3 * 0x10000 < 1) break;
-          uVar4 = FUN_00464da8((int)auStack_828,0x800);
+          uVar4 = native_midi_read_samples((int)auStack_828,0x800);
           FUN_00298c6c((undefined4 *)(*DAT_00462394 + *piVar1),auStack_828,uVar4);
           iVar3 = *piVar1;
           *piVar1 = uVar4 + iVar3;
@@ -68,7 +68,7 @@ undefined4 native_slot_55(byte param_1,uint param_2,int *param_3)
       uStack_834 = 0;
       local_830 = 0;
       local_82c = 0;
-      uVar4 = FUN_00461510((undefined4 *)*param_3,local_848);
+      uVar4 = native_wave_parse((undefined4 *)*param_3,local_848);
       if ((uVar4 & 0xff) != 0) {
         MMI_diag_stub_00298B64();
       }

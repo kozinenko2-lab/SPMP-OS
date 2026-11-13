@@ -1,3 +1,27 @@
+# Проверки этапа 5
+
+- Ghidra 12.2/JDK 25: 206 выбранных функций (175 MMI + 27/4 RedBoot),
+  mapped bytes совпадают, исходные три GZF сохранили хеши.
+- `audit_stage5.py`: 75 точных ARM-проверок, 21 startup constructor,
+  7 новых resource/exit объявлений соответствуют слотам — PASS.
+- RAM-only Unicorn: 119 сценариев — PASS; настоящий allocator/info/free,
+  Game thread, resource/WAV wrappers и ограниченное наблюдение worker.
+- Проверен путь к подставному entry с 85 слотами API и последующий возврат;
+  NGame-loading, cache и thread/PCM/file backend в этой цепочке подменены.
+- Подтверждены ранний return stopRes при уже остановленном MIDI и очистка
+  начала вместо хвоста неполного PCM-буфера. Source models сохраняют OEM-поведение.
+- Public tests: 37 Python (один optional private) и 3 C-модели — PASS;
+  с локальным RAP все 37 Python проходят без SKIP. ARMv5TE soft-float syntax
+  check в CI охватывает оба заголовка объявлений.
+- `audit_stage4.py`: прежние 56 ARM-проверок и 17 объявлений — PASS.
+
+Scheduler unlock и внешние backend подменены явно; RAM-пул синтетический,
+physical RAM/RTOS liveness не сертифицированы. В worker проверяется PCM до
+драйвера. Нет запуска на консоли, модификации оригиналов или Flash-пакета.
+[Полный отчёт](../research/boot_reconstruction/STAGE5_REPORT_RU.md).
+
+---
+
 # Проверки этапа 4
 
 - Ghidra 12.2/JDK 25: 170 выбранных функций (139 MMI + 27/4 RedBoot),

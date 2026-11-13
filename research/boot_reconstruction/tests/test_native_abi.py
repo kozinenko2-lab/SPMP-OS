@@ -68,7 +68,7 @@ class NativeABITests(unittest.TestCase):
     def test_export_plan_and_artifacts(self):
         plan=json.loads((BASE/'ghidra_targets.json').read_text())
         summary=json.loads((BASE/'decompiled/export_summary.json').read_text())
-        self.assertEqual(sum(x['successful_targets'] for x in summary['programs']),170)
+        self.assertEqual(sum(x['successful_targets'] for x in summary['programs']),206)
         counts={p['program']:p['successful_targets'] for p in summary['programs']}
         for program in plan['programs']:
             self.assertEqual(len(program['targets']),counts[program['id']])

@@ -13,17 +13,17 @@ undefined4 native_exit_control(int param_1)
   if (*DAT_00461a44 == 0) {
     return 0;
   }
-  native_slot_56((uint)*DAT_00461a48);
-  FUN_00339b58(*DAT_00461a4c,extraout_r1);
+  native_resource_pause((uint)*DAT_00461a48);
+  ecos_thread_suspend_wrapper(*DAT_00461a4c,extraout_r1);
   if (-1 < param_1) {
-    FUN_00339b58(*DAT_00461a44,extraout_r1_00);
+    ecos_thread_suspend_wrapper(*DAT_00461a44,extraout_r1_00);
   }
   MMI_diag_stub_00298B64();
-  FUN_004629cc();
+  native_sound_stop();
   FUN_002d6d60(0xd07,(uint *)0x0,0);
   puVar1 = DAT_00461a44;
   if (-1 < param_1) {
-    FUN_00339b94(*DAT_00461a44,extraout_r1_01);
+    ecos_thread_kill_wrapper(*DAT_00461a44,extraout_r1_01);
     *puVar1 = 0;
   }
   return 0;

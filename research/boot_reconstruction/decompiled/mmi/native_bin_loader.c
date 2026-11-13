@@ -18,7 +18,7 @@ undefined4 native_bin_loader(int param_1)
   puVar1[4] = 0;
   puVar1[5] = 0;
   puVar1[6] = 0;
-  FUN_004600b0();
+  native_cache_prepare();
   iVar2 = native_load_ngame((undefined4 *)&SUB_00a00000,param_1,*DAT_00460928,(int)(local_20 + 1));
   MMI_diag_stub_00298B64();
   if (iVar2 == 0) {

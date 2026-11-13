@@ -1,7 +1,7 @@
 /* Ghidra pseudocode; not recovered buildable OEM source. */
-/* entry=004623bc; original_symbol=native_slot_56 */
+/* entry=004623bc; original_symbol=native_resource_pause */
 
-void native_slot_56(uint param_1)
+void native_resource_pause(uint param_1)
 
 {
   MMI_diag_stub_00298B64();

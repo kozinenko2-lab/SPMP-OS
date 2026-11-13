@@ -143,7 +143,7 @@ LAB_00460b10:
       iVar6 = -2;
       break;
     case 8:
-      FUN_004610c4();
+      native_clock_restore();
       iVar6 = FUN_00460944(param_1);
     }
     MMI_diag_stub_00298B64();

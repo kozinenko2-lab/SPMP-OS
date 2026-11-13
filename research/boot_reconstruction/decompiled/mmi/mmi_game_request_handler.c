@@ -27,7 +27,7 @@ int mmi_game_request_handler(undefined2 param_1,int *param_2)
   case 0xd01:
     FUN_003b5318();
     FUN_002d2e0c();
-    FUN_00461004();
+    native_clock_prepare();
     puVar2 = DAT_002d4094;
     MMI_diag_stub_00298B64();
     ecos_thread_create_wrapper
@@ -79,7 +79,7 @@ int mmi_game_request_handler(undefined2 param_1,int *param_2)
         iVar6 = DAT_002d40a4[0xe];
       }
     }
-    FUN_004610c4();
+    native_clock_restore();
     break;
   case 0xd05:
     if (*(code **)(DAT_002d40b8 + 0x10) == (code *)0x0) {
@@ -144,7 +144,7 @@ int mmi_game_request_handler(undefined2 param_1,int *param_2)
     uVar4 = extraout_r1;
     if (*DAT_002d409c != 0) {
       do {
-        iVar7 = FUN_00339b18(*puVar3,uVar4);
+        iVar7 = ecos_thread_delete_wrapper(*puVar3,uVar4);
         ecos_thread_delay_wrapper(3,0);
         uVar4 = extraout_r1_00;
       } while (iVar7 == 0);

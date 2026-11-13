@@ -20,7 +20,7 @@ jobs:
       - name: Install ARM build tools
         run: sudo apt-get update && sudo apt-get install -y clang llvm lld
       - name: Check reconstructed declarations for ARMv5TE soft-float
-        run: clang --target=arm-none-eabi -march=armv5te -mfloat-abi=soft -std=c11 -ffreestanding -Wall -Wextra -Werror -fsyntax-only -x c research/boot_reconstruction/src/mmi_native_abi.h
+        run: clang --target=arm-none-eabi -march=armv5te -mfloat-abi=soft -std=c11 -ffreestanding -Wall -Wextra -Werror -fsyntax-only -x c research/boot_reconstruction/src/mmi_native_abi.h research/boot_reconstruction/src/mmi_native_resources_abi.h
       - name: File manager component checks
         run: |
           for n in 01 02 03 04 05; do

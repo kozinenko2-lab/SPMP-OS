@@ -12,7 +12,7 @@ undefined4 native_sound_start(void)
   
   MMI_diag_stub_00298B64();
   if (*DAT_004629a4 == 0) {
-    FUN_002c554c(8000,1);
+    mmi_pcm_configure(8000,1);
     puVar1 = DAT_004629ac;
     iVar3 = FUN_003e30bc();
     *puVar1 = (int)(char)iVar3;

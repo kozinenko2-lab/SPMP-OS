@@ -1,0 +1,2875 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "case_count": 119,
+  "cases": [
+    {
+      "group": "constructor_pool",
+      "inputs": {},
+      "original_arm": {
+        "table_entries": 21,
+        "pool_initializer": "0x2e3908",
+        "pool_is_last": true,
+        "pool_created": true
+      }
+    },
+    {
+      "group": "fresh_pool",
+      "inputs": {
+        "prefix_requests": []
+      },
+      "original_arm": {
+        "initial": {
+          "managed": 23068912,
+          "used": 0,
+          "free": 23068912,
+          "max_request": 23068900
+        },
+        "allocations": [
+          {
+            "requested": 153600,
+            "charged": 153616,
+            "address": 33400816
+          },
+          {
+            "requested": 153600,
+            "charged": 153616,
+            "address": 33247200
+          },
+          {
+            "requested": 22761668,
+            "charged": 22761680,
+            "address": 10485520
+          }
+        ],
+        "frames": [
+          33400816,
+          33247200
+        ],
+        "main": 10485520,
+        "requested": 22761668,
+        "capacity": 22761428,
+        "restored": true
+      }
+    },
+    {
+      "group": "fresh_pool",
+      "inputs": {
+        "prefix_requests": [
+          1048576
+        ]
+      },
+      "original_arm": {
+        "initial": {
+          "managed": 23068912,
+          "used": 0,
+          "free": 23068912,
+          "max_request": 23068900
+        },
+        "allocations": [
+          {
+            "requested": 1048576,
+            "charged": 1048592,
+            "address": 32505840
+          },
+          {
+            "requested": 153600,
+            "charged": 153616,
+            "address": 32352224
+          },
+          {
+            "requested": 153600,
+            "charged": 153616,
+            "address": 32198608
+          },
+          {
+            "requested": 21713076,
+            "charged": 21713088,
+            "address": 10485520
+          }
+        ],
+        "frames": [
+          32352224,
+          32198608
+        ],
+        "main": 10485520,
+        "requested": 21713076,
+        "capacity": 21712836,
+        "restored": true
+      }
+    },
+    {
+      "group": "fresh_pool",
+      "inputs": {
+        "prefix_requests": [
+          2097152,
+          32768
+        ]
+      },
+      "original_arm": {
+        "initial": {
+          "managed": 23068912,
+          "used": 0,
+          "free": 23068912,
+          "max_request": 23068900
+        },
+        "allocations": [
+          {
+            "requested": 2097152,
+            "charged": 2097168,
+            "address": 31457264
+          },
+          {
+            "requested": 32768,
+            "charged": 32784,
+            "address": 31424480
+          },
+          {
+            "requested": 153600,
+            "charged": 153616,
+            "address": 31270864
+          },
+          {
+            "requested": 153600,
+            "charged": 153616,
+            "address": 31117248
+          },
+          {
+            "requested": 20631716,
+            "charged": 20631728,
+            "address": 10485520
+          }
+        ],
+        "frames": [
+          31270864,
+          31117248
+        ],
+        "main": 10485520,
+        "requested": 20631716,
+        "capacity": 20631476,
+        "restored": true
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": -5
+      },
+      "original_arm": {
+        "return": 4294967291,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [
+          [
+            1376,
+            0,
+            0
+          ],
+          [
+            1365,
+            1879048194,
+            0
+          ]
+        ],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": -4
+      },
+      "original_arm": {
+        "return": 4294967292,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [
+          [
+            1376,
+            0,
+            0
+          ]
+        ],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": -3
+      },
+      "original_arm": {
+        "return": 4294967293,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [
+          [
+            1376,
+            0,
+            0
+          ],
+          [
+            1365,
+            1879048194,
+            0
+          ]
+        ],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": -2
+      },
+      "original_arm": {
+        "return": 4294967294,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [
+          [
+            1376,
+            0,
+            0
+          ],
+          [
+            1365,
+            1879048194,
+            0
+          ]
+        ],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": -1
+      },
+      "original_arm": {
+        "return": 4294967295,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [
+          [
+            1376,
+            0,
+            0
+          ]
+        ],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": 0
+      },
+      "original_arm": {
+        "return": 0,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": 1
+      },
+      "original_arm": {
+        "return": 1,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [
+          [
+            1376,
+            0,
+            0
+          ]
+        ],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "game_thread",
+      "inputs": {
+        "loader_result": 2
+      },
+      "original_arm": {
+        "return": 2,
+        "at_loader": {
+          "kind": 6,
+          "base": 10485520,
+          "capacity": 22761428,
+          "frame0": 33400816,
+          "frame1": 33247200
+        },
+        "messages": [
+          [
+            1376,
+            0,
+            0
+          ]
+        ],
+        "freed_and_cleared": true,
+        "capacity_after": 22761428
+      }
+    },
+    {
+      "group": "reservation_fault",
+      "inputs": {
+        "base": 0,
+        "maximum": 1048576,
+        "previous_capacity": 305419896,
+        "frame0": 16797696
+      },
+      "original_arm": {
+        "capacity_written": true,
+        "capacity": 4285530112,
+        "warning": false,
+        "loader_reached": true
+      }
+    },
+    {
+      "group": "reservation_fault",
+      "inputs": {
+        "base": 10489856,
+        "maximum": 1048576,
+        "previous_capacity": 305419896,
+        "frame0": 16797696
+      },
+      "original_arm": {
+        "capacity_written": false,
+        "capacity": 305419896,
+        "warning": true,
+        "loader_reached": true
+      }
+    },
+    {
+      "group": "reservation_fault",
+      "inputs": {
+        "base": 10485520,
+        "maximum": 1048576,
+        "previous_capacity": 305419896,
+        "frame0": 0
+      },
+      "original_arm": {
+        "capacity_written": true,
+        "capacity": 1048336,
+        "warning": false,
+        "loader_reached": true
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 0,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 1,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 2,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 3,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 255,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 0,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 1,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 12,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 2,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 3,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 12,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 255,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 12,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 0,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 1,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 2,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 2,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 3,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 2,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 255,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 2,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 0,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 1,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 12,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 2,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 2,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 3,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 2,
+        "wave_state": 12,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "pause",
+        "mask": 255,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 2,
+        "wave_state": 12,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 0,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 1,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 2,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 3,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 255,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 0,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 1,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 2,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 3,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 255,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 0,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 1,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 2,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 3,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 255,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 0,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 1,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 2,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 3,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "resume",
+        "mask": 255,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 0,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 1,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 170,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 2,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 169,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 3,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 168,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 255,
+        "features": 0,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 0,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 0,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 1,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 170,
+        "midi_state": 1,
+        "wave_state": 13,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 0,
+        "wave_repeats": 0
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 2,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 169,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 3,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 168,
+        "midi_state": 1,
+        "wave_state": 13,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 0,
+        "wave_repeats": 0
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 255,
+        "features": 1,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 0,
+        "midi_state": 1,
+        "wave_state": 13,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 0,
+        "wave_repeats": 0
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 0,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 1,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 170,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 2,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 169,
+        "midi_state": 3,
+        "wave_state": 11,
+        "midi_remaining": 0,
+        "midi_repeats": 0,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 3,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 168,
+        "midi_state": 3,
+        "wave_state": 11,
+        "midi_remaining": 0,
+        "midi_repeats": 0,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 255,
+        "features": 2,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 0,
+        "midi_state": 3,
+        "wave_state": 11,
+        "midi_remaining": 0,
+        "midi_repeats": 0,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 0,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 171,
+        "midi_state": 1,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 1,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 170,
+        "midi_state": 1,
+        "wave_state": 13,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 0,
+        "wave_repeats": 0
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 2,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 169,
+        "midi_state": 3,
+        "wave_state": 11,
+        "midi_remaining": 0,
+        "midi_repeats": 0,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 3,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 168,
+        "midi_state": 3,
+        "wave_state": 13,
+        "midi_remaining": 0,
+        "midi_repeats": 0,
+        "wave_base": 0,
+        "wave_repeats": 0
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 255,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 0,
+        "midi_state": 3,
+        "wave_state": 13,
+        "midi_remaining": 0,
+        "midi_repeats": 0,
+        "wave_base": 0,
+        "wave_repeats": 0
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 3,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 3,
+          "wave_state": 11,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 168,
+        "midi_state": 3,
+        "wave_state": 11,
+        "midi_remaining": 64,
+        "midi_repeats": 3,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_control",
+      "inputs": {
+        "operation": "stop",
+        "mask": 3,
+        "features": 15,
+        "state": {
+          "requests": 171,
+          "midi_state": 1,
+          "wave_state": 13,
+          "midi_remaining": 64,
+          "midi_repeats": 3,
+          "wave_base": 16793600,
+          "wave_repeats": 4
+        }
+      },
+      "original_arm": {
+        "requests": 168,
+        "midi_state": 3,
+        "wave_state": 13,
+        "midi_remaining": 0,
+        "midi_repeats": 0,
+        "wave_base": 16793600,
+        "wave_repeats": 4
+      }
+    },
+    {
+      "group": "resource_get",
+      "inputs": {
+        "name": "tone.wav"
+      },
+      "original_arm": {
+        "kind": 1,
+        "output_written": true,
+        "output": [
+          16793600,
+          60
+        ]
+      }
+    },
+    {
+      "group": "resource_get",
+      "inputs": {
+        "name": "missing.wav"
+      },
+      "original_arm": {
+        "kind": 1,
+        "output_written": false,
+        "output": [
+          4276993775,
+          3735928559
+        ]
+      }
+    },
+    {
+      "group": "resource_get",
+      "inputs": {
+        "name": "missing.mid"
+      },
+      "original_arm": {
+        "kind": 2,
+        "output_written": false,
+        "output": [
+          4276993775,
+          3735928559
+        ]
+      }
+    },
+    {
+      "group": "resource_get",
+      "inputs": {
+        "name": "vibration"
+      },
+      "original_arm": {
+        "kind": 4,
+        "output_written": false,
+        "output": [
+          4276993775,
+          3735928559
+        ]
+      }
+    },
+    {
+      "group": "resource_get",
+      "inputs": {
+        "name": "backlight"
+      },
+      "original_arm": {
+        "kind": 8,
+        "output_written": false,
+        "output": [
+          4276993775,
+          3735928559
+        ]
+      }
+    },
+    {
+      "group": "resource_get",
+      "inputs": {
+        "name": "TONE.WAV"
+      },
+      "original_arm": {
+        "kind": 0,
+        "output_written": false,
+        "output": [
+          4276993775,
+          3735928559
+        ]
+      }
+    },
+    {
+      "group": "resource_get",
+      "inputs": {
+        "name": "unknown.dat"
+      },
+      "original_arm": {
+        "kind": 0,
+        "output_written": false,
+        "output": [
+          4276993775,
+          3735928559
+        ]
+      }
+    },
+    {
+      "group": "resource_get_invalid",
+      "inputs": {
+        "missing_table": true,
+        "null_output": false
+      },
+      "original_arm": {
+        "kind": 0,
+        "features_after": 0,
+        "output_written": false
+      }
+    },
+    {
+      "group": "resource_get_invalid",
+      "inputs": {
+        "missing_table": false,
+        "null_output": true
+      },
+      "original_arm": {
+        "kind": 0,
+        "features_after": 0,
+        "output_written": false
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 8000,
+        "bits": 8,
+        "repeats": 0,
+        "features": 15,
+        "null_descriptor": false
+      },
+      "original_arm": {
+        "status": 1,
+        "scheduled": true,
+        "repeat_count": 268435455
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 8000,
+        "bits": 8,
+        "repeats": 1,
+        "features": 15,
+        "null_descriptor": false
+      },
+      "original_arm": {
+        "status": 1,
+        "scheduled": true,
+        "repeat_count": 1
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 8000,
+        "bits": 8,
+        "repeats": 255,
+        "features": 15,
+        "null_descriptor": false
+      },
+      "original_arm": {
+        "status": 1,
+        "scheduled": true,
+        "repeat_count": 255
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 8000,
+        "bits": 8,
+        "repeats": 256,
+        "features": 15,
+        "null_descriptor": false
+      },
+      "original_arm": {
+        "status": 1,
+        "scheduled": true,
+        "repeat_count": 268435455
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 11025,
+        "bits": 8,
+        "repeats": 1,
+        "features": 15,
+        "null_descriptor": false
+      },
+      "original_arm": {
+        "status": 4294967295,
+        "scheduled": false,
+        "repeat_count": null
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 8000,
+        "bits": 16,
+        "repeats": 1,
+        "features": 15,
+        "null_descriptor": false
+      },
+      "original_arm": {
+        "status": 4294967295,
+        "scheduled": false,
+        "repeat_count": null
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 8000,
+        "bits": 8,
+        "repeats": 1,
+        "features": 0,
+        "null_descriptor": false
+      },
+      "original_arm": {
+        "status": 1,
+        "scheduled": false,
+        "repeat_count": null
+      }
+    },
+    {
+      "group": "resource_play_wave",
+      "inputs": {
+        "rate": 8000,
+        "bits": 8,
+        "repeats": 1,
+        "features": 15,
+        "null_descriptor": true
+      },
+      "original_arm": {
+        "status": 0,
+        "scheduled": false,
+        "repeat_count": null
+      }
+    },
+    {
+      "group": "resource_play_midi",
+      "inputs": {
+        "cached": false,
+        "decoder_result": 1
+      },
+      "original_arm": {
+        "status": 1,
+        "decoded_called": true,
+        "remaining_bytes": 8,
+        "repeat_count": 268435455
+      }
+    },
+    {
+      "group": "resource_play_midi",
+      "inputs": {
+        "cached": false,
+        "decoder_result": -3
+      },
+      "original_arm": {
+        "status": 1,
+        "decoded_called": true,
+        "remaining_bytes": 8,
+        "repeat_count": 268435455
+      }
+    },
+    {
+      "group": "resource_play_midi",
+      "inputs": {
+        "cached": true,
+        "decoder_result": 1
+      },
+      "original_arm": {
+        "status": 1,
+        "decoded_called": false,
+        "remaining_bytes": 8,
+        "repeat_count": 268435455
+      }
+    },
+    {
+      "group": "audio_workspace",
+      "inputs": {
+        "kind": 6,
+        "cached": 0,
+        "backend_result": 16793600
+      },
+      "original_arm": {
+        "result": 15728640,
+        "cached": 0,
+        "allocated": false
+      }
+    },
+    {
+      "group": "audio_workspace",
+      "inputs": {
+        "kind": 5,
+        "cached": 0,
+        "backend_result": 16793600
+      },
+      "original_arm": {
+        "result": 16793600,
+        "cached": 16793600,
+        "allocated": true
+      }
+    },
+    {
+      "group": "audio_workspace",
+      "inputs": {
+        "kind": 5,
+        "cached": 16793600,
+        "backend_result": 16797696
+      },
+      "original_arm": {
+        "result": 15728640,
+        "cached": 16793600,
+        "allocated": false
+      }
+    },
+    {
+      "group": "audio_workspace",
+      "inputs": {
+        "kind": 5,
+        "cached": 0,
+        "backend_result": 0
+      },
+      "original_arm": {
+        "result": 0,
+        "cached": 0,
+        "allocated": true
+      }
+    },
+    {
+      "group": "resource_init",
+      "inputs": {
+        "initialized": 0,
+        "table": 16789504
+      },
+      "original_arm": {
+        "cleared_bytes": 1048576,
+        "tonelib_destination": 16777216,
+        "initialized_after": 1
+      }
+    },
+    {
+      "group": "resource_init",
+      "inputs": {
+        "initialized": 1,
+        "table": 16789504
+      },
+      "original_arm": {
+        "cleared_bytes": 0,
+        "tonelib_destination": null,
+        "initialized_after": 1
+      }
+    },
+    {
+      "group": "resource_init",
+      "inputs": {
+        "initialized": 0,
+        "table": 0
+      },
+      "original_arm": {
+        "cleared_bytes": 0,
+        "tonelib_destination": null,
+        "initialized_after": 0
+      }
+    },
+    {
+      "group": "exit_control",
+      "inputs": {
+        "mode": 2147483648,
+        "game_handle": 16793600,
+        "seq_handle": 16797696,
+        "requests": 3
+      },
+      "original_arm": {
+        "calls": [
+          [
+            "pause",
+            [
+              3
+            ]
+          ],
+          [
+            "suspend",
+            [
+              16797696
+            ]
+          ],
+          [
+            "sound_stop",
+            []
+          ],
+          [
+            "command",
+            [
+              3335,
+              0,
+              0
+            ]
+          ]
+        ],
+        "handle_after": 16793600,
+        "status": 0
+      }
+    },
+    {
+      "group": "exit_control",
+      "inputs": {
+        "mode": 4294967295,
+        "game_handle": 16793600,
+        "seq_handle": 16797696,
+        "requests": 3
+      },
+      "original_arm": {
+        "calls": [
+          [
+            "pause",
+            [
+              3
+            ]
+          ],
+          [
+            "suspend",
+            [
+              16797696
+            ]
+          ],
+          [
+            "sound_stop",
+            []
+          ],
+          [
+            "command",
+            [
+              3335,
+              0,
+              0
+            ]
+          ]
+        ],
+        "handle_after": 16793600,
+        "status": 0
+      }
+    },
+    {
+      "group": "exit_control",
+      "inputs": {
+        "mode": 0,
+        "game_handle": 16793600,
+        "seq_handle": 16797696,
+        "requests": 3
+      },
+      "original_arm": {
+        "calls": [
+          [
+            "pause",
+            [
+              3
+            ]
+          ],
+          [
+            "suspend",
+            [
+              16797696
+            ]
+          ],
+          [
+            "suspend",
+            [
+              16793600
+            ]
+          ],
+          [
+            "sound_stop",
+            []
+          ],
+          [
+            "command",
+            [
+              3335,
+              0,
+              0
+            ]
+          ],
+          [
+            "kill",
+            [
+              16793600
+            ]
+          ]
+        ],
+        "handle_after": 0,
+        "status": 0
+      }
+    },
+    {
+      "group": "exit_control",
+      "inputs": {
+        "mode": 1,
+        "game_handle": 16793600,
+        "seq_handle": 16797696,
+        "requests": 3
+      },
+      "original_arm": {
+        "calls": [
+          [
+            "pause",
+            [
+              3
+            ]
+          ],
+          [
+            "suspend",
+            [
+              16797696
+            ]
+          ],
+          [
+            "suspend",
+            [
+              16793600
+            ]
+          ],
+          [
+            "sound_stop",
+            []
+          ],
+          [
+            "command",
+            [
+              3335,
+              0,
+              0
+            ]
+          ],
+          [
+            "kill",
+            [
+              16793600
+            ]
+          ]
+        ],
+        "handle_after": 0,
+        "status": 0
+      }
+    },
+    {
+      "group": "exit_control",
+      "inputs": {
+        "mode": 0,
+        "game_handle": 0,
+        "seq_handle": 16797696,
+        "requests": 3
+      },
+      "original_arm": {
+        "calls": [],
+        "handle_after": 0,
+        "status": 0
+      }
+    },
+    {
+      "group": "sound_stop",
+      "inputs": {
+        "delete_result": 0
+      },
+      "original_arm": {
+        "status": 0,
+        "calls": [
+          [
+            "pool_free",
+            [
+              16793600
+            ]
+          ],
+          [
+            "delete",
+            [
+              16801792
+            ]
+          ],
+          [
+            "pcm_stop",
+            []
+          ],
+          [
+            "general_free",
+            [
+              16797696
+            ]
+          ],
+          [
+            "delay",
+            [
+              5,
+              0
+            ]
+          ]
+        ],
+        "pointers_cleared": true,
+        "seq_handle_after": 16801792
+      }
+    },
+    {
+      "group": "sound_stop",
+      "inputs": {
+        "delete_result": 1
+      },
+      "original_arm": {
+        "status": 0,
+        "calls": [
+          [
+            "pool_free",
+            [
+              16793600
+            ]
+          ],
+          [
+            "delete",
+            [
+              16801792
+            ]
+          ],
+          [
+            "pcm_stop",
+            []
+          ],
+          [
+            "general_free",
+            [
+              16797696
+            ]
+          ],
+          [
+            "delay",
+            [
+              5,
+              0
+            ]
+          ]
+        ],
+        "pointers_cleared": true,
+        "seq_handle_after": 16801792
+      }
+    },
+    {
+      "group": "loader_return",
+      "inputs": {
+        "mocked_load_status": 0,
+        "mocked_application_return": 12345
+      },
+      "original_arm": {
+        "return": 0,
+        "entry": [
+          {
+            "r0": 6224756,
+            "callbacks": [
+              4593932,
+              4594012,
+              4594092
+            ],
+            "capacity": 22761428
+          }
+        ],
+        "audio_threads_created": 1,
+        "commands": [
+          {
+            "id": 3334,
+            "data": null,
+            "bytes": 0
+          },
+          {
+            "id": 3336,
+            "data": 3,
+            "bytes": 4
+          },
+          {
+            "id": 3335,
+            "data": null,
+            "bytes": 0
+          },
+          {
+            "id": 3335,
+            "data": null,
+            "bytes": 0
+          }
+        ],
+        "pool_restored": true,
+        "game_handle_after": 16814080
+      }
+    },
+    {
+      "group": "loader_return",
+      "inputs": {
+        "mocked_load_status": 0,
+        "mocked_application_return": 4294967289
+      },
+      "original_arm": {
+        "return": 0,
+        "entry": [
+          {
+            "r0": 6224756,
+            "callbacks": [
+              4593932,
+              4594012,
+              4594092
+            ],
+            "capacity": 22761428
+          }
+        ],
+        "audio_threads_created": 1,
+        "commands": [
+          {
+            "id": 3334,
+            "data": null,
+            "bytes": 0
+          },
+          {
+            "id": 3336,
+            "data": 3,
+            "bytes": 4
+          },
+          {
+            "id": 3335,
+            "data": null,
+            "bytes": 0
+          },
+          {
+            "id": 3335,
+            "data": null,
+            "bytes": 0
+          }
+        ],
+        "pool_restored": true,
+        "game_handle_after": 16814080
+      }
+    },
+    {
+      "group": "loader_return",
+      "inputs": {
+        "mocked_load_status": 2,
+        "mocked_application_return": 0
+      },
+      "original_arm": {
+        "return": 4294967294,
+        "entry": [],
+        "audio_threads_created": 0,
+        "commands": [],
+        "pool_restored": true,
+        "game_handle_after": 16814080
+      }
+    },
+    {
+      "group": "audio_worker",
+      "inputs": {
+        "case": "wave"
+      },
+      "original_arm": {
+        "submitted_bytes": 1024,
+        "sha256": "6c64ae6d02650d2241953e4730c462f30a4c76cb0bc6de8e67a0dd421c75f147",
+        "first_samples": [
+          -32768,
+          0,
+          32512,
+          -32768,
+          0,
+          32512,
+          -32768,
+          0
+        ],
+        "last_bytes_hex": "0000007f00800000"
+      }
+    },
+    {
+      "group": "audio_worker",
+      "inputs": {
+        "case": "midi"
+      },
+      "original_arm": {
+        "submitted_bytes": 1024,
+        "sha256": "c9bdfd55e61eaa02d52288804ed73ecfdd864f26ea0a5eee3c5a2e1c6a999cb4",
+        "first_samples": [
+          -32768,
+          32767,
+          1,
+          -1,
+          -32768,
+          32767,
+          1,
+          -1
+        ],
+        "last_bytes_hex": "0080ff7f0100ffff"
+      }
+    },
+    {
+      "group": "audio_worker",
+      "inputs": {
+        "case": "mixed"
+      },
+      "original_arm": {
+        "submitted_bytes": 1024,
+        "sha256": "0665cd31113e16dc70e17e0aa3205d90fc1d60cf868681dfdddc8b1a74a13dd2",
+        "first_samples": [
+          -32768,
+          32767,
+          32513,
+          -32768,
+          -32768,
+          32767,
+          -32767,
+          -1
+        ],
+        "last_bytes_hex": "0080ff7f0180ffff"
+      }
+    },
+    {
+      "group": "audio_worker",
+      "inputs": {
+        "case": "partial"
+      },
+      "original_arm": {
+        "submitted_bytes": 1024,
+        "sha256": "53ffaca3ccf5e3d333cbd80489ce58389b8f97c56b3f4a0e91eb34dd7ca429dc",
+        "first_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "last_bytes_hex": "00006a6a6a6a6a6a"
+      }
+    },
+    {
+      "group": "audio_worker",
+      "inputs": {
+        "case": "idle"
+      },
+      "original_arm": {
+        "submitted_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_samples": [],
+        "last_bytes_hex": ""
+      }
+    }
+  ],
+  "limits": [
+    "Synthetic RAM, no MMIO or device execution. Allocator internals execute; scheduler unlock is mocked.",
+    "File/PCM/thread operations are mocked; stop/delete progress does not prove real scheduler liveness.",
+    "Worker is observed until first submit/idle delay, not a returning function or an audio driver test.",
+    "Configured OEM pool range does not certify physical RAM or unused application memory."
+  ]
+}

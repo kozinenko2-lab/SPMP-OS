@@ -1,0 +1,27 @@
+00461e14 cpy r12,sp
+00461e18 stmdb sp!,{r4,r5,r11,r12,lr,pc}
+00461e1c sub r11,r12,#0x4
+00461e20 mov r4,#0xf00000
+00461e24 bl 0x0045ffbc
+00461e28 cmp r0,#0x5
+00461e2c bne 0x00461e6c
+00461e30 ldr r5,[0x461e74]
+00461e34 ldr r3,[r5,#0x0]
+00461e38 cmp r3,#0x0
+00461e3c bne 0x00461e6c
+00461e40 mov r0,#0x130000
+00461e44 add r0,r0,#0x2000
+00461e48 bl 0x002e3724
+00461e4c cpy r4,r0
+00461e50 str r0,[r5,#0x0]
+00461e54 mov r0,#0x460
+00461e58 add r0,r0,#0x5
+00461e5c bl 0x003b9624
+00461e60 ldr r0,[0x461e78]
+00461e64 ldr r1,[r5,#0x0]
+00461e68 bl 0x00298b64
+00461e6c cpy r0,r4
+00461e70 ldmia sp,{r4,r5,r11,sp,pc}
+REFERENCES TO ENTRY:
+00461ec4 UNCONDITIONAL_CALL
+00462ca4 UNCONDITIONAL_CALL

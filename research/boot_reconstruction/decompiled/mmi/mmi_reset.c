@@ -39,7 +39,7 @@ void processEntry mmi_reset(void)
   }
   FUN_00299c90();
   FUN_002976d0();
-  FUN_00299a98();
+  mmi_run_constructors();
   mmi_bootstrap();
   do {
                     /* WARNING: Do nothing block with infinite loop */

@@ -1,0 +1,8 @@
+0032e5a8 cpy r12,sp
+0032e5ac stmdb sp!,{r11,r12,lr,pc}
+0032e5b0 sub r11,r12,#0x4
+0032e5b4 bl 0x004ce170
+0032e5b8 ldmia sp,{r11,sp,pc}
+REFERENCES TO ENTRY:
+002e38f4 UNCONDITIONAL_CALL
+004ae4c8 UNCONDITIONAL_CALL

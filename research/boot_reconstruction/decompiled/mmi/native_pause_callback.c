@@ -8,9 +8,9 @@ undefined4 native_pause_callback(void)
   uint extraout_r1_00;
   
   MMI_diag_stub_00298B64();
-  native_slot_56((uint)*DAT_00461950);
-  FUN_00339b58(*DAT_00461954,extraout_r1);
-  FUN_00339b58(*DAT_00461958,extraout_r1_00);
+  native_resource_pause((uint)*DAT_00461950);
+  ecos_thread_suspend_wrapper(*DAT_00461954,extraout_r1);
+  ecos_thread_suspend_wrapper(*DAT_00461958,extraout_r1_00);
   return 0;
 }
 

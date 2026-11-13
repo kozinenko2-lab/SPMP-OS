@@ -19,7 +19,7 @@ undefined4 native_n1_loader(int param_1)
   uStack_74 = DAT_00460260[2];
   local_70 = (undefined2)DAT_00460260[3];
   FUN_00345dec(&local_7c,DAT_00460264);
-  FUN_004600b0();
+  native_cache_prepare();
   iVar1 = native_read_file(0xa00000,(int)&local_7c,0x34000,&uStack_80);
   if (iVar1 != 0) {
     local_7c = *DAT_00460268;

@@ -713,32 +713,32 @@
         {
           "address": "00461e7c",
           "first_word": "e1a0c00d",
-          "label": "native_slot_53"
+          "label": "native_resource_init"
         },
         {
           "address": "00461fb4",
           "first_word": "e1a0c00d",
-          "label": "native_slot_54"
+          "label": "native_resource_get"
         },
         {
           "address": "00462118",
           "first_word": "e1a0c00d",
-          "label": "native_slot_55"
+          "label": "native_resource_play"
         },
         {
           "address": "004623bc",
           "first_word": "e1a0c00d",
-          "label": "native_slot_56"
+          "label": "native_resource_pause"
         },
         {
           "address": "00462448",
           "first_word": "e1a0c00d",
-          "label": "native_slot_57"
+          "label": "native_resource_resume"
         },
         {
           "address": "004624d4",
           "first_word": "e1a0c00d",
-          "label": "native_slot_58"
+          "label": "native_resource_stop"
         },
         {
           "address": "00461c24",
@@ -874,6 +874,186 @@
           "address": "00339d18",
           "first_word": "e59f300c",
           "label": "ecos_current_ticks"
+        },
+        {
+          "address": "002e3898",
+          "first_word": "e1a0c00d",
+          "label": "mmi_game_pool_control"
+        },
+        {
+          "address": "002e3908",
+          "first_word": "e1a0c00d",
+          "label": "mmi_game_pool_initialize"
+        },
+        {
+          "address": "002e3928",
+          "first_word": "e1a0c00d",
+          "label": "mmi_game_pool_destroy"
+        },
+        {
+          "address": "0032e594",
+          "first_word": "e1a0c00d",
+          "label": "ecos_pool_create_wrapper"
+        },
+        {
+          "address": "0032e5a8",
+          "first_word": "e1a0c00d",
+          "label": "ecos_pool_destroy_wrapper"
+        },
+        {
+          "address": "0032e5bc",
+          "first_word": "e1a0c00d",
+          "label": "ecos_pool_alloc_wrapper"
+        },
+        {
+          "address": "0032e5d0",
+          "first_word": "e1a0c00d",
+          "label": "ecos_pool_free_wrapper"
+        },
+        {
+          "address": "0032e5e4",
+          "first_word": "e1a0c00d",
+          "label": "ecos_pool_info_wrapper"
+        },
+        {
+          "address": "004cdff0",
+          "first_word": "e1a0c00d",
+          "label": "ecos_var_pool_construct"
+        },
+        {
+          "address": "004ce274",
+          "first_word": "e1a0c00d",
+          "label": "ecos_var_pool_try_alloc"
+        },
+        {
+          "address": "004ce478",
+          "first_word": "e1a0c00d",
+          "label": "ecos_var_pool_free"
+        },
+        {
+          "address": "004ce8d0",
+          "first_word": "e1a0c00d",
+          "label": "ecos_var_pool_status"
+        },
+        {
+          "address": "00339b18",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_delete_wrapper"
+        },
+        {
+          "address": "00339b58",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_suspend_wrapper"
+        },
+        {
+          "address": "00339b94",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_kill_wrapper"
+        },
+        {
+          "address": "0033a720",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_suspend_core"
+        },
+        {
+          "address": "0033aaac",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_kill_core"
+        },
+        {
+          "address": "0033a57c",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_destruct_core"
+        },
+        {
+          "address": "004600b0",
+          "first_word": "e92d0090",
+          "label": "native_cache_prepare"
+        },
+        {
+          "address": "00461004",
+          "first_word": "e1a0c00d",
+          "label": "native_clock_prepare"
+        },
+        {
+          "address": "004610c4",
+          "first_word": "e1a0c00d",
+          "label": "native_clock_restore"
+        },
+        {
+          "address": "00461e14",
+          "first_word": "e1a0c00d",
+          "label": "native_audio_workspace"
+        },
+        {
+          "address": "00462c94",
+          "first_word": "e1a0c00d",
+          "label": "native_tonelib_load"
+        },
+        {
+          "address": "00461268",
+          "first_word": "e1a0c00d",
+          "label": "native_resource_length"
+        },
+        {
+          "address": "00461510",
+          "first_word": "e1a0c00d",
+          "label": "native_wave_parse"
+        },
+        {
+          "address": "004614ec",
+          "first_word": "e5d02003",
+          "label": "native_read_le32"
+        },
+        {
+          "address": "004625b8",
+          "first_word": "e1a0c00d",
+          "label": "native_audio_worker"
+        },
+        {
+          "address": "004629cc",
+          "first_word": "e1a0c00d",
+          "label": "native_sound_stop"
+        },
+        {
+          "address": "0046438c",
+          "first_word": "e92d4ff1",
+          "label": "native_midi_decode"
+        },
+        {
+          "address": "00464d9c",
+          "first_word": "e51f0040",
+          "label": "native_midi_samples_pending"
+        },
+        {
+          "address": "00464da8",
+          "first_word": "e92d47f0",
+          "label": "native_midi_read_samples"
+        },
+        {
+          "address": "00464f78",
+          "first_word": "e92d07f0",
+          "label": "native_tonelib_setup"
+        },
+        {
+          "address": "002c554c",
+          "first_word": "e1a0c00d",
+          "label": "mmi_pcm_configure"
+        },
+        {
+          "address": "002c567c",
+          "first_word": "e1a0c00d",
+          "label": "mmi_pcm_submit"
+        },
+        {
+          "address": "002c5850",
+          "first_word": "e1a0c00d",
+          "label": "mmi_pcm_stop"
+        },
+        {
+          "address": "00299a98",
+          "first_word": "e1a0c00d",
+          "label": "mmi_run_constructors"
         }
       ],
       "repairs": [

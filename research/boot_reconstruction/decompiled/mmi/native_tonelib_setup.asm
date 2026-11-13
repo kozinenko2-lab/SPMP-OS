@@ -1,0 +1,106 @@
+00464f78 stmdb sp!,{r4,r5,r6,r7,r8,r9,r10}
+00464f7c ldr r8,[0x465118]
+00464f80 cpy r10,r0
+00464f84 mov r9,#0x0
+00464f88 cpy r7,r0
+00464f8c mov r5,#0x0
+00464f90 ldr r1,[r7,#0x0]
+00464f94 cmp r1,#0x80
+00464f98 strcc r9,[r8,r5,lsl #0x2]
+00464f9c bcc 0x00465044
+00464fa0 add r3,r1,r0
+00464fa4 add r6,r8,r5, lsl #0x2
+00464fa8 str r3,[r6,#0x0]
+00464fac ldr r2,[r3,#0x4]
+00464fb0 ldr r12,[r3,#0x0]
+00464fb4 add r2,r2,r3
+00464fb8 str r2,[r3,#0x4]
+00464fbc ldr r2,[r3,#0x8]
+00464fc0 cmp r12,#0x0
+00464fc4 add r2,r2,r3
+00464fc8 str r2,[r3,#0x8]
+00464fcc ldr r2,[r3,#0xc]
+00464fd0 add r2,r2,r3
+00464fd4 str r2,[r3,#0xc]
+00464fd8 ldr r2,[r3,#0x10]
+00464fdc add r2,r2,r3
+00464fe0 str r2,[r3,#0x10]
+00464fe4 ldr r2,[r3,#0x14]
+00464fe8 add r2,r2,r3
+00464fec str r2,[r3,#0x14]
+00464ff0 ldr r1,[r6,#0x0]
+00464ff4 mov r2,#0x0
+00464ff8 ldr r1,[r1,#0x8]
+00464ffc bls 0x00465018
+00465000 ldr r4,[r1,#0x0]
+00465004 add r2,r2,#0x1
+00465008 add r4,r4,r3
+0046500c cmp r2,r12
+00465010 str r4,[r1],#0x4
+00465014 bcc 0x00465000
+00465018 ldr r1,[r6,#0x0]
+0046501c cmp r12,#0x0
+00465020 ldr r1,[r1,#0x10]
+00465024 mov r2,#0x0
+00465028 bls 0x00465044
+0046502c ldr r4,[r1,#0x0]
+00465030 add r2,r2,#0x1
+00465034 add r4,r4,r3
+00465038 cmp r2,r12
+0046503c str r4,[r1],#0x4
+00465040 bcc 0x0046502c
+00465044 add r5,r5,#0x1
+00465048 cmp r5,#0x80
+0046504c add r7,r7,#0x4
+00465050 bcc 0x00464f90
+00465054 cpy r2,r10
+00465058 mov r1,#0x0
+0046505c ldr r3,[r2,#0x0]
+00465060 cmp r3,#0x80
+00465064 bcs 0x00465078
+00465068 ldr r3,[r8,r3,lsl #0x2]
+0046506c cmp r3,#0x0
+00465070 str r3,[r8,r1,lsl #0x2]
+00465074 beq 0x004650f0
+00465078 add r1,r1,#0x1
+0046507c cmp r1,#0x80
+00465080 add r2,r2,#0x4
+00465084 bcc 0x0046505c
+00465088 ldr r4,[0x46511c]
+0046508c add r2,r10,#0x200
+00465090 mov r1,#0x0
+00465094 ldr r3,[r2,#0x0]
+00465098 cmp r3,#0x80
+0046509c strcc r9,[r4,r1,lsl #0x2]
+004650a0 bcc 0x004650bc
+004650a4 add r3,r3,r0
+004650a8 str r3,[r4,r1,lsl #0x2]
+004650ac ldr r5,[r3,#0x4]
+004650b0 add r12,r3,#0x4
+004650b4 add r3,r5,r3
+004650b8 str r3,[r12,#0x0]
+004650bc add r1,r1,#0x1
+004650c0 cmp r1,#0x80
+004650c4 add r2,r2,#0x4
+004650c8 bcc 0x00465094
+004650cc add r1,r10,#0x200
+004650d0 mov r0,#0x0
+004650d4 ldr r2,[r1,#0x0]
+004650d8 cmp r2,#0x80
+004650dc bcs 0x004650fc
+004650e0 ldr r2,[r4,r2,lsl #0x2]
+004650e4 cmp r2,#0x0
+004650e8 str r2,[r4,r0,lsl #0x2]
+004650ec bne 0x004650fc
+004650f0 ldmia sp!,{r4,r5,r6,r7,r8,r9,r10}
+004650f4 mvn r0,#0x0
+004650f8 bx lr
+004650fc add r0,r0,#0x1
+00465100 cmp r0,#0x80
+00465104 add r1,r1,#0x4
+00465108 bcc 0x004650d4
+0046510c ldmia sp!,{r4,r5,r6,r7,r8,r9,r10}
+00465110 mov r0,#0x0
+00465114 bx lr
+REFERENCES TO ENTRY:
+00462cc4 UNCONDITIONAL_CALL

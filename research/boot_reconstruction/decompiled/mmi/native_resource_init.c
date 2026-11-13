@@ -1,7 +1,7 @@
 /* Ghidra pseudocode; not recovered buildable OEM source. */
-/* entry=00461e7c; original_symbol=native_slot_53 */
+/* entry=00461e7c; original_symbol=native_resource_init */
 
-void native_slot_53(undefined4 param_1,int param_2)
+void native_resource_init(undefined4 param_1,int param_2)
 
 {
   int *piVar1;
@@ -17,7 +17,7 @@ void native_slot_53(undefined4 param_1,int param_2)
     MMI_diag_stub_00298B64();
     return;
   }
-  iVar3 = FUN_00461e14();
+  iVar3 = native_audio_workspace();
   *DAT_00461f90 = iVar3;
   if (iVar3 == 0) {
     MMI_diag_stub_00298B64();
@@ -26,7 +26,7 @@ void native_slot_53(undefined4 param_1,int param_2)
     } while( true );
   }
   FUN_00298d34((undefined4 *)*DAT_00461f90,0,0x100000);
-  FUN_00462c94();
+  native_tonelib_load();
   piVar1 = DAT_00461f98;
   *DAT_00461f98 = param_2;
   MMI_diag_stub_00298B64();

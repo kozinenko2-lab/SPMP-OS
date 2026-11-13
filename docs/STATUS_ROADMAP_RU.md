@@ -1,3 +1,24 @@
+# Этап 5: игровой пул, звуковые ресурсы и возврат BIN
+
+Экспортированы 206 выбранных функций (175 MMI + 31 RedBoot). Новый этап:
+75 точных ARM-проверок, 119 RAM-only ARM-сценариев; 7 новых объявлений API,
+24 суммарно. Установлен startup constructor пула [0x9FFF00,0x2000000),
+проверены реальный allocator, выделение/освобождение блоков Game thread,
+resource API и обычный возврат BIN через отрицательный cleanup mode.
+
+Выявлены пересечение audio workspace/tone library с основным блоком, слабые
+проверки allocation/capacity, ранний return stopRes и неверное zero-padding
+неполного PCM block. Оригиналы не исправлялись. VM с подставным entry/backend
+не является запуском рабочего BIN или всей консоли.
+
+[Отчёт этапа 5](../research/boot_reconstruction/STAGE5_REPORT_RU.md).
+Далее: нижние PCM/LCD backend, размещение SPMP-OS с учётом найденных диапазонов,
+проверка thread-delete/контекста на реальном RTOS и контрольный рабочий OEM BIN.
+Для RedBoot по-прежнему нужны board variant, реальный bootcfg/customize и
+размещение секций. Живой HAL и аппаратный запуск пока не подтверждены.
+
+---
+
 # Этап 4: native ABI файлов, графики, ввода и памяти
 
 Экспортированы 170 выбранных функций (MMI 139, RedBoot 31). Добавлены 17

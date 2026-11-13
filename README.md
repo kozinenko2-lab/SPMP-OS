@@ -12,7 +12,7 @@ SPMP-OS и проверка будущих модификаций. Поддер�
 - `project/spmp-os/` — импорт исходников Stage49, интеграций FM01–FM05,
   мультимедиа и тем. Исторические README/STATUS сохранены как материалы
   передачи проекта; содержащиеся в них результаты не являются новой проверкой.
-- `research/boot_reconstruction/` — [170 выбранных функций и контракты native API](research/boot_reconstruction/STAGE4_REPORT_RU.md),
+- `research/boot_reconstruction/` — [206 выбранных функций, память Game thread и звук](research/boot_reconstruction/STAGE5_REPORT_RU.md),
   текущие результаты анализа загрузки,
   восстановленный на C инспектор MMPi и проверки по оригинальным образам.
 - `research/Stage53_to_55/` — прежние инструменты исследования потоков и GUI,
