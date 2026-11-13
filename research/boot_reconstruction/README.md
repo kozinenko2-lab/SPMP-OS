@@ -2,12 +2,12 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE7_REPORT_RU.md](STAGE7_REPORT_RU.md) — рабочий
-контрольный BattleGround BIN от пользователя: оригинальный NGame loader из RAP,
-побайтное сравнение decode, BSS/heap/API и два ограниченных ARM startup-сценария.
-Игровой бинарник, assets, C/ASM и database остаются приватными. Число экспортов
-OEM-прошивки прежнее: 284, typed declarations — 28. Аппаратного запуска SPMP-OS нет.
-[Предыдущий этап: LCD/PCM, память и прототип](STAGE6_REPORT_RU.md).
+**Текущий этап:** [STAGE8_REPORT_RU.md](STAGE8_REPORT_RU.md) — собственные
+startup/linker layout и два linked ARM ELF. 30 ARM926 VM-сценариев,
+три negative link cases и семь negative ELF cases. Привязки к живым OEM pointers,
+контейнера и аппаратного запуска SPMP-OS нет. Счётчики OEM exports/API прежние:
+284/28. [Рабочий контрольный BIN](STAGE7_REPORT_RU.md),
+[LCD/PCM, память и прототип](STAGE6_REPORT_RU.md).
 Псевдокод: `decompiled/`. Предыдущие результаты:
 [память/ресурсы/возврат](STAGE5_REPORT_RU.md),
 [файлы/графика/ввод](STAGE4_REPORT_RU.md),
@@ -67,3 +67,13 @@ OEM-прошивки прежнее: 284, typed declarations — 28. Аппар�
 - `tools/run_control_ghidra.py` — приватный Ghidra import вне checkout.
 - `evidence/control_game_*.json` — метаданные и traces без игрового кода/ресурсов.
 - `SPMP_CONTROL_GAME` вместе с `SPMP_MMI_RAP` включает optional private tests.
+
+Собственный startup:
+
+- [examples/native_startup](examples/native_startup/README_RU.md) — ARM entry,
+  linker assertions, непрозрачный r0 и отдельный compiled-probe VM fixture.
+- `make arm-startup-check` — требует clang/lld/llvm-nm и optional Unicorn;
+  создаёт research ELF/maps/JSON в build, не целевой контейнер.
+- `tools/startup_elf.py`, `emulate_startup.py`, `check_startup_link_limits.py` —
+  ELF audit, ARM926 execution и отрицательные layout checks.
+- `evidence/startup_*` — источник/версия сборки, traces и собственный disassembly.

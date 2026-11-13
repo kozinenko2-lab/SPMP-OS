@@ -1,3 +1,22 @@
+# Этап 8: собственный startup и linked ARM ELF
+
+Новый startup сохраняет r4–r11/LR и исходный SP, выравнивает унаследованный
+стек для AAPCS C, очищает linker-defined BSS и передаёт только r0. Два ELF из
+собственного кода собраны для ARMv5TE/EABI5/soft-float: минимальный UNBOUND entry
+и отдельный VM fixture с существующим probe/typed adapter.
+
+30 сценариев ARM926 подтверждают BSS/data/stack/return, вызовы compiled C и
+обработку ошибок. Три неверных link layout и семь malformed ELF отвергнуты.
+Linker резервирует место под будущий footer до BSS; 128 КиБ — research budget,
+не измеренная свободная RAM. Нет контейнера, OEM pointer binding или device run.
+
+[Отчёт этапа 8](../research/boot_reconstruction/STAGE8_REPORT_RU.md).
+Далее: image-specific native API binding, runtime allocation/stack capture,
+packing и проверка IRQ/cache/LCD/cleanup. RedBoot variant по-прежнему не выбран.
+Счётчики OEM exports/typed declarations остаются 284/28.
+
+---
+
 # Этап 7: рабочий контрольный BIN
 
 Пользователь предоставил запускающийся на его консоли BattleGround BIN.

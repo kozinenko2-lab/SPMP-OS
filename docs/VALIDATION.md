@@ -1,3 +1,24 @@
+# Проверки этапа 8
+
+- Clang/LLD 19.1.7: два source-built ARMv5TE little-endian EABI5 soft-float ELF,
+  no undefined symbols. Default entry не разыменовывает raw API pointer.
+- ARM926 VM: 30 сценариев, BSS до main, data/guards, r0, SP alignment,
+  восстановление SP/r4–r11, ARM/Thumb return — PASS.
+- Связанные probe + typed adapter: bounded input/render API sequence и ошибки
+  dimensions/keys/fill/paint/missing callback/zero steps — PASS.
+- Linker отклоняет переполнение 128 КиБ research budget, сдвинутый entry и
+  footer/BSS collision. ELF audit отвергает семь повреждённых вариантов — PASS.
+- Прежние public tests: 61 Python, без private inputs 58 PASS / 3 SKIP;
+  три C-модели, host probe и host-injected adapter — PASS.
+- CI дополнен сборкой/аудитом/ARM VM и artifact `native-startup-armv5-analysis`.
+
+Это собственные analysis ELFs, не упаковка NGame и не аппаратный запуск.
+VM не загружает OEM прошивку и не обращается к реальным API/MMIO/RTOS. Результат
+не определяет доступный стек/память на консоли и не подтверждает живой HAL.
+[Полный отчёт](../research/boot_reconstruction/STAGE8_REPORT_RU.md).
+
+---
+
 # Проверки этапа 7
 
 - Рабочий контрольный game SHA и decoded payload SHA сверены; private originals

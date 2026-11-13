@@ -18,7 +18,7 @@ jobs:
         working-directory: project/spmp-os
         run: ./build/spmp-os-host --cores
       - name: Install ARM build tools
-        run: sudo apt-get update && sudo apt-get install -y clang llvm lld
+        run: sudo apt-get update && sudo apt-get install -y clang llvm lld python3-venv
       - name: Check reconstructed declarations for ARMv5TE soft-float
         run: clang --target=arm-none-eabi -march=armv5te -mfloat-abi=soft -std=c11 -ffreestanding -Wall -Wextra -Werror -fsyntax-only -x c research/boot_reconstruction/src/mmi_native_abi.h research/boot_reconstruction/src/mmi_native_resources_abi.h
       - name: Compile portable probe and typed adapter as ARMv5TE objects
@@ -32,6 +32,24 @@ jobs:
             research/boot_reconstruction/build/native_probe_armv5.o
             research/boot_reconstruction/build/native_probe_adapter_armv5.o
             research/boot_reconstruction/build/native_probe_frame.ppm
+      - name: Install isolated ARM VM dependency
+        run: |
+          python3 -m venv /tmp/spmp-startup-vm
+          /tmp/spmp-startup-vm/bin/pip install -r research/boot_reconstruction/requirements-emulation.txt
+      - name: Link and execute research startup on ARM926 VM
+        run: make -C research/boot_reconstruction arm-startup-check ARM_VM_PYTHON=/tmp/spmp-startup-vm/bin/python
+      - name: Save analysis startup ELFs and validation traces
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-startup-armv5-analysis
+          retention-days: 14
+          path: |
+            research/boot_reconstruction/build/native_startup/*.elf
+            research/boot_reconstruction/build/native_startup/*.map
+            research/boot_reconstruction/build/native_startup/*.json
+            research/boot_reconstruction/build/native_startup/compiler.txt
+            research/boot_reconstruction/build/native_startup/linker.txt
+            research/boot_reconstruction/examples/native_startup/README_RU.md
       - name: File manager component checks
         run: |
           for n in 01 02 03 04 05; do

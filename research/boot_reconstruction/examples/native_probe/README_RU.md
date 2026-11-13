@@ -60,6 +60,8 @@ ARM: little-endian, ARMv5TE, EABI5, soft-float. Проверяются ELF32/ARM
 Его размеры payload/BSS/heap заданы для иллюстрации и не измерены по этим object.
 CI сохраняет object и host PPM в artifact `native-probe-armv5-objects` на 14 дней.
 
-Для device-варианта ещё нужны рабочий OEM BIN как контрольный образец,
-startup/BSS/linking, проверка image identity при binding, cache/IRQ ABI,
-живые границы allocation/стека и подтверждённое завершение штатных потоков.
+Рабочий OEM BIN исследован на этапе 7. На [этапе 8](../../STAGE8_REPORT_RU.md)
+ядро и adapter связаны с новым startup в отдельный ARM VM fixture; его callbacks
+синтетические. Сам этот переносимый модуль не содержит native entry/binder.
+Для device-варианта остаются проверка image identity при binding, cache/IRQ ABI,
+живые границы allocation/стека, packing и подтверждённое завершение штатных потоков.

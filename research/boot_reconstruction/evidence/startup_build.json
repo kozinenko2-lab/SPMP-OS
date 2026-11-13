@@ -1,0 +1,19 @@
+{
+  "compiler": "Debian clang 19.1.7 (3+b1)",
+  "linker": "Debian LLD 19.1.7",
+  "vm": "Unicorn 2.1.4, ARM926 CPU",
+  "flags": "arm-none-eabi / ARMv5TE ARM / soft-float / EABI5; freestanding, no libc/PIC/unwind",
+  "source_files": {
+    "examples/native_startup/application.c": "a6babba3e7ed8694a1c01e350bd19ae44d7f25e55268c574eeeb0bae20206ee5",
+    "examples/native_startup/entry.S": "2b1ce85f417bce3982992287506c2813970aae4b5b4796e5fcb18a4fb9497e0d",
+    "examples/native_startup/startup.h": "8748510fe78cc7d5b309cad371ef41f63bfe160e7200aea890f30674e21bfeaf",
+    "examples/native_startup/research.ld": "6cc0d6cd8578d9743381ec745353f81af6f805a7d6a4de37e52e10b8948b93b1",
+    "tests/startup_fixture.c": "85356336cf648322577a4b2348277f0672a22fa9196d726b0d6f5456bbd6ba85",
+    "examples/native_probe/probe.c": "7693d92e99d45238eca8bd0816f6f7bc1f3f3df85d777d7a382bcd91380101e4",
+    "examples/native_probe/probe.h": "712da964b78cfe8ae687c1a8fbb17135d0a4edf540c3f39e478ec73964cacc29",
+    "examples/native_probe/oem_adapter.c": "05b9cd28813c0050eb1d5f9c063192a8ad6572d9e96700451ab7a52e7c108bb4",
+    "examples/native_probe/oem_adapter.h": "26ed2fc60e2c0f48138a2df4c44363b441efbda9db978f8f7608e5b9e499f5bf",
+    "src/mmi_native_abi.h": "178848e1b139ca5643a56d38ac9b4c5e76c4138e93cd23fe0813c7aa3b658119"
+  },
+  "limits": "Source-built research ELFs. Compiler output hashes in startup_arm_vm.json refer to this local build; CI builds and checks its own output."
+}

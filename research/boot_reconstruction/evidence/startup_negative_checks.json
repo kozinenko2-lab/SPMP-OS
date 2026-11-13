@@ -1,0 +1,49 @@
+{
+  "negative_link_cases": [
+    {
+      "case": "oversized_image",
+      "link_rejected": true,
+      "diagnostic": "research budget exceeded"
+    },
+    {
+      "case": "displaced_entry",
+      "link_rejected": true,
+      "diagnostic": "native entry must be first byte"
+    },
+    {
+      "case": "footer_bss_collision",
+      "link_rejected": true,
+      "diagnostic": "content/footer reserve/BSS overlap"
+    }
+  ],
+  "negative_elf_cases": [
+    {
+      "case": "wrong_machine",
+      "elf_rejected": true
+    },
+    {
+      "case": "hard_float",
+      "elf_rejected": true
+    },
+    {
+      "case": "wrong_entry",
+      "elf_rejected": true
+    },
+    {
+      "case": "RWX_segment",
+      "elf_rejected": true
+    },
+    {
+      "case": "runtime_outside_budget",
+      "elf_rejected": true
+    },
+    {
+      "case": "truncated_program_headers",
+      "elf_rejected": true
+    },
+    {
+      "case": "unsupported_CPU_arch",
+      "elf_rejected": true
+    }
+  ]
+}

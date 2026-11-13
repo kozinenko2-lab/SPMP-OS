@@ -39,3 +39,33 @@ test: all build/test_boot_policy build/test_reloc_model build/test_flag_model bu
 	python3 -m unittest discover -s tests -v
 clean:
 	rm -rf build
+
+# Analysis ELFs only. No target-ready container or original firmware dependency.
+ARM_LD ?= ld.lld
+ARM_NM ?= llvm-nm
+STARTUP_FLAGS = --target=arm-none-eabi -march=armv5te -marm -mfloat-abi=soft -std=c11 -ffreestanding -fno-builtin -fno-stack-protector -fno-pic -fno-pie -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -Wall -Wextra -Werror -O2
+STARTUP_INCLUDES = -Isrc -Iexamples/native_probe -Iexamples/native_startup
+STARTUP_DIR = build/native_startup
+.PHONY: arm-startup
+arm-startup:
+	mkdir -p $(STARTUP_DIR)
+	$(ARM_CC) --target=arm-none-eabi -march=armv5te -marm -mfloat-abi=soft -c examples/native_startup/entry.S -o $(STARTUP_DIR)/entry.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -c examples/native_startup/application.c -o $(STARTUP_DIR)/application.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -c tests/startup_fixture.c -o $(STARTUP_DIR)/fixture.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -c examples/native_probe/probe.c -o $(STARTUP_DIR)/probe.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -c examples/native_probe/oem_adapter.c -o $(STARTUP_DIR)/adapter.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(STARTUP_DIR)/application.map -o $(STARTUP_DIR)/application.elf $(STARTUP_DIR)/entry.o $(STARTUP_DIR)/application.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(STARTUP_DIR)/fixture.map -o $(STARTUP_DIR)/fixture.elf $(STARTUP_DIR)/entry.o $(STARTUP_DIR)/fixture.o $(STARTUP_DIR)/probe.o $(STARTUP_DIR)/adapter.o
+	$(ARM_NM) -u $(STARTUP_DIR)/application.elf > $(STARTUP_DIR)/undefined.txt
+	$(ARM_NM) -u $(STARTUP_DIR)/fixture.elf >> $(STARTUP_DIR)/undefined.txt
+	test ! -s $(STARTUP_DIR)/undefined.txt
+
+ARM_VM_PYTHON ?= python3
+.PHONY: arm-startup-check
+arm-startup-check: arm-startup
+	python3 tools/startup_elf.py $(STARTUP_DIR)/application.elf > $(STARTUP_DIR)/application_layout.json
+	python3 tools/startup_elf.py $(STARTUP_DIR)/fixture.elf > $(STARTUP_DIR)/fixture_layout.json
+	python3 tools/check_startup_link_limits.py --cc $(ARM_CC) --ld $(ARM_LD) --build $(STARTUP_DIR) --output $(STARTUP_DIR)/negative_checks.json
+	$(ARM_VM_PYTHON) tools/emulate_startup.py --application $(STARTUP_DIR)/application.elf --fixture $(STARTUP_DIR)/fixture.elf --output $(STARTUP_DIR)/arm_vm.json
+	$(ARM_CC) --version > $(STARTUP_DIR)/compiler.txt
+	$(ARM_LD) --version > $(STARTUP_DIR)/linker.txt

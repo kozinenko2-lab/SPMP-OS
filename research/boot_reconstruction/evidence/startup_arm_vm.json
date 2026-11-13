@@ -1,0 +1,2326 @@
+{
+  "status": "ARM_VM_TESTED_ONLY",
+  "cpu": "Unicorn ARM926",
+  "case_count": 30,
+  "application": {
+    "status": "ANALYSIS_ELF_ONLY",
+    "sha256": "aa34ed94e62cc70d83278439bebf357278bb3471da96b0f182761f75d7cafd3b",
+    "entry": "0xa00000",
+    "eabi_flags": "0x5000200",
+    "cpu_arch": "ARMv5TE",
+    "research_budget_bytes": 131072,
+    "file_image_span_bytes": 132,
+    "runtime_span_bytes": 176,
+    "future_footer_reserve": {
+      "start": "0xa00088",
+      "end_exclusive": "0xa00098",
+      "bytes": 16,
+      "marker_emitted": false
+    },
+    "bss": {
+      "start": "0xa000a0",
+      "end_exclusive": "0xa000b0",
+      "bytes": 16
+    },
+    "segments": [
+      {
+        "address": 10485760,
+        "offset": 65536,
+        "file_bytes": 120,
+        "memory_bytes": 120,
+        "permissions": 5
+      },
+      {
+        "address": 10485888,
+        "offset": 65664,
+        "file_bytes": 4,
+        "memory_bytes": 48,
+        "permissions": 6
+      }
+    ],
+    "limits": "128 KiB is an analysis budget; allocation/stack availability on console is not established."
+  },
+  "fixture": {
+    "status": "ANALYSIS_ELF_ONLY",
+    "sha256": "7779858e519da3a101ccf8a520e8c6d256391235e3117a9d72dfdf7be52ce441",
+    "entry": "0xa00000",
+    "eabi_flags": "0x5000200",
+    "cpu_arch": "ARMv5TE",
+    "research_budget_bytes": 131072,
+    "file_image_span_bytes": 2276,
+    "runtime_span_bytes": 2348,
+    "future_footer_reserve": {
+      "start": "0xa008e8",
+      "end_exclusive": "0xa008f8",
+      "bytes": 16,
+      "marker_emitted": false
+    },
+    "bss": {
+      "start": "0xa00900",
+      "end_exclusive": "0xa0092c",
+      "bytes": 44
+    },
+    "segments": [
+      {
+        "address": 10485760,
+        "offset": 65536,
+        "file_bytes": 2204,
+        "memory_bytes": 2204,
+        "permissions": 5
+      },
+      {
+        "address": 10487968,
+        "offset": 67744,
+        "file_bytes": 68,
+        "memory_bytes": 140,
+        "permissions": 6
+      }
+    ],
+    "limits": "128 KiB is an analysis budget; allocation/stack availability on console is not established."
+  },
+  "cases": [
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x0",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 40,
+        "return": 2,
+        "api_events": [],
+        "startup_record": [
+          1,
+          0,
+          1397771600,
+          2
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x0",
+        "return_instruction_set": "Thumb",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 40,
+        "return": 2,
+        "api_events": [],
+        "startup_record": [
+          1,
+          0,
+          1397771600,
+          2
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 40,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          6224756,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "Thumb",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 40,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          6224756,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0xfffffffc",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 40,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          4294967292,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0xfffffffc",
+        "return_instruction_set": "Thumb",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 40,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          4294967292,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x0",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 36,
+        "return": 2,
+        "api_events": [],
+        "startup_record": [
+          1,
+          0,
+          1397771600,
+          2
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x0",
+        "return_instruction_set": "Thumb",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 36,
+        "return": 2,
+        "api_events": [],
+        "startup_record": [
+          1,
+          0,
+          1397771600,
+          2
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 36,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          6224756,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "Thumb",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 36,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          6224756,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0xfffffffc",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 36,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          4294967292,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "unbound_application",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0xfffffffc",
+        "return_instruction_set": "Thumb",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 36,
+        "maximum_sp_displacement_bytes": 36,
+        "return": 1,
+        "api_events": [],
+        "startup_record": [
+          1,
+          4294967292,
+          1397771600,
+          1
+        ]
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "bounded_no_keys",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 208,
+        "maximum_sp_displacement_bytes": 208,
+        "return": 1,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 3,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "quit_first_poll",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 192,
+        "maximum_sp_displacement_bytes": 192,
+        "return": 1,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 524288,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "movement_then_quit",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 208,
+        "maximum_sp_displacement_bytes": 208,
+        "return": 1,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 8,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              158,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 2,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              158,
+              118,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 524288,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 2,
+          "x": 158,
+          "y": 118,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "bad_dimensions",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 188,
+        "maximum_sp_displacement_bytes": 192,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "keys_error",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 192,
+        "maximum_sp_displacement_bytes": 192,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "fill_error",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 208,
+        "maximum_sp_displacement_bytes": 208,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "paint_error",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 208,
+        "maximum_sp_displacement_bytes": 208,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "missing_keys",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 184,
+        "maximum_sp_displacement_bytes": 192,
+        "return": 2,
+        "api_events": [],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "zero_steps",
+      "result": {
+        "initial_sp_mod8": 0,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 160,
+        "maximum_sp_displacement_bytes": 168,
+        "return": 2,
+        "api_events": [],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "bounded_no_keys",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 204,
+        "maximum_sp_displacement_bytes": 204,
+        "return": 1,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 3,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "quit_first_poll",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 188,
+        "maximum_sp_displacement_bytes": 188,
+        "return": 1,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 524288,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "movement_then_quit",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 204,
+        "maximum_sp_displacement_bytes": 204,
+        "return": 1,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 8,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              158,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 2,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              158,
+              118,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "keys",
+            "keys": 524288,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 2,
+          "x": 158,
+          "y": 118,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "bad_dimensions",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 184,
+        "maximum_sp_displacement_bytes": 188,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "keys_error",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 188,
+        "maximum_sp_displacement_bytes": 188,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "fill_error",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 204,
+        "maximum_sp_displacement_bytes": 204,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "paint_error",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 204,
+        "maximum_sp_displacement_bytes": 204,
+        "return": 2,
+        "api_events": [
+          {
+            "name": "init_graph"
+          },
+          {
+            "name": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "name": "dimensions"
+          },
+          {
+            "name": "get_color"
+          },
+          {
+            "name": "keys",
+            "keys": 0,
+            "first_word_before": 0,
+            "first_word_after": 0
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "name": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "paint"
+          },
+          {
+            "name": "set_color",
+            "rgb": [
+              12,
+              129,
+              250
+            ]
+          }
+        ],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "missing_keys",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 180,
+        "maximum_sp_displacement_bytes": 188,
+        "return": 2,
+        "api_events": [],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "group": "compiled_probe_fixture",
+      "scenario": "zero_steps",
+      "result": {
+        "initial_sp_mod8": 4,
+        "raw_api_argument": "0x5efb74",
+        "return_instruction_set": "ARM",
+        "bss_zero_before_main": true,
+        "data_prefix_preserved": true,
+        "main_sp_aligned": true,
+        "sp_and_r4_r11_restored": true,
+        "bss_end_guard_preserved": true,
+        "stores_within_bss_or_inherited_stack": true,
+        "stack_bytes_touched": 156,
+        "maximum_sp_displacement_bytes": 164,
+        "return": 2,
+        "api_events": [],
+        "probe": {
+          "steps": 0,
+          "x": 152,
+          "y": 112,
+          "finished": true,
+          "active": false,
+          "final_color": [
+            12,
+            129,
+            250
+          ]
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Source-built analysis ELFs; not NGame or a deployable Flash image.",
+    "No original firmware or game bytes loaded; raw OEM API argument is opaque.",
+    "Typed callbacks are synthetic VM traps, not bindings to OEM slots.",
+    "No console, real framebuffer/input/audio/IRQ/cache/RTOS execution.",
+    "128 KiB image and 8 KiB touched-stack windows are VM policies, not observed free device RAM."
+  ]
+}

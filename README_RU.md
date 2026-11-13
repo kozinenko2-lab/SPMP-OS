@@ -7,6 +7,10 @@
 API и возврат. [Отчёт этапа 7](research/boot_reconstruction/STAGE7_REPORT_RU.md).
 Игра и её ресурсы остаются приватными; запускаемого пакета SPMP-OS пока нет.
 
+Добавлен [собственный startup SPMP-OS, этап 8](research/boot_reconstruction/STAGE8_REPORT_RU.md):
+linked ARM ELF, очистка BSS, сохранение/выравнивание стека и 30 ARM926 VM-прогонов.
+Привязка к живым OEM API и упаковка для запуска на консоли ещё не завершены.
+
 ## С чего начать
 
 1. Прочитайте `AGENTS.md` (правила безопасности для Codex) и `docs/STATUS_ROADMAP_RU.md`.
