@@ -1,0 +1,428 @@
+{
+  "source_hashes": {
+    "8000_MMI.RAP": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+    "Images_RedBoot_201000427.img": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108"
+  },
+  "redboot3_sha256": "1723e3cebdb012e46c014a7215c9cb58978c081b25ba58738687d64b116b1034",
+  "instruction_checks": [
+    {
+      "program": "redboot3",
+      "address": "0x45e68",
+      "source_offset": "0x17f70",
+      "word": "e3130010"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x45e7c",
+      "source_offset": "0x17f84",
+      "word": "e3130001"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x45eb0",
+      "source_offset": "0x17fb8",
+      "word": "e3130002"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x45ed0",
+      "source_offset": "0x17fd8",
+      "word": "e3130004"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x45ef0",
+      "source_offset": "0x17ff8",
+      "word": "e3130101"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x45f10",
+      "source_offset": "0x18018",
+      "word": "e3130080"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x45f2c",
+      "source_offset": "0x18034",
+      "word": "e3130202"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x33f0c",
+      "source_offset": "0x6014",
+      "word": "e1a001a0"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x33f10",
+      "source_offset": "0x6018",
+      "word": "e2000001"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x46b70",
+      "source_offset": "0x18c78",
+      "word": "e3540000"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x4681c",
+      "source_offset": "0x18924",
+      "word": "e2504000"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x40ab0",
+      "source_offset": "0x12bb8",
+      "word": "e3530001"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x40abc",
+      "source_offset": "0x12bc4",
+      "word": "e3530001"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x40ac8",
+      "source_offset": "0x12bd0",
+      "word": "e3530028"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x40ad4",
+      "source_offset": "0x12bdc",
+      "word": "e3530001"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x410bc",
+      "source_offset": "0x131c4",
+      "word": "e0832007"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x41464",
+      "source_offset": "0x1356c",
+      "word": "e3c334ff"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x4146c",
+      "source_offset": "0x13574",
+      "word": "e3100402"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x4147c",
+      "source_offset": "0x13584",
+      "word": "e061300c"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x41484",
+      "source_offset": "0x1358c",
+      "word": "e1a03303"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x41488",
+      "source_offset": "0x13590",
+      "word": "e1822423"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x4149c",
+      "source_offset": "0x135a4",
+      "word": "e0833002"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x46970",
+      "source_offset": "0x18a78",
+      "word": "e3a00000"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x469c8",
+      "source_offset": "0x18ad0",
+      "word": "e3a00001"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x46acc",
+      "source_offset": "0x18bd4",
+      "word": "e3a00002"
+    },
+    {
+      "program": "redboot3",
+      "address": "0x46d20",
+      "source_offset": "0x18e28",
+      "word": "e3a00003"
+    },
+    {
+      "program": "mmi",
+      "address": "0x447564",
+      "source_offset": "0x1c75b0",
+      "word": "e3a01001"
+    },
+    {
+      "program": "mmi",
+      "address": "0x447568",
+      "source_offset": "0x1c75b4",
+      "word": "e3a02003"
+    },
+    {
+      "program": "mmi",
+      "address": "0x2d2d2c",
+      "source_offset": "0x52d78",
+      "word": "e3a01001"
+    },
+    {
+      "program": "mmi",
+      "address": "0x2d2d58",
+      "source_offset": "0x52da4",
+      "word": "e3a01001"
+    },
+    {
+      "program": "mmi",
+      "address": "0x2d2d84",
+      "source_offset": "0x52dd0",
+      "word": "e3a01001"
+    },
+    {
+      "program": "mmi",
+      "address": "0x44750c",
+      "source_offset": "0x1c7558",
+      "word": "e2844001"
+    },
+    {
+      "program": "mmi",
+      "address": "0x4474e8",
+      "source_offset": "0x1c7534",
+      "word": "e3a0500a"
+    },
+    {
+      "program": "mmi",
+      "address": "0x44751c",
+      "source_offset": "0x1c7568",
+      "word": "e1540005"
+    },
+    {
+      "program": "mmi",
+      "address": "0x33ceb4",
+      "source_offset": "0xbcf00",
+      "word": "e3140002"
+    },
+    {
+      "program": "mmi",
+      "address": "0x33ceec",
+      "source_offset": "0xbcf38",
+      "word": "e3140001"
+    },
+    {
+      "program": "mmi",
+      "address": "0x33cef0",
+      "source_offset": "0xbcf3c",
+      "word": "13a03000"
+    },
+    {
+      "program": "mmi",
+      "address": "0x33cef4",
+      "source_offset": "0xbcf40",
+      "word": "15863000"
+    }
+  ],
+  "relocation_dispatch": [
+    {
+      "type": 1,
+      "target": "0x4145c",
+      "supported": true
+    },
+    {
+      "type": 2,
+      "target": "0x41498",
+      "supported": true
+    },
+    {
+      "type": 3,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 4,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 5,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 6,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 7,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 8,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 9,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 10,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 11,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 12,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 13,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 14,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 15,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 16,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 17,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 18,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 19,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 20,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 21,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 22,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 23,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 24,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 25,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 26,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 27,
+      "target": "0x414ac",
+      "supported": false
+    },
+    {
+      "type": 28,
+      "target": "0x4145c",
+      "supported": true
+    },
+    {
+      "type": 29,
+      "target": "0x4145c",
+      "supported": true
+    }
+  ],
+  "initial_module_import_symbols": [
+    {
+      "name": "diag_printf",
+      "address": "0x4563c",
+      "table_entry": "0x17990"
+    },
+    {
+      "name": "GetCxRefClockFreq",
+      "address": "0x33bf0",
+      "table_entry": "0x17998"
+    },
+    {
+      "name": "__udivsi3",
+      "address": "0x4bc08",
+      "table_entry": "0x179a0"
+    },
+    {
+      "name": "cyg_thread_delay",
+      "address": "0x34850",
+      "table_entry": "0x179a8"
+    },
+    {
+      "name": "setLcmSWRotationType",
+      "address": "0x3484c",
+      "table_entry": "0x179b0"
+    }
+  ],
+  "mmi_completion_event": {
+    "address": "0x68e4c8",
+    "mask": 1,
+    "wait_mode": 3,
+    "producer": "0x2d2c28",
+    "set_on_two_error_returns": true,
+    "set_on_normal_return": true
+  },
+  "mode_bits": {
+    "clear_all_on_match": 1,
+    "or_instead_of_and": 2
+  },
+  "limits": [
+    "Exact supplied builds only; no runtime trace.",
+    "Symbol table is the initial mapped table, not proof of later runtime contents.",
+    "C reconstructions are host models, not target-callable firmware."
+  ]
+}

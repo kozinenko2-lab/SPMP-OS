@@ -1,0 +1,6 @@
+00033ad0 ldr r3,[0x33ae0]
+00033ad4 ldr r0,[r3,#0xc]
+00033ad8 mov r0,r0, lsr #0x1f
+00033adc bx lr
+REFERENCES TO ENTRY:
+00045e4c UNCONDITIONAL_CALL

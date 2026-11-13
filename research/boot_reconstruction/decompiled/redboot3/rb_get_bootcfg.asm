@@ -1,0 +1,8 @@
+00033a84 str lr,[sp,#-0x4]!
+00033a88 ldr r1,[0x33a9c]
+00033a8c mov r2,#0x138
+00033a90 bl 0x000458f0
+00033a94 mov r0,#0x1
+00033a98 ldr pc,[sp],#0x4
+REFERENCES TO ENTRY:
+00046950 DATA

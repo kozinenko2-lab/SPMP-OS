@@ -1,0 +1,316 @@
+{
+  "programs": [
+    {
+      "id": "redboot3",
+      "variant": 3,
+      "gzf_name": "ghidra_analysis_ONLY v3.elf.gzf",
+      "gzf_sha256": "771630d4f5bcb06637ebaab186f1c2dc062f721a06092e0e544170679ca8cf97",
+      "raw_sha256": "1723e3cebdb012e46c014a7215c9cb58978c081b25ba58738687d64b116b1034",
+      "targets": [
+        {
+          "address": "00046904",
+          "first_word": "e92d40f0",
+          "label": "rb_main"
+        },
+        {
+          "address": "00045d78",
+          "first_word": "e92d4010",
+          "label": "rb_apply_bootcfg"
+        },
+        {
+          "address": "00033a84",
+          "first_word": "e52de004",
+          "label": "rb_get_bootcfg"
+        },
+        {
+          "address": "00033ef4",
+          "first_word": "e92d4010",
+          "label": "rb_customization_requested"
+        },
+        {
+          "address": "00033ad0",
+          "first_word": "e59f3008",
+          "label": "rb_isp_status_bit"
+        },
+        {
+          "address": "000369fc",
+          "first_word": "e52de004",
+          "label": "rb_mount_romfs"
+        },
+        {
+          "address": "00036a3c",
+          "first_word": "e92d4010",
+          "label": "rb_load_customize"
+        },
+        {
+          "address": "00036844",
+          "first_word": "e52de004",
+          "label": "rb_call_customize"
+        },
+        {
+          "address": "00036ab4",
+          "first_word": "e92d45f0",
+          "label": "rb_fast_load"
+        },
+        {
+          "address": "00036bf4",
+          "first_word": "e92d4070",
+          "label": "rb_buffered_load"
+        },
+        {
+          "address": "0003e734",
+          "first_word": "e92d47f0",
+          "label": "rb_mmp_parse"
+        },
+        {
+          "address": "0003e48c",
+          "first_word": "e92d40f0",
+          "label": "rb_mmpi_checksum"
+        },
+        {
+          "address": "0003e3f0",
+          "first_word": "e92d41f0",
+          "label": "rb_mmp_copy_segments"
+        },
+        {
+          "address": "000467f4",
+          "first_word": "e92d4030",
+          "label": "rb_bootkernel"
+        },
+        {
+          "address": "00046220",
+          "first_word": "e92d41f0",
+          "label": "rb_go"
+        },
+        {
+          "address": "00040a14",
+          "first_word": "e92d4ff0",
+          "label": "rb_module_open_candidate"
+        },
+        {
+          "address": "000407c0",
+          "first_word": "e92d45f0",
+          "label": "rb_module_find_symbol"
+        },
+        {
+          "address": "00041054",
+          "first_word": "e92d4ff0",
+          "label": "rb_module_relocation_section"
+        },
+        {
+          "address": "000413d0",
+          "first_word": "e52de004",
+          "label": "rb_module_relocate_word"
+        },
+        {
+          "address": "00040f9c",
+          "first_word": "e92d4030",
+          "label": "rb_module_resolve_symbol"
+        },
+        {
+          "address": "00040f08",
+          "first_word": "e92d40f0",
+          "label": "rb_module_resolve_external"
+        }
+      ]
+    },
+    {
+      "id": "redboot1",
+      "variant": 1,
+      "gzf_name": "ghidra_analysis_ONLY v1.elf.gzf",
+      "gzf_sha256": "2df35c35d07f569d04c67ae5b97e1ec8581a7fbbd160bb6b625a1dc74442c02c",
+      "raw_sha256": "eb989ab73900835fdfaf8d9f8ebb43b0d510a9548332bfc0d4fc6548728e3f9d",
+      "targets": [
+        {
+          "address": "0004a994",
+          "first_word": "e1a0c00d",
+          "label": "rb_bootkernel"
+        },
+        {
+          "address": "00038f0c",
+          "first_word": "e1a0c00d",
+          "label": "rb_buffered_load"
+        },
+        {
+          "address": "000427a8",
+          "first_word": "e1a0c00d",
+          "label": "rb_mmp_parse"
+        },
+        {
+          "address": "0004b304",
+          "first_word": "e1a0c00d",
+          "label": "rb_go"
+        }
+      ]
+    },
+    {
+      "id": "mmi",
+      "variant": 0,
+      "gzf_name": "ghidra_analysis_ONLY.elf.gzf",
+      "gzf_sha256": "5e05914d9afa899f4211f2317c1abd0b2963683ce3b42a8f2b7d0eed5732f40c",
+      "raw_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+      "targets": [
+        {
+          "address": "00280040",
+          "first_word": "ee110f10",
+          "label": "mmi_reset"
+        },
+        {
+          "address": "00297ce8",
+          "first_word": "e1a0c00d",
+          "label": "mmi_bootstrap"
+        },
+        {
+          "address": "002807c8",
+          "first_word": "e1a0c00d",
+          "label": "mmi_create_gui"
+        },
+        {
+          "address": "00339aac",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_create_wrapper"
+        },
+        {
+          "address": "0033a2dc",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_create_core"
+        },
+        {
+          "address": "0033c0fc",
+          "first_word": "e1a0c00d",
+          "label": "ecos_scheduler_start"
+        },
+        {
+          "address": "003be5b0",
+          "first_word": "e1a0c00d",
+          "label": "mmi_demo_gui"
+        },
+        {
+          "address": "00447640",
+          "first_word": "e1a0c00d",
+          "label": "mmi_system_coordinator"
+        },
+        {
+          "address": "004475c0",
+          "first_word": "e1a0c00d",
+          "label": "mmi_create_system_init"
+        },
+        {
+          "address": "00447540",
+          "first_word": "e1a0c00d",
+          "label": "mmi_system_init"
+        },
+        {
+          "address": "00447458",
+          "first_word": "e1a0c00d",
+          "label": "mmi_create_background"
+        },
+        {
+          "address": "004473bc",
+          "first_word": "e1a0c00d",
+          "label": "mmi_background"
+        },
+        {
+          "address": "00299df8",
+          "first_word": "e1a0c00d",
+          "label": "mmi_hal_stage_299df8"
+        },
+        {
+          "address": "00297798",
+          "first_word": "e1a0c00d",
+          "label": "mmi_hal_stage_297798"
+        },
+        {
+          "address": "004474d8",
+          "first_word": "e1a0c00d",
+          "label": "mmi_system_init_retry"
+        },
+        {
+          "address": "00339b04",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_exit_wrapper"
+        },
+        {
+          "address": "00339b6c",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_resume_wrapper"
+        },
+        {
+          "address": "00339be8",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_delay_wrapper"
+        },
+        {
+          "address": "00339f10",
+          "first_word": "e1a0c00d",
+          "label": "ecos_flag_init"
+        },
+        {
+          "address": "00339f3c",
+          "first_word": "e1a0c00d",
+          "label": "ecos_flag_setbits"
+        },
+        {
+          "address": "00339f64",
+          "first_word": "e1a0c00d",
+          "label": "ecos_flag_wait"
+        },
+        {
+          "address": "0033c9ec",
+          "first_word": "e1a0c00d",
+          "label": "ecos_flag_wait_core"
+        },
+        {
+          "address": "0033c854",
+          "first_word": "e1a0c00d",
+          "label": "ecos_flag_setbits_core"
+        },
+        {
+          "address": "0033aa40",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_exit_core"
+        },
+        {
+          "address": "0033a7d0",
+          "first_word": "e1a0c00d",
+          "label": "ecos_thread_resume_core"
+        },
+        {
+          "address": "002886f0",
+          "first_word": "e1a0c00d",
+          "label": "mmi_subsystem_init"
+        },
+        {
+          "address": "002d2c28",
+          "first_word": "e1a0c00d",
+          "label": "mmi_completion_producer"
+        },
+        {
+          "address": "003be6a0",
+          "first_word": "e1a0c00d",
+          "label": "mmi_gui_phase2"
+        },
+        {
+          "address": "003be6c0",
+          "first_word": "e1a0c00d",
+          "label": "mmi_gui_dispatch"
+        },
+        {
+          "address": "003be70c",
+          "first_word": "e1a0c00d",
+          "label": "mmi_gui_init_impl"
+        },
+        {
+          "address": "003be9e4",
+          "first_word": "e1a0c00d",
+          "label": "mmi_gui_run_impl"
+        },
+        {
+          "address": "0033ce74",
+          "first_word": "e1a0c00d",
+          "label": "ecos_flag_poll_core"
+        }
+      ]
+    }
+  ]
+}

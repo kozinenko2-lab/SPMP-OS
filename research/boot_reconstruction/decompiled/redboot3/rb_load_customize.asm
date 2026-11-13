@@ -1,0 +1,26 @@
+00036a3c stmdb sp!,{r4,lr}
+00036a40 ldr r0,[0x36a9c]
+00036a44 bl 0x0004563c
+00036a48 ldr r0,[0x36aa0]
+00036a4c mov r1,#0x0
+00036a50 bl 0x00040a14
+00036a54 subs r4,r0,#0x0
+00036a58 bne 0x00036a6c
+00036a5c ldr r0,[0x36aa4]
+00036a60 bl 0x0004563c
+00036a64 cpy r0,r4
+00036a68 ldmia sp!,{r4,pc}
+00036a6c cpy r0,r4
+00036a70 ldr r1,[0x36aa8]
+00036a74 bl 0x000407c0
+00036a78 ldr r3,[0x36aac]
+00036a7c str r0,[r3,#0x0]
+00036a80 cmp r0,#0x0
+00036a84 movne r0,#0x1
+00036a88 ldmiane sp!,{r4,pc}
+00036a8c ldr r0,[0x36ab0]
+00036a90 bl 0x0004563c
+00036a94 mov r0,#0x1
+00036a98 ldmia sp!,{r4,pc}
+REFERENCES TO ENTRY:
+0004696c UNCONDITIONAL_CALL

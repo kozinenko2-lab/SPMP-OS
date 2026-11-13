@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ghidra_analysis_ONLY v3.elf.gzf",
+    "sha256": "771630d4f5bcb06637ebaab186f1c2dc062f721a06092e0e544170679ca8cf97",
+    "unchanged": true
+  },
+  {
+    "name": "ghidra_analysis_ONLY v1.elf.gzf",
+    "sha256": "2df35c35d07f569d04c67ae5b97e1ec8581a7fbbd160bb6b625a1dc74442c02c",
+    "unchanged": true
+  },
+  {
+    "name": "ghidra_analysis_ONLY.elf.gzf",
+    "sha256": "5e05914d9afa899f4211f2317c1abd0b2963683ce3b42a8f2b7d0eed5732f40c",
+    "unchanged": true
+  }
+]

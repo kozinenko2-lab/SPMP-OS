@@ -1,0 +1,25 @@
+002807c8 cpy r12,sp
+002807cc stmdb sp!,{r4,r11,r12,lr,pc}
+002807d0 sub r11,r12,#0x4
+002807d4 sub sp,sp,#0x10
+002807d8 ldr r0,[0x280824]
+002807dc bl 0x003be5a0
+002807e0 ldr r3,[0x280828]
+002807e4 str r3,[sp,#0x0]
+002807e8 mov r3,#0x4000
+002807ec str r3,[sp,#0x4]
+002807f0 ldr r4,[0x28082c]
+002807f4 str r4,[sp,#0x8]
+002807f8 ldr r3,[0x280830]
+002807fc str r3,[sp,#0xc]
+00280800 mov r0,#0x19
+00280804 ldr r1,[0x280834]
+00280808 mov r2,#0x0
+0028080c ldr r3,[0x280838]
+00280810 bl 0x00339aac
+00280814 ldr r0,[r4,#0x0]
+00280818 bl 0x00339b6c
+0028081c sub sp,r11,#0x10
+00280820 ldmia sp,{r4,r11,sp,pc}
+REFERENCES TO ENTRY:
+00297cfc UNCONDITIONAL_CALL

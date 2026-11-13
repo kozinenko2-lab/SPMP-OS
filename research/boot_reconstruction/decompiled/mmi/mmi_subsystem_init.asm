@@ -1,0 +1,116 @@
+002886f0 cpy r12,sp
+002886f4 stmdb sp!,{r4,r5,r6,r11,r12,lr,pc}
+002886f8 sub r11,r12,#0x4
+002886fc ldr r0,[0x288898]
+00288700 bl 0x00298b64
+00288704 ldr r3,[0x28889c]
+00288708 ldr r1,[r3,#0x0]
+0028870c cmp r1,#0x0
+00288710 beq 0x00288724
+00288714 ldr r0,[0x2888a0]
+00288718 bl 0x00298b64
+0028871c mov r0,#0x1
+00288720 ldmia sp,{r4,r5,r6,r11,sp,pc}
+00288724 ldr r2,[0x2888a4]
+00288728 ldr r3,[r2,#0x0]
+0028872c cmp r3,#0x0
+00288730 addeq r3,r3,#0x1
+00288734 streq r3,[r2,#0x0]
+00288738 bleq 0x00288674
+0028873c mov r0,#0x2
+00288740 ldr r1,[0x2888a8]
+00288744 bl 0x002831e4
+00288748 cmp r0,#0x0
+0028874c mvnne r0,#0x0
+00288750 ldmiane sp,{r4,r5,r6,r11,sp,pc}
+00288754 mov r0,#0x2
+00288758 ldr r1,[0x2888ac]
+0028875c bl 0x002831f8
+00288760 cmp r0,#0x0
+00288764 mvnne r0,#0x0
+00288768 ldmiane sp,{r4,r5,r6,r11,sp,pc}
+0028876c mov r0,#0x2
+00288770 ldr r1,[0x2888b0]
+00288774 bl 0x002b84b0
+00288778 mov r0,#0x2
+0028877c ldr r1,[0x2888b4]
+00288780 bl 0x002b84e8
+00288784 ldr r0,[0x2888b8]
+00288788 bl 0x00298b64
+0028878c ldr r0,[0x2888bc]
+00288790 bl 0x002ccd28
+00288794 ldr r3,[0x2888c0]
+00288798 str r0,[r3,#0x0]
+0028879c cmp r0,#0x0
+002887a0 subeq r0,r0,#0x1
+002887a4 ldmiaeq sp,{r4,r5,r6,r11,sp,pc}
+002887a8 ldr r6,[0x2888c4]
+002887ac ldr r3,[0x2888bc]
+002887b0 ldrh r0,[r3,#0x0]
+002887b4 strh r0,[r6,#0x0]
+002887b8 ldrh r2,[r3,#0x2]
+002887bc strh r2,[r6,#0x2]
+002887c0 ldrh r3,[r3,#0x4]
+002887c4 strh r3,[r6,#0x4]
+002887c8 mov r3,r3, lsr #0x9
+002887cc strh r3,[r6,#0x6]
+002887d0 ldr r4,[0x2888c8]
+002887d4 ldr r3,[r4,#0x0]
+002887d8 cmp r3,#0x0
+002887dc bne 0x00288890
+002887e0 ldr r3,[0x2888cc]
+002887e4 ldrh r0,[r6,#0x2]
+002887e8 strh r0,[r3,#0x2]
+002887ec ldrh r2,[r6,#0x4]
+002887f0 strh r2,[r3,#0x4]
+002887f4 ldrh r1,[r6,#0x6]
+002887f8 strh r1,[r3,#0x6]
+002887fc ldrh r0,[r6,#0x0]
+00288800 strh r0,[r3,#0x0]
+00288804 ldr r0,[0x2888d0]
+00288808 bl 0x00298b64
+0028880c ldrh r0,[r6,#0x4]
+00288810 add r0,r0,#0x40
+00288814 bl 0x00299588
+00288818 str r0,[r4,#0x0]
+0028881c ldr r5,[0x2888d4]
+00288820 add r0,r0,#0x3f
+00288824 bic r0,r0,#0x3f
+00288828 str r0,[r5,#0x0]
+0028882c ldrh r0,[r6,#0x4]
+00288830 add r0,r0,#0x40
+00288834 bl 0x00299588
+00288838 ldr r3,[0x2888d8]
+0028883c str r0,[r3,#0x0]
+00288840 ldr r4,[0x2888dc]
+00288844 add r0,r0,#0x3f
+00288848 bic r0,r0,#0x3f
+0028884c str r0,[r4,#0x0]
+00288850 ldrh r0,[r6,#0x4]
+00288854 add r0,r0,#0x40
+00288858 bl 0x00299588
+0028885c ldr r3,[0x2888e0]
+00288860 str r0,[r3,#0x0]
+00288864 add r0,r0,#0x3f
+00288868 bic r0,r0,#0x3f
+0028886c ldr r3,[0x2888e4]
+00288870 str r0,[r3,#0x0]
+00288874 ldr r2,[r4,#0x0]
+00288878 ldr r3,[0x2888e8]
+0028887c str r2,[r3,#0x0]
+00288880 ldr r3,[r5,#0x0]
+00288884 orr r3,r3,#0x10000000
+00288888 ldr r2,[0x2888ec]
+0028888c str r3,[r2,#0x0]
+00288890 mov r0,#0x1
+00288894 ldmia sp,{r4,r5,r6,r11,sp,pc}
+REFERENCES TO ENTRY:
+00282f88 UNCONDITIONAL_CALL
+00323ec0 UNCONDITIONAL_CALL
+00323fb0 UNCONDITIONAL_CALL
+003240a0 UNCONDITIONAL_CALL
+00323f38 UNCONDITIONAL_CALL
+00324028 UNCONDITIONAL_CALL
+00324120 UNCONDITIONAL_CALL
+0044755c UNCONDITIONAL_CALL
+00288b58 PARAM

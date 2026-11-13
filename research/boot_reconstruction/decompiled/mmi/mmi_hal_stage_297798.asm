@@ -1,0 +1,8 @@
+00297798 cpy r12,sp
+0029779c stmdb sp!,{r11,r12,lr,pc}
+002977a0 sub r11,r12,#0x4
+002977a4 ldr r0,[0x2977b0]
+002977a8 bl 0x0033da6c
+002977ac ldmia sp,{r11,sp,pc}
+REFERENCES TO ENTRY:
+00299ca0 UNCONDITIONAL_CALL

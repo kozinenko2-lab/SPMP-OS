@@ -1,0 +1,49 @@
+00040f9c stmdb sp!,{r4,r5,lr}
+00040fa0 cpy r4,r0
+00040fa4 cpy r5,r1
+00040fa8 ldr r1,[r0,#0x24]
+00040fac bl 0x000409e4
+00040fb0 mov r3,r5, lsl #0x4
+00040fb4 add r3,r3,r0
+00040fb8 ldrb r1,[r3,#0xc]
+00040fbc and r2,r1,#0xf
+00040fc0 cmp r2,#0x2
+00040fc4 ble 0x00040fd4
+00040fc8 cmp r2,#0x3
+00040fcc bne 0x0004104c
+00040fd0 b 0x0004103c
+00040fd4 mov r2,r1, lsr #0x4
+00040fd8 cmp r2,#0x1
+00040fdc bls 0x00040fec
+00040fe0 cmp r2,#0x2
+00040fe4 bne 0x0004104c
+00040fe8 b 0x00041018
+00040fec ldrh r3,[r3,#0xe]
+00040ff0 cmp r3,#0x0
+00040ff4 bne 0x00041008
+00040ff8 cpy r0,r4
+00040ffc cpy r1,r5
+00041000 bl 0x00040f08
+00041004 ldmia sp!,{r4,r5,pc}
+00041008 cpy r0,r4
+0004100c cpy r1,r5
+00041010 bl 0x00040ed4
+00041014 ldmia sp!,{r4,r5,pc}
+00041018 cpy r0,r4
+0004101c cpy r1,r5
+00041020 bl 0x00040f08
+00041024 cmp r0,#0x0
+00041028 ldmiane sp!,{r4,r5,pc}
+0004102c cpy r0,r4
+00041030 cpy r1,r5
+00041034 bl 0x00040ed4
+00041038 ldmia sp!,{r4,r5,pc}
+0004103c cpy r0,r4
+00041040 ldrh r1,[r3,#0xe]
+00041044 bl 0x000409e4
+00041048 ldmia sp!,{r4,r5,pc}
+0004104c mov r0,#0x0
+00041050 ldmia sp!,{r4,r5,pc}
+REFERENCES TO ENTRY:
+0004082c UNCONDITIONAL_CALL
+000410d0 UNCONDITIONAL_CALL

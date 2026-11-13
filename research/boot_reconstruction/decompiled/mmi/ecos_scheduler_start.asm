@@ -1,0 +1,21 @@
+0033c0fc cpy r12,sp
+0033c100 stmdb sp!,{r11,r12,lr,pc}
+0033c104 sub r11,r12,#0x4
+0033c108 bl 0x0033c10c
+0033c10c cpy r12,sp
+0033c110 stmdb sp!,{r11,r12,lr,pc}
+0033c114 sub r11,r12,#0x4
+0033c118 ldr r0,[0x33c148]
+0033c11c bl 0x0033b8b4
+0033c120 subs r4,r0,#0x0
+0033c124 ldreq r0,[0x33c14c]
+0033c128 bleq 0x002815bc
+0033c12c mov r3,#0x0
+0033c130 ldr r2,[0x33c150]
+0033c134 str r3,[r2,#0x0]
+0033c138 ldr r3,[0x33c154]
+0033c13c str r4,[r3,#0x0]
+0033c140 add r0,r4,#0xc
+0033c144 bl 0x004ae52c
+REFERENCES TO ENTRY:
+00297d00 UNCONDITIONAL_CALL

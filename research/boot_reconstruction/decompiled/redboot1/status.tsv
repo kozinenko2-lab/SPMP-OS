@@ -1,0 +1,5 @@
+address	label	status
+0004a994	rb_bootkernel	OK
+00038f0c	rb_buffered_load	OK
+000427a8	rb_mmp_parse	OK
+0004b304	rb_go	OK

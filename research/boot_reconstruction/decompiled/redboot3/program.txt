@@ -1,0 +1,14 @@
+program=ghidra_analysis_ONLY v3.elf
+language=ARM:LE:32:v8
+compiler=default
+functions=602
+block=.spmp_seg_0,00000000,0000015f,execute=false
+block=.spmp_seg_1,000174f0,000193df,execute=false
+block=.spmp_seg_2,00030000,00055fcf,execute=true
+block=.spmp_seg_3,00060000,000643ff,execute=false
+block=.shstrtab,.shstrtab::00000000,.shstrtab::0000004a,execute=false
+block=.strtab,.strtab::00000000,.strtab::00000054,execute=false
+block=.symtab,.symtab::00000000,.symtab::0000003f,execute=false
+block=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false
+block=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000007f,execute=false
+block=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::0000013f,execute=false

@@ -1,0 +1,14 @@
+000369fc str lr,[sp,#-0x4]!
+00036a00 ldr r0,[0x36a2c]
+00036a04 ldr r1,[0x36a30]
+00036a08 ldr r2,[0x36a34]
+00036a0c bl 0x00030704
+00036a10 cmp r0,#0x0
+00036a14 movge r0,#0x1
+00036a18 ldrge pc,[sp],#0x4
+00036a1c ldr r0,[0x36a38]
+00036a20 bl 0x0004563c
+00036a24 mov r0,#0x0
+00036a28 ldr pc,[sp],#0x4
+REFERENCES TO ENTRY:
+0004695c UNCONDITIONAL_CALL

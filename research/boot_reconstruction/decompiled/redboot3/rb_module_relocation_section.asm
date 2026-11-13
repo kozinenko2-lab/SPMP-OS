@@ -1,0 +1,52 @@
+00041054 stmdb sp!,{r4,r5,r6,r7,r8,r9,r10,r11,lr}
+00041058 cpy r8,r0
+0004105c cpy r11,r1
+00041060 bl 0x00040950
+00041064 cpy r7,r0
+00041068 ldr r3,[r8,#0x2c]
+0004106c str r0,[r3,r11,lsl #0x2]
+00041070 mov r4,r11, lsl #0x3
+00041074 mov r3,r11, lsl #0x5
+00041078 add r4,r4,r3
+0004107c ldr r3,[r8,#0x20]
+00041080 add r3,r3,r4
+00041084 cpy r0,r8
+00041088 ldr r1,[r3,#0x1c]
+0004108c bl 0x000409e4
+00041090 cpy r9,r0
+00041094 ldr r3,[r8,#0x20]
+00041098 add r4,r4,r3
+0004109c ldr r0,[r4,#0x14]
+000410a0 ldr r1,[r4,#0x24]
+000410a4 bl 0x0004bc08
+000410a8 subs r10,r0,#0x0
+000410ac beq 0x00041100
+000410b0 mov r6,#0x0
+000410b4 cpy r3,r6
+000410b8 mov r3,r3, lsl #0x3
+000410bc add r2,r3,r7
+000410c0 ldr r5,[r3,r7]
+000410c4 ldr r4,[r2,#0x4]
+000410c8 cpy r0,r8
+000410cc mov r1,r4, lsr #0x8
+000410d0 bl 0x00040f9c
+000410d4 subs r2,r0,#0x0
+000410d8 beq 0x00041114
+000410dc and r0,r4,#0xff
+000410e0 add r1,r9,r5
+000410e4 bl 0x000413d0
+000410e8 cmp r0,#0x0
+000410ec bne 0x00041114
+000410f0 add r6,r6,#0x1
+000410f4 cpy r3,r6
+000410f8 cmp r6,r10
+000410fc bne 0x000410b8
+00041100 cpy r0,r8
+00041104 cpy r1,r11
+00041108 bl 0x00040868
+0004110c mov r0,#0x0
+00041110 ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,r11,pc}
+00041114 mvn r0,#0x0
+00041118 ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,r11,pc}
+REFERENCES TO ENTRY:
+00040e28 UNCONDITIONAL_CALL
