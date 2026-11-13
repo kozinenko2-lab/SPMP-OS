@@ -1,3 +1,24 @@
+# Проверки этапа 9
+
+- Exact-SHA RAP extraction: 85 slots + девять prefix CRC32, generated headers
+  consistent; оригинал до/после прогона неизменён — PASS.
+- Собственный NGame: structural check + decode round-trip; actual RAP loader
+  побайтно восстанавливает payload локального пакета — PASS.
+- 116 public ARM926 scenarios: native binder/probe, каждый slot/prefix mismatch,
+  memory/stack/framebuffer gates, BSS/return/ABI — PASS.
+- 6 private RAP scenarios: file/header/memcpy/cipher/footer/API-init/entry и
+  normal return/negative cleanup. Bad magic/footer entry не достигают — PASS.
+- 69 Python: без private inputs 64 PASS/5 SKIP; с RAP/game/native ELF 69 PASS.
+  Три C-модели, host probe/adapter проходят. Startup VM/link checks сохранены.
+
+Runtime CRC32/table checks не являются полной SHA-проверкой прошивки в RAM.
+Cache/CP15, file/audio/thread/command/message и все девять graphics/input API
+backends в private chain подменены. Аппаратный frontend, LCD/GPU/IRQ/cache и
+RTOS liveness не подтверждены. Это RAM NGame, не Flash/NAND image.
+[Полный отчёт](../research/boot_reconstruction/STAGE9_REPORT_RU.md).
+
+---
+
 # Проверки этапа 8
 
 - Clang/LLD 19.1.7: два source-built ARMv5TE little-endian EABI5 soft-float ELF,

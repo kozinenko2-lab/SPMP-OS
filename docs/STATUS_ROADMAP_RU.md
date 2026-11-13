@@ -1,3 +1,22 @@
+# Этап 9: native binding и собственный NGame
+
+Собран RAM NGame diagnostic probe: один кадр и обычный возврат. До BSS startup
+проверяет 85 slots, девять code-prefix CRC32, allocation/capacity/kind, stack
+owner/SP и два framebuffer. Офлайн профиль извлекается только из точного RAP SHA.
+Runtime checks — совместимость выбранных интерфейсов, не полный RAM-image SHA.
+
+116 public synthetic ARM926 scenarios и 6 actual-RAP loader/entry/return cases
+прошли. Оригинальный RAP принимает собственный container/decode/footer;
+cache/file/audio/OS/graphics/input backends подменены. Аппаратного запуска нет.
+
+[Отчёт этапа 9](../research/boot_reconstruction/STAGE9_REPORT_RU.md).
+CI собирает BIN/ELF/maps/manifest в artifact `native-probe-ngame-vm-tested`.
+Это диагностическое RAM-приложение, не готовая оболочка или Flash-прошивка.
+Далее — frontend metadata/LCM, runtime и LCD/cache/IRQ/cleanup на плате, затем
+перенос UI SPMP-OS. Экспорты OEM/API прежние: 284/28.
+
+---
+
 # Этап 8: собственный startup и linked ARM ELF
 
 Новый startup сохраняет r4–r11/LR и исходный SP, выравнивает унаследованный

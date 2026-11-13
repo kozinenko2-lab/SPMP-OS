@@ -1,0 +1,296 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "execution": "Actual RAP ARM926 BIN loader through own source-built NGame, binder/probe, normal return",
+  "case_count": 6,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "ed92025e68a40b911e010b1c1b848d89b8e59f0dfe91bc7b7f3099c1bde44bc8",
+    "container_sha256": "b64181b362fa6a697b6375a0128df1e4be546f9a96f1088fd12ed2e1e76acf18",
+    "payload_sha256": "3ee11de24afa9f82b040fbea4fc20eb7425563112aa1c741fc1f4729173d33d6",
+    "container_bytes": 3656,
+    "payload_bytes": 3528,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa00e04",
+    "bss_bytes": 52,
+    "structural_check": {
+      "payload_bytes": 3528,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "one_frame",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 1,
+        "main_called": true,
+        "api_calls": 16,
+        "bss_untouched_on_rejection": false,
+        "bss_guard_preserved": true,
+        "events": [
+          {
+            "api": "init_graph"
+          },
+          {
+            "api": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "api": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "api": "dimensions"
+          },
+          {
+            "api": "get_color"
+          },
+          {
+            "api": "keys",
+            "keys": 0
+          },
+          {
+            "api": "set_color",
+            "rgb": [
+              255,
+              0,
+              0
+            ]
+          },
+          {
+            "api": "fill",
+            "rect": [
+              0,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "api": "set_color",
+            "rgb": [
+              0,
+              255,
+              0
+            ]
+          },
+          {
+            "api": "fill",
+            "rect": [
+              106,
+              0,
+              106,
+              240
+            ]
+          },
+          {
+            "api": "set_color",
+            "rgb": [
+              0,
+              0,
+              255
+            ]
+          },
+          {
+            "api": "fill",
+            "rect": [
+              212,
+              0,
+              108,
+              240
+            ]
+          },
+          {
+            "api": "set_color",
+            "rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "api": "fill",
+            "rect": [
+              152,
+              112,
+              16,
+              16
+            ]
+          },
+          {
+            "api": "paint"
+          },
+          {
+            "api": "set_color",
+            "rgb": [
+              8,
+              128,
+              248
+            ]
+          }
+        ]
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "quit_first",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 1,
+        "main_called": true,
+        "api_calls": 7,
+        "bss_untouched_on_rejection": false,
+        "bss_guard_preserved": true,
+        "events": [
+          {
+            "api": "init_graph"
+          },
+          {
+            "api": "origin",
+            "xy": [
+              0,
+              0
+            ]
+          },
+          {
+            "api": "double_buffer",
+            "enabled": 1
+          },
+          {
+            "api": "dimensions"
+          },
+          {
+            "api": "get_color"
+          },
+          {
+            "api": "keys",
+            "keys": 524288
+          },
+          {
+            "api": "set_color",
+            "rgb": [
+              8,
+              128,
+              248
+            ]
+          }
+        ]
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "slot_corruption",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 2306,
+        "main_called": false,
+        "api_calls": 0,
+        "bss_untouched_on_rejection": true,
+        "bss_guard_preserved": true,
+        "events": []
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "code_corruption",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 2307,
+        "main_called": false,
+        "api_calls": 0,
+        "bss_untouched_on_rejection": true,
+        "bss_guard_preserved": true,
+        "events": []
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "bad_magic",
+      "mmi_wrapper_return": 4294967294,
+      "entry_reached": false,
+      "application": null,
+      "commands": [],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "bad_footer",
+      "mmi_wrapper_return": 4294967294,
+      "entry_reached": false,
+      "application": null,
+      "commands": [],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    }
+  ],
+  "original_code_executed": [
+    "game-pool constructor/allocator/info",
+    "native_bin_loader 0x460800",
+    "native_read_file 0x45ffcc with mocked file backends",
+    "header parser, all memcpy, cipher and footer compare",
+    "native API initializer 0x2d32b0",
+    "negative-mode native_exit_control 0x4619ac"
+  ],
+  "mocked": [
+    "cache/CP15",
+    "virtual file open/stat/read/close",
+    "general heap decoder scratch",
+    "clock/delay",
+    "sound start/stop and thread suspend",
+    "command/message backends",
+    "all nine graphics/input API calls"
+  ],
+  "limits": [
+    "Synthetic pool RAM and launch state, not a board memory capture.",
+    "No physical cache/LCD/GPU/input/audio/RTOS behavior tested.",
+    "Runtime compatibility checks are not full-image SHA validation."
+  ]
+}

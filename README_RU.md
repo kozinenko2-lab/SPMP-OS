@@ -1,15 +1,15 @@
 # SPMP-OS — полный комплект для продолжения в Codex
 
-**Состояние:** 13 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
+**Состояние:** 14 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
 
-Рабочий контрольный `BattleGround-1.2.2_P_new.bin` от пользователя разобран:
-оригинальный loader RAP в ARM VM подтвердил NGame decode, startup BSS/heap,
-API и возврат. [Отчёт этапа 7](research/boot_reconstruction/STAGE7_REPORT_RU.md).
-Игра и её ресурсы остаются приватными; запускаемого пакета SPMP-OS пока нет.
+[Текущий этап 9](research/boot_reconstruction/STAGE9_REPORT_RU.md): собран собственный
+NGame RAM-probe с проверяемой native-привязкой. Оригинальный RAP принимает его
+в ARM VM; 116 public/6 private сценариев. Это один диагностический кадр и возврат;
+полная оболочка SPMP-OS и аппаратный запуск ещё не завершены.
 
-Добавлен [собственный startup SPMP-OS, этап 8](research/boot_reconstruction/STAGE8_REPORT_RU.md):
-linked ARM ELF, очистка BSS, сохранение/выравнивание стека и 30 ARM926 VM-прогонов.
-Привязка к живым OEM API и упаковка для запуска на консоли ещё не завершены.
+Основа: [рабочий контрольный BIN пользователя](research/boot_reconstruction/STAGE7_REPORT_RU.md)
+и [собственный ARM startup](research/boot_reconstruction/STAGE8_REPORT_RU.md).
+Оригиналы прошивки, игра и её ресурсы остаются приватными.
 
 ## С чего начать
 

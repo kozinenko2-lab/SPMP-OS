@@ -15,8 +15,8 @@ FIELDS={'requests':(0x564200,1),'midi_state':(0x564201,1),'wave_state':(0x564208
 INITIAL={'requests':0xab,'midi_state':1,'wave_state':11,'midi_remaining':64,
          'midi_repeats':3,'wave_base':DATA,'wave_repeats':4}
 
-def new_vm(blob,pool=False):
-    v=ArmVM(blob)
+def new_vm(blob,pool=False,*,cpu_model=None):
+    v=ArmVM(blob,cpu_model=cpu_model)
     if pool:
         # Fill holes around the harness's existing RAM, stack and callback pages.
         # This is synthetic RAM covering the allocator's configured range.

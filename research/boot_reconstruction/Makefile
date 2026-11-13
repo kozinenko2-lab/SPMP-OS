@@ -69,3 +69,20 @@ arm-startup-check: arm-startup
 	$(ARM_VM_PYTHON) tools/emulate_startup.py --application $(STARTUP_DIR)/application.elf --fixture $(STARTUP_DIR)/fixture.elf --output $(STARTUP_DIR)/arm_vm.json
 	$(ARM_CC) --version > $(STARTUP_DIR)/compiler.txt
 	$(ARM_LD) --version > $(STARTUP_DIR)/linker.txt
+
+.PHONY: arm-native-bind
+arm-native-bind: arm-startup
+	$(ARM_CC) --target=arm-none-eabi -march=armv5te -marm -mfloat-abi=soft -DSPMP_NATIVE_PREFLIGHT -c examples/native_startup/entry.S -o $(STARTUP_DIR)/entry_bound.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Itests -c examples/native_startup/native_binding.c -o $(STARTUP_DIR)/binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Itests -DSPMP_BINDING_SYNTHETIC -c examples/native_startup/native_binding.c -o $(STARTUP_DIR)/binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -c examples/native_startup/native_app.c -o $(STARTUP_DIR)/native_app.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(STARTUP_DIR)/native.map -o $(STARTUP_DIR)/native.elf $(STARTUP_DIR)/entry_bound.o $(STARTUP_DIR)/binding.o $(STARTUP_DIR)/native_app.o $(STARTUP_DIR)/probe.o $(STARTUP_DIR)/adapter.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -o $(STARTUP_DIR)/native_synthetic.elf $(STARTUP_DIR)/entry_bound.o $(STARTUP_DIR)/binding_synthetic.o $(STARTUP_DIR)/native_app.o $(STARTUP_DIR)/probe.o $(STARTUP_DIR)/adapter.o
+	$(ARM_NM) -u $(STARTUP_DIR)/native.elf > $(STARTUP_DIR)/native_undefined.txt
+	test ! -s $(STARTUP_DIR)/native_undefined.txt
+
+.PHONY: arm-native-check
+arm-native-check: arm-native-bind
+	python3 tools/startup_elf.py $(STARTUP_DIR)/native.elf > $(STARTUP_DIR)/native_layout.json
+	python3 tools/ngame_pack.py $(STARTUP_DIR)/native.elf --output $(STARTUP_DIR)/SPMP_PROBE_VM.bin --manifest $(STARTUP_DIR)/native_package.json
+	$(ARM_VM_PYTHON) tools/emulate_native_package.py --synthetic-elf $(STARTUP_DIR)/native_synthetic.elf --output $(STARTUP_DIR)/native_binding_vm.json

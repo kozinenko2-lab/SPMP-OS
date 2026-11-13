@@ -87,7 +87,7 @@ class StartupELF:
             if typ in (4,9) and size:raise ValueError('Unresolved relocation section')
             if section_flags&2:
                 expected_flags={'.text':6,'.rodata':2,'.data':3,'.bss':3}
-                if name not in expected_flags or section_flags!=expected_flags[name]:
+                if name not in expected_flags or section_flags&(~0x30 if name=='.rodata' else 0xffffffff)!=expected_flags[name]:
                     raise ValueError('Unsupported allocated section/flags: '+name)
                 if not any(s['address']<=address and address+size<=s['address']+s['memory_bytes'] for s in self.segments):
                     raise ValueError('Allocated section not in a segment')

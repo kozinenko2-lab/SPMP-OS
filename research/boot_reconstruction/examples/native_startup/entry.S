@@ -13,6 +13,12 @@ _spmp_start:
     mov r4, sp                  /* Recover this exact frame after C returns. */
     bic sp, sp, #7              /* New C uses AAPCS 8-byte stack alignment. */
     mov r5, r0                  /* r1-r3 are deliberately not launch inputs. */
+#ifdef SPMP_NATIVE_PREFLIGHT
+    mov r0, r5
+    bl spmp_native_preflight
+    cmp r0, #0
+    bne 2f
+#endif
     ldr r1, =__bss_start__
     ldr r2, =__bss_end__
     mov r3, #0
@@ -22,6 +28,7 @@ _spmp_start:
     blo 1b
     mov r0, r5
     bl spmp_app_main
+2:
     mov sp, r4
     ldmia sp!, {r4-r11, lr}
     bx lr

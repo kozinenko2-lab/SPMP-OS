@@ -1,0 +1,1573 @@
+{
+  "execution": "ARM926 source-built synthetic compatibility profile; no OEM code",
+  "case_count": 116,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "6ce13bf1e4ba8192aa021fba7fd1710cf4375418070199a8819bb44ef88e3a48",
+    "container_sha256": "5be0a9f25059edcc46030403e1436e13a1bc810e49948e686761f71b5fedc7ea",
+    "payload_sha256": "e0d55618daf39d78f03d73513469901577adee63e39fcc31e70439a94c960d32",
+    "container_bytes": 3656,
+    "payload_bytes": 3528,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa00e04",
+    "bss_bytes": 52,
+    "structural_check": {
+      "payload_bytes": 3528,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "one_frame",
+      "sp_mod8": 0,
+      "status": 1,
+      "main_called": true,
+      "api_calls": 16,
+      "bss_untouched_on_rejection": false,
+      "bss_guard_preserved": true,
+      "events": [
+        {
+          "api": "init_graph"
+        },
+        {
+          "api": "origin",
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "api": "double_buffer",
+          "enabled": 1
+        },
+        {
+          "api": "dimensions"
+        },
+        {
+          "api": "get_color"
+        },
+        {
+          "api": "keys",
+          "keys": 0
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            255,
+            0,
+            0
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            0,
+            0,
+            106,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            106,
+            0,
+            106,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            212,
+            0,
+            108,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            152,
+            112,
+            16,
+            16
+          ]
+        },
+        {
+          "api": "paint"
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            8,
+            128,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "case": "one_frame",
+      "sp_mod8": 4,
+      "status": 1,
+      "main_called": true,
+      "api_calls": 16,
+      "bss_untouched_on_rejection": false,
+      "bss_guard_preserved": true,
+      "events": [
+        {
+          "api": "init_graph"
+        },
+        {
+          "api": "origin",
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "api": "double_buffer",
+          "enabled": 1
+        },
+        {
+          "api": "dimensions"
+        },
+        {
+          "api": "get_color"
+        },
+        {
+          "api": "keys",
+          "keys": 0
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            255,
+            0,
+            0
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            0,
+            0,
+            106,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            106,
+            0,
+            106,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            212,
+            0,
+            108,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            152,
+            112,
+            16,
+            16
+          ]
+        },
+        {
+          "api": "paint"
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            8,
+            128,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "case": "quit_first",
+      "sp_mod8": 0,
+      "status": 1,
+      "main_called": true,
+      "api_calls": 7,
+      "bss_untouched_on_rejection": false,
+      "bss_guard_preserved": true,
+      "events": [
+        {
+          "api": "init_graph"
+        },
+        {
+          "api": "origin",
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "api": "double_buffer",
+          "enabled": 1
+        },
+        {
+          "api": "dimensions"
+        },
+        {
+          "api": "get_color"
+        },
+        {
+          "api": "keys",
+          "keys": 524288
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            8,
+            128,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "case": "quit_first",
+      "sp_mod8": 4,
+      "status": 1,
+      "main_called": true,
+      "api_calls": 7,
+      "bss_untouched_on_rejection": false,
+      "bss_guard_preserved": true,
+      "events": [
+        {
+          "api": "init_graph"
+        },
+        {
+          "api": "origin",
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "api": "double_buffer",
+          "enabled": 1
+        },
+        {
+          "api": "dimensions"
+        },
+        {
+          "api": "get_color"
+        },
+        {
+          "api": "keys",
+          "keys": 524288
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            8,
+            128,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "case": "fill_error",
+      "sp_mod8": 0,
+      "status": 2,
+      "main_called": true,
+      "api_calls": 9,
+      "bss_untouched_on_rejection": false,
+      "bss_guard_preserved": true,
+      "events": [
+        {
+          "api": "init_graph"
+        },
+        {
+          "api": "origin",
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "api": "double_buffer",
+          "enabled": 1
+        },
+        {
+          "api": "dimensions"
+        },
+        {
+          "api": "get_color"
+        },
+        {
+          "api": "keys",
+          "keys": 0
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            255,
+            0,
+            0
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            0,
+            0,
+            106,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            8,
+            128,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "case": "fill_error",
+      "sp_mod8": 4,
+      "status": 2,
+      "main_called": true,
+      "api_calls": 9,
+      "bss_untouched_on_rejection": false,
+      "bss_guard_preserved": true,
+      "events": [
+        {
+          "api": "init_graph"
+        },
+        {
+          "api": "origin",
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "api": "double_buffer",
+          "enabled": 1
+        },
+        {
+          "api": "dimensions"
+        },
+        {
+          "api": "get_color"
+        },
+        {
+          "api": "keys",
+          "keys": 0
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            255,
+            0,
+            0
+          ]
+        },
+        {
+          "api": "fill",
+          "rect": [
+            0,
+            0,
+            106,
+            240
+          ]
+        },
+        {
+          "api": "set_color",
+          "rgb": [
+            8,
+            128,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "case": "slot_0",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_1",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_2",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_3",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_4",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_5",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_6",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_7",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_8",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_9",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_10",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_11",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_12",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_13",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_14",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_15",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_16",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_17",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_18",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_19",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_20",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_21",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_22",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_23",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_24",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_25",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_26",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_27",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_28",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_29",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_30",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_31",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_32",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_33",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_34",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_35",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_36",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_37",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_38",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_39",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_40",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_41",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_42",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_43",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_44",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_45",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_46",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_47",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_48",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_49",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_50",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_51",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_52",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_53",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_54",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_55",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_56",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_57",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_58",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_59",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_60",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_61",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_62",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_63",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_64",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_65",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_66",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_67",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_68",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_69",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_70",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_71",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_72",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_73",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_74",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_75",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_76",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_77",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_78",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_79",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_80",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_81",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_82",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_83",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "slot_84",
+      "sp_mod8": 0,
+      "status": 2306,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_0",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_1",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_2",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_3",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_4",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_5",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_6",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_7",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "prefix_8",
+      "sp_mod8": 0,
+      "status": 2307,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "null_api",
+      "sp_mod8": 0,
+      "status": 2305,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "foreign_api",
+      "sp_mod8": 0,
+      "status": 2305,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "kind",
+      "sp_mod8": 0,
+      "status": 2308,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "null_allocation",
+      "sp_mod8": 0,
+      "status": 2308,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "high_base",
+      "sp_mod8": 0,
+      "status": 2308,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "unaligned_base",
+      "sp_mod8": 0,
+      "status": 2308,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "short_capacity",
+      "sp_mod8": 0,
+      "status": 2308,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "wrapped_capacity",
+      "sp_mod8": 0,
+      "status": 2308,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "null_stack",
+      "sp_mod8": 0,
+      "status": 2309,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "overlapping_stack",
+      "sp_mod8": 0,
+      "status": 2309,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "wrong_stack",
+      "sp_mod8": 0,
+      "status": 2309,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "null_frame",
+      "sp_mod8": 0,
+      "status": 2310,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "frame_in_app",
+      "sp_mod8": 0,
+      "status": 2310,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "frame_in_stack",
+      "sp_mod8": 0,
+      "status": 2310,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "frames_overlap",
+      "sp_mod8": 0,
+      "status": 2310,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    },
+    {
+      "case": "insufficient_stack_room",
+      "sp_mod8": 0,
+      "status": 2309,
+      "main_called": false,
+      "api_calls": 0,
+      "bss_untouched_on_rejection": true,
+      "bss_guard_preserved": true,
+      "events": []
+    }
+  ],
+  "limits": [
+    "Own code-prefix patterns and synthetic allocation globals; not a hardware capture.",
+    "All nine API functions are intercepted; no real graphics/input/RTOS.",
+    "Compatibility CRC32 is not full-image identity or a security boundary."
+  ]
+}

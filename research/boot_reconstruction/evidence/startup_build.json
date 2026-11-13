@@ -15,5 +15,6 @@
     "examples/native_probe/oem_adapter.h": "26ed2fc60e2c0f48138a2df4c44363b441efbda9db978f8f7608e5b9e499f5bf",
     "src/mmi_native_abi.h": "178848e1b139ca5643a56d38ac9b4c5e76c4138e93cd23fe0813c7aa3b658119"
   },
-  "limits": "Source-built research ELFs. Compiler output hashes in startup_arm_vm.json refer to this local build; CI builds and checks its own output."
+  "limits": "Source-built research ELFs. Compiler output hashes in startup_arm_vm.json refer to this local build; CI builds and checks its own output.",
+  "source_revision": "c1fea787fff6130bd0b84b7a38db9505f4197222"
 }

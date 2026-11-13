@@ -44,3 +44,7 @@ ELF не является форматом штатного NGame loader. Не �
 Далее нужны проверяемая привязка API к конкретному RAP, подтверждение реального
 allocation/стека, IRQ/cache/LCD и целостная проверка будущего контейнера.
 Полный [отчёт этапа 8](../../STAGE8_REPORT_RU.md).
+
+На [этапе 9](../../STAGE9_REPORT_RU.md) добавлен отдельный bound target:
+[SPMP_PROBE_VM.bin](NGAME_README_RU.md). Он имеет preflight/binder и упаковку NGame;
+два исходных ELF эксперимента из этого README сохраняют прежнее поведение.

@@ -2,12 +2,12 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE8_REPORT_RU.md](STAGE8_REPORT_RU.md) — собственные
-startup/linker layout и два linked ARM ELF. 30 ARM926 VM-сценариев,
-три negative link cases и семь negative ELF cases. Привязки к живым OEM pointers,
-контейнера и аппаратного запуска SPMP-OS нет. Счётчики OEM exports/API прежние:
-284/28. [Рабочий контрольный BIN](STAGE7_REPORT_RU.md),
-[LCD/PCM, память и прототип](STAGE6_REPORT_RU.md).
+**Текущий этап:** [STAGE9_REPORT_RU.md](STAGE9_REPORT_RU.md) — preflight/binder,
+собственный NGame probe и цепочка оригинального RAP до обычного возврата в ARM VM.
+116 public synthetic / 6 private original-RAP scenarios. Создан RAM diagnostic,
+не полная оболочка SPMP-OS. Аппаратного запуска нет. OEM exports/API: 284/28.
+[Собственный startup](STAGE8_REPORT_RU.md), [рабочая игра](STAGE7_REPORT_RU.md),
+[LCD/PCM](STAGE6_REPORT_RU.md).
 Псевдокод: `decompiled/`. Предыдущие результаты:
 [память/ресурсы/возврат](STAGE5_REPORT_RU.md),
 [файлы/графика/ввод](STAGE4_REPORT_RU.md),
@@ -77,3 +77,11 @@ startup/linker layout и два linked ARM ELF. 30 ARM926 VM-сценариев,
 - `tools/startup_elf.py`, `emulate_startup.py`, `check_startup_link_limits.py` —
   ELF audit, ARM926 execution и отрицательные layout checks.
 - `evidence/startup_*` — источник/версия сборки, traces и собственный disassembly.
+
+Native NGame probe:
+
+- [Памятка пакета](examples/native_startup/NGAME_README_RU.md),
+  `make arm-native-check`: новый RAM container, без Flash/NAND image.
+- `tools/make_binding_profile.py`, `ngame_pack.py`, `emulate_native_package.py`:
+  compatibility references, packing и public/private ARM chains.
+- `SPMP_NATIVE_ELF` вместе с `SPMP_MMI_RAP` включает optional private chain test.
