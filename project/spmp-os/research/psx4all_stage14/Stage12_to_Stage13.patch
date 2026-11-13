@@ -1,0 +1,550 @@
+--- a/Makefile
++++ b/Makefile
+@@ -81,3 +81,23 @@
+ 	bash tools/audit_full_core.sh
+ 	ar rcs $(BUILD)/libpsx4all_host_core_audit.a $(BUILD)/host-core-audit/*.o
+ stage12-full-check: stage12-check stage12-bundle stage12-core-audit stage12-asan
++
++# Stage 13: SPMP-OS overlay-owned JIT allocations. Does not execute guest code.
++.PHONY: stage13-check stage13-asan stage13-arm stage13-full-check stage13-core-audit
++$(BUILD)/psx_stage13_test: tests/test_stage13.c $(PORT)/spmp_psx_jit_store.c $(PORT)/spmp_psx_jit_store.h
++	mkdir -p $(BUILD)
++	$(CC) $(CFLAGS) -I$(PORT) tests/test_stage13.c $(PORT)/spmp_psx_jit_store.c -o $@
++stage13-check: $(BUILD)/psx_stage13_test
++	./$(BUILD)/psx_stage13_test
++stage13-asan:
++	mkdir -p $(BUILD)
++	$(CC) $(CFLAGS) -O1 -fno-omit-frame-pointer -fsanitize=address,undefined -I$(PORT) tests/test_stage13.c $(PORT)/spmp_psx_jit_store.c -o $(BUILD)/psx_stage13_test_san
++	ASAN_OPTIONS=detect_leaks=1 ./$(BUILD)/psx_stage13_test_san
++stage13-arm:
++	mkdir -p $(BUILD)/armv5
++	$(CLANG) --target=armv5te-none-eabi -mcpu=arm926ej-s -marm -mfloat-abi=soft -O2 -ffreestanding -fno-builtin -Itools/arm_shim -I$(PORT) -c $(PORT)/spmp_psx_jit_store.c -o $(BUILD)/armv5/spmp_psx_jit_store.o
++	readelf -h $(BUILD)/armv5/spmp_psx_jit_store.o | grep -E 'Class:|Machine:|Type:'
++stage13-core-audit:
++	bash tools/audit_full_core.sh
++	@test "$$(grep -c "pass" $(BUILD)/host-core-audit/RESULTS.tsv)" -eq 33
++stage13-full-check: stage12-check stage13-check stage13-arm stage13-core-audit
+--- a/vendor/psx4all-dingoo-master/src/mem.h
++++ b/vendor/psx4all-dingoo-master/src/mem.h
+@@ -106,7 +106,7 @@
+ 
+ extern u32 *psxMemWLUT;
+ extern u32 *psxMemRLUT;
+-
++
+ #define PSXM(mem)	((void*)(psxMemRLUT[(mem) >> 16] + ((mem) & 0xffff)))
+ #define PSXM8(mem)	PSXM(mem)
+ #define PSXM16(mem)	((void*)((u32)PSXM(mem) & 0xFFFFFFFE))
+@@ -122,16 +122,20 @@
+ #define PSXMu32ref(mem)	(*(u32*)PSXM32(mem))
+ 
+ #ifdef DYNAREC
++#ifdef SPMP_PSX4ALL
++extern u32 *psxRecLUT;
++#else
+ extern u32 psxRecLUT[0x010000];
++#endif
+ #define PC_REC(x)	(psxRecLUT[(x) >> 16] + ((x) & 0xfffc))
+ #define PC_REC32(x) (*(u32*)PC_REC(x))
+-#define REC_CLEARM(mem) PC_REC32(mem) = 0;
++#define REC_CLEARM(mem) PC_REC32(mem) = 0;
+ #endif
+ 
+ extern int  psxMemInit();
+ extern void psxMemReset();
+ extern void psxMemShutdown();
+-
++
+ extern void psxMemWrite32_error(u32 mem, u32 value);
+ 
+ extern s8 psxMemReadS8(u32 mem);
+--- a/vendor/psx4all-dingoo-master/src/recompiler3/arm/arm_std_rec_globals.cpp
++++ b/vendor/psx4all-dingoo-master/src/recompiler3/arm/arm_std_rec_globals.cpp
+@@ -1,28 +1,36 @@
+-#include "../common.h"
+-
+-psxRegisters 	recRegs;
+-psxRegisters* 	psxRegs;
+-RecRegisters 	regcache;
+-
+-u32 psxRecLUT[0x010000];
+-u8 recMemBase[RECMEM_SIZE];
+-u32 *recMem;					/* the recompiled blocks will be here */
+-s8 recRAM[0x200000];				/* and the ptr to the blocks here */
+-s8 recROM[0x080000];				/* and here */
+-u32 pc;						/* recompiler pc */
+-u32 oldpc;
+-u32 branch = 0;
+-u32 rec_count;
+-
+-#ifdef WITH_REG_STATS
+-u32 reg_count[32];
+-u32 reg_mapped_count[32];
+-#endif
+-
+-#ifdef WITH_DISASM
+-FILE *translation_log_fp = NULL;
+-char disasm_buffer[512];
+-#endif
+-
+-u32 stores[4];                                                         
+-u32 rotations[4];
++#include "../common.h"
++
++psxRegisters 	recRegs;
++psxRegisters* 	psxRegs;
++RecRegisters 	regcache;
++
++#ifdef SPMP_PSX4ALL
++/* Overlay cores must not reserve megabytes of BSS when not in use. */
++u32 *psxRecLUT = NULL;
++u8 *recMemBase = NULL;
++s8 *recRAM = NULL;
++s8 *recROM = NULL;
++#else
++u32 psxRecLUT[0x010000];
++u8 recMemBase[RECMEM_SIZE];
++s8 recRAM[0x200000];
++s8 recROM[0x080000];
++#endif
++u32 *recMem; /* Recompiled ARM instructions */
++u32 pc;						/* recompiler pc */
++u32 oldpc;
++u32 branch = 0;
++u32 rec_count;
++
++#ifdef WITH_REG_STATS
++u32 reg_count[32];
++u32 reg_mapped_count[32];
++#endif
++
++#ifdef WITH_DISASM
++FILE *translation_log_fp = NULL;
++char disasm_buffer[512];
++#endif
++
++u32 stores[4];                                                         
++u32 rotations[4];
+--- a/vendor/psx4all-dingoo-master/src/recompiler3/arm/externs.h
++++ b/vendor/psx4all-dingoo-master/src/recompiler3/arm/externs.h
+@@ -1,75 +1,82 @@
+-#ifndef __ARM_EXTERNS_H__
+-#define __ARM_EXTERNS_H__
+-
+-typedef struct {
+-	u32 	mappedto;
++#ifndef __ARM_EXTERNS_H__
++#define __ARM_EXTERNS_H__
++
++typedef struct {
++	u32 	mappedto;
+ 	u32		arm_age;
+-	u32		arm_use;
++	u32		arm_use;
+ 	u32		arm_type;
+ 	bool	ismapped;
+ 	bool	arm_islocked;
+ } ARM_RecRegister;
+ 
+-
+-typedef struct {
++
++typedef struct {
+ 	u32 		mappedto;
+ 	bool		ismapped;
+ 	bool		mips_ischanged;
+ } MIPS_RecRegister;
+ 
+-
++
+ typedef struct {
+ 	MIPS_RecRegister 	mips[32];
+ 	ARM_RecRegister		arm[16];
+ 	u32								reglist[16];
+ 	u32								reglist_cnt;
+-} RecRegisters;
++} RecRegisters;
++
++
++extern psxRegisters 	recRegs;
++extern psxRegisters* 	psxRegs;
++extern RecRegisters 	regcache;
+ 
+-
+-extern psxRegisters 	recRegs;
+-extern psxRegisters* 	psxRegs;
+-extern RecRegisters 	regcache;
+-
+-extern u32 psxRecLUT[0x010000];
+-extern u8 recMemBase[RECMEM_SIZE];
+-extern s8 recRAM[0x200000];				/* and the ptr to the blocks here */
+-extern s8 recROM[0x080000];				/* and here */
+-extern u32 pc;						/* recompiler pc */
+-extern u32 oldpc;
+-extern u32 branch;
+-extern u32 rec_count;
+-
+-extern u32 stores[4];                                                         
+-extern u32 rotations[4];                                                      
+-
+-#ifdef WITH_REG_STATS
+-extern u32 reg_count[32];
+-extern u32 reg_mapped_count[32];
+-#endif
+-
+-#ifdef WITH_DISASM
+-extern FILE *translation_log_fp;
+-extern char disasm_buffer[512];
+-#endif
+-
+-/* Functions */
+-extern void rec_test_pc();
+-extern void rec_flush_cache();
+-#ifdef GIZMONDO
+-#define clear_insn_cache(BEG,END,FLAG) CLEAR_INSN_CACHE(BEG,END,FLAG)
+-#else
+-extern "C" void clear_insn_cache(u32 BEG, u32 END, u32 FLAG);
+-#endif
+-
+-extern u32 recIntExecuteBlock(u32 newpc);
+-extern u32 psxBranchTest_rec(u32 cycles, u32 pc);
+-//extern u32 arm_disect_imm_32bit(u32 imm, u32 *stores, u32 *rotations);
+-
+-//extern void regReset();
+-//extern void regClearJump();
+-//extern void ClearReg(u32 ra, u32 clearthis);
++#ifdef SPMP_PSX4ALL
++extern u32 *psxRecLUT;
++extern u8 *recMemBase;
++extern s8 *recRAM;
++extern s8 *recROM;
++#else
++extern u32 psxRecLUT[0x010000];
++extern u8 recMemBase[RECMEM_SIZE];
++extern s8 recRAM[0x200000];				/* and the ptr to the blocks here */
++extern s8 recROM[0x080000];				/* and here */
++#endif
++extern u32 pc;						/* recompiler pc */
++extern u32 oldpc;
++extern u32 branch;
++extern u32 rec_count;
++
++extern u32 stores[4];                                                         
++extern u32 rotations[4];                                                      
++
++#ifdef WITH_REG_STATS
++extern u32 reg_count[32];
++extern u32 reg_mapped_count[32];
++#endif
++
++#ifdef WITH_DISASM
++extern FILE *translation_log_fp;
++extern char disasm_buffer[512];
++#endif
++
++/* Functions */
++extern void rec_test_pc();
++extern void rec_flush_cache();
++#ifdef GIZMONDO
++#define clear_insn_cache(BEG,END,FLAG) CLEAR_INSN_CACHE(BEG,END,FLAG)
++#else
++extern "C" void clear_insn_cache(u32 BEG, u32 END, u32 FLAG);
++#endif
++
++extern u32 recIntExecuteBlock(u32 newpc);
++extern u32 psxBranchTest_rec(u32 cycles, u32 pc);
++//extern u32 arm_disect_imm_32bit(u32 imm, u32 *stores, u32 *rotations);
++
++//extern void regReset();
++//extern void regClearJump();
++//extern void ClearReg(u32 ra, u32 clearthis);
+ 
+ extern u32 *recMem;
+ static u32 recRecompile();
+-
+-#endif
++
++#endif
+--- a/vendor/psx4all-dingoo-master/src/recompiler3/arm/recompiler.cpp
++++ b/vendor/psx4all-dingoo-master/src/recompiler3/arm/recompiler.cpp
+@@ -5,6 +5,7 @@
+ #ifdef SPMP_PSX4ALL
+ #include "../../spmp_port/spmp_psx_opt.h"
+ #include "../../spmp_port/spmp_psx_cache_guard.h"
++#include "../../spmp_port/spmp_psx_jit_store.h"
+ #endif
+ 
+ 
+@@ -488,28 +489,67 @@
+ 
+ static void recNULL() { }
+ 
++#ifdef SPMP_PSX4ALL
++/* Loading sequence:
++ * 1. SPMP-OS calls spmp_psx_rec_prepare with verified arena callbacks.
++ * 2. HAL checks executable mapping and attaches cache guard to returned range.
++ * 3. Only then initialize psxRec. Unloading calls psxRec.Shutdown.
++ * This separation avoids a circular dependency between allocation and guard.
++ */
++static spmp_psx_jit_store spmp_jit_storage = {0};
++static spmp_psx_jit_free_fn spmp_jit_release = NULL;
++static void *spmp_jit_context = NULL;
++extern "C" int spmp_psx_rec_prepare(spmp_psx_jit_alloc_fn alloc,
++    spmp_psx_jit_free_fn release, void *opaque, uintptr_t *address, size_t *length)
++{
++    if (!alloc || !release || !address || !length || spmp_jit_storage.allocation)
++        return 0;
++    if (!spmp_psx_jit_store_init(&spmp_jit_storage, RECMEM_SIZE, alloc, opaque))
++        return 0;
++    spmp_jit_release = release;
++    spmp_jit_context = opaque;
++    *address = (uintptr_t)spmp_jit_storage.code;
++    *length = spmp_jit_storage.code_capacity;
++    return 1;
++}
++extern "C" void spmp_psx_rec_abort(void)
++{
++    spmp_psx_cache_guard_reset_binding();
++    if (spmp_jit_storage.allocation)
++        spmp_psx_jit_store_release(&spmp_jit_storage,
++                                   spmp_jit_release, spmp_jit_context);
++    spmp_jit_release = NULL;
++    spmp_jit_context = NULL;
++    recMemBase = NULL; recRAM = NULL; recROM = NULL; psxRecLUT = NULL;
++    recMem = NULL;
++}
++#endif
+ static int recInit()
+ {
+     int i;
+ #ifdef SPMP_PSX4ALL
+-    /* Without real cache maintenance newly emitted ARM instructions are unsafe. */
++    if (!spmp_jit_storage.allocation) {
++        SysMessage("SPMP PSX4ALL: JIT memory not prepared by the loader");
++        return -1;
++    }
++    recMemBase = spmp_jit_storage.code;
++    recRAM = (s8*)spmp_jit_storage.ram;
++    recROM = (s8*)spmp_jit_storage.rom;
++    psxRecLUT = (u32*)spmp_jit_storage.lut;
+     if (!spmp_psx_cache_guard_verified_range((uintptr_t)recMemBase, RECMEM_SIZE)) {
+         SysMessage("SPMP PSX4ALL: JIT disabled, I/D cache HAL not bound");
++        spmp_psx_rec_abort();
+         return -1;
+     }
+ #endif
+-
+-	psxRegs = &recRegs;
+-
+-	recMem = (u32*)recMemBase;	
+-	loadedpermregs = 0;	
+-	recReset();
+-
+-	//recRAM = (char*) malloc(0x200000);
+-	//recROM = (char*) malloc(0x080000);
+-	if (recRAM == NULL || recROM == NULL || recMemBase == NULL || psxRecLUT == NULL) {
+-		SysMessage("Error allocating memory"); return -1;
+-	}
++    if (!recRAM || !recROM || !recMemBase || !psxRecLUT) {
++        SysMessage("Error allocating JIT memory");
++        return -1;
++    }
++    psxRegs = &recRegs;
++    recMem = (u32*)recMemBase;
++    loadedpermregs = 0;
++    recReset();
+ 
+ 	for (i=0; i<0x80; i++) psxRecLUT[i + 0x0000] = (u32)&recRAM[(i & 0x1f) << 16];
+ 	memcpy(psxRecLUT + 0x8000, psxRecLUT, 0x80 * 4);
+@@ -522,8 +562,8 @@
+ 
+ static void recShutdown() {
+ #ifdef SPMP_PSX4ALL
+-    /* Invalidate callback tied to an unloaded SPMP-OS core/HAL. */
+-    spmp_psx_cache_guard_reset_binding();
++    spmp_psx_rec_abort();
++    psxRegs = NULL;
+ #endif
+ }
+ 
+@@ -658,6 +698,10 @@
+ 
+ static void recReset()
+ {
++#ifdef SPMP_PSX4ALL
++    /* A failed/aborted JIT initialization must not dereference a freed arena. */
++    if (!recRAM || !recROM || !recMemBase) return;
++#endif
+ 	memset(recRAM, 0, 0x200000);
+ 	memset(recROM, 0, 0x080000);
+ 
+--- a/vendor/psx4all-dingoo-master/src/spmp_port/spmp_psx_jit_store.h
++++ b/vendor/psx4all-dingoo-master/src/spmp_port/spmp_psx_jit_store.h
+@@ -0,0 +1,49 @@
++/* SPMP-OS PSX4ALL: one owned, cache-line-aligned allocation for ARM JIT data.
++ * This header intentionally avoids libc and C++ runtime dependencies.
++ * Allocation callbacks are supplied by SPMP-OS or the host test harness.
++ * Copyright 2026 SPMP-OS contributors; SPDX-License-Identifier: GPL-2.0-or-later.
++ */
++#ifndef SPMP_PSX_JIT_STORE_H
++#define SPMP_PSX_JIT_STORE_H
++#include <stddef.h>
++#include <stdint.h>
++#ifdef __cplusplus
++extern "C" {
++#endif
++#define SPMP_PSX_JIT_RAM_BYTES (2u * 1024u * 1024u)
++#define SPMP_PSX_JIT_ROM_BYTES (512u * 1024u)
++#define SPMP_PSX_JIT_LUT_BYTES (65536u * sizeof(uint32_t))
++#define SPMP_PSX_JIT_ALIGNMENT 64u
++
++typedef void *(*spmp_psx_jit_alloc_fn)(size_t bytes, void *opaque);
++typedef void (*spmp_psx_jit_free_fn)(void *address, void *opaque);
++typedef struct spmp_psx_jit_store {
++    void *allocation;
++    uint8_t *code;
++    int8_t *ram;
++    int8_t *rom;
++    uint32_t *lut;
++    size_t bytes_owned;
++    size_t code_capacity;
++} spmp_psx_jit_store;
++
++/* Exported by ARM recompiler, not by this allocator module. HAL must call
++ * prepare, validate the returned executable region, then attach cache guard,
++ * before calling psxRec.Init. On failure call abort. */
++int spmp_psx_rec_prepare(spmp_psx_jit_alloc_fn alloc,
++    spmp_psx_jit_free_fn release, void *opaque,
++    uintptr_t *address, size_t *length);
++void spmp_psx_rec_abort(void);
++
++/* Capacity is 1-8 MiB, multiple of 1024 bytes. No partial success.
++ * Caller must provide an empty store (zero-filled struct) and must pair init
++ * with release using the SAME allocator context. This is not thread safe.
++ */
++int spmp_psx_jit_store_init(spmp_psx_jit_store *store, size_t capacity,
++                            spmp_psx_jit_alloc_fn alloc, void *opaque);
++void spmp_psx_jit_store_release(spmp_psx_jit_store *store,
++                                spmp_psx_jit_free_fn release, void *opaque);
++#ifdef __cplusplus
++}
++#endif
++#endif
+--- a/vendor/psx4all-dingoo-master/src/spmp_port/spmp_psx_jit_store.c
++++ b/vendor/psx4all-dingoo-master/src/spmp_port/spmp_psx_jit_store.c
+@@ -0,0 +1,44 @@
++#include "spmp_psx_jit_store.h"
++#include <string.h>
++#include <stdint.h>
++#include <stddef.h>
++
++static uintptr_t aligned_up(uintptr_t value, uintptr_t align) {
++    return (value + align - 1u) & ~(align - 1u);
++}
++int spmp_psx_jit_store_init(spmp_psx_jit_store *store, size_t capacity,
++                            spmp_psx_jit_alloc_fn alloc, void *opaque) {
++    size_t length;
++    uint8_t *p;
++    void *allocation;
++    if (!store || !alloc || store->allocation || store->code || store->lut ||
++        store->ram || store->rom || store->bytes_owned ||
++        capacity < 1024u*1024u || capacity > 8u*1024u*1024u ||
++        (capacity & 1023u)) return 0;
++    /* Include alignment slack for the returned allocation. */
++    if (capacity > SIZE_MAX - SPMP_PSX_JIT_RAM_BYTES - SPMP_PSX_JIT_ROM_BYTES -
++                   SPMP_PSX_JIT_LUT_BYTES - SPMP_PSX_JIT_ALIGNMENT) return 0;
++    length = capacity + SPMP_PSX_JIT_RAM_BYTES + SPMP_PSX_JIT_ROM_BYTES +
++             SPMP_PSX_JIT_LUT_BYTES + SPMP_PSX_JIT_ALIGNMENT;
++    allocation = alloc(length, opaque);
++    if (!allocation) return 0;
++    if ((uintptr_t)allocation > UINTPTR_MAX - SPMP_PSX_JIT_ALIGNMENT) return 0;
++    p = (uint8_t *)aligned_up((uintptr_t)allocation, SPMP_PSX_JIT_ALIGNMENT);
++    /* Memory is private to this core: no allocations survive release. */
++    memset(p, 0, length - (size_t)(p - (uint8_t *)allocation));
++    store->allocation = allocation;
++    store->code = p;
++    store->ram = (int8_t *)(p + capacity);
++    store->rom = (int8_t *)(p + capacity + SPMP_PSX_JIT_RAM_BYTES);
++    store->lut = (uint32_t *)(void *)(p + capacity + SPMP_PSX_JIT_RAM_BYTES +
++                                     SPMP_PSX_JIT_ROM_BYTES);
++    store->bytes_owned = length;
++    store->code_capacity = capacity;
++    return 1;
++}
++void spmp_psx_jit_store_release(spmp_psx_jit_store *store,
++                                spmp_psx_jit_free_fn release, void *opaque) {
++    if (!store) return;
++    if (store->allocation && release) release(store->allocation, opaque);
++    memset(store, 0, sizeof(*store));
++}
+--- a/tests/test_stage13.c
++++ b/tests/test_stage13.c
+@@ -0,0 +1,68 @@
++#include "spmp_psx_jit_store.h"
++#include <stdlib.h>
++#include <stdio.h>
++#include <stdint.h>
++#include <string.h>
++#include <assert.h>
++
++static size_t live_bytes;
++static unsigned allocations, releases;
++static int deny_next;
++static void *test_alloc(size_t n, void *opaque) {
++    (void)opaque;
++    if (deny_next) { deny_next=0; return NULL; }
++    void *p = malloc(n);
++    if (p) { ++allocations; live_bytes += n; }
++    return p;
++}
++static void test_free(void *p, void *opaque) {
++    (void)opaque;
++    ++releases;
++    /* length tested before calling release; do not use freed struct */
++    free(p);
++}
++static void test_one(size_t bytes) {
++    spmp_psx_jit_store s = {0};
++    assert(spmp_psx_jit_store_init(&s,bytes,test_alloc,NULL));
++    assert(s.code && s.ram && s.rom && s.lut);
++    assert(s.code_capacity == bytes);
++    assert(((uintptr_t)s.code & 63u) == 0u);
++    assert((uint8_t *)s.ram == s.code + bytes);
++    assert((uint8_t *)s.rom == (uint8_t *)s.ram + SPMP_PSX_JIT_RAM_BYTES);
++    assert((uint8_t *)s.lut == (uint8_t *)s.rom + SPMP_PSX_JIT_ROM_BYTES);
++    assert(s.code[0]==0 && s.code[bytes-1]==0);
++    assert(s.ram[SPMP_PSX_JIT_RAM_BYTES-1]==0);
++    assert(s.rom[SPMP_PSX_JIT_ROM_BYTES-1]==0);
++    assert(s.lut[65535]==0);
++    assert(!spmp_psx_jit_store_init(&s,bytes,test_alloc,NULL)); /* no double init */
++    s.code[0] = 0xea;
++    s.code[bytes-1] = 0xff;
++    s.ram[SPMP_PSX_JIT_RAM_BYTES-1] = 65;
++    s.rom[SPMP_PSX_JIT_ROM_BYTES-1] = 73;
++    s.lut[65535] = 0x12345678u;
++    size_t length = s.bytes_owned;
++    spmp_psx_jit_store_release(&s,test_free,NULL);
++    live_bytes -= length;
++    assert(!s.allocation && !s.code && !s.ram && !s.rom && !s.lut);
++    assert(!s.bytes_owned && !s.code_capacity);
++    spmp_psx_jit_store_release(&s,test_free,NULL); /* idempotent */
++}
++int main(void) {
++    spmp_psx_jit_store s={0};
++    assert(!spmp_psx_jit_store_init(NULL,1024u*1024u,test_alloc,NULL));
++    assert(!spmp_psx_jit_store_init(&s,0,test_alloc,NULL));
++    assert(!spmp_psx_jit_store_init(&s,1023u*1024u,test_alloc,NULL));
++    assert(!spmp_psx_jit_store_init(&s,8193u*1024u,test_alloc,NULL));
++    assert(!spmp_psx_jit_store_init(&s,1024u*1024u+1,test_alloc,NULL));
++    assert(!spmp_psx_jit_store_init(&s,1024u*1024u,NULL,NULL));
++    deny_next=1;
++    assert(!spmp_psx_jit_store_init(&s,1024u*1024u,test_alloc,NULL));
++    assert(!s.allocation && !s.code && !s.bytes_owned);
++    const size_t sizes[]={1024u*1024u,2048u*1024u,4096u*1024u,8192u*1024u};
++    for (unsigned cycle=0;cycle<250;cycle++) test_one(sizes[cycle%4]);
++    assert(live_bytes==0 && allocations==releases);
++    printf("Stage13 JIT arena: 250 lifecycle cycles, 4 capacity profiles, "
++           "invalid sizes/OOM/reinit/release PASS (allocs=%u frees=%u)\n",
++           allocations,releases);
++    return 0;
++}

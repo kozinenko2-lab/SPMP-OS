@@ -1,0 +1,125 @@
+{
+  "read_only": true,
+  "archives": [
+    {
+      "name": "libspmp8k-master.zip",
+      "sha256": "b8ed573e49377c14e45664a949a88d61c47bb1aab8613b609fbdd0cc049df4cc",
+      "description": "ARM926 / eCos host ABI, Doom+z26 embedded",
+      "source_files": 866,
+      "entries": 1690,
+      "uncompressed_bytes": 71826200,
+      "has_libgame_sources": true,
+      "has_doom_source": true,
+      "has_z26_source": true,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "xpectrum-spmp8000-master.zip",
+      "sha256": "0bfe5db5e439e97ba20ad1b3fbe03a04237d489c33bf44f76235e660e5c88b55",
+      "description": "ZX Spectrum ARM source; libgame dependency",
+      "source_files": 89,
+      "entries": 212,
+      "uncompressed_bytes": 7159145,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "tgemu-spmp8000-master.zip",
+      "sha256": "05a3512aee059ede26c769535adb103398a1b630912fb07f37382f7a11170258",
+      "description": "PC Engine ARM source; libgame dependency",
+      "source_files": 48,
+      "entries": 58,
+      "uncompressed_bytes": 730452,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "Frodo4-spmp8000-master.zip",
+      "sha256": "f8fe1df21ea3bb67cac56c0b6de60f92e5b75e4ce7dd5c9ca0c203c3bc1e428b",
+      "description": "C64 ARM source; libgame dependency",
+      "source_files": 118,
+      "entries": 187,
+      "uncompressed_bytes": 1846069,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "wiituka-spmp8000-master.zip",
+      "sha256": "0ddb26db2e727e158c33ae28dc0d8f8a8daac27b5c60ef3059350ba78596d0c1",
+      "description": "Amstrad CPC ARM source; libgame dependency",
+      "source_files": 76,
+      "entries": 127,
+      "uncompressed_bytes": 5609140,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "xrick-spmp8000-master.zip",
+      "sha256": "899c1a4d0783811ae36307109a3be839bb59512afd92a3e48371d3a3ebf520cf",
+      "description": "Rick Dangerous source; original assets licensing caveat",
+      "source_files": 71,
+      "entries": 86,
+      "uncompressed_bytes": 2925808,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "scummvm-spmp8000-master.zip",
+      "sha256": "915b60cb7e4169d162c14af7c8f99daa5daa636b44991d6aef9bf8647c76bb4a",
+      "description": "ScummVM tree; no confirmed SPMP backend in archive",
+      "source_files": 3859,
+      "entries": 4657,
+      "uncompressed_bytes": 78867494,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "psx4all-dingoo-master.zip",
+      "sha256": "8690485d221bf2d291a745ca3d4851ec8e25d94ffe882bac02d6593428cff87a",
+      "description": "Dingoo PS1 port; MIPS dynarec",
+      "source_files": 297,
+      "entries": 377,
+      "uncompressed_bytes": 5997523,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "psx4all-dingoo-master-1.zip",
+      "sha256": "91db7083442ef02e713d43f617b8d7f2214ea3cdea9eed67387b9fbcaac2e9e2",
+      "description": "Variant of Dingoo PS1 port; compare before reuse",
+      "source_files": 297,
+      "entries": 375,
+      "uncompressed_bytes": 5998243,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    },
+    {
+      "name": "actsemi-master.zip",
+      "sha256": "afb0b39cf9b5b86f79aa03c77d823694612cd70fe7221372e624a86e08795f3f",
+      "description": "Actsemi homebrew SDK, MIPS32 incompatible with SPMP ARM",
+      "source_files": 93,
+      "entries": 108,
+      "uncompressed_bytes": 131333,
+      "has_libgame_sources": false,
+      "has_doom_source": false,
+      "has_z26_source": false,
+      "has_spmp_scummvm_backend": false
+    }
+  ]
+}

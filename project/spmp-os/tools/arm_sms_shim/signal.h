@@ -1,0 +1,3 @@
+#ifndef SPMP_ARM_SMS_SIGNAL_H
+#define SPMP_ARM_SMS_SIGNAL_H
+#endif

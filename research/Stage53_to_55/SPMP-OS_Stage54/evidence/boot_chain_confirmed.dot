@@ -1,0 +1,19 @@
+digraph MMI_BOOT {
+  graph [label="SPMP8000 MMI: verified direct ARM BL edges; NOT a runtime trace", labelloc="t"];
+  node [shape=box];
+  "MMI_reset 00280040" -> "CPU/cache init 00299C90" [label="BL 0028013C"];
+  "MMI_reset 00280040" -> "conditional callback 002976D0" [label="BL 00280140"];
+  "MMI_reset 00280040" -> "init table dispatcher 00299A98" [label="BL 00280144"];
+  "MMI_reset 00280040" -> "startup 00297CE8" [label="BL 00280150"];
+  "startup 00297CE8" -> "noop 00297D04" [label="BL 00297CF4"];
+  "startup 00297CE8" -> "noop 00297D08" [label="BL 00297CF8"];
+  "startup 00297CE8" -> "GUI thread constructor 002807C8" [label="BL 00297CFC"];
+  "startup 00297CE8" -> "RTOS handoff 0033C0FC" [label="BL 00297D00"];
+  "GUI thread constructor 002807C8" -> "thread create wrapper 00339AAC" [label="BL 00280810"];
+  "thread create wrapper 00339AAC" -> "core creation 0033A2DC" [label="BL 00339AF0"];
+  "GUI thread constructor 002807C8" -> "Demo GUI 003BE5B0" [style=dashed, label="R1 entrypoint literal, 25 priority, 16KB stack"];
+  "Demo GUI 003BE5B0" -> "system init coordinator 00447640" [label="BL 003BE5CC"];
+  "system init coordinator 00447640" -> "sys init thread constructor 004475C0" [label="BL 004476B0"];
+  "sys init thread constructor 004475C0" -> "thread create wrapper 00339AAC" [label="BL 00447610"];
+  "sys init thread constructor 004475C0" -> "Systen initial Thread 00447540" [style=dashed, label="R1 entrypoint literal"];
+}

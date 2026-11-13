@@ -1,0 +1,23 @@
+{
+  "language": "en",
+  "menu_keys": [
+    "games",
+    "music",
+    "video",
+    "photos",
+    "radio",
+    "files",
+    "settings",
+    "themes"
+  ],
+  "labels": [
+    "Games",
+    "Music",
+    "Video",
+    "Photos",
+    "Radio",
+    "Files",
+    "Settings",
+    "Themes"
+  ]
+}

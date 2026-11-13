@@ -1,0 +1,21 @@
+{
+ "stage":46,
+ "research_target":"Defender MultiMix SPMP8000 original 8000_MMI.RAP / SD_P430",
+ "rap_sha256":"5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+ "verified_arm_machine_words":29,
+ "verified_cmd18_calls":2,
+ "unbounded_poll_loops_observed":3,
+ "cmd17_complete_hardware_driver":false,
+ "stage46_sector_guard_implemented":true,
+ "stage46_sector_guard_has_mmio":false,
+ "stage46_sector_guard_512_byte_commit_on_success_only":true,
+ "stage46_sector_guard_requires_trusted_backend_crc":true,
+ "host_deterministic_transactions":10000,
+ "python_static_tests_passed":6,
+ "asan_ubsan_passed":true,
+ "armv5_eabi5_relocatable_object_built":true,
+ "integrated_armv5_unresolved_symbols":0,
+ "redboot_mmi_sd_modified":false,
+ "tested_on_real_defender":false,
+ "actual_redboot_mmi_logs_saved_to_sd":false
+}

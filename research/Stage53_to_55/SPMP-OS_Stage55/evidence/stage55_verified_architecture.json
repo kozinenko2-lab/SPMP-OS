@@ -1,0 +1,1572 @@
+{
+  "kind": "static_ARM32_original_MMI_analysis",
+  "sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "no_binary_changes": true,
+  "source_map": {
+    "rap_virtual_base": "0x00280000",
+    "rap_file_offset": "0x0000004C"
+  },
+  "checks": {
+    "bl_00297CFC_002807C8": true,
+    "bl_00280810_00339AAC": true,
+    "bl_003BE5CC_00447640": true,
+    "bl_004476B0_004475C0": true,
+    "bl_00447610_00339AAC": true,
+    "bl_004475A4_00447458": true,
+    "bl_0044749C_00339AAC": true,
+    "bl_004473F0_002CDACC": true,
+    "bl_0044744C_00339BE8": true,
+    "bl_00339AF0_0033A2DC": true,
+    "MMIO_six_ARM_words_exact": true,
+    "MMIO_address_0x90005040": true,
+    "MMIO_sets_low_three_bits": true,
+    "background_unconditional_loop": true,
+    "background_delay_argument_100": true,
+    "background_delay_r1_zero": true,
+    "spawn_Demo_GUI": true,
+    "spawn_Systen_initial_Thread": true,
+    "spawn_Systen_BackGround_Thread": true,
+    "Demo_GUI_priority25": true,
+    "SysInit_priority12": true,
+    "BG_priority30": true,
+    "Demo_GUI_stack_16384": true,
+    "SysInit_stack_10624": true,
+    "BG_stack_10624": true,
+    "SysInit_to_background_builder": true,
+    "Demo_GUI_entry_r1": true,
+    "SysInit_entry_r1": true,
+    "BG_entry_r1": true,
+    "BG_delay_value_is_NOT_milliseconds_without_tick_freq": true,
+    "GUI_coordinator_has_one_direct_BL_caller": true,
+    "system_init_thread_has_no_direct_BL_caller": true,
+    "background_thread_has_no_direct_BL_caller": true
+  },
+  "functions": {
+    "0x00280040": {
+      "entry": "0x00280040",
+      "label": "MMI_reset",
+      "prologue": "0xEE110F10",
+      "next_prologue_heuristic": "0x002804F8",
+      "call_sites": [
+        {
+          "from": "0x0028013C",
+          "to": "0x00299C90",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB0066D3"
+        },
+        {
+          "from": "0x00280140",
+          "to": "0x002976D0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB005D62"
+        },
+        {
+          "from": "0x00280144",
+          "to": "0x00299A98",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB006653"
+        },
+        {
+          "from": "0x00280150",
+          "to": "0x00297CE8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB005EE4"
+        },
+        {
+          "from": "0x00280248",
+          "to": "0x00299A60",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB006604"
+        },
+        {
+          "from": "0x002803A8",
+          "to": "0x00299A7C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB0065B3"
+        },
+        {
+          "from": "0x00280410",
+          "to": "0x0033B424",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB02EC03"
+        },
+        {
+          "from": "0x0028044C",
+          "to": "0x0033B384",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB02EBCC"
+        }
+      ],
+      "back_edges": [
+        {
+          "from": "0x0028008C",
+          "to": "0x00280088",
+          "word": "0x1AFFFFFD"
+        },
+        {
+          "from": "0x00280138",
+          "to": "0x00280130",
+          "word": "0x9AFFFFFC"
+        },
+        {
+          "from": "0x00280414",
+          "to": "0x0028024C",
+          "word": "0xEAFFFF8C"
+        }
+      ],
+      "pc_literals": [
+        {
+          "instruction": "0x00280064",
+          "register": "r1",
+          "literal_at": "0x002804EC",
+          "value": "0x00280000"
+        },
+        {
+          "instruction": "0x00280080",
+          "register": "r0",
+          "literal_at": "0x002804C0",
+          "value": "0x005137E8"
+        },
+        {
+          "instruction": "0x00280090",
+          "register": "r1",
+          "literal_at": "0x00280160",
+          "value": "0xDEADB00B"
+        },
+        {
+          "instruction": "0x0028009C",
+          "register": "r1",
+          "literal_at": "0x002804BC",
+          "value": "0x00280000"
+        },
+        {
+          "instruction": "0x002800F0",
+          "register": "r13",
+          "literal_at": "0x0028048C",
+          "value": "0x0056C0A0"
+        },
+        {
+          "instruction": "0x002800FC",
+          "register": "r13",
+          "literal_at": "0x00280490",
+          "value": "0x0056AE10"
+        },
+        {
+          "instruction": "0x00280108",
+          "register": "r13",
+          "literal_at": "0x00280490",
+          "value": "0x0056AE10"
+        },
+        {
+          "instruction": "0x00280118",
+          "register": "r13",
+          "literal_at": "0x002804CC",
+          "value": "0x0056BE90"
+        },
+        {
+          "instruction": "0x0028011C",
+          "register": "r1",
+          "literal_at": "0x00280498",
+          "value": "0x0056AD90"
+        },
+        {
+          "instruction": "0x00280120",
+          "register": "r2",
+          "literal_at": "0x0028049C",
+          "value": "0x006C8FDC"
+        },
+        {
+          "instruction": "0x00280148",
+          "register": "r1",
+          "literal_at": "0x002804F0",
+          "value": "0x0056C0A0"
+        },
+        {
+          "instruction": "0x00280164",
+          "register": "r13",
+          "literal_at": "0x00280494",
+          "value": "0x0056AE90"
+        },
+        {
+          "instruction": "0x0028018C",
+          "register": "r8",
+          "literal_at": "0x00280494",
+          "value": "0x0056AE90"
+        },
+        {
+          "instruction": "0x002801B4",
+          "register": "r13",
+          "literal_at": "0x00280494",
+          "value": "0x0056AE90"
+        },
+        {
+          "instruction": "0x002801D0",
+          "register": "r13",
+          "literal_at": "0x00280494",
+          "value": "0x0056AE90"
+        },
+        {
+          "instruction": "0x002802B4",
+          "register": "r13",
+          "literal_at": "0x00280490",
+          "value": "0x0056AE10"
+        },
+        {
+          "instruction": "0x002802C4",
+          "register": "r13",
+          "literal_at": "0x00280490",
+          "value": "0x0056AE10"
+        },
+        {
+          "instruction": "0x002802D0",
+          "register": "r13",
+          "literal_at": "0x00280490",
+          "value": "0x0056AE10"
+        },
+        {
+          "instruction": "0x00280344",
+          "register": "r2",
+          "literal_at": "0x002804C8",
+          "value": "0x0056BE90"
+        },
+        {
+          "instruction": "0x0028035C",
+          "register": "r13",
+          "literal_at": "0x002804CC",
+          "value": "0x0056BE90"
+        },
+        {
+          "instruction": "0x00280364",
+          "register": "r3",
+          "literal_at": "0x002804C4",
+          "value": "0x0055B738"
+        },
+        {
+          "instruction": "0x00280374",
+          "register": "r5",
+          "literal_at": "0x002804D0",
+          "value": "0x90010000"
+        },
+        {
+          "instruction": "0x00280388",
+          "register": "r5",
+          "literal_at": "0x002804D4",
+          "value": "0x90020000"
+        },
+        {
+          "instruction": "0x00280394",
+          "register": "r2",
+          "literal_at": "0x002804F4",
+          "value": "0x005D6BA0"
+        },
+        {
+          "instruction": "0x002803B0",
+          "register": "r1",
+          "literal_at": "0x002804B4",
+          "value": "0x005138EC"
+        },
+        {
+          "instruction": "0x002803B8",
+          "register": "r2",
+          "literal_at": "0x002804B0",
+          "value": "0x005137EC"
+        },
+        {
+          "instruction": "0x002803D8",
+          "register": "r6",
+          "literal_at": "0x002804D4",
+          "value": "0x90020000"
+        },
+        {
+          "instruction": "0x002803E0",
+          "register": "r6",
+          "literal_at": "0x002804D0",
+          "value": "0x90010000"
+        },
+        {
+          "instruction": "0x002803E8",
+          "register": "r2",
+          "literal_at": "0x002804C8",
+          "value": "0x0056BE90"
+        },
+        {
+          "instruction": "0x00280404",
+          "register": "r1",
+          "literal_at": "0x002804B8",
+          "value": "0x005139EC"
+        },
+        {
+          "instruction": "0x00280430",
+          "register": "r13",
+          "literal_at": "0x002804CC",
+          "value": "0x0056BE90"
+        },
+        {
+          "instruction": "0x00280438",
+          "register": "r2",
+          "literal_at": "0x002804C8",
+          "value": "0x0056BE90"
+        },
+        {
+          "instruction": "0x0028045C",
+          "register": "r2",
+          "literal_at": "0x002804C8",
+          "value": "0x0056BE90"
+        }
+      ],
+      "indirect_calls": [
+        {
+          "at": "0x002803C8",
+          "target_register": "r6"
+        }
+      ]
+    },
+    "0x00297CE8": {
+      "entry": "0x00297CE8",
+      "label": "MMI_startup_dispatch",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x00297D0C",
+      "call_sites": [
+        {
+          "from": "0x00297CF4",
+          "to": "0x00297D04",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB000002"
+        },
+        {
+          "from": "0x00297CF8",
+          "to": "0x00297D08",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB000002"
+        },
+        {
+          "from": "0x00297CFC",
+          "to": "0x002807C8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFA2B1"
+        },
+        {
+          "from": "0x00297D00",
+          "to": "0x0033C0FC",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB0290FD"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [],
+      "indirect_calls": []
+    },
+    "0x002807C8": {
+      "entry": "0x002807C8",
+      "label": "create_Demo_GUI",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x0028083C",
+      "call_sites": [
+        {
+          "from": "0x002807DC",
+          "to": "0x003BE5A0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB04F76F"
+        },
+        {
+          "from": "0x00280810",
+          "to": "0x00339AAC",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB02E4A5"
+        },
+        {
+          "from": "0x00280818",
+          "to": "0x00339B6C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB02E4D3"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [
+        {
+          "instruction": "0x002807D8",
+          "register": "r0",
+          "literal_at": "0x00280824",
+          "value": "0x002805F8"
+        },
+        {
+          "instruction": "0x002807E0",
+          "register": "r3",
+          "literal_at": "0x00280828",
+          "value": "0x0056C0A0"
+        },
+        {
+          "instruction": "0x002807F0",
+          "register": "r4",
+          "literal_at": "0x0028082C",
+          "value": "0x00570140"
+        },
+        {
+          "instruction": "0x002807F8",
+          "register": "r3",
+          "literal_at": "0x00280830",
+          "value": "0x005700A0"
+        },
+        {
+          "instruction": "0x00280804",
+          "register": "r1",
+          "literal_at": "0x00280834",
+          "value": "0x003BE5B0"
+        },
+        {
+          "instruction": "0x0028080C",
+          "register": "r3",
+          "literal_at": "0x00280838",
+          "value": "0x004CFB44",
+          "string": "Demo GUI"
+        }
+      ],
+      "indirect_calls": []
+    },
+    "0x003BE5B0": {
+      "entry": "0x003BE5B0",
+      "label": "Demo_GUI_thread",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x003BE6A0",
+      "call_sites": [
+        {
+          "from": "0x003BE5C0",
+          "to": "0x00339BA8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFDED78"
+        },
+        {
+          "from": "0x003BE5C8",
+          "to": "0x00339BB8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFDED7A"
+        },
+        {
+          "from": "0x003BE5CC",
+          "to": "0x00447640",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB02241B"
+        },
+        {
+          "from": "0x003BE5DC",
+          "to": "0x00298B64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFB6960"
+        },
+        {
+          "from": "0x003BE5E4",
+          "to": "0x004BE95C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB0400DC"
+        },
+        {
+          "from": "0x003BE5F0",
+          "to": "0x003C6044",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB001E93"
+        },
+        {
+          "from": "0x003BE5FC",
+          "to": "0x004BE95C",
+          "condition": 11,
+          "role": "direct_bl",
+          "observed_oem_word": "0xBB0400D6"
+        },
+        {
+          "from": "0x003BE63C",
+          "to": "0x002A1488",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFB8B91"
+        },
+        {
+          "from": "0x003BE640",
+          "to": "0x002A0DC8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFB89E0"
+        },
+        {
+          "from": "0x003BE648",
+          "to": "0x00298B64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFB6945"
+        },
+        {
+          "from": "0x003BE64C",
+          "to": "0x003BE6A0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB000013"
+        },
+        {
+          "from": "0x003BE658",
+          "to": "0x004BE95C",
+          "condition": 11,
+          "role": "direct_bl",
+          "observed_oem_word": "0xBB0400BF"
+        },
+        {
+          "from": "0x003BE684",
+          "to": "0x003BE6C0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB00000D"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [
+        {
+          "instruction": "0x003BE5D8",
+          "register": "r0",
+          "literal_at": "0x003BE68C",
+          "value": "0x004F75A4"
+        },
+        {
+          "instruction": "0x003BE600",
+          "register": "r4",
+          "literal_at": "0x003BE690",
+          "value": "0x0066AFA0"
+        },
+        {
+          "instruction": "0x003BE604",
+          "register": "r3",
+          "literal_at": "0x003BE694",
+          "value": "0x00000050"
+        },
+        {
+          "instruction": "0x003BE644",
+          "register": "r0",
+          "literal_at": "0x003BE698",
+          "value": "0x004F75C0"
+        },
+        {
+          "instruction": "0x003BE65C",
+          "register": "r3",
+          "literal_at": "0x003BE69C",
+          "value": "0x00560C18"
+        }
+      ],
+      "indirect_calls": [
+        {
+          "at": "0x003BE614",
+          "target_register": "r3"
+        },
+        {
+          "at": "0x003BE680",
+          "target_register": "r12"
+        }
+      ]
+    },
+    "0x00447640": {
+      "entry": "0x00447640",
+      "label": "GUI_system_coordinator",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x004476CC",
+      "call_sites": [
+        {
+          "from": "0x00447654",
+          "to": "0x00298B64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF94542"
+        },
+        {
+          "from": "0x00447660",
+          "to": "0x002DA8E8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA4CA0"
+        },
+        {
+          "from": "0x00447664",
+          "to": "0x002D97D0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA4859"
+        },
+        {
+          "from": "0x00447680",
+          "to": "0x004428BC",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFEC8D"
+        },
+        {
+          "from": "0x00447684",
+          "to": "0x004CAA44",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB020CEE"
+        },
+        {
+          "from": "0x0044768C",
+          "to": "0x004CB19C",
+          "condition": 0,
+          "role": "direct_bl",
+          "observed_oem_word": "0x0B020EC2"
+        },
+        {
+          "from": "0x00447694",
+          "to": "0x0033A020",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBCA61"
+        },
+        {
+          "from": "0x00447698",
+          "to": "0x002D559C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA37BF"
+        },
+        {
+          "from": "0x0044769C",
+          "to": "0x002B9A20",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF9C8DF"
+        },
+        {
+          "from": "0x004476A0",
+          "to": "0x004AE688",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB019BF8"
+        },
+        {
+          "from": "0x004476A4",
+          "to": "0x0034D6B8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFC1803"
+        },
+        {
+          "from": "0x004476A8",
+          "to": "0x003389E0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC4CC"
+        },
+        {
+          "from": "0x004476AC",
+          "to": "0x002922F4",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF92B10"
+        },
+        {
+          "from": "0x004476B0",
+          "to": "0x004475C0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFFFC2"
+        },
+        {
+          "from": "0x004476B4",
+          "to": "0x003E2994",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFE6CB6"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [
+        {
+          "instruction": "0x0044764C",
+          "register": "r0",
+          "literal_at": "0x004476C0",
+          "value": "0x004E0848"
+        },
+        {
+          "instruction": "0x00447650",
+          "register": "r1",
+          "literal_at": "0x004476C4",
+          "value": "0x00504300",
+          "string": "PWRMNT_FULLSPEED"
+        },
+        {
+          "instruction": "0x00447690",
+          "register": "r0",
+          "literal_at": "0x004476C8",
+          "value": "0x0068E4B4"
+        }
+      ],
+      "indirect_calls": []
+    },
+    "0x004475C0": {
+      "entry": "0x004475C0",
+      "label": "create_system_initial_thread",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x00447640",
+      "call_sites": [
+        {
+          "from": "0x004475E4",
+          "to": "0x00298B64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF9455E"
+        },
+        {
+          "from": "0x00447610",
+          "to": "0x00339AAC",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC925"
+        },
+        {
+          "from": "0x0044761C",
+          "to": "0x00339B6C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC952"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [
+        {
+          "instruction": "0x004475D0",
+          "register": "r5",
+          "literal_at": "0x00447628",
+          "value": "0x00690EF8"
+        },
+        {
+          "instruction": "0x004475E0",
+          "register": "r0",
+          "literal_at": "0x0044762C",
+          "value": "0x005042AC"
+        },
+        {
+          "instruction": "0x004475E8",
+          "register": "r3",
+          "literal_at": "0x00447630",
+          "value": "0x0068E4D8"
+        },
+        {
+          "instruction": "0x004475F8",
+          "register": "r3",
+          "literal_at": "0x00447634",
+          "value": "0x00690E58"
+        },
+        {
+          "instruction": "0x00447604",
+          "register": "r1",
+          "literal_at": "0x00447638",
+          "value": "0x00447540"
+        },
+        {
+          "instruction": "0x0044760C",
+          "register": "r3",
+          "literal_at": "0x0044763C",
+          "value": "0x005042DC",
+          "string": "Systen initial Thread"
+        },
+        {
+          "instruction": "0x00447614",
+          "register": "r3",
+          "literal_at": "0x00447628",
+          "value": "0x00690EF8"
+        }
+      ],
+      "indirect_calls": []
+    },
+    "0x00447540": {
+      "entry": "0x00447540",
+      "label": "system_initial_thread",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x004475C0",
+      "call_sites": [
+        {
+          "from": "0x00447550",
+          "to": "0x00339F10",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBCA6E"
+        },
+        {
+          "from": "0x00447558",
+          "to": "0x00339F10",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBCA6C"
+        },
+        {
+          "from": "0x0044755C",
+          "to": "0x002886F0",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF90463"
+        },
+        {
+          "from": "0x0044756C",
+          "to": "0x00339F64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBCA7C"
+        },
+        {
+          "from": "0x0044757C",
+          "to": "0x002D1B28",
+          "condition": 1,
+          "role": "direct_bl",
+          "observed_oem_word": "0x1BFA2969"
+        },
+        {
+          "from": "0x00447588",
+          "to": "0x00339F3C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBCA6B"
+        },
+        {
+          "from": "0x0044758C",
+          "to": "0x004474D8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFFFD1"
+        },
+        {
+          "from": "0x004475A0",
+          "to": "0x002D8B88",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA4578"
+        },
+        {
+          "from": "0x004475A4",
+          "to": "0x00447458",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFFFAB"
+        },
+        {
+          "from": "0x004475A8",
+          "to": "0x00339B04",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC955"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [
+        {
+          "instruction": "0x0044754C",
+          "register": "r0",
+          "literal_at": "0x004475B0",
+          "value": "0x0068E4D0"
+        },
+        {
+          "instruction": "0x00447554",
+          "register": "r0",
+          "literal_at": "0x004475B4",
+          "value": "0x0068E4C8"
+        },
+        {
+          "instruction": "0x00447560",
+          "register": "r0",
+          "literal_at": "0x004475B4",
+          "value": "0x0068E4C8"
+        },
+        {
+          "instruction": "0x00447570",
+          "register": "r3",
+          "literal_at": "0x004475B8",
+          "value": "0x0055613C"
+        },
+        {
+          "instruction": "0x00447580",
+          "register": "r0",
+          "literal_at": "0x004475BC",
+          "value": "0x005EF634"
+        }
+      ],
+      "indirect_calls": []
+    },
+    "0x004474D8": {
+      "entry": "0x004474D8",
+      "label": "system_init_retry_helper",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x00447540",
+      "call_sites": [
+        {
+          "from": "0x004474F0",
+          "to": "0x00298B64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF9459B"
+        },
+        {
+          "from": "0x004474F8",
+          "to": "0x00438394",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFC3A5"
+        },
+        {
+          "from": "0x00447508",
+          "to": "0x00298B64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF94595"
+        },
+        {
+          "from": "0x00447518",
+          "to": "0x00339BE8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC9B2"
+        },
+        {
+          "from": "0x0044752C",
+          "to": "0x00339F3C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBCA82"
+        }
+      ],
+      "back_edges": [
+        {
+          "from": "0x00447520",
+          "to": "0x004474F4",
+          "word": "0xBAFFFFF3"
+        }
+      ],
+      "pc_literals": [
+        {
+          "instruction": "0x004474EC",
+          "register": "r0",
+          "literal_at": "0x00447534",
+          "value": "0x0050425C"
+        },
+        {
+          "instruction": "0x00447504",
+          "register": "r0",
+          "literal_at": "0x00447538",
+          "value": "0x00504284"
+        },
+        {
+          "instruction": "0x00447524",
+          "register": "r0",
+          "literal_at": "0x0044753C",
+          "value": "0x0068E4D0"
+        }
+      ],
+      "indirect_calls": []
+    },
+    "0x00447458": {
+      "entry": "0x00447458",
+      "label": "create_background_thread",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x004474D8",
+      "call_sites": [
+        {
+          "from": "0x0044749C",
+          "to": "0x00339AAC",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC982"
+        },
+        {
+          "from": "0x004474A8",
+          "to": "0x00298B64",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF945AD"
+        },
+        {
+          "from": "0x004474B4",
+          "to": "0x00339B6C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC9AC"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [
+        {
+          "instruction": "0x00447468",
+          "register": "r4",
+          "literal_at": "0x004474C0",
+          "value": "0x0069391C"
+        },
+        {
+          "instruction": "0x00447478",
+          "register": "r3",
+          "literal_at": "0x004474C4",
+          "value": "0x00690EFC"
+        },
+        {
+          "instruction": "0x00447488",
+          "register": "r3",
+          "literal_at": "0x004474C8",
+          "value": "0x0069387C"
+        },
+        {
+          "instruction": "0x00447494",
+          "register": "r1",
+          "literal_at": "0x004474CC",
+          "value": "0x004473BC"
+        },
+        {
+          "instruction": "0x00447498",
+          "register": "r3",
+          "literal_at": "0x004474D0",
+          "value": "0x00504214",
+          "string": "Systen BackGround Thread"
+        },
+        {
+          "instruction": "0x004474A0",
+          "register": "r0",
+          "literal_at": "0x004474D4",
+          "value": "0x00504230"
+        },
+        {
+          "instruction": "0x004474AC",
+          "register": "r3",
+          "literal_at": "0x004474C0",
+          "value": "0x0069391C"
+        }
+      ],
+      "indirect_calls": []
+    },
+    "0x004473BC": {
+      "entry": "0x004473BC",
+      "label": "background_thread",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x00447458",
+      "call_sites": [
+        {
+          "from": "0x004473CC",
+          "to": "0x00438394",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFC3F0"
+        },
+        {
+          "from": "0x004473D4",
+          "to": "0x0029E830",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBF95D15"
+        },
+        {
+          "from": "0x004473DC",
+          "to": "0x00447368",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFFFE1"
+        },
+        {
+          "from": "0x004473E4",
+          "to": "0x00447388",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFFFE7"
+        },
+        {
+          "from": "0x004473E8",
+          "to": "0x004472C4",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFFFB5"
+        },
+        {
+          "from": "0x004473F0",
+          "to": "0x002CDACC",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA19B5"
+        },
+        {
+          "from": "0x004473FC",
+          "to": "0x002CDB14",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA19C4"
+        },
+        {
+          "from": "0x00447414",
+          "to": "0x002D885C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA4510"
+        },
+        {
+          "from": "0x00447424",
+          "to": "0x002D8784",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA44D6"
+        },
+        {
+          "from": "0x00447438",
+          "to": "0x002CC3E4",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA13E9"
+        },
+        {
+          "from": "0x0044743C",
+          "to": "0x002CC48C",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA1412"
+        },
+        {
+          "from": "0x00447440",
+          "to": "0x002CDC88",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFA1A10"
+        },
+        {
+          "from": "0x0044744C",
+          "to": "0x00339BE8",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFBC9E5"
+        }
+      ],
+      "back_edges": [
+        {
+          "from": "0x00447450",
+          "to": "0x004473F0",
+          "word": "0xEAFFFFE6"
+        }
+      ],
+      "pc_literals": [
+        {
+          "instruction": "0x00447404",
+          "register": "r4",
+          "literal_at": "0x00447454",
+          "value": "0x005623F4"
+        },
+        {
+          "instruction": "0x00447430",
+          "register": "r3",
+          "literal_at": "0x00447454",
+          "value": "0x005623F4"
+        }
+      ],
+      "indirect_calls": []
+    },
+    "0x00339AAC": {
+      "entry": "0x00339AAC",
+      "label": "thread_creation_wrapper",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x00339B04",
+      "call_sites": [
+        {
+          "from": "0x00339AF0",
+          "to": "0x0033A2DC",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB0001F9"
+        }
+      ],
+      "back_edges": [],
+      "pc_literals": [],
+      "indirect_calls": []
+    },
+    "0x0033A2DC": {
+      "entry": "0x0033A2DC",
+      "label": "thread_creation_internal",
+      "prologue": "0xE1A0C00D",
+      "next_prologue_heuristic": "0x0033A484",
+      "call_sites": [
+        {
+          "from": "0x0033A314",
+          "to": "0x002815BC",
+          "condition": 3,
+          "role": "direct_bl",
+          "observed_oem_word": "0x3BFD1CA8"
+        },
+        {
+          "from": "0x0033A334",
+          "to": "0x0033C158",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB000787"
+        },
+        {
+          "from": "0x0033A350",
+          "to": "0x00339528",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEBFFFC74"
+        },
+        {
+          "from": "0x0033A3A8",
+          "to": "0x0033BF08",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB0006D6"
+        },
+        {
+          "from": "0x0033A3B8",
+          "to": "0x002815BC",
+          "condition": 0,
+          "role": "direct_bl",
+          "observed_oem_word": "0x0BFD1C7F"
+        },
+        {
+          "from": "0x0033A3CC",
+          "to": "0x002815BC",
+          "condition": 0,
+          "role": "direct_bl",
+          "observed_oem_word": "0x0BFD1C7A"
+        },
+        {
+          "from": "0x0033A404",
+          "to": "0x0033BCC4",
+          "condition": 14,
+          "role": "direct_bl",
+          "observed_oem_word": "0xEB00062E"
+        }
+      ],
+      "back_edges": [
+        {
+          "from": "0x0033A3F0",
+          "to": "0x0033A3E0",
+          "word": "0xDAFFFFFA"
+        },
+        {
+          "from": "0x0033A438",
+          "to": "0x0033A428",
+          "word": "0xDAFFFFFA"
+        }
+      ],
+      "pc_literals": [
+        {
+          "instruction": "0x0033A310",
+          "register": "r0",
+          "literal_at": "0x0033A460",
+          "value": "0x004F18A8",
+          "string": "Stack size too small"
+        },
+        {
+          "instruction": "0x0033A340",
+          "register": "r3",
+          "literal_at": "0x0033A464",
+          "value": "0x0055B720"
+        },
+        {
+          "instruction": "0x0033A348",
+          "register": "r2",
+          "literal_at": "0x0033A468",
+          "value": "0x0033AF28"
+        },
+        {
+          "instruction": "0x0033A378",
+          "register": "r0",
+          "literal_at": "0x0033A46C",
+          "value": "0x0055B738"
+        },
+        {
+          "instruction": "0x0033A388",
+          "register": "r2",
+          "literal_at": "0x0033A470",
+          "value": "0x0055B730"
+        },
+        {
+          "instruction": "0x0033A3B4",
+          "register": "r0",
+          "literal_at": "0x0033A474",
+          "value": "0x004D40EC",
+          "string": "New scheduler lock value == 0"
+        },
+        {
+          "instruction": "0x0033A3BC",
+          "register": "r3",
+          "literal_at": "0x0033A46C",
+          "value": "0x0055B738"
+        },
+        {
+          "instruction": "0x0033A3C8",
+          "register": "r0",
+          "literal_at": "0x0033A478",
+          "value": "0x004D410C",
+          "string": "Scheduler lock == 0"
+        },
+        {
+          "instruction": "0x0033A3D0",
+          "register": "r3",
+          "literal_at": "0x0033A46C",
+          "value": "0x0055B738"
+        },
+        {
+          "instruction": "0x0033A3FC",
+          "register": "r0",
+          "literal_at": "0x0033A47C",
+          "value": "0x0063E0F8"
+        },
+        {
+          "instruction": "0x0033A444",
+          "register": "r3",
+          "literal_at": "0x0033A480",
+          "value": "0x0033A100"
+        }
+      ],
+      "indirect_calls": []
+    }
+  },
+  "thread_spawns": [
+    {
+      "thread": "Demo GUI",
+      "entry": "0x003BE5B0",
+      "create_callsite": "0x00280810",
+      "priority_arg_r0": 25,
+      "stack_bytes_argument": 16384,
+      "edge_type": "function_pointer_argument_r1_NOT_direct_call"
+    },
+    {
+      "thread": "Systen initial Thread",
+      "entry": "0x00447540",
+      "create_callsite": "0x00447610",
+      "priority_arg_r0": 12,
+      "stack_bytes_argument": 10624,
+      "edge_type": "function_pointer_argument_r1_NOT_direct_call"
+    },
+    {
+      "thread": "Systen BackGround Thread",
+      "entry": "0x004473BC",
+      "create_callsite": "0x0044749C",
+      "priority_arg_r0": 30,
+      "stack_bytes_argument": 10624,
+      "edge_type": "function_pointer_argument_r1_NOT_direct_call"
+    }
+  ],
+  "direct_BL_xrefs": {
+    "0x003BE5B0": [],
+    "0x00447640": [
+      "0x003BE5CC"
+    ],
+    "0x004475C0": [
+      "0x004476B0"
+    ],
+    "0x00447540": [],
+    "0x00447458": [
+      "0x004475A4"
+    ],
+    "0x004473BC": [],
+    "0x00339AAC": [
+      "0x00280810",
+      "0x002929B8",
+      "0x00292A28",
+      "0x00293D64",
+      "0x002C6188",
+      "0x002C6234",
+      "0x002D3E48",
+      "0x002D560C",
+      "0x002D565C",
+      "0x002D9850",
+      "0x002E0A88",
+      "0x002E0AD0",
+      "0x002E1A18",
+      "0x002E1AAC",
+      "0x002E2674",
+      "0x002E2A08",
+      "0x002EB42C",
+      "0x00315EF4",
+      "0x00321D24",
+      "0x00321D6C",
+      "0x00322AE0",
+      "0x0032715C",
+      "0x0032E2AC",
+      "0x00338D98",
+      "0x00338DCC",
+      "0x0034A4D0",
+      "0x0034D15C",
+      "0x0034F398",
+      "0x0044749C",
+      "0x00447610",
+      "0x00448D34",
+      "0x00462970",
+      "0x004AFA00",
+      "0x004B001C",
+      "0x004CB3C8"
+    ],
+    "0x00339BE8": [
+      "0x0029136C",
+      "0x002BA5D4",
+      "0x002BE074",
+      "0x002BE0A8",
+      "0x002BE858",
+      "0x002BEA28",
+      "0x002C0760",
+      "0x002C07D8",
+      "0x002C10D0",
+      "0x002C11F8",
+      "0x002C1260",
+      "0x002C14F8",
+      "0x002C19C4",
+      "0x002C1FDC",
+      "0x002C20D0",
+      "0x002C3274",
+      "0x002C4A20",
+      "0x002C4BBC",
+      "0x002C6024",
+      "0x002C60C0",
+      "0x002C6144",
+      "0x002CC324",
+      "0x002D3174",
+      "0x002D3DD8",
+      "0x002D3F40",
+      "0x002D4BA4",
+      "0x002D5104",
+      "0x002D5214",
+      "0x002DF5F0",
+      "0x002DF658",
+      "0x002DF7C0",
+      "0x002DF84C",
+      "0x002DF9AC",
+      "0x002E139C",
+      "0x002E2868",
+      "0x002E28E0",
+      "0x002E2908",
+      "0x002E2938",
+      "0x002E2948",
+      "0x002E29A8",
+      "0x002E58D8",
+      "0x002E9FEC",
+      "0x002EA0CC",
+      "0x003194A4",
+      "0x003195A0",
+      "0x00320048",
+      "0x003202C4",
+      "0x003215A8",
+      "0x00321E0C",
+      "0x00322F40",
+      "0x0032D9D0",
+      "0x003389A4",
+      "0x00338A64",
+      "0x00338C0C",
+      "0x00338E64",
+      "0x003489A0",
+      "0x003489B8",
+      "0x00348E10",
+      "0x00348EE0",
+      "0x0034CFEC",
+      "0x0034D004",
+      "0x0034D3F8",
+      "0x0034D4A4",
+      "0x0034D558",
+      "0x0034F2C0",
+      "0x00350884",
+      "0x00351008",
+      "0x0035136C",
+      "0x0040D158",
+      "0x0040DF48",
+      "0x0041020C",
+      "0x004105E0",
+      "0x00410740",
+      "0x004107D0",
+      "0x00410850",
+      "0x004108C4",
+      "0x00410E8C",
+      "0x00410F28",
+      "0x00411D2C",
+      "0x004165C8",
+      "0x0041E690",
+      "0x004242EC",
+      "0x00424438",
+      "0x00425904",
+      "0x00425944",
+      "0x004267D0",
+      "0x0043ACB8",
+      "0x0044744C",
+      "0x00447518",
+      "0x004489C4",
+      "0x00448C5C",
+      "0x00448DD0",
+      "0x00449180",
+      "0x00449280",
+      "0x0044933C",
+      "0x0044E510",
+      "0x0044E56C",
+      "0x0044E684",
+      "0x0044ECEC",
+      "0x0044F008",
+      "0x0044F0E4",
+      "0x0044F2D4",
+      "0x0044F3C4",
+      "0x0044F3F4",
+      "0x0044FB2C",
+      "0x00452AA8",
+      "0x00452C54",
+      "0x00452EC8",
+      "0x004531B0",
+      "0x00456990",
+      "0x004580D4",
+      "0x004583B0",
+      "0x004586D4",
+      "0x00458BFC",
+      "0x00458C68",
+      "0x00458CE4",
+      "0x00459A80",
+      "0x0045EEE8",
+      "0x0045F5E0",
+      "0x0045FED8",
+      "0x0045FEF0",
+      "0x00460A5C",
+      "0x00460ACC",
+      "0x004611A8",
+      "0x0046286C",
+      "0x00462A3C",
+      "0x004AE6DC",
+      "0x004AEEA4",
+      "0x004AFA90",
+      "0x004B00BC",
+      "0x004B0144",
+      "0x004B0664",
+      "0x004B0700",
+      "0x004B0718",
+      "0x004B168C",
+      "0x004B1774"
+    ],
+    "0x00339B04": [
+      "0x002937AC",
+      "0x00338C10",
+      "0x004475A8",
+      "0x004AF928",
+      "0x004B0750"
+    ]
+  },
+  "mmio": {
+    "coordinator": "0x00447640",
+    "instruction_range": "0x00447668..0x0044767C",
+    "address": "0x90005040",
+    "read_modify_or_0x7_write": true,
+    "register_semantics": "UNKNOWN; do not perform writes from SPMP-OS"
+  },
+  "limits": [
+    "A static machine-code audit, not a Ghidra decompilation or hardware trace.",
+    "No guarantee that conditional code paths execute on every boot.",
+    "The next-prologue bound is heuristic; trailing literal pools are not executable.",
+    "Exact purpose of 0x90005040 and other helper routines requires further investigation.",
+    "Function pointer threads are asynchronous; BL ordering does not establish scheduling order.",
+    "DO NOT patch RedBoot, factory RAP or flash from this report."
+  ]
+}

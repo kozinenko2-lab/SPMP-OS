@@ -1,0 +1,27 @@
+# Private references remain local, including any reintroduced copies.
+/firmware/
+/ghidra/user_GZF/
+/ghidra/Stage52_ELF_Imports/
+/project/spmp-os/firmware/
+**/roms/
+*.RAP
+*.rap
+*.praw
+*.img
+*.gzf
+*.elf
+*.bin
+*.zip
+*.7z
+# Build products and caches
+**/build/
+**/builds/
+__pycache__/
+*.py[cod]
+*.o
+*.a
+*.so
+*.d
+*.log
+.DS_Store
+/research/boot_reconstruction/mmp_inspect

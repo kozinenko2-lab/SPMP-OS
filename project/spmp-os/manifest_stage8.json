@@ -1,0 +1,12 @@
+{
+  "project": "SPMP-OS",
+  "stage": 8,
+  "primary_new_core": "FCEUmm NES, statically linked into host prototype",
+  "test_status": "38/38 Python tests; FCEUmm/Atari/PC Engine independent harnesses pass on x86_64",
+  "armv5_status": "FCEUmm x6502 CPU relocatable object only, no full ARMv5 executable, no Defender hardware HAL",
+  "not_yet_linked": ["GB/GBC Gambatte", "GBA gpSP", "SNES Snes9x 2005", "Mega Drive PicoDrive", "Duke Nukem 3D", "Space Cadet Pinball"],
+  "original_redboot_modified": false,
+  "original_firmware_modified": false,
+  "suitable_for_flashing": false,
+  "new_source": ["src/cores/fceumm_adapter.c", "third_party/fceumm", "tests/fceumm_harness.c", "tests/test_stage8.py"]
+}

@@ -1,0 +1,9 @@
+# Compile-only ARMv5 optimisation objects: not an executable firmware.
+CLANG ?= clang
+ARMFLAGS = --target=armv5te-none-eabi -mcpu=arm926ej-s -marm -mfloat-abi=soft -O2 -ffreestanding -fno-builtin -ffunction-sections -fdata-sections -DSPMP_PSX4ALL=1
+OUT ?= ../../../../build/armv5
+all:
+	mkdir -p $(OUT)
+	$(CLANG) $(ARMFLAGS) -c spmp_psx_opt.c -o $(OUT)/spmp_psx_opt.o
+	$(CLANG) $(ARMFLAGS) -c ../recompiler3/arm/arm.S -o $(OUT)/psx_jit_cache_bridge.o
+.PHONY: all

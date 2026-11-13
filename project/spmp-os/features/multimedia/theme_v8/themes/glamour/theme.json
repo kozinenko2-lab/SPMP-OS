@@ -1,0 +1,50 @@
+{
+  "id": "glamour",
+  "name_ru": "Девушки: Классика",
+  "category": "girls",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff37a0",
+    "panel": "#110812",
+    "text": "#ffffff",
+    "muted": "#cfbfd2",
+    "sel": "#83185c",
+    "border": "#b43578"
+  },
+  "provenance": {
+    "input_reference": "background.png",
+    "input_sha256": "previous_v7_theme"
+  }
+}

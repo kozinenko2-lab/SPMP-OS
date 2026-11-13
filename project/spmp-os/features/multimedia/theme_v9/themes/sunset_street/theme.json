@@ -1,0 +1,50 @@
+{
+  "id": "sunset_street",
+  "name_ru": "Автомобили: Закатный RX",
+  "category": "cars",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff9f31",
+    "panel": "#1b1520",
+    "text": "#ffffff",
+    "muted": "#ffe8db",
+    "sel": "#ff9f31",
+    "border": "#ff9f31"
+  },
+  "provenance": {
+    "input_reference": "оранжевый_sunset_street_rx_ui.png",
+    "input_sha256": "14c9941ea6f8f2ef79d4e3d96ba96501bb4301958bfd039fd8a7127d0ce3b789"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "alpine_coast",
+  "name_ru": "Природа: Горы и море",
+  "category": "nature",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#24dbf6",
+    "panel": "#072434",
+    "text": "#ffffff",
+    "muted": "#e7f5f7",
+    "sel": "#24dbf6",
+    "border": "#24dbf6"
+  },
+  "provenance": {
+    "input_reference": "futuristic mountain/coast style concept, source scenic base v7",
+    "input_sha256": "previous_v7_theme"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "module": "spmp-fm01",
+  "version": "FM-01",
+  "target": "SPMP-OS ARMv5/Stage10+",
+  "install_path": "features/filemanager/FM01",
+  "files": {
+    "README_RU.md": "b1faf4fda91ad032255739c471d67cab1b3f4e0d19bb2c171569ae5e9ad7693f",
+    "build/fm01_combined_armv5.o": "17d6a566a6228f5d5fb0345d58743af8ece47d0353dbc4536b6fd7d90215cf3f",
+    "build/fm01_core_armv5.o": "13ac4b6848bf455c892de5a66fdd1aa7a5a0b94b23e5273e4fef88ea67a93f7b",
+    "build/fm01_host": "80af07eddddee576c56299220e16f4e65bebcdd070b7106ae6ed306bf694b765",
+    "build/fm01_render_armv5.o": "92d6278f15e0dd1d7ebe4f8dcbf0d9c0ade9743cc4a96733332f66c2bd5699ae",
+    "build/libfm01_host.so": "3eb8eaf95ffb6101eadef33b1e7c886a02970a6676042b5405fe66212f794dc3",
+    "build/libspmp_fm01_armv5.a": "a2d84664b7350ecfb77568b32040c3cd4b6fe9885d0f486073a0579213a632d8",
+    "build/test_fm01": "6f35627d207409042c2497aa7a111abd7bc3adf04128593076a398e14b5b541d",
+    "host/fm01_cli.c": "e6fa7584c9b287d7bcc3409d6f42630952ec0361f4181aa57dd90d76dd5df1fa",
+    "host/fm01_demo_bridge.c": "ea5972cf039e37b7446c55f03d7559f962083e9f5aba666f3dbb07b0bacdace1",
+    "host/fm01_posix.c": "4b37abe02c846abd2048355074bd14655b2993e29b0d4375abd5437d7d308142",
+    "host/fm01_posix.h": "559f696bcb7c1916f53fc7c2882439db7dd7892f4dc655242556b7a3f91e4567",
+    "include/spmp_fm01.h": "584cd86bba13d8d30a4d78990d4d463bdeceab4c9845c7409e633726ee27786e",
+    "previews/FM01_SD_removed.png": "ecb0991a116c27251648a41501edd7ca7fc986caed31b2856d210990f252f667",
+    "previews/FM01_action_heat_90s.png": "8bca99f0aed7fe1efa60eb895fc4f28123dcbd991e9af440eab990b546c5a5ce",
+    "previews/FM01_beach_glow.png": "b9cdb432b45554d92f99b755d9334361adbdb1b5c869c355247135658c80364d",
+    "previews/FM01_circuit_storm.png": "40b1ca2cf88d985197c124e879978143bb3f13367855fda906a67c9206be66fa",
+    "previews/FM01_four_themes.png": "59eb1ab9b9ecfc64ee362d7f5c6000a8141c2d81257ae5737d782805754ca114",
+    "previews/FM01_ocean_curve.png": "34b3428a85fa4c85676264dcb5fa966516ea907c9dbc6eba65b4681b05d48441",
+    "src/fm01_core.c": "62e58fedecffc04e710ea05a76913d89ec5d5babc3ccb9392f101d410ec4ca88",
+    "src/fm01_render.c": "ee3576af427fcebb8fe6b71078ab95a5d9722052846eb4c9026e620521943327",
+    "tests/test_fm01.c": "ba683c92051e124ea573ee66cf977e3c9aa44e161cd27e000566376b95b7bd87",
+    "tests/test_posix.py": "ef36348605c7a605d1af6c8d8afcede4ef8ed5aadf585e2bc9d8ef4a9761fc87",
+    "tools/build.sh": "21743de81fc380fd1b9dbab262bc989c0077d351c05180ec89cd7e2b8deac802",
+    "tools/preview.py": "76b4126cd9b73cfcdd4111934494a83cc309cc2c315a0f0122f63578c3b70423"
+  }
+}

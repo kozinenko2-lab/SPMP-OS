@@ -1,0 +1,11 @@
+marker,found,rap_file_offset,runtime_string_address,confidence
+MASK_CMD18 fail,True,0x00257ec1,0x004d7e75,string_only_not_command_flow
+MASK_CMD25 fail,True,0x00257f69,0x004d7f1d,string_only_not_command_flow
+issue MASK_CMD17 cmd fail,True,0x00257ffd,0x004d7fb1,string_only_not_command_flow
+issue MASK_CMD24 cmd fail,True,0x00258091,0x004d8045,string_only_not_command_flow
+MASK_CMD12 fail retry now,True,0x0025827d,0x004d8231,string_only_not_command_flow
+sd_mblk_read_dma stop MASK_CMD12 fail,True,0x00258161,0x004d8115,string_only_not_command_flow
+SD_POLL_WAIT(MASK_S_CmdComplete) error,True,0x00257b65,0x004d7b19,string_only_not_command_flow
+SD card not in TRAN state,True,0x00257c91,0x004d7c45,string_only_not_command_flow
+force reset sd card,True,0x00257b05,0x004d7ab9,string_only_not_command_flow
+SD card not insert,True,0x00257b25,0x004d7ad9,string_only_not_command_flow

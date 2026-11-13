@@ -1,0 +1,261 @@
+{
+  "rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "firmware": "Defender stock 8000_MMI.RAP",
+  "status_poll_function": "0x002B9A38",
+  "poll_status_source": {
+    "literal_pc": "0x002B9B58",
+    "value": "0x92B0B014",
+    "observed": "32-bit LDR, TST input mask; read only in this function",
+    "status": "candidate register with confirmed instruction load; hardware ownership untested"
+  },
+  "oem_counter": {
+    "count_immediate_1": 49920,
+    "count_immediate_2": 80,
+    "threshold": 50000,
+    "loop_initial_count": 0,
+    "branch_condition": "unsigned higher than 50000",
+    "maximum_loop_iterations": 50001,
+    "not_wallclock_time": true
+  },
+  "error_bit_tests": {
+    "aggregate_mask": "0x630",
+    "individual_masks": [
+      "0x10",
+      "0x20",
+      "0x200",
+      "0x400"
+    ]
+  },
+  "oem_return_values": {
+    "no_reported_error_bits": "0",
+    "nonzero_status_error_mask": "0x420 (1056)",
+    "software_abort_gate": "0x405 (1029)"
+  },
+  "known_gap": "After budget exhausted, OEM code may return 0 if 0x630 bits are clear, even when the desired completion bit was not observed. Never equate OEM return-zero with observed completion in a new logger.",
+  "software_gate": {
+    "literal_pc": "0x002B9B5C",
+    "global_address": "0x00555F18",
+    "effect": "nonzero global short-circuits poll and is zeroed; not a hardware register"
+  },
+  "verified_callers": [
+    {
+      "bl": "0x002B9BC4",
+      "mask": "0x4",
+      "evidence": "immediate mov"
+    },
+    {
+      "bl": "0x002B9C74",
+      "mask": "0x40",
+      "evidence": "immediate mov"
+    },
+    {
+      "bl": "0x002B9C98",
+      "mask": "0x4",
+      "evidence": "add #4 after successful poll returned 0"
+    },
+    {
+      "bl": "0x002BA494",
+      "mask": "0x4",
+      "evidence": "immediate mov"
+    }
+  ],
+  "command_setup": {
+    "function": "0x002B9B78",
+    "observed": [
+      {
+        "pc": "0x002B9B9C",
+        "effect": "STR 0xFFFF to 0x92B0B014 (status/ack-related address, semantics unverified)"
+      },
+      {
+        "pc": "0x002B9BAC",
+        "effect": "STR caller r1 to address constructed as 0x92B0B00C"
+      },
+      {
+        "pc": "0x002B9BBC",
+        "effect": "STR caller r0 to address constructed as 0x92B0B008"
+      },
+      {
+        "pc": "0x002B9BC4",
+        "effect": "BL status poll with mask=0x04"
+      },
+      {
+        "pc": "0x002B9BF4",
+        "effect": "LDR from 0x92B0B010 on nonerror path"
+      }
+    ],
+    "critical_warning": "Static analysis only; no MMIO writes permitted by Stage45 firmware or probe code."
+  },
+  "opcodes": [
+    {
+      "pc": "0x002B9A38",
+      "word": "0xE1A0C00D"
+    },
+    {
+      "pc": "0x002B9A48",
+      "word": "0xE59F3108"
+    },
+    {
+      "pc": "0x002B9A4C",
+      "word": "0xE5933000"
+    },
+    {
+      "pc": "0x002B9A50",
+      "word": "0xE1100003"
+    },
+    {
+      "pc": "0x002B9A5C",
+      "word": "0xE3A01CC3"
+    },
+    {
+      "pc": "0x002B9A60",
+      "word": "0xE2811050"
+    },
+    {
+      "pc": "0x002B9A68",
+      "word": "0xE5943000"
+    },
+    {
+      "pc": "0x002B9A6C",
+      "word": "0xE3530000"
+    },
+    {
+      "pc": "0x002B9A74",
+      "word": "0xE2822001"
+    },
+    {
+      "pc": "0x002B9A78",
+      "word": "0xE1520001"
+    },
+    {
+      "pc": "0x002B9A7C",
+      "word": "0x8A000002"
+    },
+    {
+      "pc": "0x002B9A80",
+      "word": "0xE59C3000"
+    },
+    {
+      "pc": "0x002B9A84",
+      "word": "0xE1100003"
+    },
+    {
+      "pc": "0x002B9A88",
+      "word": "0x0AFFFFF6"
+    },
+    {
+      "pc": "0x002B9AC8",
+      "word": "0xE59F2088"
+    },
+    {
+      "pc": "0x002B9AD0",
+      "word": "0xE3130E63"
+    },
+    {
+      "pc": "0x002B9AD4",
+      "word": "0x03A00000"
+    },
+    {
+      "pc": "0x002B9AD8",
+      "word": "0x089DA810"
+    },
+    {
+      "pc": "0x002B9B28",
+      "word": "0xE3A00E42"
+    },
+    {
+      "pc": "0x002B9B2C",
+      "word": "0xE89DA810"
+    },
+    {
+      "pc": "0x002B9B58",
+      "word": "0x92B0B014"
+    },
+    {
+      "pc": "0x002B9B5C",
+      "word": "0x00555F18"
+    },
+    {
+      "pc": "0x002B9B90",
+      "word": "0xE59F707C"
+    },
+    {
+      "pc": "0x002B9B94",
+      "word": "0xE3A03CFF"
+    },
+    {
+      "pc": "0x002B9B98",
+      "word": "0xE28330FF"
+    },
+    {
+      "pc": "0x002B9B9C",
+      "word": "0xE5873000"
+    },
+    {
+      "pc": "0x002B9BA0",
+      "word": "0xE3A032C9"
+    },
+    {
+      "pc": "0x002B9BA4",
+      "word": "0xE283362B"
+    },
+    {
+      "pc": "0x002B9BA8",
+      "word": "0xE2833A0B"
+    },
+    {
+      "pc": "0x002B9BAC",
+      "word": "0xE5831000"
+    },
+    {
+      "pc": "0x002B9BB0",
+      "word": "0xE3A03289"
+    },
+    {
+      "pc": "0x002B9BB4",
+      "word": "0xE283362B"
+    },
+    {
+      "pc": "0x002B9BB8",
+      "word": "0xE2833A0B"
+    },
+    {
+      "pc": "0x002B9BBC",
+      "word": "0xE5830000"
+    },
+    {
+      "pc": "0x002B9BC0",
+      "word": "0xE3A00004"
+    },
+    {
+      "pc": "0x002B9BC4",
+      "word": "0xEBFFFF9B"
+    },
+    {
+      "pc": "0x002B9C70",
+      "word": "0xE3A00040"
+    },
+    {
+      "pc": "0x002B9C74",
+      "word": "0xEBFFFF6F"
+    },
+    {
+      "pc": "0x002B9C98",
+      "word": "0xEBFFFF66"
+    },
+    {
+      "pc": "0x002BA490",
+      "word": "0xE3A00004"
+    },
+    {
+      "pc": "0x002BA494",
+      "word": "0xEBFFFD67"
+    }
+  ],
+  "hardware_accessed_by_this_tool": false,
+  "unsupported": [
+    "No SD read-sector implementation",
+    "No verified physical SD/MMC transaction protocol",
+    "No write to NAND or SD performed",
+    "No RedBoot/MMI patched"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified_words": 29,
+  "cmd17_status": "NOT proven: no complete CMD17 transaction sequence recovered; do not invoke register addresses",
+  "command_calls": [
+    {
+      "bl": "0x2bb014",
+      "command_word": "0x1592",
+      "low_6_bits": 18,
+      "confidence": "command word reconstruction from adjacent MOV+ADD"
+    },
+    {
+      "bl": "0x2bb774",
+      "command_word": "0x1592",
+      "low_6_bits": 18,
+      "confidence": "command word reconstruction from adjacent MOV+ADD"
+    }
+  ],
+  "poll_loops": [
+    {
+      "pc": "0x002BB250",
+      "branch": "0x002BB258",
+      "condition": "status & 0x8 becomes nonzero",
+      "local_bound": "none in this three-instruction loop"
+    },
+    {
+      "pc": "0x002BB274",
+      "branch": "0x002BB27C",
+      "condition": "status & 0x1 becomes zero",
+      "local_bound": "none in this three-instruction loop"
+    },
+    {
+      "pc": "0x002BB910",
+      "branch": "0x002BB918",
+      "condition": "status & 0x8 becomes nonzero",
+      "local_bound": "none in this three-instruction loop"
+    },
+    {
+      "pc": "0x002BB950",
+      "branch": "0x002BB964",
+      "condition": "status & 0x1 becomes zero",
+      "local_bound": "counter checked at 0x002BB954/0x002BB958"
+    }
+  ],
+  "cautions": [
+    "No verified early RedBoot SD/MMC backend",
+    "No confirmed card-power,pinmux,clock,DMA/cache-coherency setup",
+    "No OEM FAT log patch",
+    "No protection against asynchronous hang until watchdog is proven"
+  ],
+  "mmio_access": false,
+  "exact_machine_words": [
+    {
+      "pc": "0x2b9b78",
+      "opcode": "0xe1a0c00d"
+    },
+    {
+      "pc": "0x2b9b90",
+      "opcode": "0xe59f707c"
+    },
+    {
+      "pc": "0x2b9b9c",
+      "opcode": "0xe5873000"
+    },
+    {
+      "pc": "0x2b9bac",
+      "opcode": "0xe5831000"
+    },
+    {
+      "pc": "0x2b9bbc",
+      "opcode": "0xe5830000"
+    },
+    {
+      "pc": "0x2b9bc4",
+      "opcode": "0xebffff9b"
+    },
+    {
+      "pc": "0x2bb004",
+      "opcode": "0xe3a00d56"
+    },
+    {
+      "pc": "0x2bb008",
+      "opcode": "0xe2800012"
+    },
+    {
+      "pc": "0x2bb014",
+      "opcode": "0xebfffad7"
+    },
+    {
+      "pc": "0x2bb250",
+      "opcode": "0xe5923000"
+    },
+    {
+      "pc": "0x2bb254",
+      "opcode": "0xe3130008"
+    },
+    {
+      "pc": "0x2bb258",
+      "opcode": "0xafffffc"
+    },
+    {
+      "pc": "0x2bb274",
+      "opcode": "0xe5923000"
+    },
+    {
+      "pc": "0x2bb278",
+      "opcode": "0xe3130001"
+    },
+    {
+      "pc": "0x2bb27c",
+      "opcode": "0x1afffffc"
+    },
+    {
+      "pc": "0x2bb330",
+      "opcode": "0x92b0b014"
+    },
+    {
+      "pc": "0x2bb760",
+      "opcode": "0xe3a00d56"
+    },
+    {
+      "pc": "0x2bb764",
+      "opcode": "0xe2800012"
+    },
+    {
+      "pc": "0x2bb774",
+      "opcode": "0xebfff8ff"
+    },
+    {
+      "pc": "0x2bb910",
+      "opcode": "0xe5923000"
+    },
+    {
+      "pc": "0x2bb914",
+      "opcode": "0xe3130008"
+    },
+    {
+      "pc": "0x2bb918",
+      "opcode": "0xafffffc"
+    },
+    {
+      "pc": "0x2bb950",
+      "opcode": "0xe2844001"
+    },
+    {
+      "pc": "0x2bb954",
+      "opcode": "0xe1540002"
+    },
+    {
+      "pc": "0x2bb958",
+      "opcode": "0x8a000030"
+    },
+    {
+      "pc": "0x2bb95c",
+      "opcode": "0xe5913000"
+    },
+    {
+      "pc": "0x2bb960",
+      "opcode": "0xe3130001"
+    },
+    {
+      "pc": "0x2bb964",
+      "opcode": "0x1afffff9"
+    },
+    {
+      "pc": "0x2bba90",
+      "opcode": "0x92b0b014"
+    }
+  ]
+}

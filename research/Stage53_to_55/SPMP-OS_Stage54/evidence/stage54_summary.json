@@ -1,0 +1,38 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "static_call_sites": 35,
+  "resolved_names": 34,
+  "unique_names": 33,
+  "confirmed_checks": {
+    "reset_branch_to_0x297CE8": true,
+    "bootstrap_calls_Demo_GUI_constructor": true,
+    "Demo_GUI_thread_create": true,
+    "Demo_GUI_entry_literal": true,
+    "Demo_GUI_name_literal": true,
+    "Demo_GUI_name": true,
+    "initial_thread_priority_25": true,
+    "initial_thread_stack_bytes_0x4000": true,
+    "boot_noop_0x297d04": true,
+    "boot_noop_0x297d08": true,
+    "sys_init_entry_0x447540": true,
+    "game_entry_0x460ab0": true
+  },
+  "boot_direct_calls": {
+    "0x0028013C": "0x00299C90",
+    "0x00280140": "0x002976D0",
+    "0x00280144": "0x00299A98",
+    "0x00280150": "0x00297CE8",
+    "0x00297CF4": "0x00297D04",
+    "0x00297CF8": "0x00297D08",
+    "0x00297CFC": "0x002807C8",
+    "0x00297D00": "0x0033C0FC"
+  },
+  "thread_create_target": "0x00339AAC",
+  "limitations": [
+    "This is a static, exact-binary ARM callsite/literal analysis, NOT a runtime trace.",
+    "Thread names are recovered only when the argument is a nearby PC-relative string literal.",
+    "Entry literal loads cannot prove all later register modifications; inspect Ghidra before instrumenting.",
+    "Function 0x00339AAC is a wrapper that forwards to 0x0033A2DC; it is not a direct MMIO operation.",
+    "Ghidra labels in Stage 53 are discovery hints, not confirmed semantic symbols."
+  ]
+}

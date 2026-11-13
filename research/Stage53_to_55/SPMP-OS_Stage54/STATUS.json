@@ -1,0 +1,23 @@
+{
+  "stage": 54,
+  "source_mmi_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "direct_thread_creations": 35,
+  "resolved_thread_names": 34,
+  "unique_static_thread_names": 33,
+  "checks_asserted": 12,
+  "unittest_cases_passed": 18,
+  "verified_Ghidra_programs": 3,
+  "factory_redboot_modified": false,
+  "factory_mmi_modified": false,
+  "bootable_firmware_created": false,
+  "hardware_tested": false,
+  "remaining": [
+    "fully decompile GUI and sysinit threads in local Ghidra",
+    "scheduler and IPC semantics",
+    "native module loader validation",
+    "device run logs"
+  ],
+  "thread_entries_arm_prologue_verified": 35,
+  "thread_entries_in_exported_auto_FUN_names": 5,
+  "thread_entries_not_in_exported_auto_FUN_names": 30
+}

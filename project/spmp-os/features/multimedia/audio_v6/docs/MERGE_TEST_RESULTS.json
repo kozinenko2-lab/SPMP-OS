@@ -1,0 +1,24 @@
+{
+  "base_files_unchanged": 1042,
+  "coinstall_v3_v4_v5_v6": true,
+  "modified_game_source_preserved": true,
+  "v6_tamper_protection": true,
+  "independent_v6_removal_and_reinstall": true,
+  "details": [
+    "15 new files, 0 existing files modified",
+    "Installed: 15 new files, 0 existing files modified | version 3.0.0",
+    "Verified: 15 files, no modifications",
+    "62 new files, 0 existing files modified",
+    "Installed: 62 new files, 0 existing files modified | version 4.0.0",
+    "Verified: 62 files, no modifications",
+    "80 new files, 0 existing files modified",
+    "Installed: 80 new files, 0 existing files modified | version 5.0.0",
+    "Verified: 80 files, no modifications",
+    "36 new files, 0 existing files modified",
+    "Installed: 36 new files, 0 existing files modified | version 6.0.0",
+    "Verified: 36 files, no modifications",
+    "Removed tracked patch files (untracked files preserved).",
+    "Installed: 36 new files, 0 existing files modified | version 6.0.0",
+    "Verified: 36 files, no modifications"
+  ]
+}

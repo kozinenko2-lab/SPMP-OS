@@ -1,0 +1,70 @@
+{
+  "original_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "original_size": 3284556,
+  "firmware_unchanged": true,
+  "redboot_modified": false,
+  "rap_modified": false,
+  "first_segment_virtual_base": "0x00280000",
+  "reset_entry": "0x00280040",
+  "no_op_diag_stub": {
+    "virtual_address": "0x00298B64",
+    "file_offset": "0x00018BB0",
+    "arm_instruction": "BX LR",
+    "direct_BL_call_sites": 4559,
+    "first_20_sites": [
+      "0x00280508",
+      "0x00281544",
+      "0x00281594",
+      "0x002815D0",
+      "0x002815F0",
+      "0x002816E8",
+      "0x00281708",
+      "0x00281718",
+      "0x00281734",
+      "0x0028181C",
+      "0x00281918",
+      "0x00281A08",
+      "0x00281A48",
+      "0x00281A94",
+      "0x00281B40",
+      "0x00281B80",
+      "0x00281D44",
+      "0x00281D88",
+      "0x00282D04",
+      "0x00282D34"
+    ],
+    "finding": "Calls to this stub return immediately: no diagnostics emitted by this path."
+  },
+  "adjacent_formatter": {
+    "address": "0x00298B68",
+    "initial_flag_0x00514244": 0,
+    "caution": "Adjacent formatter checks a runtime flag; enabling a BL is not enough to guarantee visible logs."
+  },
+  "fat_fsync": {
+    "address": "0x00284100",
+    "instructions": [
+      "MOV R0,#0",
+      "BX LR"
+    ],
+    "caution": "No physical flush guarantee."
+  },
+  "diagnostic_device_paths": {
+    "/dev/ttydiag": {
+      "file_offset": "0x0024FBCC",
+      "virtual": "0x004CFB80"
+    },
+    "/dev/haldiag": {
+      "file_offset": "0x0024FBDC",
+      "virtual": "0x004CFB90"
+    },
+    "/fat20a0": {
+      "file_offset": "0x0024FB04",
+      "virtual": "0x004CFAB8"
+    },
+    "/hda1": {
+      "file_offset": "0x0027AC54",
+      "virtual": "0x004FAC08"
+    }
+  },
+  "safe_next_action": "Build/run separate native SD marker-gated probe with unchanged MMI, then integrate RAM buffer and hooks only in recoverable RAM test."
+}

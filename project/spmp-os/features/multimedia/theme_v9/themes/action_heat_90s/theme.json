@@ -1,0 +1,57 @@
+{
+  "id": "action_heat_90s",
+  "name_ru": "Боевики: Огненный город 90-х",
+  "category": "action",
+  "version": 9,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff5720",
+    "panel": "#1b0c17",
+    "text": "#ffffff",
+    "muted": "#f7e1d6",
+    "sel": "#ff5720",
+    "border": "#ff5720"
+  },
+  "provenance": {
+    "input_reference": "меню_spmp_os_в_стиле_боевика_90_х.png",
+    "input_sha256": "623f3b37b09052b66e1a3852268d0d818343754d483abdb30cc142f6504d64d9",
+    "clean_crop_xyxy": [
+      550,
+      190,
+      1438,
+      856
+    ],
+    "source_type": "user-approved generated concept"
+  }
+}

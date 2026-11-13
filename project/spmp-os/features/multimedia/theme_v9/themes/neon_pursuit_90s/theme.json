@@ -1,0 +1,57 @@
+{
+  "id": "neon_pursuit_90s",
+  "name_ru": "Боевики: Неоновая погоня 90-х",
+  "category": "action",
+  "version": 9,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff44d6",
+    "panel": "#101329",
+    "text": "#ffffff",
+    "muted": "#e7d8fc",
+    "sel": "#ff44d6",
+    "border": "#ff44d6"
+  },
+  "provenance": {
+    "input_reference": "неоновая_погоня_90_х_spmp_os.png",
+    "input_sha256": "6994b1e42e5f41be2f96e0f0c339303869df970c69d188fbd006d7b5c5d5ed74",
+    "clean_crop_xyxy": [
+      550,
+      190,
+      1438,
+      856
+    ],
+    "source_type": "user-approved generated concept"
+  }
+}

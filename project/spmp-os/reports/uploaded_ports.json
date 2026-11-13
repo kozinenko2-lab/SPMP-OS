@@ -1,0 +1,145 @@
+[
+  {
+    "filename": "spmp8k-doom_r3.bin",
+    "size_bytes": 559196,
+    "sha256": "3bb2d15248077232199c6bb2d33036de543fa8b81601c7f4522024d42ac07e5a",
+    "format": "NGame1.0",
+    "identifying_strings": [
+      "%s/doom.wad",
+      "%s/doom2.wad",
+      "/Rom/IMAGE/GAME/SPDF.BIN",
+      "/fat20a%c%s",
+      "SPMP8k-Doom r3",
+      "devdatadoom.wad",
+      "devdatadoom2.wad",
+      "spmp8k-Doom",
+      "using libspmp8k"
+    ],
+    "notes": "Signature alone does not demonstrate successful execution on Defender."
+  },
+  {
+    "filename": "spmp8k-quake_beta1.bin",
+    "size_bytes": 569436,
+    "sha256": "c76a9ba4c63e44ba693cbf0c90186e0636ddc05cf77fbc1af92c3675247b4796",
+    "format": "NGame1.0",
+    "identifying_strings": [
+      "%s/config.cfg",
+      "/Rom/IMAGE/GAME/SPDF.BIN",
+      "/fat20a%c%s",
+      "Couldn't write config.cfg.",
+      "SPMP8k Quake %s",
+      "SPMP8k-Quake beta 1",
+      "You should create 'spmp8k-Quake' folder",
+      "spmp8k-quake",
+      "spmp8k-quake.map"
+    ],
+    "notes": "Signature alone does not demonstrate successful execution on Defender."
+  },
+  {
+    "filename": "spmp8k-msx_r36.bin",
+    "size_bytes": 519496,
+    "sha256": "e2d8c0d8f85f5c27b3c566547425d2b5b9df2846dc1add5a16c0b336d6fbcc70",
+    "format": "NGame1.0",
+    "identifying_strings": [
+      "/Rom/IMAGE/GAME/SPDF.BIN",
+      "/fat20a%c%s",
+      "SPMP8k-MSX ",
+      "SPMP8k-MSX emulator",
+      "You should create 'spmp8k-msx' folder",
+      "necessary resources to 'spmp8k-msx'",
+      "spmp8k-msx",
+      "spmp8k-msx.map"
+    ],
+    "notes": "Signature alone does not demonstrate successful execution on Defender."
+  },
+  {
+    "filename": "spmp8k-SMS_r1.bin",
+    "size_bytes": 829512,
+    "sha256": "da45856a62d79c7ee13911e77df8ef0269f7c12904c7a3b0327a3a499adc5b05",
+    "format": "NGame1.0",
+    "identifying_strings": [
+      "%s/smsgg.cfg",
+      "/Rom/IMAGE/GAME/SPDF.BIN",
+      "/fat20a%c%s",
+      "SPMP8k port by spfree",
+      "SPMP8k-SMS r1",
+      "spmp8k-SMS",
+      "using libspmp8k"
+    ],
+    "notes": "Signature alone does not demonstrate successful execution on Defender."
+  },
+  {
+    "filename": "z26.bin",
+    "size_bytes": 235452,
+    "sha256": "3dcb12516384023b53196ac8d2b234fd0d41c1a2d99e3739788830ab489dfaed",
+    "format": "NGame1.0",
+    "identifying_strings": [],
+    "notes": "Signature alone does not demonstrate successful execution on Defender."
+  },
+  {
+    "filename": "scummvm-1.6.0git-7e264.bin",
+    "size_bytes": 2421932,
+    "sha256": "0c2e66414f0bad9f48857b5b0faefeff5b5aee92ed2bf456291177b033508b6c",
+    "format": "NGame1.0",
+    "identifying_strings": [
+      "                           ScummVM disables it by default.",
+      "  -v, --version            Display ScummVM version information and exit",
+      "/Rom/IMAGE/GAME/SPDF.BIN",
+      "/fat20a%c%s",
+      "About ScummVM",
+      "C0Copyright (C) 2001-2012 The ScummVM project",
+      "C0ScummVM ",
+      "C0ScummVM is the legal property of its developers, whose names are too numerous to list here. Please",
+      "C0http://www.scummvm.org",
+      "C1ScummVM Team",
+      "C2For Scumm16, the basis of ScummVM's older gfx codecs",
+      "C2For design of modern ScummVM GUI",
+      "C2Original ScummVM and SimonVM author",
+      "C2ScummVM co-founder, Original Cruise/CinE author",
+      "C2ScummVM forum buttons",
+      "C2ScummVM logo",
+      "C2ScummVM tools GUI application (GSoC 2007 task)",
+      "Change global ScummVM options",
+      "Quit ScummVM",
+      "SCUMMVM_MIDI",
+      "SCUMMVM_MIDI environment variable not set, using /dev/sequencer",
+      "SCUMMVM_MIDIPORT",
+      "SCUMMVM_STX0.8.16",
+      "ScummVM",
+      "ScummVM ",
+      "ScummVM - Graphical Adventure Game Interpreter",
+      "ScummVM 1.6.0git (Dec  8 2012 16:16:17)",
+      "ScummVM Classic Theme (Builtin Version)",
+      "ScummVM could not find any engine capable of running the selected game!",
+      "ScummVM could not find any game in the specified directory!",
+      "ScummVM couldn't open the specified directory!",
+      "Specifies path to additional data used by all games or ScummVM",
+      "Usually, Maniac Mansion would start now. But ScummVM doesn't do that yet. To play it, go to 'Add Gam",
+      "WARNING: The game you are about to start is not yet fully supported by ScummVM. As such, it is likel",
+      "e' in the ScummVM start menu and select the 'Maniac' directory inside the Tentacle game directory.",
+      "following data to the ScummVM team along with name of the game you tried",
+      "he engine to ScummVM.",
+      "int scummvm_main(int, const char* const*)",
+      "scummvm",
+      "scummvm.ini",
+      "scummvm_stderr.txt",
+      "scummvm_stdout.txt",
+      "y to be unstable, and any saves you make might not work in future versions of ScummVM."
+    ],
+    "notes": "Signature alone does not demonstrate successful execution on Defender."
+  },
+  {
+    "filename": "SWFPLAYER 61 492.BIN",
+    "size_bytes": 61492,
+    "sha256": "fe0cb0fdf9f8b88b2d41cc7a22ca909b3eb6d2b3cc92d141fafb3b68de61afda",
+    "format": "unknown / embedded raw",
+    "identifying_strings": [
+      " FHSSL_PlayNext() ->  pUrl: [%s] - ",
+      "1 FHSSL_PlayNext() ->  fileName: [%s] - ",
+      "2 FHSSL_PlayNext() ->  fileName: [%s] - ",
+      "3 FHSSL_PlayNext() ->  fileName: [%s] - ",
+      "SSL_PlayNext"
+    ],
+    "notes": "Not NGame1.0: investigate loader and memory map separately."
+  }
+]

@@ -1,0 +1,172 @@
+{
+  "rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "fat_fileops_table_ram": "0x00513cdc",
+  "fat_fileops_table_rap_offset": "0x00293d28",
+  "fat_fileops": [
+    {
+      "index": 0,
+      "operation": "read",
+      "address": "0x00283f3c",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 1,
+      "operation": "write",
+      "address": "0x00283fc4",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 2,
+      "operation": "lseek",
+      "address": "0x00284054",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 3,
+      "operation": "ioctl",
+      "address": "0x002840e0",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 4,
+      "operation": "select",
+      "address": "0x00282474",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 5,
+      "operation": "fsync",
+      "address": "0x00284100",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 6,
+      "operation": "close",
+      "address": "0x00284108",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 7,
+      "operation": "fstat",
+      "address": "0x00284188",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 8,
+      "operation": "getinfo",
+      "address": "0x00284288",
+      "evidence": "32-bit pointer in fileops table"
+    },
+    {
+      "index": 9,
+      "operation": "setinfo",
+      "address": "0x002842a8",
+      "evidence": "32-bit pointer in fileops table"
+    }
+  ],
+  "fsync_implementation": {
+    "address": "0x00284100",
+    "opcodes": [
+      "0xe3a00000",
+      "0xe12fff1e"
+    ],
+    "effect": "return zero; no flush calls in this function",
+    "warning": "cannot assume media durability from OEM fsync"
+  },
+  "fat_read_lower_function": "0x002a92f8",
+  "fat_write_lower_function": "0x002a9834",
+  "sd_poll": {
+    "function": "0x002b9a38",
+    "counter_setup": [
+      "mov r1,#49920",
+      "add r1,r1,#80"
+    ],
+    "limit_comparison": 50000,
+    "unit": "poll iterations, NOT milliseconds",
+    "loop_pc": "0x002b9a68",
+    "comparison_pc": "0x002b9a78",
+    "back_edge_pc": "0x002b9a88",
+    "observed": "conditional status polling and error/report paths",
+    "not_verified": "which SD command this polling sequence serves and the controller clock"
+  },
+  "sd_command_diagnostics": [
+    {
+      "marker": "MASK_CMD18 fail",
+      "found": true,
+      "rap_file_offset": "0x00257ec1",
+      "runtime_string_address": "0x004d7e75",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "MASK_CMD25 fail",
+      "found": true,
+      "rap_file_offset": "0x00257f69",
+      "runtime_string_address": "0x004d7f1d",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "issue MASK_CMD17 cmd fail",
+      "found": true,
+      "rap_file_offset": "0x00257ffd",
+      "runtime_string_address": "0x004d7fb1",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "issue MASK_CMD24 cmd fail",
+      "found": true,
+      "rap_file_offset": "0x00258091",
+      "runtime_string_address": "0x004d8045",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "MASK_CMD12 fail retry now",
+      "found": true,
+      "rap_file_offset": "0x0025827d",
+      "runtime_string_address": "0x004d8231",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "sd_mblk_read_dma stop MASK_CMD12 fail",
+      "found": true,
+      "rap_file_offset": "0x00258161",
+      "runtime_string_address": "0x004d8115",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "SD_POLL_WAIT(MASK_S_CmdComplete) error",
+      "found": true,
+      "rap_file_offset": "0x00257b65",
+      "runtime_string_address": "0x004d7b19",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "SD card not in TRAN state",
+      "found": true,
+      "rap_file_offset": "0x00257c91",
+      "runtime_string_address": "0x004d7c45",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "force reset sd card",
+      "found": true,
+      "rap_file_offset": "0x00257b05",
+      "runtime_string_address": "0x004d7ab9",
+      "confidence": "string_only_not_command_flow"
+    },
+    {
+      "marker": "SD card not insert",
+      "found": true,
+      "rap_file_offset": "0x00257b25",
+      "runtime_string_address": "0x004d7ad9",
+      "confidence": "string_only_not_command_flow"
+    }
+  ],
+  "hardware_writes_performed": false,
+  "limitations": [
+    "No tested SD read/write driver",
+    "No installed MMI hooks",
+    "No verified reserved RAM spanning RedBoot and MMI",
+    "No confirmed physical media flush / write barrier",
+    "String evidence is not a verified call graph"
+  ]
+}

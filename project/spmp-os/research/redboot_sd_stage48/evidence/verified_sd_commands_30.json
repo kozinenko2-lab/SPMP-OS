@@ -1,0 +1,993 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified_dispatch_calls": 30,
+  "scan_range": [
+    "0x2b8000",
+    "0x2bd500"
+  ],
+  "command_counts": {
+    "ACMD41": 2,
+    "ACMD6": 1,
+    "CMD0": 1,
+    "CMD12": 7,
+    "CMD13": 7,
+    "CMD18": 2,
+    "CMD25": 4,
+    "CMD3": 1,
+    "CMD55": 2,
+    "CMD6": 1,
+    "CMD7": 1,
+    "CMD8": 1
+  },
+  "calls": [
+    {
+      "pc": "0x2ba4e8",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffda2",
+      "classification": "CMD0",
+      "command_index": 0,
+      "oem_command_word": "0x80",
+      "constructors": [
+        {
+          "pc": "0x2ba4dc",
+          "opcode": "0xe3a00080",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x80",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba52c",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffd91",
+      "classification": "CMD8",
+      "command_index": 8,
+      "oem_command_word": "0x1088",
+      "constructors": [
+        {
+          "pc": "0x2ba51c",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba520",
+          "opcode": "0xe2800008",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1088",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba578",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffd7e",
+      "classification": "CMD55",
+      "command_index": 55,
+      "oem_command_word": "0x10b7",
+      "constructors": [
+        {
+          "pc": "0x2ba568",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba56c",
+          "opcode": "0xe2800037",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x10b7",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba5a0",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffd74",
+      "classification": "ACMD41",
+      "command_index": 41,
+      "oem_command_word": "0x30a9",
+      "constructors": [
+        {
+          "pc": "0x2ba568",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba56c",
+          "opcode": "0xe2800037",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x10b7",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba58c",
+          "opcode": "0xe3a00dc2",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x3080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba590",
+          "opcode": "0xe2800029",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x30a9",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba5b8",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffd6e",
+      "classification": "ACMD41",
+      "command_index": 41,
+      "oem_command_word": "0x30a9",
+      "constructors": [
+        {
+          "pc": "0x2ba58c",
+          "opcode": "0xe3a00dc2",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x3080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba590",
+          "opcode": "0xe2800029",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x30a9",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba5a8",
+          "opcode": "0xe3a00dc2",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x3080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba5ac",
+          "opcode": "0xe2800029",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x30a9",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba668",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffd42",
+      "classification": "CMD3",
+      "command_index": 3,
+      "oem_command_word": "0x6083",
+      "constructors": [
+        {
+          "pc": "0x2ba628",
+          "opcode": "0xe3a00d82",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x2080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba62c",
+          "opcode": "0xe2800002",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x2082",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba658",
+          "opcode": "0xe3a00a06",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x6000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba65c",
+          "opcode": "0xe2800083",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x6083",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba6b4",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffd2f",
+      "classification": "CMD13",
+      "command_index": 13,
+      "oem_command_word": "0x108d",
+      "constructors": [
+        {
+          "pc": "0x2ba6a4",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba6a8",
+          "opcode": "0xe280000d",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x108d",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba818",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffcd6",
+      "classification": "CMD13",
+      "command_index": 13,
+      "oem_command_word": "0x108d",
+      "constructors": [
+        {
+          "pc": "0x2ba804",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba808",
+          "opcode": "0xe280000d",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x108d",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba850",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffcc8",
+      "classification": "CMD7",
+      "command_index": 7,
+      "oem_command_word": "0x7087",
+      "constructors": [
+        {
+          "pc": "0x2ba83c",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba840",
+          "opcode": "0xe2800087",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x7087",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba948",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffc8a",
+      "classification": "CMD55",
+      "command_index": 55,
+      "oem_command_word": "0x10b7",
+      "constructors": [
+        {
+          "pc": "0x2ba934",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba938",
+          "opcode": "0xe2800037",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x10b7",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba95c",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffc85",
+      "classification": "ACMD6",
+      "command_index": 6,
+      "oem_command_word": "0x1086",
+      "constructors": [
+        {
+          "pc": "0x2ba934",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba938",
+          "opcode": "0xe2800037",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x10b7",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba94c",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba950",
+          "opcode": "0xe2800006",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1086",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2ba9a0",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffc74",
+      "classification": "CMD13",
+      "command_index": 13,
+      "oem_command_word": "0x108d",
+      "constructors": [
+        {
+          "pc": "0x2ba98c",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2ba990",
+          "opcode": "0xe280000d",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x108d",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bac60",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffbc4",
+      "classification": "CMD6",
+      "command_index": 6,
+      "oem_command_word": "0x7186",
+      "constructors": [
+        {
+          "pc": "0x2bac54",
+          "opcode": "0xe3a00c71",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7100",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bac58",
+          "opcode": "0xe2800086",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x7186",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bae60",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffb44",
+      "classification": "CMD12",
+      "command_index": 12,
+      "oem_command_word": "0x708c",
+      "constructors": [
+        {
+          "pc": "0x2bae50",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bae54",
+          "opcode": "0xe280008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bb014",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffad7",
+      "classification": "CMD18",
+      "command_index": 18,
+      "oem_command_word": "0x1592",
+      "constructors": [
+        {
+          "pc": "0x2bb004",
+          "opcode": "0xe3a00d56",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1580",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb008",
+          "opcode": "0xe2800012",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1592",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bb21c",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffa55",
+      "classification": "CMD13",
+      "command_index": 13,
+      "oem_command_word": "0x108d",
+      "constructors": [
+        {
+          "pc": "0x2bb208",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb20c",
+          "opcode": "0xe280000d",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x108d",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bb2a0",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffa34",
+      "classification": "CMD12",
+      "command_index": 12,
+      "oem_command_word": "0x708c",
+      "constructors": [
+        {
+          "pc": "0x2bb290",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb294",
+          "opcode": "0xe280008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bb2c8",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfffa2a",
+      "classification": "CMD12",
+      "command_index": 12,
+      "oem_command_word": "0x708c",
+      "constructors": [
+        {
+          "pc": "0x2bb290",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb294",
+          "opcode": "0xe280008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb2b8",
+          "opcode": "0xe3a05a07",
+          "register": "r5",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb2bc",
+          "opcode": "0xe285008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bb774",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff8ff",
+      "classification": "CMD18",
+      "command_index": 18,
+      "oem_command_word": "0x1592",
+      "constructors": [
+        {
+          "pc": "0x2bb760",
+          "opcode": "0xe3a00d56",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1580",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb764",
+          "opcode": "0xe2800012",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1592",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bb8d4",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff8a7",
+      "classification": "CMD13",
+      "command_index": 13,
+      "oem_command_word": "0x108d",
+      "constructors": [
+        {
+          "pc": "0x2bb8c0",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb8c4",
+          "opcode": "0xe280000d",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x108d",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bb988",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff87a",
+      "classification": "CMD12",
+      "command_index": 12,
+      "oem_command_word": "0x708c",
+      "constructors": [
+        {
+          "pc": "0x2bb978",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bb97c",
+          "opcode": "0xe280008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bbb38",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff80e",
+      "classification": "CMD25",
+      "command_index": 25,
+      "oem_command_word": "0x1799",
+      "constructors": [
+        {
+          "pc": "0x2bbb28",
+          "opcode": "0xe3a00d5e",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1780",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbb2c",
+          "opcode": "0xe2800019",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1799",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bbb60",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff804",
+      "classification": "CMD25",
+      "command_index": 25,
+      "oem_command_word": "0x1799",
+      "constructors": [
+        {
+          "pc": "0x2bbb28",
+          "opcode": "0xe3a00d5e",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1780",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbb2c",
+          "opcode": "0xe2800019",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1799",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbb40",
+          "opcode": "0x13a00e42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x420",
+          "condition": 1
+        },
+        {
+          "pc": "0x2bbb44",
+          "opcode": "0x12800003",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x423",
+          "condition": 1
+        },
+        {
+          "pc": "0x2bbb50",
+          "opcode": "0xe3a00d5e",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1780",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbb54",
+          "opcode": "0xe2800019",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1799",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bbdc8",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff76a",
+      "classification": "CMD13",
+      "command_index": 13,
+      "oem_command_word": "0x108d",
+      "constructors": [
+        {
+          "pc": "0x2bbdb4",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbdb8",
+          "opcode": "0xe280000d",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x108d",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bbe4c",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff749",
+      "classification": "CMD12",
+      "command_index": 12,
+      "oem_command_word": "0x708c",
+      "constructors": [
+        {
+          "pc": "0x2bbe3c",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbe40",
+          "opcode": "0xe280008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bbe74",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff73f",
+      "classification": "CMD12",
+      "command_index": 12,
+      "oem_command_word": "0x708c",
+      "constructors": [
+        {
+          "pc": "0x2bbe3c",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbe40",
+          "opcode": "0xe280008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbe64",
+          "opcode": "0xe3a05a07",
+          "register": "r5",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bbe68",
+          "opcode": "0xe285008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bc25c",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff645",
+      "classification": "CMD25",
+      "command_index": 25,
+      "oem_command_word": "0x1799",
+      "constructors": [
+        {
+          "pc": "0x2bc24c",
+          "opcode": "0xe3a00d5e",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1780",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc250",
+          "opcode": "0xe2800019",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1799",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bc28c",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff639",
+      "classification": "CMD25",
+      "command_index": 25,
+      "oem_command_word": "0x1799",
+      "constructors": [
+        {
+          "pc": "0x2bc24c",
+          "opcode": "0xe3a00d5e",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1780",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc250",
+          "opcode": "0xe2800019",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1799",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc270",
+          "opcode": "0xe3a00e42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x420",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc274",
+          "opcode": "0xe2800003",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x423",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc27c",
+          "opcode": "0xe3a00d5e",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1780",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc280",
+          "opcode": "0xe2800019",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x1799",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bc3e8",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff5e2",
+      "classification": "CMD13",
+      "command_index": 13,
+      "oem_command_word": "0x108d",
+      "constructors": [
+        {
+          "pc": "0x2bc3d4",
+          "opcode": "0xe3a00d42",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x1080",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc3d8",
+          "opcode": "0xe280000d",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x108d",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    },
+    {
+      "pc": "0x2bc500",
+      "dispatch": "0x2b9b78",
+      "dispatch_word": "0xebfff59c",
+      "classification": "CMD12",
+      "command_index": 12,
+      "oem_command_word": "0x708c",
+      "constructors": [
+        {
+          "pc": "0x2bc4f0",
+          "opcode": "0xe3a00a07",
+          "register": "r0",
+          "operation": "mov",
+          "value": "0x7000",
+          "condition": 14
+        },
+        {
+          "pc": "0x2bc4f4",
+          "opcode": "0xe280008c",
+          "register": "r0",
+          "operation": "add",
+          "value": "0x708c",
+          "condition": 14
+        }
+      ],
+      "confidence": "verified original SHA, direct BL and local r0 immediate construction"
+    }
+  ],
+  "cmd17_direct_calls_in_scanned_range": 0,
+  "limitations": [
+    "CMD17 may exist through another dispatcher or indirect call",
+    "OEM command upper bits are not decoded into hardware flags",
+    "no SD card, DMA, pinmux or register ownership was tested on device",
+    "no executable redboot/MMI patches or device-level logging are included"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "module": "spmp-fm05",
+  "version": "FM-05",
+  "base": "FM-01+FM-02+FM-03+FM-04",
+  "files": {
+    "FM05_TEST_REPORT_RU.md": "3fce72f21a18a2bcdcbdaf23f851eb0ec3e6da1e1fbc794ba1e489f279d927fb",
+    "README_RU.md": "a9c276b7ddf6e801371c1a8956c41e5b176ee3c690a11ed56e96ae7c50baf259",
+    "build/FM01_to_FM05_combined_armv5.o": "eff2d070339a4d4be899738715f1993695483880f2fe35f793a867e64e3fef04",
+    "build/fm05_core_armv5.o": "0da310fb6404e177613dd686104076f14e5fbb18c558b6f7a38c8d224a7b627b",
+    "build/fm05_render_armv5.o": "e16587e0ab751fbca47e6df0af15a0e15c322c4b624062dc2b2b154f5d381359",
+    "build/fm05_session_armv5.o": "72dcf438c6f3db8a3f5f209ca9493cef90aba8b9c5c15c7267902a2874be06f8",
+    "build/libfm05_host.so": "5a0c593181ea61a879581b37f1af7051713150510403b5f8e83a00c4d8635082",
+    "build/libspmp_fm05_armv5.a": "ff06b3a1e41b1a122726b6bfaef15015dc3d866420b15de575e71cb4fc28376d",
+    "host/fm05_demo_bridge.c": "958d32cf4e1a250abaefb1a1d878e6637ef8b0e284d45b055c3228b7fa9c6304",
+    "host/fm05_posix.c": "e9eacdb24320508764d4668cb2f714dda59382a2131354be9f049428a13f6464",
+    "host/fm05_posix.h": "fbf297e3ba91ee889320a26ea5a565e60663bd072440c45343043b51ac29c8e5",
+    "include/spmp_fm05.h": "c36cbea73665308ae182b7d20ad2df88799324ba6c7c4a08003c5a37b210ba37",
+    "previews/FM05_beach_glow_0.png": "89a1d789172c54076606ad006da5baa4e869cd693728f1e6060a454917b2b139",
+    "previews/FM05_circuit_storm_1.png": "d5429ef031fdf9a44bef1d61348963b18963660edff02d55e7e0dc34b993f01b",
+    "previews/FM05_four_screens_320x240.png": "91f00ce201c12da3a7a538880a3da5bade028af71cac0a2e6e2b4987de1ba321",
+    "previews/FM05_ocean_curve_3.png": "56b63bc367acc15cc3ea7cd3e5f3125db6281c07f23e3efa79e4e5b07b96c855",
+    "previews/FM05_velvet_pulse_2.png": "bfbbc25bd981ceb3a35761a9e62a0fe5704c4e8fe5afd298a28cec04ea3be55d",
+    "src/fm05_core.c": "20fc7af58949f3f3076c7fc7d465312bad555de1ad84b3486c46b2f045f420a2",
+    "src/fm05_render.c": "86540613a9376efd9d812eaadd10b0bb59c87471854e118e557526e7f83cef6d",
+    "src/fm05_session.c": "92656b1b0f6023153af9dcae3895b0522352609372e7678260ac057dc235ae82",
+    "tests/test_core.c": "6f7312325adbd0cd3eb7fb955cf00e21fe1b52574d8670edcbd6228860909c7d",
+    "tests/test_posix.c": "68a5b93437b815fe2724f2120b56bb9b778f3424532964dac7c8fe827cee03f5",
+    "tools/build.sh": "56719876cea31de5754524467b426546849c18a0da90bf443e6151cf335e75a3",
+    "tools/preview.py": "d66eb9d76c9a6a9e68f4966288c9ddb82d61c415cabb52e08321bdd50a6085c7"
+  }
+}

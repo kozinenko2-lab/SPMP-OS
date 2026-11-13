@@ -1,0 +1,12 @@
+{
+  "stage": 31,
+  "target": "ARMv5TE ARM926EJ-S",
+  "core": "gpSP interpreter without JIT",
+  "compiled_sources": 15,
+  "selected_sources": 15,
+  "unresolved_external_symbols": 16,
+  "unit_test_division_cases": 200100,
+  "device_executable": false,
+  "device_tested": false,
+  "flash_modified": false
+}

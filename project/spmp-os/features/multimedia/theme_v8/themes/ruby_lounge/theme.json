@@ -1,0 +1,50 @@
+{
+  "id": "ruby_lounge",
+  "name_ru": "Девушки: Рубиновый салон",
+  "category": "girls",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff2c71",
+    "panel": "#240b15",
+    "text": "#ffffff",
+    "muted": "#fce5e9",
+    "sel": "#ff2c71",
+    "border": "#ff2c71"
+  },
+  "provenance": {
+    "input_reference": "презентационная_доска_темы_ruby_lounge.png",
+    "input_sha256": "b35ac4dca3c5409ef578ec5ed1d09e947206b0457fc36f45b335627411426e11"
+  }
+}

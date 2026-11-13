@@ -1,0 +1,6 @@
+variant,sha256,bytes,entry_elf32_arm,original_romfs_path,path_file_offset,path_vaddr,pointer_xrefs_virtual,mmp_segments,contains_bootcfg,contains_romfs,contains_clk_sd0,contains_fatfs_signature
+redboot_variant_1_scanram_v1.0.0.2.praw,eb989ab73900835fdfaf8d9f8ebb43b0d510a9548332bfc0d4fc6548728e3f9d,213580,0x30040,/Rom/image/8000_mmi.rap,0x2c184,0x59bb4,0x4aa44,6,True,True,True,False
+redboot_variant_2_scanram_v2.0.0.1.praw,ae3f375ab146bf16a43da334176416c0213e93907e02f6cbe1de600689ce50b2,213588,0x30040,/Rom/image/8000_mmi.rap,0x2c184,0x59bb4,0x4aa44,6,True,True,True,False
+redboot_variant_3_scanram_v3.0.0.1.praw,1723e3cebdb012e46c014a7215c9cb58978c081b25ba58738687d64b116b1034,190284,0x30040,/Rom/image/8000_mmi.rap,0x26e68,0x54d60,0x4689c;0x46f28,6,True,True,True,False
+redboot_variant_4_scanram_v2.0.0.0.praw,795f6138474cdd7b61d087694903584c436a0e82ec2c33ade3904fd20ea21b18,213588,0x30040,/Rom/image/8000_mmi.rap,0x2c184,0x59bb4,0x4aa44,6,True,True,True,False
+redboot_variant_5_scanram_v3.0.0.0.praw,c92122294bcc69d27b16bd159be9870e9bd764eeffcb110c9abca83da69e8d5a,190284,0x30040,/Rom/image/8000_mmi.rap,0x26e68,0x54d60,0x4689c;0x46f28,6,True,True,True,False

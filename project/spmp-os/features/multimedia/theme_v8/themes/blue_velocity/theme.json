@@ -1,0 +1,50 @@
+{
+  "id": "blue_velocity",
+  "name_ru": "Автомобили: Синяя скорость",
+  "category": "cars",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#26aafa",
+    "panel": "#081a36",
+    "text": "#ffffff",
+    "muted": "#d6e9fa",
+    "sel": "#26aafa",
+    "border": "#26aafa"
+  },
+  "provenance": {
+    "input_reference": "глянцевый_гоночный_интерфейс_spmp_os.png",
+    "input_sha256": "cf7c49fa5d027ae92cb22dc1b19bf7cc8ccfcf5459df34344859d264dccd3abb"
+  }
+}

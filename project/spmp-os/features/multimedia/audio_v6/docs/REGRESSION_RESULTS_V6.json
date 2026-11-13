@@ -1,0 +1,65 @@
+{
+  "basic": [
+    "9 mixer groups + 1500 randomized cases",
+    "ASF 80 bounded-read variants",
+    "Stage10 HAL sink",
+    "ASF 13KB injected unknown object; valid WMA still recognized"
+  ],
+  "media_integration": [
+    {
+      "file": "sample.wav",
+      "rate": 44100,
+      "decoder": "Audio v5 host; AMR OpenCORE host only",
+      "actual_samples": 102400,
+      "reference_samples": 99226,
+      "mean_abs_pcm16_error": 0.0
+    },
+    {
+      "file": "sample.flac",
+      "rate": 44100,
+      "decoder": "Audio v5 host; AMR OpenCORE host only",
+      "actual_samples": 102400,
+      "reference_samples": 99226,
+      "mean_abs_pcm16_error": 0.0
+    },
+    {
+      "file": "sample.ogg",
+      "rate": 44100,
+      "decoder": "Audio v5 host; AMR OpenCORE host only",
+      "actual_samples": 102400,
+      "reference_samples": 99226,
+      "mean_abs_pcm16_error": 0.501
+    },
+    {
+      "file": "sample_nb.amr",
+      "rate": 8000,
+      "decoder": "Audio v5 host; AMR OpenCORE host only",
+      "actual_samples": 16384,
+      "reference_samples": 14400,
+      "mean_abs_pcm16_error": 2360.556
+    },
+    {
+      "file": "wb_no_data.awb",
+      "rate": 16000,
+      "decoder": "Audio v5 host; AMR OpenCORE host only",
+      "actual_samples": 24576,
+      "reference_samples": 22400,
+      "mean_abs_pcm16_error": 4.099
+    },
+    {
+      "file": "sample.mp3",
+      "rate": 44100,
+      "decoder": "MP3 v4 libmad host",
+      "actual_samples": 61952,
+      "reference_samples": 61740,
+      "mean_abs_pcm16_error": 0.185
+    }
+  ],
+  "optional_missing": [],
+  "status": "Host-only tests, not a hardware performance result",
+  "wma": {
+    "metadata": "Audio v6 native ASF parser passed",
+    "host_ffmpeg_reference_samples": 98304,
+    "arm_pcm_decoder": "NOT IMPLEMENTED"
+  }
+}

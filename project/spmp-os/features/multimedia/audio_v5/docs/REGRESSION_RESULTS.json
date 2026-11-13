@@ -1,0 +1,45 @@
+[
+  {
+    "name": "wav",
+    "samples": 99226,
+    "mean_abs_error": 0.0
+  },
+  {
+    "name": "flac",
+    "samples": 99226,
+    "mean_abs_error": 0.0
+  },
+  {
+    "name": "ogg",
+    "samples": 99226,
+    "mean_abs_error": 0.5
+  },
+  {
+    "name": "wav_ima_stereo",
+    "samples": 49490,
+    "mean_abs_error": 5.16
+  },
+  {
+    "name": "probe_sample.wma",
+    "result": "rc=0 fmt=4 codec=353 rate=44100 ch=2 br=96000 frames=49568"
+  },
+  {
+    "name": "probe_sample_nb.amr",
+    "result": "rc=0 fmt=5 codec=0 rate=8000 ch=1 br=0 frames=7200"
+  },
+  {
+    "name": "probe_wb_no_data.awb",
+    "result": "rc=0 fmt=6 codec=0 rate=16000 ch=1 br=0 frames=11200"
+  },
+  {
+    "name": "amr_nb_wb_via_external_opencore",
+    "samples": [
+      7200,
+      11200
+    ]
+  },
+  {
+    "name": "external_backend_test",
+    "ok": true
+  }
+]

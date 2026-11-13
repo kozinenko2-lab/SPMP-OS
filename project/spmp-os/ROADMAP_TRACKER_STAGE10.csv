@@ -1,0 +1,36 @@
+﻿ID,Workstream,Priority,Current status,Next gate
+M0,Hardware recovery,P0,Audit,"RAM, UART, Flash backup and recover"
+M1,Device HAL,P0,Not implemented on Defender,"LCD, inputs, audio, SD, timer"
+M2,ARMv5 module loader,P0,Stage 10: ARMv5 ELF loader + memory model host-tested; no device execution,"Verified real RAM layout, cache hooks, import ABI, ARMv5 emulator module test"
+E01,NES FCEUmm,P0,Host tested,"ARMv5 build, device tests"
+E02,GB GBC Gambatte,P0,Host tested dynamic,"ARMv5 C++ runtime, device tests"
+E03,Atari 2600 z26,P0,Host tested,Audio TIA and ARMv5 device
+E04,PC Engine TGEmu,P0,Host tested,"PSG, device tests"
+E05,CHIP-8,P0,Host tested,Hardware smoke
+E06,SMS Game Gear,P0,Source available,Port SMSPlusGX
+E07,Mega Drive,P0,Not integrated,PicoDrive
+E08,SNES,P0,Source available,Light Snes9x
+E09,GBA,P0,Research,gpSP ARMv5 JIT/interpret
+E10,ZX Spectrum,P1,Source available,Xpectrum
+E11,Commodore 64,P1,Source available,Frodo4
+E12,Amstrad CPC,P1,Source available,Wiituka
+E13,MSX,P1,Research,Open core
+E14,Atari Lynx,P1,Source available,Handy
+E15,LCD Game Watch,P1,Source available,LCD Game Emulator
+E17,PlayStation 1,P2,Research,PSX4all ARM dynarec
+E18,Virtual Boy,P2,Research,Red Viper V810
+E19,J2ME,P3,Research,Compact MIDP/CLDC runtime
+G01,Doom,P1,Port source,Native SPMP-OS
+G02,Quake 1,P1,Port source needed,Software renderer
+G03,xRick,P1,Port source,Native SPMP-OS
+G04,ScummVM,P1,Port source,Selective engines
+G05,Space Cadet,P1,Source available,SDL/input/audio
+G06,Duke Nukem 3D,P1,Source available,EDuke32 memory/software renderer
+A01,Audio MP3 etc,P0,Architecture only,Audio pipeline codecs
+V01,Video MP4 AVI,P0,Architecture only,Hardware decoder ABI
+I01,Photos JPG PNG GIF,P0,Architecture only,Decode and view
+F01,FM radio,P0,Architecture only,Tuner hardware audit
+U01,Themes controls,P0,Host prototype,Full resource/theme engine
+U02,File manager,P0,Host prototype,Native FAT and operations
+L01,Linux experiment,P3,Research,Early UART ram boot
+R01,Firmware release,P0,Not available,Recoverable install and QA

@@ -1,0 +1,14 @@
+SPMP-OS Theme v8 integration: HOST ONLY (2026-11-11)
+- build: clang ARM926EJ-S / ARMv5TE EABI5 .a PASS
+- 25 real SPBG image sets x 2 C-rendered modes PASS
+- v7 input, fallback, render & audio host tests PASS
+- catalog and SPTC CRC32 config unit tests PASS
+- English labels runtime substitution versus Russian PASS
+- Stage10 clean source: v7 + v8 additive install PASS
+- Stage10 optional host hook + make host PASS
+- Stage10 host binary --theme-v8-preview beach_sunset list PASS
+- Stage10 host binary --theme-v8-preview showroom_crystal grid PASS
+- optional hook removal, v8 uninstallation, v7 remaining PASS
+- source edits to game core maintained across v8 uninstall PASS
+- modified user theme asset -> v8 uninstall refuses PASS
+- physical Defender LCD/FAT/audio/RTC and Flash update: NOT TESTED

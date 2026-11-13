@@ -1,0 +1,43 @@
+{
+  "module": "spmp-fm03",
+  "version": "FM-03",
+  "depends_on": [
+    "FM-01"
+  ],
+  "compatible_with": [
+    "FM-02",
+    "Themes v9 (34 themes)"
+  ],
+  "files": {
+    "README_RU.md": "0099724d1173cfc1bc3d4c20bb7e497c7703dd4ac7413b4c00e63a3fe218652f",
+    "build/core.o": "31d34ee5023459a50986916e4cfdc31a7ee1ed5d484fb4db9543c911bc78eac7",
+    "build/fm01_fm02_fm03_combined_armv5.o": "214de736e4aa880f015e4ad1b93426f1b03ee2b43d09665645dec9af1da1717e",
+    "build/fm01_fm03_combined_armv5.o": "7ac51d8f0469f6ff673b5c9f9b8c54cf1aa5a1e7927be41f5eaeb6b0668a646c",
+    "build/fm03_core.o": "31d34ee5023459a50986916e4cfdc31a7ee1ed5d484fb4db9543c911bc78eac7",
+    "build/fm03_core_armv5.o": "13b0b4f6b6bb9f2c31d83db19a34cf524fb4e915642285a172f5a7635b100850",
+    "build/fm03_posix.o": "d68dda27de9056c296903579290d5e9de6ed4cc0346cda3dcb0a4825e7092465",
+    "build/fm03_props": "74048d9a2c8d1f61b50732542330f6c4ddc9b8b4bbc3aff883ae8ce200e7b075",
+    "build/fm03_props_asan": "ce2a94cae4cf15246ed705d9de8be40bcb59b98c8131237ec2b667b8d6aa4aac",
+    "build/fm03_render.o": "e09cf6bb2d6be39b3e7c3e4d1fdf4f95dbbf708e26cc87abdbfc518548aabf76",
+    "build/fm03_render_armv5.o": "0c2533e0d8dce8fb332ee7795ced9be72eb24f56f52e3a5750775e00e92ffea0",
+    "build/libfm03_host.so": "501851c1399ceff909895d153ee29d0ac0ed932055f5361b70a28be04cf881a1",
+    "build/libspmp_fm03_armv5.a": "c93d9bd106ba4761b1f3dd303b1fad3e4c6801d76b1780105cc37575acab1f84",
+    "build/test_core": "134faa6299829dfb6c9df0ceea8813b13ff7dc35b9ccce7209ee8711a9fe0187",
+    "host/fm03_cli.c": "e8bf9cac70eb38647427fc2e42dacd9f138d33b7abe49e8ee374b4bdf36c78d8",
+    "host/fm03_demo_bridge.c": "8076725fac382a528221275e63782ad4fbbb201a2d23482c7e86107a1fdb8834",
+    "host/fm03_posix.c": "652163d8da73984145128d4aa116d6f89af3cb0a56e6240db12ef38991465cbd",
+    "host/fm03_posix.h": "89d406e77519836e85e93b568e3e1057cfbeb0667533a676e6225b708ac34a89",
+    "include/spmp_fm03.h": "632519ebfd4bfd066a3eb07e2213d833bf1e44031d7f7a85f17bb32fbc949751",
+    "previews/FM03_four_screens_320x240.png": "5c76b8c9aadecd00da715b44a10a05f8a7e2ff235aabd8ba831403f672307e1f",
+    "previews/action_heat_90s_properties.png": "c21e88838049e0ac0675cc9c58c1df12bc0fea2d201fc2729732d6d6a5c8cce5",
+    "previews/beach_glow_properties.png": "0c610986d2fd24ff26c9c3d1b87756fd4f334bff21764a859dc59c5e2f6a9985",
+    "previews/circuit_storm_properties.png": "3b93ffdeae054aaa356e501721e838599ea114c47d8c7494c9637ca7a1962e72",
+    "previews/ocean_curve_properties.png": "ad8edea1d0e42dbc29828bb55b75961c5f84f651a6f6f9a9a2c38e524c800be4",
+    "src/fm03_core.c": "66cbe67b0b30d5ebeca12f9cb512c2aa4bdaa19406fbbf2026e43b2635048291",
+    "src/fm03_render.c": "c7ca06a8d4c0751d8257e50ea865da8177612939f5c115496350cf4cea31186f",
+    "tests/test_core.c": "30ad5d512c5e43836ce0c08eb31ac36c3db8c816e078d868253d84c998b52688",
+    "tests/test_host.py": "c7bceabcb13e676552559ae4fda3d6d2f56d07326783eca92543b7fa62731c11",
+    "tools/build.sh": "23300358d84c283e9614ed6beedd34178be3f6062f8397d9167505afc3d5c7f2",
+    "tools/preview.py": "87d1f82c6b1e8e0ee24846ccdb4a87540945f4db510ee4abb56c35f2306f61ec"
+  }
+}

@@ -1,0 +1,6 @@
+# SPMP-OS optional CHD dependency. Build with SPMP_CHD_ENABLED=1 only after
+# compiling the user-provided libchdr in ../../build/stage22_libchdr_host.
+ifeq ($(SPMP_CHD_ENABLED),1)
+CFLAGS += -DUSE_LIBCHDR -Ipico/cd/libchdr/new_upstream/include
+LDLIBS += ../../build/stage22_libchdr_host/libchdr-static.a ../../build/stage22_libchdr_host/deps/lzma-26.02/libchdr-lzma.a -lzstd -lz
+endif

@@ -1,0 +1,552 @@
+{
+  "research_only": true,
+  "stock_objects": {
+    "LIBMP3.O": {
+      "size": 55392,
+      "sha256": "2a41d6a46b7477311de5a9f7d5fb89f36b59d68122f454731d411e728c822a9b",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 58,
+      "unresolved": [
+        "Lib$$Request$$armlib",
+        "__aeabi_uidivmod"
+      ],
+      "relocations": {
+        "R_ARM_ABS32": 111,
+        "R_ARM_CALL": 149,
+        "R_ARM_JUMP24": 4
+      },
+      "key_functions": [
+        {
+          "name": "mp3_decoder_working_ram",
+          "size": 88,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_clr_file_end",
+          "size": 28,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_read_index",
+          "size": 20,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_parsing",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_init",
+          "size": 360,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_final",
+          "size": 188,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_set_file_end",
+          "size": 28,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_set_delay",
+          "size": 44,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_soft_init",
+          "size": 84,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "mp3_decoder_run",
+          "size": 888,
+          "visibility": "HIDDEN"
+        }
+      ]
+    },
+    "LIBAAC.O": {
+      "size": 178900,
+      "sha256": "d145b58e83bddca3ddecb392e8b5a186a59683b0bd8509b40fb429edf5042dbe",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 195,
+      "unresolved": [
+        "Lib$$Request$$armlib",
+        "__aeabi_idivmod"
+      ],
+      "relocations": {
+        "R_ARM_CALL": 700,
+        "R_ARM_ABS32": 284,
+        "R_ARM_JUMP24": 40
+      },
+      "key_functions": [
+        {
+          "name": "aac_decoder_version_string",
+          "size": 28,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_set_file_end",
+          "size": 16,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_read_index",
+          "size": 12,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_bitrate",
+          "size": 932,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_get_sync",
+          "size": 12,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_parsing",
+          "size": 584,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_get_adts",
+          "size": 12,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_set_sync",
+          "size": 12,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_raw_config",
+          "size": 460,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_init",
+          "size": 340,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "aac_decoder_run",
+          "size": 1908,
+          "visibility": "HIDDEN"
+        }
+      ]
+    },
+    "LIBWMA.O": {
+      "size": 128780,
+      "sha256": "6f8332812417057593b1c246977102bc9b7dcafe81202795168cada0a0bac929",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 97,
+      "unresolved": [
+        "Lib$$Request$$armlib",
+        "__aeabi_idivmod",
+        "__aeabi_ldivmod",
+        "__aeabi_llsl",
+        "__aeabi_llsr",
+        "__aeabi_uidivmod",
+        "__aeabi_uldivmod"
+      ],
+      "relocations": {
+        "R_ARM_ABS32": 335,
+        "R_ARM_CALL": 332,
+        "R_ARM_JUMP24": 22
+      },
+      "key_functions": [
+        {
+          "name": "wma_decoder_init",
+          "size": 300,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "wma_decoder_parsing",
+          "size": 1096,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "wma_decoder_read_index",
+          "size": 28,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "wma_decoder_set_file_end",
+          "size": 16,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "wma_decoder_run",
+          "size": 444,
+          "visibility": "HIDDEN"
+        }
+      ]
+    },
+    "LIBFLAC.O": {
+      "size": 25024,
+      "sha256": "4566c679895d24c76ead17ea4b2d7d915af0dc10c2e6c22335521b791c1ba636",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 16,
+      "unresolved": [
+        "Lib$$Request$$armlib"
+      ],
+      "relocations": {
+        "R_ARM_ABS32": 130,
+        "R_ARM_CALL": 87,
+        "R_ARM_JUMP24": 3
+      },
+      "key_functions": [
+        {
+          "name": "flac_decoder_init",
+          "size": 200,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "flac_working_ram_size",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "flac_decoder_parsing",
+          "size": 524,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "flac_decoder_run",
+          "size": 668,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "flac_decoder_set_file_end",
+          "size": 36,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "flac_decoder_read_index",
+          "size": 12,
+          "visibility": "HIDDEN"
+        }
+      ]
+    },
+    "LIBAPE.O": {
+      "size": 25676,
+      "sha256": "6aff97b7850301794ccc3a62ad1a6b50522fcf2f3cb028ffdc8fa3c79ec2222e",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 41,
+      "unresolved": [
+        "Lib$$Request$$armlib",
+        "__aeabi_uidivmod"
+      ],
+      "relocations": {
+        "R_ARM_CALL": 89,
+        "R_ARM_ABS32": 102,
+        "R_ARM_JUMP24": 2
+      },
+      "key_functions": [
+        {
+          "name": "ape_decoder_get_instance_size",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_channel_count",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_set_file_end",
+          "size": 12,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_read_index",
+          "size": 24,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_total_sample_count",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_sampling_rate",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_samples_per_frame",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_sample_stamp",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_total_frame_count",
+          "size": 48,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_nVersion",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_nCompressionLevel",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_get_seek_address",
+          "size": 80,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_seek_init",
+          "size": 144,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_use_tcm",
+          "size": 88,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_init",
+          "size": 276,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_parsing",
+          "size": 484,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ape_decoder_run",
+          "size": 144,
+          "visibility": "HIDDEN"
+        }
+      ]
+    },
+    "LIBAC3.O": {
+      "size": 53096,
+      "sha256": "05054ab13fe6b082dcc35c6b72e4176700083f903c446879e2bed05fee092824",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 49,
+      "unresolved": [
+        "Lib$$Request$$armlib",
+        "__aeabi_idivmod"
+      ],
+      "relocations": {
+        "R_ARM_CALL": 198,
+        "R_ARM_ABS32": 164,
+        "R_ARM_JUMP24": 3
+      },
+      "key_functions": [
+        {
+          "name": "ac3_decoder_get_instance_size",
+          "size": 44,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_certify_flag",
+          "size": 28,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_get_certify_flag",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_read_index",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_file_end",
+          "size": 12,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_output_channel_config",
+          "size": 28,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_output_lfe",
+          "size": 32,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_stereo_mode",
+          "size": 24,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_dual_mode",
+          "size": 24,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_karaoke_mode",
+          "size": 40,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_set_dynamic_range_mode",
+          "size": 24,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_get_sampling_rate",
+          "size": 16,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_get_bitrate",
+          "size": 16,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_get_channel_count",
+          "size": 32,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_get_endian_mode",
+          "size": 8,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_use_tcm",
+          "size": 124,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_init",
+          "size": 420,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_seek_init",
+          "size": 48,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_parsing",
+          "size": 544,
+          "visibility": "HIDDEN"
+        },
+        {
+          "name": "ac3_decoder_run",
+          "size": 976,
+          "visibility": "HIDDEN"
+        }
+      ]
+    },
+    "LIBAMRNB.O": {
+      "size": 164972,
+      "sha256": "b6316a7ac58836d2d97771b4267ced5ccf63b1a429831033c3d8173b83d5e66e",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 176,
+      "unresolved": [
+        "Lib$$Request$$armlib"
+      ],
+      "relocations": {
+        "R_ARM_ABS32": 201,
+        "R_ARM_CALL": 495,
+        "R_ARM_JUMP24": 10
+      },
+      "key_functions": []
+    },
+    "LIBAMRWB.O": {
+      "size": 131708,
+      "sha256": "5e1c22de605a895fcfebe42687b0b76f3f7e553bed211c68cf33a34ff22d7aed",
+      "elf_class": "ELF32 ARM ET_REL little-endian",
+      "global_function_symbols": 162,
+      "unresolved": [
+        "Lib$$Request$$armlib",
+        "__aeabi_idivmod"
+      ],
+      "relocations": {
+        "R_ARM_ABS32": 150,
+        "R_ARM_CALL": 471,
+        "R_ARM_JUMP24": 21
+      },
+      "key_functions": []
+    }
+  },
+  "mmpi_images": {
+    "H264_CODEC.IMG": {
+      "size": 223440,
+      "mmpi": true,
+      "mmpd": true,
+      "declared_size": 223440,
+      "record_size": 36,
+      "raw_slot_byte": 12,
+      "sha256": "826a5399d403398b2e443b40c35b597cfac4ce757405a14c5ca4c19c2b9e1c8a"
+    },
+    "MPG4ASPDEC.IMG": {
+      "size": 294064,
+      "mmpi": true,
+      "mmpd": true,
+      "declared_size": 294064,
+      "record_size": 36,
+      "raw_slot_byte": 9,
+      "sha256": "c0ddd25ddf6c77155ff3c453cd60ce3b26e826b9e8edc69322d0c34fd0d618ee"
+    },
+    "MPG2DEC_CODEC.IMG": {
+      "size": 107600,
+      "mmpi": true,
+      "mmpd": true,
+      "declared_size": 107600,
+      "record_size": 36,
+      "raw_slot_byte": 11,
+      "sha256": "8c7f134eca7f20a613795e74df0e8e4691aae7f7223e78dc006bfdddfee6b1d1"
+    },
+    "MJPGDEC.IMG": {
+      "size": 65256,
+      "mmpi": true,
+      "mmpd": true,
+      "declared_size": 65256,
+      "record_size": 36,
+      "raw_slot_byte": 9,
+      "sha256": "92f9d5d46d17cf318d393abe7d9f3f0a55423ba375753555d061089356996e47"
+    },
+    "DIVX3DEC.IMG": {
+      "size": 156536,
+      "mmpi": true,
+      "mmpd": true,
+      "declared_size": 156536,
+      "record_size": 36,
+      "raw_slot_byte": 4,
+      "sha256": "5b38f9a1bb58d490b2128fdc2bfbb1be6eb323309f6fb3ed5cb6e6e9a291fa8d"
+    },
+    "JPGDEC.IMG": {
+      "size": 110144,
+      "mmpi": true,
+      "mmpd": true,
+      "declared_size": 110144,
+      "record_size": 36,
+      "raw_slot_byte": 1,
+      "sha256": "3f15acaf6b89b87a025a0d2316c0347a89bc8fe227f260579c3658ca407a197f"
+    },
+    "JPGENC_CODEC.IMG": {
+      "size": 59952,
+      "mmpi": true,
+      "mmpd": true,
+      "declared_size": 59952,
+      "record_size": 36,
+      "raw_slot_byte": 9,
+      "sha256": "f16a89fbf34d8319367daaee45263ba0311162b4ac5c6093c68aa7e4ac882d6b"
+    }
+  }
+}

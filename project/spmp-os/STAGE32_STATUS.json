@@ -1,0 +1,41 @@
+{
+  "stage": 32,
+  "date": "2026-11-11",
+  "target": "ARMv5TE/ARM926EJ-S",
+  "gpsp": {
+    "compiled_sources": 15,
+    "selected_sources": 15,
+    "linked_partial_object": true,
+    "unresolved_symbols": [
+      "__aeabi_d2lz",
+      "__aeabi_dmul",
+      "__aeabi_f2uiz",
+      "__aeabi_fadd",
+      "__aeabi_fcmpge",
+      "__aeabi_fdiv",
+      "__aeabi_fmul",
+      "__aeabi_fsub",
+      "__aeabi_ui2d",
+      "__aeabi_ui2f",
+      "__aeabi_unwind_cpp_pr0",
+      "__aeabi_unwind_cpp_pr1"
+    ],
+    "unresolved_count": 12,
+    "device_executable": false,
+    "device_tested": false
+  },
+  "restored": {
+    "theme_count": 34,
+    "mp3_version": "v4",
+    "audio_version": "v6",
+    "psx4all_stage": 14
+  },
+  "test_status": {
+    "stage32": "pass",
+    "stage31": "pass",
+    "themes_v9": "pass",
+    "audio_v6": "pass",
+    "mp3_v4": "pass"
+  },
+  "stock_flash_modified": false
+}

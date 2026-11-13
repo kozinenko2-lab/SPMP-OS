@@ -1,0 +1,60 @@
+{
+  "imported_from": "ChatGPT Library",
+  "archives": [
+    {
+      "name": "SPMP-OS_Stage31_gpSP_ARMv5_64bit_EABI.zip",
+      "bytes": 21433582,
+      "sha256": "346fb23c590a689d11b52f011d4222aef2ab4a51107879cb88ce237284eb999c",
+      "included_binary": null
+    },
+    {
+      "name": "gpsp-master.zip",
+      "bytes": 526920,
+      "sha256": "6b7bee25e5e5a5e6d2231f33f8786b4ade9815bba2d4d3e80a3a72ca02d1c3fb",
+      "included_binary": null
+    },
+    {
+      "name": "SPMP-OS_Stage22_Full_PicoDrive_MD_CD_32X.zip",
+      "bytes": 19260168,
+      "sha256": "17af8adad07c82dee463e43bbed7aed75ce9528361d110d9add55d003bead61d",
+      "included_binary": null
+    },
+    {
+      "name": "SPMP-OS_Stage10_Themes_v9_DevMerged_34.zip",
+      "bytes": 17427545,
+      "sha256": "4e0b91e6b4e5357eb5f2510e30613247534970db9b752788391a998496c65291",
+      "included_binary": null
+    },
+    {
+      "name": "SPMP-OS_PSX4ALL_Stage14_Final_Research.zip",
+      "bytes": 3084736,
+      "sha256": "b13be05dfaa1537bdf5814c09880e755eb18b0e0d0ecd1b25b8115f3feb42a33",
+      "included_binary": null
+    },
+    {
+      "name": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+      "bytes": 469946,
+      "sha256": "f3ad211a44f43e4713d604f253b03a9c73763c8f2d48e24b7a83968d11e6c5ae",
+      "included_binary": null
+    },
+    {
+      "name": "SPMP-OS_Multimedia_Audio_v6.zip",
+      "bytes": 94472,
+      "sha256": "47811cf0a6fd59d72d2d19dfdf1cc5626c555656fb8d55f74c41857b9d90bc95",
+      "included_binary": null
+    },
+    {
+      "name": "Defender_MultiMix_FSP_All_Extracted.zip",
+      "bytes": 33151082,
+      "sha256": "d0c5b13ef27f96d43d585cad4856dd2b7ca99f6282141b2c9d9206d29cd61766",
+      "included_binary": false
+    },
+    {
+      "name": "Defender_RedBoot_Research_Package.zip",
+      "bytes": 485305,
+      "sha256": "6ed841d5d0cd8bd8efadae6a3a6b2aabcfd0480e17f2aff4960b79d1f147a1bd",
+      "included_binary": false
+    }
+  ],
+  "note": "External proprietary FSP/RedBoot extracts are deliberately not bundled"
+}

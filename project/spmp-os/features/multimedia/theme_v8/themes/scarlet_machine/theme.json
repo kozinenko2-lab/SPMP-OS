@@ -1,0 +1,50 @@
+{
+  "id": "scarlet_machine",
+  "name_ru": "Автомобили: Алый металл",
+  "category": "cars",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff4843",
+    "panel": "#1c0b12",
+    "text": "#ffffff",
+    "muted": "#f4d0c9",
+    "sel": "#ff4843",
+    "border": "#ff4843"
+  },
+  "provenance": {
+    "input_reference": "премиальная_автомобильная_тема_spmp_os.png",
+    "input_sha256": "b0ac9016e65c4c635066331f1d1a94bb6eeb1a0f5451ad8fadadedf563d560c5"
+  }
+}

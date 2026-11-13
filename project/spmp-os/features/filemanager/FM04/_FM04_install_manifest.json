@@ -1,0 +1,41 @@
+{
+  "module": "spmp-fm04",
+  "version": "FM-04",
+  "depends_on": [
+    "FM-01",
+    "FM-02",
+    "FM-03"
+  ],
+  "target": "ARM926EJ-S ARMv5TE soft float",
+  "files": {
+    "FM04_TEST_REPORT_RU.md": "6aa0f69d6bfecb944df9026679acffb9bedb5887e718b78b2c3a99ef3b62d530",
+    "README_RU.md": "077c37d9512cb00b145d513b20262e92b151bd8af7f3b5e79dd1d2970620f1e8",
+    "build/FM01_to_FM04_combined_armv5.o": "daf04e6e2f1ab53edc0a6bbb6857cee140246ae812b8d2774cc50426ac17b0f2",
+    "build/fm01_core_armv5.o": "13ac4b6848bf455c892de5a66fdd1aa7a5a0b94b23e5273e4fef88ea67a93f7b",
+    "build/fm01_render_armv5.o": "92d6278f15e0dd1d7ebe4f8dcbf0d9c0ade9743cc4a96733332f66c2bd5699ae",
+    "build/fm02_core_armv5.o": "52a40319cb6d93a8a78f1a51211413801dcb15a4f94330155f287cc98ca918e5",
+    "build/fm02_render_armv5.o": "258a2c82b3934946af555122c3b02ec7458b8f79b511b9959900f5cf74f882e0",
+    "build/fm03_core_armv5.o": "13b0b4f6b6bb9f2c31d83db19a34cf524fb4e915642285a172f5a7635b100850",
+    "build/fm03_render_armv5.o": "0c2533e0d8dce8fb332ee7795ced9be72eb24f56f52e3a5750775e00e92ffea0",
+    "build/fm04_core_armv5.o": "34c3e032a13589ea6cde472ee8287ecbaa5b03f222699548c1686ac170ecda4c",
+    "build/fm04_render_armv5.o": "778305126e48d381ea1026f2b4188ba8c73f8bf2d975980d44e87e58fcacde22",
+    "build/libfm04_host.so": "c704931f9a00e7608306e9c1c1085ecf9ced91979b7e3e114fbf264170766a76",
+    "build/libspmp_fm04_armv5.a": "c4f566fd899b1ba774a2620ed6e37d38bc488a3da686afa34248a159e5cee942",
+    "build/test_fm04": "6deefb01ab5c45d2b525f2bc5051c262723c9e12afeb2ec2ebe60a16298d8b10",
+    "build/test_fm04_asan": "d82ad0d40fd761f287574ad87f4d730c0d4b51975b185b5798e355b62bf5cc35",
+    "build/test_rename_posix": "df863d47047eaa23839e48a1905219bc9ad076d695ce42102112d7bfc4296a5d",
+    "host/fm04_demo_bridge.c": "699901f6f8c1797c8f032f4804c8db06068c267542562aa432d2d802fed60764",
+    "include/spmp_fm04.h": "008532a4858a5c360ad78d420da99725249ac018b8ada5d0d4006dcd6de352c3",
+    "previews/FM04_beach_glow.png": "99e0827ec4e7e9ad05af81bd700f653f18772be9c93c01a77f83d5b1f33263b1",
+    "previews/FM04_circuit_storm.png": "b5aa33874184ba694574194f6b40100e780d7aa252d671966bb9975cedfc27d8",
+    "previews/FM04_four_screens_320x240.png": "77f7ff541f1c418f60885befbbf9f87756312a9b2111524a8925899ed85f1926",
+    "previews/FM04_ocean_curve.png": "e0efe760a34401fbcc0504d70e09c40c4f8ff145841aea456af7ea3b4c4ec11f",
+    "previews/FM04_velvet_pulse.png": "297eaeccc22701f87baed3d154a5b5bfecd2caadb660acce54bce7b601d607ab",
+    "src/fm04_core.c": "94aa56d9e38a9a9affe146af8c15702a8fb18d460f155d4883b0a062f4a42091",
+    "src/fm04_render.c": "8a83c088cd130d106dd314f187c8843f903bee8cb73fba1f64fd54e0120aa266",
+    "tests/test_core.c": "1d27050eb6e2ed35f65d52420bbf190090c3e204ea3b5f1a45535f054b8e342d",
+    "tests/test_rename_posix.c": "fc0db133e52ed592431303c0f192724078fee904c699ece7b4c7481febee971c",
+    "tools/build.sh": "105e698b24ffa59b59fbdc1fc7e28e45c9e336bfb8db3e02d2e20e002adc9828",
+    "tools/preview.py": "c45ab6143491bc52c91f7b5d39217e8b4bf950f45b30db209678fbe8219b7cc6"
+  }
+}

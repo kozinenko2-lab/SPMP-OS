@@ -1,0 +1,4 @@
+thread,entry,create_callsite,priority_arg_r0,stack_bytes_argument,edge_type
+Demo GUI,0x003BE5B0,0x00280810,25,16384,function_pointer_argument_r1_NOT_direct_call
+Systen initial Thread,0x00447540,0x00447610,12,10624,function_pointer_argument_r1_NOT_direct_call
+Systen BackGround Thread,0x004473BC,0x0044749C,30,10624,function_pointer_argument_r1_NOT_direct_call

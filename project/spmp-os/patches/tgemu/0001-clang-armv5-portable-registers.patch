@@ -1,0 +1,27 @@
+--- a/src/cpu/h6280.c
++++ b/src/cpu/h6280.c
+@@ -67,6 +67,15 @@
+ #include "osd_cpu.h"
+ 
+ #ifdef __arm__
++#ifdef SPMP_PORTABLE_C
++/* Avoid GCC-only global fixed-register variables. Optimizer allocates registers. */
++static PAIR reg_pc;
++static PAIR reg_ea;
++static int h6280_ICount;
++static union { UINT8 p; UINT32 pex; } reg_p;
++static union { UINT8 a; INT32 aex; } reg_a;
++static unsigned char **reg_read_ptr;
++#else
+ register PAIR reg_pc asm("r7");
+ register PAIR reg_ea asm("r8");
+ register int h6280_ICount asm("r9");	/* cycle count */
+@@ -74,6 +83,8 @@
+ register union { UINT8 a; INT32 aex; } reg_a asm("r11");
+ register unsigned char ** reg_read_ptr asm ("r6");
+ 
++#endif
++
+ #define SAVE_REGS \
+ 	PAIR save_pc = reg_pc; \
+ 	PAIR save_ea = reg_ea; \

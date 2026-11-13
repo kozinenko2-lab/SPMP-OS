@@ -1,0 +1,16 @@
+{
+  "tested_on": "2026-11-13",
+  "host_build": "PASS: make host",
+  "host_cores": "PASS: --cores; 20 listed cores with per-core status (not all host-tested)",
+  "arm_compilation": "PASS: make arm-core arm-native-core arm-chip8",
+  "filemanager": [
+    "PASS: FM01 host + armv5",
+    "PASS: FM02 host + armv5",
+    "PASS: FM03 host + armv5",
+    "PASS: FM04 host + address sanitizer + armv5",
+    "PASS: FM05 host + address sanitizer + armv5, combined linked ET_REL"
+  ],
+  "stage55_static_tests": "PASS: 27 tests",
+  "hardware_status": "NOT TESTED: no bootable SPMP-OS or RedBoot modification",
+  "tested_device": "none"
+}

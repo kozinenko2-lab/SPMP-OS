@@ -1,0 +1,16 @@
+digraph MMI_Stage55 {
+ rankdir=TB;
+ node [shape=box, style="rounded", fontname="Liberation Sans"];
+ "MMI_reset" -> "startup_dispatch" [label="BL→constructor"];
+ "startup_dispatch" -> "create_Demo_GUI" [label="BL"];
+ "create_Demo_GUI" -> "Demo GUI" [style=dashed,label="thread entry r1"];
+ "Demo GUI" -> "GUI coordinator" [label="BL 0x3BE5CC"];
+ "GUI coordinator" -> "0x90005040" [color=red,label="MMIO read|OR 7|write"];
+ "GUI coordinator" -> "create_system_initial" [label="BL 0x4476B0"];
+ "create_system_initial" -> "System initial" [style=dashed,label="thread entry r1"];
+ "System initial" -> "create_background" [label="BL 0x4475A4"];
+ "create_background" -> "Background" [style=dashed,label="thread entry r1"];
+ "Background" -> "eCos delay(100)" [label="BL 0x44744C"];
+ "Background" -> "Background" [color=blue,label="B 0x447450"];
+ "0x90005040" [shape=octagon,color=red];
+}

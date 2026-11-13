@@ -1,0 +1,50 @@
+{
+  "id": "seaside_serpentine",
+  "name_ru": "Автомобили: Морской серпантин",
+  "category": "cars",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff9b2b",
+    "panel": "#09262a",
+    "text": "#ffffff",
+    "muted": "#e4ece6",
+    "sel": "#ff9b2b",
+    "border": "#ff9b2b"
+  },
+  "provenance": {
+    "input_reference": "презентационная_доска_темы_sports_cars_b.png",
+    "input_sha256": "62e8cd21405938cb8b508da7868be56dc5aefdbcd63fe967fbd46397e7369106"
+  }
+}

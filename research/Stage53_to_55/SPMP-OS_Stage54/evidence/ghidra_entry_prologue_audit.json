@@ -1,0 +1,219 @@
+{
+  "total": 35,
+  "verified_arm_function_prologues": 35,
+  "present_in_stage53_auto_FUN_index": 5,
+  "absent_from_stage53_auto_FUN_index": 30,
+  "note": "This only compares auto FUN_ names extracted from GZF, not all Ghidra labels or function objects",
+  "entries": [
+    {
+      "entrypoint": "0x003BE5B0",
+      "name": "Demo GUI",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": true
+    },
+    {
+      "entrypoint": "0x00291300",
+      "name": "watchdog_handle",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002914C8",
+      "name": "dsr_handle",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x00293600",
+      "name": "dsr_rcd_handle",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002C5FBC",
+      "name": "mp3_play",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002C6064",
+      "name": "pcm_play",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x00460AB0",
+      "name": "Game thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002D5110",
+      "name": "Detect Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002D50C8",
+      "name": "mmiEMG Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002D90F4",
+      "name": "Middleware Mangger Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002E0858",
+      "name": "media audio thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002E09B4",
+      "name": "media video record thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002E0B84",
+      "name": "media audio thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002E0F98",
+      "name": "media video thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002E2120",
+      "name": "Power management thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002E28CC",
+      "name": "HDMI HW CTRL",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x002EAD40",
+      "name": "TV Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": true
+    },
+    {
+      "entrypoint": "0x00315E14",
+      "name": "RWThread_UDC",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": true
+    },
+    {
+      "entrypoint": "0x003219AC",
+      "name": "audio encoding for video",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x003217A0",
+      "name": "video encoding for video",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x0032248C",
+      "name": "read bits thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x00327064",
+      "name": "Card_Isp_SD_thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x0032DF60",
+      "name": "LCM Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": true
+    },
+    {
+      "entrypoint": "0x0033886C",
+      "name": "DSC FRONT ISR",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x00338A04",
+      "name": "DSC STATE THREAD",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": true
+    },
+    {
+      "entrypoint": "0x0034A2C4",
+      "name": "dspCmdDispatcher",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x0034CFD0",
+      "name": "GPIO_Monitor",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x0034F2A4",
+      "name": "IRDetect Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x004473BC",
+      "name": "Systen BackGround Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x00447540",
+      "name": "Systen initial Thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x00448A7C",
+      "name": "stor_thr",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x004625B8",
+      "name": "Midi Seq thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x004AF738",
+      "name": "storRWConsumer_thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x004B0640",
+      "name": "read buffer thread",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    },
+    {
+      "entrypoint": "0x004CB2C0",
+      "name": "",
+      "arm_prologue_word": "0xE1A0C00D",
+      "has_auto_FUN_label_in_stage53_csv": false
+    }
+  ]
+}

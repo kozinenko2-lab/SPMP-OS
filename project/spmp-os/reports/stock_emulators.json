@@ -1,0 +1,82 @@
+{
+  "description": "Stock binary inventory only. No native replacement compiled.",
+  "modules": [
+    {
+      "platform": "NES",
+      "name": "N1.BIN",
+      "found": true,
+      "bytes": 70356,
+      "sha256": "3742861cb3c78bd886029989e25e97d09c567e03bc36782187681d1d20260091",
+      "header_16_hex": "10402de994309fe594e09fe502c0a0e1",
+      "gpSP_string_found": false,
+      "ELF_header": false,
+      "NGame_header": false
+    },
+    {
+      "platform": "GB/GBC",
+      "name": "G1.BIN",
+      "found": true,
+      "bytes": 74324,
+      "sha256": "4a980824025a41ffc78c206ca83a9a5007f88c180b46fd21fbed4bc690d10123",
+      "header_16_hex": "70402de9005051e20060a0e10240a0e1",
+      "gpSP_string_found": false,
+      "ELF_header": false,
+      "NGame_header": false
+    },
+    {
+      "platform": "GBA",
+      "name": "G2.BIN",
+      "found": true,
+      "bytes": 723980,
+      "sha256": "95dc51684f9b848e96795676c7354281d5211631e4cb3de814b7e3f8f8ce6bdb",
+      "header_16_hex": "04e02de54c309fe54ce09fe50e0053e1",
+      "gpSP_string_found": true,
+      "ELF_header": false,
+      "NGame_header": false
+    },
+    {
+      "platform": "GBA",
+      "name": "GPSP.BIN",
+      "found": true,
+      "bytes": 776004,
+      "sha256": "ae697d79de6a34a042788e423ec353a9bdf87ebecb164fb91ff4ba785aec5d2b",
+      "header_16_hex": "04e02de54c309fe54ce09fe50e0053e1",
+      "gpSP_string_found": true,
+      "ELF_header": false,
+      "NGame_header": false
+    },
+    {
+      "platform": "GBA",
+      "name": "G_2C.BIN",
+      "found": true,
+      "bytes": 727552,
+      "sha256": "7172411b64f410011180ef54ab4f5c1fbd7a0aadca7a6ffb3d3eb7069a1498b0",
+      "header_16_hex": "04e02de54c309fe54ce09fe50e0053e1",
+      "gpSP_string_found": true,
+      "ELF_header": false,
+      "NGame_header": false
+    },
+    {
+      "platform": "SNES",
+      "name": "S1.BIN",
+      "found": true,
+      "bytes": 343632,
+      "sha256": "56c0704e1150c5c8a569a3c73d3a61bbef008953d23b424864225419d643957b",
+      "header_16_hex": "70402de90240a0e1702091e50060a0e1",
+      "gpSP_string_found": false,
+      "ELF_header": false,
+      "NGame_header": false
+    },
+    {
+      "platform": "Mega Drive",
+      "name": "M1.BIN",
+      "found": true,
+      "bytes": 641984,
+      "sha256": "a1e4e231740f3031e9293190001c908f6ff1aaae15854a5a42d1c37bbc80c651",
+      "header_16_hex": "f0402de9a8509fe504d04de20070a0e1",
+      "gpSP_string_found": false,
+      "ELF_header": false,
+      "NGame_header": false
+    }
+  ]
+}

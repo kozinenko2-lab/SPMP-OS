@@ -1,0 +1,57 @@
+{
+  "id": "ocean_curve",
+  "name_ru": "Автомобили: Океанский серпантин",
+  "category": "cars",
+  "version": 9,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff8b2d",
+    "panel": "#07242c",
+    "text": "#ffffff",
+    "muted": "#e6f4f4",
+    "sel": "#ff8b2d",
+    "border": "#ff8b2d"
+  },
+  "provenance": {
+    "input_reference": "меню_spmp_os_прибрежный_закат.png",
+    "input_sha256": "c74778f8d137a0c894a92380ee40d70fe41a19915035b9404253acc64a4c68c3",
+    "clean_crop_xyxy": [
+      550,
+      190,
+      1438,
+      856
+    ],
+    "source_type": "user-approved generated concept"
+  }
+}

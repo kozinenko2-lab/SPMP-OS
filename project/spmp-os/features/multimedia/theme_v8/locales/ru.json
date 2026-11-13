@@ -1,0 +1,23 @@
+{
+  "language": "ru",
+  "menu_keys": [
+    "games",
+    "music",
+    "video",
+    "photos",
+    "radio",
+    "files",
+    "settings",
+    "themes"
+  ],
+  "labels": [
+    "Игры",
+    "Музыка",
+    "Видео",
+    "Фото",
+    "Радио",
+    "Файлы",
+    "Настройки",
+    "Темы"
+  ]
+}

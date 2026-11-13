@@ -1,0 +1,3407 @@
+[
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/Makefile",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/docs/ARCHITECTURE_RU.md",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/include/spmp_mm.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/include/spmp_mm_stage10.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/arm_compat.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/bmp.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/common.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/host.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/host_image.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/inspect.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/skin.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/stage10_bridge.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/ui.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/src/wav.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/tests/test_mm.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/themes/aurora.ini",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/themes/forest.ini",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/themes/graphite.ini",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Patchset_v1.zip",
+    "path": "features/multimedia/themes/sunset.ini",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/Makefile",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/docs/STOCK_FINDINGS_RU.md",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/include/spmp_stock_bridge.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/reports/stock_fsp_media_v3.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/src/spmp_stock_bridge.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/tests/bridge_test.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/tests/test_audit.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Stock_Audit_v2.zip",
+    "path": "features/multimedia/stock_bridge/tools/audit_stock_fsp.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/Makefile",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/docs/ENGINEERING_RU.md",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/include/spmp_flac_lite.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/include/spmp_media_probe.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/reports/stock_codecs_v3.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/src/spmp_flac_lite.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/src/spmp_legacy_query.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/src/spmp_media_probe.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/tests/chunk_cli.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/tests/decoder_cli.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/tests/probe_file.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/tests/probe_test.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/tools/audit_legacy_objects.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/tools/relink_stock.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_CodecLab_v3.zip",
+    "path": "features/multimedia/codec_lab/tools/verify_decoder.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/Makefile",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/README_RU.md",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/artifacts/libspmp_mp3_app_armv5.a",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/artifacts/libspmp_mp3_armv5.a",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/artifacts/libspmp_mp3_freestanding_armv5.a",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/artifacts/libspmp_mp3_stage10_armv5.a",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/artifacts/mp3_to_wav_host_x86_64",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/artifacts/spmp_mp3_linkcheck_armv5.elf",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/compat/arm/stdio.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/compat/arm/stdlib.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/compat/arm/string.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/docs/ENGINEERING_RU.md",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/docs/MP3_REGRESSION_RESULTS.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/include/spmp_m3u_playlist.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/include/spmp_mp3_app.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/include/spmp_mp3_player.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/include/spmp_mp3_stage10.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_m3u_playlist.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_mp3_aeabi.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_mp3_aeabi_arm.S",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_mp3_app.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_mp3_id3.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_mp3_internal.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_mp3_player.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/src/spmp_mp3_stage10.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/tests/mp3_to_wav.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/tests/test_aeabi_division.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/tests/test_m3u.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/tests/test_stage10_adapter.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/tests/verify_mp3.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/CHANGES",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/COPYING",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/COPYRIGHT",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/D.dat",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/README",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/bit.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/bit.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/fixed.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/fixed.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/frame.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/frame.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/global.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/huffman.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/huffman.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/imdct_l_arm.S",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/imdct_s.dat",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/layer12.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/layer12.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/layer3.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/layer3.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/mad.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/qc_table.dat",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/rq_table.dat",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/sf_table.dat",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/stream.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/stream.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/synth.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/synth.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/timer.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/timer.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/version.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_MP3_Player_v4.zip",
+    "path": "features/multimedia/mp3_player/vendor/libmad/version.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/Makefile",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/README_RU.md",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/artifacts/libspmp_audio_v5_armv5.a",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/artifacts/libspmp_audio_v5_host.a",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/artifacts/spmp_amr_opencore_armv5.o",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/artifacts/spmp_audio_stage10_armv5.o",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/docs/PORTING_RU.md",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/docs/REGRESSION_RESULTS.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/alloca.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/ctype.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/errno.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/math.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/stdio.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/stdlib.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/string.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/freestanding/include/sys/types.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/include/spmp_amr_opencore.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/include/spmp_audio_stage10.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/include/spmp_audio_v5.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/include/spmp_flac_lite.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/include/spmp_ima_adpcm.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/src/spmp_amr_opencore.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/src/spmp_audio_probe.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/src/spmp_audio_sink.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/src/spmp_audio_stage10.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/src/spmp_audio_v5.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/src/spmp_flac_lite.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/src/spmp_ima_adpcm.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/audio_amr_decode.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/audio_backend_test.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/audio_decode.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/audio_probe.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/ima_mono.wav",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/ima_stereo.wav",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/sample.flac",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/sample.ogg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/sample.wav",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/sample.wma",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/sample_nb.amr",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/fixtures/wb_no_data.awb",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/regression.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/tests/stage10_adapter.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/COPYING",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/asm_arm.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/backends.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/block.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/block.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/codebook.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/codebook.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/codec_internal.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/config_types.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/floor0.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/floor1.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/info.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/iseeking_example.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/ivorbiscodec.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/ivorbisfile.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/ivorbisfile_example.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/lsp_lookup.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/mapping0.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/mdct.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/mdct.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/mdct_lookup.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/misc.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/os.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/registry.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/registry.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/res012.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/sharedbook.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/synthesis.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/vorbisfile.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/window.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/window.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/Tremor/window_lookup.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/ogg/COPYING",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/ogg/include/ogg/config_types.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/ogg/include/ogg/ogg.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/ogg/include/ogg/os_types.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/ogg/src/bitwise.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v5.zip",
+    "path": "features/multimedia/audio_v5/vendor/ogg/src/framing.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/Makefile",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/README_RU.md",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/artifacts/libspmp_audio_v6_armv5.a",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/artifacts/libspmp_audio_v6_host.a",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/artifacts/spmp_mix_stage10_armv5.o",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/artifacts/spmp_mix_v5_adapter_armv5.o",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/docs/ENGINEERING_RU.md",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/docs/MERGE_RU.md",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/docs/MERGE_TEST_RESULTS.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/docs/REGRESSION_RESULTS_V6.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/docs/STOCK_WMA_AMR_ABI.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/freestanding/include/string.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/include/spmp_mix_audio_v5_bridge.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/include/spmp_mix_decoders_v6.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/include/spmp_mix_stage10_v6.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/include/spmp_mixer_v6.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/include/spmp_wma_asf_v6.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/src/spmp_mix_audio_v5_bridge_v6.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/src/spmp_mix_mp3_bridge_v6.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/src/spmp_mix_stage10_v6.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/src/spmp_mixer_v6.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/src/spmp_wma_asf_v6.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/benchmark_mixer.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/check_merge.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/fixtures/sample.flac",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/fixtures/sample.mp3",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/fixtures/sample.ogg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/fixtures/sample.wav",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/fixtures/sample.wma",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/fixtures/sample_nb.amr",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/fixtures/wb_no_data.awb",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/regression_v6.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/test_asf.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/test_integration_mp3_v4.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/test_integration_v5.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/test_mixer.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tests/test_stage10_sink.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Multimedia_Audio_v6.zip",
+    "path": "features/multimedia/audio_v6/tools/stock_codec_probe.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/build/bridge_armv5.o",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/build/catalog_armv5.o",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/build/config_armv5.o",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/build/glyphs_armv5.o",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/build/libspmp_ui_themes_v8_armv5.a",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/build/theme_armv5.o",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/config/selected_theme.sptc",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/docs/DEJAVU_LICENSE_NOTICE.txt",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/include/spmp_theme_catalog_v8.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/include/spmp_theme_config_v8.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/include/spmp_ui_builtin_glyphs.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/include/spmp_ui_stage10_bridge.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/include/spmp_ui_theme_v7.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/locales/en.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/locales/ru.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/previews/ALL_THEMES_320x240.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/src/spmp_theme_catalog_v8.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/src/spmp_theme_config_v8.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/src/spmp_ui_builtin_glyphs.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/src/spmp_ui_stage10_bridge.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/src/spmp_ui_theme_v7.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/src/theme_preview_host.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/stage10_compat/include/defos_hal.h",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/INTEGRATION_VERIFIED.txt",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/render_latest.log",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/result.log",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/run.sh",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/test_assets_v8.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/test_bridge.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/test_catalog_v8.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/test_config_v8.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tests/test_theme.c",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action_legends/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action_legends/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action_legends/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action_legends/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action_legends/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/action_legends/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/alpine_coast/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/alpine_coast/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/alpine_coast/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/alpine_coast/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/alpine_coast/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/alpine_coast/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/auto_muse/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/auto_muse/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/auto_muse/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/auto_muse/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/auto_muse/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/auto_muse/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/beach_sunset/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/beach_sunset/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/beach_sunset/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/beach_sunset/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/beach_sunset/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/beach_sunset/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/blue_velocity/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/blue_velocity/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/blue_velocity/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/blue_velocity/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/blue_velocity/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/blue_velocity/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comic_nights/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comic_nights/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comic_nights/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comic_nights/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comic_nights/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comic_nights/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comics/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comics/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comics/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comics/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comics/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/comics/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/crimson_drift/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/crimson_drift/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/crimson_drift/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/crimson_drift/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/crimson_drift/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/crimson_drift/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour_rose/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour_rose/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour_rose/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour_rose/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour_rose/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/glamour_rose/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/golden_pearl/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/golden_pearl/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/golden_pearl/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/golden_pearl/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/golden_pearl/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/golden_pearl/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/midnight_blue_gt/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/midnight_blue_gt/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/midnight_blue_gt/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/midnight_blue_gt/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/midnight_blue_gt/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/midnight_blue_gt/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/nature/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/nature/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/nature/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/nature/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/nature/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/nature/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/neon_racer/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/neon_racer/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/neon_racer/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/neon_racer/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/neon_racer/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/neon_racer/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/night_track/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/night_track/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/night_track/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/night_track/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/night_track/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/night_track/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/racing/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/racing/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/racing/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/racing/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/racing/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/racing/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/ruby_lounge/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/ruby_lounge/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/ruby_lounge/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/ruby_lounge/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/ruby_lounge/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/ruby_lounge/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/scarlet_machine/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/scarlet_machine/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/scarlet_machine/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/scarlet_machine/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/scarlet_machine/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/scarlet_machine/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/seaside_serpentine/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/seaside_serpentine/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/seaside_serpentine/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/seaside_serpentine/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/seaside_serpentine/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/seaside_serpentine/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons.spi",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/files.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/games.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/music.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/photos.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/radio.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/settings.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/themes.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons/video.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/icons_symbol_only.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/sounds/back.wav",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/sounds/confirm.wav",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/shared/sounds/navigate.wav",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/showroom_crystal/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/showroom_crystal/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/showroom_crystal/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/showroom_crystal/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/showroom_crystal/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/showroom_crystal/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/sunset_street/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/sunset_street/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/sunset_street/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/sunset_street/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/sunset_street/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/sunset_street/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/tennis_breeze/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/tennis_breeze/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/tennis_breeze/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/tennis_breeze/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/tennis_breeze/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/tennis_breeze/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/velvet_gold/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/velvet_gold/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/velvet_gold/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/velvet_gold/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/velvet_gold/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/velvet_gold/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/violet_night/background.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/violet_night/background.spbg",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/violet_night/style.spth",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/violet_night/theme.json",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/violet_night/ui_grid_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/themes/violet_night/ui_list_panels.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/build.sh",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/build_extras.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/package_release_v8.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/render_collection.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/repack_theme.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/select_theme.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/stage10_host_hook.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/tools/theme_patch.py",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v8_Full_Patch.zip",
+    "path": "features/multimedia/theme_v8/previews/SIX_NEW_THEMES_LIST_GRID.png",
+    "status": "added"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/build/bridge_armv5.o",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/build/catalog_armv5.o",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/build/config_armv5.o",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/build/glyphs_armv5.o",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/build/libspmp_ui_themes_v9_armv5.a",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/build/theme_armv5.o",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/config/selected_theme.sptc",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/docs/DEJAVU_LICENSE_NOTICE.txt",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/include/spmp_theme_catalog_v9.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/include/spmp_theme_config_v9.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/include/spmp_ui_builtin_glyphs.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/include/spmp_ui_stage10_bridge.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/include/spmp_ui_theme_v7.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/locales/en.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/locales/ru.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/previews/ALL_THEMES_320x240.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/src/spmp_theme_catalog_v9.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/src/spmp_theme_config_v9.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/src/spmp_ui_builtin_glyphs.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/src/spmp_ui_stage10_bridge.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/src/spmp_ui_theme_v7.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/src/theme_preview_host.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/stage10_compat/include/defos_hal.h",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tests/run.sh",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tests/test_assets_v9.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tests/test_bridge.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tests/test_catalog_v9.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tests/test_config_v9.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tests/test_theme.c",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_heat_90s/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_heat_90s/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_heat_90s/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_heat_90s/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_heat_90s/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_heat_90s/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_legends/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_legends/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_legends/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_legends/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_legends/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/action_legends/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/alpine_coast/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/alpine_coast/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/alpine_coast/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/alpine_coast/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/alpine_coast/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/alpine_coast/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/auto_muse/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/auto_muse/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/auto_muse/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/auto_muse/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/auto_muse/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/auto_muse/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_glow/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_glow/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_glow/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_glow/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_glow/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_glow/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_sunset/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_sunset/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_sunset/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_sunset/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_sunset/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/beach_sunset/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/blue_velocity/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/blue_velocity/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/blue_velocity/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/blue_velocity/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/blue_velocity/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/blue_velocity/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/circuit_storm/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/circuit_storm/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/circuit_storm/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/circuit_storm/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/circuit_storm/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/circuit_storm/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comic_nights/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comic_nights/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comic_nights/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comic_nights/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comic_nights/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comic_nights/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comics/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comics/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comics/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comics/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comics/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/comics/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/crimson_drift/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/crimson_drift/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/crimson_drift/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/crimson_drift/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/crimson_drift/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/crimson_drift/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/gallery_velocity/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/gallery_velocity/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/gallery_velocity/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/gallery_velocity/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/gallery_velocity/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/gallery_velocity/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour_rose/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour_rose/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour_rose/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour_rose/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour_rose/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/glamour_rose/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/golden_pearl/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/golden_pearl/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/golden_pearl/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/golden_pearl/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/golden_pearl/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/golden_pearl/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/midnight_blue_gt/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/midnight_blue_gt/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/midnight_blue_gt/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/midnight_blue_gt/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/midnight_blue_gt/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/midnight_blue_gt/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/nature/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/nature/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/nature/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/nature/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/nature/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/nature/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_pursuit_90s/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_pursuit_90s/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_pursuit_90s/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_pursuit_90s/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_pursuit_90s/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_pursuit_90s/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_racer/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_racer/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_racer/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_racer/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_racer/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/neon_racer/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/night_track/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/night_track/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/night_track/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/night_track/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/night_track/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/night_track/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ocean_curve/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ocean_curve/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ocean_curve/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ocean_curve/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ocean_curve/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ocean_curve/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/racing/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/racing/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/racing/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/racing/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/racing/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/racing/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ruby_lounge/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ruby_lounge/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ruby_lounge/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ruby_lounge/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ruby_lounge/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/ruby_lounge/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/runway_shine/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/runway_shine/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/runway_shine/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/runway_shine/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/runway_shine/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/runway_shine/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/scarlet_machine/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/scarlet_machine/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/scarlet_machine/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/scarlet_machine/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/scarlet_machine/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/scarlet_machine/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/seaside_serpentine/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/seaside_serpentine/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/seaside_serpentine/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/seaside_serpentine/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/seaside_serpentine/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/seaside_serpentine/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons.spi",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/files.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/games.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/music.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/photos.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/radio.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/settings.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/themes.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons/video.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/icons_symbol_only.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/sounds/back.wav",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/sounds/confirm.wav",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/shared/sounds/navigate.wav",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/showroom_crystal/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/showroom_crystal/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/showroom_crystal/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/showroom_crystal/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/showroom_crystal/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/showroom_crystal/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/sunset_street/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/sunset_street/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/sunset_street/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/sunset_street/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/sunset_street/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/sunset_street/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/tennis_breeze/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/tennis_breeze/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/tennis_breeze/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/tennis_breeze/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/tennis_breeze/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/tennis_breeze/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/urban_strike_90s/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/urban_strike_90s/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/urban_strike_90s/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/urban_strike_90s/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/urban_strike_90s/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/urban_strike_90s/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_gold/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_gold/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_gold/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_gold/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_gold/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_gold/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_pulse/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_pulse/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_pulse/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_pulse/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_pulse/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/velvet_pulse/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/violet_night/background.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/violet_night/background.spbg",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/violet_night/style.spth",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/violet_night/theme.json",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/violet_night/ui_grid_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/themes/violet_night/ui_list_panels.png",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/build.sh",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/build_extras.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/package_release_v9.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/render_collection.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/repack_theme.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/select_theme.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/stage10_host_hook.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/tools/theme_patch.py",
+    "status": "identical_keep_existing"
+  },
+  {
+    "patch": "SPMP-OS_Themes_v9_Full_34_Patch.zip",
+    "path": "features/multimedia/theme_v9/previews/NINE_NEW_THEMES_v9.png",
+    "status": "added"
+  }
+]

@@ -1,0 +1,56 @@
+# Текущее состояние публичной базы
+
+Импортирована незавершённая SPMP-OS. Исторические статусы ниже сохранены
+для происхождения материалов и не являются аппаратной сертификацией.
+Текущие проверки: [VALIDATION.md](VALIDATION.md).
+Новый этап: [восстановление загрузки](../research/boot_reconstruction/REPORT_RU.md).
+
+Приоритет: выбор PRAW для платы → BootROM/ScanRam → RedBoot → MMP → startup MMI
+→ системные службы → контракт HAL → интерфейс SPMP-OS.
+Оригинальные образы и базы Ghidra остаются локальными.
+
+---
+
+# SPMP-OS — архитектура и план развития
+
+## Фактический статус
+
+**Source stage:** Stage49 + GUI/MMI/RedBoot research Stage53–55, + multimedia/theme/FM01–FM05 from independent chat. Host build succeeded on Linux x86_64. FM01..FM05 builds/tests passed. 27 Stage55 static tests passed. On real Defender no modified OEM boot image and no functioning SPMP-OS image was tested.
+
+### OEM findings verified against original binaries
+
+| Компонент | Адрес / факт | Примечание |
+|---|---|---|
+| RedBoot family 1 | ROMFS stock loader near `0x0004A998`, image loader near `0x00038F0C` | Five OEM candidates from `Images_RedBoot_201000427.img`; exact board variant not confirmed |
+| RedBoot family 3 | stock loader near `0x000467F4`, image loader near `0x00036BF4` | Alternate OEM family; never flash candidate PRAW |
+| RedBoot entry | `0x00030040` | ARM image entry |
+| MMI entry | `0x00280040` | OEM startup; do not infer RAM availability from image load address |
+| Factory MMI | `/Rom/image/8000_mmi.rap` | Linked ROMFS path in RedBoot |
+| OEM diagnostic stub | `0x00298B64` | Trivial `BX LR`; large number of callers; not a proven active logging hook |
+| MMI UI | `Demo GUI` thread `0x003BE5B0`, priority 25, stack 0x4000 | Thread startup after eCos scheduler |
+| MMI init | `Systen initial Thread` entry `0x00447540` | OEM spelling preserved |
+| MMI background | `Systen BackGround Thread` entry `0x004473BC` | eCos delay loop |
+| Thread creation | `0x00339AAC` | 35 direct spawning sites identified in Stage54 |
+| GUI coordinator | `0x00447640` | Reads/writes `0x90005040`, preserving its side effects is important |
+| OEM FAT ops | `fatfs_fo_write` `0x00283FC4`, `fatfs_fo_close` `0x00284108` | Described Stage44; internal `fsync` appears to return zero without flushing |
+| RAM hazard | around `0x0056AD90–0x006C8FDC` cleared during early MMI | Do not place cross-stage logs there |
+| OEM native game | `NGame`, `SUNPLUS556GAME` signature checks | The test BIN was rejected; exact launch conditions still unknown |
+
+Review `research/Stage53_to_55/*/evidence` for exact instruction evidence. Findings involving dynamic behavior remain hypotheses until console or hardware trace validates them. No address should be applied to arbitrary firmware revisions.
+
+## Immediate Codex tasks (priority order)
+
+1. **Reverse-engineer MMI/eCos startup**: create named functions in Ghidra around `0x00280040`, `0x002807C8`, `0x003BE5B0`, `0x00447640`, `0x00447540`, `0x004473BC`. Resolve hardware side effects, stack initialization, OS thread init.
+2. **Trace native launcher / OEM package format**: determine why `MMI_DIAG.bin` yielded «неверный формат». Recover exact path of ROMFS emulators vs native BIN, signature/size checks, entry ABI. Avoid testing unverified executables in Flash.
+3. **Document device HAL contract**: SD/FAT, LCD RGB565 320×240, buttons, GPIO, power, PCM/FM, ROMFS. Establish bounded memory and thread-safe wrappers.
+4. **Run SPMP-OS UI on stock MMI/eCos** without RedBoot changes: integration test from RAM / user-run app only after OEM ABI is validated; attach FM01–FM05 and theme v9 to active UI code. Host tests first.
+5. **Expand read-only instrumentation** of original MMI for boot logs, preserving normal operation; UART remains an option for earliest errors; logging to SD happens only after filesystem init.
+6. **Independent SPMP-OS**: only later, after verified recovery and address/clock/pinmux mapping. SD-first RedBoot modifications are separate and currently blocked by unverified early SD/MMC access and watchdog.
+
+## Definition of Done for each stage
+
+- Ghidra decompiled output and ARM disassembly both attached; exact original SHA checked.
+- Patches limited to `project/spmp-os/` and tools, never `firmware/originals/`.
+- Tests run on host and ARMv5 builds generated when possible; note dependency and failures.
+- Explicitly distinguish `SOURCE_ONLY`, `HOST_TESTED`, `ARM_OBJECT_ONLY`, `DEVICE_TESTED`.
+- Roadmap updated with evidence, unresolved issues, and actual next experiment.

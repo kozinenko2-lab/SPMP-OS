@@ -1,0 +1,37 @@
+{
+  "project": "SPMP-OS",
+  "stage": 42,
+  "date": "2026-11-13",
+  "task": "RedBoot dual boot from SD",
+  "redboot_original_verified": true,
+  "redboot_original_sha256": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108",
+  "redboot_variants_checked": 5,
+  "arm_machine_words_checked": 15,
+  "address_literals_checked": 10,
+  "modules": [
+    "fat16_ro",
+    "fat32_ro",
+    "mbr_ro",
+    "stage41_boot_bridge",
+    "armv5_eabi5_linkcheck"
+  ],
+  "test_results": {
+    "host": 322,
+    "asan_ubsan": 142,
+    "stage41_boot_scenarios": 14,
+    "stage41_truncations": 112,
+    "stage41_package_mutations": 30000
+  },
+  "arm_compiled": true,
+  "arm_eabi": 5,
+  "arm_undefined_symbols": 0,
+  "device_tested": false,
+  "flash_modified": false,
+  "redboot_modified": false,
+  "flashable_image_created": false,
+  "early_sd_hardware_driver_implemented": false,
+  "verified_installed_variant": null,
+  "verified_ram_layout": false,
+  "watchdog_backend_verified": false,
+  "status": "Research/development only. No safe install package."
+}

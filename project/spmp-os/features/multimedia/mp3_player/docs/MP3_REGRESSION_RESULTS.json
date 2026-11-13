@@ -1,0 +1,80 @@
+[
+  {
+    "case": "mpeg1_cbr",
+    "sample_rate": 44100,
+    "channels": 2,
+    "reference_samples": 62181,
+    "decoded_samples": 62181,
+    "samples_diff": 0,
+    "mae_pcm16": 0.918,
+    "metadata": "OK",
+    "noseek_short_read": "OK"
+  },
+  {
+    "case": "mpeg2_low",
+    "sample_rate": 22050,
+    "channels": 1,
+    "reference_samples": 31091,
+    "decoded_samples": 31091,
+    "samples_diff": 0,
+    "mae_pcm16": 0.888,
+    "metadata": "OK",
+    "noseek_short_read": "OK"
+  },
+  {
+    "case": "mpeg25",
+    "sample_rate": 11025,
+    "channels": 1,
+    "reference_samples": 15545,
+    "decoded_samples": 15545,
+    "samples_diff": 0,
+    "mae_pcm16": 0.947,
+    "metadata": "OK",
+    "noseek_short_read": "OK"
+  },
+  {
+    "case": "mpeg1_48k",
+    "sample_rate": 48000,
+    "channels": 2,
+    "reference_samples": 67680,
+    "decoded_samples": 67680,
+    "samples_diff": 0,
+    "mae_pcm16": 0.964,
+    "metadata": "OK",
+    "noseek_short_read": "OK"
+  },
+  {
+    "case": "mpeg1_32k",
+    "sample_rate": 32000,
+    "channels": 2,
+    "reference_samples": 45120,
+    "decoded_samples": 45120,
+    "samples_diff": 0,
+    "mae_pcm16": 0.919,
+    "metadata": "OK",
+    "noseek_short_read": "OK"
+  },
+  {
+    "case": "vbr_stereo",
+    "sample_rate": 44100,
+    "channels": 2,
+    "reference_samples": 62181,
+    "decoded_samples": 62181,
+    "samples_diff": 0,
+    "mae_pcm16": 0.947,
+    "metadata": "OK",
+    "noseek_short_read": "OK"
+  },
+  {
+    "case": "garbage",
+    "rejected": true
+  },
+  {
+    "case": "huge_ID3",
+    "rejected": true
+  },
+  {
+    "case": "short",
+    "rejected": true
+  }
+]

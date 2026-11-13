@@ -1,0 +1,47 @@
+{
+  "project": "SPMP-OS",
+  "latest_stage": 34,
+  "stage34": {
+    "project": "SPMP-OS",
+    "stage": 34,
+    "date": "2026-11-11",
+    "source_stage": 33,
+    "target": "armv5te-none-eabi",
+    "target_cpu": "ARM926EJ-S (unverified device revision)",
+    "artifact": "build/spmp_stage34_ram_gate_armv5.o",
+    "artifact_type": "ELF32 ARM EABI5 ET_REL",
+    "artifact_size_bytes": 15896,
+    "artifact_sha256": "4fb14e6a1d655c82c18096b2c5357d3546a4d7b37d35eaf195c8eb363decfbdc",
+    "unresolved_externals": 0,
+    "can_run_on_device": false,
+    "firmware_image": false,
+    "physical_ram_map_verified": false,
+    "redboot_fsp_integration_verified": false,
+    "flash_writes_performed": false,
+    "user_device_tested": false,
+    "host_checks": {
+      "layout_negative_cases": 12,
+      "layout_fuzz_cases": 20000,
+      "ram_alias_rejected": true,
+      "unattested_ram_rejected": true,
+      "cache_failure_clears_staging": true,
+      "asan_ubsan": "pass",
+      "diag_hal": "pass (mock, read-only)",
+      "file_manager": "two-panel read-only state, 64 entry pages and FAT dates (mock)",
+      "stage10_overlay_regression": "pass",
+      "stage10_memory_regression": "pass",
+      "stage31_regression": "pass",
+      "stage32_regression": "pass",
+      "stage33_regression": "pass",
+      "theme_v9_34_themes": "pass"
+    },
+    "blockers": [
+      "Confirmed real RAM reservations and safe launcher",
+      "Native eCos function import table and callback implementations",
+      "Real SD/FAT/LCD/audio input HAL",
+      "First hardware experiment with a verified RAM-only loader and recovery"
+    ]
+  },
+  "history": "docs/history/MANIFEST_STAGE7_LEGACY.json",
+  "legacy_note": "Older stage manifest kept for historical reference; not current status"
+}

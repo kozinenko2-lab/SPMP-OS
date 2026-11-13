@@ -1,0 +1,72 @@
+{
+  "project": "SPMP-OS",
+  "stage": 7,
+  "date": "2026-11-11",
+  "status": "Host-only NES baseline and ARMv5 relocatable object; NOT a flashable firmware image",
+  "core_status": {
+    "chip8": "host tested and ARMv5 compiled",
+    "pcengine": "host tested and ARMv5 compiled",
+    "atari2600": "host tested and ARMv5 compiled",
+    "nes": "limited iNES1 NROM/UxROM/CNROM, host tested, ARMv5 compiled",
+    "gb/gbc": "NOT integrated",
+    "gba": "NOT integrated",
+    "snes": "NOT integrated",
+    "megadrive": "NOT integrated"
+  },
+  "python_tests_passed": 34,
+  "native_harnesses_passed": 4,
+  "sanitizer": "NES test harness ASan and UBSan passed (synthetic ROMs only)",
+  "nes": {
+    "text_bytes": 11824,
+    "bss_bytes": 932720,
+    "supported_mappers": [
+      0,
+      2,
+      3
+    ],
+    "audio": false,
+    "commercial_game_compatibility": "unverified"
+  },
+  "artifacts": {
+    "build/spmp-os-host": {
+      "size": 334520,
+      "sha256": "ba83da5f1144680809558ce7b2f802de8dcb66dff9f3d6af3d96ef39da7ca10d"
+    },
+    "build/nes_armv5_stage7.o": {
+      "size": 16100,
+      "sha256": "4d1116c80fb154694aa3f11d989990aaf995fc346be95cf52568698256f2ffdf"
+    },
+    "build/atari2600_armv5_stage6.o": {
+      "size": 254584,
+      "sha256": "00007bcac1717c72165dc8271c115cfa0b1c76ee948154b684d0d7e6b55129a5"
+    },
+    "build/pcengine_armv5_stage6.o": {
+      "size": 111868,
+      "sha256": "1efae5a7f385997ad58d058f56beeff1f10dc3bcd7b0d8da1ee42fd57d33d461"
+    },
+    "build/chip8_armv5.o": {
+      "size": 6036,
+      "sha256": "e4196fd9d75feb246b1469f379711c94f0a29ed7293d81c79a37eadedbc08b50"
+    },
+    "build/nes_harness": {
+      "size": 25912,
+      "sha256": "68f00b7e6b2b2c18d8b6b6ad2dc8dfd7fce9debed41a3c354b69109165cfdde5"
+    },
+    "build/nes-preview.png": {
+      "size": 719,
+      "sha256": "3a32ed12952417d84be46ea6de4b6ae9712db2098552597ca6e616191f6533f9"
+    },
+    "samples/nes_cpu_ppu_smoke.nes": {
+      "size": 16400,
+      "sha256": "aca9ae2ece3bda57d72d34e19aafe742735d32b9d1a83ef97c96973c28b659e4"
+    },
+    "samples/nes_uxrom_smoke.nes": {
+      "size": 32784,
+      "sha256": "49e5bc2a37cb423b6a240753cb3f35b2af3872a3fa05d7009ef4f6346720f4d1"
+    },
+    "samples/nes_cnrom_smoke.nes": {
+      "size": 32784,
+      "sha256": "fde391f7489a1171c974cd2dccde8e31945af60e64eba6382c3d5b8498cad5e9"
+    }
+  }
+}

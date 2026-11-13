@@ -1,0 +1,19 @@
+{
+  "stage": 45,
+  "phase": "static_oem_sd_control_flow_and_safe_callback_model",
+  "device_tested": false,
+  "stock_redboot_patched": false,
+  "stock_mmi_patched": false,
+  "early_sd_driver_implemented": false,
+  "console_logs_to_sd_enabled": false,
+  "static_oem_instructions_verified": 41,
+  "oem_sd_poll_call_sites_verified": 4,
+  "static_python_tests_passed": 6,
+  "poll_host_assertions": 4020,
+  "trace_records_verified": 2,
+  "stage44_regression_assertions": 10028,
+  "sanitizers": "passed",
+  "arm5_eabi_soft_float": "relocatable_object_only",
+  "unresolved_arm_symbols": 0,
+  "blockers": ["early SD controller backend", "safe RAM ownership for RedBoot->MMI", "verified OEM FAT mount/write ABI", "serial hardware test / UART logs", "hardware recovery procedure"]
+}

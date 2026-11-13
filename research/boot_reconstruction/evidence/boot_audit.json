@@ -1,0 +1,378 @@
+{
+  "input_sha256": {
+    "8000_MMI.RAP": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+    "Images_RedBoot_201000427.img": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108"
+  },
+  "mmi": {
+    "bytes": 3284556,
+    "segments": [
+      {
+        "address": 2621440,
+        "offset": 76,
+        "size": 3059088,
+        "type": 1
+      },
+      {
+        "address": 7114720,
+        "offset": 3059188,
+        "size": 223296,
+        "type": 1
+      },
+      {
+        "address": 0,
+        "offset": 3282508,
+        "size": 0,
+        "type": 1
+      },
+      {
+        "address": 2642440576,
+        "offset": 3282532,
+        "size": 2024,
+        "type": 1
+      }
+    ],
+    "entry": "0x280040",
+    "mmpd_segment_count": 4,
+    "checksum_stored": [
+      "0xdcedaee9",
+      "0xa8f5c6b5"
+    ],
+    "checksum_computed": [
+      "0xdcedaee9",
+      "0xa8f5c6b5"
+    ],
+    "checked_direct_calls": {
+      "0x28013c": "0x299c90",
+      "0x280140": "0x2976d0",
+      "0x280144": "0x299a98",
+      "0x280150": "0x297ce8",
+      "0x297cfc": "0x2807c8",
+      "0x297d00": "0x33c0fc",
+      "0x280810": "0x339aac",
+      "0x3be5cc": "0x447640"
+    },
+    "startup_zero_writes": {
+      "first": "0x56ad90",
+      "last_inclusive": "0x6c8fdc",
+      "end_exclusive": "0x6c8fe0"
+    }
+  },
+  "redboot_variants": [
+    {
+      "variant": 1,
+      "source_offset": "0x0",
+      "bytes": 213580,
+      "sha256": "eb989ab73900835fdfaf8d9f8ebb43b0d510a9548332bfc0d4fc6548728e3f9d",
+      "stock_function_entry": "0x4a994",
+      "stock_call": "0x4a9c4",
+      "file_loader": "0x38f0c",
+      "mmp_parser": "0x427a8",
+      "go_handler": "0x4b304",
+      "fast_loader": "not traced in this audit",
+      "staging_buffer": "0xa00000",
+      "go_argv": [
+        "go",
+        "-c",
+        "0x280040"
+      ],
+      "segments": [
+        {
+          "address": 0,
+          "offset": 136,
+          "size": 352,
+          "type": 1
+        },
+        {
+          "address": 88880,
+          "offset": 512,
+          "size": 9144,
+          "type": 1
+        },
+        {
+          "address": 196608,
+          "offset": 9680,
+          "size": 176764,
+          "type": 1
+        },
+        {
+          "address": 393216,
+          "offset": 186468,
+          "size": 17408,
+          "type": 1
+        },
+        {
+          "address": 2642440192,
+          "offset": 203900,
+          "size": 2408,
+          "type": 1
+        },
+        {
+          "address": 2642434208,
+          "offset": 206396,
+          "size": 3284,
+          "type": 0
+        },
+        {
+          "address": 2642437632,
+          "offset": 209768,
+          "size": 3812,
+          "type": 0
+        }
+      ]
+    },
+    {
+      "variant": 2,
+      "source_offset": "0x3424c",
+      "bytes": 213588,
+      "sha256": "ae3f375ab146bf16a43da334176416c0213e93907e02f6cbe1de600689ce50b2",
+      "stock_function_entry": "0x4a994",
+      "stock_call": "0x4a9c4",
+      "file_loader": "0x38f0c",
+      "mmp_parser": "0x427a8",
+      "go_handler": "0x4b304",
+      "fast_loader": "not traced in this audit",
+      "staging_buffer": "0xa00000",
+      "go_argv": [
+        "go",
+        "-c",
+        "0x280040"
+      ],
+      "segments": [
+        {
+          "address": 0,
+          "offset": 136,
+          "size": 352,
+          "type": 1
+        },
+        {
+          "address": 88880,
+          "offset": 512,
+          "size": 9144,
+          "type": 1
+        },
+        {
+          "address": 196608,
+          "offset": 9680,
+          "size": 176764,
+          "type": 1
+        },
+        {
+          "address": 393216,
+          "offset": 186468,
+          "size": 17408,
+          "type": 1
+        },
+        {
+          "address": 2642440192,
+          "offset": 203900,
+          "size": 2408,
+          "type": 1
+        },
+        {
+          "address": 2642434208,
+          "offset": 206396,
+          "size": 3292,
+          "type": 0
+        },
+        {
+          "address": 2642437632,
+          "offset": 209776,
+          "size": 3812,
+          "type": 0
+        }
+      ]
+    },
+    {
+      "variant": 3,
+      "source_offset": "0x684a0",
+      "bytes": 190284,
+      "sha256": "1723e3cebdb012e46c014a7215c9cb58978c081b25ba58738687d64b116b1034",
+      "stock_function_entry": "0x467f4",
+      "stock_call": "0x46818",
+      "file_loader": "0x36bf4",
+      "mmp_parser": "0x3e734",
+      "go_handler": "0x46220",
+      "fast_loader": "0x36ab4",
+      "staging_buffer": "0xa00000",
+      "go_argv": [
+        "go",
+        "-c",
+        "0x280040"
+      ],
+      "segments": [
+        {
+          "address": 0,
+          "offset": 136,
+          "size": 352,
+          "type": 1
+        },
+        {
+          "address": 95472,
+          "offset": 512,
+          "size": 7920,
+          "type": 1
+        },
+        {
+          "address": 196608,
+          "offset": 8456,
+          "size": 155600,
+          "type": 1
+        },
+        {
+          "address": 393216,
+          "offset": 164080,
+          "size": 17408,
+          "type": 1
+        },
+        {
+          "address": 2642440192,
+          "offset": 181512,
+          "size": 1692,
+          "type": 1
+        },
+        {
+          "address": 2642434208,
+          "offset": 183292,
+          "size": 3092,
+          "type": 0
+        },
+        {
+          "address": 2642437632,
+          "offset": 186472,
+          "size": 3812,
+          "type": 0
+        }
+      ]
+    },
+    {
+      "variant": 4,
+      "source_offset": "0x96bec",
+      "bytes": 213588,
+      "sha256": "795f6138474cdd7b61d087694903584c436a0e82ec2c33ade3904fd20ea21b18",
+      "stock_function_entry": "0x4a994",
+      "stock_call": "0x4a9c4",
+      "file_loader": "0x38f0c",
+      "mmp_parser": "0x427a8",
+      "go_handler": "0x4b304",
+      "fast_loader": "not traced in this audit",
+      "staging_buffer": "0xa00000",
+      "go_argv": [
+        "go",
+        "-c",
+        "0x280040"
+      ],
+      "segments": [
+        {
+          "address": 0,
+          "offset": 136,
+          "size": 352,
+          "type": 1
+        },
+        {
+          "address": 88880,
+          "offset": 512,
+          "size": 9144,
+          "type": 1
+        },
+        {
+          "address": 196608,
+          "offset": 9680,
+          "size": 176764,
+          "type": 1
+        },
+        {
+          "address": 393216,
+          "offset": 186468,
+          "size": 17408,
+          "type": 1
+        },
+        {
+          "address": 2642440192,
+          "offset": 203900,
+          "size": 2408,
+          "type": 1
+        },
+        {
+          "address": 2642434208,
+          "offset": 206396,
+          "size": 3292,
+          "type": 0
+        },
+        {
+          "address": 2642437632,
+          "offset": 209776,
+          "size": 3812,
+          "type": 0
+        }
+      ]
+    },
+    {
+      "variant": 5,
+      "source_offset": "0xcae40",
+      "bytes": 190284,
+      "sha256": "c92122294bcc69d27b16bd159be9870e9bd764eeffcb110c9abca83da69e8d5a",
+      "stock_function_entry": "0x467f4",
+      "stock_call": "0x46818",
+      "file_loader": "0x36bf4",
+      "mmp_parser": "0x3e734",
+      "go_handler": "0x46220",
+      "fast_loader": "0x36ab4",
+      "staging_buffer": "0xa00000",
+      "go_argv": [
+        "go",
+        "-c",
+        "0x280040"
+      ],
+      "segments": [
+        {
+          "address": 0,
+          "offset": 136,
+          "size": 352,
+          "type": 1
+        },
+        {
+          "address": 95472,
+          "offset": 512,
+          "size": 7920,
+          "type": 1
+        },
+        {
+          "address": 196608,
+          "offset": 8456,
+          "size": 155600,
+          "type": 1
+        },
+        {
+          "address": 393216,
+          "offset": 164080,
+          "size": 17408,
+          "type": 1
+        },
+        {
+          "address": 2642440192,
+          "offset": 181512,
+          "size": 1692,
+          "type": 1
+        },
+        {
+          "address": 2642434208,
+          "offset": 183292,
+          "size": 3092,
+          "type": 0
+        },
+        {
+          "address": 2642437632,
+          "offset": 186472,
+          "size": 3812,
+          "type": 0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Static analysis, no console execution.",
+    "PRAW selection for Defender board remains unresolved.",
+    "GZF databases are preserved but not opened by this audit.",
+    "go argv reconstructed on stock success path; runtime branches depend on boot configuration."
+  ]
+}

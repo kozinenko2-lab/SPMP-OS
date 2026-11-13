@@ -1,0 +1,22 @@
+{
+  "project": "SPMP-OS",
+  "stage": 10,
+  "purpose": "ARMv5 ELF overlay loader + bounded game RAM + residency coordinator",
+  "device_executed": false,
+  "bootloader_modified": false,
+  "validation": [
+    "42 previous Python tests",
+    "overlay ELF32 harness",
+    "resident game runtime harness",
+    "guarded memory 1000-ROM harness",
+    "ASan/UBSan host checks"
+  ],
+  "artifact_hashes": {
+    "build/spmp_memory_armv5.o": "1812c29a787090d3ea3bd4394d7b2dda2a98bb3456eb37bdb73f11ed2e079a8f",
+    "build/probe_alt_armv5.o": "f1ad527642fde90639abc4dc48c7522ac0a5727cdbfb3d845c784d42f103e983",
+    "build/spmp_runtime_armv5.o": "e973c3d08dfb0c599040e2bd3745fc41ff942553a43c4eb79b31d477be441af1",
+    "build/probe_overlay_armv5.o": "93137d39beee32b34e2e0d3ce2fe0af3d593af7958191c21b5a0922640763366",
+    "build/spmp_overlay_loader_armv5.o": "77a602974cf43e5a2c345d3f30bcf56d76fbae403e40a29cfa902e9b4edfff73"
+  },
+  "files_in_archive": 1042
+}

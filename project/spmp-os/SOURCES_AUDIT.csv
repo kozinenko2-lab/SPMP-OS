@@ -1,0 +1,7 @@
+archive,project,size_bytes,sha256,entries,uncompressed_bytes,license,assessment
+retro-go-stm32-76e5203cea5460b63cef2a8509e8036afd68605d.zip,Retro-Go STM32,697716,5c9902a68b83ec5862f9b2736508781fa1131c1c72f1eba5c37b5d4ccdf61fd7,310,3355405,GPLv2 + MIT per component,"NoFrendo, Gnuboy, SMSPlusGX, HuExpress, Handy; ESP/STM32 HAL must be replaced"
+LCD-Game-Emulator-9dd5b0f6dae41dd51f3727b672dc1f96cdfdc2b7.zip,LCD Game Emulator,47565,62988c8a59a47733f16ebbd31b37dbcec1dd1e880aa7961fab703b0ea4b59ccd,23,126360,GPLv3,LCD segment emulation; artwork/input and device-specific front end
+game-and-watch-retro-go-sd-main.zip,Game & Watch Retro-Go SD,557498,77585aa0333ab76ec06fb2f22a72b57b54d57f28734521a39e4d72de60e486b0,228,2409956,GPLv2,"STM32 launcher, storage and overlays as architecture reference"
+snes9x-master.zip,Snes9x current,5857373,916eb2c26f5ab98399adc5cfb0dace545185bde8c76eab26cd4bee94510f5b94,960,25450084,Custom non-commercial grant,C++ high accuracy but likely memory/CPU intensive for ARMv5
+MesenCE-master.zip,Mesen Community Edition,4368572,dbeb30fc6ec3076b8908c94b0c2fc847075a571d36eccf889ea6d32db0618afa,2520,15811914,GPLv3,"Reference accuracy only; C++ and dependencies likely heavy, GPL compatibility must be reviewed"
+gambatte-libretro-master.zip,Gambatte libretro,1171299,bae96e9a042b82b52a64602f10655b8b8b1a440dc5f41db052480818b7caf273,178,5292664,GPLv2,GB/GBC fully built and run on Linux host; ARMv5 build pending

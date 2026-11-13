@@ -1,0 +1,217 @@
+{
+  "format": "SPMP_THEME_CATALOG",
+  "version": 9,
+  "resolution": [
+    320,
+    240
+  ],
+  "count": 34,
+  "theme_ids": [
+    "beach_sunset",
+    "auto_muse",
+    "tennis_breeze",
+    "night_track",
+    "seaside_serpentine",
+    "showroom_crystal",
+    "ruby_lounge",
+    "violet_night",
+    "golden_pearl",
+    "midnight_blue_gt",
+    "crimson_drift",
+    "sunset_street",
+    "glamour_rose",
+    "alpine_coast",
+    "neon_racer",
+    "comic_nights",
+    "action_legends",
+    "scarlet_machine",
+    "blue_velocity",
+    "velvet_gold",
+    "glamour",
+    "nature",
+    "racing",
+    "comics",
+    "action",
+    "action_heat_90s",
+    "neon_pursuit_90s",
+    "urban_strike_90s",
+    "beach_glow",
+    "velvet_pulse",
+    "runway_shine",
+    "circuit_storm",
+    "ocean_curve",
+    "gallery_velocity"
+  ],
+  "themes": [
+    {
+      "id": "beach_sunset",
+      "name_ru": "Девушки: Пляж на закате",
+      "category": "girls"
+    },
+    {
+      "id": "auto_muse",
+      "name_ru": "Девушки: Автомобильная муза",
+      "category": "girls"
+    },
+    {
+      "id": "tennis_breeze",
+      "name_ru": "Девушки: Морской теннис",
+      "category": "girls"
+    },
+    {
+      "id": "night_track",
+      "name_ru": "Автомобили: Ночная трасса",
+      "category": "cars"
+    },
+    {
+      "id": "seaside_serpentine",
+      "name_ru": "Автомобили: Морской серпантин",
+      "category": "cars"
+    },
+    {
+      "id": "showroom_crystal",
+      "name_ru": "Автомобили: Выставочный салон",
+      "category": "cars"
+    },
+    {
+      "id": "ruby_lounge",
+      "name_ru": "Девушки: Рубиновый салон",
+      "category": "girls"
+    },
+    {
+      "id": "violet_night",
+      "name_ru": "Девушки: Фиолетовая ночь",
+      "category": "girls"
+    },
+    {
+      "id": "golden_pearl",
+      "name_ru": "Девушки: Золотая жемчужина",
+      "category": "girls"
+    },
+    {
+      "id": "midnight_blue_gt",
+      "name_ru": "Автомобили: Полуночный GT",
+      "category": "cars"
+    },
+    {
+      "id": "crimson_drift",
+      "name_ru": "Автомобили: Красный дрифт",
+      "category": "cars"
+    },
+    {
+      "id": "sunset_street",
+      "name_ru": "Автомобили: Закатный RX",
+      "category": "cars"
+    },
+    {
+      "id": "glamour_rose",
+      "name_ru": "Девушки: Бархатный гламур",
+      "category": "girls"
+    },
+    {
+      "id": "alpine_coast",
+      "name_ru": "Природа: Горы и море",
+      "category": "nature"
+    },
+    {
+      "id": "neon_racer",
+      "name_ru": "Автомобили: Неоновая гонка",
+      "category": "cars"
+    },
+    {
+      "id": "comic_nights",
+      "name_ru": "Комиксы: Ночные защитники",
+      "category": "comics"
+    },
+    {
+      "id": "action_legends",
+      "name_ru": "Боевики: Легенды экшена",
+      "category": "action"
+    },
+    {
+      "id": "scarlet_machine",
+      "name_ru": "Автомобили: Алый металл",
+      "category": "cars"
+    },
+    {
+      "id": "blue_velocity",
+      "name_ru": "Автомобили: Синяя скорость",
+      "category": "cars"
+    },
+    {
+      "id": "velvet_gold",
+      "name_ru": "Девушки: Бархат и золото",
+      "category": "girls"
+    },
+    {
+      "id": "glamour",
+      "name_ru": "Девушки: Классика",
+      "category": "girls"
+    },
+    {
+      "id": "nature",
+      "name_ru": "Природа: Лазурный берег",
+      "category": "nature"
+    },
+    {
+      "id": "racing",
+      "name_ru": "Автомобили: Ночной драйв",
+      "category": "cars"
+    },
+    {
+      "id": "comics",
+      "name_ru": "Комиксы: Город героев",
+      "category": "comics"
+    },
+    {
+      "id": "action",
+      "name_ru": "Боевики: Классический экшен",
+      "category": "action"
+    },
+    {
+      "id": "action_heat_90s",
+      "name_ru": "Боевики: Огненный город 90-х",
+      "category": "action"
+    },
+    {
+      "id": "neon_pursuit_90s",
+      "name_ru": "Боевики: Неоновая погоня 90-х",
+      "category": "action"
+    },
+    {
+      "id": "urban_strike_90s",
+      "name_ru": "Боевики: Городской удар 90-х",
+      "category": "action"
+    },
+    {
+      "id": "beach_glow",
+      "name_ru": "Девушки: Пляжное сияние",
+      "category": "girls"
+    },
+    {
+      "id": "velvet_pulse",
+      "name_ru": "Девушки: Бархатный пульс",
+      "category": "girls"
+    },
+    {
+      "id": "runway_shine",
+      "name_ru": "Девушки: Звезда подиума",
+      "category": "girls"
+    },
+    {
+      "id": "circuit_storm",
+      "name_ru": "Автомобили: Гоночный шторм",
+      "category": "cars"
+    },
+    {
+      "id": "ocean_curve",
+      "name_ru": "Автомобили: Океанский серпантин",
+      "category": "cars"
+    },
+    {
+      "id": "gallery_velocity",
+      "name_ru": "Автомобили: Галерея скорости",
+      "category": "cars"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "stage": 33,
+  "date": "2026-11-11",
+  "target": "armv5te-none-eabi",
+  "target_cpu": "ARM926EJ-S (to be verified on device)",
+  "input_stage": 32,
+  "gpSP_sources_compiled": 15,
+  "gpSP_sources_selected": 15,
+  "gpsp_relocatable_link": true,
+  "undefined_symbols": [],
+  "undefined_count": 0,
+  "softfloat_exports": [
+    "__aeabi_fadd",
+    "__aeabi_fsub",
+    "__aeabi_fmul",
+    "__aeabi_fdiv",
+    "__aeabi_fcmpge",
+    "__aeabi_dmul",
+    "__aeabi_d2lz",
+    "__aeabi_f2uiz",
+    "__aeabi_ui2d",
+    "__aeabi_ui2f"
+  ],
+  "host_ieee_oracle": "pass:350000 random iterations plus directed boundaries",
+  "asan_ubsan": "pass",
+  "stage31_regression": "pass",
+  "stage32_regression": "pass",
+  "themes34_regression": "pass",
+  "loadable_on_device": false,
+  "tested_on_device": false,
+  "stock_flash_modified": false,
+  "blockers": [
+    "RAM map and safe loader",
+    "LCD, audio and SD/FAT HAL",
+    "FSP integration / event loop",
+    "ARM hardware verification"
+  ]
+}

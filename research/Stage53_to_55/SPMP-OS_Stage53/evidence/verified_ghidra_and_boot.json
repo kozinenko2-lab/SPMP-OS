@@ -1,0 +1,161 @@
+{
+  "source_archive": "/mnt/data/SPMP8k.zip",
+  "source_archive_sha256": "bcb5aac450fa2c00eb77886ab1b2db16e1edbec89c3b6ca4e2a23120a0507060",
+  "classification": "read-only analysis; GZF contains Ghidra DB, not pseudocode text",
+  "programs": {
+    "MMI": {
+      "file": "ghidra_analysis_ONLY.elf.gzf",
+      "bytes": 13721849,
+      "sha256": "5e05914d9afa899f4211f2317c1abd0b2963683ce3b42a8f2b7d0eed5732f40c",
+      "internal_database_bytes": 45629440,
+      "internal_db_sha256": "5dde895615b3030a91f581c7823b6ed8dec1a7e0d16560606f2419f9f48f90da",
+      "deflate_crc_ok": true,
+      "distinct_auto_fun_labels": 7437,
+      "min_auto_fun": "FUN_00280418",
+      "max_auto_fun": "FUN_004cfa1c",
+      "human_labels_seen": [
+        "MMI_reset_00280040",
+        "MMI_native_NGame_header_verify_004611BC",
+        "MMI_diag_stub_00298B64"
+      ],
+      "segment_sha256": "00aad9c439514298e39ea8c0b162d886edb2e36dc318853b5ddeec097040d62e",
+      "segment_bytes": 3059088,
+      "entrypoint": "0x280040",
+      "verified_arm_words": {
+        "0x00280040": "0xee110f10",
+        "0x0028008c": "0x1afffffd",
+        "0x00280130": "0xe4810004",
+        "0x0028013c": "0xeb0066d3",
+        "0x00280140": "0xeb005d62",
+        "0x00280144": "0xeb006653",
+        "0x00280150": "0xeb005ee4",
+        "0x00280154": "0xeafffffe",
+        "0x00298b64": "0xe12fff1e",
+        "0x00298b68": "0xe92d000f",
+        "0x002b9a38": "0xe1a0c00d",
+        "0x002b9b78": "0xe1a0c00d",
+        "0x0046018c": "0xe59f10d0",
+        "0x00460250": "0xe1a0e00f",
+        "0x00460254": "0xe1a0f003",
+        "0x004611bc": "0xe1a0c00d",
+        "0x00461204": "0xebfb9352",
+        "0x00461224": "0xe5d5106d",
+        "0x00461230": "0xe5873000",
+        "0x00461234": "0xe5953078",
+        "0x004618c4": "0xe1a00004"
+      }
+    },
+    "RedBoot_V1": {
+      "file": "ghidra_analysis_ONLY v1.elf.gzf",
+      "bytes": 843248,
+      "sha256": "2df35c35d07f569d04c67ae5b97e1ec8581a7fbbd160bb6b625a1dc74442c02c",
+      "internal_database_bytes": 4423680,
+      "internal_db_sha256": "4eb85b1a5e4507c2e4285d6003f3a03c730761f54ab3ddfdc440874da6052357",
+      "deflate_crc_ok": true,
+      "distinct_auto_fun_labels": 665,
+      "min_auto_fun": "FUN_00030488",
+      "max_auto_fun": "FUN_00053f98",
+      "human_labels_seen": [
+        "RedBoot_factory_start_0004A998"
+      ],
+      "segment_sha256": "b2790a6a8c4b9a3217e7bfa3430693eaae4b28f0a15e6fd232fd9c71e2fcc4c2",
+      "segment_bytes": 176764,
+      "entrypoint": "0x30040",
+      "verified_arm_words": {
+        "0x00030040": "0xee110f10",
+        "0x0004a998": "0xe92dd870",
+        "0x0004a9bc": "0xe59f0080",
+        "0x0004a9c0": "0xe59f1080",
+        "0x0004a9c4": "0xebffb950",
+        "0x0004a9c8": "0xe2504000",
+        "0x0004a9cc": "0x0a000010",
+        "0x0004aa44": "0x00059bb4",
+        "0x0004aa48": "0x00a00000"
+      }
+    },
+    "RedBoot_V3": {
+      "file": "ghidra_analysis_ONLY v3.elf.gzf",
+      "bytes": 767362,
+      "sha256": "771630d4f5bcb06637ebaab186f1c2dc062f721a06092e0e544170679ca8cf97",
+      "internal_database_bytes": 3997696,
+      "internal_db_sha256": "3354b62c018c49cfc371205d4c5aca6ee074af6f1bad68760bd946c64eede001",
+      "deflate_crc_ok": true,
+      "distinct_auto_fun_labels": 598,
+      "min_auto_fun": "FUN_00030000",
+      "max_auto_fun": "FUN_0004ec64",
+      "human_labels_seen": [
+        "RedBoot_factory_start_000467F4"
+      ],
+      "segment_sha256": "c8f6d2799eeda3e5560322aa4ca3c61911028bf53532264da0d7b5af4bcb5d3c",
+      "segment_bytes": 155600,
+      "entrypoint": "0x30040",
+      "verified_arm_words": {
+        "0x00030040": "0xee110f10",
+        "0x000467f4": "0xe92d4030",
+        "0x00046810": "0xe59f0084",
+        "0x00046814": "0xe59f1084",
+        "0x00046818": "0xebffc0f5",
+        "0x0004681c": "0xe2504000",
+        "0x00046820": "0x0a000010",
+        "0x0004689c": "0x00054d60",
+        "0x000468a0": "0x00a00000"
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "RB-factory-ROMFS",
+      "evidence": "0x4a9bc -> string 0x59bb4; BL 0x4a9c4 -> 0x38f0c; variant3 0x46810 -> string 0x54d60; BL 0x46818 -> 0x36bf4",
+      "confidence": "binary verified",
+      "implication": "Factory boot exists independently of proposed SD chain; do not overwrite."
+    },
+    {
+      "id": "RB-A00000",
+      "evidence": "literal 0x00a00000 at v1:0x4aa48 and v3:0x468a0",
+      "confidence": "binary verified",
+      "implication": "Argument passed to loader, not proof of unused SPMP-OS RAM."
+    },
+    {
+      "id": "MMI-entry",
+      "evidence": "MMI RAP record mapping; entry 0x00280040; ARM MRC CP15 at entry",
+      "confidence": "binary verified",
+      "implication": "MMI initializes CPU modes, exception vectors and RAM; cannot treat as ordinary game."
+    },
+    {
+      "id": "MMI-BSS",
+      "evidence": "ARM reset literal at 0x280498=0x0056ad90, 0x28049c=0x006c8fdc; clearing loop at 0x280130",
+      "confidence": "binary verified",
+      "implication": "Candidate clearing span; MUST verify Ghidra decomp and memory ownership before using RAM-handoff."
+    },
+    {
+      "id": "MMI-diagnostic-stub",
+      "evidence": "BX LR word at 0x00298b64=0xe12fff1e",
+      "confidence": "binary verified",
+      "implication": "Calls into stub do not print; must instrument selectively to get real logs."
+    },
+    {
+      "id": "MMI-N1-handoff",
+      "evidence": "0x00460250 MOV LR,PC then 0x00460254 MOV PC,R3; earlier r3=0x00a00000",
+      "confidence": "binary verified",
+      "implication": "Built-in emulator loader uses direct in-RAM handoff path, separate from wrapped NGame route."
+    },
+    {
+      "id": "MMI-native",
+      "evidence": "header handler at 0x004611bc; footer compare around 0x004618c4",
+      "confidence": "binary verified control flow; semantics pending deeper decomp",
+      "implication": "Investigate accepted app formats and return codes; no assumption that mkbing output is universally accepted."
+    }
+  ],
+  "originals": [
+    {
+      "file": "8000_MMI.RAP",
+      "bytes": 3284556,
+      "sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e"
+    },
+    {
+      "file": "Images_RedBoot_201000427.img",
+      "bytes": 1021324,
+      "sha256": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108"
+    }
+  ]
+}

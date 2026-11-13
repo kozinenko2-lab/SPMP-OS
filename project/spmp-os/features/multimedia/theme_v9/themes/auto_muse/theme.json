@@ -1,0 +1,50 @@
+{
+  "id": "auto_muse",
+  "name_ru": "Девушки: Автомобильная муза",
+  "category": "girls",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff36bd",
+    "panel": "#1b0c21",
+    "text": "#ffffff",
+    "muted": "#edd1e7",
+    "sel": "#ff36bd",
+    "border": "#ff36bd"
+  },
+  "provenance": {
+    "input_reference": "презентационная_доска_auto_muse.png",
+    "input_sha256": "bdadcdc1bc0fc2892e7ef65d58227c0fb4ba2b8b8c0acb5f7499cdd183f91df2"
+  }
+}

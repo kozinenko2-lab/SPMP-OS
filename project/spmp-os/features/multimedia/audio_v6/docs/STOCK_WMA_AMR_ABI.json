@@ -1,0 +1,177 @@
+{
+  "codecs": [
+    {
+      "name": "LIBWMA.O",
+      "sha256": "6f8332812417057593b1c246977102bc9b7dcafe81202795168cada0a0bac929",
+      "bytes": 128780,
+      "elf_flags": "0x200, GNU EABI, software FP",
+      "exports": [
+        {
+          "name": "WMA_audecReset",
+          "size": 200
+        },
+        {
+          "name": "WMA_audecInit",
+          "size": 1260
+        },
+        {
+          "name": "wma_decoder_init",
+          "size": 300
+        },
+        {
+          "name": "wma_decoder_parsing",
+          "size": 1096
+        },
+        {
+          "name": "wma_decoder_read_index",
+          "size": 28
+        },
+        {
+          "name": "wma_decoder_set_file_end",
+          "size": 16
+        },
+        {
+          "name": "wma_decoder_run",
+          "size": 444
+        },
+        {
+          "name": "WMA_audecDecode",
+          "size": 1836
+        },
+        {
+          "name": "WMA_audecInput",
+          "size": 296
+        }
+      ],
+      "undefined": [
+        "Lib$$Request$$armlib",
+        "__aeabi_idivmod",
+        "__aeabi_ldivmod",
+        "__aeabi_llsl",
+        "__aeabi_llsr",
+        "__aeabi_uidivmod",
+        "__aeabi_uldivmod"
+      ],
+      "relink": {
+        "status": "relocatable ELF created; no code reconstructed or executed",
+        "size_bytes": 131348
+      }
+    },
+    {
+      "name": "LIBAMRNB.O",
+      "sha256": "b6316a7ac58836d2d97771b4267ced5ccf63b1a429831033c3d8173b83d5e66e",
+      "bytes": 164972,
+      "elf_flags": "0x4000000, Version4 EABI",
+      "exports": [
+        {
+          "name": "amr_nb_decoder_read_index",
+          "size": 24
+        },
+        {
+          "name": "amrNB_DecReset",
+          "size": 140
+        },
+        {
+          "name": "amr_nb_decoder_parsing",
+          "size": 336
+        },
+        {
+          "name": "amrNB_dec_init",
+          "size": 20
+        },
+        {
+          "name": "amr_nb_decoder_get_hdr",
+          "size": 192
+        },
+        {
+          "name": "amrNB_decoder_homing_frame_test",
+          "size": 56
+        },
+        {
+          "name": "amr_nb_decoder_init",
+          "size": 116
+        },
+        {
+          "name": "amrNB_dec",
+          "size": 3320
+        },
+        {
+          "name": "amr_nb_decoder_run",
+          "size": 684
+        },
+        {
+          "name": "amrNB_decoder_homing_frame_test_first",
+          "size": 56
+        },
+        {
+          "name": "amr_nb_decoder_set_file_end",
+          "size": 16
+        },
+        {
+          "name": "amrNB_dec_reset",
+          "size": 432
+        }
+      ],
+      "undefined": [
+        "Lib$$Request$$armlib"
+      ],
+      "relink": {
+        "status": "relocatable ELF created; no code reconstructed or executed",
+        "size_bytes": 179240
+      }
+    },
+    {
+      "name": "LIBAMRWB.O",
+      "sha256": "5e1c22de605a895fcfebe42687b0b76f3f7e553bed211c68cf33a34ff22d7aed",
+      "bytes": 131708,
+      "elf_flags": "0x200, GNU EABI, software FP",
+      "exports": [
+        {
+          "name": "amr_wb_decoder_parsing",
+          "size": 120
+        },
+        {
+          "name": "amrWB_DecHoming_FrmTest_First",
+          "size": 16
+        },
+        {
+          "name": "amrWB_dec",
+          "size": 5372
+        },
+        {
+          "name": "amr_wb_decoder_read_index",
+          "size": 24
+        },
+        {
+          "name": "amrWB_DecReset",
+          "size": 416
+        },
+        {
+          "name": "amr_wb_decoder_init",
+          "size": 96
+        },
+        {
+          "name": "amr_wb_decoder_run",
+          "size": 608
+        },
+        {
+          "name": "amr_wb_decoder_set_file_end",
+          "size": 16
+        },
+        {
+          "name": "amrWB_DecHoming_FrmTest",
+          "size": 16
+        }
+      ],
+      "undefined": [
+        "Lib$$Request$$armlib",
+        "__aeabi_idivmod"
+      ],
+      "relink": {
+        "status": "relocatable ELF created; no code reconstructed or executed",
+        "size_bytes": 146872
+      }
+    }
+  ],
+  "comment": "No evidence of runnable decoder ABI; do not bundle or flash relink outputs."
+}

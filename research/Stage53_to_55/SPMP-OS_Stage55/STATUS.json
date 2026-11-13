@@ -1,0 +1,19 @@
+{
+  "stage": 55,
+  "status": "static_research_and_Ghidra_export_prepared",
+  "MMI_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "ARM_checks": 33,
+  "unit_tests": 27,
+  "scoped_functions": 12,
+  "direct_BL_edges_in_scoped_ranges": 85,
+  "unique_direct_callers_for_gui_coordinator": 1,
+  "gui_coordinator_mmio_register": "0x90005040",
+  "mmio_semantics_verified": false,
+  "Ghidra_script_executed_locally": false,
+  "device_tested": false,
+  "mmi_patched": false,
+  "redboot_patched": false,
+  "firmware_build": false,
+  "Ghidra_input": "SPMP8k.zip supplied by user",
+  "next_goal": "decompile GUI helper calls / scheduler IPC, determine safe shell entry"
+}

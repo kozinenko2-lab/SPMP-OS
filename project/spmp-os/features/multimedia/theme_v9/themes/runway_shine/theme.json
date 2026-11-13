@@ -1,0 +1,57 @@
+{
+  "id": "runway_shine",
+  "name_ru": "Девушки: Звезда подиума",
+  "category": "girls",
+  "version": 9,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ffc86d",
+    "panel": "#251e1e",
+    "text": "#ffffff",
+    "muted": "#ffefd4",
+    "sel": "#ffc86d",
+    "border": "#ffc86d"
+  },
+  "provenance": {
+    "input_reference": "гламурный_интерфейс_runway_shine.png",
+    "input_sha256": "a1a8e4bd1cba2ab8e42e584c6060147ca41c188da3a35ae9a5dc5a796e1e0226",
+    "clean_crop_xyxy": [
+      590,
+      130,
+      1438,
+      766
+    ],
+    "source_type": "user-approved generated concept"
+  }
+}

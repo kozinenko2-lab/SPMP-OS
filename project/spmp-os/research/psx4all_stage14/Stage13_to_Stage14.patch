@@ -1,0 +1,454 @@
+--- stage13/Makefile
++++ stage14/Makefile
+@@ -101,3 +101,35 @@
+ 	bash tools/audit_full_core.sh
+ 	@test "$$(grep -c "pass" $(BUILD)/host-core-audit/RESULTS.tsv)" -eq 33
+ stage13-full-check: stage12-check stage13-check stage13-arm stage13-core-audit
++
++# Stage14: actual emulated PS1 RAM reads/writes, mirrors, lifetime and cache isolation
++.PHONY: stage14-memory-check stage14-memory-asan stage14-full-check
++$(BUILD)/psx_stage14_mem: tests/test_mem_lifecycle.cpp $(PSX_SRC)/mem.cpp $(PORT)/spmp_psx_bios.c
++	mkdir -p $(BUILD)
++	$(CXX) -std=gnu++11 -O2 -g -fno-strict-aliasing -ffunction-sections -fdata-sections -Wl,--gc-sections -DGP2X -DPANDORA -DSPMP_PSX4ALL -DLSB_FIRST -I$(PSX_SRC) -I$(PSX_SRC)/pandora $^ -o $@
++stage14-memory-check: $(BUILD)/psx_stage14_mem
++	./$(BUILD)/psx_stage14_mem
++stage14-memory-asan:
++	mkdir -p $(BUILD)
++	$(CXX) -std=gnu++11 -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -fno-strict-aliasing -ffunction-sections -fdata-sections -Wl,--gc-sections -DGP2X -DPANDORA -DSPMP_PSX4ALL -DLSB_FIRST -I$(PSX_SRC) -I$(PSX_SRC)/pandora tests/test_mem_lifecycle.cpp $(PSX_SRC)/mem.cpp $(PORT)/spmp_psx_bios.c -o $(BUILD)/psx_stage14_mem_san
++	ASAN_OPTIONS=detect_leaks=1 ./$(BUILD)/psx_stage14_mem_san
++stage14-full-check: stage13-full-check stage14-memory-check stage14-memory-asan
++
++$(BUILD)/psx_stage14_interpreter: tests/test_interpreter_cpu.cpp $(PSX_SRC)/interpreter/interpreter.cpp $(PSX_SRC)/mem.cpp $(PORT)/spmp_psx_bios.c
++	mkdir -p $(BUILD)
++	$(CXX) -std=gnu++11 -O2 -g -fno-strict-aliasing -ffunction-sections -fdata-sections -Wl,--gc-sections -DGP2X -DPANDORA -DINTERP -DSPMP_PSX4ALL -DLSB_FIRST -I$(PSX_SRC) -I$(PSX_SRC)/pandora $^ -o $@
++.PHONY: stage14-cpu-check
++stage14-cpu-check: $(BUILD)/psx_stage14_interpreter
++	./$(BUILD)/psx_stage14_interpreter
++stage14-full-check: stage14-cpu-check
++
++.PHONY: stage14-armv5-core stage14-cpu-asan stage14-stress stage14-release-check
++stage14-armv5-core:
++	bash tools/build_stage14_armv5.sh
++stage14-cpu-asan:
++	mkdir -p $(BUILD)
++	$(CXX) -std=gnu++11 -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -fno-strict-aliasing -ffunction-sections -fdata-sections -Wl,--gc-sections -DGP2X -DPANDORA -DINTERP -DSPMP_PSX4ALL -DLSB_FIRST -I$(PSX_SRC) -I$(PSX_SRC)/pandora tests/test_interpreter_cpu.cpp $(PSX_SRC)/interpreter/interpreter.cpp $(PSX_SRC)/mem.cpp $(PORT)/spmp_psx_bios.c -o $(BUILD)/psx_stage14_interpreter_san
++	ASAN_OPTIONS=detect_leaks=1 ./$(BUILD)/psx_stage14_interpreter_san
++stage14-stress: $(BUILD)/psx_stage14_interpreter
++	PSX_CPU_STRESS=1 ./$(BUILD)/psx_stage14_interpreter
++stage14-release-check: stage14-full-check stage14-cpu-asan stage14-stress stage14-armv5-core
+--- stage13/tools/audit_full_core.sh
++++ stage14/tools/audit_full_core.sh
+@@ -14,7 +14,7 @@
+   name="${f//\//_}"
+   file="$PSX/$f.cpp"
+   if [ ! -f "$file" ]; then echo -e "$f\tmissing\tfile not found" >> "$OUT/RESULTS.tsv"; continue; fi
+-  if g++ -std=gnu++11 -c -O2 -fno-strict-aliasing -Wno-unused-result \
++  if g++ -std=gnu++11 -c -O2 -fno-strict-aliasing -fpermissive -Wno-unused-result \
+        -o "$OUT/$name.o" \
+        -DGP2X -DPANDORA -DSPMP_PSX4ALL -DDYNAREC -DLSB_FIRST -I"$PSX" -I"$PSX/pandora" "$file" \
+        >"$OUT/$name.out" 2>"$OUT/$name.err"; then
+--- stage13/vendor/psx4all-dingoo-master/src/psxTypes.h
++++ stage14/vendor/psx4all-dingoo-master/src/psxTypes.h
+@@ -2,7 +2,21 @@
+ #define PSX_TYPES_H
+ 
+ ///////////////////////////////////////////////////////////////////////////////
+-#ifdef PSP
++#if defined(SPMP_PSX4ALL)
++/* PS1 registers and RAM values are *always* 8/16/32/64 bit, even when
++ * running a host regression suite on LP64. The original `long` alias was
++ * 64 bit on x86_64, hiding memory corruption in CPU/GPU paths. */
++#include <stdint.h>
++typedef char s8; /* Preserve legacy C-string ABI; build with -fsigned-char on ARM. */
++typedef int16_t s16;
++typedef int32_t s32;
++typedef int64_t s64;
++typedef uint8_t u8;
++typedef uint16_t u16;
++typedef uint32_t u32;
++typedef uint64_t u64;
++
++#elif defined(PSP)
+ 
+ #define s8 char
+ #define u8 unsigned char
+--- stage13/vendor/psx4all-dingoo-master/src/r3000a_new.h
++++ stage14/vendor/psx4all-dingoo-master/src/r3000a_new.h
+@@ -22,6 +22,15 @@
+ #include <stdio.h>
+ 
+ #include "common.h"
++/* The MIPS R3000A registers are 32-bit on every host. */
++#ifdef SPMP_PSX4ALL
++#define PSX_GUEST_U32 u32
++#define PSX_GUEST_S32 s32
++#else
++#define PSX_GUEST_U32 unPSX_GUEST_S32
++#define PSX_GUEST_S32 signed long
++#endif
++
+ 
+ typedef struct {
+ 	int  (*Init)();
+@@ -40,17 +49,17 @@
+ 
+ typedef union {
+ 	struct {
+-		unsigned long   r0, at, v0, v1, a0, a1, a2, a3,
++		PSX_GUEST_U32   r0, at, v0, v1, a0, a1, a2, a3,
+ 						t0, t1, t2, t3, t4, t5, t6, t7,
+ 						s0, s1, s2, s3, s4, s5, s6, s7,
+ 						t8, t9, k0, k1, gp, sp, s8, ra, lo, hi;
+ 	} n;
+-	unsigned long r[34]; /* Lo, Hi in r[33] and r[34] */
++	PSX_GUEST_U32 r[34]; /* Lo, Hi in r[33] and r[34] */
+ } psxGPRRegs;
+ 
+ typedef union {
+ 	struct {
+-		unsigned long	Index,     Random,    EntryLo0,  EntryLo1,
++		PSX_GUEST_U32	Index,     Random,    EntryLo0,  EntryLo1,
+ 						Context,   PageMask,  Wired,     Reserved0,
+ 						BadVAddr,  Count,     EntryHi,   Compare,
+ 						Status,    Cause,     EPC,       PRid,
+@@ -59,12 +68,12 @@
+ 						Reserved4, Reserved5, ECC,       CacheErr,
+ 						TagLo,     TagHi,     ErrorEPC,  Reserved6;
+ 	} n;
+-	unsigned long r[32];
++	PSX_GUEST_U32 r[32];
+ } psxCP0Regs;
+ 
+ // EDIT added:
+ typedef struct {
+-	unsigned long r[32];
++	PSX_GUEST_U32 r[32];
+ } psxCC0Regs;
+ 
+ typedef struct {
+@@ -110,7 +119,7 @@
+ 		CBGR          rgb0, rgb1, rgb2;
+ 		long          reserved;
+ 		long          mac0, mac1, mac2, mac3;
+-		unsigned long irgb, orgb;
++		PSX_GUEST_U32 irgb, orgb;
+ 		long          lzcs, lzcr;
+ 	} n;
+ #endif
+@@ -156,10 +165,10 @@
+ 
+ extern psxRegisters* psxRegs;
+ 
+-#define _i32W(x)(*((signed long*)&x))
+-#define _i32(x) ((signed long)x)
++#define _i32W(x)(*((PSX_GUEST_S32*)&x))
++#define _i32(x) ((PSX_GUEST_S32)x)
+ #define _u32W(x) x
+-#define _u32(x) ((unsigned long)x)
++#define _u32(x) ((PSX_GUEST_U32)x)
+ 
+ #define _i16(x) ((short)x)
+ #define _u16(x) ((unsigned short)x)
+--- stage13/vendor/psx4all-dingoo-master/src/mem.cpp
++++ stage14/vendor/psx4all-dingoo-master/src/mem.cpp
+@@ -18,6 +18,7 @@
+ 
+ #include <string.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include <sys/mman.h>
+ 
+ #include "common.h"
+@@ -25,26 +26,31 @@
+ #include "spmp_port/spmp_psx_bios.h"
+ #endif
+ 
+-u32 *psxMemWLUT = NULL;
+-u32 *psxMemRLUT = NULL;
++uintptr_t *psxMemWLUT = NULL;
++uintptr_t *psxMemRLUT = NULL;
+ s8 *psxM = NULL;
+ s8 *psxP = NULL;
+ s8 *psxR = NULL;
+ s8 *psxH = NULL;
+ s8 *psxNULLread=NULL;
+ 
++/* Cache-isolation state must not leak into the next loaded ROM. */
++static int spmp_psx_mem_write_enabled = 1;
++
+ int psxMemInit() {
+ 	int i;
+-
+-	psxMemRLUT = (unsigned long*)malloc(0x10000 * 4);
+-	psxMemWLUT = (unsigned long*)malloc(0x10000 * 4);
++    if (psxM || psxP || psxR || psxH || psxNULLread || psxMemRLUT || psxMemWLUT) return -1;
++    spmp_psx_mem_write_enabled = 1;
++
++	psxMemRLUT = (uintptr_t*)malloc(0x10000 * sizeof(*psxMemRLUT));
++	psxMemWLUT = (uintptr_t*)malloc(0x10000 * sizeof(*psxMemWLUT));
+     if (!psxMemRLUT || !psxMemWLUT) {
+         free(psxMemRLUT); free(psxMemWLUT);
+         psxMemRLUT = psxMemWLUT = NULL;
+         return -1;
+     }
+-    memset(psxMemRLUT, 0, 0x10000 * 4);
+-    memset(psxMemWLUT, 0, 0x10000 * 4);
++    memset(psxMemRLUT, 0, 0x10000 * sizeof(*psxMemRLUT));
++    memset(psxMemWLUT, 0, 0x10000 * sizeof(*psxMemWLUT));
+ 
+ #ifdef SPMP_PSX4ALL
+     /* The SPMP OS arena/heap provides RAM, not Linux MAP_FIXED. */
+@@ -54,11 +60,11 @@
+                         MAP_SHARED|MAP_FIXED|MAP_ANONYMOUS, -1, 0);
+ #endif
+ 	//DEBUGF("RAM mmapped at %p", psxM);
+-	psxP = (char*)malloc(0x00010000);
+-	psxH = (char*)malloc(0x00010000);
+-	psxR = (char*)malloc(0x00080000);
++	psxP = (s8*)malloc(0x00010000);
++	psxH = (s8*)malloc(0x00010000);
++	psxR = (s8*)malloc(0x00080000);
+ 	
+-	psxNULLread=(char*)malloc(0x00010000);
++	psxNULLread=(s8*)malloc(0x00010000);
+     if (psxNULLread) memset(psxNULLread, 0, 0x10000);
+ 	
+     if (psxM == NULL ||
+@@ -74,28 +80,29 @@
+ 	}
+ 
+ // MemR
+-	for (i=0; i<0x10000; i++) psxMemRLUT[i]=(u32)psxNULLread; /* Never point LUT at address of pointer variable */
+-	for (i=0; i<0x80; i++) psxMemRLUT[i + 0x0000] = (u32)&psxM[(i & 0x1f) << 16];
+-	memcpy(psxMemRLUT + 0x8000, psxMemRLUT, 0x80 * 4);
+-	memcpy(psxMemRLUT + 0xa000, psxMemRLUT, 0x80 * 4);
+-
+-	psxMemRLUT[0x1f00] = (u32)psxP;
+-	psxMemRLUT[0x1f80] = (u32)psxH;
+-
+-	for (i=0; i<0x08; i++) psxMemRLUT[i + 0xbfc0] = (u32)&psxR[i << 16];
++	for (i=0; i<0x10000; i++) psxMemRLUT[i]=(uintptr_t)psxNULLread; /* Never point LUT at address of pointer variable */
++	for (i=0; i<0x80; i++) psxMemRLUT[i + 0x0000] = (uintptr_t)&psxM[(i & 0x1f) << 16];
++	memcpy(psxMemRLUT + 0x8000, psxMemRLUT, 0x80 * sizeof(*psxMemRLUT));
++	memcpy(psxMemRLUT + 0xa000, psxMemRLUT, 0x80 * sizeof(*psxMemRLUT));
++
++	psxMemRLUT[0x1f00] = (uintptr_t)psxP;
++	psxMemRLUT[0x1f80] = (uintptr_t)psxH;
++
++	for (i=0; i<0x08; i++) psxMemRLUT[i + 0xbfc0] = (uintptr_t)&psxR[i << 16];
+ 
+ // MemW
+-	for (i=0; i<0x80; i++) psxMemWLUT[i + 0x0000] = (u32)&psxM[(i & 0x1f) << 16];
+-	memcpy(psxMemWLUT + 0x8000, psxMemWLUT, 0x80 * 4);
+-	memcpy(psxMemWLUT + 0xa000, psxMemWLUT, 0x80 * 4);
+-
+-	psxMemWLUT[0x1f00] = (u32)psxP;
+-	psxMemWLUT[0x1f80] = (u32)psxH;
++	for (i=0; i<0x80; i++) psxMemWLUT[i + 0x0000] = (uintptr_t)&psxM[(i & 0x1f) << 16];
++	memcpy(psxMemWLUT + 0x8000, psxMemWLUT, 0x80 * sizeof(*psxMemWLUT));
++	memcpy(psxMemWLUT + 0xa000, psxMemWLUT, 0x80 * sizeof(*psxMemWLUT));
++
++	psxMemWLUT[0x1f00] = (uintptr_t)psxP;
++	psxMemWLUT[0x1f80] = (uintptr_t)psxH;
+ 
+ 	return 0;
+ }
+ 
+ void psxMemReset() {
++    if (!psxM || !psxP || !psxR) return;
+     memset(psxM, 0, 0x00200000);
+     memset(psxP, 0, 0x00010000);
+     if (Config.HLE) { memset(psxR,0,0x80000); return; }
+@@ -141,33 +148,36 @@
+ 	if( psxR != NULL ) free(psxR);
+ 	if( psxMemRLUT != NULL ) free(psxMemRLUT);
+ 	if( psxMemWLUT != NULL ) free(psxMemWLUT);
++    psxM = psxP = psxR = psxH = psxNULLread = NULL;
++    psxMemRLUT = psxMemWLUT = NULL;
++    spmp_psx_mem_write_enabled = 1;
+ }
+ 
+ void psxMemWrite32_error(u32 mem, u32 value)
+ {
+-	static int mem_writeok=1;
++	/* Shared lifecycle state resets on shutdown/re-init. */
+ 	if (mem==0xfffe0130)
+ 	{
+ 		switch (value) {
+ 			case 0x800:
+ 			case 0x804:
+-				if (mem_writeok == 0) break;
+-				mem_writeok = 0;
+-				memset(psxMemWLUT + 0x0000, 0, 0x80 * 4);
+-				memset(psxMemWLUT + 0x8000, 0, 0x80 * 4);
+-				memset(psxMemWLUT + 0xa000, 0, 0x80 * 4);
++				if (spmp_psx_mem_write_enabled == 0) break;
++				spmp_psx_mem_write_enabled = 0;
++				memset(psxMemWLUT + 0x0000, 0, 0x80 * sizeof(*psxMemWLUT));
++				memset(psxMemWLUT + 0x8000, 0, 0x80 * sizeof(*psxMemWLUT));
++				memset(psxMemWLUT + 0xa000, 0, 0x80 * sizeof(*psxMemWLUT));
+ 				break;
+ 			case 0x1e988:
+-				if (mem_writeok == 1) break;
+-				mem_writeok = 1;
+-				{ int i; for (i=0; i<0x80; i++) psxMemWLUT[i + 0x0000] = (u32)&psxM[(i & 0x1f) << 16]; }
+-				memcpy(psxMemWLUT + 0x8000, psxMemWLUT, 0x80 * 4);
+-				memcpy(psxMemWLUT + 0xa000, psxMemWLUT, 0x80 * 4);
++				if (spmp_psx_mem_write_enabled == 1) break;
++				spmp_psx_mem_write_enabled = 1;
++				{ int i; for (i=0; i<0x80; i++) psxMemWLUT[i + 0x0000] = (uintptr_t)&psxM[(i & 0x1f) << 16]; }
++				memcpy(psxMemWLUT + 0x8000, psxMemWLUT, 0x80 * sizeof(*psxMemWLUT));
++				memcpy(psxMemWLUT + 0xa000, psxMemWLUT, 0x80 * sizeof(*psxMemWLUT));
+ 				break;
+ 		}
+ 	}
+ #ifdef DYNAREC
+-	else if (!mem_writeok) REC_CLEARM(mem);
++	else if (!spmp_psx_mem_write_enabled) REC_CLEARM(mem);
+ #endif	
+ }
+ 
+--- stage13/vendor/psx4all-dingoo-master/src/mem.h
++++ stage14/vendor/psx4all-dingoo-master/src/mem.h
+@@ -18,6 +18,7 @@
+ 
+ #ifndef __PSXMEMORY_H__
+ #define __PSXMEMORY_H__
++#include <stdint.h>
+ 
+ #if defined(__MACOSX__)
+ 
+@@ -46,56 +47,56 @@
+ 
+ extern s8 *psxM;
+ #define psxMs8(mem)	psxM[(mem) & 0x1fffff]
+-#define psxMs16(mem)	(SWAP16(*(s16*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFE)))
+-#define psxMs32(mem)	(SWAP32(*(s32*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFC)))
++#define psxMs16(mem)	(SWAP16(*(s16*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)1u)))
++#define psxMs32(mem)	(SWAP32(*(s32*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)3u)))
+ #define psxMu8(mem)	(*(u8*)&psxM[(mem) & 0x1fffff]))
+-#define psxMu16(mem)	(SWAP16(*(u16*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFE)))
+-#define psxMu32(mem)	(SWAP32(*(u32*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFC)))
++#define psxMu16(mem)	(SWAP16(*(u16*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)1u)))
++#define psxMu32(mem)	(SWAP32(*(u32*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)3u)))
+ 
+ #define psxMs8ref(mem)	psxM[(mem) & 0x1fffff]
+-#define psxMs16ref(mem)	(*(s16*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFE))
+-#define psxMs32ref(mem)	(*(s32*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFC))
++#define psxMs16ref(mem)	(*(s16*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)1u))
++#define psxMs32ref(mem)	(*(s32*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)3u))
+ #define psxMu8ref(mem)	(*(u8*) &psxM[(mem) & 0x1fffff])
+-#define psxMu16ref(mem)	(*(u16*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFE))
+-#define psxMu32ref(mem)	(*(u32*)((u32)&psxM[(mem) & 0x1fffff] & 0xFFFFFFFC))
++#define psxMu16ref(mem)	(*(u16*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)1u))
++#define psxMu32ref(mem)	(*(u32*)((uintptr_t)&psxM[(mem) & 0x1fffff] & ~(uintptr_t)3u))
+ 
+ extern s8 *psxP;
+ #define psxPs8(mem)	psxP[(mem) & 0xffff]
+-#define psxPs16(mem)	(SWAP16(*(s16*)((u32)&psxP[(mem) & 0xffff] & 0xFFFFFFFE)))
+-#define psxPs32(mem)	(SWAP32(*(s32*)((u32)&psxP[(mem) & 0xffff] & 0xFFFFFFFC)))
++#define psxPs16(mem)	(SWAP16(*(s16*)((uintptr_t)&psxP[(mem) & 0xffff] & ~(uintptr_t)1u)))
++#define psxPs32(mem)	(SWAP32(*(s32*)((uintptr_t)&psxP[(mem) & 0xffff] & ~(uintptr_t)3u)))
+ #define psxPu8(mem)	(*(u8*) &psxP[(mem) & 0xffff])
+-#define psxPu16(mem)	(SWAP16(*(u16*)((u32)&psxP[(mem) & 0xffff] & 0xFFFFFFFE)))
+-#define psxPu32(mem)	(SWAP32(*(u32*)((u32)&psxP[(mem) & 0xffff] & 0xFFFFFFFC)))
++#define psxPu16(mem)	(SWAP16(*(u16*)((uintptr_t)&psxP[(mem) & 0xffff] & ~(uintptr_t)1u)))
++#define psxPu32(mem)	(SWAP32(*(u32*)((uintptr_t)&psxP[(mem) & 0xffff] & ~(uintptr_t)3u)))
+ 
+ #define psxPs8ref(mem)	psxP[(mem) & 0xffff]
+-#define psxPs16ref(mem)	(*(s16*)(&psxP[(mem) & 0xffff] & 0xFFFFFFFE))
+-#define psxPs32ref(mem)	(*(s32*)(&psxP[(mem) & 0xffff] & 0xFFFFFFFC))
++#define psxPs16ref(mem)	(*(s16*)(&psxP[(mem) & 0xffff] & ~(uintptr_t)1u))
++#define psxPs32ref(mem)	(*(s32*)(&psxP[(mem) & 0xffff] & ~(uintptr_t)3u))
+ #define psxPu8ref(mem)	(*(u8*) &psxP[(mem) & 0xffff])
+-#define psxPu16ref(mem)	(*(u16*)(&psxP[(mem) & 0xffff] & 0xFFFFFFFE))
+-#define psxPu32ref(mem)	(*(u32*)(&psxP[(mem) & 0xffff] & 0xFFFFFFFC))
++#define psxPu16ref(mem)	(*(u16*)(&psxP[(mem) & 0xffff] & ~(uintptr_t)1u))
++#define psxPu32ref(mem)	(*(u32*)(&psxP[(mem) & 0xffff] & ~(uintptr_t)3u))
+ 
+ extern s8 *psxR;
+ #define psxRs8(mem)	psxR[(mem) & 0x7ffff]
+-#define psxRs16(mem)	(SWAP16(*(s16*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFE)))
+-#define psxRs32(mem)	(SWAP32(*(s32*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFC)))
++#define psxRs16(mem)	(SWAP16(*(s16*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)1u)))
++#define psxRs32(mem)	(SWAP32(*(s32*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)3u)))
+ #define psxRu8(mem)	(*(u8* )&psxR[(mem) & 0x7ffff])
+-#define psxRu16(mem)	(SWAP16(*(u16*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFE)))
+-#define psxRu32(mem)	(SWAP32(*(u32*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFC)))
++#define psxRu16(mem)	(SWAP16(*(u16*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)1u)))
++#define psxRu32(mem)	(SWAP32(*(u32*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)3u)))
+ 
+ #define psxRs8ref(mem)	psxR[(mem) & 0x7ffff]
+-#define psxRs16ref(mem)	(*(s16*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFE))
+-#define psxRs32ref(mem)	(*(s32*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFC))
++#define psxRs16ref(mem)	(*(s16*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)1u))
++#define psxRs32ref(mem)	(*(s32*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)3u))
+ #define psxRu8ref(mem)	(*(u8* )&psxR[(mem) & 0x7ffff])
+-#define psxRu16ref(mem)	(*(u16*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFE))
+-#define psxRu32ref(mem)	(*(u32*)((u32)&psxR[(mem) & 0x7ffff] & 0xFFFFFFFC))
++#define psxRu16ref(mem)	(*(u16*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)1u))
++#define psxRu32ref(mem)	(*(u32*)((uintptr_t)&psxR[(mem) & 0x7ffff] & ~(uintptr_t)3u))
+ 
+ extern s8 *psxH;
+ #define psxHs8(mem)	psxH[(mem) & 0xffff]
+-#define psxHs16(mem)	(SWAP16(*(s16*)((u32)&psxH[(mem) & 0xffff] & 0xFFFFFFFE)))
+-#define psxHs32(mem)	(SWAP32(*(s32*)((u32)&psxH[(mem) & 0xffff] & 0xFFFFFFFC)))
++#define psxHs16(mem)	(SWAP16(*(s16*)((uintptr_t)&psxH[(mem) & 0xffff] & ~(uintptr_t)1u)))
++#define psxHs32(mem)	(SWAP32(*(s32*)((uintptr_t)&psxH[(mem) & 0xffff] & ~(uintptr_t)3u)))
+ #define psxHu8(mem)	(*(u8*) &psxH[(mem) & 0xffff])
+-#define psxHu16(mem)	(SWAP16(*(u16*)((u32)&psxH[(mem) & 0xffff] & 0xFFFFFFFE)))
+-#define psxHu32(mem)	(SWAP32(*(u32*)((u32)&psxH[(mem) & 0xffff] & 0xFFFFFFFC)))
++#define psxHu16(mem)	(SWAP16(*(u16*)((uintptr_t)&psxH[(mem) & 0xffff] & ~(uintptr_t)1u)))
++#define psxHu32(mem)	(SWAP32(*(u32*)((uintptr_t)&psxH[(mem) & 0xffff] & ~(uintptr_t)3u)))
+ 
+ #define psxHs8ref(mem)	psxH[(mem) & 0xffff]
+ #define psxHs16ref(mem)	(*(s16*)&psxH[(mem) & 0xffff])
+@@ -104,13 +105,13 @@
+ #define psxHu16ref(mem)	(*(u16*)&psxH[(mem) & 0xffff])
+ #define psxHu32ref(mem)	(*(u32*)&psxH[(mem) & 0xffff])
+ 
+-extern u32 *psxMemWLUT;
+-extern u32 *psxMemRLUT;
++extern uintptr_t *psxMemWLUT;
++extern uintptr_t *psxMemRLUT;
+ 
+ #define PSXM(mem)	((void*)(psxMemRLUT[(mem) >> 16] + ((mem) & 0xffff)))
+ #define PSXM8(mem)	PSXM(mem)
+-#define PSXM16(mem)	((void*)((u32)PSXM(mem) & 0xFFFFFFFE))
+-#define PSXM32(mem)	((void*)((u32)PSXM(mem) & 0xFFFFFFFC))
++#define PSXM16(mem)	((void*)((uintptr_t)PSXM(mem) & ~(uintptr_t)1u))
++#define PSXM32(mem)	((void*)((uintptr_t)PSXM(mem) & ~(uintptr_t)3u))
+ 
+ #define PSXMs8(mem)	(*(s8 *)PSXM(mem))
+ #define PSXMs16(mem)	(SWAP16(*(s16*)PSXM16(mem)))
+--- stage13/vendor/psx4all-dingoo-master/src/bios.cpp
++++ stage14/vendor/psx4all-dingoo-master/src/bios.cpp
+@@ -248,7 +248,7 @@
+ 	u32  mcfile;
+ } FileDesc;
+ 
+-static unsigned long *jmp_int = NULL;
++static u32 *jmp_int = NULL;
+ static int *pad_buf = NULL;
+ static char *pad_buf1,*pad_buf2;//shadow add
+ static int pad_buf1len,pad_buf2len;//shadow add
+--- stage13/vendor/psx4all-dingoo-master/src/spmp_port/spmp_psx_bios.h
++++ stage14/vendor/psx4all-dingoo-master/src/spmp_port/spmp_psx_bios.h
+@@ -1,6 +1,9 @@
+ /* SPMP-OS: portable PlayStation BIOS loader / metadata (no game assets). */
+ #ifndef SPMP_PSX_BIOS_H
+ #define SPMP_PSX_BIOS_H
++#ifdef __cplusplus
++extern "C" {
++#endif
+ #include <stddef.h>
+ #include <stdint.h>
+ #define SPMP_PSX_BIOS_BYTES 524288u
+@@ -25,4 +28,7 @@
+ spmp_psx_bios_status spmp_psx_bios_load(const char *path, uint8_t *destination,
+                                         size_t capacity, spmp_psx_bios_info *info);
+ const char *spmp_psx_bios_status_text(spmp_psx_bios_status code);
++#ifdef __cplusplus
++}
+ #endif
++#endif

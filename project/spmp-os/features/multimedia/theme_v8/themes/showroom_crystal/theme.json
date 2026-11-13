@@ -1,0 +1,50 @@
+{
+  "id": "showroom_crystal",
+  "name_ru": "Автомобили: Выставочный салон",
+  "category": "cars",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ffce43",
+    "panel": "#181715",
+    "text": "#ffffff",
+    "muted": "#f6e7d0",
+    "sel": "#ffce43",
+    "border": "#ffce43"
+  },
+  "provenance": {
+    "input_reference": "презентационная_доска_темы_sports_cars_c.png",
+    "input_sha256": "b86f29f24fc97c76741e09843da2c3f133384fdd48d2da127060615ae74c2a7c"
+  }
+}

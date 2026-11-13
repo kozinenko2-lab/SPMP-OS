@@ -1,0 +1,57 @@
+{
+  "id": "beach_glow",
+  "name_ru": "Девушки: Пляжное сияние",
+  "category": "girls",
+  "version": 9,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff638f",
+    "panel": "#2a1024",
+    "text": "#ffffff",
+    "muted": "#f7e5e9",
+    "sel": "#ff638f",
+    "border": "#ff638f"
+  },
+  "provenance": {
+    "input_reference": "неоновый_пляжный_интерфейс_beach_glow.png",
+    "input_sha256": "dbaa6b019d5286ab8e6d558a4cd9a763bb1b8d7350af20895f82c261266521a9",
+    "clean_crop_xyxy": [
+      590,
+      115,
+      1438,
+      751
+    ],
+    "source_type": "user-approved generated concept"
+  }
+}

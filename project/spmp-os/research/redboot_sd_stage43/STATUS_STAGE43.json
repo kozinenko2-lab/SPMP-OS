@@ -1,0 +1,31 @@
+{
+  "stage": 43,
+  "component": "SD_P430 static evidence; boot trace API; post-mount MMI trace exporter",
+  "source_rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "original_redboot_sha256": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108",
+  "bootlog_on_real_device": false,
+  "original_redboot_modified": false,
+  "original_mmi_modified": false,
+  "real_sd_write_driver": false,
+  "sd_candidate_mmio_addresses": [
+    "0x92B0B010",
+    "0x92B0B014",
+    "0x92B0B018",
+    "0x92B0B01C"
+  ],
+  "sd_candidate_mmio_verified": false,
+  "host_c_tests": "3 passed; ASan/UBSan 3 passed",
+  "stage42_fat_regression": "322 passed",
+  "arm_object": "build/SPMP_Stage43_BootTrace_ARMv5.o",
+  "arm_unresolved_external_symbols": 0,
+  "arm_object_is_bootable_elf": false,
+  "hand_off_shared_ram_validated": false,
+  "mmi_oem_fat_writer_connected": false,
+  "requirements": [
+    "verified early SD/MMC backend",
+    "verified factory ROMFS fallback after SD failure",
+    "verified RAM reservation across RedBoot -> MMI",
+    "verified MMI write/sync API",
+    "real-hardware UART capture and recovery tests"
+  ]
+}

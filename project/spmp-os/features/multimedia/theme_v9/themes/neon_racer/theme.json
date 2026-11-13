@@ -1,0 +1,50 @@
+{
+  "id": "neon_racer",
+  "name_ru": "Автомобили: Неоновая гонка",
+  "category": "cars",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ef3249",
+    "panel": "#071026",
+    "text": "#ffffff",
+    "muted": "#d8e4f1",
+    "sel": "#ef3249",
+    "border": "#ef3249"
+  },
+  "provenance": {
+    "input_reference": "неоновая_тема_спортивных_автомобилей.png",
+    "input_sha256": "f98dd00d3d3fc2635f0fc2dff7efa21468db09d55c64555cea174d21379f0dfe"
+  }
+}

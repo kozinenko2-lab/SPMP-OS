@@ -1,0 +1,50 @@
+{
+  "id": "velvet_gold",
+  "name_ru": "Девушки: Бархат и золото",
+  "category": "girls",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ffbe69",
+    "panel": "#220d18",
+    "text": "#ffffff",
+    "muted": "#f8e9d4",
+    "sel": "#ffbe69",
+    "border": "#ffbe69"
+  },
+  "provenance": {
+    "input_reference": "роскошный_интерфейс_spmp_os_музыкальная_библиотек.png",
+    "input_sha256": "8d8839bdb86ffee8a15cb67e74749aa2b1d4d057772f9883215f8414ac3047a2"
+  }
+}

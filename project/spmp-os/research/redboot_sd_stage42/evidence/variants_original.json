@@ -1,0 +1,129 @@
+{
+  "source_name": "Images_RedBoot_201000427.img",
+  "source_size_bytes": 1021324,
+  "source_sha256": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108",
+  "variant_count": 5,
+  "variants": [
+    {
+      "variant": 1,
+      "source_offset_hex": "0x0",
+      "total_size_bytes": 213580,
+      "payload_size_from_header_bytes": 213564,
+      "praw_header_second_u32_hex": "0x8000d000",
+      "praw_header_unknown_fields_hex": [
+        "0x0",
+        "0xcdcdd0e9",
+        "0x3421c",
+        "0x3",
+        "0xa329451f"
+      ],
+      "redboot_version": "v2_0_28 - built 17:41:15, Apr 27 2010\n\n",
+      "scanram_version": "v1.0.0.2",
+      "arm_elf_headers_offsets_within_praw_hex": [
+        "0x88"
+      ],
+      "contains_linux_boot_string": true,
+      "contains_linux_kernel_name": true,
+      "contains_8000_mmi_name": true,
+      "contains_redboot_prompt": true,
+      "sha256": "eb989ab73900835fdfaf8d9f8ebb43b0d510a9548332bfc0d4fc6548728e3f9d"
+    },
+    {
+      "variant": 2,
+      "source_offset_hex": "0x3424c",
+      "total_size_bytes": 213588,
+      "payload_size_from_header_bytes": 213572,
+      "praw_header_second_u32_hex": "0x8000e000",
+      "praw_header_unknown_fields_hex": [
+        "0x0",
+        "0xcdcdd0e9",
+        "0x34224",
+        "0x3",
+        "0x1d65b2c2"
+      ],
+      "redboot_version": "v2_0_28 - built 17:41:15, Apr 27 2010\n\n",
+      "scanram_version": "v2.0.0.1",
+      "arm_elf_headers_offsets_within_praw_hex": [
+        "0x88"
+      ],
+      "contains_linux_boot_string": true,
+      "contains_linux_kernel_name": true,
+      "contains_8000_mmi_name": true,
+      "contains_redboot_prompt": true,
+      "sha256": "ae3f375ab146bf16a43da334176416c0213e93907e02f6cbe1de600689ce50b2"
+    },
+    {
+      "variant": 3,
+      "source_offset_hex": "0x684a0",
+      "total_size_bytes": 190284,
+      "payload_size_from_header_bytes": 190268,
+      "praw_header_second_u32_hex": "0x8050a000",
+      "praw_header_unknown_fields_hex": [
+        "0x0",
+        "0xcdcdd0e9",
+        "0x2e71c",
+        "0x3",
+        "0xe3aef1c9"
+      ],
+      "redboot_version": "v2_0_28 - built 15:36:02, Apr 27 2010\n\n",
+      "scanram_version": "v3.0.0.1",
+      "arm_elf_headers_offsets_within_praw_hex": [
+        "0x88"
+      ],
+      "contains_linux_boot_string": true,
+      "contains_linux_kernel_name": true,
+      "contains_8000_mmi_name": true,
+      "contains_redboot_prompt": true,
+      "sha256": "1723e3cebdb012e46c014a7215c9cb58978c081b25ba58738687d64b116b1034"
+    },
+    {
+      "variant": 4,
+      "source_offset_hex": "0x96bec",
+      "total_size_bytes": 213588,
+      "payload_size_from_header_bytes": 213572,
+      "praw_header_second_u32_hex": "0x8000f000",
+      "praw_header_unknown_fields_hex": [
+        "0x0",
+        "0xcdcdd0e9",
+        "0x34224",
+        "0x3",
+        "0x83e334dc"
+      ],
+      "redboot_version": "v2_0_28 - built 17:41:15, Apr 27 2010\n\n",
+      "scanram_version": "v2.0.0.0",
+      "arm_elf_headers_offsets_within_praw_hex": [
+        "0x88"
+      ],
+      "contains_linux_boot_string": true,
+      "contains_linux_kernel_name": true,
+      "contains_8000_mmi_name": true,
+      "contains_redboot_prompt": true,
+      "sha256": "795f6138474cdd7b61d087694903584c436a0e82ec2c33ade3904fd20ea21b18"
+    },
+    {
+      "variant": 5,
+      "source_offset_hex": "0xcae40",
+      "total_size_bytes": 190284,
+      "payload_size_from_header_bytes": 190268,
+      "praw_header_second_u32_hex": "0x8050c000",
+      "praw_header_unknown_fields_hex": [
+        "0x0",
+        "0xcdcdd0e9",
+        "0x2e71c",
+        "0x3",
+        "0xefbeb68f"
+      ],
+      "redboot_version": "v2_0_28 - built 15:36:02, Apr 27 2010\n\n",
+      "scanram_version": "v3.0.0.0",
+      "arm_elf_headers_offsets_within_praw_hex": [
+        "0x88"
+      ],
+      "contains_linux_boot_string": true,
+      "contains_linux_kernel_name": true,
+      "contains_8000_mmi_name": true,
+      "contains_redboot_prompt": true,
+      "sha256": "c92122294bcc69d27b16bd159be9870e9bd764eeffcb110c9abca83da69e8d5a"
+    }
+  ],
+  "warning": "The PRAW variants are not known to match Defender hardware. Do not flash without verified board matching and a tested NAND backup/recovery path."
+}

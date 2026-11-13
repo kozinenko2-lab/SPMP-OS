@@ -1,0 +1,38 @@
+{
+  "base": "SPMP-OS Stage49 full source",
+  "architecture": "Stage53–55",
+  "chat_archive": "SPMP-OS_Chat_Branch_All_Sources_and_Patches(1).zip",
+  "patches_preserved": 14,
+  "installed_filemanager": [
+    {
+      "patch": "SPMP-OS_FileManager_FM01_Patch.zip",
+      "install_stdout": "FM-01 installed: 25 files, no existing files replaced",
+      "verify_stdout": "FM-01 installed and verified: 25 files"
+    },
+    {
+      "patch": "SPMP-OS_FileManager_FM02_Patch.zip",
+      "install_stdout": "FM-02 installed: 31 new files, no existing code overwritten",
+      "verify_stdout": "FM-02 verified: 31 files"
+    },
+    {
+      "patch": "SPMP-OS_FileManager_FM03_Patch.zip",
+      "install_stdout": "FM-03 installed: 30 new files, no existing code overwritten",
+      "verify_stdout": "FM-03 verified: 30 files"
+    },
+    {
+      "patch": "SPMP-OS_FileManager_FM04_Patch.zip",
+      "install_stdout": "FM-04 installed: 29 new files; preexisting files untouched",
+      "verify_stdout": "FM-04 verified: 29 files"
+    },
+    {
+      "patch": "SPMP-OS_FileManager_FM05_Patch.zip",
+      "install_stdout": "FM-05 installed: 24 new files; preexisting files untouched",
+      "verify_stdout": "FM-05 verified: 24 files"
+    }
+  ],
+  "merged_by_path": {
+    "added": 327,
+    "identical_keep_existing": 354
+  },
+  "conflicts": []
+}

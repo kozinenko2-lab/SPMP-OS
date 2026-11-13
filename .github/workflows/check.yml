@@ -1,0 +1,26 @@
+name: Source checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  public-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check public snapshot
+        run: python3 tools/verify_integrity.py --full
+      - name: Test reconstructed MMP inspector (no private firmware)
+        run: make -C research/boot_reconstruction test
+      - name: Build host prototype
+        run: make -C project/spmp-os host
+      - name: Host registry smoke check
+        working-directory: project/spmp-os
+        run: ./build/spmp-os-host --cores
+      - name: Install ARM build tools
+        run: sudo apt-get update && sudo apt-get install -y clang llvm lld
+      - name: File manager component checks
+        run: |
+          for n in 01 02 03 04 05; do
+            (cd project/spmp-os/features/filemanager/FM$n && sh tools/build.sh)
+          done

@@ -1,0 +1,126 @@
+{
+  "audio_arm_elf": [
+    {
+      "file": "LIBMP3.O",
+      "bytes": 55392,
+      "elf": true,
+      "arm": true,
+      "relocatable": true,
+      "sample_symbols": [
+        "mp3_decode_header",
+        "mp3_get_frame_count"
+      ]
+    },
+    {
+      "file": "LIBAAC.O",
+      "bytes": 178900,
+      "elf": true,
+      "arm": true,
+      "relocatable": true
+    },
+    {
+      "file": "LIBWMA.O",
+      "bytes": 128780,
+      "elf": true,
+      "arm": true,
+      "relocatable": true
+    },
+    {
+      "file": "LIBFLAC.O",
+      "bytes": 25024,
+      "elf": true,
+      "arm": true,
+      "relocatable": true,
+      "sample_symbols": [
+        "flac_decoder_init",
+        "flac_decoder_run"
+      ]
+    },
+    {
+      "file": "LIBAPE.O",
+      "bytes": 25676,
+      "elf": true,
+      "arm": true,
+      "relocatable": true
+    },
+    {
+      "file": "LIBAC3.O",
+      "bytes": 53096,
+      "elf": true,
+      "arm": true,
+      "relocatable": true
+    },
+    {
+      "file": "LIBAMRNB.O",
+      "bytes": 164972,
+      "elf": true,
+      "arm": true,
+      "relocatable": true
+    },
+    {
+      "file": "LIBAMRWB.O",
+      "bytes": 131708,
+      "elf": true,
+      "arm": true,
+      "relocatable": true
+    }
+  ],
+  "video_mmpi": [
+    {
+      "file": "H264_CODEC.IMG",
+      "bytes": 223440,
+      "magic": "MMPi"
+    },
+    {
+      "file": "MPG4ASPDEC.IMG",
+      "bytes": 294064,
+      "magic": "MMPi"
+    },
+    {
+      "file": "MPG2DEC_CODEC.IMG",
+      "bytes": 107600,
+      "magic": "MMPi"
+    },
+    {
+      "file": "MJPGDEC.IMG",
+      "bytes": 65256,
+      "magic": "MMPi"
+    },
+    {
+      "file": "DIVX3DEC.IMG",
+      "bytes": 156536,
+      "magic": "MMPi"
+    },
+    {
+      "file": "JPGDEC.IMG",
+      "bytes": 110144,
+      "magic": "MMPi"
+    }
+  ],
+  "original_xml": [
+    {
+      "file": "MUSIC/MUSICPLAYMAIN.XML",
+      "exists": true
+    },
+    {
+      "file": "VIDEO/VIDEOPLAY.XML",
+      "exists": true
+    },
+    {
+      "file": "RADIO/RADIOMAIN.XML",
+      "exists": true
+    },
+    {
+      "file": "PHOTO/PHOTOPLAY.XML",
+      "exists": true
+    },
+    {
+      "file": "EXPLORER/EXPLORERLIST.XML",
+      "exists": true
+    }
+  ],
+  "cautions": [
+    "Files listed in a multi-model firmware may not all be active on Defender.",
+    "Hardware decoding, radio tuner, headphones detection and source licenses need independent verification."
+  ]
+}

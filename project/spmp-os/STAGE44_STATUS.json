@@ -1,0 +1,34 @@
+{
+  "stage": 44,
+  "date": "2026-11-13",
+  "source_redboot_sha256": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108",
+  "source_mmi_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified": {
+    "fat_fileops": 10,
+    "sd_poll_limit_iterations": 50000,
+    "sd_command_diagnostic_strings": 10,
+    "python_static_tests": 8,
+    "host_assertions": 10028,
+    "asan_ubsan": true,
+    "armv5_eabi5_object_linked": true,
+    "arm_unresolved_symbols": 0,
+    "full_tree_rebuild_test": true,
+    "stage42_fat_tests": 322,
+    "stage42_dualboot_scenarios": 14,
+    "stage43_regression_suites": 3,
+    "missing_prior_stage42_test_restored": true
+  },
+  "implementation": {
+    "RAM_handoff_with_crc32": true,
+    "bounded_post_mount_log_flush_with_close": true,
+    "power_loss_durable": false,
+    "oem_fat_write_hooks_installed": false,
+    "redboot_patched": false,
+    "mmi_patched": false,
+    "real_sd_mmc_early_driver": false,
+    "shared_ram_region_verified": false,
+    "uart_hw_capture": false,
+    "tested_on_defender": false
+  },
+  "warning": "RESEARCH SOURCE ONLY; no flashable image; no physical boot logs produced"
+}

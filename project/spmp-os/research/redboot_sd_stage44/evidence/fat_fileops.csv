@@ -1,0 +1,11 @@
+index,operation,address,evidence
+0,read,0x00283f3c,32-bit pointer in fileops table
+1,write,0x00283fc4,32-bit pointer in fileops table
+2,lseek,0x00284054,32-bit pointer in fileops table
+3,ioctl,0x002840e0,32-bit pointer in fileops table
+4,select,0x00282474,32-bit pointer in fileops table
+5,fsync,0x00284100,32-bit pointer in fileops table
+6,close,0x00284108,32-bit pointer in fileops table
+7,fstat,0x00284188,32-bit pointer in fileops table
+8,getinfo,0x00284288,32-bit pointer in fileops table
+9,setinfo,0x002842a8,32-bit pointer in fileops table

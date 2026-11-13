@@ -1,0 +1,91 @@
+{
+  "source_sha256": "bc00123babe27af9af313ec8b19737f2b6fd3c533b901728a4f0112b55c9d108",
+  "variants": [
+    {
+      "variant": 1,
+      "offset_in_original_img": "0x00000000",
+      "stock_function_va": "0x0004A998",
+      "stock_path_literal_va": "0x0004AA44",
+      "stock_ram_literal_va": "0x0004AA48",
+      "load_function_call_va": "0x0004A9C4",
+      "function_call_file_offset_in_variant": "0x0001CF94",
+      "load_destination": "0x00A00000",
+      "path": "/Rom/image/8000_mmi.rap",
+      "verified_words": [
+        "0xE59F0080",
+        "0xE59F1080",
+        "0xEBFFB950"
+      ],
+      "patch_written": false
+    },
+    {
+      "variant": 2,
+      "offset_in_original_img": "0x0003424C",
+      "stock_function_va": "0x0004A998",
+      "stock_path_literal_va": "0x0004AA44",
+      "stock_ram_literal_va": "0x0004AA48",
+      "load_function_call_va": "0x0004A9C4",
+      "function_call_file_offset_in_variant": "0x0001CF94",
+      "load_destination": "0x00A00000",
+      "path": "/Rom/image/8000_mmi.rap",
+      "verified_words": [
+        "0xE59F0080",
+        "0xE59F1080",
+        "0xEBFFB950"
+      ],
+      "patch_written": false
+    },
+    {
+      "variant": 3,
+      "offset_in_original_img": "0x000684A0",
+      "stock_function_va": "0x000467F4",
+      "stock_path_literal_va": "0x0004689C",
+      "stock_ram_literal_va": "0x000468A0",
+      "load_function_call_va": "0x00046818",
+      "function_call_file_offset_in_variant": "0x00018920",
+      "load_destination": "0x00A00000",
+      "path": "/Rom/image/8000_mmi.rap",
+      "verified_words": [
+        "0xE59F0084",
+        "0xE59F1084",
+        "0xEBFFC0F5"
+      ],
+      "patch_written": false
+    },
+    {
+      "variant": 4,
+      "offset_in_original_img": "0x00096BEC",
+      "stock_function_va": "0x0004A998",
+      "stock_path_literal_va": "0x0004AA44",
+      "stock_ram_literal_va": "0x0004AA48",
+      "load_function_call_va": "0x0004A9C4",
+      "function_call_file_offset_in_variant": "0x0001CF94",
+      "load_destination": "0x00A00000",
+      "path": "/Rom/image/8000_mmi.rap",
+      "verified_words": [
+        "0xE59F0080",
+        "0xE59F1080",
+        "0xEBFFB950"
+      ],
+      "patch_written": false
+    },
+    {
+      "variant": 5,
+      "offset_in_original_img": "0x000CAE40",
+      "stock_function_va": "0x000467F4",
+      "stock_path_literal_va": "0x0004689C",
+      "stock_ram_literal_va": "0x000468A0",
+      "load_function_call_va": "0x00046818",
+      "function_call_file_offset_in_variant": "0x00018920",
+      "load_destination": "0x00A00000",
+      "path": "/Rom/image/8000_mmi.rap",
+      "verified_words": [
+        "0xE59F0084",
+        "0xE59F1084",
+        "0xEBFFC0F5"
+      ],
+      "patch_written": false
+    }
+  ],
+  "warning": "Research only. These virtual addresses are not a validated board-specific flash patch."
+}

@@ -1,0 +1,9 @@
+Stage 42 test results
+- Original Images_RedBoot_201000427.img SHA-256 verified
+- Exact OEM boot sites: 5 variants / 15 opcodes / 10 literals PASS
+- FAT16/FAT32/MBR/superfloppy/failure/fuzz: 322 host checks PASS
+- ASan + UBSan: 142 host checks PASS
+- Stage41 policy: 14 scenarios, 112 truncations, 30000 mutations PASS
+- ARMv5TE EABI5 linked relocatable object: no external symbols
+- Real Defender: NOT TESTED; early SD MMC hardware driver: NOT IMPLEMENTED
+- Original RedBoot, Flash, OEM FSP: UNMODIFIED

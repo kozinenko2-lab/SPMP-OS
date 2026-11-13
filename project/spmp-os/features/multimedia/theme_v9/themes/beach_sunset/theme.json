@@ -1,0 +1,50 @@
+{
+  "id": "beach_sunset",
+  "name_ru": "Девушки: Пляж на закате",
+  "category": "girls",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ff496d",
+    "panel": "#230916",
+    "text": "#ffffff",
+    "muted": "#f8d1da",
+    "sel": "#ff496d",
+    "border": "#ff496d"
+  },
+  "provenance": {
+    "input_reference": "презентационная_доска_spmp_os_пляжный_закат.png",
+    "input_sha256": "8f8b4762934d3131890c96a4e205f0e87a8eeccf6c11c6fc6e72d45be257429b"
+  }
+}

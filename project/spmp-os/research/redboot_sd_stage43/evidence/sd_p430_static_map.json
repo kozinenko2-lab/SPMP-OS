@@ -1,0 +1,704 @@
+{
+  "sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "segment_1_load": "0x00280000",
+  "static_sd_window": [
+    "0x002B9000",
+    "0x002BD800"
+  ],
+  "driver_marker_count": 22,
+  "direct_ldr_literal_references": 608,
+  "found_sd_strings": [
+    {
+      "marker": "SD_P430.c",
+      "file_offset": "0x0025765C",
+      "runtime_address": "0x004D7610",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "[SD]::%s(%d)",
+      "file_offset": "0x00257688",
+      "runtime_address": "0x004D763C",
+      "code_ldr_references": [
+        {
+          "ldr_pc": "0x002BA040",
+          "pool": "0x002BA0D8",
+          "word": "0xE59F0090"
+        },
+        {
+          "ldr_pc": "0x002BA410",
+          "pool": "0x002BAAD4",
+          "word": "0xE59F06BC"
+        },
+        {
+          "ldr_pc": "0x002BA8A0",
+          "pool": "0x002BAAD4",
+          "word": "0xE59F022C"
+        },
+        {
+          "ldr_pc": "0x002BA8F0",
+          "pool": "0x002BAAD4",
+          "word": "0xE59F01DC"
+        },
+        {
+          "ldr_pc": "0x002BB3C4",
+          "pool": "0x002BB3F8",
+          "word": "0xE59F002C"
+        },
+        {
+          "ldr_pc": "0x002BB520",
+          "pool": "0x002BB670",
+          "word": "0xE59F0148"
+        },
+        {
+          "ldr_pc": "0x002BB5C0",
+          "pool": "0x002BB670",
+          "word": "0xE59F00A8"
+        },
+        {
+          "ldr_pc": "0x002BB5F0",
+          "pool": "0x002BB670",
+          "word": "0xE59F0078"
+        },
+        {
+          "ldr_pc": "0x002BB834",
+          "pool": "0x002BBA98",
+          "word": "0xE59F025C"
+        },
+        {
+          "ldr_pc": "0x002BC064",
+          "pool": "0x002BC170",
+          "word": "0xE59F0104"
+        },
+        {
+          "ldr_pc": "0x002BC118",
+          "pool": "0x002BC170",
+          "word": "0xE59F0050"
+        },
+        {
+          "ldr_pc": "0x002BC34C",
+          "pool": "0x002BC674",
+          "word": "0xE59F0320"
+        },
+        {
+          "ldr_pc": "0x002BCA78",
+          "pool": "0x002BCB10",
+          "word": "0xE59F0090"
+        },
+        {
+          "ldr_pc": "0x002BCAB8",
+          "pool": "0x002BCB10",
+          "word": "0xE59F0050"
+        },
+        {
+          "ldr_pc": "0x002BCC1C",
+          "pool": "0x002BCD64",
+          "word": "0xE59F0140"
+        },
+        {
+          "ldr_pc": "0x002BCC68",
+          "pool": "0x002BCD64",
+          "word": "0xE59F00F4"
+        },
+        {
+          "ldr_pc": "0x002BCEB4",
+          "pool": "0x002BCF20",
+          "word": "0xE59F0064"
+        }
+      ]
+    },
+    {
+      "marker": "[SD]::%s(%d)",
+      "file_offset": "0x002583BC",
+      "runtime_address": "0x004D8370",
+      "code_ldr_references": [
+        {
+          "ldr_pc": "0x002BB588",
+          "pool": "0x002BB67C",
+          "word": "0xE59F00EC"
+        },
+        {
+          "ldr_pc": "0x002BB9B8",
+          "pool": "0x002BBAB4",
+          "word": "0xE59F00F4"
+        },
+        {
+          "ldr_pc": "0x002BC0A4",
+          "pool": "0x002BC178",
+          "word": "0xE59F00CC"
+        },
+        {
+          "ldr_pc": "0x002BC538",
+          "pool": "0x002BC694",
+          "word": "0xE59F0154"
+        }
+      ]
+    },
+    {
+      "marker": "[SD]::",
+      "file_offset": "0x00257688",
+      "runtime_address": "0x004D763C",
+      "code_ldr_references": [
+        {
+          "ldr_pc": "0x002BA040",
+          "pool": "0x002BA0D8",
+          "word": "0xE59F0090"
+        },
+        {
+          "ldr_pc": "0x002BA410",
+          "pool": "0x002BAAD4",
+          "word": "0xE59F06BC"
+        },
+        {
+          "ldr_pc": "0x002BA8A0",
+          "pool": "0x002BAAD4",
+          "word": "0xE59F022C"
+        },
+        {
+          "ldr_pc": "0x002BA8F0",
+          "pool": "0x002BAAD4",
+          "word": "0xE59F01DC"
+        },
+        {
+          "ldr_pc": "0x002BB3C4",
+          "pool": "0x002BB3F8",
+          "word": "0xE59F002C"
+        },
+        {
+          "ldr_pc": "0x002BB520",
+          "pool": "0x002BB670",
+          "word": "0xE59F0148"
+        },
+        {
+          "ldr_pc": "0x002BB5C0",
+          "pool": "0x002BB670",
+          "word": "0xE59F00A8"
+        },
+        {
+          "ldr_pc": "0x002BB5F0",
+          "pool": "0x002BB670",
+          "word": "0xE59F0078"
+        },
+        {
+          "ldr_pc": "0x002BB834",
+          "pool": "0x002BBA98",
+          "word": "0xE59F025C"
+        },
+        {
+          "ldr_pc": "0x002BC064",
+          "pool": "0x002BC170",
+          "word": "0xE59F0104"
+        },
+        {
+          "ldr_pc": "0x002BC118",
+          "pool": "0x002BC170",
+          "word": "0xE59F0050"
+        },
+        {
+          "ldr_pc": "0x002BC34C",
+          "pool": "0x002BC674",
+          "word": "0xE59F0320"
+        },
+        {
+          "ldr_pc": "0x002BCA78",
+          "pool": "0x002BCB10",
+          "word": "0xE59F0090"
+        },
+        {
+          "ldr_pc": "0x002BCAB8",
+          "pool": "0x002BCB10",
+          "word": "0xE59F0050"
+        },
+        {
+          "ldr_pc": "0x002BCC1C",
+          "pool": "0x002BCD64",
+          "word": "0xE59F0140"
+        },
+        {
+          "ldr_pc": "0x002BCC68",
+          "pool": "0x002BCD64",
+          "word": "0xE59F00F4"
+        },
+        {
+          "ldr_pc": "0x002BCEB4",
+          "pool": "0x002BCF20",
+          "word": "0xE59F0064"
+        }
+      ]
+    },
+    {
+      "marker": "[SD]::",
+      "file_offset": "0x00257BA8",
+      "runtime_address": "0x004D7B5C",
+      "code_ldr_references": [
+        {
+          "ldr_pc": "0x002BA5EC",
+          "pool": "0x002BAAEC",
+          "word": "0xE59F04F8"
+        },
+        {
+          "ldr_pc": "0x002BC6E8",
+          "pool": "0x002BC74C",
+          "word": "0xE59F005C"
+        }
+      ]
+    },
+    {
+      "marker": "[SD]::",
+      "file_offset": "0x002583BC",
+      "runtime_address": "0x004D8370",
+      "code_ldr_references": [
+        {
+          "ldr_pc": "0x002BB588",
+          "pool": "0x002BB67C",
+          "word": "0xE59F00EC"
+        },
+        {
+          "ldr_pc": "0x002BB9B8",
+          "pool": "0x002BBAB4",
+          "word": "0xE59F00F4"
+        },
+        {
+          "ldr_pc": "0x002BC0A4",
+          "pool": "0x002BC178",
+          "word": "0xE59F00CC"
+        },
+        {
+          "ldr_pc": "0x002BC538",
+          "pool": "0x002BC694",
+          "word": "0xE59F0154"
+        }
+      ]
+    },
+    {
+      "marker": "[SD]::",
+      "file_offset": "0x00258A4F",
+      "runtime_address": "0x004D8A03",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "SD card not insert",
+      "file_offset": "0x00257B25",
+      "runtime_address": "0x004D7AD9",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "force reset sd card",
+      "file_offset": "0x00257B05",
+      "runtime_address": "0x004D7AB9",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "SD_POLL_WAIT",
+      "file_offset": "0x00257B65",
+      "runtime_address": "0x004D7B19",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "dump SD Cardinfo",
+      "file_offset": "0x00257DD4",
+      "runtime_address": "0x004D7D88",
+      "code_ldr_references": [
+        {
+          "ldr_pc": "0x002BAF20",
+          "pool": "0x002BAF8C",
+          "word": "0xE59F0064"
+        }
+      ]
+    },
+    {
+      "marker": "SD resume OK",
+      "file_offset": "0x00257D9D",
+      "runtime_address": "0x004D7D51",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "SD already init",
+      "file_offset": "0x00257D11",
+      "runtime_address": "0x004D7CC5",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "fail to stop SD ctler",
+      "file_offset": "0x00257B4C",
+      "runtime_address": "0x004D7B00",
+      "code_ldr_references": [
+        {
+          "ldr_pc": "0x002BA448",
+          "pool": "0x002BAADC",
+          "word": "0xE59F068C"
+        }
+      ]
+    },
+    {
+      "marker": "fatSDUnmount_FatDev",
+      "file_offset": "0x00253ADC",
+      "runtime_address": "0x004D3A90",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "fatfs_mount",
+      "file_offset": "0x0025016B",
+      "runtime_address": "0x004D011F",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "fatfs_mount",
+      "file_offset": "0x00250186",
+      "runtime_address": "0x004D013A",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "fatfs_mount",
+      "file_offset": "0x002501C6",
+      "runtime_address": "0x004D017A",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "fatfs_mount",
+      "file_offset": "0x0025020D",
+      "runtime_address": "0x004D01C1",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "fatfs_mount",
+      "file_offset": "0x00253AD0",
+      "runtime_address": "0x004D3A84",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "CLK_SD0",
+      "file_offset": "0x00255700",
+      "runtime_address": "0x004D56B4",
+      "code_ldr_references": []
+    },
+    {
+      "marker": "CLK_SD1",
+      "file_offset": "0x00255708",
+      "runtime_address": "0x004D56BC",
+      "code_ldr_references": []
+    }
+  ],
+  "possible_mmio_literals": [
+    {
+      "candidate_address": "0x92B0B010",
+      "sites": [
+        {
+          "ldr_pc": "0x002B9BF0",
+          "pool": "0x002B9C1C",
+          "word": "0xE59F3024"
+        },
+        {
+          "ldr_pc": "0x002B9C6C",
+          "pool": "0x002B9D00",
+          "word": "0xE59F608C"
+        }
+      ]
+    },
+    {
+      "candidate_address": "0x92B0B014",
+      "sites": [
+        {
+          "ldr_pc": "0x002B9A48",
+          "pool": "0x002B9B58",
+          "word": "0xE59F3108"
+        },
+        {
+          "ldr_pc": "0x002B9A64",
+          "pool": "0x002B9B58",
+          "word": "0xE59FC0EC"
+        },
+        {
+          "ldr_pc": "0x002B9AC8",
+          "pool": "0x002B9B58",
+          "word": "0xE59F2088"
+        },
+        {
+          "ldr_pc": "0x002B9AEC",
+          "pool": "0x002B9B58",
+          "word": "0xE59F3064"
+        },
+        {
+          "ldr_pc": "0x002B9B00",
+          "pool": "0x002B9B58",
+          "word": "0xE59F3050"
+        },
+        {
+          "ldr_pc": "0x002B9B14",
+          "pool": "0x002B9B58",
+          "word": "0xE59F303C"
+        },
+        {
+          "ldr_pc": "0x002B9B90",
+          "pool": "0x002B9C14",
+          "word": "0xE59F707C"
+        },
+        {
+          "ldr_pc": "0x002B9C04",
+          "pool": "0x002B9C14",
+          "word": "0xE59F2008"
+        },
+        {
+          "ldr_pc": "0x002B9C40",
+          "pool": "0x002B9CFC",
+          "word": "0xE59F20B4"
+        },
+        {
+          "ldr_pc": "0x002B9CC0",
+          "pool": "0x002B9CFC",
+          "word": "0xE59F3034"
+        },
+        {
+          "ldr_pc": "0x002B9CEC",
+          "pool": "0x002B9CFC",
+          "word": "0xE59F2008"
+        },
+        {
+          "ldr_pc": "0x002B9E7C",
+          "pool": "0x002B9F58",
+          "word": "0xE59F40D4"
+        },
+        {
+          "ldr_pc": "0x002B9F44",
+          "pool": "0x002B9F58",
+          "word": "0xE59F300C"
+        },
+        {
+          "ldr_pc": "0x002BA394",
+          "pool": "0x002BAAC4",
+          "word": "0xE59F0728"
+        },
+        {
+          "ldr_pc": "0x002BA458",
+          "pool": "0x002BAAC4",
+          "word": "0xE59F3664"
+        },
+        {
+          "ldr_pc": "0x002BA470",
+          "pool": "0x002BAAC4",
+          "word": "0xE59F264C"
+        },
+        {
+          "ldr_pc": "0x002BA4D4",
+          "pool": "0x002BAAC4",
+          "word": "0xE59F25E8"
+        },
+        {
+          "ldr_pc": "0x002BACB0",
+          "pool": "0x002BAE74",
+          "word": "0xE59FE1BC"
+        },
+        {
+          "ldr_pc": "0x002BACD4",
+          "pool": "0x002BAE74",
+          "word": "0xE59F1198"
+        },
+        {
+          "ldr_pc": "0x002BAD08",
+          "pool": "0x002BAE74",
+          "word": "0xE59F3164"
+        },
+        {
+          "ldr_pc": "0x002BAD20",
+          "pool": "0x002BAE74",
+          "word": "0xE59F114C"
+        },
+        {
+          "ldr_pc": "0x002BAD6C",
+          "pool": "0x002BAE74",
+          "word": "0xE59F1100"
+        },
+        {
+          "ldr_pc": "0x002BAD90",
+          "pool": "0x002BAE74",
+          "word": "0xE59F20DC"
+        },
+        {
+          "ldr_pc": "0x002BAE48",
+          "pool": "0x002BAE74",
+          "word": "0xE59F2024"
+        },
+        {
+          "ldr_pc": "0x002BAFE8",
+          "pool": "0x002BB330",
+          "word": "0xE59F2340"
+        },
+        {
+          "ldr_pc": "0x002BB1D0",
+          "pool": "0x002BB330",
+          "word": "0xE59F4158"
+        },
+        {
+          "ldr_pc": "0x002BB1DC",
+          "pool": "0x002BB330",
+          "word": "0x059F214C"
+        },
+        {
+          "ldr_pc": "0x002BB270",
+          "pool": "0x002BB330",
+          "word": "0xE59F20B8"
+        },
+        {
+          "ldr_pc": "0x002BB288",
+          "pool": "0x002BB330",
+          "word": "0xE59F20A0"
+        },
+        {
+          "ldr_pc": "0x002BB744",
+          "pool": "0x002BBA90",
+          "word": "0xE59F2344"
+        },
+        {
+          "ldr_pc": "0x002BB888",
+          "pool": "0x002BBA90",
+          "word": "0xE59F4200"
+        },
+        {
+          "ldr_pc": "0x002BB894",
+          "pool": "0x002BBA90",
+          "word": "0x059F21F4"
+        },
+        {
+          "ldr_pc": "0x002BB94C",
+          "pool": "0x002BBA90",
+          "word": "0xE59F113C"
+        },
+        {
+          "ldr_pc": "0x002BB970",
+          "pool": "0x002BBA90",
+          "word": "0xE59F2118"
+        },
+        {
+          "ldr_pc": "0x002BBB10",
+          "pool": "0x002BBEDC",
+          "word": "0xE59F23C4"
+        },
+        {
+          "ldr_pc": "0x002BBD7C",
+          "pool": "0x002BBEDC",
+          "word": "0xE59F4158"
+        },
+        {
+          "ldr_pc": "0x002BBD88",
+          "pool": "0x002BBEDC",
+          "word": "0x059F214C"
+        },
+        {
+          "ldr_pc": "0x002BBE08",
+          "pool": "0x002BBEDC",
+          "word": "0xE59F20CC"
+        },
+        {
+          "ldr_pc": "0x002BBE2C",
+          "pool": "0x002BBEDC",
+          "word": "0xE59F20A8"
+        },
+        {
+          "ldr_pc": "0x002BC3A0",
+          "pool": "0x002BC67C",
+          "word": "0xE59F42D4"
+        },
+        {
+          "ldr_pc": "0x002BC428",
+          "pool": "0x002BC67C",
+          "word": "0xE59F324C"
+        },
+        {
+          "ldr_pc": "0x002BC440",
+          "pool": "0x002BC67C",
+          "word": "0xE59F1234"
+        },
+        {
+          "ldr_pc": "0x002BC460",
+          "pool": "0x002BC67C",
+          "word": "0xE59F3214"
+        },
+        {
+          "ldr_pc": "0x002BC478",
+          "pool": "0x002BC67C",
+          "word": "0xE59F11FC"
+        },
+        {
+          "ldr_pc": "0x002BC4C4",
+          "pool": "0x002BC67C",
+          "word": "0xE59F11B0"
+        },
+        {
+          "ldr_pc": "0x002BC4E8",
+          "pool": "0x002BC67C",
+          "word": "0xE59F218C"
+        },
+        {
+          "ldr_pc": "0x002BC90C",
+          "pool": "0x002BCA2C",
+          "word": "0xE59F3118"
+        }
+      ]
+    },
+    {
+      "candidate_address": "0x92B0B018",
+      "sites": [
+        {
+          "ldr_pc": "0x002BA1FC",
+          "pool": "0x002BA298",
+          "word": "0xE59F5094"
+        },
+        {
+          "ldr_pc": "0x002BA3B4",
+          "pool": "0x002BAACC",
+          "word": "0xE59F2710"
+        },
+        {
+          "ldr_pc": "0x002BA96C",
+          "pool": "0x002BAACC",
+          "word": "0x159F2158"
+        },
+        {
+          "ldr_pc": "0x002BA97C",
+          "pool": "0x002BAACC",
+          "word": "0x059F2148"
+        },
+        {
+          "ldr_pc": "0x002BAA18",
+          "pool": "0x002BAACC",
+          "word": "0xE59F30AC"
+        },
+        {
+          "ldr_pc": "0x002BAC6C",
+          "pool": "0x002BAE70",
+          "word": "0xE59F21FC"
+        },
+        {
+          "ldr_pc": "0x002BADB0",
+          "pool": "0x002BAE70",
+          "word": "0xE59F20B8"
+        },
+        {
+          "ldr_pc": "0x002BAE10",
+          "pool": "0x002BAE70",
+          "word": "0xE59F3058"
+        },
+        {
+          "ldr_pc": "0x002BAEE0",
+          "pool": "0x002BAF78",
+          "word": "0xE59F3090"
+        },
+        {
+          "ldr_pc": "0x002BC900",
+          "pool": "0x002BCA28",
+          "word": "0xE59F3120"
+        }
+      ]
+    },
+    {
+      "candidate_address": "0x92B0B01C",
+      "sites": [
+        {
+          "ldr_pc": "0x002BA3A4",
+          "pool": "0x002BAAC8",
+          "word": "0xE59F371C"
+        }
+      ]
+    }
+  ],
+  "caveat": "MMIO values are candidate addresses referenced by ARM code, not a verified register specification; never write to them based on this report"
+}

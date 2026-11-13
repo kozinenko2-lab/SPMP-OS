@@ -1,0 +1,50 @@
+{
+  "id": "comic_nights",
+  "name_ru": "Комиксы: Ночные защитники",
+  "category": "comics",
+  "version": 8,
+  "resolution": [
+    320,
+    240
+  ],
+  "background": "background.spbg",
+  "editable_background": "background.png",
+  "format": "RGB565_LE",
+  "style": "style.spth",
+  "icons": "../shared/icons.spi",
+  "icon_labels": "runtime_localized_text",
+  "font": "compiled_builtin_utf8_cyrillic",
+  "layout_default": "left_list",
+  "layouts": [
+    "left_list",
+    "grid"
+  ],
+  "status": [
+    "time",
+    "volume",
+    "sd_card"
+  ],
+  "network": false,
+  "battery": false,
+  "sfx": {
+    "navigate": "../shared/sounds/navigate.wav",
+    "confirm": "../shared/sounds/confirm.wav",
+    "back": "../shared/sounds/back.wav"
+  },
+  "animation": {
+    "selection_pulse": true,
+    "ticks_ms": 50
+  },
+  "colors": {
+    "accent": "#ffc443",
+    "panel": "#091b38",
+    "text": "#ffffff",
+    "muted": "#f5ece1",
+    "sel": "#ffc443",
+    "border": "#ffc443"
+  },
+  "provenance": {
+    "input_reference": "яркое_комикс_меню_spmp_os.png",
+    "input_sha256": "bc6d120d7592f2a711d34450db47511a612895ae4518f58137ef269294746d3d"
+  }
+}

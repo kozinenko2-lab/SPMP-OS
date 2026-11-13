@@ -1,0 +1,11 @@
+{
+ "stage":25,
+ "primary_fix":"correct test ROM ARM7 ORR r1,r1,#3 instead of ORR r1,r0,#3",
+ "host_gpSP_interpreter":"tested executing ARM7 program with RGB565 red pixel 0xf800",
+ "host_video_frames":16,
+ "host_save_restore":"passed",
+ "host_rom_reload":"passed",
+ "armv5_gpsp_full":"not built",
+ "armv5_open_bios_data":"ELF32 compiled",
+ "target_hardware":"not tested"
+}

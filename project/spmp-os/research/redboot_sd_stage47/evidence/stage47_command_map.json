@@ -1,0 +1,121 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified_arm_words": 37,
+  "verified_dispatch_calls": 9,
+  "calls": [
+    {
+      "command": "CMD18",
+      "cmdword_hex": "0x1592",
+      "mov_pc": "0x2bb004",
+      "add_pc": "0x2bb008",
+      "call_pc": "0x2bb014",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD18",
+      "cmdword_hex": "0x1592",
+      "mov_pc": "0x2bb760",
+      "add_pc": "0x2bb764",
+      "call_pc": "0x2bb774",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD25",
+      "cmdword_hex": "0x1799",
+      "mov_pc": "0x2bbb28",
+      "add_pc": "0x2bbb2c",
+      "call_pc": "0x2bbb38",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD25",
+      "cmdword_hex": "0x1799",
+      "mov_pc": "0x2bbb50",
+      "add_pc": "0x2bbb54",
+      "call_pc": "0x2bbb60",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD25",
+      "cmdword_hex": "0x1799",
+      "mov_pc": "0x2bc24c",
+      "add_pc": "0x2bc250",
+      "call_pc": "0x2bc25c",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD25",
+      "cmdword_hex": "0x1799",
+      "mov_pc": "0x2bc27c",
+      "add_pc": "0x2bc280",
+      "call_pc": "0x2bc28c",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD12",
+      "cmdword_hex": "0x708c",
+      "mov_pc": "0x2bae50",
+      "add_pc": "0x2bae54",
+      "call_pc": "0x2bae60",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD12",
+      "cmdword_hex": "0x708c",
+      "mov_pc": "0x2bb290",
+      "add_pc": "0x2bb294",
+      "call_pc": "0x2bb2a0",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    },
+    {
+      "command": "CMD12",
+      "cmdword_hex": "0x708c",
+      "mov_pc": "0x2bbe3c",
+      "add_pc": "0x2bbe40",
+      "call_pc": "0x2bbe4c",
+      "dispatch_pc": "0x2b9b78",
+      "confidence": "pinned original instructions and BL target"
+    }
+  ],
+  "address_scaling": [
+    {
+      "context": "CMD18 first path",
+      "selector_pc": "0x2baff8",
+      "equal_zero_word_pc": "0x2baffc",
+      "not_equal_word_pc": "0x2bb000",
+      "mul_pc": "0x2bb00c",
+      "factors": [
+        512,
+        1
+      ],
+      "interpretation": "likely SDSC byte vs SDHC block addressing; condition variable type not proven"
+    },
+    {
+      "context": "CMD18 second path",
+      "equal_zero_word_pc": "0x2bb758",
+      "not_equal_word_pc": "0x2bb75c",
+      "mul_pc": "0x2bb76c",
+      "factors": [
+        512,
+        1
+      ],
+      "interpretation": "same dual scaling"
+    }
+  ],
+  "cmd17_status": "UNPROVEN: not reconstructed from this audited command region",
+  "safety": {
+    "mmio_access": false,
+    "can_flash": false,
+    "card_initialization_proven": false,
+    "early_sd_backend_proven": false,
+    "validated_fallback_on_board": false
+  }
+}

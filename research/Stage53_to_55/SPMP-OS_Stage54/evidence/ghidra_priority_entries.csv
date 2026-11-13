@@ -1,0 +1,35 @@
+entrypoint,suggested_function_name,source_callsite,oem_thread_name,evidence_level
+0x003BE5B0,MMI_thread_Demo_GUI,0x00280810,Demo GUI,LDR literals at verified BL
+0x00291300,MMI_thread_watchdog_handle,0x002929B8,watchdog_handle,LDR literals at verified BL
+0x002914C8,MMI_thread_dsr_handle,0x00292A28,dsr_handle,LDR literals at verified BL
+0x00293600,MMI_thread_dsr_rcd_handle,0x00293D64,dsr_rcd_handle,LDR literals at verified BL
+0x002C5FBC,MMI_thread_mp3_play,0x002C6188,mp3_play,LDR literals at verified BL
+0x002C6064,MMI_thread_pcm_play,0x002C6234,pcm_play,LDR literals at verified BL
+0x00460AB0,MMI_thread_Game_thread,0x002D3E48,Game thread,LDR literals at verified BL
+0x002D5110,MMI_thread_Detect_Thread,0x002D560C,Detect Thread,LDR literals at verified BL
+0x002D50C8,MMI_thread_mmiEMG_Thread,0x002D565C,mmiEMG Thread,LDR literals at verified BL
+0x002D90F4,MMI_thread_Middleware_Mangger_Thread,0x002D9850,Middleware Mangger Thread,LDR literals at verified BL
+0x002E0858,MMI_thread_media_audio_thread,0x002E0A88,media audio thread,LDR literals at verified BL
+0x002E09B4,MMI_thread_media_video_record_thread,0x002E0AD0,media video record thread,LDR literals at verified BL
+0x002E0B84,MMI_thread_media_audio_thread,0x002E1A18,media audio thread,LDR literals at verified BL
+0x002E0F98,MMI_thread_media_video_thread,0x002E1AAC,media video thread,LDR literals at verified BL
+0x002E2120,MMI_thread_Power_management_thread,0x002E2674,Power management thread,LDR literals at verified BL
+0x002E28CC,MMI_thread_HDMI_HW_CTRL,0x002E2A08,HDMI HW CTRL,LDR literals at verified BL
+0x002EAD40,MMI_thread_TV_Thread,0x002EB42C,TV Thread,LDR literals at verified BL
+0x00315E14,MMI_thread_RWThread_UDC,0x00315EF4,RWThread_UDC,LDR literals at verified BL
+0x003219AC,MMI_thread_audio_encoding_for_video,0x00321D24,audio encoding for video,LDR literals at verified BL
+0x003217A0,MMI_thread_video_encoding_for_video,0x00321D6C,video encoding for video,LDR literals at verified BL
+0x0032248C,MMI_thread_read_bits_thread,0x00322AE0,read bits thread,LDR literals at verified BL
+0x00327064,MMI_thread_Card_Isp_SD_thread,0x0032715C,Card_Isp_SD_thread,LDR literals at verified BL
+0x0032DF60,MMI_thread_LCM_Thread,0x0032E2AC,LCM Thread,LDR literals at verified BL
+0x0033886C,MMI_thread_DSC_FRONT_ISR,0x00338D98,DSC FRONT ISR,LDR literals at verified BL
+0x00338A04,MMI_thread_DSC_STATE_THREAD,0x00338DCC,DSC STATE THREAD,LDR literals at verified BL
+0x0034A2C4,MMI_thread_dspCmdDispatcher,0x0034A4D0,dspCmdDispatcher,LDR literals at verified BL
+0x0034CFD0,MMI_thread_GPIO_Monitor,0x0034D15C,GPIO_Monitor,LDR literals at verified BL
+0x0034F2A4,MMI_thread_IRDetect_Thread,0x0034F398,IRDetect Thread,LDR literals at verified BL
+0x004473BC,MMI_thread_Systen_BackGround_Thread,0x0044749C,Systen BackGround Thread,LDR literals at verified BL
+0x00447540,MMI_thread_Systen_initial_Thread,0x00447610,Systen initial Thread,LDR literals at verified BL
+0x00448A7C,MMI_thread_stor_thr,0x00448D34,stor_thr,LDR literals at verified BL
+0x004625B8,MMI_thread_Midi_Seq_thread,0x00462970,Midi Seq thread,LDR literals at verified BL
+0x004AF738,MMI_thread_storRWConsumer_thread,0x004AFA00,storRWConsumer_thread,LDR literals at verified BL
+0x004B0640,MMI_thread_read_buffer_thread,0x004B001C,read buffer thread,LDR literals at verified BL
