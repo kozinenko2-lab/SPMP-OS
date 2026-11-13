@@ -9,6 +9,9 @@ Runtime checks — совместимость выбранных интерфе�
 прошли. Оригинальный RAP принимает собственный container/decode/footer;
 cache/file/audio/OS/graphics/input backends подменены. Аппаратного запуска нет.
 
+Точный опубликованный CI BIN (artifact 14076639604, 3704 байта) скачан и
+отдельно прошёл те же 6 original-RAP сценариев; SHA и provenance сохранены.
+
 [Отчёт этапа 9](../research/boot_reconstruction/STAGE9_REPORT_RU.md).
 CI собирает BIN/ELF/maps/manifest в artifact `native-probe-ngame-vm-tested`.
 Это диагностическое RAM-приложение, не готовая оболочка или Flash-прошивка.

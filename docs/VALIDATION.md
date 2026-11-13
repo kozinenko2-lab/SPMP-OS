@@ -11,6 +11,10 @@
 - 69 Python: без private inputs 64 PASS/5 SKIP; с RAP/game/native ELF 69 PASS.
   Три C-модели, host probe/adapter проходят. Startup VM/link checks сохранены.
 
+- Опубликованный CI artifact 14076639604 проверен отдельно: ZIP SHA от GitHub,
+  BIN/repacked ELF identity, шесть actual-RAP cases — PASS. CI BIN 3704 байта,
+  SHA `9dcef4e8593ef44b93c69d44d570e78e947bae9e35905107a89f286f2fc35782`.
+
 Runtime CRC32/table checks не являются полной SHA-проверкой прошивки в RAM.
 Cache/CP15, file/audio/thread/command/message и все девять graphics/input API
 backends в private chain подменены. Аппаратный frontend, LCD/GPU/IRQ/cache и

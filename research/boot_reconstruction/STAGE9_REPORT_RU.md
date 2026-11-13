@@ -174,3 +174,20 @@ CI artifact **native-probe-ngame-vm-tested**, retention 14 дней, содер�
 и реальной графики/cache/IRQ/cleanup на плате. Полная оболочка SPMP-OS и
 самостоятельный RedBoot/SD boot остаются следующими задачами. OEM Ghidra exports
 и typed declarations пока остаются 284/28.
+
+## Проверен точный опубликованный CI artifact
+
+Для source revision `ac3d59b` завершился CI run `43510486747`.
+[Artifact 14076639604](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43510486747/artifacts/14076639604)
+скачан, ZIP SHA сверена с GitHub metadata, BIN побайтно воспроизведён из соседнего
+ELF. Размер CI пакета — **3704 байта**; SHA-256:
+`9dcef4e8593ef44b93c69d44d570e78e947bae9e35905107a89f286f2fc35782`.
+
+Шесть original-RAP сценариев повторены для **этого** ELF/BIN, все PASS.
+Доказательство — `evidence/native_package_ci_rap_vm.json`: artifact/run/source
+revision, ZIP/container/payload/ELF SHA, outcomes и явные backend mocks.
+Локальный пакет 3656 байт выше относится к Clang 19; опубликованный CI пакет
+проверен отдельно, поэтому изменение compiler output не подменяет доказательство.
+Данный artifact доступен 14 дней. Это по-прежнему VM_TESTED, без hardware run.
+Проверка return заканчивается после native_bin_loader; финальное освобождение
+GameThread исследовалось отдельно на этапе 5.
