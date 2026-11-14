@@ -270,9 +270,9 @@
   "loader_sequence": [
     "read OS_INT, OS_EXT and codec files; each fallback path is tried before the ROM path",
     "parse OS_EXT with mode argument 0 and keep its selected entry",
-    "start CEVA and wait up to 30 polling iterations, delaying 10 OEM time units per iteration",
+    "start CEVA; argument 30 produces up to 31 reads, each followed by a delay of 10 OEM time units",
     "parse/copy OS_INT with mode argument 0x10",
-    "send command bytes 81 01 00 00 and wait up to 30 polling iterations",
+    "send command bytes 81 01 00 00; the second argument-30 wait likewise performs up to 31 reads",
     "parse/copy the codec image with mode argument 0x10",
     "optionally free the three aligned file buffers when context flag bit 0 is set"
   ],
@@ -373,7 +373,7 @@
       }
     },
     "handler_table": "0x0055b7e0; all 256 entries checked, only opcodes 0x40..0x46 are populated",
-    "response_path": "handler publishes its ARM response pointer through 0x90532034, performs cache synchronization and acknowledges/notifies status bit 0x02",
+    "response_path": "handler first writes status/ack bit 0x02, records the response pointer, cleans/drains cache state, then publishes the pointer through 0x90532034; notification semantics are not yet proven",
     "ownership_note": "The original has one synchronous reply path plus a permanent CEVA-to-ARM command dispatcher; buffers and callbacks are shared global state."
   },
   "safety": [

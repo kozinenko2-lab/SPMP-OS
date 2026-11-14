@@ -15,6 +15,7 @@ jobs:
       - name: Test media loader and MMPi traversal (synthetic public fixtures)
         run: |
           python3 -m unittest discover -s research/Stage56_MediaLoader/tests -v
+          python3 -m unittest discover -s research/Stage57_CevaAbi/tests -v
           make -C project/spmp-os/features/multimedia/codec_lab check
       - name: Build host prototype
         run: make -C project/spmp-os host

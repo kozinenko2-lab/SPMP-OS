@@ -1,0 +1,199 @@
+{
+  "research_only": true,
+  "source_rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified_calls": {
+    "ready_poll_delay": {
+      "callsite": "0x00348e10",
+      "target": "0x00339be8"
+    },
+    "ready_timeout_reset": {
+      "callsite": "0x00348e4c",
+      "target": "0x00348d70"
+    },
+    "ready_timeout_dump": {
+      "callsite": "0x00348e5c",
+      "target": "0x00348d00"
+    },
+    "boot_poll_delay": {
+      "callsite": "0x00348ee0",
+      "target": "0x00339be8"
+    },
+    "boot_timeout_reset": {
+      "callsite": "0x00348f34",
+      "target": "0x00348d70"
+    },
+    "lcd_clear_to_init": {
+      "callsite": "0x00349990",
+      "target": "0x002a3e5c"
+    },
+    "scale_wait_idle": {
+      "callsite": "0x00349be0",
+      "target": "0x002e66c0"
+    },
+    "scale_execute_before_reply": {
+      "callsite": "0x00349c24",
+      "target": "0x003497c0"
+    },
+    "scale_execute_after_reply": {
+      "callsite": "0x00349c9c",
+      "target": "0x003497c0"
+    },
+    "ceva_malloc": {
+      "callsite": "0x00349d00",
+      "target": "0x00299588"
+    },
+    "ceva_free": {
+      "callsite": "0x00349d78",
+      "target": "0x002995d0"
+    },
+    "response_channel_prepare": {
+      "callsite": "0x00349904",
+      "target": "0x003497b0"
+    },
+    "incoming_copy_header": {
+      "callsite": "0x0034a274",
+      "target": "0x00298c6c"
+    },
+    "incoming_copy_payload": {
+      "callsite": "0x0034a2a0",
+      "target": "0x00298c6c"
+    },
+    "scale_descriptor_submit": {
+      "callsite": "0x003498e4",
+      "target": "0x002e6958"
+    }
+  },
+  "verified_words": {
+    "ceva_ready_magic": {
+      "address": "0x00348e84",
+      "value": "0x43585244"
+    },
+    "ceva_boot_magic": {
+      "address": "0x00348f58",
+      "value": "0x43584254"
+    },
+    "boot_state_register": {
+      "address": "0x00348f60",
+      "value": "0x90532044"
+    },
+    "arm_command_register": {
+      "address": "0x0034a118",
+      "value": "0x90532030"
+    },
+    "arm_response_register": {
+      "address": "0x00349970",
+      "value": "0x90532034"
+    },
+    "ceva_reply_register": {
+      "address": "0x0034a220",
+      "value": "0x9053203c"
+    },
+    "ceva_command_register_final_add_instruction": {
+      "address": "0x0034a254",
+      "value": "0xe2833d81"
+    },
+    "incoming_buffer": {
+      "address": "0x0034a3e0",
+      "value": "0x00640c60"
+    },
+    "next_rtos_object": {
+      "address": "0x0034a528",
+      "value": "0x00640d60"
+    },
+    "general_heap_control_malloc": {
+      "address": "0x002995c8",
+      "value": "0x00514250"
+    },
+    "general_heap_control_free": {
+      "address": "0x00299608",
+      "value": "0x00514250"
+    },
+    "debug_flags_address": {
+      "address": "0x00349ee8",
+      "value": "0x0056a92c"
+    },
+    "debug_flags_initial_value": {
+      "address": "0x0056a92c",
+      "value": "0x03008000"
+    }
+  },
+  "ready_states": {
+    "ceva_ready": {
+      "register": "0x9053200c",
+      "magic": "0x43585244",
+      "source_literal": "'CXRD'"
+    },
+    "codec_booted": {
+      "register": "0x90532044",
+      "magic": "0x43584254",
+      "source_literal": "'CXBT'"
+    },
+    "poll_contract": "argument N gives at most N+1 reads; each read is followed by delay(10, 0)",
+    "media_loader_argument": 30,
+    "media_loader_max_reads": 31
+  },
+  "incoming_buffer": {
+    "address": "0x00640c60",
+    "next_object": "0x00640d60",
+    "capacity_bytes": 256,
+    "header_bytes": 4,
+    "safe_payload_limit": 252,
+    "oem_bounds_check": false
+  },
+  "request_layout": {
+    "opcode_u8": 0,
+    "no_reply_u8": 1,
+    "payload_bytes_u16_le": 2,
+    "payload": 4
+  },
+  "lcd_geometry_request": {
+    "minimum_total_bytes": 36,
+    "width_u32": 4,
+    "height_u32": 8,
+    "format_or_mode_u32": 32,
+    "clamp": "min(requested dimension, active LCD dimension)",
+    "reconfigure_order": [
+      "display path 0 disable",
+      "rebuild display path",
+      "apply format/mode",
+      "display path 0 enable"
+    ]
+  },
+  "scale_request": {
+    "minimum_total_bytes": 52,
+    "requested_width_u32": 4,
+    "requested_height_u32": 8,
+    "descriptor_u16_at_4_from_request": 20,
+    "descriptor_word_18_from_request": 28,
+    "descriptor_words_08_0c_10_from_request": [
+      32,
+      36,
+      40
+    ],
+    "descriptor_word_20_from_request": 44,
+    "execute_before_reply_u32": 48,
+    "internal_descriptor_bytes": 60,
+    "internal_mode": 9
+  },
+  "memory_ownership": {
+    "opcodes": {
+      "0x43": "allocate",
+      "0x44": "free"
+    },
+    "allocator": "OEM general heap control pointer at 0x00514250; not a dedicated CEVA pool",
+    "alignment_observed": "allocator wrapper diagnoses non-4-byte-aligned non-null results",
+    "returned_pointer": "raw ARM pointer is placed in response payload +4",
+    "inbound_pointer_use": "CEVA-owned pointers are read by ARM after OR 0x10000000"
+  },
+  "cache_contract": {
+    "outbound": "mask IRQ/FIQ, repeat ARM926 test-and-clean D-cache, drain write buffer, restore prior IRQ/FIQ mask, publish MMIO pointer",
+    "inbound": "copy through pointer OR 0x10000000; no explicit invalidate appears in the dispatcher",
+    "alias_status": "the alias is consistent with an uncached/coherent view but that MMU mapping remains an inference"
+  },
+  "safety": [
+    "No MMIO or CEVA code was executed.",
+    "A replacement must reject payloads above 252 bytes before copying into the 256-byte OEM-sized buffer.",
+    "All waits must be bounded; OEM debug flags may turn timeouts into infinite loops.",
+    "Do not return arbitrary general-heap pointers to CEVA until alias, cache, lifetime and free ownership are implemented together."
+  ]
+}

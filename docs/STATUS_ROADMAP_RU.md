@@ -1,3 +1,27 @@
+# Stage57: восстановлены ready-state и CEVA ownership ABI
+
+Для exact-build MMI проверены ещё 15 ARM callsites и 13 слов/литералов.
+Установлены состояния `0x9053200C == 0x43585244 ('CXRD')` для CEVA ready и
+`0x90532044 == 0x43584254 ('CXBT')` для codec booted. Исправлена оценка
+таймаута Stage56: аргумент 30 даёт до 31 чтения, каждое с OEM delay 10.
+
+Восстановлены структуры запросов LCD geometry (`0x40`) и scale engine
+(`0x41`), последовательность перестройки display path и 60-байтовый scaler
+descriptor. Opcode `0x43/0x44` выделяет/освобождает память через общий OEM
+heap, а не отдельный CEVA pool. Зафиксирована ARM926 cache-clean/drain
+последовательность и осторожная гипотеза об alias `OR 0x10000000`.
+
+Найден дефект оригинала: dispatcher копирует `u16 payload_bytes` без проверки
+в 256-байтовый буфер перед соседним RTOS/IRQ-объектом. Безопасный предел
+payload — 252 байта; публичный validator проверяет границы 252/253. MMIO не
+исполнялся, hardware status остаётся `STATIC_RESEARCH_ONLY`.
+[Отчёт](../research/Stage57_CevaAbi/REPORT_RU.md).
+
+Следующее: MMU mapping alias, lifecycle выдаваемой CEVA памяти и provider
+state machine без аппаратного backend; затем ограниченный JPEG probe.
+
+---
+
 # Stage56: восстановлена цепочка штатного видео/JPEG loader
 
 В точном `8000_MMI.RAP` найдены и проверены 28 ARM callsites цепочки

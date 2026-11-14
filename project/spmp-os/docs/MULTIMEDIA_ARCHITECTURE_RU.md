@@ -14,6 +14,8 @@
 
 Stage56 восстановил штатную последовательность CEVA: MMI выбирает тройку `OS_INT/OS_EXT/codec`, читает каждый файл целиком, разбирает `OS_EXT` с обычным режимом MMPi, запускает CEVA и ждёт готовности, затем загружает `OS_INT` и codec через специальный segment-copy mode. JPEG вызывает тот же общий загрузчик. Найдены двунаправленный PIU mailbox, IRQ 31, ISR/DSR, синхронное ожидание reply и постоянный `dspCmdDispatcher`. Это даёт основу для будущего аппаратного provider, но не разрешает напрямую повторять image-specific MMIO: cache coherency, callbacks, ready-state и полное владение буферами ещё не восстановлены. Полный отчёт — `../../../research/Stage56_MediaLoader/REPORT_RU.md`.
 
+Stage57 уточнил состояния ready/booted (`'CXRD'`/`'CXBT'`), LCD/scaler запросы, ARM926 cache-clean/drain и общий heap, из которого CEVA запрашивает память. OEM dispatcher имеет 256-байтовый входящий буфер без bounds check; новый transport обязан ограничить payload 252 байтами, отслеживать каждое выделение и всегда завершать wait по timeout. Alias `0x10000000` пока остаётся image-specific гипотезой об uncached/coherent отображении. Полный отчёт — `../../../research/Stage57_CevaAbi/REPORT_RU.md`.
+
 ## Photos
 
 JPEG, PNG, GIF и BMP; GIF87a/89a включая анимацию только после разработки кадрового композитора. Осторожное выделение памяти: лимиты размеров декодированного изображения, аварийная обработка повреждённых файлов, масштабирование без полного разворота огромных PNG/JPEG, где возможно.

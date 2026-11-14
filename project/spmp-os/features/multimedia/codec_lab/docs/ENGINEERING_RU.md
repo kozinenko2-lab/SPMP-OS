@@ -34,6 +34,13 @@
 
 `build/mmpi_inspect <module.IMG>` выполняет тот же безопасный полный обход `MMPd/MMPs` на локальном файле и печатает только сводку. Он не проверяет право распространения, не загружает сегменты и не обращается к CEVA/MMIO.
 
+`spmp_ceva_session` — чистая модель состояния и владения без MMIO: переходы
+`OFF → OS_EXT_LOADED → READY → OS_INT_LOADED → CODEC_BOOTED → STOPPING`,
+предел входящего PIU payload 252 байта и таблица до 16 outstanding allocations
+с общим лимитом байтов. STOPPING нельзя завершить до освобождения всех записей;
+неизвестный/повторный free отклоняется. Это основа будущего provider, но не
+драйвер CEVA и не доказательство аппаратного воспроизведения.
+
 ## 3. Что проверено
 
 - `make check`: C unit tests MP3/ADTS/MMPi/CRC/memory-query, затем 4 FLAC bit-exact испытания с 22050 mono, 32000 stereo, 44100 stereo, 48000 mono, несколько режимов компрессии `ffmpeg`; отдельный 24-bit FLAC→s16, негативный CRC8 и 9 типов обрезки.
