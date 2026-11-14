@@ -99,3 +99,11 @@ CI собирает собственный ELF/BIN в artifact **spmp-keys-raw-v
 Дальше нужен SPMPRAW.CSV с консоли: отдельно сопоставить state/event/cooked для
 POWER, HOLD, остальных ранее пропавших кнопок и volume chords. Если какие-то
 кнопки не видны даже здесь, продолжить трассировку producer в исходном RAP.
+
+Опубликованный [RAW artifact 14094488663](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43547095571/artifacts/14094488663)
+собран из `8e87181db4e08088fed0f5eef98d6ecb90655026`, CI завершился успешно.
+Скачанный ZIP SHA сверён с GitHub, BIN/manifest совпали с repack ELF. Этот точный
+ELF/BIN отдельно прошёл три original-RAP сценария. CI BIN — **9840 байт**, SHA
+`3c806c3f5f800ed01816f517023e612aa28f6aafab7bb5c4983f738371c85a30`.
+Доказательство: `evidence/raw_input_ci_rap_vm.json`. Отличие от локального Clang19
+build связано со сборщиком/компилятором. Это ещё не аппаратный тест RAW/HOLD/POWER.

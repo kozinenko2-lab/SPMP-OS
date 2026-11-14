@@ -12,6 +12,10 @@
   Parser keeps PRE unknown fields,
   layers/sessions separate and distinct POWER/HOLD/chord prompts.
 - Public manifest and source/build/package identity verified locally.
+- Published RAW artifact 14094488663: ZIP digest, ELF repack/BIN identity and
+  3 original-RAP cases — PASS. BIN 9840 bytes, SHA
+  `3c806c3f5f800ed01816f517023e612aa28f6aafab7bb5c4983f738371c85a30`;
+  provenance: `research/boot_reconstruction/evidence/raw_input_ci_rap_vm.json`.
 
 Raw package hardware status is VM_TESTED_ONLY; POWER/HOLD/chords on the real
 console remain pending. Previous SD0 V1 CSV does not certify this new app.
