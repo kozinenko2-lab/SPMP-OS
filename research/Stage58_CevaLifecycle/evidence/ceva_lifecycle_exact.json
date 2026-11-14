@@ -1,0 +1,285 @@
+{
+  "research_only": true,
+  "source_rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified_calls": {
+    "start_ceva_core": {
+      "callsite": "0x00349298",
+      "target": "0x003488f8"
+    },
+    "normal_stop_close": {
+      "callsite": "0x00349364",
+      "target": "0x00348f70"
+    },
+    "normal_stop_power_1": {
+      "callsite": "0x00349384",
+      "target": "0x002a02d0"
+    },
+    "normal_stop_power_2": {
+      "callsite": "0x00349394",
+      "target": "0x002a02d0"
+    },
+    "force_stop_close": {
+      "callsite": "0x00349464",
+      "target": "0x00348f70"
+    },
+    "force_stop_power_1": {
+      "callsite": "0x00349478",
+      "target": "0x002a02d0"
+    },
+    "force_stop_power_2": {
+      "callsite": "0x00349488",
+      "target": "0x002a02d0"
+    },
+    "close_mailbox": {
+      "callsite": "0x00348ffc",
+      "target": "0x0034a034"
+    },
+    "media_loader_normal_stop": {
+      "callsite": "0x0034b634",
+      "target": "0x00349300"
+    },
+    "media_normal_stop": {
+      "callsite": "0x002df668",
+      "target": "0x00349300"
+    },
+    "alternate_normal_stop": {
+      "callsite": "0x0033659c",
+      "target": "0x00349300"
+    },
+    "command_c0_mailbox": {
+      "callsite": "0x00349510",
+      "target": "0x0034a034"
+    },
+    "command_c1_mailbox": {
+      "callsite": "0x003495e0",
+      "target": "0x0034a034"
+    },
+    "command_c2_mailbox": {
+      "callsite": "0x00349674",
+      "target": "0x0034a034"
+    }
+  },
+  "verified_words": {
+    "start_refcount_literal": {
+      "address": "0x003492f4",
+      "value": "0x0055b7a8"
+    },
+    "close_refcount_literal": {
+      "address": "0x00349058",
+      "value": "0x0055b7a8"
+    },
+    "normal_stop_refcount_literal": {
+      "address": "0x003493f0",
+      "value": "0x0055b7a8"
+    },
+    "force_stop_refcount_literal": {
+      "address": "0x003494c4",
+      "value": "0x0055b7a8"
+    },
+    "close_opcode_84_instruction": {
+      "address": "0x00348f80",
+      "value": "0xe3e0307b"
+    },
+    "close_active_bit_test_instruction": {
+      "address": "0x00348fb8",
+      "value": "0xe3130c01"
+    },
+    "normal_stop_clear_bit_instruction": {
+      "address": "0x00349378",
+      "value": "0xe3c33c01"
+    },
+    "normal_stop_refcount_decrement": {
+      "address": "0x003493a0",
+      "value": "0xe2433001"
+    },
+    "force_stop_refcount_decrement": {
+      "address": "0x00349490",
+      "value": "0xe2433001"
+    },
+    "c0_uncached_alias_instruction": {
+      "address": "0x0034953c",
+      "value": "0xe3851201"
+    },
+    "c1_uncached_alias_instruction": {
+      "address": "0x00349608",
+      "value": "0xe3841201"
+    },
+    "c2_uncached_alias_instruction": {
+      "address": "0x003496a0",
+      "value": "0xe3851201"
+    }
+  },
+  "redboot_code_segments": [
+    {
+      "sha256": "b2790a6a8c4b9a3217e7bfa3430693eaae4b28f0a15e6fd232fd9c71e2fcc4c2",
+      "family": "redboot_1_2_4",
+      "install_address": "0x0003d1e4",
+      "ttbr_literal_address": "0x0003d210",
+      "ttbr_value": "0x00060000",
+      "operations": [
+        "disable MMU",
+        "invalidate unified cache",
+        "invalidate unified TLB",
+        "write TTBR",
+        "set DACR to 1"
+      ]
+    },
+    {
+      "sha256": "b2790a6a8c4b9a3217e7bfa3430693eaae4b28f0a15e6fd232fd9c71e2fcc4c2",
+      "family": "redboot_1_2_4",
+      "install_address": "0x0003d1e4",
+      "ttbr_literal_address": "0x0003d210",
+      "ttbr_value": "0x00060000",
+      "operations": [
+        "disable MMU",
+        "invalidate unified cache",
+        "invalidate unified TLB",
+        "write TTBR",
+        "set DACR to 1"
+      ]
+    },
+    {
+      "sha256": "c8f6d2799eeda3e5560322aa4ca3c61911028bf53532264da0d7b5af4bcb5d3c",
+      "family": "redboot_3_5",
+      "install_address": "0x0003b4d8",
+      "ttbr_literal_address": "0x0003b504",
+      "ttbr_value": "0x00060000",
+      "operations": [
+        "disable MMU",
+        "invalidate unified cache",
+        "invalidate unified TLB",
+        "write TTBR",
+        "set DACR to 1"
+      ]
+    },
+    {
+      "sha256": "b2790a6a8c4b9a3217e7bfa3430693eaae4b28f0a15e6fd232fd9c71e2fcc4c2",
+      "family": "redboot_1_2_4",
+      "install_address": "0x0003d1e4",
+      "ttbr_literal_address": "0x0003d210",
+      "ttbr_value": "0x00060000",
+      "operations": [
+        "disable MMU",
+        "invalidate unified cache",
+        "invalidate unified TLB",
+        "write TTBR",
+        "set DACR to 1"
+      ]
+    },
+    {
+      "sha256": "c8f6d2799eeda3e5560322aa4ca3c61911028bf53532264da0d7b5af4bcb5d3c",
+      "family": "redboot_3_5",
+      "install_address": "0x0003b4d8",
+      "ttbr_literal_address": "0x0003b504",
+      "ttbr_value": "0x00060000",
+      "operations": [
+        "disable MMU",
+        "invalidate unified cache",
+        "invalidate unified TLB",
+        "write TTBR",
+        "set DACR to 1"
+      ]
+    }
+  ],
+  "redboot_page_tables": [
+    {
+      "sha256": "80a4560940f1313613a249ed01bce202961ad6ceeaa9809f3aa034f6d334e45b",
+      "bytes": 17408
+    },
+    {
+      "sha256": "80a4560940f1313613a249ed01bce202961ad6ceeaa9809f3aa034f6d334e45b",
+      "bytes": 17408
+    },
+    {
+      "sha256": "80a4560940f1313613a249ed01bce202961ad6ceeaa9809f3aa034f6d334e45b",
+      "bytes": 17408
+    },
+    {
+      "sha256": "80a4560940f1313613a249ed01bce202961ad6ceeaa9809f3aa034f6d334e45b",
+      "bytes": 17408
+    },
+    {
+      "sha256": "80a4560940f1313613a249ed01bce202961ad6ceeaa9809f3aa034f6d334e45b",
+      "bytes": 17408
+    }
+  ],
+  "redboot_page_table_mapping": {
+    "sha256": "80a4560940f1313613a249ed01bce202961ad6ceeaa9809f3aa034f6d334e45b",
+    "bytes": 17408,
+    "ttbr_physical": "0x00060000",
+    "coarse_l2_physical": "0x00064000",
+    "ranges": [
+      {
+        "virtual": "0x00000000-0x000fffff",
+        "physical": "0x00000000-0x000fffff",
+        "kind": "coarse_l2",
+        "cache": "first 64 KiB uncached; remainder cached+buffered"
+      },
+      {
+        "virtual": "0x00100000-0x0fffffff",
+        "physical": "identity",
+        "kind": "section",
+        "cache": "cached+buffered"
+      },
+      {
+        "virtual": "0x10000000-0x1fffffff",
+        "physical": "0x00000000-0x0fffffff",
+        "kind": "section",
+        "cache": "uncached+unbuffered"
+      },
+      {
+        "virtual": "0x2e000000-0x2fffffff",
+        "physical": "identity",
+        "kind": "section",
+        "cache": "uncached+unbuffered"
+      },
+      {
+        "virtual": "0x90000000-0x9fffffff",
+        "physical": "identity",
+        "kind": "section",
+        "cache": "uncached+unbuffered"
+      },
+      {
+        "virtual": "0xd0000000-0xffffffff",
+        "physical": "identity",
+        "kind": "section",
+        "cache": "cached+buffered"
+      }
+    ],
+    "cached_identity_descriptor": {
+      "physical_base": 1048576,
+      "ap": 3,
+      "domain": 0,
+      "cacheable": true,
+      "bufferable": true
+    },
+    "uncached_alias_descriptor": {
+      "physical_base": 0,
+      "ap": 3,
+      "domain": 0,
+      "cacheable": false,
+      "bufferable": false
+    },
+    "alias_rule": "for physical RAM below 0x10000000, VA = PA | 0x10000000 selects the uncached, unbuffered mapping"
+  },
+  "ceva_lifecycle": {
+    "reference_counter": "u32 at 0x0055b7a8",
+    "start": "only the zero-to-one transition initializes PIU and starts CEVA; repeated start returns without incrementing in this wrapper",
+    "normal_stop": "when the counter is one, send opcode 0x84, clear 0x100 in 0x90530468, run two power/clock calls, then decrement",
+    "force_stop": "decrement repeatedly to zero; close and power down only on the one-to-zero transition",
+    "transport_lifetime": "the recovered stop paths do not destroy the once-created PIU thread/IRQ objects",
+    "response_copy": "C0/C1/C2 replies copy 0x60 bytes through pointer | 0x10000000"
+  },
+  "new_provider_policy": [
+    "PIU transport lifetime and codec-core session lifetime must remain separate.",
+    "Reject new allocations after BEGIN_STOP.",
+    "Release only pointers tracked for this session; keep failed releases tracked so cleanup is retryable.",
+    "Do not complete STOPPING until every tracked allocation has been released.",
+    "Every wait and mailbox exchange must have a finite timeout."
+  ],
+  "limits": [
+    "No MMIO, CEVA module or firmware code was executed.",
+    "The supplied five RedBoot images are candidates; this audit does not identify the user's board variant.",
+    "The mapping proves the alias for the covered physical range, not for arbitrary pointers outside it."
+  ]
+}

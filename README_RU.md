@@ -2,6 +2,12 @@
 
 **Состояние:** 14 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
 
+[Stage58: MMU-карта RedBoot и жизненный цикл CEVA](research/Stage58_CevaLifecycle/REPORT_RU.md).
+Во всех пяти RedBoot подтверждено uncached-окно RAM `0x10000000`, а в MMI —
+refcount, close-команда `0x84` и power-down codec core. Добавлен exact-аудитор
+и повторяемая cleanup-модель без MMIO; это статическое исследование, не новый
+пакет для консоли.
+
 [Этап 16: проверяемое копирование и анализ FAT](research/boot_reconstruction/STAGE16_REPORT_RU.md).
 Пошаговый copy engine связан с FM02: временный файл, read-back comparison,
 отмена и явные ошибки очистки. По 50 сценариев host/ASan/ARM, 22 случая

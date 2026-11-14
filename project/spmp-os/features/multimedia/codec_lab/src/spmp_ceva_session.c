@@ -54,3 +54,24 @@ int spmp_ceva_track_free(spmp_ceva_session *s,uintptr_t pointer,uint32_t *bytes)
   s->allocation_count--;s->total_bytes-=released;if(bytes)*bytes=released;return 0;
  }return -1;
 }
+int spmp_ceva_cleanup_allocations(spmp_ceva_session *s,
+ spmp_ceva_release_fn release,void *context,uint32_t *released_count){
+ uint32_t i,released=0;
+ if(released_count)*released_count=0;
+ if(!s||s->state!=SPMP_CEVA_STOPPING)return -1;
+ if(s->allocation_count!=0&&!release)return -1;
+ for(i=0;i<SPMP_CEVA_MAX_ALLOCATIONS;i++){
+  uintptr_t pointer=s->allocations[i].pointer;
+  uint32_t bytes=s->allocations[i].bytes;
+  if(!pointer)continue;
+  if(release(context,pointer,bytes)!=0){
+   if(released_count)*released_count=released;
+   return -1;
+  }
+  if(s->allocations[i].pointer!=pointer||s->allocations[i].bytes!=bytes)return -1;
+  s->allocations[i].pointer=0;s->allocations[i].bytes=0;
+  s->allocation_count--;s->total_bytes-=bytes;released++;
+ }
+ if(released_count)*released_count=released;
+ return s->allocation_count==0?0:-1;
+}

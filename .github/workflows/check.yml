@@ -16,6 +16,7 @@ jobs:
         run: |
           python3 -m unittest discover -s research/Stage56_MediaLoader/tests -v
           python3 -m unittest discover -s research/Stage57_CevaAbi/tests -v
+          python3 -m unittest discover -s research/Stage58_CevaLifecycle/tests -v
           make -C project/spmp-os/features/multimedia/codec_lab check
       - name: Build host prototype
         run: make -C project/spmp-os host
@@ -34,6 +35,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y clang llvm lld python3-venv
       - name: Check reconstructed declarations for ARMv5TE soft-float
         run: clang --target=arm-none-eabi -march=armv5te -mfloat-abi=soft -std=c11 -ffreestanding -Wall -Wextra -Werror -fsyntax-only -x c research/boot_reconstruction/src/mmi_native_abi.h research/boot_reconstruction/src/mmi_native_resources_abi.h
+      - name: Build codec session model for ARMv5TE soft-float
+        run: make -C project/spmp-os/features/multimedia/codec_lab armv5
       - name: Compile portable probe and typed adapter as ARMv5TE objects
         run: make -C research/boot_reconstruction arm-probe
       - name: Save research probe objects and host frame

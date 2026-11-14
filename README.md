@@ -19,6 +19,8 @@ SPMP-OS и проверка будущих модификаций. Поддер�
   и typed adapter; ARM ET_REL objects, аппаратный запуск не подтверждён.
 - `research/Stage53_to_55/` — прежние инструменты исследования потоков и GUI,
   скрипты экспорта Ghidra и статические свидетельства.
+- `research/Stage58_CevaLifecycle/` — exact-build checks for the RedBoot MMU
+  table, the proven uncached RAM alias, and the MMI CEVA close/refcount path.
 - `docs/STATUS_ROADMAP_RU.md` — ограничения и дальнейшие задачи.
 - `docs/IMPORT_PROVENANCE.json` — состав импорта из пользовательского архива
   и список исключённых файлов. Хеши относятся к исходному импорту, до правок.

@@ -1,3 +1,24 @@
+# Stage58: доказана MMU-карта alias и восстановлено закрытие CEVA
+
+Все пять RedBoot-кандидатов содержат одинаковую таблицу MMU: диапазон
+`0x10000000–0x1FFFFFFF` отображает физические `0x00000000–0x0FFFFFFF` как
+uncached/unbuffered. Обе семьи кода RedBoot загружают TTBR `0x00060000`;
+прежняя гипотеза Stage57 об `pointer | 0x10000000` теперь подтверждена точными
+descriptor. Это не выбирает вариант RedBoot конкретной платы.
+
+В MMI восстановлен refcount CEVA, команда закрытия `0x84`, очистка start-bit,
+два power/clock вызова и различие между жизнью codec core и постоянно
+инициализированным PIU transport. Exact-аудит проверил 14 ARM callsites,
+12 слов, обе семьи кода и пять таблиц. В `codec_lab` добавлена bounded,
+повторяемая cleanup-модель: неуспешно освобождённая запись остаётся учтённой.
+Host tests PASS; аппаратный статус — `STATIC_RESEARCH_ONLY`.
+[Отчёт](../research/Stage58_CevaLifecycle/REPORT_RU.md).
+
+Следующее: поля команд C0/C1/C2, допустимый CEVA shared-memory pool и bounded
+mailbox backend; затем read-only JPEG probe без Flash-записи.
+
+---
+
 # Stage57: восстановлены ready-state и CEVA ownership ABI
 
 Для exact-build MMI проверены ещё 15 ARM callsites и 13 слов/литералов.
