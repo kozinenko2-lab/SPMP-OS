@@ -8,6 +8,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Install host and ARM build tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg clang llvm lld python3-venv
       - name: Check public snapshot
         run: python3 tools/verify_integrity.py --full
       - name: Test recovered boot, NGame and native ABI (no private firmware)
@@ -31,8 +33,6 @@ jobs:
         run: ./build/spmp-os-host --cores
       - name: Copy engine with real temporary files, verification and cancellation
         run: make -C project/spmp-os file-copy-check file-copy-sanitize-check
-      - name: Install ARM build tools
-        run: sudo apt-get update && sudo apt-get install -y clang llvm lld python3-venv
       - name: Check reconstructed declarations for ARMv5TE soft-float
         run: clang --target=arm-none-eabi -march=armv5te -mfloat-abi=soft -std=c11 -ffreestanding -Wall -Wextra -Werror -fsyntax-only -x c research/boot_reconstruction/src/mmi_native_abi.h research/boot_reconstruction/src/mmi_native_resources_abi.h
       - name: Build codec session model for ARMv5TE soft-float
