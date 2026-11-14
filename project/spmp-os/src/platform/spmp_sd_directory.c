@@ -73,7 +73,7 @@ int spmp_sd_list_page(void *ctx,const char *path,uint32_t offset,uint32_t cap,fm
    uint32_t next=d->offset+FM01_PAGE_ROWS;int r=scan(d,path,next,1);if(r)return r;
   }
  }
- *returned=cap?d->count:0;*total=d->total;*files=d->files;*dirs=d->dirs;
- if(cap)for(uint32_t i=0;i<d->count;i++)copy(out+i,d->page+i,sizeof *out);
+ *returned=cap<d->count?cap:d->count;*total=d->total;*files=d->files;*dirs=d->dirs;
+ for(uint32_t i=0;i<*returned;i++)copy(out+i,d->page+i,sizeof *out);
  return 0;
 }

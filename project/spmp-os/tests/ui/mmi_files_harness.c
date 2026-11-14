@@ -42,6 +42,10 @@ int main(void){
  assert(f.browser.panels[0].first==0&&!strcmp(fm01_selected(&f.browser,0)->name,"Ромы"));
  char out[512];assert(spmp_sd_path(&f.directory,"../escape",out,sizeof out));assert(spmp_sd_path(&f.directory,"a//b",out,sizeof out));assert(spmp_sd_path(&f.directory,"a\\b",out,sizeof out));
  assert(!spmp_sd_path(&f.directory,"SPMP-OS/User/Ромы/Adventure renamed.a26",out,sizeof out));assert(strstr(out,"/fat20a0/hda0/"));
+ fm01_entry small[2];memset(small,0x5a,sizeof small);fm01_entry guard=small[1];
+ uint32_t returned,total,files,dirs;
+ assert(!spmp_sd_list_page(&f.directory,"SPMP-OS/User",0,1,small,&returned,&total,&files,&dirs));
+ assert(returned==1&&total==24&&!strcmp(small[0].name,"Ромы"));assert(!memcmp(&small[1],&guard,sizeof guard));
  for(int fault=1;fault<=5;fault++){
   fs.fault=fault;spmp_sd_directory_invalidate(&f.directory);unsigned closed=fs.closed;
   assert(fm01_refresh(&f.browser,0));assert(fs.closed==closed+1);assert(!f.browser.panels[0].loaded);

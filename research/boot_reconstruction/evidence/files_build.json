@@ -38,5 +38,7 @@
   "hardware_status": "VM_TESTED_ONLY",
   "device_scope": "read-only directory/stat and system TTF reads; journal append; no ROM execution or user-file operations",
   "legacy_mini_local_bin_unchanged_sha256": "ee855060e635b2973805a6a1a3452f2e10b104a2442d72fea97254698b160041",
-  "local_sd_zip_sha256": "387c6842038ee01ede745a183138d5bfc594d3910b07b9e732d06cbce33ce368"
+  "local_sd_zip_sha256": "387c6842038ee01ede745a183138d5bfc594d3910b07b9e732d06cbce33ce368",
+  "source_revision": "ce5f83fa7d398f6fea2fa0eb1e494ac7df40ecab",
+  "note": "Local evidence pins the initial Stage15 build; directory output-capacity regression is checked separately in the following commit and its CI artifact."
 }
