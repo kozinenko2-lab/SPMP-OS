@@ -34,8 +34,8 @@
       "program": "mmi",
       "gzf_sha256": "5e05914d9afa899f4211f2317c1abd0b2963683ce3b42a8f2b7d0eed5732f40c",
       "raw_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
-      "successful_targets": 253,
-      "program_metadata": "program=ghidra_analysis_ONLY.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=7497\nblock=.spmp_seg_0,00280000,0056ad8f,execute=true\nblock=.spmp_seg_1,006c8fe0,006ff81f,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::00000032,execute=false\nblock=.strtab,.strtab::00000000,.strtab::0000010e,execute=false\nblock=.symtab,.symtab::00000000,.symtab::000000af,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000003f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::000000ef,execute=false\n",
+      "successful_targets": 256,
+      "program_metadata": "program=ghidra_analysis_ONLY.elf\nlanguage=ARM:LE:32:v8\ncompiler=default\nfunctions=7499\nblock=.spmp_seg_0,00280000,0056ad8f,execute=true\nblock=.spmp_seg_1,006c8fe0,006ff81f,execute=false\nblock=.shstrtab,.shstrtab::00000000,.shstrtab::00000032,execute=false\nblock=.strtab,.strtab::00000000,.strtab::0000010e,execute=false\nblock=.symtab,.symtab::00000000,.symtab::000000af,execute=false\nblock=_elfHeader,_elfHeader::00000000,_elfHeader::00000033,execute=false\nblock=_elfProgramHeaders,_elfProgramHeaders::00000000,_elfProgramHeaders::0000003f,execute=false\nblock=_elfSectionHeaders,_elfSectionHeaders::00000000,_elfSectionHeaders::000000ef,execute=false\n",
       "pseudocode_warnings": {
         "mmi_reset": [
           "/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */",

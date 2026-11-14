@@ -30,12 +30,13 @@ arm-probe:
 	llvm-nm -u build/native_probe_adapter_armv5.o >> build/native_probe_undefined.txt
 	test ! -s build/native_probe_undefined.txt
 	llvm-readelf -h -A build/native_probe_armv5.o
-test: all build/test_boot_policy build/test_reloc_model build/test_flag_model build/native_probe_host build/test_native_probe_adapter
+test: all build/test_boot_policy build/test_reloc_model build/test_flag_model build/native_probe_host build/test_native_probe_adapter build/test_input_host
 	./build/test_reloc_model
 	./build/test_flag_model
 	./build/test_boot_policy
 	./build/native_probe_host --frame build/native_probe_frame.ppm
 	./build/test_native_probe_adapter
+	./build/test_input_host
 	python3 -m unittest discover -s tests -v
 clean:
 	rm -rf build
@@ -86,3 +87,26 @@ arm-native-check: arm-native-bind
 	python3 tools/startup_elf.py $(STARTUP_DIR)/native.elf > $(STARTUP_DIR)/native_layout.json
 	python3 tools/ngame_pack.py $(STARTUP_DIR)/native.elf --output $(STARTUP_DIR)/SPMP_PROBE_VM.bin --manifest $(STARTUP_DIR)/native_package.json
 	$(ARM_VM_PYTHON) tools/emulate_native_package.py --synthetic-elf $(STARTUP_DIR)/native_synthetic.elf --output $(STARTUP_DIR)/native_binding_vm.json
+
+INPUT_DIR = build/input_test
+.PHONY: arm-input
+arm-input: arm-native-bind
+	mkdir -p $(INPUT_DIR)
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Itests -DSPMP_INPUT_BUILD -c examples/native_startup/native_binding.c -o $(INPUT_DIR)/base_binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Itests -DSPMP_INPUT_BUILD -DSPMP_BINDING_SYNTHETIC -c examples/native_startup/native_binding.c -o $(INPUT_DIR)/base_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Itests -c examples/input_test/input_binding.c -o $(INPUT_DIR)/binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Itests -DSPMP_BINDING_SYNTHETIC -c examples/input_test/input_binding.c -o $(INPUT_DIR)/binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -c examples/input_test/input_test.c -o $(INPUT_DIR)/input.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -c examples/input_test/main.c -o $(INPUT_DIR)/main.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(INPUT_DIR)/input.map -o $(INPUT_DIR)/input.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_binding.o $(INPUT_DIR)/binding.o $(INPUT_DIR)/input.o $(INPUT_DIR)/main.o $(STARTUP_DIR)/adapter.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -o $(INPUT_DIR)/input_synthetic.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_synthetic.o $(INPUT_DIR)/binding_synthetic.o $(INPUT_DIR)/input.o $(INPUT_DIR)/main.o $(STARTUP_DIR)/adapter.o
+	python3 tools/ngame_pack.py $(INPUT_DIR)/input.elf --output $(INPUT_DIR)/SPMP_INPUT_TEST.bin --manifest $(INPUT_DIR)/input_package.json --title "SPMP INPUT"
+
+build/test_input_host: examples/input_test/input_test.c examples/input_test/input_test.h examples/input_test/font5x7.h examples/native_probe/oem_adapter.c tests/test_input_host.c
+	mkdir -p build
+	$(CC) $(CFLAGS) -Isrc -Iexamples/native_probe -Iexamples/input_test examples/input_test/input_test.c examples/native_probe/oem_adapter.c tests/test_input_host.c -o $@
+
+.PHONY: arm-input-check
+arm-input-check: arm-input
+	$(ARM_VM_PYTHON) tools/emulate_input.py --elf $(INPUT_DIR)/input_synthetic.elf --output $(INPUT_DIR)/input_vm.json --preview $(INPUT_DIR)/input_preview.ppm --log $(INPUT_DIR)/example.csv
+	python3 tools/input_log_decode.py $(INPUT_DIR)/example.csv --device "SYNTHETIC VM" --output $(INPUT_DIR)/example_decoded.json

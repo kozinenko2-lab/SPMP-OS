@@ -1,3 +1,22 @@
+# Проверки этапа 10
+
+- Exact-RAP ARM926: 20 time/delay/open/FAT create/write/seek/close cases — PASS.
+- Source-built input app: 19 ARM926/virtual SD cases, learned MAP/EXIT,
+  IO failures/partial writes/clock wrap/poll cap/extra prefix rejection — PASS.
+- Original RAP wrapper -> packaged input -> normal return: 3 scenarios — PASS.
+  App services and OS/device backends mocked, no hardware SD access.
+- Host C: existing data preservation, fd0, IO status, short-write bound,
+  file/session/poll limits and FG restore — PASS.
+- 73 Python tests: 68 PASS/5 optional SKIP without private inputs;
+  73 PASS with exact RAP/control game/native ELF.
+- Ghidra: 287 exports, all original GZF hashes/mapped bytes verified.
+
+New interactive/SD hardware status is VM_TESTED_ONLY. The user's previous
+three-bar frame/exit report applies to artifact 14076639604 only.
+[Отчёт](../research/boot_reconstruction/STAGE10_REPORT_RU.md).
+
+---
+
 # Проверки этапа 9
 
 **Аппаратное подтверждение пользователя, 14 ноября 2026:** опубликованный

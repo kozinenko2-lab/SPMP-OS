@@ -7,7 +7,9 @@ from pathlib import Path
 from startup_elf import StartupELF,ENTRY
 from ngame_inspect import transform,inspect,FOOTER
 
-def pack(elf_bytes):
+def pack(elf_bytes,title="SPMP Probe"):
+    title_bytes=title.encode("ascii")
+    if not 1<=len(title_bytes)<=15 or any(b<32 or b>126 for b in title_bytes):raise ValueError("Title must be 1..15 printable ASCII bytes")
     image=StartupELF(elf_bytes)
     footer_start=image.address('__reserved_footer_start__');footer_end=image.address('__reserved_footer_end__')
     payload=bytearray(footer_end-ENTRY)
@@ -21,7 +23,7 @@ def pack(elf_bytes):
     payload[:prefix]=transform(payload[:prefix],mode=0)
     header=bytearray(128);header[:8]=b'NGame1.0';struct.pack_into('<I',header,8,128)
     # Own metadata. Fields outside the traced loader contract remain zero.
-    header[0x2c:0x2c+11]=b'SPMP Probe\0';header[0x6d]=5
+    header[0x2c:0x2c+len(title_bytes)]=title_bytes;header[0x6d]=5
     data=bytes(header)+bytes(payload)
     result=inspect(data)
     if result['status']!='structural_match':raise AssertionError('Packed NGame failed structural self-check')
@@ -40,6 +42,6 @@ def pack(elf_bytes):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('elf',type=Path);p.add_argument('--output',type=Path,required=True)
-    p.add_argument('--manifest',type=Path,required=True);a=p.parse_args()
-    data,plain,report=pack(a.elf.read_bytes());a.output.write_bytes(data);a.manifest.write_text(json.dumps(report,indent=2)+'\n')
+    p.add_argument('--manifest',type=Path,required=True);p.add_argument('--title',default='SPMP Probe');a=p.parse_args()
+    data,plain,report=pack(a.elf.read_bytes(),a.title);a.output.write_bytes(data);a.manifest.write_text(json.dumps(report,indent=2)+'\n')
     print('PASS: source-built NGame,',len(data),'bytes; structural/decode round-trip only')

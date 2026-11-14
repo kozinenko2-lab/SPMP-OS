@@ -1444,6 +1444,21 @@
           "address": "00430694",
           "first_word": "e1a0c00d",
           "label": "shell_game_launch"
+        },
+        {
+          "address": "00283788",
+          "first_word": "e1a0c00d",
+          "label": "fatfs_open"
+        },
+        {
+          "address": "00283fc4",
+          "first_word": "e1a0c00d",
+          "label": "fatfs_fo_write"
+        },
+        {
+          "address": "003e2f08",
+          "first_word": "e59f3004",
+          "label": "shell_storage_selection"
         }
       ],
       "repairs": [

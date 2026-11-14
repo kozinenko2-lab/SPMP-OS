@@ -53,7 +53,12 @@ uint32_t spmp_native_preflight(uintptr_t raw_api)
            intersects(owner,owner+0x100010u,frame,frame+0x25800u))return NATIVE_BAD_FRAMEBUFFERS;
     }
     if(intersects(frames[0],frames[0]+0x25800u,frames[1],frames[1]+0x25800u))return NATIVE_BAD_FRAMEBUFFERS;
+#ifdef SPMP_INPUT_BUILD
+    extern uint32_t spmp_input_preflight_extra(void);
+    return spmp_input_preflight_extra();
+#else
     return NATIVE_BOUND;
+#endif
 }
 uint32_t spmp_native_bind(uintptr_t raw_api,struct probe_oem_api *out)
 {

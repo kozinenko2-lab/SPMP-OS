@@ -1,0 +1,351 @@
+{
+  "format": "SPMP_INPUT_TEST_V1",
+  "device_label_supplied_by_user": "SYNTHETIC VM",
+  "sessions": [
+    {
+      "session_index": 1,
+      "metadata": "#SPMP_INPUT_TEST_V1,source=5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e,clock=MMI_TICK_DELTA_X10,labels=PROMPTS_NOT_AUTODETECTED",
+      "candidate_mappings": {
+        "UP": [
+          "0x00000001"
+        ],
+        "LEFT": [
+          "0x00000002"
+        ],
+        "A": [
+          "0x00080000"
+        ],
+        "X": [
+          "0x00000008"
+        ],
+        "R": [
+          "0x00000001"
+        ],
+        "SELECT": [
+          "0x00000002"
+        ]
+      },
+      "events": [
+        {
+          "event": "PROMPT",
+          "poll": 0,
+          "time_units": 0,
+          "prompt": "UP",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 0,
+          "time_units": 0,
+          "prompt": "UP",
+          "mask": "0x00000001",
+          "pressed": "0x00000001",
+          "released": "0x00000000"
+        },
+        {
+          "event": "SAMPLE",
+          "poll": 0,
+          "time_units": 0,
+          "prompt": "UP",
+          "mask": "0x00000001",
+          "pressed": "0x00000001",
+          "released": "0x00000000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 1,
+          "time_units": 4000,
+          "prompt": "DOWN",
+          "mask": "0x00000001",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 1,
+          "time_units": 4000,
+          "prompt": "DOWN",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000001"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 2,
+          "time_units": 8000,
+          "prompt": "LEFT",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 2,
+          "time_units": 8000,
+          "prompt": "LEFT",
+          "mask": "0x00000002",
+          "pressed": "0x00000002",
+          "released": "0x00000000"
+        },
+        {
+          "event": "SAMPLE",
+          "poll": 2,
+          "time_units": 8000,
+          "prompt": "LEFT",
+          "mask": "0x00000002",
+          "pressed": "0x00000002",
+          "released": "0x00000000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 3,
+          "time_units": 12000,
+          "prompt": "RIGHT",
+          "mask": "0x00000002",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 3,
+          "time_units": 12000,
+          "prompt": "RIGHT",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000002"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 4,
+          "time_units": 16000,
+          "prompt": "A",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 4,
+          "time_units": 16000,
+          "prompt": "A",
+          "mask": "0x00080000",
+          "pressed": "0x00080000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "SAMPLE",
+          "poll": 4,
+          "time_units": 16000,
+          "prompt": "A",
+          "mask": "0x00080000",
+          "pressed": "0x00080000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 5,
+          "time_units": 20000,
+          "prompt": "B",
+          "mask": "0x00080000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 5,
+          "time_units": 20000,
+          "prompt": "B",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00080000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 6,
+          "time_units": 24000,
+          "prompt": "X",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 6,
+          "time_units": 24000,
+          "prompt": "X",
+          "mask": "0x00000008",
+          "pressed": "0x00000008",
+          "released": "0x00000000"
+        },
+        {
+          "event": "SAMPLE",
+          "poll": 6,
+          "time_units": 24000,
+          "prompt": "X",
+          "mask": "0x00000008",
+          "pressed": "0x00000008",
+          "released": "0x00000000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 7,
+          "time_units": 28000,
+          "prompt": "Y",
+          "mask": "0x00000008",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 7,
+          "time_units": 28000,
+          "prompt": "Y",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000008"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 8,
+          "time_units": 32000,
+          "prompt": "L",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 9,
+          "time_units": 36000,
+          "prompt": "R",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 9,
+          "time_units": 36000,
+          "prompt": "R",
+          "mask": "0x00000001",
+          "pressed": "0x00000001",
+          "released": "0x00000000"
+        },
+        {
+          "event": "SAMPLE",
+          "poll": 9,
+          "time_units": 36000,
+          "prompt": "R",
+          "mask": "0x00000001",
+          "pressed": "0x00000001",
+          "released": "0x00000000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 10,
+          "time_units": 40000,
+          "prompt": "START",
+          "mask": "0x00000001",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 10,
+          "time_units": 40000,
+          "prompt": "START",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000001"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 11,
+          "time_units": 44000,
+          "prompt": "SELECT",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 11,
+          "time_units": 44000,
+          "prompt": "SELECT",
+          "mask": "0x00000002",
+          "pressed": "0x00000002",
+          "released": "0x00000000"
+        },
+        {
+          "event": "SAMPLE",
+          "poll": 11,
+          "time_units": 44000,
+          "prompt": "SELECT",
+          "mask": "0x00000002",
+          "pressed": "0x00000002",
+          "released": "0x00000000"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 12,
+          "time_units": 48000,
+          "prompt": "BACK",
+          "mask": "0x00000002",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 12,
+          "time_units": 48000,
+          "prompt": "BACK",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000002"
+        },
+        {
+          "event": "PROMPT",
+          "poll": 13,
+          "time_units": 52000,
+          "prompt": "FREE",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 13,
+          "time_units": 52000,
+          "prompt": "FREE",
+          "mask": "0x00080000",
+          "pressed": "0x00080000",
+          "released": "0x00000000"
+        },
+        {
+          "event": "KEY",
+          "poll": 14,
+          "time_units": 56000,
+          "prompt": "FREE",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00080000"
+        },
+        {
+          "event": "END",
+          "poll": 15,
+          "time_units": 60000,
+          "prompt": "FREE",
+          "mask": "0x00000000",
+          "pressed": "0x00000000",
+          "released": "0x00000000"
+        }
+      ],
+      "ended": true,
+      "end_event": "END"
+    }
+  ],
+  "ignored_or_partial_lines": 1,
+  "limits": "Candidate MMI masks associated with requested prompts. No GPIO or physical identity is inferred."
+}

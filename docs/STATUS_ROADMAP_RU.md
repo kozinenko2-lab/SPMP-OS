@@ -1,3 +1,25 @@
+# Этап 10: интерактивный input logger
+
+SPMP_INPUT_TEST.bin: release-to-arm, 13 prompts, cooked MMI masks/edges,
+курсор и меню LIVE/MAP/EXIT по записанным UP/DOWN/A. Номинальный предел 60 секунд
+и 3000 polls. Журнал /fat20a1/hda1/SPMPKEYS.CSV открывается напрямую через
+проверенные eCos services: create без truncate, seek EOF, bounded writes, close.
+Ошибки SD показываются; UI продолжает работать, внутреннего fallback нет.
+
+19 ARM VM + 3 full RAP wrapper cases + 20 original ARM service cases — PASS.
+73 Python tests: public 68 PASS/5 SKIP, private 73 PASS; host C journal/error — PASS.
+Ghidra exports теперь 287 (256 MMI/31 RedBoot), добавлены FAT open/write и
+storage selection. Новый Input build добавляет 6 локальных typed interfaces.
+
+[Отчёт этапа 10](../research/boot_reconstruction/STAGE10_REPORT_RU.md),
+[инструкция пакета](../research/boot_reconstruction/examples/input_test/README_RU.md).
+Artifact `spmp-input-test-vm-tested` содержит BIN/manifest/decoder.
+Аппаратный статус нового input/SD пакета — VM_TESTED_ONLY; старый one-frame
+контрольный BIN остаётся USER_CONFIRMED_ON_CONSOLE. Далее — CSV с реальной SD,
+сопоставление кнопок и повторные запуски.
+
+---
+
 # Этап 9: native binding и собственный NGame
 
 Собран RAM NGame diagnostic probe: один кадр и обычный возврат. До BSS startup

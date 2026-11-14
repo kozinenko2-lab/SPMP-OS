@@ -21,5 +21,6 @@
   },
   "package_manifest": "native_package.json",
   "original_rap_chain": "native_package_rap_vm.json",
-  "limits": "Local compiler output; CI builds its own ELF/package and records its own hashes."
+  "limits": "Local compiler output; CI builds its own ELF/package and records its own hashes.",
+  "source_revision": "ac3d59b07b16e9c622bc8f3fa2a1ae18b71c934a"
 }

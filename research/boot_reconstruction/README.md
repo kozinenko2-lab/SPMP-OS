@@ -2,14 +2,13 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE9_REPORT_RU.md](STAGE9_REPORT_RU.md) — preflight/binder,
-собственный NGame probe и цепочка оригинального RAP до обычного возврата в ARM VM.
-116 public synthetic / 6 private original-RAP scenarios. Создан RAM diagnostic,
-не полная оболочка SPMP-OS. **Пользователь подтвердил аппаратный frame/exit
-опубликованного NGame 14 ноября 2026**; [свидетельство](evidence/native_probe_hardware_user_report.json).
-Полный UI, input mapping и длительная стабильность не проверены. OEM exports/API: 284/28.
-[Собственный startup](STAGE8_REPORT_RU.md), [рабочая игра](STAGE7_REPORT_RU.md),
-[LCD/PCM](STAGE6_REPORT_RU.md).
+**Текущий этап:** [STAGE10_REPORT_RU.md](STAGE10_REPORT_RU.md) — отдельный
+интерактивный input test и append-журнал SD. 19 ARM VM/3 full RAP wrapper/20
+original service cases, host error tests. Новый пакет VM_TESTED_ONLY;
+[инструкция](examples/input_test/README_RU.md). OEM exports теперь 287.
+[Аппаратный one-frame контроль](evidence/native_probe_hardware_user_report.json)
+сохраняется отдельно. [Native binding/NGame](STAGE9_REPORT_RU.md),
+[startup](STAGE8_REPORT_RU.md), [рабочая игра](STAGE7_REPORT_RU.md).
 Псевдокод: `decompiled/`. Предыдущие результаты:
 [память/ресурсы/возврат](STAGE5_REPORT_RU.md),
 [файлы/графика/ввод](STAGE4_REPORT_RU.md),

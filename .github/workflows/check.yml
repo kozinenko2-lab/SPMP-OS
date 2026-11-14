@@ -65,6 +65,25 @@ jobs:
             research/boot_reconstruction/build/native_startup/native_package.json
             research/boot_reconstruction/build/native_startup/native_binding_vm.json
             research/boot_reconstruction/examples/native_startup/NGAME_README_RU.md
+      - name: Build interactive input logger and run ARM/virtual-SD checks
+        run: make -C research/boot_reconstruction arm-input-check ARM_VM_PYTHON=/tmp/spmp-startup-vm/bin/python
+      - name: Save input test NGame and log decoder
+        uses: actions/upload-artifact@v4
+        with:
+          name: spmp-input-test-vm-tested
+          retention-days: 14
+          path: |
+            research/boot_reconstruction/build/input_test/SPMP_INPUT_TEST.bin
+            research/boot_reconstruction/build/input_test/input.elf
+            research/boot_reconstruction/build/input_test/input.map
+            research/boot_reconstruction/build/input_test/input_package.json
+            research/boot_reconstruction/build/input_test/input_vm.json
+            research/boot_reconstruction/build/input_test/input_preview.ppm
+            research/boot_reconstruction/build/input_test/example.csv
+            research/boot_reconstruction/build/input_test/example_decoded.json
+            research/boot_reconstruction/examples/input_test/README_RU.md
+            research/boot_reconstruction/examples/input_test/preview.png
+            research/boot_reconstruction/tools/input_log_decode.py
       - name: File manager component checks
         run: |
           for n in 01 02 03 04 05; do

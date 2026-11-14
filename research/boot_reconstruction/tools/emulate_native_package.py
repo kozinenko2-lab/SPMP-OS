@@ -147,15 +147,15 @@ def synthetic(image_path):
                   'All nine API functions are intercepted; no real graphics/input/RTOS.',
                   'Compatibility CRC32 is not full-image identity or a security boundary.']}
 
-def private_rap(image_path,rap_path):
+def private_rap(image_path,rap_path,*,observer_class=ProbeObserver,title="SPMP Probe",cases=None):
     from unicorn.arm_const import UC_CPU_ARM_926
     from emulate_native_lifecycle import new_vm,pool_info
     from make_binding_profile import extract
     from audit_boot import H
     rap=rap_path.read_bytes()
     if extract(rap)!=PROFILE:raise ValueError('RAP differs from checked binding profile')
-    image=StartupELF(image_path.read_bytes());container,plain,manifest=pack(image.data);rows=[]
-    cases=[{'name':'one_frame'},{'name':'quit_first','keys':0x80000},
+    image=StartupELF(image_path.read_bytes());container,plain,manifest=pack(image.data,title);rows=[]
+    cases=cases if cases is not None else [{'name':'one_frame'},{'name':'quit_first','keys':0x80000},
            {'name':'slot_corruption','slot':14,'status':0x902},
            {'name':'code_corruption','prefix':0,'status':0x903},
            {'name':'bad_magic','corrupt_magic':True}, {'name':'bad_footer','corrupt_footer':True}]
@@ -190,7 +190,8 @@ def private_rap(image_path,rap_path):
             (0x4628b8,'sound_start_mock',0,0),(0x4629cc,'sound_stop_mock',0,0),
             (0x339b58,'suspend_mock',0,1),(0x2d6d60,'command_mock',0,3),
             (0x2d8b88,'message_mock',0,3)]:v.stub(address,name,callback,nargs)
-        observer=ProbeObserver(v.u,image,DEFAULT_SP,case,original=True)
+        observer=observer_class(v.u,image,DEFAULT_SP,case,original=True)
+        observer.firmware_vm=v
         v.calls=[];result=v.run(0x460800,[0x1001000],initial_sp=DEFAULT_SP,
             max_instructions=20000000,timeout_us=30000000)
         rejected=case.get('corrupt_magic') or case.get('corrupt_footer')
