@@ -9,6 +9,9 @@ const uint32_t spmp_alias_seed[SPMP_ALIAS_WORDS]
         0x01234567u,0x89abcdefu,0x55aa33ccu,0xc35a9e71u
     };
 struct alias_test_record spmp_alias_record;
+/* Keep a real initialized writable section: the strict startup validator
+ * rejects an empty linker-created .data section whose flags are ambiguous. */
+uint32_t spmp_alias_data_marker=0x414c4931u;
 static const char log_path[]="/fat20a0/hda0/SPMPALI.CSV";
 
 static uint32_t length(const char *s){uint32_t n=0;while(s[n])n++;return n;}
@@ -62,6 +65,7 @@ static void log_result(const struct input_services *io)
 uint32_t alias_test_run(const struct input_services *io)
 {
  if(!io||!io->delay||!io->open||!io->write||!io->seek||!io->close||!io->error_number)return 2;
+ if(spmp_alias_data_marker!=0x414c4931u)return 2;
  struct probe_oem_adapter adapter={&io->graphics};
  if(probe_oem_operations()->begin(&adapter))return 2;
  uint16_t w=0,h=0;if(io->graphics.dimensions(&w,&h)||w!=320||h!=240)return 2;

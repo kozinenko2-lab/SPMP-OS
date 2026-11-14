@@ -4863,7 +4863,7 @@
   "research/boot_reconstruction/evidence/startup_entry.asm": "8d4736d6c06d5cb4912e6996f4a9c21774b5f13f1710549167dcd556b34306c9",
   "research/boot_reconstruction/evidence/startup_negative_checks.json": "48be68bf5c46998abe8589b895c1506403f03b04e0fc795270c6de06d537ede3",
   "research/boot_reconstruction/examples/alias_test/README_RU.md": "719aea4f48f9199f2785bab50bcb00c2848ef3c2cac56447ee2ed58834f701e0",
-  "research/boot_reconstruction/examples/alias_test/alias_test.c": "23aef824bdc1bcbcbcbc1ba97f4c018fbad2ee9dc5c192879f9468cbcfafacdc",
+  "research/boot_reconstruction/examples/alias_test/alias_test.c": "445f3d8e3ed2169d4f484ea3b68fb42f3960af1739529cea1664ae2e0bbd02eb",
   "research/boot_reconstruction/examples/alias_test/alias_test.h": "d384d4a8a9ae2fae0fe373941a656c4dcacdcab71a22bd28357449a542d2bda5",
   "research/boot_reconstruction/examples/alias_test/main.c": "bd4b6f832f6cce119e8465547a9390afa6be589db3eb89e9a10201def679ca40",
   "research/boot_reconstruction/examples/input_test/README_RU.md": "5c1e120faf7ad8abbe2c5c853aa981b34a0a30bce9d30efe9291236511b4b9b2",
