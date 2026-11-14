@@ -15,6 +15,11 @@
 - Python: 82 total, public 77 PASS/5 optional SKIP, private 82 PASS.
   291 прежний Ghidra export, новых OEM exports нет.
 
+- Exact published MINI artifact 14097250186: GitHub ZIP digest, ELF repack/BIN
+  identity and 3 original-RAP cases — PASS. BIN 10896 bytes, SHA256
+  `8d9a4f0f495707a87cd2a91189c686ae72e5eee4e8cc70f7efe5460104f54631`.
+  Provenance: `research/boot_reconstruction/evidence/mmi_shell_ci_rap_vm.json`.
+
 MINI hardware status **VM_TESTED_ONLY**. Консоль ещё не проверяла новое меню,
 Power→Continue/Exit и возврат. HOLD отложена; brightness/read-only SD browser/
 эмуляторы — следующие этапы. [Отчёт](../research/boot_reconstruction/STAGE14_REPORT_RU.md).

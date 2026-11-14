@@ -1,0 +1,193 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "execution": "Original RAP loader -> own shell with original collector -> normal return",
+  "case_count": 3,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "c8a5227db0426f53ae19e9a4f5d2832cabce10b8f4e634c488b5fe19714f6543",
+    "container_sha256": "8d9a4f0f495707a87cd2a91189c686ae72e5eee4e8cc70f7efe5460104f54631",
+    "payload_sha256": "991d0eb77dd0c0770dcb9bfbcea67202e434d14f6b4811cacff2bb10df5beb25",
+    "container_bytes": 10896,
+    "payload_bytes": 10768,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa02b20",
+    "bss_bytes": 272,
+    "structural_check": {
+      "payload_bytes": 10768,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "navigate",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 14,
+        "collector_calls": 15,
+        "cooked_getkeys_calls": 0,
+        "exit_reason": 1,
+        "views": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "power_rows": 0,
+        "log_status": 0,
+        "log_errno": 0,
+        "logged_bytes": 1532,
+        "input_ram_reads": {
+          "0x556144": 30,
+          "0x556148": 30,
+          "0x556aa0": 30,
+          "0x561078": 30
+        },
+        "fg_restored": true,
+        "close_attempted_for_every_open": true,
+        "previous_content_preserved": true,
+        "file_sha256": "bf07d4bdb6ac3af40b8803a49016d64decf3582d9af88291be1fff3f99aa6e16"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "power_continue_exit",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 16,
+        "collector_calls": 17,
+        "cooked_getkeys_calls": 0,
+        "exit_reason": 1,
+        "views": [
+          0,
+          3,
+          4
+        ],
+        "power_rows": 2,
+        "log_status": 0,
+        "log_errno": 0,
+        "logged_bytes": 1010,
+        "input_ram_reads": {
+          "0x556144": 34,
+          "0x556148": 34,
+          "0x556aa0": 34,
+          "0x561078": 34
+        },
+        "fg_restored": true,
+        "close_attempted_for_every_open": true,
+        "previous_content_preserved": true,
+        "file_sha256": "09510b8a93d4b8aa5b525d1628101f63bef1a6634664b2faf87f5a302b363326"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "no_sd",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 14,
+        "collector_calls": 15,
+        "cooked_getkeys_calls": 0,
+        "exit_reason": 1,
+        "views": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "power_rows": 0,
+        "log_status": 1,
+        "log_errno": 2,
+        "logged_bytes": 0,
+        "input_ram_reads": {
+          "0x556144": 30,
+          "0x556148": 30,
+          "0x556aa0": 30,
+          "0x561078": 30
+        },
+        "fg_restored": true,
+        "close_attempted_for_every_open": true,
+        "previous_content_preserved": true,
+        "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    }
+  ],
+  "original_code_executed": [
+    "game-pool constructor/allocator/info",
+    "native_bin_loader 0x460800",
+    "native_read_file 0x45ffcc with mocked file backends",
+    "header parser, all memcpy, cipher and footer compare",
+    "native API initializer 0x2d32b0",
+    "negative-mode native_exit_control 0x4619ac",
+    "kind6 input collector 0x2d2e6c",
+    "input gate getter 0x2d8b78"
+  ],
+  "mocked": [
+    "cache/CP15",
+    "virtual file open/stat/read/close",
+    "general heap decoder scratch",
+    "clock/delay",
+    "sound start/stop and thread suspend",
+    "command/message backends",
+    "all nine graphics/input API calls",
+    "time/SD/errno services",
+    "upstream input state/event/gate/GUI RAM fixtures"
+  ],
+  "limits": [
+    "Synthetic pool RAM and launch state, not a board memory capture.",
+    "No physical cache/LCD/GPU/input/audio/RTOS behavior tested.",
+    "Runtime compatibility checks are not full-image SHA validation.",
+    "No physical POWER/menu/lock timing tested; own menu replaces cooked GetKeys behavior in this app."
+  ],
+  "published_artifact": {
+    "source_revision": "d36fa32233d5d6d1c1836af0b0d62395f09df929",
+    "run_id": 43552586927,
+    "artifact_id": 14097250186,
+    "name": "spmp-os-mini-vm-tested",
+    "url": "https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43552586927/artifacts/14097250186",
+    "zip_sha256": "ab6c9731bdd7a7f82ef4a46cbdabfa2fe4a8cc38824dce3fb29f03259d1c457e",
+    "downloaded_bin_matches_repacked_elf": true,
+    "downloaded_manifest_matches_repack": true,
+    "downloaded_bin_matches_rap_tested_package": true,
+    "hardware_status": "VM_TESTED_ONLY"
+  }
+}

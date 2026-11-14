@@ -107,6 +107,12 @@ BSS/унаследованным стеком; исходный collector име
   [Сборка](evidence/mmi_shell_build.json), [public VM](evidence/mmi_shell_vm.json),
   [original RAP](evidence/mmi_shell_rap_vm.json).
 
+Точный опубликованный [CI пакет](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43552586927/artifacts/14097250186)
+скачан и проверен отдельно: ZIP SHA, BIN=repack ELF, manifest identity,
+3 original-RAP случая — PASS. BIN 10896 байт, SHA256
+`8d9a4f0f495707a87cd2a91189c686ae72e5eee4e8cc70f7efe5460104f54631`.
+[Доказательства CI сборки](evidence/mmi_shell_ci_rap_vm.json).
+
 ## Дальше
 
 1. Подтвердить запуск MINI, навигацию, POWER continue/exit и обычный возврат
