@@ -11,6 +11,10 @@
 
 [Full report](../research/boot_reconstruction/STAGE16_REPORT_RU.md),
 [build provenance](../research/boot_reconstruction/evidence/file_copy_build.json).
+[CI43580617345](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43580617345)
+PASS for source3d5f46395e44ce2a904ac5d4b2d63713b2cf6d70. Downloaded analysis ELF
+matches its published hash and independently replays all 50 cases with byte-identical
+JSON. CI test max stack2764 bytes; [artifact proof](../research/boot_reconstruction/evidence/file_copy_ci.json).
 
 ---
 

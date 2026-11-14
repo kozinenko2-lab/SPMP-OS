@@ -113,3 +113,14 @@ python3 research/boot_reconstruction/tools/audit_file_mutations.py \
 [sanitizers](evidence/file_copy_sanitizers.json), [ARM](evidence/file_copy_arm.json).
 GitHub CI повторяет тесты без приватной прошивки и сохраняет анализируемый ELF
 в `spmp-file-copy-arm-analysis`. **Этот ELF не является приложением для консоли.**
+
+## Опубликованная проверка
+
+[CI43580617345](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43580617345)
+для исходников `3d5f46395e44ce2a904ac5d4b2d63713b2cf6d70` — **PASS**.
+[Artifact анализа](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43580617345/artifacts/14108281963)
+скачан и проверен по GitHub SHA256 digest. Хэш ELF совпал с отчётом CI.
+Скачанный ELF отдельно повторил 50 сценариев; JSON результатов совпал
+с опубликованным отчётом побайтно. Task5740 байт, max test stack CI2764 байта
+(локальный Clang19 — 2784 байта). [Provenance](evidence/file_copy_ci.json).
+Это анализируемый ELF без device BIN и без FAT mutation binding.

@@ -1,0 +1,29 @@
+{
+  "status": "ANALYSIS_ONLY_NO_DEVICE_BIN",
+  "source_revision": "3d5f46395e44ce2a904ac5d4b2d63713b2cf6d70",
+  "run_id": 43580617345,
+  "workflow_conclusion": "success",
+  "workflow_url": "https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43580617345",
+  "artifact_id": 14108281963,
+  "artifact_url": "https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43580617345/artifacts/14108281963",
+  "artifact_zip_sha256": "fad2efb829f3a325d1ec74ce1257c06b69bd007dc6ba44adf2015cf0e109b8cf",
+  "artifact_digest_verified": true,
+  "elf_sha256": "f20abdaf69c8d92b55a74165adad97550c246929621192e79cb41aa47472dee3",
+  "ci_host_cases": 50,
+  "ci_sanitizer_cases": 50,
+  "ci_arm_cases": 50,
+  "downloaded_elf_replay_cases": 50,
+  "replay_json_byte_identity": true,
+  "arm_task_bytes": 5740,
+  "ci_maximum_test_stack_bytes": 2764,
+  "report_sha256": {
+    "file_copy_host.json": "2e9243bc34aa853d3154548d9f7e00732115dce1af3e63e62010c5c9823d4d5a",
+    "file_copy_sanitizers.json": "82d0865f30ab89cdf84f251d440596740e24e81907f7667a030e7ebb5c63203c",
+    "file_copy_arm/copy_vm.json": "c890d4ad3d44ef1d02e54b9f0c0e6168b1d0aa6ff673103e680328b7f844fa0b"
+  },
+  "limits": [
+    "Linux temporary-file callbacks, no physical SD or live OEM write binding.",
+    "22 original ARM FAT cases were run locally with private RAP; public CI does not load it.",
+    "ELF is a test harness, not a runnable console package. Existing Stage15 FILES remains read-only/VM_TESTED_ONLY."
+  ]
+}
