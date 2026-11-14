@@ -2,11 +2,14 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE11_REPORT_RU.md](STAGE11_REPORT_RU.md) — исправление
-SD path на доказанный id0 и errno на экране. Прежний input test запустился
-на консоли, но не сохранил CSV. Новый **SPMP_INPUT_SD0.bin** пока VM_TESTED_ONLY;
-[инструкция](examples/input_test/README_RU.md). OEM exports: 291.
-[Input test этапа 10](STAGE10_REPORT_RU.md),
+**Текущий этап:** [STAGE12_REPORT_RU.md](STAGE12_REPORT_RU.md) — пользовательский
+полный CSV подтверждает один SD0 journal session; семь cooked-кандидатов
+сохранены в неполный [профиль устройства](device_profiles/README_RU.md).
+Ещё шесть кнопок пользователь нажимал, но текущий API их не зафиксировал;
+отдельные volume +/− пока не измерены. Оригинальный cooked filter проверен
+на 32 входных битах. Новый BIN на этом этапе не выпускается; далее — upstream
+RAM input observation. OEM exports остаются 291.
+[SD0 fix](STAGE11_REPORT_RU.md), [input test](STAGE10_REPORT_RU.md),
 [native binding](STAGE9_REPORT_RU.md), [startup](STAGE8_REPORT_RU.md).
 Псевдокод: `decompiled/`. Предыдущие результаты:
 [память/ресурсы/возврат](STAGE5_REPORT_RU.md),

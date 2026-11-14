@@ -1,0 +1,50 @@
+{
+  "format": "SPMP_INPUT_CANDIDATE_PROFILE_V1",
+  "profile_id": "defender_multimix_magic_user_console_01",
+  "device_model_from_task": "Defender MultiMix Magic / Sunplus SPMP8000",
+  "device_label_basis": "Human label for the user console in this conversation; no hardware ID read",
+  "status": "INCOMPLETE_PROMPT_ASSOCIATED_CANDIDATES",
+  "input_layer": "cooked MMI GetKeys uint32 mask, not GPIO scan codes",
+  "source_log": {
+    "path": "../evidence/hardware/input_sd0_user_console_01.csv",
+    "sha256": "7aaf1a323317e073f95efa525081cfd760118f4d3df5aa68915f1053013f4732",
+    "session_index": 1
+  },
+  "expected_rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "candidate_mappings": {
+    "UP": "0x00000001",
+    "DOWN": "0x00000002",
+    "LEFT": "0x00000004",
+    "RIGHT": "0x00000008",
+    "A": "0x00010000",
+    "B": "0x00020000",
+    "START": "0x00002000"
+  },
+  "unobserved_prompts": [
+    "X",
+    "Y",
+    "L",
+    "R",
+    "SELECT",
+    "BACK"
+  ],
+  "auto_apply": false,
+  "limits": [
+    "First nonzero mask after release in each requested prompt. Operator physical labels not independently verified.",
+    "Not a universal Defender/SPMP device map. No mask assigned to unobserved buttons.",
+    "No automatic change to SPMP-OS controls or firmware.",
+    "L/R and VOLUME_UP/VOLUME_DOWN are distinct physical buttons per user; do not alias them."
+  ],
+  "user_confirmed_present_and_pressed_but_no_cooked_code": [
+    "X",
+    "Y",
+    "L",
+    "R",
+    "SELECT",
+    "BACK"
+  ],
+  "user_confirmed_present_not_prompted": [
+    "VOLUME_UP",
+    "VOLUME_DOWN"
+  ]
+}

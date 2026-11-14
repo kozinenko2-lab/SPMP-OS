@@ -38,7 +38,8 @@ For a full archive checksum audit use `python3 tools/verify_integrity.py --full`
 - For device diagnostics, prefer a verified MMI-hosted app under the correct OEM container format. The older `MMI_DIAG.bin` failed with «неверный формат»; do not reuse that file as known-good.
 - The user confirmed on 2026-11-14 that `SPMP_PROBE_VM.bin` from artifact 14076639604 displayed three colored bars and exited on the console. See `research/boot_reconstruction/evidence/native_probe_hardware_user_report.json`. Hardware confirmation is limited to that one-frame/exit observation; buttons, repeated/long runs, full UI and RTOS cleanup remain unverified.
 
-- The user ran the Stage10 input test and reported SD Open Error/no saved file. Do not mark SD IO as hardware-tested. Stage11 traces the real fat_sd_init registration: SD id0 (/fat20a0/hda0), MSDC id1, NAND id2. Stock log text in mmi_system_init_retry is misleading; use driver registration evidence. See research/boot_reconstruction/STAGE11_REPORT_RU.md.
+- Stage10 SD open failed; Stage11 corrected the path. The user then supplied a complete SD0_R2 CSV (4380 bytes, 76 events, END): positive hardware evidence for one journal session, not repeated-run durability/final return after END. See research/boot_reconstruction/STAGE12_REPORT_RU.md. Actual fat_sd_init registers SD id0 (/fat20a0/hda0); MSDC id1 and NAND id2. Do not identify media from misleading stock log text.
+- Seven prompt-associated cooked mappings were recorded. The user confirms X/Y/L/R/SELECT/BACK exist and were pressed but produced no samples; volume +/- also exist and were not prompted. Do not call them absent or alias volume to L/R. Kind6 GetKeys filters input; the incomplete device profile must not be applied universally.
 
 ## Reporting discipline
 Produce patches, tests, disassembly evidence and updated `docs/STATUS_ROADMAP_RU.md` for each task. Keep original binaries unchanged. A working host preview is not a working firmware.

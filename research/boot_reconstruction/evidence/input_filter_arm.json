@@ -1,0 +1,329 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "execution": "Original ARM926 native_get_key_input and cooked core; injected collector mask/native kind6",
+  "case_count": 32,
+  "cases": [
+    {
+      "collector_mask": "0x00000001",
+      "cooked_mask": "0x00000001",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000002",
+      "cooked_mask": "0x00000002",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000004",
+      "cooked_mask": "0x00000004",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000008",
+      "cooked_mask": "0x00000008",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000010",
+      "cooked_mask": "0x00010000",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000020",
+      "cooked_mask": "0x00020000",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000040",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000080",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000100",
+      "cooked_mask": "0x00000000",
+      "classification": "volume",
+      "volume_before": 15,
+      "volume_after": 14,
+      "mocked_effects": [
+        {
+          "name": "save_volume",
+          "args": [
+            14
+          ]
+        },
+        {
+          "name": "set_volume",
+          "args": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "collector_mask": "0x00000200",
+      "cooked_mask": "0x00000000",
+      "classification": "volume",
+      "volume_before": 15,
+      "volume_after": 16,
+      "mocked_effects": [
+        {
+          "name": "save_volume",
+          "args": [
+            16
+          ]
+        },
+        {
+          "name": "set_volume",
+          "args": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "collector_mask": "0x00000400",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00000800",
+      "cooked_mask": "0x00002000",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00001000",
+      "cooked_mask": "0x00000000",
+      "classification": "system_pause",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": [
+        {
+          "name": "command",
+          "args": [
+            3335,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "gui_action",
+          "args": []
+        },
+        {
+          "name": "message",
+          "args": [
+            1385,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "pause",
+          "args": [
+            0
+          ]
+        },
+        {
+          "name": "delay",
+          "args": [
+            30,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "collector_mask": "0x00002000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00004000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00008000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00010000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00020000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00040000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00080000",
+      "cooked_mask": "0x00080000",
+      "classification": "game_mask",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00100000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00200000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00400000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x00800000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x01000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x02000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x04000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x08000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x10000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x20000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x40000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    },
+    {
+      "collector_mask": "0x80000000",
+      "cooked_mask": "0x00000000",
+      "classification": "no_game_output",
+      "volume_before": 15,
+      "volume_after": 15,
+      "mocked_effects": []
+    }
+  ],
+  "limits": [
+    "Collector and OS/GUI/volume/pause backends are intercepted; no physical key/GPIO access.",
+    "Collector masks are not device scan codes and cannot be assigned physical labels from this audit.",
+    "Input globals 0x556144/0x556148 are upstream RAM state/event words; they were not captured in the user V1 log.",
+    "Embedded image SHA is validated offline; no runtime board memory trace."
+  ]
+}

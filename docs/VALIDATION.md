@@ -1,3 +1,20 @@
+# Проверки этапа 12
+
+- User hardware CSV: SHA preserved, 4380 bytes, 1 SD0_R2 session, 76 valid events;
+  0 skipped/partial lines, all KEY edges consistent, 27 paired press/release
+  transitions, monotonic polls/native time, final mask0/END — PASS.
+- Seven prompt-associated cooked candidates; other six prompted buttons were
+  present/pressed per user, not captured. Volume +/− present but not prompted.
+- Exact-RAP ARM926 GetKeys/core: 32 single-bit collector masks, kind6/gate0;
+  eight game outputs, volume/system effects intercepted — PASS.
+- Parser checks and public snapshot integrity — PASS. No app code/BIN changed.
+
+One saved session does not prove second-run preservation, final close/return
+post-END, menu actions, wall clock tick rate or the full physical key map.
+[Отчёт](../research/boot_reconstruction/STAGE12_REPORT_RU.md).
+
+---
+
 # Проверки этапа 11
 
 - Original ARM926 SD driver registration -> id0; real resolver/open/FAT path

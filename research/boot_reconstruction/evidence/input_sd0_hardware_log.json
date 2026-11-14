@@ -1,0 +1,134 @@
+{
+  "status": "USER_PROVIDED_HARDWARE_LOG_SD0_JOURNAL",
+  "evidence_kind": "CSV supplied by user after hardware test; not a device memory trace",
+  "report_date_local": "2026-11-14",
+  "report_timezone": "Europe/Moscow",
+  "source_log": {
+    "file_name": "SPMPKEYS.CSV",
+    "repository_path": "evidence/hardware/input_sd0_user_console_01.csv",
+    "bytes": 4380,
+    "sha256": "7aaf1a323317e073f95efa525081cfd760118f4d3df5aa68915f1053013f4732"
+  },
+  "associated_package": {
+    "name": "SPMP_INPUT_SD0.bin",
+    "artifact_id": 14090758906,
+    "url": "https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43538932112/artifacts/14090758906",
+    "expected_container_sha256": "ad9ad0c793c58ae3a8b628c28ccf4b02d88a634fcaf1bac5ddfb60576ec5a081",
+    "association": "User supplied log in reply to this package. No console-side BIN digest provided."
+  },
+  "log_metadata": "#SPMP_INPUT_TEST_V1,app=SD0_R2,path=/fat20a0/hda0/SPMPKEYS.CSV,source=5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e,clock=MMI_TICK_DELTA_X10,labels=PROMPTS_NOT_AUTODETECTED",
+  "sessions": 1,
+  "event_counts": {
+    "PROMPT": 14,
+    "KEY": 54,
+    "SAMPLE": 7,
+    "END": 1
+  },
+  "first_event": {
+    "event": "PROMPT",
+    "poll": 0,
+    "time_units": 50,
+    "prompt": "UP",
+    "mask": "0x00000000",
+    "pressed": "0x00000000",
+    "released": "0x00000000"
+  },
+  "last_event": {
+    "event": "END",
+    "poll": 2904,
+    "time_units": 60010,
+    "prompt": "FREE",
+    "mask": "0x00000000",
+    "pressed": "0x00000000",
+    "released": "0x00000000"
+  },
+  "candidate_mappings": {
+    "UP": [
+      "0x00000001"
+    ],
+    "DOWN": [
+      "0x00000002"
+    ],
+    "LEFT": [
+      "0x00000004"
+    ],
+    "RIGHT": [
+      "0x00000008"
+    ],
+    "A": [
+      "0x00010000"
+    ],
+    "B": [
+      "0x00020000"
+    ],
+    "START": [
+      "0x00002000"
+    ]
+  },
+  "unobserved_prompts": [
+    "X",
+    "Y",
+    "L",
+    "R",
+    "SELECT",
+    "BACK"
+  ],
+  "press_counts_by_mask": {
+    "0x00000001": 2,
+    "0x00000002": 4,
+    "0x00000004": 8,
+    "0x00000008": 4,
+    "0x00010000": 2,
+    "0x00020000": 3,
+    "0x00002000": 4
+  },
+  "release_counts_by_mask": {
+    "0x00000001": 2,
+    "0x00000002": 4,
+    "0x00000004": 8,
+    "0x00000008": 4,
+    "0x00010000": 2,
+    "0x00020000": 3,
+    "0x00002000": 4
+  },
+  "audit": {
+    "ignored_or_partial_lines": 0,
+    "polls_nondecreasing": true,
+    "native_time_nondecreasing": true,
+    "all_key_edges_consistent": true,
+    "final_key_mask_zero": true,
+    "paired_press_release_counts": true
+  },
+  "supported_observations": [
+    "A nonempty SD0_R2 journal with metadata/76 complete event rows was retrieved by the user",
+    "Input reaches finalization END at poll2904/time60010; all 13 guided phases and FREE are logged",
+    "Seven distinct single-bit prompt-associated candidates; 27 press and 27 release changes",
+    "Data from multiple journal writes/open+seek cycles persists within this session"
+  ],
+  "not_verified": [
+    "Physical button labels independently of requested prompts",
+    "Upstream state/event masks for X/Y/L/R/SELECT/BACK despite user-confirmed presses; volume masks not prompted",
+    "LIVE/MAP/EXIT actions: no MENU record",
+    "Real wall-clock tick period; native time is not an independent stopwatch",
+    "Final close/FG restore/return after END row",
+    "Preservation across a second launch: only one session supplied",
+    "Power-loss durability, full filesystem reliability, all devices or standalone SPMP-OS boot"
+  ],
+  "metadata_caveat": "Embedded source SHA/path are application build metadata, not measured RAM image identity or a captured mount table.",
+  "user_clarifications_ru": [
+    "Я нажимал эти кнопки во время подсказки, эти кнопки X, Y, L, R, Select Back есть на консоли.",
+    "Также на консоли есть кнопки Громкость + и -."
+  ],
+  "present_and_pressed_but_no_cooked_sample": [
+    "X",
+    "Y",
+    "L",
+    "R",
+    "SELECT",
+    "BACK"
+  ],
+  "present_but_not_prompted": [
+    "VOLUME_UP",
+    "VOLUME_DOWN"
+  ]
+}
