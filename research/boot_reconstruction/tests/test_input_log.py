@@ -18,9 +18,11 @@ class InputLogTests(unittest.TestCase):
   self.assertEqual(r['sessions'][0]['candidate_mappings'],{})
   self.assertFalse(r['sessions'][0]['ended'])
  def test_input_headers_match_public_metadata(self):
-  r=json.loads((BASE/'evidence/input_profile.json').read_text())
+  r=json.loads((BASE/'evidence/input_sd0_profile.json').read_text())
   self.assertEqual(header(r),(BASE/'examples/input_test/input_profile.h').read_text())
   self.assertEqual(header(r,True),(BASE/'tests/input_profile_synthetic.h').read_text())
   self.assertEqual(r['open_flags'],10);self.assertEqual(r['seek_end_whence'],2)
+  self.assertEqual(r['sd_path'],'/fat20a0/hda0/SPMPKEYS.CSV')
+  self.assertEqual(len(r['prefixes']),7)
  def test_unknown_original_rejected(self):
   with self.assertRaises(ValueError):produce(b'other image')

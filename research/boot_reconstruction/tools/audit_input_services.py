@@ -24,7 +24,7 @@ def audit(path):
  # eCos open: fd0 is valid; flags are forwarded to the FS's open entry as r3.
  for flags in [1,0xa]:
   v=vm();pathaddr=0x1001000;obj=0x1002000;mount=0x1003000;fstab=0x1004000
-  v.u.mem_write(pathaddr,b'/fat20a1/hda1/SPMPKEYS.CSV\0');v.put32(mount+20,fstab);v.put32(fstab+8,0);v.put32(fstab+20,0x1201000)
+  v.u.mem_write(pathaddr,b'/fat20a0/hda0/SPMPKEYS.CSV\0');v.put32(mount+20,fstab);v.put32(fstab+8,0);v.put32(fstab+20,0x1201000)
   def resolve(v,args):v.put32(args[0],0);v.put32(args[1],pathaddr);v.put32(args[2],mount);return 0
   def backend(v,args):assert args==[mount,0,pathaddr,flags];return 0
   for addr,name,result,n in [(0x2a5bf0,'fd_alloc',0,1),(0x2a5aa0,'file_alloc',obj,0),
@@ -33,7 +33,7 @@ def audit(path):
   assert v.run(0x2a5ed4,[pathaddr,flags,0o600])==0
   rows.append({'group':'absolute_open','fd':0,'flags':flags,'filesystem_mode_forwarded':flags})
  # FAT open explicitly ORs create+write for O_CREAT; no O_TRUNC bit is added.
- v=vm();v.u.mem_write(0x1001000,b'B:/SPMPKEYS.CSV\0')
+ v=vm();v.u.mem_write(0x1001000,b'/hda0/SPMPKEYS.CSV\0')
  def path_convert(v,args):v.put32(args[0],0x1001000);return 0
  v.stub(0x2834dc,'path_convert',path_convert,2);v.stub(0x2a8264,'fat_backend_open',3,2)
  assert v.run(0x283788,[0x1003000,0,0x1001000,0xa],stack=[0x1002000])==0
@@ -61,15 +61,15 @@ def audit(path):
   v.stub(0x2a5cc8,'close_backend',backend,1);v.stub(0x299a14,'errno',0x1004000)
   result=v.run(0x2eb640,[0]);assert result==(0 if not backend else 0xffffffff)
   rows.append({'group':'close','fd':0,'backend_error':backend,'returned':result})
- assert im.string(0x4fe924)=='/fat20a1' and im.string(0x4fac08)=='/hda1'
- assert im.literal(0x432008)==0x4fe924 and im.literal(0x432018)==0x4fac08
+ assert im.string(0x4cfab8)=='/fat20a0' and im.string(0x4cfad4)=='/hda0'
+ assert im.literal(0x43830c)==0x4cfab8 and im.word(0x288388)==0xe3a00000
  assert im.word(0x2837ac)==0xe3140008 and im.word(0x2837b0)==0x1384400a
  if hashlib.sha256(path.read_bytes()).hexdigest()!=H['8000_MMI.RAP']:raise AssertionError('Original changed')
  return {'source_sha256':H['8000_MMI.RAP'],'cpu':'ARM926','case_count':len(rows),'cases':rows,
   'storage_path_evidence':{'stock_storage_selection':'0x3e2f08 reads byte 0x66cd4c',
-   'game_base_branch':'0x432000 constructs /fat20a1/hda1/GAME/',
+   'sd_identity':'0x288388 registers SD at index 0; 0x43830c selects /fat20a0; see audit_sd_mount.py',
    'fat_fstab':'0x56a9dc open ->0x283788, O_CREAT propagation at 0x2837ac/7b0'},
-  'limits':['No physical SD test; mount path follows this image stock browser branch.',
+  'limits':['No physical SD test; mount path follows the verified stock SD mount branch.',
    'Native time returns low tick delta *10; physical tick period not measured.',
    'All underlying scheduler/FS/device backends are mocked RAM fixtures.']}
 if __name__=='__main__':

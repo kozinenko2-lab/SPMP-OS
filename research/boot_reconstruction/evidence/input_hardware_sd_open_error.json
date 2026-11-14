@@ -1,0 +1,26 @@
+{
+  "status": "PARTIAL_USER_CONFIRMED_SD_OPEN_ERROR",
+  "evidence_kind": "User report; no instrumented device trace",
+  "report_date_local": "2026-11-14",
+  "report_timezone": "Europe/Moscow",
+  "user_report_ru": "Тест работает, но SD Open Error. Ничего не сохранилось на флешку.",
+  "referenced_package": {
+    "file_name": "SPMP_INPUT_TEST.bin",
+    "artifact_id": 14088835633,
+    "url": "https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43532969624/artifacts/14088835633",
+    "container_sha256_from_manifest": "a04a104a548658ac9d5923ddab15a0c07b3f006c84bf0db5315ede7e0903af7c",
+    "association": "Refers to preceding package link; no device digest supplied."
+  },
+  "directly_reported": [
+    "Test runs",
+    "SD Open Error displayed",
+    "Nothing saved to the card"
+  ],
+  "not_verified": [
+    "Successful SD IO",
+    "Exact physical button mappings or all menu actions",
+    "Timer rate and long-run/repeated-run stability",
+    "Corrected SPMP_INPUT_SD0.bin hardware behavior"
+  ],
+  "diagnosis_from_source": "Old id1 path was not SD: fat_sd_init registers id0. Hardware report contained no errno value."
+}

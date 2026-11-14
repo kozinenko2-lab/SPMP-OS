@@ -1,3 +1,20 @@
+# Этап 11: SD0 path и errno
+
+Пользователь сообщил: input test работает, но SD Open Error, файла нет.
+В нашем logger был неверно выбран id1. Настоящий fat_sd_init регистрирует
+**id0**, MSDC имеет id1, NAND — id2. Новый **SPMP_INPUT_SD0.bin** пишет только
+`/fat20a0/hda0/SPMPKEYS.CSV` и показывает числовой errno при файловой ошибке.
+Перебора разделов и внутреннего fallback нет.
+
+10 original SD registration/mount/resolver/errno cases, 20 service cases,
+20 compiled ARM VM cases и 3 original-RAP wrapper cases — PASS.
+73 Python tests, host C IO/errno/limits/menu tests; Ghidra exports — 291.
+Исправление SD0 ещё не подтверждено физической записью на карту.
+[Отчёт](../research/boot_reconstruction/STAGE11_REPORT_RU.md),
+[инструкция](../research/boot_reconstruction/examples/input_test/README_RU.md).
+
+---
+
 # Этап 10: интерактивный input logger
 
 SPMP_INPUT_TEST.bin: release-to-arm, 13 prompts, cooked MMI masks/edges,

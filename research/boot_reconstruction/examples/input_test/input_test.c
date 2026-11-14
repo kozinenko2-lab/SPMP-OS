@@ -1,6 +1,6 @@
 #include "input_test.h"
 #include "font5x7.h"
-const char input_log_path[]="/fat20a1/hda1/SPMPKEYS.CSV";
+const char input_log_path[]="/fat20a0/hda0/SPMPKEYS.CSV";
 static const char *const prompts[14]={"UP","DOWN","LEFT","RIGHT","A","B","X","Y","L","R","START","SELECT","BACK","FREE"};
 const char *input_prompt(uint32_t i){return prompts[i<13?i:13];}
 static uint32_t length(const char *s){uint32_t n=0;while(s[n])n++;return n;}
@@ -35,6 +35,12 @@ static const char *log_label(uint32_t n)
 {static const char *const names[]={"SD LOG OK","SD OPEN ERROR","SD SEEK ERROR","SD WRITE ERROR","SD CLOSE ERROR","SD LOG LIMIT"};return names[n<6?n:3];}
 static const char *log_caption(const struct input_state *s)
 {return !s->log_status&&!s->log_records?"SD LOG CHECK":log_label(s->log_status);}
+static int log_line(const struct input_state *s,const struct input_services *io)
+{
+ static const char *const label[]={"","SD OPEN E ","SD SEEK E ","SD WRITE E ","SD CLOSE E "};
+ if(s->log_status>=1&&s->log_status<=4)return number_line(io,118,label[s->log_status],s->log_errno);
+ return line(io,118,log_caption(s));
+}
 static void journal(struct input_state *s,const struct input_services *io,const char *row)
 {
  if(s->log_status)return;
@@ -44,18 +50,18 @@ static void journal(struct input_state *s,const struct input_services *io,const 
   * Absolute SD path only; never the native fsOpen prefix or internal fallback.
   */
  int32_t fd=io->open(input_log_path,0xau,0600u);
- if(fd<0){s->log_status=INPUT_LOG_OPEN_ERROR;return;}
+ if(fd<0){s->log_errno=io->error_number();s->log_status=INPUT_LOG_OPEN_ERROR;return;}
  int32_t end=io->seek(fd,0,2);
- if(end<0)s->log_status=INPUT_LOG_SEEK_ERROR;
+ if(end<0){s->log_errno=io->error_number();s->log_status=INPUT_LOG_SEEK_ERROR;}
  else if((uint32_t)end>1048576u-n)s->log_status=INPUT_LOG_LIMIT;
  uint32_t written=0;
  for(unsigned attempt=0;!s->log_status&&written<n&&attempt<8;attempt++){
   int32_t count=io->write(fd,row+written,n-written);
-  if(count<=0||(uint32_t)count>n-written){s->log_status=INPUT_LOG_WRITE_ERROR;break;}
+  if(count<=0||(uint32_t)count>n-written){s->log_errno=count<0?io->error_number():0;s->log_status=INPUT_LOG_WRITE_ERROR;break;}
   written+=(uint32_t)count;s->log_bytes+=(uint32_t)count;
  }
  if(!s->log_status&&written!=n)s->log_status=INPUT_LOG_WRITE_ERROR;
- if(io->close(fd)<0&&s->log_status==INPUT_LOG_OK)s->log_status=INPUT_LOG_CLOSE_ERROR;
+ if(io->close(fd)<0&&s->log_status==INPUT_LOG_OK){s->log_errno=io->error_number();s->log_status=INPUT_LOG_CLOSE_ERROR;}
  if(s->log_status==INPUT_LOG_OK)s->log_records++;
 }
 static void event(struct input_state *s,const struct input_services *io,const char *kind)
@@ -72,7 +78,7 @@ static int learned_press(const struct input_state *s,unsigned i)
 static int screen(struct input_state *s,const struct input_services *io,int force)
 {
  int dirty=force;int view_change=s->ui_view!=s->menu_view;int prompt_change=s->ui_prompt!=s->prompt;char label[32];
- if(force){if(!color(io,0,0,0)||!rect(io,0,0,320,240)||!color(io,232,240,248)||!text(io,4,4,"SPMP INPUT TEST"))return 0;}
+ if(force){if(!color(io,0,0,0)||!rect(io,0,0,320,240)||!color(io,232,240,248)||!text(io,4,4,"SPMP INPUT SD0"))return 0;}
  if(force||s->ui_prompt!=s->prompt||s->ui_menu!=s->menu_choice){
   char *p;
   if(s->prompt==13&&menu_ready(s)){static const char *const choices[]={"LIVE","MAP","EXIT"};p=copy(label,"MENU ");p=copy(p,choices[s->menu_choice]);}
@@ -91,7 +97,7 @@ static int screen(struct input_state *s,const struct input_services *io,int forc
   }
   s->ui_keys=s->keys;s->ui_events=s->events;dirty=1;
  }
- if(force||s->ui_log!=s->log_status){if(!line(io,118,log_caption(s)))return 0;s->ui_log=s->log_status;dirty=1;}
+ if(force||s->ui_log!=s->log_status){if(!log_line(s,io))return 0;s->ui_log=s->log_status;dirty=1;}
  if(force||view_change||s->ui_second!=s->elapsed/1000u){
   if(!number_line(io,138,"TIME ",s->elapsed)||!number_line(io,156,s->menu_view?"A ":"ALL ",s->menu_view?s->sample[4]:s->seen))return 0;
   s->ui_second=s->elapsed/1000u;dirty=1;
@@ -121,7 +127,7 @@ static int screen(struct input_state *s,const struct input_services *io,int forc
 uint32_t input_test_run(struct input_state *s,const struct input_services *io,const struct input_config *c)
 {
  if(!s||!io||!c||!c->duration_units||c->duration_units>60000||!c->max_polls||c->max_polls>3000||!c->prompt_units||c->prompt_units>60000||!c->redraw_units)return 2;
- if(!io->time||!io->delay||!io->open||!io->write||!io->seek||!io->close)return 2;
+ if(!io->time||!io->delay||!io->open||!io->write||!io->seek||!io->close||!io->error_number)return 2;
  /* Caller supplies zeroed state (startup BSS or host test initializer). */
  s->x=282;s->y=56;s->ui_x=282;s->ui_y=56;s->ui_keys=0xffffffffu;s->ui_prompt=0xffffffffu;
  s->ui_second=0xffffffffu;s->ui_log=0xffffffffu;s->ui_cursor_tick=0xffffffffu;
@@ -132,7 +138,7 @@ uint32_t input_test_run(struct input_state *s,const struct input_services *io,co
  s->color_saved=1;
  s->result=0;
  if(!screen(s,io,1)){s->result=2;goto done;}
- journal(s,io,"\n#SPMP_INPUT_TEST_V1,source=5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e,clock=MMI_TICK_DELTA_X10,labels=PROMPTS_NOT_AUTODETECTED\n");
+ journal(s,io,"\n#SPMP_INPUT_TEST_V1,app=SD0_R2,path=/fat20a0/hda0/SPMPKEYS.CSV,source=5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e,clock=MMI_TICK_DELTA_X10,labels=PROMPTS_NOT_AUTODETECTED\n");
  journal(s,io,"event,poll_hex,time_hex,prompt,mask_hex,pressed_hex,released_hex\n");
  s->start=io->time();
  if(!screen(s,io,1)||!line(io,24,"RELEASE BUTTONS")||io->graphics.paint()){s->result=2;goto done;}
@@ -179,7 +185,7 @@ uint32_t input_test_run(struct input_state *s,const struct input_services *io,co
  }
 done:
  s->pressed=0;s->released=0;event(s,io,s->result?"END_ERROR":"END");
- if(!s->result){if(!line(io,24,"FINISHED")||!line(io,118,log_caption(s))||io->graphics.paint())s->result=2;else {s->frames++;io->delay(25,0);}}
+ if(!s->result){if(!line(io,24,"FINISHED")||!log_line(s,io)||io->graphics.paint())s->result=2;else {s->frames++;io->delay(25,0);}}
  if(s->color_saved&&io->graphics.set_color(&s->original_color))s->result=2;
  return s->result;
 }

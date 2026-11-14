@@ -1459,6 +1459,26 @@
           "address": "003e2f08",
           "first_word": "e59f3004",
           "label": "shell_storage_selection"
+        },
+        {
+          "address": "004382b4",
+          "first_word": "e1a0c00d",
+          "label": "storage_mount_command"
+        },
+        {
+          "address": "00299a14",
+          "first_word": "e1a0c00d",
+          "label": "ecos_errno_location"
+        },
+        {
+          "address": "002834dc",
+          "first_word": "e1a0c00d",
+          "label": "fatfs_path_translate"
+        },
+        {
+          "address": "00288348",
+          "first_word": "e1a0c00d",
+          "label": "fat_sd_register"
         }
       ],
       "repairs": [

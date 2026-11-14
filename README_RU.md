@@ -2,11 +2,11 @@
 
 **Состояние:** 14 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
 
-[Текущий этап 10](research/boot_reconstruction/STAGE10_REPORT_RU.md): подготовлен
-**SPMP_INPUT_TEST.bin** — подсказки кнопок, маски/курсор/меню и CSV в корне SD
-(`SPMPKEYS.CSV`). Новый пакет проверен в VM; его аппаратная проверка ещё впереди.
-Предыдущий one-frame BIN с тремя полосами пользователь подтвердил на консоли
-14 ноября. Это свидетельство не переносится автоматически на новый logger.
+[Текущий этап 11](research/boot_reconstruction/STAGE11_REPORT_RU.md): исправлен
+путь журнала — SD-драйвер RAP регистрируется как **id0**, `/fat20a0/hda0`.
+Новый пакет **SPMP_INPUT_SD0.bin** показывает числовой errno при ошибке.
+Пользователь запустил прежний input test, но получил SD Open Error без файла;
+исправление SD0 проверено в VM и требует проверки записи на консоли.
 
 Основа: [рабочий контрольный BIN пользователя](research/boot_reconstruction/STAGE7_REPORT_RU.md)
 и [собственный ARM startup](research/boot_reconstruction/STAGE8_REPORT_RU.md).

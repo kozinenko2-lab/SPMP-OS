@@ -10,7 +10,7 @@ from emulate_native_package import ProbeObserver,PROFILE,GLOBALS,DEFAULT_SP,priv
 from make_binding_profile import synthetic_prefix
 from make_input_profile import synthetic_input_prefix,produce
 BASE=Path(__file__).resolve().parents[1]
-INPUT=json.loads((BASE/'evidence/input_profile.json').read_text())
+INPUT=json.loads((BASE/'evidence/input_sd0_profile.json').read_text())
 
 class InputObserver(ProbeObserver):
  def __init__(self,*args,**kwargs):
@@ -25,7 +25,7 @@ class InputObserver(ProbeObserver):
    address=INPUT['prefixes'][self.scenario['input_prefix']]['address'];b=bytes(self.u.mem_read(address,1));self.u.mem_write(address,bytes([b[0]^1]))
  def code(self,u,address,size,user):
   if address==ENTRY:
-   _,plain,_=pack(self.image.data,'SPMP INPUT')
+   _,plain,_=pack(self.image.data,'SPMP INPUT SD0')
    if bytes(u.mem_read(ENTRY,len(plain)))!=plain:raise AssertionError('RAP/host payload mismatch before entry')
    self.decoded_at_entry=True
    if hasattr(self,'firmware_vm'):
@@ -35,13 +35,16 @@ class InputObserver(ProbeObserver):
   args=[self.u.reg_read(r) for r in self.regs[:4]];self.counts[name]=self.counts.get(name,0)+1;result=0
   if self.u.reg_read(self.spreg)%8:raise AssertionError('API call alignment')
   fault=self.scenario.get('fault','')
-  if name=='time':result=self.units&0xffffffff
+  if name=='errno':
+   code={'no_sd':2,'seek':5,'write':28,'close':9}.get(fault,0)
+   self.u.mem_write(0x1006000,struct.pack('<I',code));result=0x1006000 # Virtual thread errno slot.
+  elif name=='time':result=self.units&0xffffffff
   elif name=='delay':
    if args[1] or args[0] not in (2,25):raise AssertionError('Delay arguments')
    if fault!='stalled_clock':self.units=(self.units+self.scenario.get('time_step',4000))&0xffffffff
   elif name=='open':
    path=bytes(self.u.mem_read(args[0],64)).split(b'\0')[0]
-   if path!=b'/fat20a1/hda1/SPMPKEYS.CSV' or args[1:3]!=[10,0o600]:raise AssertionError('Unapproved file path/flags')
+   if path!=b'/fat20a0/hda0/SPMPKEYS.CSV' or args[1:3]!=[10,0o600]:raise AssertionError('Unapproved file path/flags')
    if fault=='no_sd':result=0xffffffff
    else:self.opened+=1;result=0
   elif name=='seek':
@@ -91,6 +94,8 @@ class InputObserver(ProbeObserver):
   polls,events,mask,pressed,released,seen,last,elapsed,start=words[:9];log_status,log_bytes,records,prompt=words[9:13]
   expected={'no_sd':1,'seek':2,'write':3,'zero_write':3,'close':4,'file_limit':5,'stalled_clock':5}.get(self.scenario.get('fault',''),0)
   if log_status!=expected:raise AssertionError('Unexpected journal status '+repr((log_status,expected)))
+  log_errno=self.get32(state+168)
+  if log_errno!={'no_sd':2,'seek':5,'write':28,'close':9}.get(self.scenario.get('fault',''),0):raise AssertionError('Errno not captured')
   if self.opened!=self.closed:raise AssertionError('File handle left open')
   if not self.file.startswith(b'PREEXISTING\n'):raise AssertionError('Prior content overwritten')
   if self.color!=[8,128,248]:raise AssertionError('FG not restored')
@@ -103,20 +108,20 @@ class InputObserver(ProbeObserver):
   if self.scenario.get('name')=='learned_exit' and (elapsed>=60000 or self.get32(state+152)!=2):raise AssertionError('Learned EXIT did not return early')
   if self.scenario.get('fault')=='stalled_clock' and polls!=3000:raise AssertionError('Poll limit not enforced')
   return {'status':value,'polls':polls,'events':events,'seen_mask':hex(seen),'log_status':log_status,
-   'logged_bytes':log_bytes,'log_records':records,'file_sha256':hashlib.sha256(self.file).hexdigest(),
+   'log_errno':log_errno,'logged_bytes':log_bytes,'log_records':records,'file_sha256':hashlib.sha256(self.file).hexdigest(),
    'close_attempted_for_every_open':True,'previous_content_preserved':True,'fg_restored':True,'api_counts':self.counts}
 
 def synthetic(path,preview=None,log_path=None):
  from unicorn import Uc,UC_ARCH_ARM,UC_MODE_ARM
  from unicorn import arm_const as ar
- image=StartupELF(path.read_bytes());container,plain,manifest=pack(image.data,'SPMP INPUT');rows=[]
+ image=StartupELF(path.read_bytes());container,plain,manifest=pack(image.data,'SPMP INPUT SD0');rows=[]
  learned=[0]+[v for mask in [1,2,4,8,0x10000,0x20000,0x40,0x80,0x100,0x200,0x400,0x800,0x80000] for v in (mask,0)]
  # A held DOWN must produce one menu step, followed by learned A selecting MAP.
  learned_slow=[0]+[v for mask in [1,2,4,8,0x10000,0x20000,0x40,0x80,0x100,0x200,0x400,0x800,0x80000] for v in (mask,0,0,0)]
  cases=[{'name':'guided','render':True},{'name':'learned_map','keys':learned_slow+[2,2,2,0,0x10000,0],'time_step':1000},
   {'name':'learned_exit','keys':learned+[2,0,2,0x10000],'time_step':2000},{'name':'short_write','fault':'short_write'},
   {'name':'clock_wrap','clock_start':0xfffffff0},{'name':'held_launcher','fault':'never_release','status':2},*({'name':f,'fault':f} for f in ['no_sd','seek','write','zero_write','close','file_limit','stalled_clock']),
-  *({'name':'extra_prefix_'+str(i),'input_prefix':i,'status':0x907} for i in range(6))]
+  *({'name':'extra_prefix_'+str(i),'input_prefix':i,'status':0x907} for i in range(7))]
  for case in cases:
   u=Uc(UC_ARCH_ARM,UC_MODE_ARM);u.ctl_set_cpu_model(ar.UC_CPU_ARM_926)
   u.mem_map(0x280000,0x480000);u.mem_map(0x9ff000,0x2000000-0x9ff000);u.mem_write(ENTRY,container);u.mem_write(ENTRY,plain)
@@ -141,9 +146,9 @@ if __name__=='__main__':
  p.add_argument('--output',required=True,type=Path);p.add_argument('--preview',type=Path);p.add_argument('--log',type=Path);a=p.parse_args()
  if a.rap:
   if produce(a.rap.read_bytes())!=INPUT:raise ValueError('Input profile differs from original RAP')
-  r=private_rap(a.elf,a.rap,observer_class=InputObserver,title='SPMP INPUT',cases=[{'name':'guided'},{'name':'no_sd','fault':'no_sd'},{'name':'short_write','fault':'short_write'}])
+  r=private_rap(a.elf,a.rap,observer_class=InputObserver,title='SPMP INPUT SD0',cases=[{'name':'guided'},{'name':'no_sd','fault':'no_sd'},{'name':'short_write','fault':'short_write'}])
   r['execution']='Actual RAP ARM926 BIN loader through source-built interactive input app and normal return'
-  r['mocked'].append('all six input app services: time/delay/absolute open/write/seek/close')
+  r['mocked'].append('all seven input app services: time/delay/absolute open/write/seek/close/errno')
   r['limits'].append('App SD and clock are synthetic; no physical card is accessed.')
  else:r=synthetic(a.elf,a.preview,a.log)
  a.output.write_text(json.dumps(r,indent=2)+'\n');print('PASS:',r['case_count'],'compiled input scenarios')

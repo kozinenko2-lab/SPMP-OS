@@ -1,0 +1,157 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "cpu": "ARM926",
+  "case_count": 20,
+  "cases": [
+    {
+      "group": "time",
+      "tick_low": 123,
+      "tick_high": 0,
+      "base_low": 100,
+      "units": 230
+    },
+    {
+      "group": "time",
+      "tick_low": 32,
+      "tick_high": 1,
+      "base_low": 4294967280,
+      "units": 480
+    },
+    {
+      "group": "time",
+      "tick_low": 5,
+      "tick_high": 17,
+      "base_low": 9,
+      "units": 4294967256
+    },
+    {
+      "group": "time",
+      "tick_low": 4294967295,
+      "tick_high": 0,
+      "base_low": 0,
+      "units": 4294967286
+    },
+    {
+      "group": "delay",
+      "low": 2,
+      "high": 0,
+      "forwarded": [
+        16789504,
+        2,
+        0
+      ]
+    },
+    {
+      "group": "delay",
+      "low": 25,
+      "high": 0,
+      "forwarded": [
+        16789504,
+        25,
+        0
+      ]
+    },
+    {
+      "group": "delay",
+      "low": 4294967295,
+      "high": 1,
+      "forwarded": [
+        16789504,
+        4294967295,
+        1
+      ]
+    },
+    {
+      "group": "absolute_open",
+      "fd": 0,
+      "flags": 1,
+      "filesystem_mode_forwarded": 1
+    },
+    {
+      "group": "absolute_open",
+      "fd": 0,
+      "flags": 10,
+      "filesystem_mode_forwarded": 10
+    },
+    {
+      "group": "fat_create",
+      "flags_to_backend": 10,
+      "truncate_bit_set": false
+    },
+    {
+      "group": "write",
+      "fd": 0,
+      "backend_bytes": 64,
+      "error": 0,
+      "returned": 64
+    },
+    {
+      "group": "write",
+      "fd": 0,
+      "backend_bytes": 7,
+      "error": 0,
+      "returned": 7
+    },
+    {
+      "group": "write",
+      "fd": 0,
+      "backend_bytes": 0,
+      "error": 0,
+      "returned": 0
+    },
+    {
+      "group": "write",
+      "fd": 0,
+      "backend_bytes": 7,
+      "error": 11,
+      "returned": 7
+    },
+    {
+      "group": "write",
+      "fd": 0,
+      "backend_bytes": 0,
+      "error": 5,
+      "returned": 4294967295
+    },
+    {
+      "group": "seek_end",
+      "position": 0,
+      "backend_error": 0,
+      "returned": 0
+    },
+    {
+      "group": "seek_end",
+      "position": 12345,
+      "backend_error": 0,
+      "returned": 12345
+    },
+    {
+      "group": "seek_end",
+      "position": 0,
+      "backend_error": 5,
+      "returned": 4294967295
+    },
+    {
+      "group": "close",
+      "fd": 0,
+      "backend_error": 0,
+      "returned": 0
+    },
+    {
+      "group": "close",
+      "fd": 0,
+      "backend_error": 5,
+      "returned": 4294967295
+    }
+  ],
+  "storage_path_evidence": {
+    "stock_storage_selection": "0x3e2f08 reads byte 0x66cd4c",
+    "sd_identity": "0x288388 registers SD at index 0; 0x43830c selects /fat20a0; see audit_sd_mount.py",
+    "fat_fstab": "0x56a9dc open ->0x283788, O_CREAT propagation at 0x2837ac/7b0"
+  },
+  "limits": [
+    "No physical SD test; mount path follows the verified stock SD mount branch.",
+    "Native time returns low tick delta *10; physical tick period not measured.",
+    "All underlying scheduler/FS/device backends are mocked RAM fixtures."
+  ]
+}

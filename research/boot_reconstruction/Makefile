@@ -100,7 +100,7 @@ arm-input: arm-native-bind
 	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -c examples/input_test/main.c -o $(INPUT_DIR)/main.o
 	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(INPUT_DIR)/input.map -o $(INPUT_DIR)/input.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_binding.o $(INPUT_DIR)/binding.o $(INPUT_DIR)/input.o $(INPUT_DIR)/main.o $(STARTUP_DIR)/adapter.o
 	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -o $(INPUT_DIR)/input_synthetic.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_synthetic.o $(INPUT_DIR)/binding_synthetic.o $(INPUT_DIR)/input.o $(INPUT_DIR)/main.o $(STARTUP_DIR)/adapter.o
-	python3 tools/ngame_pack.py $(INPUT_DIR)/input.elf --output $(INPUT_DIR)/SPMP_INPUT_TEST.bin --manifest $(INPUT_DIR)/input_package.json --title "SPMP INPUT"
+	python3 tools/ngame_pack.py $(INPUT_DIR)/input.elf --output $(INPUT_DIR)/SPMP_INPUT_SD0.bin --manifest $(INPUT_DIR)/input_package.json --title "SPMP INPUT SD0"
 
 build/test_input_host: examples/input_test/input_test.c examples/input_test/input_test.h examples/input_test/font5x7.h examples/native_probe/oem_adapter.c tests/test_input_host.c
 	mkdir -p build

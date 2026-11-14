@@ -21,5 +21,6 @@
   "hardware_status": "VM_TESTED_ONLY; old colored-bar package alone was user-confirmed on hardware",
   "package": "input_package.json",
   "private_rap": "input_rap_vm.json",
-  "public_vm": "input_vm.json"
+  "public_vm": "input_vm.json",
+  "source_revision": "103549d395752d1d8f2c9e004f720238a8b7091f"
 }

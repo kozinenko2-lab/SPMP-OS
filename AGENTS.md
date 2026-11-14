@@ -38,5 +38,7 @@ For a full archive checksum audit use `python3 tools/verify_integrity.py --full`
 - For device diagnostics, prefer a verified MMI-hosted app under the correct OEM container format. The older `MMI_DIAG.bin` failed with «неверный формат»; do not reuse that file as known-good.
 - The user confirmed on 2026-11-14 that `SPMP_PROBE_VM.bin` from artifact 14076639604 displayed three colored bars and exited on the console. See `research/boot_reconstruction/evidence/native_probe_hardware_user_report.json`. Hardware confirmation is limited to that one-frame/exit observation; buttons, repeated/long runs, full UI and RTOS cleanup remain unverified.
 
+- The user ran the Stage10 input test and reported SD Open Error/no saved file. Do not mark SD IO as hardware-tested. Stage11 traces the real fat_sd_init registration: SD id0 (/fat20a0/hda0), MSDC id1, NAND id2. Stock log text in mmi_system_init_retry is misleading; use driver registration evidence. See research/boot_reconstruction/STAGE11_REPORT_RU.md.
+
 ## Reporting discipline
 Produce patches, tests, disassembly evidence and updated `docs/STATUS_ROADMAP_RU.md` for each task. Keep original binaries unchanged. A working host preview is not a working firmware.

@@ -70,10 +70,10 @@ jobs:
       - name: Save input test NGame and log decoder
         uses: actions/upload-artifact@v4
         with:
-          name: spmp-input-test-vm-tested
+          name: spmp-input-sd0-vm-tested
           retention-days: 14
           path: |
-            research/boot_reconstruction/build/input_test/SPMP_INPUT_TEST.bin
+            research/boot_reconstruction/build/input_test/SPMP_INPUT_SD0.bin
             research/boot_reconstruction/build/input_test/input.elf
             research/boot_reconstruction/build/input_test/input.map
             research/boot_reconstruction/build/input_test/input_package.json

@@ -1,0 +1,52 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "prefixes": [
+    {
+      "name": "time",
+      "address": 2962004,
+      "bytes": 32,
+      "crc32": 1280246369
+    },
+    {
+      "name": "delay",
+      "address": 3382248,
+      "bytes": 32,
+      "crc32": 270912232
+    },
+    {
+      "name": "open",
+      "address": 2776788,
+      "bytes": 32,
+      "crc32": 960269098
+    },
+    {
+      "name": "write",
+      "address": 3061264,
+      "bytes": 32,
+      "crc32": 3420490829
+    },
+    {
+      "name": "seek",
+      "address": 3061404,
+      "bytes": 32,
+      "crc32": 1784843469
+    },
+    {
+      "name": "close",
+      "address": 3061312,
+      "bytes": 32,
+      "crc32": 1856258104
+    },
+    {
+      "name": "errno",
+      "address": 2726420,
+      "bytes": 32,
+      "crc32": 3589400024
+    }
+  ],
+  "sd_path": "/fat20a0/hda0/SPMPKEYS.CSV",
+  "open_flags": 10,
+  "seek_end_whence": 2,
+  "time_formula": "uint32((tick_low - native_init_tick_low)*10)",
+  "limits": "Compatibility CRC32, not whole firmware identity. Tick period and SD write need device confirmation."
+}

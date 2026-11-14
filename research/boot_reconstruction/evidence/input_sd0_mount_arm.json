@@ -1,0 +1,77 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "cpu": "ARM926",
+  "case_count": 10,
+  "cases": [
+    {
+      "case": "sd_driver_registration",
+      "storage_id": 0,
+      "mount_callback": "0x2884c0",
+      "unmount_callback": "0x28850c"
+    },
+    {
+      "case": "nand_registration_static",
+      "storage_id": 2,
+      "instruction": "0x28873c mov r0,2",
+      "mount_callback": "0x288ac4",
+      "executed": false
+    },
+    {
+      "case": "storage_mount_builder",
+      "storage_id": 0,
+      "device": "A::0",
+      "mount": "/fat20a0",
+      "fs": "fat2_0"
+    },
+    {
+      "case": "storage_mount_builder",
+      "storage_id": 2,
+      "device": "C::0",
+      "mount": "/fat20a2",
+      "fs": "fat2_0"
+    },
+    {
+      "case": "real_resolver_open",
+      "request_root": "/fat20a1/hda1",
+      "opened": false,
+      "errno": 2,
+      "fat_backend": {}
+    },
+    {
+      "case": "real_resolver_open",
+      "request_root": "/fat20a0/hda0",
+      "opened": true,
+      "errno": 0,
+      "fat_backend": {
+        "path": "/hda0/SPMPKEYS.CSV",
+        "flags": 10
+      }
+    },
+    {
+      "case": "thread_errno_location",
+      "offset": 136,
+      "value": 2
+    },
+    {
+      "case": "thread_errno_location",
+      "offset": 136,
+      "value": 5
+    },
+    {
+      "case": "thread_errno_location",
+      "offset": 136,
+      "value": 9
+    },
+    {
+      "case": "thread_errno_location",
+      "offset": 136,
+      "value": 28
+    }
+  ],
+  "conclusion": "SD driver registers identity 0: /fat20a0/hda0. Identity 1 is MSDC; identity 2 is NAND.",
+  "limits": [
+    "Mount state is a RAM fixture derived from original code, not a live console capture.",
+    "Stock mount command, SD controller init, driver read/write registration, OS locking/FD resources and physical FAT backend are intercepted.",
+    "Real resolver/open/FAT path translation and errno arithmetic execute original ARM instructions."
+  ]
+}

@@ -1,3 +1,23 @@
+# Проверки этапа 11
+
+- Original ARM926 SD driver registration -> id0; real resolver/open/FAT path
+  conversion: old id1 rejected, corrected id0 reaches backend — PASS (10 cases).
+- Original ARM file/time services rerun with corrected SD path — PASS (20 cases).
+- Compiled input app/virtual SD: 20 cases, all 7 extra prefixes including errno,
+  IO failure errno snapshot, learned menu, previous file preserved — PASS.
+- Original RAP loader -> SD0 input package -> normal return: 3 cases — PASS;
+  all app services/device backends mocked.
+- Host C: first errno preserved before failing close, fd0, append/partial/error/
+  file/session/poll limits and menu hold — PASS.
+- Python: public 68 PASS/5 SKIP, private 73 PASS. Ghidra: 291 selected exports,
+  original GZF/source hashes and mapped bytes verified.
+
+Hardware: user reports previous input test runs, but SD Open Error and no CSV.
+Corrected SD0 build is VM_TESTED_ONLY; actual SD write remains pending.
+[Отчёт](../research/boot_reconstruction/STAGE11_REPORT_RU.md).
+
+---
+
 # Проверки этапа 10
 
 - Exact-RAP ARM926: 20 time/delay/open/FAT create/write/seek/close cases — PASS.
