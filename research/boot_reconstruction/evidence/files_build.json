@@ -1,0 +1,42 @@
+{
+  "compiler": "Debian Clang/LLD 19.1.7",
+  "target": "ARMv5TE little endian EABI5 soft-float",
+  "source_files": {
+    "research/boot_reconstruction/examples/mmi_files/display.c": "0ec7fec5ec249b8bc1e2260b097765f5f10435dfc66403daf80bde47343911d8",
+    "research/boot_reconstruction/examples/mmi_files/files_binding.c": "a8bb561a767990f3c87d2acaf53db3ea318d2ea45bb9714c71027b53e56c0d53",
+    "research/boot_reconstruction/examples/mmi_files/main.c": "46252afe363f079c428ce355bdd7cb53ff37680a8e67691ba69e40ca66e78933",
+    "research/boot_reconstruction/examples/mmi_files/display.h": "dd1e98c51fb14edeec9c997cee2cc0b8ab3f6d6f37c764b83929b962e4a242c3",
+    "research/boot_reconstruction/examples/mmi_files/files_profile.h": "95ba5daf846d85b73e7e698f06592aa5498e5fa9487e5aa05251e674b1e0800c",
+    "research/boot_reconstruction/examples/mmi_shell/shell_binding.c": "d350462d127e41c5d515ecf722ad210f248dff65ec4fbccf96192f6965123777",
+    "research/boot_reconstruction/tools/emulate_mmi_files.py": "83d278a6c062be3002a43d6aff5c72557cd43f72ae283945faa8e7ceeb96e917",
+    "research/boot_reconstruction/tools/make_files_profile.py": "836a4f6ae65014e6ceae9432bea8d70cf548bf3f2e09fc86cdb60175983be645",
+    "research/boot_reconstruction/tools/make_sd_bundle.py": "71716913a26e33577c534457781b719209865aec1c049707e5f591a8868988cf",
+    "project/spmp-os/include/spmp_sd_directory.h": "7efb198b929c3fa887e98190723ae0735e8cb4da3d7b3f4e32a599eb1ca55df7",
+    "project/spmp-os/include/spmp_mmi_files.h": "33cd6753594e3da26dba8a5ed0da0e9df14f3304e3b0113105d5952cf78c2725",
+    "project/spmp-os/include/spmp_ttf.h": "7058ce8691dd60185608e7cb51166058d03ff67a996713bbd95527d5106c3703",
+    "project/spmp-os/src/platform/spmp_sd_directory.c": "5fd39e56e0518c2cbc3998e71b7942dfd2f03cf81c8ecd2730239fbb704b45fe",
+    "project/spmp-os/src/ui/spmp_mmi_files.c": "4d4c3fd257628c0ddea0dadc5f016dd5372a3a29e4a22795483eb5d04f10a0be",
+    "project/spmp-os/src/ui/spmp_ttf.c": "260ca3fd8dcdc956b920d6c52dc8bc9ec047e77ee78f5bf57ebe1fee77f6a002",
+    "project/spmp-os/src/ui/spmp_ui_router.c": "6ced5434a727f0d73a09d31558dde2519c6c84c4d8e8dc6eadbaac8dc72312c5",
+    "project/spmp-os/src/cores/z26_adapter.c": "27c871433b6175cae8b9b5a4e895d418e14dd6debbf406fc0d613db497fa0124",
+    "project/spmp-os/src/runtime/spmp_numeric.c": "177c4706e7d266e6dfc43d1cfaf037e929c58487853e5f531b96aec3490a16f7",
+    "project/spmp-os/src/runtime/spmp_minilibc.c": "12deb13d8f44110815245a76e374a67f5686ce0d06c1093e7b19a3a2db2e5547"
+  },
+  "font_manifest": "project/spmp-os/assets/fonts/font_manifest.json",
+  "tests": {
+    "compiled_files_arm": 20,
+    "original_directory_arm": 14,
+    "original_rap_loader_return": 3,
+    "python_total": 86,
+    "python_public_pass": 81,
+    "python_optional_skip": 5,
+    "python_private_pass": 86,
+    "host_models": "FM/TTF/router/Atari PASS",
+    "sanitizers": "FM and TTF ASan/UBSan PASS",
+    "glyph_digest_before_after_scanline_optimization": "449b251c"
+  },
+  "hardware_status": "VM_TESTED_ONLY",
+  "device_scope": "read-only directory/stat and system TTF reads; journal append; no ROM execution or user-file operations",
+  "legacy_mini_local_bin_unchanged_sha256": "ee855060e635b2973805a6a1a3452f2e10b104a2442d72fea97254698b160041",
+  "local_sd_zip_sha256": "387c6842038ee01ede745a183138d5bfc594d3910b07b9e732d06cbce33ce368"
+}

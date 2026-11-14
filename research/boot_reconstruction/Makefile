@@ -153,3 +153,29 @@ arm-shell: arm-raw
 	python3 tools/ngame_pack.py $(SHELL_DIR)/shell.elf --output $(SHELL_DIR)/SPMP_OS_MINI.bin --manifest $(SHELL_DIR)/shell_package.json --title "SPMP OS MINI"
 arm-shell-check: arm-shell
 	$(ARM_VM_PYTHON) tools/emulate_mmi_shell.py --elf $(SHELL_DIR)/shell_synthetic.elf --output $(SHELL_DIR)/shell_vm.json --preview $(SHELL_DIR)/preview.ppm --log $(SHELL_DIR)/example.csv
+
+FILES_DIR = build/mmi_files
+FILES_INC = -I$(PROJECT_INCLUDE) -I../../project/spmp-os/features/filemanager/FM01/include -I../../project/spmp-os/features/multimedia/theme_v9/include
+FILES_COMMON = $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_binding.o $(SHELL_DIR)/binding.o $(SHELL_DIR)/raw_binding.o $(SHELL_DIR)/input.o $(SHELL_DIR)/model.o $(INPUT_DIR)/input.o $(STARTUP_DIR)/adapter.o $(FILES_DIR)/directory.o $(FILES_DIR)/controller.o $(FILES_DIR)/fm01.o $(FILES_DIR)/font.o $(FILES_DIR)/ttf.o $(FILES_DIR)/numeric.o $(FILES_DIR)/minilibc.o $(FILES_DIR)/display.o $(FILES_DIR)/main.o
+.PHONY: arm-files arm-files-check
+arm-files: arm-shell
+	mkdir -p $(FILES_DIR)
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -Itests -DSPMP_FILES_BUILD -c examples/mmi_shell/shell_binding.c -o $(FILES_DIR)/shell_binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -Itests -DSPMP_FILES_BUILD -DSPMP_BINDING_SYNTHETIC -c examples/mmi_shell/shell_binding.c -o $(FILES_DIR)/shell_binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -Itests -c examples/mmi_files/files_binding.c -o $(FILES_DIR)/binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -Itests -DSPMP_BINDING_SYNTHETIC -c examples/mmi_files/files_binding.c -o $(FILES_DIR)/binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -c ../../project/spmp-os/src/platform/spmp_sd_directory.c -o $(FILES_DIR)/directory.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -c ../../project/spmp-os/src/ui/spmp_mmi_files.c -o $(FILES_DIR)/controller.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -c ../../project/spmp-os/features/filemanager/FM01/src/fm01_core.c -o $(FILES_DIR)/fm01.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -c ../../project/spmp-os/features/multimedia/theme_v9/src/spmp_ui_builtin_glyphs.c -o $(FILES_DIR)/font.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -c ../../project/spmp-os/src/ui/spmp_ttf.c -o $(FILES_DIR)/ttf.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -c ../../project/spmp-os/src/runtime/spmp_numeric.c -o $(FILES_DIR)/numeric.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(FILES_INC) -c ../../project/spmp-os/src/runtime/spmp_minilibc.c -o $(FILES_DIR)/minilibc.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test $(FILES_INC) -c examples/mmi_files/display.c -o $(FILES_DIR)/display.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test $(FILES_INC) -c examples/mmi_files/main.c -o $(FILES_DIR)/main.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(FILES_DIR)/files.map -o $(FILES_DIR)/files.elf $(FILES_COMMON) $(FILES_DIR)/shell_binding.o $(FILES_DIR)/binding.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -o $(FILES_DIR)/files_synthetic.elf $(filter-out $(INPUT_DIR)/base_binding.o $(SHELL_DIR)/binding.o $(SHELL_DIR)/raw_binding.o,$(FILES_COMMON)) $(INPUT_DIR)/base_synthetic.o $(SHELL_DIR)/binding_synthetic.o $(SHELL_DIR)/raw_binding_synthetic.o $(FILES_DIR)/shell_binding_synthetic.o $(FILES_DIR)/binding_synthetic.o
+	python3 tools/ngame_pack.py $(FILES_DIR)/files.elf --output $(FILES_DIR)/SPMP_OS_FILES.bin --manifest $(FILES_DIR)/files_package.json --title "SPMP OS FILES"
+arm-files-check: arm-files
+	$(ARM_VM_PYTHON) tools/emulate_mmi_files.py --elf $(FILES_DIR)/files_synthetic.elf --output $(FILES_DIR)/files_vm.json --preview $(FILES_DIR)/preview.ppm --log $(FILES_DIR)/example.csv
+	python3 tools/make_sd_bundle.py --bin $(FILES_DIR)/SPMP_OS_FILES.bin --output $(FILES_DIR)/SPMP-OS-SD.zip

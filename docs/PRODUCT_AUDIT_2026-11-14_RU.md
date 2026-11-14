@@ -28,6 +28,11 @@
 | Периферия | Отдельные OEM research интерфейсы; upstream libgame имеет controller ID | Проверка RCA PAL/NTSC, PCM capture, камеры, протокола аксессуаров; общий player API |
 | Настройки | Per-core CRC config, отдельный theme config, локальные RU/EN строки, gpSP virtual time | Общий конфиг, локализация всех экранов, реальный RTC, тома, physical TV, настройки внешнего вида и ограниченный reset |
 
+После этой исходной ревизии выполнен [этап 15](../research/boot_reconstruction/STAGE15_REPORT_RU.md):
+A02 исправлен, добавлен явный MMI→FM adapter, read-only FM интегрирован в
+RAM-пакет, реализован прямой TrueType. Ниже сохранены находки именно исходной
+ревизии аудита; они не означают, что последующие исправления отсутствуют.
+
 ## 1. Эмуляторы: что означает текущий список
 
 В [registry.c](../project/spmp-os/src/cores/registry.c) **20 записей**:

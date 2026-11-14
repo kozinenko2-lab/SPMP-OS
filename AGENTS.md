@@ -13,6 +13,13 @@ Reverse engineer original `8000_MMI.RAP` and RedBoot to develop a modern SPMP-OS
 - A failure reading SD, validating an image or saving a log must not compromise normal factory boot. Never promise a watchdog recovery without verifying the hardware.
 - Keep compiler target ARMv5TE, little endian, EABI5, soft-float. Host x86_64 test results do NOT certify target correctness.
 
+## Current implementation priority
+- User selected file manager first, Atari 2600 as the first device emulator. Other bundled cores are considered fresh enough: adapt/build for ARMv5TE; do not bulk replace/downgrade versions.
+- Stage15 SPMP_OS_FILES.bin integrates FM01 as a read-only two-panel RAM app with measured buttons, explicit MMI->FM translation and System/User SD folders. It does not yet execute selected ROMs or enable FM02 mutations; do not advertise a finished file manager/Atari player. See research/boot_reconstruction/STAGE15_REPORT_RU.md.
+- User supplied Roboto-Regular.ttf and prefers direct TTF use. New shared streaming integer TrueType renderer reads System/Fonts with a 2-KiB IO cache and cached glyphs; no full-file RAM copy or required PC raster conversion. Original Roboto is Apache-2.0 with metadata/license in project/spmp-os/assets/fonts. Built-in glyphs are fallback only. New UI design is still pending.
+- Adventure ROM is private; publish only metadata/evidence, not its bytes or game screenshots. Atari adapter accepts external renamed/nested ROM paths and is ARM_OBJECT_ONLY until a runnable Atari package is integrated and user-tested.
+- Directory bindings: opendir fd>=1, readdir_r consumes 260-byte names without d_type, stat supplies type/size, closedir closes fd. FS packets are SD0 only; no NAND fallback. Selected Ghidra exports now total 295.
+
 ## Ground truth and how to begin
 0. Current product scope: `docs/PRODUCT_REQUIREMENTS_RU.md`, `docs/PRODUCT_AUDIT_2026-11-14_RU.md` and `docs/PRODUCT_ROADMAP_RU.md`. The user's seven-part specification supersedes historical feature plans. Existing themes are explicitly rejected as the final design; redesign details will come later. Reuse useful algorithms/tests, do not undertake mass deletion or claim integrated device support from independent host demos. Include the user's ULI/homebrew references and NGP/MSX/Doom/Quake candidates; see `docs/evidence/uli_spmp_sources_2026-11-14.json`.
 1. `README_RU.md` and `docs/STATUS_ROADMAP_RU.md` for architecture + limitations.

@@ -9,6 +9,7 @@ static int16_t latest_audio;
 static void raw_present(void *ctx,const uint16_t*pix,unsigned w,unsigned h){(void)ctx;assert(pix&&w==160&&h==144);frames++;}
 static void raw_audio(void *ctx,const int16_t *pcm,size_t n,unsigned r){(void)ctx;assert(pcm&&n&&r);latest_audio=pcm[0];audio_calls++;}
 static uint32_t keys(void *ctx){(void)ctx;return held_keys;}
+static int size_query(void *ctx,const char *path,size_t *bytes){assert(ctx==&held_keys&&!strcmp(path,"nested/game.a26"));*bytes=4096;return 0;}
 static int read_entire(void *ctx,const char *path,uint8_t *buf,size_t cap,size_t *got){
  (void)ctx;(void)path;if(cap<4)return -1;memset(buf,0x33,4);*got=4;return 0;
 }
@@ -20,6 +21,9 @@ int main(void){
  spmp_game_menu menu;spmp_menu_init(&menu,"gb","test.gb",NULL,NULL,NULL,0);
  spmp_core_host h={0};h.user=NULL;h.present=raw_present;h.buttons=keys;h.read_entire=read_entire;h.audio_pcm=raw_audio;
  spmp_ui_router r;assert(!spmp_ui_wrap_host(&r,&menu,&h));
+ assert(!r.wrapped.file_size);
+ h.user=&held_keys;h.file_size=size_query;assert(!spmp_ui_wrap_host(&r,&menu,&h));
+ size_t bytes=0;assert(r.wrapped.file_size&&!r.wrapped.file_size(r.wrapped.user,"nested/game.a26",&bytes)&&bytes==4096);
  uint16_t img[160u*144u];for(size_t i=0;i<160u*144u;i++)img[i]=(uint16_t)(i+2u);
  assert(r.wrapped.buttons(r.wrapped.user)==15);
  r.wrapped.present(r.wrapped.user,img,160,144);

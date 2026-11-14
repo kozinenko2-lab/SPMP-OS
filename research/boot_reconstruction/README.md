@@ -2,7 +2,14 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE14_REPORT_RU.md](STAGE14_REPORT_RU.md) — два аппаратных
+**Текущий этап:** [STAGE15_REPORT_RU.md](STAGE15_REPORT_RU.md) — FM01 в RAM
+SPMP-OS, явные кнопки, две SD-панели, System/User и прямой потоковый Roboto TTF.
+Новый [пакет](examples/mmi_files/README_RU.md) VM_TESTED_ONLY, read-only просмотр;
+FM02 operations и Atari execution пока не включены. Directory/stat ABI проверен,
+Ghidra selected exports — 295. Atari external-path adapter прошёл host tests и
+ARMv5 compile. Предыдущий этап:
+
+**Этап 14:** [STAGE14_REPORT_RU.md](STAGE14_REPORT_RU.md) — два аппаратных
 RAW-сеанса, 14 кнопок состояния + POWER, HOLD отложена. Новые MMI input/menu
 модули SPMP-OS и **SPMP_OS_MINI.bin**, INFORMATION/CONTROLS/EXIT, собственное
 POWER-меню и журнал SPMPOS.CSV. Пакет VM_TESTED_ONLY;

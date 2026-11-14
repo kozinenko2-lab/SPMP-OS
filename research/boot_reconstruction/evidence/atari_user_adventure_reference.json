@@ -1,0 +1,13 @@
+{
+  "source": "user attachment; private ROM not distributed",
+  "file_name": "Adventure (1978) (Atari) [!].a26",
+  "bytes": 4096,
+  "sha256": "b0326b45e5cab066b2d03f1e683708d82de3ffe60b2e968bf88c5494237f0a96",
+  "reset_vector": "0xf000",
+  "host_test": "Current z26 adapter opened the absolute external path, rendered five frames and stopped normally.",
+  "arm_status": "Updated adapter compiled ARMv5TE EABI5 soft-float ET_REL only; no Atari device package yet.",
+  "limits": [
+    "No ROM data or screenshots included.",
+    "Five host frames do not establish gameplay correctness, all cartridge mappers or console performance."
+  ]
+}

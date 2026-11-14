@@ -1,0 +1,221 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "execution": "Original RAP loader/collector -> compiled file manager -> normal return",
+  "case_count": 3,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "29261f214026df8dbe9fb80132d4126fb7968ebece4e7c3fd304a5a672911156",
+    "container_sha256": "5d87ccbbd4d5e4fe409a9b765a62f3b2cdc2f94af90bc2e2ed7f6f79d76e21e1",
+    "payload_sha256": "78056219ce3991f53eba66ef6b7c3a1012a743448dfad3fe9723ad9bf5123337",
+    "container_bytes": 37168,
+    "payload_bytes": 37040,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa14504",
+    "bss_bytes": 46164,
+    "structural_check": {
+      "payload_bytes": 37040,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "navigate_select",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 22,
+        "collector_calls": 23,
+        "cooked_getkeys_calls": 0,
+        "exit_reason": 1,
+        "views": [
+          0,
+          4,
+          5
+        ],
+        "power_rows": 0,
+        "log_status": 0,
+        "log_errno": 0,
+        "logged_bytes": 2312,
+        "input_ram_reads": {
+          "0x556144": 46,
+          "0x556148": 46,
+          "0x556aa0": 46,
+          "0x561078": 46
+        },
+        "fg_restored": true,
+        "close_attempted_for_every_open": true,
+        "previous_content_preserved": true,
+        "file_sha256": "74faf9148bb09cc5a25c607fbc0cc22247a1ac0835019a9e514985da9c40c4e4",
+        "directory_opens": 5,
+        "directory_closes": 5,
+        "visited_directories": [
+          "/fat20a0/hda0",
+          "/fat20a0/hda0/SPMP-OS/System",
+          "/fat20a0/hda0/SPMP-OS/User",
+          "/fat20a0/hda0/SPMP-OS/User/ROMs",
+          "/fat20a0/hda0/SPMP-OS/User/ROMs/Atari2600"
+        ],
+        "selected_path": "SPMP-OS/User/ROMs/Atari2600/\u041f\u0440\u0438\u043c\u0435\u0440 renamed.a26",
+        "user_file_payload_reads": 0,
+        "font_reads": 222,
+        "font_mode": 1,
+        "font_opens": 1,
+        "font_closes": 1,
+        "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "power_continue_exit",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 16,
+        "collector_calls": 17,
+        "cooked_getkeys_calls": 0,
+        "exit_reason": 1,
+        "views": [
+          3,
+          4,
+          5
+        ],
+        "power_rows": 2,
+        "log_status": 0,
+        "log_errno": 0,
+        "logged_bytes": 1000,
+        "input_ram_reads": {
+          "0x556144": 34,
+          "0x556148": 34,
+          "0x556aa0": 34,
+          "0x561078": 34
+        },
+        "fg_restored": true,
+        "close_attempted_for_every_open": true,
+        "previous_content_preserved": true,
+        "file_sha256": "f94e91441f1a3d4c79c5956b65686ef76b4f6afaae03feb1bcf4baca179c5525",
+        "directory_opens": 3,
+        "directory_closes": 3,
+        "visited_directories": [
+          "/fat20a0/hda0",
+          "/fat20a0/hda0/SPMP-OS/System",
+          "/fat20a0/hda0/SPMP-OS/User"
+        ],
+        "selected_path": "",
+        "user_file_payload_reads": 0,
+        "font_reads": 179,
+        "font_mode": 1,
+        "font_opens": 1,
+        "font_closes": 1,
+        "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "no_sd",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 4,
+        "collector_calls": 5,
+        "cooked_getkeys_calls": 0,
+        "exit_reason": 1,
+        "views": [
+          0,
+          4,
+          5
+        ],
+        "power_rows": 0,
+        "log_status": 1,
+        "log_errno": 2,
+        "logged_bytes": 0,
+        "input_ram_reads": {
+          "0x556144": 10,
+          "0x556148": 10,
+          "0x556aa0": 10,
+          "0x561078": 10
+        },
+        "fg_restored": true,
+        "close_attempted_for_every_open": true,
+        "previous_content_preserved": true,
+        "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170",
+        "directory_opens": 0,
+        "directory_closes": 0,
+        "visited_directories": [
+          "/fat20a0/hda0",
+          "/fat20a0/hda0/SPMP-OS/System",
+          "/fat20a0/hda0/SPMP-OS/User"
+        ],
+        "selected_path": "",
+        "user_file_payload_reads": 0,
+        "font_reads": 0,
+        "font_mode": 0,
+        "font_opens": 0,
+        "font_closes": 0,
+        "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    }
+  ],
+  "original_code_executed": [
+    "game-pool constructor/allocator/info",
+    "native_bin_loader 0x460800",
+    "native_read_file 0x45ffcc with mocked file backends",
+    "header parser, all memcpy, cipher and footer compare",
+    "native API initializer 0x2d32b0",
+    "negative-mode native_exit_control 0x4619ac"
+  ],
+  "mocked": [
+    "cache/CP15",
+    "virtual file open/stat/read/close",
+    "general heap decoder scratch",
+    "clock/delay",
+    "sound start/stop and thread suspend",
+    "command/message backends",
+    "all nine graphics/input API calls",
+    "directory/stat/read-only SD fixtures",
+    "upstream input state/event/gates",
+    "time and journal services"
+  ],
+  "limits": [
+    "Synthetic pool RAM and launch state, not a board memory capture.",
+    "No physical cache/LCD/GPU/input/audio/RTOS behavior tested.",
+    "Runtime compatibility checks are not full-image SHA validation."
+  ]
+}

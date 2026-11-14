@@ -46,11 +46,16 @@ static int store_save(void *ctx,const char *core,const char *path,const uint8_t 
  spmp_ui_router*r=ctx;
  return r->underlying.store_save?r->underlying.store_save(r->underlying.user,core,path,src,n):-1;
 }
+static int file_size(void *ctx,const char *path,size_t *bytes){
+ spmp_ui_router *r=ctx;
+ return r->underlying.file_size?r->underlying.file_size(r->underlying.user,path,bytes):-1;
+}
 int spmp_ui_wrap_host(spmp_ui_router *r,spmp_game_menu *m,const spmp_core_host *source){
  if(!r||!source||!source->present||!source->read_entire)return -1;
  memset(r,0,sizeof *r);r->menu=m;r->underlying=*source;
  r->wrapped.user=r;r->wrapped.present=present;r->wrapped.buttons=buttons;
  r->wrapped.read_entire=read_entire;r->wrapped.audio_pcm=audio;
  r->wrapped.load_save=load_save;r->wrapped.store_save=store_save;
+ if(source->file_size)r->wrapped.file_size=file_size;
  return 0;
 }

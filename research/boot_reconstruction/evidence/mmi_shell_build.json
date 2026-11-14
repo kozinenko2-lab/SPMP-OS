@@ -26,5 +26,7 @@
     "public_skip": 5,
     "private_pass": 82
   },
-  "local_source_build_note": "CI package may differ with compiler; separately verify exact published artifact."
+  "local_source_build_note": "CI package may differ with compiler; separately verify exact published artifact.",
+  "source_revision": "d36fa32233d5d6d1c1836af0b0d62395f09df929",
+  "historical_build_note": "Stage14 source hashes retained; shell_binding.c gained a FILES-only preflight hook in Stage15, compiled out of the MINI target."
 }

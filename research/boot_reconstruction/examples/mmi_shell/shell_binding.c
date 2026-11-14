@@ -16,7 +16,12 @@ uint32_t spmp_shell_preflight(void)
   }
   if((~crc)!=shell_prefixes[i].crc32||*(const volatile uint32_t *)(uintptr_t)shell_prefixes[i].literal!=shell_prefixes[i].value)return 0x909;
  }
+#ifdef SPMP_FILES_BUILD
+ extern uint32_t spmp_files_preflight(void);
+ return spmp_files_preflight();
+#else
  return 0;
+#endif
 }
 void spmp_shell_snapshot(void *user,struct spmp_mmi_snapshot *s)
 {

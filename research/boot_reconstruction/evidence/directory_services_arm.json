@@ -1,0 +1,108 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "case_count": 14,
+  "cases": [
+    {
+      "case": "opendir",
+      "allocated_fd": 1,
+      "backend_error": 0,
+      "result": 1
+    },
+    {
+      "case": "opendir",
+      "allocated_fd": 7,
+      "backend_error": 0,
+      "result": 7
+    },
+    {
+      "case": "opendir",
+      "allocated_fd": -1,
+      "backend_error": 24,
+      "result": 0
+    },
+    {
+      "case": "opendir",
+      "allocated_fd": 1,
+      "backend_error": 5,
+      "result": 0
+    },
+    {
+      "case": "readdir_r",
+      "fd": 1,
+      "backend_count": 260,
+      "backend_error": 0,
+      "status": 0,
+      "entry_returned": true
+    },
+    {
+      "case": "readdir_r",
+      "fd": 1,
+      "backend_count": 0,
+      "backend_error": 0,
+      "status": 0,
+      "entry_returned": false
+    },
+    {
+      "case": "readdir_r",
+      "fd": 1,
+      "backend_count": -1,
+      "backend_error": 5,
+      "status": 5,
+      "entry_returned": false
+    },
+    {
+      "case": "readdir_r",
+      "fd": 0,
+      "backend_count": 260,
+      "backend_error": 0,
+      "status": 9,
+      "entry_returned": false
+    },
+    {
+      "case": "closedir",
+      "fd": 1,
+      "forwarded_to_close": true
+    },
+    {
+      "case": "closedir",
+      "fd": 7,
+      "forwarded_to_close": true
+    },
+    {
+      "case": "stat",
+      "mode": 1,
+      "size": 0,
+      "backend_error": 0,
+      "result": 0,
+      "guard_preserved": true
+    },
+    {
+      "case": "stat",
+      "mode": 8,
+      "size": 4096,
+      "backend_error": 0,
+      "result": 0,
+      "guard_preserved": true
+    },
+    {
+      "case": "stat",
+      "mode": 8,
+      "size": 123456,
+      "backend_error": 0,
+      "result": 0,
+      "guard_preserved": true
+    },
+    {
+      "case": "stat",
+      "mode": 0,
+      "size": 0,
+      "backend_error": 2,
+      "result": 4294967295,
+      "guard_preserved": true
+    }
+  ],
+  "limits": [
+    "Original wrappers execute; OS locks, mount resolution and FAT backend are simulated.",
+    "No console/SD/NAND or GPIO accessed. FAT mode/size population also checked against selected disassembly."
+  ]
+}

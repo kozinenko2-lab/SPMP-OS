@@ -1,0 +1,67 @@
+002a6504 cpy r12,sp
+002a6508 stmdb sp!,{r4,r5,r11,r12,lr,pc}
+002a650c sub r11,r12,#0x4
+002a6510 sub sp,sp,#0xc
+002a6514 cpy r4,r1
+002a6518 ldr r3,[0x2a65e8]
+002a651c ldr r3,[r3,#0x0]
+002a6520 str r3,[r11,#-0x20]
+002a6524 ldr r3,[0x2a65ec]
+002a6528 ldr r3,[r3,#0x0]
+002a652c str r3,[r11,#-0x18]
+002a6530 str r0,[r11,#-0x1c]
+002a6534 sub r0,r11,#0x18
+002a6538 sub r1,r11,#0x1c
+002a653c sub r2,r11,#0x20
+002a6540 bl 0x00281f48
+002a6544 cmp r0,#0x0
+002a6548 beq 0x002a6560
+002a654c bl 0x00299a14
+002a6550 mov r3,#0x2
+002a6554 str r3,[r0,#0x0]
+002a6558 mvn r0,#0x0
+002a655c b 0x002a65e0
+002a6560 ldr r3,[r11,#-0x20]
+002a6564 cmp r3,#0x0
+002a6568 ldreq r0,[0x2a65f0]
+002a656c bleq 0x002815bc
+002a6570 ldr r3,[r11,#-0x20]
+002a6574 ldr r3,[r3,#0x14]
+002a6578 cmp r3,#0x0
+002a657c ldreq r0,[0x2a65f4]
+002a6580 bleq 0x002815bc
+002a6584 ldr r0,[r11,#-0x20]
+002a6588 ldr r3,[r0,#0x14]
+002a658c ldr r1,[r3,#0x8]
+002a6590 bl 0x0028228c
+002a6594 ldr r0,[r11,#-0x20]
+002a6598 ldr r12,[r0,#0x14]
+002a659c ldr r1,[r11,#-0x18]
+002a65a0 ldr r2,[r11,#-0x1c]
+002a65a4 cpy r3,r4
+002a65a8 mov lr,pc
+002a65ac ldr pc,[r12,#0x34]
+002a65b0 cpy r4,r0
+002a65b4 ldr r0,[r11,#-0x20]
+002a65b8 ldr r3,[r0,#0x14]
+002a65bc ldr r1,[r3,#0x8]
+002a65c0 bl 0x00282378
+002a65c4 mov r5,#0x0
+002a65c8 cmp r4,r5
+002a65cc beq 0x002a65dc
+002a65d0 sub r5,r5,#0x1
+002a65d4 bl 0x00299a14
+002a65d8 str r4,[r0,#0x0]
+002a65dc cpy r0,r5
+002a65e0 sub sp,r11,#0x14
+002a65e4 ldmia sp,{r4,r5,r11,sp,pc}
+REFERENCES TO ENTRY:
+002dc6b0 UNCONDITIONAL_CALL
+002a677c UNCONDITIONAL_CALL
+002a67b8 UNCONDITIONAL_CALL
+002a68a0 UNCONDITIONAL_CALL
+002dcc94 UNCONDITIONAL_CALL
+00325350 UNCONDITIONAL_CALL
+0033fe38 UNCONDITIONAL_CALL
+002a6610 UNCONDITIONAL_CALL
+004ab948 UNCONDITIONAL_CALL

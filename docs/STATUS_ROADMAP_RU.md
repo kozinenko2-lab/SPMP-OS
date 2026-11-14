@@ -1,3 +1,27 @@
+# Этап 15: файловый менеджер первым, Atari первым эмулятором
+
+Новый RAM SPMP_OS_FILES.bin: настоящий FM01 model, две панели SD, явный
+адаптер измеренных кнопок, paged listing, сведения/выбранный путь, POWER-меню.
+System/User разделяют системные и пользовательские файлы на SD. Это read-only
+этап; FM02 write operations и Atari execution ещё не включены.
+
+Roboto-Regular.ttf используется напрямую: streaming TrueType glyf/cmap4/12,
+целочисленный renderer, 2-КиБ IO cache и glyph cache. Файл пользователя и
+Apache-2.0 license/metadata включены; bitmap остаётся резервом.
+Новый пакет VM_TESTED_ONLY. [Отчёт](../research/boot_reconstruction/STAGE15_REPORT_RU.md),
+[запуск](../research/boot_reconstruction/examples/mmi_files/README_RU.md),
+[каталоги SD](SD_LAYOUT_RU.md).
+
+Ghidra295, original directory/stat ARM14, compiled FM ARM20; host FM/TTF,
+ASan/UBSan и file_size forwarding — PASS. Atari external/renamed/nested ROM
+host tests, 5 кадров приватного Adventure и ARMv5 ET_REL — PASS; runtime на
+консоли ещё нужен. Остальные версии ядер сохраняем и адаптируем, как просил пользователь.
+
+Следующее: аппаратно проверить browser/TTF/return, затем FM02 FAT operations
+и настоящий Atari player с внешним ROM. HOLD не является блокером.
+
+---
+
 # Основное ТЗ и аудит базы: 14 ноября 2026
 
 Актуальная продуктовая основа: [семь направлений ТЗ](PRODUCT_REQUIREMENTS_RU.md),

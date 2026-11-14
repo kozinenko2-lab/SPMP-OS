@@ -1,0 +1,32 @@
+{
+  "file": "Roboto-Regular.ttf",
+  "bytes": 171272,
+  "sha256": "017c0be9aaa6d0359737e1fa762ad304c0e0107927faff5a6c1f415c7f5244ed",
+  "name_table": {
+    "0": [
+      "Copyright 2011 Google Inc. All Rights Reserved."
+    ],
+    "1": [
+      "Roboto"
+    ],
+    "2": [
+      "Regular"
+    ],
+    "5": [
+      "Version 2.137; 2017"
+    ],
+    "9": [
+      "Google"
+    ],
+    "13": [
+      "Licensed under the Apache License, Version 2.0"
+    ],
+    "14": [
+      "http://www.apache.org/licenses/LICENSE-2.0"
+    ]
+  },
+  "fsType": 0,
+  "renderer": "streaming TrueType glyf, cmap4/12, integer outlines; no hint interpreter or CFF/OTF",
+  "default_pixel_size": 13,
+  "fallback": "existing built-in bitmap only when TTF cannot be loaded/rendered"
+}

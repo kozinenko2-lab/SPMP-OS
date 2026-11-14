@@ -1,3 +1,26 @@
+# Проверки этапа 15: FM и прямой TTF
+
+- FM01 integration/MMI buttons/paged ordering/UTF-8 path/ошибки/закрытие — host
+  PASS, ASan/UBSan PASS. START/X/SELECT переводятся явно, L/R выбирают панели.
+- Direct streaming TrueType: Latin/Cyrillic/composite Ё, cache, sizes,
+  truncated/invalid input +400 mutations — host PASS, ASan/UBSan PASS.
+  Scanline optimization сохраняет digest 191 glyphs `449b251c`.
+- Original eCos directory/stat ARM — 14 случаев PASS; Ghidra exports295.
+- Compiled FM ARM — 20 случаев PASS с virtual SD/graphics/input; TTF reads
+  действительно выполняются. Установка включает оригинальный Roboto TTF,
+  Apache-2.0 notice/license и System/User, без ROM/OEM binaries.
+- Atari: разные внешние имена/каталоги, relaunch, file-size preflight и router
+  forwarding — host PASS. Приватный Adventure — 5 host frames +normal stop.
+  Updated Atari ARMv5 EABI5 ET_REL compiled; device player ещё не подключён.
+- Original RAP loader/collector/normal return — 3 PASS, virtual SD/TTF/graphics.
+- Python86: public81 PASS/5 optional SKIP, private86 PASS.
+
+Новый FM пакет VM_TESTED_ONLY, файловые операции FM02 пока не включены.
+[Отчёт](../research/boot_reconstruction/STAGE15_REPORT_RU.md),
+[установка](../research/boot_reconstruction/examples/mmi_files/README_RU.md).
+
+---
+
 # Аудит продуктовой базы: 14 ноября 2026
 
 См. [полный аудит](PRODUCT_AUDIT_2026-11-14_RU.md) и

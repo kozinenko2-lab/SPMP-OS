@@ -1479,6 +1479,26 @@
           "address": "00288348",
           "first_word": "e1a0c00d",
           "label": "fat_sd_register"
+        },
+        {
+          "address": "002a69bc",
+          "first_word": "e1a0c00d",
+          "label": "ecos_opendir"
+        },
+        {
+          "address": "002a6b8c",
+          "first_word": "e1a0c00d",
+          "label": "ecos_readdir_r"
+        },
+        {
+          "address": "002a6be0",
+          "first_word": "e1a0c00d",
+          "label": "ecos_closedir"
+        },
+        {
+          "address": "002a6504",
+          "first_word": "e1a0c00d",
+          "label": "ecos_stat_path"
         }
       ],
       "repairs": [

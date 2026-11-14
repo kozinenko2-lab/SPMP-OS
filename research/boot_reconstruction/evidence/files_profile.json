@@ -1,0 +1,46 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "prefixes": [
+    {
+      "name": "opendir",
+      "address": 2779580,
+      "bytes": 64,
+      "crc32": 948556766
+    },
+    {
+      "name": "readdir_r",
+      "address": 2780044,
+      "bytes": 80,
+      "crc32": 494509005
+    },
+    {
+      "name": "closedir",
+      "address": 2780128,
+      "bytes": 20,
+      "crc32": 1005717380
+    },
+    {
+      "name": "stat",
+      "address": 2778372,
+      "bytes": 80,
+      "crc32": 576406431
+    },
+    {
+      "name": "read",
+      "address": 3061216,
+      "bytes": 32,
+      "crc32": 3420490829
+    }
+  ],
+  "directory_handle": "opendir reserves fd>=1; zero means failure; closedir forwards fd to close",
+  "dirent_bytes": 260,
+  "dirent_name_offset": 0,
+  "dirent_has_type": false,
+  "stat_bytes": 32,
+  "stat_mode_offset": 0,
+  "stat_size_offset": 16,
+  "stat_mtime_offset": 24,
+  "mode_directory_bit": 1,
+  "mode_regular_bit": 8,
+  "limits": "Selected interface compatibility only; no real filesystem/card/device test."
+}

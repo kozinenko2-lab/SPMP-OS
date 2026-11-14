@@ -252,3 +252,14 @@ address	label	status
 0042f910	shell_game_stack_allocate	OK
 0042f954	shell_game_stack_free	OK
 00430694	shell_game_launch	OK
+00283788	fatfs_open	OK
+00283fc4	fatfs_fo_write	OK
+003e2f08	shell_storage_selection	OK
+004382b4	storage_mount_command	OK
+00299a14	ecos_errno_location	OK
+002834dc	fatfs_path_translate	OK
+00288348	fat_sd_register	OK
+002a69bc	ecos_opendir	OK
+002a6b8c	ecos_readdir_r	OK
+002a6be0	ecos_closedir	OK
+002a6504	ecos_stat_path	OK

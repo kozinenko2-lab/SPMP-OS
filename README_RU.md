@@ -2,6 +2,13 @@
 
 **Состояние:** 14 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
 
+[Этап 15: файловый менеджер и прямой Roboto TTF](research/boot_reconstruction/STAGE15_REPORT_RU.md).
+Новый **SPMP_OS_FILES.bin**: две SD-панели FM01, кнопки, сведения о файле,
+разделение System/User, журнал. **Просмотр без файловых операций и запуска ROM**;
+Atari 2600 — следующий первый эмулятор. Шрифт читается напрямую из TTF,
+с кэшем; аппаратный статус пакета VM_TESTED_ONLY.
+[Установка SD-пакета](research/boot_reconstruction/examples/mmi_files/README_RU.md).
+
 [Основное ТЗ](docs/PRODUCT_REQUIREMENTS_RU.md),
 [аудит текущего кода](docs/PRODUCT_AUDIT_2026-11-14_RU.md) и
 [очередность разработки](docs/PRODUCT_ROADMAP_RU.md) — актуальная основа

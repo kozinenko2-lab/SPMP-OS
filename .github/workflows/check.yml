@@ -16,6 +16,10 @@ jobs:
         run: make -C project/spmp-os host
       - name: Test measured MMI input and shell navigation
         run: make -C project/spmp-os mmi-input-check
+      - name: Test file manager integration, direct TrueType and callback forwarding
+        run: |
+          make -C project/spmp-os mmi-files-check ttf-check build/stage15_router_harness build/atari_harness
+          (cd project/spmp-os && ./build/stage15_router_harness && ./build/atari_harness)
       - name: Host registry smoke check
         working-directory: project/spmp-os
         run: ./build/spmp-os-host --cores
@@ -127,3 +131,23 @@ jobs:
           for n in 01 02 03 04 05; do
             (cd project/spmp-os/features/filemanager/FM$n && sh tools/build.sh)
           done
+      - name: Build SPMP-OS file manager with direct Roboto TTF and virtual SD checks
+        run: make -C research/boot_reconstruction arm-files-check ARM_VM_PYTHON=/tmp/spmp-startup-vm/bin/python
+      - name: Compile external-ROM Atari adapter for ARMv5
+        run: make -C project/spmp-os arm-atari
+      - name: Save SPMP-OS file manager and SD folder package
+        uses: actions/upload-artifact@v4
+        with:
+          name: spmp-os-files-vm-tested
+          retention-days: 14
+          path: |
+            research/boot_reconstruction/build/mmi_files/SPMP-OS-SD.zip
+            research/boot_reconstruction/build/mmi_files/SPMP_OS_FILES.bin
+            research/boot_reconstruction/build/mmi_files/files.elf
+            research/boot_reconstruction/build/mmi_files/files.map
+            research/boot_reconstruction/build/mmi_files/files_package.json
+            research/boot_reconstruction/build/mmi_files/files_vm.json
+            research/boot_reconstruction/build/mmi_files/preview.ppm
+            research/boot_reconstruction/build/mmi_files/example.csv
+            research/boot_reconstruction/examples/mmi_files/README_RU.md
+            research/boot_reconstruction/examples/mmi_files/preview.png

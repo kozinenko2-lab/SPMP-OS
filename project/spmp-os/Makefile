@@ -529,6 +529,20 @@ build/mmi_input_harness: tests/ui/mmi_input_harness.c $(MMI_PORT_SRC) include/sp
 	$(CC) $(CFLAGS) tests/ui/mmi_input_harness.c $(MMI_PORT_SRC) -o $@
 mmi-input-check: build/mmi_input_harness
 	./build/mmi_input_harness
+
+MMI_FILES_SRC = src/platform/spmp_sd_directory.c src/ui/spmp_mmi_files.c features/filemanager/FM01/src/fm01_core.c
+MMI_FILES_INC = -Ifeatures/filemanager/FM01/include
+.PHONY: mmi-files-check
+build/mmi_files_harness: tests/ui/mmi_files_harness.c $(MMI_FILES_SRC) include/spmp_mmi_files.h include/spmp_sd_directory.h | build
+	$(CC) $(CFLAGS) $(MMI_FILES_INC) tests/ui/mmi_files_harness.c $(MMI_FILES_SRC) -o $@
+mmi-files-check: build/mmi_files_harness
+	./build/mmi_files_harness
+
+.PHONY: ttf-check
+build/ttf_harness: tests/ui/ttf_harness.c src/ui/spmp_ttf.c include/spmp_ttf.h | build
+	$(CC) $(CFLAGS) tests/ui/ttf_harness.c src/ui/spmp_ttf.c -o $@
+ttf-check: build/ttf_harness
+	./build/ttf_harness
 mmi-input-arm: | build
 	$(CLANG) $(ARM_FLAGS) -std=c11 -Wall -Wextra -Werror -Iinclude -c src/platform/spmp_mmi_input.c -o build/spmp_mmi_input_armv5.o
 	$(CLANG) $(ARM_FLAGS) -std=c11 -Wall -Wextra -Werror -Iinclude -c src/ui/spmp_mmi_shell.c -o build/spmp_mmi_shell_armv5.o

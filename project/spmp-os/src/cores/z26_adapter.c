@@ -74,10 +74,16 @@ void Controls(void) {
 }
 void srv_CopyScreen(void) {}
 static int z26_start(const spmp_core_host *host,const char *path){
-    if(spmp_2600_active || !host || !host->read_entire || !host->present || !path)return -1;
+    if(spmp_2600_active || !host || !host->read_entire || !host->present || !path || !path[0])return -1;
     size_t rom_size=0;
+    size_t expected_size=0;
+    if(host->file_size && (host->file_size(host->user,path,&expected_size) ||
+       expected_size>sizeof CartRom ||
+       (expected_size!=2048 && expected_size!=4096 && expected_size!=8192 &&
+        expected_size!=16384 && expected_size!=32768 && expected_size!=65536 && expected_size!=131072)))return -1;
     memset(CartRom,0xff,sizeof CartRom);
-    if(host->read_entire(host->user,path,CartRom,128*1024,&rom_size))return -1;
+    if(host->read_entire(host->user,path,CartRom,sizeof CartRom,&rom_size))return -1;
+    if(host->file_size && expected_size!=rom_size)return -1;
     if(rom_size!=2048 && rom_size!=4096 && rom_size!=8192 && rom_size!=16384 && rom_size!=32768 && rom_size!=65536 && rom_size!=131072)return -1;
     CartSize=(int)rom_size;
     crc=0; /* No CRC game-specific overrides during preliminary integration */
