@@ -1,0 +1,28 @@
+{
+  "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+  "source_elf_sha256": "c7c05fc95ff7683e4019cc9b4ebd2ef13af499c1a41c8b015c130b7232322667",
+  "container_sha256": "ee855060e635b2973805a6a1a3452f2e10b104a2442d72fea97254698b160041",
+  "payload_sha256": "ebe8ef69206075e474e53feade21493493a91dfadfd40f23680ef93d27c82305",
+  "container_bytes": 10848,
+  "payload_bytes": 10720,
+  "header_bytes": 128,
+  "tail_bytes": 0,
+  "lcm_index": 5,
+  "entry": "0xa00000",
+  "runtime_end": "0xa02af0",
+  "bss_bytes": 272,
+  "structural_check": {
+    "payload_bytes": 10720,
+    "extra_bytes": 0,
+    "lcm_index": 5,
+    "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+    "status": "structural_match",
+    "decoded_prefix_bytes": 1024
+  },
+  "limits": [
+    "Own header; no private game header or assets copied.",
+    "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+    "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+    "RAM application, no Flash/NAND image or write path."
+  ]
+}

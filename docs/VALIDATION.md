@@ -1,4 +1,27 @@
-# Проверки этапа 13
+# Проверки этапа 14
+
+- Аппаратный RAW CSV: 39377 bytes, два сеанса 201/199 событий, оба END,
+  0 skipped lines; 14 state masks +POWER event и два SELECT+VOL chords
+  повторяются — PASS. Пользовательское сообщение ограничивает статус RAW_R1:
+  штатное POWER-меню не появлялось, блокировка проявилась после выхода.
+- Новые переносимые input/menu SPMP-OS: профиль, namespaces, edges,
+  START hold, POWER TTL, lock/rearm, chords, navigation — host PASS.
+- Compiled ARM926 MINI — 23 cases PASS: navigation, own POWER menu,
+  locked/held input, distinct shoulders/volume, SD errors, wrap/caps,
+  preflight rejection before BSS. Все часы/input/SD/graphics — fixtures.
+- Exact RAP loader/cipher/API-init + original collector → MINI → normal
+  return — 3 cases PASS. Original lock/gate/worker audit — 15 PASS;
+  hardware GPIO не использовался. Old RAW ARM regression — 29 PASS.
+- Python: 82 total, public 77 PASS/5 optional SKIP, private 82 PASS.
+  291 прежний Ghidra export, новых OEM exports нет.
+
+MINI hardware status **VM_TESTED_ONLY**. Консоль ещё не проверяла новое меню,
+Power→Continue/Exit и возврат. HOLD отложена; brightness/read-only SD browser/
+эмуляторы — следующие этапы. [Отчёт](../research/boot_reconstruction/STAGE14_REPORT_RU.md).
+
+---
+
+# Проверки этапа 13 (история до аппаратного CSV)
 
 - Original ARM926 RAM pipeline: getter/event setter VM-only, 16 state bits,
   collector TTL and menu clear — PASS, 29 cases. No physical GPIO accessed.

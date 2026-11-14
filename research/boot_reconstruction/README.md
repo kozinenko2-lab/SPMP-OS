@@ -2,10 +2,13 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE13_REPORT_RU.md](STAGE13_REPORT_RU.md) — отдельный raw RAM
-input observer для 16 органов управления, POWER/HOLD/volume chords. Новый BIN
-VM_TESTED_ONLY; [инструкция](examples/raw_input/README_RU.md). Запись в SPMPRAW.CSV
-сохраняет upstream/cooked слои и PRE перед системным вызовом.
+**Текущий этап:** [STAGE14_REPORT_RU.md](STAGE14_REPORT_RU.md) — два аппаратных
+RAW-сеанса, 14 кнопок состояния + POWER, HOLD отложена. Новые MMI input/menu
+модули SPMP-OS и **SPMP_OS_MINI.bin**, INFORMATION/CONTROLS/EXIT, собственное
+POWER-меню и журнал SPMPOS.CSV. Пакет VM_TESTED_ONLY;
+[инструкция](examples/mmi_shell/README_RU.md). Предыдущий
+[RAW_R1](STAGE13_REPORT_RU.md) получил данные с консоли, но штатное POWER-меню
+по сообщению пользователя не появлялось; блокировка проявилась после выхода.
 [Пользовательский журнал SD0](STAGE12_REPORT_RU.md), [SD0 fix](STAGE11_REPORT_RU.md),
 [native binding](STAGE9_REPORT_RU.md). OEM exports остаются 291.
 Псевдокод: `decompiled/`. Предыдущие результаты:

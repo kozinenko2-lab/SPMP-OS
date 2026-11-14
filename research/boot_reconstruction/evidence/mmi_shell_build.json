@@ -1,0 +1,30 @@
+{
+  "compiler": "Debian Clang/LLD 19.1.7",
+  "target": "ARMv5TE little endian EABI5 soft-float",
+  "hardware_status": "VM_TESTED_ONLY",
+  "source_files": {
+    "examples/mmi_shell/main.c": "2915f017ebdaa2e690f9be9582e17ac8434e704fa3cbb293a161d48c9ff0b075",
+    "examples/mmi_shell/shell_binding.c": "af0f4d54f75270924bd2fae5473aa1b202ca16802f884f231e1510fa3d901bbf",
+    "examples/mmi_shell/shell_profile.h": "6538bbf13b52721197983e075097909a032cd22b8227adbf17e50594bfe0d53c",
+    "examples/raw_input/raw_binding.c": "8f9b350a64aa1cc963ffa26d25dcda3b24dcd6e37a92eb68c89db2ab197fdc11",
+    "tools/make_shell_profile.py": "e6206b3a6fb01344970463ea623346b0272eb7588a05c78e16f7beb45e6155eb",
+    "tools/make_mmi_device_profile.py": "fd68aaaa45b59193a4ee66edcb50eaffc7317d95cd3283e98bf523087bba4ccc",
+    "tools/emulate_mmi_shell.py": "a1908eb8dc29f6468942e814546ab24522f3b0e3f2bc2488f2a3f03b46f316a1",
+    "../../project/spmp-os/include/spmp_mmi_input.h": "1df06a62ea73a2f5f0aa468f905dce6cbe68cc8048c6caf48078317349b96b80",
+    "../../project/spmp-os/include/spmp_mmi_shell.h": "6cb743d43b65a93644e916cbee3a86ab43edc1e54ebfb2fce4456f75c5e0af31",
+    "../../project/spmp-os/include/spmp_mmi_user01_profile.h": "7e6aeec671ffe62a1b079d432d11e908ad4158c2eb7f75aa58512c4c8807509d",
+    "../../project/spmp-os/src/platform/spmp_mmi_input.c": "07f34f02ad468d0300b4eb87c2befdfce1ede748fcaad6154364b3275316ec1d",
+    "../../project/spmp-os/src/ui/spmp_mmi_shell.c": "7451312f945baac637863f2917bff519b1303a4f123b1ba0864564f4148d4482"
+  },
+  "package": "mmi_shell_package.json",
+  "public_vm": "mmi_shell_vm.json",
+  "private_rap": "mmi_shell_rap_vm.json",
+  "legacy_raw_regression_cases": 29,
+  "python_tests": {
+    "total": 82,
+    "public_pass": 77,
+    "public_skip": 5,
+    "private_pass": 82
+  },
+  "local_source_build_note": "CI package may differ with compiler; separately verify exact published artifact."
+}

@@ -1,4 +1,29 @@
-# Этап 13: новый пакет raw input / POWER / HOLD
+# Этап 14: измеренный ввод и первый RAM-прототип SPMP-OS
+
+Два сеанса SPMPRAW.CSV: 400 событий, оба END, 14 одинаковых state-масок,
+POWER event1000, SELECT+VOL±. HOLD отложена по указанию пользователя.
+RAW_R1 сохраняет журнал, но пользователь сообщил об отсутствии штатного
+POWER-меню и блокировке после выхода. Причина не доказана исходным CSV.
+
+Новые модули ввода и меню в project/spmp-os подключены к **SPMP_OS_MINI.bin**:
+INFORMATION / CONTROLS / EXIT, собственное POWER→CONTINUE/EXIT, SD0 SPMPOS.CSV.
+Cooked GetKeys не вызывается; collector один раз на опрос, lock-флаги читаются,
+START удерживается по state, L/R и громкость различаются. Яркость/эмуляторы/
+просмотр файлов ещё не подключены. Новый пакет VM_TESTED_ONLY.
+
+23 compiled ARM cases +3 original RAP loader/collector/return cases,
+15 original gate-audit cases и host input/menu — PASS. Python 82 total:
+public 77 PASS/5 SKIP; private 82 PASS. OEM Ghidra exports остаются 291.
+[Отчёт](../research/boot_reconstruction/STAGE14_REPORT_RU.md),
+[запуск](../research/boot_reconstruction/examples/mmi_shell/README_RU.md).
+
+Следующее: аппаратный MINI→MMI возврат, read-only SD browser/backend,
+постепенное подключение существующих компонентов SPMP-OS. Независимая загрузка
+через RedBoot остаётся отдельным этапом после идентификации board variant.
+
+---
+
+# Этап 13: новый пакет raw input / POWER / HOLD (история)
 
 SPMP_KEYS_RAW.bin: 16 органов управления; BACK уточнён как POWER, HOLD отдельный.
 Короткий POWER стоит последним и открывает штатное меню, надо выбрать Продолжить.

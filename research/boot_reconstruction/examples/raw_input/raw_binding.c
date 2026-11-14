@@ -19,7 +19,12 @@ uint32_t spmp_raw_preflight(void)
     *(const volatile uint32_t *)(uintptr_t)0x2d2e60!=0x556148u||
     *(const volatile uint32_t *)(uintptr_t)0x2d2f4c!=0x556148u||
     *(const volatile uint32_t *)(uintptr_t)0x2d2f50!=0x556144u)return 0x908;
+#ifdef SPMP_SHELL_BUILD
+ extern uint32_t spmp_shell_preflight(void);
+ return spmp_shell_preflight();
+#else
  return 0;
+#endif
 }
 void spmp_raw_snapshot(struct raw_snapshot *out)
 {

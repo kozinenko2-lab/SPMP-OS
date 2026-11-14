@@ -1,0 +1,520 @@
+{
+  "execution": "Compiled ARM926 MMI shell, synthetic profile/input/SD/graphics",
+  "case_count": 23,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "354c930802b464bd2774fecdd60258fabc9bd6e75b3110e2b3795b4a3f2c1ff5",
+    "container_sha256": "cb3ea4914b65887e11df50acefc03da7d0f835bdd3611590538929599815ebb1",
+    "payload_sha256": "3e97f101e43402f81a085cb2a5bd143a41b492f0d80fee5b151b0d9aadcf9987",
+    "container_bytes": 10848,
+    "payload_bytes": 10720,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa02af0",
+    "bss_bytes": 272,
+    "structural_check": {
+      "payload_bytes": 10720,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "navigate",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 1532,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "bf07d4bdb6ac3af40b8803a49016d64decf3582d9af88291be1fff3f99aa6e16"
+    },
+    {
+      "case": "power_continue_exit",
+      "status": 0,
+      "polls": 16,
+      "collector_calls": 17,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        3,
+        4
+      ],
+      "power_rows": 2,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 1010,
+      "input_ram_reads": {
+        "0x556144": 34,
+        "0x556148": 34,
+        "0x556aa0": 34,
+        "0x561078": 34
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "09510b8a93d4b8aa5b525d1628101f63bef1a6634664b2faf87f5a302b363326"
+    },
+    {
+      "case": "held_launcher",
+      "status": 0,
+      "polls": 5,
+      "collector_calls": 6,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 488,
+      "input_ram_reads": {
+        "0x556144": 12,
+        "0x556148": 12,
+        "0x556aa0": 12,
+        "0x561078": 12
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "0953dc1910df9aac715c40ee730ae0ba9ff933a873941856f45111874356df91"
+    },
+    {
+      "case": "gate_release_before_action",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 662,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "9204cb6e3a4c2013f47981b6d98ac6ca4bd1dd10511aec2842719fb9b6927b06"
+    },
+    {
+      "case": "gui_release_before_action",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 662,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "3de4245e4e1ede36bbbc0e2ca2520761aacc49ba010fbd6b64013f3ec124b7e7"
+    },
+    {
+      "case": "shoulders_volume_distinct",
+      "status": 0,
+      "polls": 16,
+      "collector_calls": 17,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 1532,
+      "input_ram_reads": {
+        "0x556144": 34,
+        "0x556148": 34,
+        "0x556aa0": 34,
+        "0x561078": 34
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "a136da6570a514b075b502bc572b09e15d80583fa8d2f662388c69aa95efb5fe"
+    },
+    {
+      "case": "short_write",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 1532,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "bf07d4bdb6ac3af40b8803a49016d64decf3582d9af88291be1fff3f99aa6e16"
+    },
+    {
+      "case": "clock_wrap",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 1532,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "bf07d4bdb6ac3af40b8803a49016d64decf3582d9af88291be1fff3f99aa6e16"
+    },
+    {
+      "case": "no_sd",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 1,
+      "log_errno": 2,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "seek",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 2,
+      "log_errno": 5,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "write",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 3,
+      "log_errno": 28,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "zero_write",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 3,
+      "log_errno": 0,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "close",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 4,
+      "log_errno": 9,
+      "logged_bytes": 127,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "b64f862ea800f486a011bc584438e8ffc2342c61d2fa8f52a9324b58f320c390"
+    },
+    {
+      "case": "file_limit",
+      "status": 0,
+      "polls": 14,
+      "collector_calls": 15,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "power_rows": 0,
+      "log_status": 5,
+      "log_errno": 0,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 30,
+        "0x556148": 30,
+        "0x556aa0": 30,
+        "0x561078": 30
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "time_cap",
+      "status": 0,
+      "polls": 38,
+      "collector_calls": 38,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 2,
+      "views": [
+        0
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 401,
+      "input_ram_reads": {
+        "0x556144": 76,
+        "0x556148": 76,
+        "0x556aa0": 76,
+        "0x561078": 76
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "c26fb3292c475dab3dac120320e9c511895f112136e1a0de65061298290a42f7"
+    },
+    {
+      "case": "stalled_clock",
+      "status": 0,
+      "polls": 7500,
+      "collector_calls": 7500,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 3,
+      "views": [
+        0
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 401,
+      "input_ram_reads": {
+        "0x556144": 15000,
+        "0x556148": 15000,
+        "0x556aa0": 15000,
+        "0x561078": 15000
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "b0255d058aa82750940bc4460c83243405c112c8e8cc34071058158027104658"
+    },
+    {
+      "case": "shell_prefix_0",
+      "status": 2313,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "shell_prefix_1",
+      "status": 2313,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "shell_literal_0x2d8b84",
+      "status": 2313,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "shell_literal_0x3c3270",
+      "status": 2313,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_prefix",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_literal",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "input_prefix",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    }
+  ],
+  "limits": [
+    "No console/card/GPIO accessed. Collector is simulated in public tests.",
+    "Own stores limited to BSS/inherited stack; input snapshots are reads only."
+  ]
+}

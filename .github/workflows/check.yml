@@ -14,6 +14,8 @@ jobs:
         run: make -C research/boot_reconstruction test
       - name: Build host prototype
         run: make -C project/spmp-os host
+      - name: Test measured MMI input and shell navigation
+        run: make -C project/spmp-os mmi-input-check
       - name: Host registry smoke check
         working-directory: project/spmp-os
         run: ./build/spmp-os-host --cores
@@ -103,6 +105,23 @@ jobs:
             research/boot_reconstruction/examples/raw_input/README_RU.md
             research/boot_reconstruction/examples/raw_input/preview.png
             research/boot_reconstruction/tools/raw_log_decode.py
+      - name: Build minimal MMI shell and run ARM input/menu/SD checks
+        run: make -C research/boot_reconstruction arm-shell-check ARM_VM_PYTHON=/tmp/spmp-startup-vm/bin/python
+      - name: Save minimal SPMP-OS RAM shell
+        uses: actions/upload-artifact@v4
+        with:
+          name: spmp-os-mini-vm-tested
+          retention-days: 14
+          path: |
+            research/boot_reconstruction/build/mmi_shell/SPMP_OS_MINI.bin
+            research/boot_reconstruction/build/mmi_shell/shell.elf
+            research/boot_reconstruction/build/mmi_shell/shell.map
+            research/boot_reconstruction/build/mmi_shell/shell_package.json
+            research/boot_reconstruction/build/mmi_shell/shell_vm.json
+            research/boot_reconstruction/build/mmi_shell/preview.ppm
+            research/boot_reconstruction/build/mmi_shell/example.csv
+            research/boot_reconstruction/examples/mmi_shell/README_RU.md
+            research/boot_reconstruction/examples/mmi_shell/preview.png
       - name: File manager component checks
         run: |
           for n in 01 02 03 04 05; do

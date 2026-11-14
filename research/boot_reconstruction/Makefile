@@ -132,3 +132,24 @@ arm-raw-check: arm-raw
 build/test_raw_host: examples/raw_input/raw_input.c examples/raw_input/raw_input.h examples/input_test/input_test.c examples/input_test/input_test.h examples/input_test/font5x7.h examples/native_probe/oem_adapter.c tests/test_raw_host.c tests/test_input_host.c
 	mkdir -p build
 	$(CC) $(CFLAGS) -Isrc -Iexamples/native_probe -Iexamples/input_test -Iexamples/raw_input examples/raw_input/raw_input.c examples/input_test/input_test.c examples/native_probe/oem_adapter.c tests/test_raw_host.c -o $@
+
+SHELL_DIR = build/mmi_shell
+PROJECT_INCLUDE = ../../project/spmp-os/include
+PROJECT_MMI_SRC = ../../project/spmp-os/src/platform/spmp_mmi_input.c ../../project/spmp-os/src/ui/spmp_mmi_shell.c
+.PHONY: arm-shell arm-shell-check
+arm-shell: arm-raw
+	mkdir -p $(SHELL_DIR)
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Itests -DSPMP_RAW_BUILD -c examples/input_test/input_binding.c -o $(SHELL_DIR)/binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Itests -DSPMP_RAW_BUILD -DSPMP_BINDING_SYNTHETIC -c examples/input_test/input_binding.c -o $(SHELL_DIR)/binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/raw_input -Itests -DSPMP_SHELL_BUILD -c examples/raw_input/raw_binding.c -o $(SHELL_DIR)/raw_binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/raw_input -Itests -DSPMP_SHELL_BUILD -DSPMP_BINDING_SYNTHETIC -c examples/raw_input/raw_binding.c -o $(SHELL_DIR)/raw_binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) -I$(PROJECT_INCLUDE) -Itests -c examples/mmi_shell/shell_binding.c -o $(SHELL_DIR)/shell_binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) -I$(PROJECT_INCLUDE) -Itests -DSPMP_BINDING_SYNTHETIC -c examples/mmi_shell/shell_binding.c -o $(SHELL_DIR)/shell_binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) -I$(PROJECT_INCLUDE) -c ../../project/spmp-os/src/platform/spmp_mmi_input.c -o $(SHELL_DIR)/input.o
+	$(ARM_CC) $(STARTUP_FLAGS) -I$(PROJECT_INCLUDE) -c ../../project/spmp-os/src/ui/spmp_mmi_shell.c -o $(SHELL_DIR)/model.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -I$(PROJECT_INCLUDE) -c examples/mmi_shell/main.c -o $(SHELL_DIR)/main.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(SHELL_DIR)/shell.map -o $(SHELL_DIR)/shell.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_binding.o $(SHELL_DIR)/binding.o $(SHELL_DIR)/raw_binding.o $(SHELL_DIR)/shell_binding.o $(SHELL_DIR)/input.o $(SHELL_DIR)/model.o $(SHELL_DIR)/main.o $(INPUT_DIR)/input.o $(STARTUP_DIR)/adapter.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -o $(SHELL_DIR)/shell_synthetic.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_synthetic.o $(SHELL_DIR)/binding_synthetic.o $(SHELL_DIR)/raw_binding_synthetic.o $(SHELL_DIR)/shell_binding_synthetic.o $(SHELL_DIR)/input.o $(SHELL_DIR)/model.o $(SHELL_DIR)/main.o $(INPUT_DIR)/input.o $(STARTUP_DIR)/adapter.o
+	python3 tools/ngame_pack.py $(SHELL_DIR)/shell.elf --output $(SHELL_DIR)/SPMP_OS_MINI.bin --manifest $(SHELL_DIR)/shell_package.json --title "SPMP OS MINI"
+arm-shell-check: arm-shell
+	$(ARM_VM_PYTHON) tools/emulate_mmi_shell.py --elf $(SHELL_DIR)/shell_synthetic.elf --output $(SHELL_DIR)/shell_vm.json --preview $(SHELL_DIR)/preview.ppm --log $(SHELL_DIR)/example.csv

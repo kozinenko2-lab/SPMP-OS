@@ -1,0 +1,114 @@
+{
+  "status": "USER_PROVIDED_RAW_LOG_TWO_COMPLETE_SESSIONS_WITH_SYSTEM_UI_LIMITATIONS",
+  "date_local": "2026-11-14",
+  "timezone": "Europe/Moscow",
+  "source_log": {
+    "path": "evidence/hardware/raw_input_user_console_01.csv",
+    "bytes": 39377,
+    "sha256": "e00c4027be44a774947e72110a4e52e66df4b222de0825841dfd0f1762c562b4"
+  },
+  "associated_package": {
+    "file_name": "SPMP_KEYS_RAW.bin",
+    "artifact_id": 14094488663,
+    "source_revision": "8e87181db4e08088fed0f5eef98d6ecb90655026",
+    "expected_container_sha256": "3c806c3f5f800ed01816f517023e612aa28f6aafab7bb5c4983f738371c85a30",
+    "association": "Log supplied in reply to package; no device-side BIN digest captured."
+  },
+  "state_candidates_repeated_in_both_sessions": {
+    "UP": "0x00000001",
+    "DOWN": "0x00000004",
+    "LEFT": "0x00000008",
+    "RIGHT": "0x00000002",
+    "A": "0x00000020",
+    "B": "0x00000080",
+    "X": "0x00000010",
+    "Y": "0x00000040",
+    "L": "0x00000400",
+    "R": "0x00000100",
+    "START": "0x00001000",
+    "SELECT": "0x00002000",
+    "VOL_PLUS": "0x00000800",
+    "VOL_MINUS": "0x00000200"
+  },
+  "event_candidates": {
+    "START": "0x00000800",
+    "POWER_SHORT": "0x00001000"
+  },
+  "state_chords": {
+    "SELECT_VOL_PLUS": "0x00002800",
+    "SELECT_VOL_MINUS": "0x00002200"
+  },
+  "unresolved": [
+    "HOLD short code",
+    "HOLD long hardware signal and flag values during these runs"
+  ],
+  "sessions": [
+    {
+      "index": 1,
+      "event_count": 201,
+      "counts": {
+        "PRE": 40,
+        "SAMPLE": 41,
+        "PROMPT": 21,
+        "TICK": 98,
+        "END": 1
+      },
+      "end": {
+        "event": "END",
+        "prompt": "FREE",
+        "poll": 3723,
+        "time_units": 80010,
+        "cooked": "0x00000000",
+        "pressed": "0x00000000",
+        "released": "0x00000000",
+        "state_before": "0x00000000",
+        "event_before": "0x00000000",
+        "state_after": "0x00000000",
+        "event_after": "0x00000000",
+        "call_units": 0
+      },
+      "max_call_units": 10
+    },
+    {
+      "index": 2,
+      "event_count": 199,
+      "counts": {
+        "PRE": 40,
+        "SAMPLE": 41,
+        "PROMPT": 21,
+        "TICK": 96,
+        "END": 1
+      },
+      "end": {
+        "event": "END",
+        "prompt": "FREE",
+        "poll": 3559,
+        "time_units": 80010,
+        "cooked": "0x00000000",
+        "pressed": "0x00000000",
+        "released": "0x00000000",
+        "state_before": "0x00000000",
+        "event_before": "0x00000000",
+        "state_after": "0x00000000",
+        "event_after": "0x00000000",
+        "call_units": 0
+      },
+      "max_call_units": 0
+    }
+  ],
+  "validation": {
+    "skipped_lines": 0,
+    "both_sessions_end": true,
+    "state_candidates_agree": true,
+    "chords_observed_both_sessions": true,
+    "cooked_edges_and_poll_time_order_checked": true
+  },
+  "manual_user_report_ru": "Кнопки были заблокированы, но после выхода приложения, во время работы приложения кнопки нажимались. По нажатию кнопки Power в этот раз меню не выходило, а в прошлой версии программы оно появлялось, я нажимал продолжить.",
+  "system_limitations": [
+    "POWER event observed does not prove stock menu displayed; user says it did not.",
+    "Raw input observation can show physical states even when cooked input is suppressed.",
+    "V2 has no collector gate/GUI lock words; their values cannot be recovered from this log.",
+    "END precedes final close/FG restore/normal return; no long-run or power-loss reliability claim."
+  ],
+  "user_steering": "Defer HOLD identification and continue the project roadmap with the other 15 controls."
+}

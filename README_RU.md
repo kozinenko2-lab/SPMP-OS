@@ -2,13 +2,14 @@
 
 **Состояние:** 14 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
 
-[Текущий этап 13](research/boot_reconstruction/STAGE13_REPORT_RU.md): новый
-**SPMP_KEYS_RAW.bin** записывает MMI RAM state/event до/после GetKeys и cooked
-результат в **SPMPRAW.CSV** на SD. Сценарий учитывает 16 органов управления,
-отдельные POWER/HOLD и SELECT+VOL. Долгое POWER не запрашивается; яркость
-не изменяется. Новый пакет пока VM_TESTED_ONLY.
-Предыдущий пользовательский CSV подтвердил один сеанс записи на SD0 и семь
-cooked-кандидатов. Полная карта физических кнопок пока не получена.
+[Текущий этап 14](research/boot_reconstruction/STAGE14_REPORT_RU.md): из двух
+пользовательских RAW-сеансов получены 14 состояний кнопок и отдельное событие
+POWER. HOLD отложена по просьбе пользователя. Карта подключена к исходникам
+SPMP-OS; **SPMP_OS_MINI.bin** — первый минимальный RAM-прототип меню под MMI:
+INFORMATION / CONTROLS / EXIT, собственное POWER-меню, журнал **SPMPOS.CSV**.
+[Инструкция](research/boot_reconstruction/examples/mmi_shell/README_RU.md).
+Новая оболочка **VM_TESTED_ONLY**, аппаратный запуск ещё не подтверждён.
+Полная SPMP-OS, эмуляторы и файловый менеджер пока не перенесены в этот пакет.
 
 Основа: [рабочий контрольный BIN пользователя](research/boot_reconstruction/STAGE7_REPORT_RU.md)
 и [собственный ARM startup](research/boot_reconstruction/STAGE8_REPORT_RU.md).

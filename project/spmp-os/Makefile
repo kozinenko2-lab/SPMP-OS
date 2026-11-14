@@ -521,3 +521,14 @@ build/spmp_stage40_readonly_ui_armv5.o: build/stage40_arm/ui.o build/stage40_arm
 stage40-arm: build/spmp_stage40_readonly_ui_armv5.o
 stage40-verify: stage40-ui-test stage40-arm
 	@if test -n "$(SPMP_RAP_PATH)"; then SPMP_RAP_PATH="$(SPMP_RAP_PATH)" python3 -m unittest discover -s $(STAGE40_RESEARCH)/tests -p 'test_trace.py' -v; else echo 'Optional RAP trace: set SPMP_RAP_PATH=/path/to/8000_MMI.RAP'; fi
+
+# Measured MMI input foundation. Pure callbacks; linked NGame target lives in research.
+MMI_PORT_SRC = src/platform/spmp_mmi_input.c src/ui/spmp_mmi_shell.c
+.PHONY: mmi-input-check mmi-input-arm
+build/mmi_input_harness: tests/ui/mmi_input_harness.c $(MMI_PORT_SRC) include/spmp_mmi_input.h include/spmp_mmi_shell.h include/spmp_mmi_user01_profile.h | build
+	$(CC) $(CFLAGS) tests/ui/mmi_input_harness.c $(MMI_PORT_SRC) -o $@
+mmi-input-check: build/mmi_input_harness
+	./build/mmi_input_harness
+mmi-input-arm: | build
+	$(CLANG) $(ARM_FLAGS) -std=c11 -Wall -Wextra -Werror -Iinclude -c src/platform/spmp_mmi_input.c -o build/spmp_mmi_input_armv5.o
+	$(CLANG) $(ARM_FLAGS) -std=c11 -Wall -Wextra -Werror -Iinclude -c src/ui/spmp_mmi_shell.c -o build/spmp_mmi_shell_armv5.o

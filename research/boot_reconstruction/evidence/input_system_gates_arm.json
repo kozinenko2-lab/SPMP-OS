@@ -1,0 +1,167 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "case_count": 15,
+  "cases": [
+    {
+      "case": "power_gate",
+      "gate": 0,
+      "event_before": "0x00001000",
+      "event_after": "0x1000",
+      "cooked": 0,
+      "effects_mocked": [
+        {
+          "name": "command",
+          "args": [
+            3335,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "gui_action",
+          "args": []
+        },
+        {
+          "name": "message",
+          "args": [
+            1385,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "pause",
+          "args": [
+            0
+          ]
+        },
+        {
+          "name": "delay",
+          "args": [
+            30,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "case": "power_gate",
+      "gate": 1,
+      "event_before": "0x00001000",
+      "event_after": "0x0",
+      "cooked": 0,
+      "effects_mocked": []
+    },
+    {
+      "case": "matrix_gate",
+      "gate": 0,
+      "state_before": "0x20",
+      "state_after": "0x20",
+      "cooked": "0x10000"
+    },
+    {
+      "case": "matrix_gate",
+      "gate": 1,
+      "state_before": "0x20",
+      "state_after": "0x0",
+      "cooked": "0x0"
+    },
+    {
+      "case": "hold_message",
+      "native_active": 0,
+      "message": "0x573",
+      "gate_after": 1,
+      "queued_to_gui": true
+    },
+    {
+      "case": "hold_message",
+      "native_active": 0,
+      "message": "0x574",
+      "gate_after": 0,
+      "queued_to_gui": true
+    },
+    {
+      "case": "hold_message",
+      "native_active": 1,
+      "message": "0x573",
+      "gate_after": 1,
+      "queued_to_gui": false
+    },
+    {
+      "case": "hold_message",
+      "native_active": 1,
+      "message": "0x574",
+      "gate_after": 0,
+      "queued_to_gui": false
+    },
+    {
+      "case": "gui_lock_word",
+      "value": 0,
+      "address": "0x561078",
+      "collector_gate_unchanged": true
+    },
+    {
+      "case": "gui_lock_word",
+      "value": 1,
+      "address": "0x561078",
+      "collector_gate_unchanged": true
+    },
+    {
+      "case": "gui_lock_word",
+      "value": 2,
+      "address": "0x561078",
+      "collector_gate_unchanged": true
+    },
+    {
+      "case": "hold_worker_toggle_block",
+      "initial_byte": 0,
+      "final_byte": 1,
+      "byte_address": "0x556869",
+      "message": "0x573",
+      "context": "Parent r7=0/r10=1, execute original 0x2d524c..0x2d52a8; not full worker or gesture timing"
+    },
+    {
+      "case": "hold_worker_toggle_block",
+      "initial_byte": 1,
+      "final_byte": 0,
+      "byte_address": "0x556869",
+      "message": "0x574",
+      "context": "Parent r7=0/r10=1, execute original 0x2d524c..0x2d52a8; not full worker or gesture timing"
+    },
+    {
+      "case": "stock_hold_reader_RAM_MMIO_fixture",
+      "input_address": "0x9000a064",
+      "input_bit": "0x4000",
+      "fixture_value": "0x0",
+      "returned": 0,
+      "register_stores_observed": [
+        "0x9000a034",
+        "0x9000a004",
+        "0x9000a014",
+        "0x9000a03c"
+      ],
+      "not_read_only": true
+    },
+    {
+      "case": "stock_hold_reader_RAM_MMIO_fixture",
+      "input_address": "0x9000a064",
+      "input_bit": "0x4000",
+      "fixture_value": "0x4000",
+      "returned": 1,
+      "register_stores_observed": [
+        "0x9000a034",
+        "0x9000a004",
+        "0x9000a014",
+        "0x9000a03c"
+      ],
+      "not_read_only": true
+    }
+  ],
+  "limits": [
+    "All test execution in ARM926 RAM VM; OS/GUI/pause/pin config backends intercepted.",
+    "MMIO addresses mapped to synthetic RAM only. No console GPIO reads or writes.",
+    "The hardware V2 log lacks gate/GUI-lock/HOLD software byte, so actual flag values during its runs are unknown.",
+    "Gate suppression is a source-proven explanation compatible with the report, not a measured root cause.",
+    "Worker block has explicit initial register context; full timing/board polarity not established."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "prefixes": [
+    {
+      "name": "input_gate",
+      "address": 2984824,
+      "literal": 2984836,
+      "value": 5597856,
+      "bytes": 16,
+      "crc32": 2036184104
+    },
+    {
+      "name": "gui_lock",
+      "address": 3945060,
+      "literal": 3945072,
+      "value": 5640312,
+      "bytes": 16,
+      "crc32": 3908475675
+    }
+  ],
+  "limits": "Read-only RAM flags; runtime CRC is compatibility, not full RAM-image identity."
+}

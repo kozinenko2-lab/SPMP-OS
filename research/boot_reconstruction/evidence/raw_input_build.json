@@ -25,5 +25,7 @@
   "hardware_status": "VM_TESTED_ONLY; preceding SD0 V1 journal was retrieved from user console",
   "package": "raw_input_package.json",
   "public_vm": "raw_input_vm.json",
-  "private_rap": "raw_input_rap_vm.json"
+  "private_rap": "raw_input_rap_vm.json",
+  "source_revision": "8e87181db4e08088fed0f5eef98d6ecb90655026",
+  "historical_build_note": "Stage13 source hashes retained; shared raw_binding.c gained a shell-only preflight hook in Stage14. RAW target behavior unchanged and ARM29 regression PASS."
 }
