@@ -1,3 +1,20 @@
+# Аудит продуктовой базы: 14 ноября 2026
+
+См. [полный аудит](PRODUCT_AUDIT_2026-11-14_RU.md) и
+[команды/exit codes/SHA](evidence/product_audit_2026-11-14.json).
+Повторены host registry, settings/input/menu/router/layout/CHIP-8 state,
+overlay/memory/runtime, FM01–04 host+ARM ET_REL, MP3 check и audio v6
+check/stage10-check — PASS. FM05: обычные core/POSIX тесты с Clang PASS,
+полный script остановлен отсутствующим Clang ASan runtime; GCC/Werror выявил
+misleading-indentation. Host image suite заблокирован отсутствующими C dev
+packages libpng/libjpeg/giflib. Не объявлять все тесты базы прошедшими.
+
+Исходники компонентов не менялись. Полная матрица ROM/медиа и новые аппаратные
+проверки не выполнялись. GitHub-источники ULI проверены чтением файлов/метаданных,
+скачанный код не запускался. MINI по-прежнему VM_TESTED_ONLY.
+
+---
+
 # Проверки этапа 14
 
 - Аппаратный RAW CSV: 39377 bytes, два сеанса 201/199 событий, оба END,

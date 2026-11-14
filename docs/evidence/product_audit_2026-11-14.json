@@ -1,0 +1,542 @@
+{
+  "date_local": "2026-11-14",
+  "timezone": "Europe/Moscow",
+  "source_revision": "8f0f6c9f8dfa1c96876e7821fc2ecf433e361005",
+  "scope": "Architecture/selected API and implementation review, plus selected build/harness runs; not exhaustive third-party or console certification.",
+  "source_sha256": {
+    "project/spmp-os/Makefile": "4ce95d8af19662d0192e6fff05ba87ecde9592d609c4958c03e19de125dc6ccc",
+    "project/spmp-os/include/defos_hal.h": "b59a8f3cd2ef1aafe36a874ffbcab6befaa072f7bff33658dd57e0c254b98866",
+    "project/spmp-os/include/spmp_cores.h": "3f35556aa1b5ac30e22e96dee8bbf7bdf42ffb956cc503e141a4c1b8e3066ccb",
+    "project/spmp-os/include/spmp_game_menu.h": "c70c1a26b4fc115b47c5ef3aff1cb5c229306565743b5b0b14768449198eb6e9",
+    "project/spmp-os/include/spmp_input_hal.h": "f2008e10ea9c7e2082ae5edb204721c94f2b98676940b3d358a808292430d71c",
+    "project/spmp-os/include/spmp_mmi_input.h": "1df06a62ea73a2f5f0aa468f905dce6cbe68cc8048c6caf48078317349b96b80",
+    "project/spmp-os/include/spmp_ro_fs.h": "0c4d80909815d30f46aa90e61284dfd45cdbbdf8c04eb290418b0b9790f59b9b",
+    "project/spmp-os/include/spmp_settings.h": "d66d0af0b4993b9887ad9f16b560456f468ee5c4451fd93a8d1ec135019b22cc",
+    "project/spmp-os/include/spmp_runtime.h": "40771520f16dad778c5cc1f31fae45100a29537455dde82a76383896094bc7fc",
+    "project/spmp-os/include/spmp_overlay.h": "66a5d6d72b530d2b79fae2962d49e3319e9ed5de4af9010e21003d671517e215",
+    "project/spmp-os/include/spmp_multimedia_hal.h": "de078eeb7b9b37c75120d71e398294b436c66c87a2f78626b39ea74f34c86a8b",
+    "project/spmp-os/src/apps.c": "50dd51146fb6cf714da616f0c5e7c390de7c73f0086a04bd894372e31cdfa564",
+    "project/spmp-os/src/core.c": "892949b99619d744d9c177dc027b2343346015d8f8ba6f4d88223066d6bad463",
+    "project/spmp-os/src/media.c": "53658f8cad58e76147057c6d61c1382065a7e1b9a887c89d923ce67fb5b3fede",
+    "project/spmp-os/src/cores/registry.c": "98e9bafa2be6f9839b26741b9bdd71cc9f96818c689ebf84022681c0b1b048af",
+    "project/spmp-os/src/cores/libretro_multi_adapter.c": "b99d9a5c5d502212f4d3adf496f31ababf38622e5249ed21d18bffc8669a177f",
+    "project/spmp-os/src/cores/tgemu_adapter.c": "05765624945c5c548ed6aef77b168a22983bdd5b8c4118cba4e9c128866be91e",
+    "project/spmp-os/src/cores/gambatte_adapter.c": "e8c2b9b3fea211293151d25eefb1a7f0f660fade2f6d9657408eaeb142b11c75",
+    "project/spmp-os/src/cores/sms_host_loader.c": "4c42b39bdbec582214f233f103d42bae69463a15e674c60ae65ed6fb7d470874",
+    "project/spmp-os/src/loader/spmp_overlay.c": "c9f0fbd90246719586c7d93164d86f1e5d68f904c13798273245d86b90efe39b",
+    "project/spmp-os/src/loader/spmp_runtime.c": "8bb94aee7dc8884ebc0b5ab411f3d73f283776516f1125e1d1ef98da6e2f9525",
+    "project/spmp-os/src/platform/spmp_input_hal.c": "dcd1592262ffb88b9db14018a0f0799698e61e97190c03e10ab4eb6eea4ee57a",
+    "project/spmp-os/src/platform/spmp_mmi_input.c": "07f34f02ad468d0300b4eb87c2befdfce1ede748fcaad6154364b3275316ec1d",
+    "project/spmp-os/src/ui/spmp_ui_router.c": "652a7b340f238668a6a3d7ee5e42a46856ff10955e273bc78b87a76a6c565ad0",
+    "project/spmp-os/src/ui/spmp_settings.c": "1557e3f28480713512541b514a356980ee778e78ccd1a0e8b738e2c0dd78dd32",
+    "project/spmp-os/src/ui/spmp_mmi_shell.c": "7451312f945baac637863f2917bff519b1303a4f123b1ba0864564f4148d4482",
+    "project/spmp-os/src/runtime/spmp_gpsp_time.c": "70af25196a62619f85b9d6ea4242f2fe6ff24a7884d08b0128d3311ad24c1adb",
+    "project/spmp-os/features/filemanager/FM01/include/spmp_fm01.h": "584cd86bba13d8d30a4d78990d4d463bdeceab4c9845c7409e633726ee27786e",
+    "project/spmp-os/features/filemanager/FM01/src/fm01_core.c": "62e58fedecffc04e710ea05a76913d89ec5d5babc3ccb9392f101d410ec4ca88",
+    "project/spmp-os/features/filemanager/FM02/host/fm02_posix.c": "4a1365ad3048c5233c1fe7113c3233e9fb3eca58eda4a201cfea20ce825c3bc5",
+    "project/spmp-os/features/filemanager/FM05/include/spmp_fm05.h": "c36cbea73665308ae182b7d20ad2df88799324ba6c7c4a08003c5a37b210ba37",
+    "project/spmp-os/features/filemanager/FM05/src/fm05_core.c": "20fc7af58949f3f3076c7fc7d465312bad555de1ad84b3486c46b2f045f420a2",
+    "project/spmp-os/features/filemanager/FM05/src/fm05_session.c": "92656b1b0f6023153af9dcae3895b0522352609372e7678260ac057dc235ae82",
+    "project/spmp-os/features/multimedia/Makefile": "2111e888f9ccb2232b09a38e7e0cbf00f2c1f166ad85e11c2e7817f4db405583",
+    "project/spmp-os/features/multimedia/src/inspect.c": "044c0957ccb1b5fb66d6e2fe640dff53db9685f1c5ee6fc8ff2e5f7b0562aef3",
+    "project/spmp-os/features/multimedia/src/host_image.c": "48fa7c3b65e9c1629d1c5a3ea14895bbd75e753e51c7bd49d7ebda440947d5a9",
+    "project/spmp-os/features/multimedia/mp3_player/Makefile": "5dc15d6612284a177613b3336c9e67e88a20b009f98c8cab7863cb8e9c978030",
+    "project/spmp-os/features/multimedia/mp3_player/include/spmp_mp3_player.h": "18ee0a9c048264fc50170eb4b25e1bede9bdd8b850b8d465e937c0269c828f55",
+    "project/spmp-os/features/multimedia/mp3_player/src/spmp_mp3_app.c": "c4e5756613494b74da10f2e97d49c512d1754e1fc0ae02e0f5c84a907c4eec52",
+    "project/spmp-os/features/multimedia/audio_v5/Makefile": "d2adfa3958059b401c4f69c41f3e038975302ead007de2e0f98bd6f7a05b33a9",
+    "project/spmp-os/features/multimedia/audio_v6/Makefile": "5a591f1b5c4e2b32fb2a75478e022a59765dca7d22430101390845635f34aa25",
+    "project/spmp-os/features/multimedia/stock_bridge/src/spmp_stock_bridge.c": "12285bff5e24546aa9a8325caa8f43abe6ccbf5804b93d5f24399e33839d963f",
+    "project/spmp-os/features/multimedia/theme_v9/include/spmp_ui_theme_v7.h": "68e3af68543f2dc9096900199eb37ab2326b1023c96f1e19625a80c2254f13ef",
+    "project/spmp-os/features/multimedia/theme_v9/src/spmp_ui_theme_v7.c": "ba615997d201211ae79b8aec7a22ecbee786cc67461d1b5ef157d3a1821db13b"
+  },
+  "registry": {
+    "entries": [
+      {
+        "id": "diagnostic",
+        "title": "SPMP-OS RGB565 self-test",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "chip8",
+        "title": "CHIP-8 interpreter",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "nes",
+        "title": "NES / Famicom (FCEUmm)",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "nes-baseline",
+        "title": "NES limited test core (mapper 0/2/3)",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "gb",
+        "title": "Game Boy / Color (Gambatte)",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "gba",
+        "title": "Game Boy Advance (gpSP interpreter)",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "snes",
+        "title": "Super NES",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "megadrive",
+        "title": "Mega Drive / Genesis",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "doom",
+        "title": "Doom",
+        "registry_state": "SPMP_CORE_SOURCE_AVAILABLE"
+      },
+      {
+        "id": "quake",
+        "title": "Quake I",
+        "registry_state": "SPMP_CORE_SOURCE_UNVERIFIED"
+      },
+      {
+        "id": "spectrum",
+        "title": "ZX Spectrum",
+        "registry_state": "SPMP_CORE_SOURCE_AVAILABLE"
+      },
+      {
+        "id": "atari2600",
+        "title": "Atari 2600 (z26)",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "pcengine",
+        "title": "PC Engine / TurboGrafx",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "c64",
+        "title": "Commodore 64 (Frodo)",
+        "registry_state": "SPMP_CORE_SOURCE_AVAILABLE"
+      },
+      {
+        "id": "amstrad",
+        "title": "Amstrad CPC (Caprice)",
+        "registry_state": "SPMP_CORE_SOURCE_AVAILABLE"
+      },
+      {
+        "id": "msx",
+        "title": "MSX",
+        "registry_state": "SPMP_CORE_SOURCE_UNVERIFIED"
+      },
+      {
+        "id": "sms",
+        "title": "Sega Master System / Game Gear",
+        "registry_state": "SPMP_CORE_HOST_TESTED"
+      },
+      {
+        "id": "scummvm",
+        "title": "ScummVM",
+        "registry_state": "SPMP_CORE_SOURCE_AVAILABLE"
+      },
+      {
+        "id": "xrick",
+        "title": "Rick Dangerous",
+        "registry_state": "SPMP_CORE_SOURCE_AVAILABLE"
+      },
+      {
+        "id": "ps1",
+        "title": "PlayStation research (psx4all)",
+        "registry_state": "SPMP_CORE_SOURCE_UNVERIFIED"
+      }
+    ],
+    "counts": {
+      "SPMP_CORE_HOST_TESTED": 11,
+      "SPMP_CORE_SOURCE_AVAILABLE": 6,
+      "SPMP_CORE_SOURCE_UNVERIFIED": 3
+    },
+    "note": "Registry HOST_TESTED labels are inherited source status, not 11 new device tests."
+  },
+  "build_graph": {
+    "host_src_contains_filemanager_features": false,
+    "host_src_contains_multimedia_features": false,
+    "host_uses_dlopen_adapters": true,
+    "mini_links_new_project_input_and_shell": true,
+    "module_entry_in_selected_src_modules_and_cores": [
+      "src/modules/probe_overlay.c"
+    ],
+    "limits": "Source-level build graph inspection, not a full dynamic linker trace."
+  },
+  "key_findings": [
+    "A01 incompatible input bit layouts require explicit adapters",
+    "A02 spmp_ui_wrap_host drops file_size callback",
+    "A03 separate host/FM/media/MINI products not integrated",
+    "A04 probe overlay/runtime is not a finished emulator package launcher",
+    "A05 player index absent; libretro adapter rejects port>0",
+    "A06 competing file browser/FS models",
+    "A07 single-device POSIX FM backend cannot supply multi-volume FAT semantics",
+    "A08 file selection is not a content dispatcher",
+    "A09 global config/RTC/physical TV settings missing",
+    "A10 container probes/stock bridge are not video decoders",
+    "A11 GCC Werror misleading-indentation in FM05",
+    "A12 historical stage statuses and duplicated theme/UI layers"
+  ],
+  "environment": {
+    "host_cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "cross_compiler": "Debian Clang/LLVM 19.1.7, local aliases clang/llvm-ar/ld.lld",
+    "fm01_to_fm04": "HOSTCC=cc",
+    "fm05_attempts": [
+      "HOSTCC=cc (GCC strict warnings fail)",
+      "HOSTCC=clang (core and POSIX pass; local Clang ASan runtime missing)"
+    ],
+    "missing_image_dev_packages": [
+      "libpng",
+      "libjpeg",
+      "giflib"
+    ],
+    "ffmpeg_used_for_mp3_reference": true
+  },
+  "checks": [
+    {
+      "name": "audio_v6",
+      "command": [
+        "make",
+        "check",
+        "stage10-check"
+      ],
+      "cwd": "features/multimedia/audio_v6",
+      "exit_code": 0,
+      "duration_seconds": 0.82,
+      "tail": [
+        "PASS MP3 PCM push, starvation, FIFO, closing",
+        "PASS input validation and negative reader errors",
+        "PASS output HAL sink interface",
+        "PASS randomized frame ranges, boundary canaries (1500 runs)",
+        "ALL MIXER TESTS PASS",
+        "cc -O2 -std=c11 -Wall -Wextra -Werror -Iinclude tests/test_asf.c artifacts/libspmp_audio_v6_host.a -o build/test_asf",
+        "./build/test_asf tests/fixtures/sample.wma",
+        "ASF rc=0 codec=0x0161 ch=2 rate=44100 bitrate=96000 ms=1124 packet=3200 data=542",
+        "PASS ASF WMA metadata and bounded short reads",
+        "cc -O2 -std=c11 -Wall -Wextra -Werror -Iinclude -I../../../include tests/test_stage10_sink.c src/spmp_mix_stage10_v6.c artifacts/libspmp_audio_v6_host.a -o build/test_stage10_sink",
+        "./build/test_stage10_sink",
+        "PASS real Stage10 HAL interface, open/pump/close"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "chip8_state_run",
+      "command": [
+        "./build/stage15_chip8_state_harness"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 0.0,
+      "tail": [
+        "CHIP-8 full state: 4-KiB RAM, registers, stack, VRAM, timers, deterministic roundtrip OK"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "fm01",
+      "command": [
+        "sh",
+        "tools/build.sh"
+      ],
+      "cwd": "features/filemanager/FM01",
+      "exit_code": 0,
+      "duration_seconds": 4.25,
+      "tail": [
+        "FM01 model/navigation/status/RGB565 bounds tests: PASS",
+        "Built host + ARMv5 modules"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "fm02",
+      "command": [
+        "sh",
+        "tools/build.sh"
+      ],
+      "cwd": "features/filemanager/FM02",
+      "exit_code": 0,
+      "duration_seconds": 4.72,
+      "tail": [
+        "  OK recursive deletion",
+        "EXPECTED FAIL delete large.bin result=-125 bytes=0/300000 items=0/1 phase=1 callbacks=1",
+        "  OK scan cancellation leaves object",
+        "PASS delete large.bin result=0 bytes=300000/300000 items=1/1 phase=4 callbacks=3",
+        "  OK delete file",
+        "EXPECTED FAIL rename a.txt result=-17 bytes=0/0 items=0/0 phase=3 callbacks=1",
+        "  OK rename no-overwrite",
+        "PASS move a.txt result=0 bytes=0/0 items=1/1 phase=3 callbacks=2",
+        "  OK atomic move",
+        "  OK no staging left",
+        "PASSED 25 assertion groups",
+        "build/fm01_fm02_combined_armv5.o: ELF 32-bit LSB relocatable, ARM, EABI5 version 1 (SYSV), not stripped"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "fm03",
+      "command": [
+        "sh",
+        "tools/build.sh"
+      ],
+      "cwd": "features/filemanager/FM03",
+      "exit_code": 0,
+      "duration_seconds": 4.91,
+      "tail": [
+        "FM03 model: OK",
+        "FM03 POSIX scenarios: 14 passed",
+        "build/fm01_fm03_combined_armv5.o: ELF 32-bit LSB relocatable, ARM, EABI5 version 1 (SYSV), not stripped"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "fm04",
+      "command": [
+        "sh",
+        "tools/build.sh"
+      ],
+      "cwd": "features/filemanager/FM04",
+      "exit_code": 0,
+      "duration_seconds": 6.91,
+      "tail": [
+        "FM04: UTF-8 / Russian+English+symbols / filename guard / editing / FM02 rename / 120000 randomized operations: OK",
+        "FM04: real FM01+FM02 POSIX rename of UTF-8 file: OK",
+        "FM04: UTF-8 / Russian+English+symbols / filename guard / editing / FM02 rename / 120000 randomized operations: OK",
+        "build/FM01_to_FM04_combined_armv5.o: ELF 32-bit LSB relocatable, ARM, EABI5 version 1 (SYSV), not stripped"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "fm05",
+      "command": [
+        "sh",
+        "tools/build.sh"
+      ],
+      "cwd": "features/filemanager/FM05",
+      "exit_code": 1,
+      "duration_seconds": 2.96,
+      "tail": [
+        "src/fm05_render.c:30:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’",
+        "   30 |                 if(n+2u>=cap)break;out[n++]=' ';out[n++]=' ';",
+        "      |                                    ^~~",
+        "cc1: all warnings being treated as errors",
+        "src/fm05_session.c: In function ‘fm05_session_buttons’:",
+        "src/fm05_session.c:11:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]",
+        "   11 |     if(!s)return -1;d=&s->doc;",
+        "      |     ^~",
+        "src/fm05_session.c:11:21: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’",
+        "   11 |     if(!s)return -1;d=&s->doc;",
+        "      |                     ^",
+        "cc1: all warnings being treated as errors"
+      ],
+      "classification": "COMPILER_PORTABILITY_FINDING"
+    },
+    {
+      "name": "fm05_clang",
+      "command": [
+        "sh",
+        "tools/build.sh"
+      ],
+      "cwd": "features/filemanager/FM05",
+      "exit_code": 1,
+      "duration_seconds": 6.48,
+      "tail": [
+        "FM05 session RAM: 34072 bytes, doc: 33768 bytes",
+        "FM05 core: edit/UTF8/CRLF/keyboard/search/undo/safe save/40000 fuzz OK",
+        "FM05 POSIX: atomic temp/rename, conflict, traversal, symlink, size guard OK",
+        "/usr/bin/ld: cannot find $LLVM_ROOT/usr/lib/llvm-19/lib/clang/19/lib/x86_64-pc-linux-gnu/libclang_rt.asan_static.a: No such file or directory",
+        "/usr/bin/ld: cannot find $LLVM_ROOT/usr/lib/llvm-19/lib/clang/19/lib/x86_64-pc-linux-gnu/libclang_rt.asan.a: No such file or directory",
+        "clang: error: linker command failed with exit code 1 (use -v to see invocation)"
+      ],
+      "classification": "PARTIAL_THEN_ENVIRONMENT_BLOCKED"
+    },
+    {
+      "name": "host_registry",
+      "command": [
+        "make",
+        "host"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 0.01,
+      "tail": [
+        "make: Nothing to be done for 'host'."
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "host_registry_list",
+      "command": [
+        "./build/spmp-os-host",
+        "--cores"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 0.02,
+      "tail": [
+        "doom          SOURCE_ONLY Doom                           sources: libspmp8k-master.zip:demos/doom110",
+        "quake         RESEARCH    Quake I                        sources: binary only: spmp8k-quake_beta1.bin",
+        "spectrum      SOURCE_ONLY ZX Spectrum                    sources: xpectrum-spmp8000-master.zip",
+        "atari2600     HOST_TESTED Atari 2600 (z26)               sources: z26 GPLv2 native SPMP adapter",
+        "pcengine      HOST_TESTED PC Engine / TurboGrafx         sources: TGEmu GPLv2 (integrated)",
+        "c64           SOURCE_ONLY Commodore 64 (Frodo)           sources: Frodo4-spmp8000-master.zip",
+        "amstrad       SOURCE_ONLY Amstrad CPC (Caprice)          sources: wiituka-spmp8000-master.zip",
+        "msx           RESEARCH    MSX                            sources: binary only: spmp8k-msx_r36.bin",
+        "sms           HOST_TESTED Sega Master System / Game Gear sources: Retro-Go SMS Plus GX / GPL-2.0",
+        "scummvm       SOURCE_ONLY ScummVM                        sources: scummvm-spmp8000-master.zip (SPMP backend not found)",
+        "xrick         SOURCE_ONLY Rick Dangerous                 sources: xrick-spmp8000-master.zip",
+        "ps1           RESEARCH    PlayStation research (psx4all) sources: PSX4ALL Stage14 ARMv5 ET_REL staged; NOT linked/runnable"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "images_host",
+      "command": [
+        "make",
+        "test"
+      ],
+      "cwd": "features/multimedia",
+      "exit_code": 2,
+      "duration_seconds": 0.05,
+      "tail": [
+        "mkdir -p build",
+        "Host requires libpng, libjpeg, giflib development packages",
+        "make: *** [Makefile:16: build/mm-host] Error 1"
+      ],
+      "classification": "ENVIRONMENT_BLOCKED"
+    },
+    {
+      "name": "layout_run",
+      "command": [
+        "./build/stage15_layout_harness"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 0.0,
+      "tail": [
+        "SPMP HAL memory plan: 5 regions, RedBoot reservation, overlaps/overflow checks OK"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "menu_run",
+      "command": [
+        "./build/stage15_menu_harness"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 0.01,
+      "tail": [
+        "SPMP menu: power tap/hold, all 5 actions, atomic state+thumbnail, 5 slots, checksum, crash-safe rejection OK"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "menu_settings",
+      "command": [
+        "make",
+        "stage16-settings-test",
+        "mmi-input-check",
+        "build/stage15_menu_harness",
+        "build/stage15_router_harness",
+        "build/stage15_layout_harness",
+        "build/stage15_chip8_state_harness"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 4.21,
+      "tail": [
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. tests/ui/settings_harness.c src/ui/spmp_settings.c -o build/settings_harness",
+        "./build/settings_harness",
+        "SPMP settings: per-core identity, wrap, rollback, checksum, save/load, deferred settings OK",
+        "./build/mmi_input_harness",
+        "PASS: MMI profile, 14 states, namespaces, edges, START hold, POWER pulse, locks/rearm, chords and shell navigation",
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. tests/ui/menu_harness.c src/ui/spmp_game_menu.c src/ui/spmp_settings.c src/platform/spmp_input_hal.c src/host/spmp_ui_posix.c src/render.c src/theme.c src/apps.c -o build/stage15_menu_harness",
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. tests/ui/router_harness.c src/ui/spmp_ui_router.c src/ui/spmp_game_menu.c src/ui/spmp_settings.c src/platform/spmp_input_hal.c src/platform/spmp_hw_adapter.c -o build/stage15_router_harness",
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. tests/ui/layout_harness.c src/platform/spmp_hal_layout.c -o build/stage15_layout_harness",
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. tests/ui/chip8_state_harness.c src/cores/chip8.c -o build/stage15_chip8_state_harness"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "mp3",
+      "command": [
+        "make",
+        "check"
+      ],
+      "cwd": "features/multimedia/mp3_player",
+      "exit_code": 0,
+      "duration_seconds": 4.94,
+      "tail": [
+        "    \"case\": \"garbage\",",
+        "    \"rejected\": true",
+        "  },",
+        "  {",
+        "    \"case\": \"huge_ID3\",",
+        "    \"rejected\": true",
+        "  },",
+        "  {",
+        "    \"case\": \"short\",",
+        "    \"rejected\": true",
+        "  }",
+        "]"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "overlay_runtime",
+      "command": [
+        "make",
+        "overlay-tests",
+        "memory-tests",
+        "runtime-tests"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 1.01,
+      "tail": [
+        "clang --target=armv5te-none-eabi -mcpu=arm926ej-s -marm -mfloat-abi=soft -ffreestanding -fno-builtin -O2 -fno-pic -fno-pie -fno-unwind-tables -fno-asynchronous-unwind-tables -std=c11 -Iinclude -c src/modules/probe_overlay.c -o build/probe_overlay_armv5.o",
+        "clang --target=armv5te-none-eabi -mcpu=arm926ej-s -marm -mfloat-abi=soft -ffreestanding -fno-builtin -O2 -fno-pic -fno-pie -fno-unwind-tables -fno-asynchronous-unwind-tables -std=c11 -Iinclude -DSPMP_OVERLAY_CORE_ID=\\\"stage10-alt\\\" -c src/modules/probe_overlay.c -o build/probe_alt_armv5.o",
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. src/loader/spmp_overlay.c tests/loader/overlay_harness.c -o build/overlay_harness",
+        "./build/overlay_harness build/probe_overlay_armv5.o build/probe_alt_armv5.o",
+        "Stage10 loader: ARMv5 ELF32 + 2 relocated modules, checks=15, guards=OK, cache hooks=OK, 4 switch generations OK",
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. src/loader/spmp_memory.c tests/loader/memory_harness.c -o build/memory_harness",
+        "./build/memory_harness",
+        "Stage10 memory: 5 guarded regions; 1000 ROM replacements; high-water verified; invalid plans rejected",
+        "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude -I. src/loader/spmp_runtime.c src/loader/spmp_overlay.c src/loader/spmp_memory.c tests/loader/runtime_harness.c -o build/runtime_harness",
+        "./build/runtime_harness build/probe_overlay_armv5.o build/probe_alt_armv5.o",
+        "Stage10 runtime: pause/resume, ROM-only switching, cross-core switch, save failure, RAM release OK"
+      ],
+      "classification": "PASS"
+    },
+    {
+      "name": "router_run",
+      "command": [
+        "./build/stage15_router_harness"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_seconds": 0.0,
+      "tail": [
+        "SPMP input HAL: legacy raw masks, unassigned Power, video frame snapshot, muted UI audio OK"
+      ],
+      "classification": "PASS"
+    }
+  ],
+  "hardware": {
+    "new_console_tests_performed": false,
+    "mini_status": "VM_TESTED_ONLY; no user confirmation of MINI received",
+    "existing_evidence": [
+      "research/boot_reconstruction/evidence/native_probe_hardware_user_report.json",
+      "research/boot_reconstruction/evidence/input_sd0_hardware_log.json",
+      "research/boot_reconstruction/evidence/raw_input_hardware_log.json"
+    ],
+    "deferred": "HOLD identification; user explicitly requested proceeding with other controls."
+  },
+  "upstream_reference": "uli_spmp_sources_2026-11-14.json"
+}

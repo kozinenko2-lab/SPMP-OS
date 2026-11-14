@@ -14,6 +14,7 @@ Reverse engineer original `8000_MMI.RAP` and RedBoot to develop a modern SPMP-OS
 - Keep compiler target ARMv5TE, little endian, EABI5, soft-float. Host x86_64 test results do NOT certify target correctness.
 
 ## Ground truth and how to begin
+0. Current product scope: `docs/PRODUCT_REQUIREMENTS_RU.md`, `docs/PRODUCT_AUDIT_2026-11-14_RU.md` and `docs/PRODUCT_ROADMAP_RU.md`. The user's seven-part specification supersedes historical feature plans. Existing themes are explicitly rejected as the final design; redesign details will come later. Reuse useful algorithms/tests, do not undertake mass deletion or claim integrated device support from independent host demos. Include the user's ULI/homebrew references and NGP/MSX/Doom/Quake candidates; see `docs/evidence/uli_spmp_sources_2026-11-14.json`.
 1. `README_RU.md` and `docs/STATUS_ROADMAP_RU.md` for architecture + limitations.
 2. `firmware/originals/8000_MMI.RAP`: source of truth, SHA-256 `5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e`.
 3. `ghidra/user_GZF/`: original user's three Ghidra snapshots. `ghidra/Stage52_ELF_Imports/`: prepared ARM ELF input images. `research/Stage53_to_55/`: function/callgraph work.
@@ -34,7 +35,7 @@ For a full archive checksum audit use `python3 tools/verify_integrity.py --full`
 - Trace MMI startup => eCos thread creation => Demo GUI => system init => app launch, preserving hardware side effects (notably `0x00447640` touches `0x90005040`).
 - Add descriptive Ghidra symbols and export decompilation with evidence. State facts, hypotheses and confidence separately.
 - Trace FAT, UART, GPIO, LCD, audio, power and game loader interfaces. Provide a documented HAL ABI and map of writable/overwritten RAM; do not execute guessed bindings.
-- Integrate installed FM01–FM05 and theme v9 into a host-level SPMP-OS UI harness; compile/run host tests before ARM cross build. Native hardware integration is incomplete.
+- Integrate useful FM01–FM05 components through common input/VFS/font services, with host tests before ARM cross build. Theme v9 is reference material only: the user requested a full theme redesign after providing more detail. Native hardware integration is incomplete. Next shared-foundation work includes input bit-layout adapters, forwarding file_size through the UI router, and player-index support; see product audit A01–A05.
 - For device diagnostics, prefer a verified MMI-hosted app under the correct OEM container format. The older `MMI_DIAG.bin` failed with «неверный формат»; do not reuse that file as known-good.
 - The user confirmed on 2026-11-14 that `SPMP_PROBE_VM.bin` from artifact 14076639604 displayed three colored bars and exited on the console. See `research/boot_reconstruction/evidence/native_probe_hardware_user_report.json`. Hardware confirmation is limited to that one-frame/exit observation; buttons, repeated/long runs, full UI and RTOS cleanup remain unverified.
 

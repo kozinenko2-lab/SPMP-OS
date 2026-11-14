@@ -1,0 +1,360 @@
+{
+  "checked_date_local": "2026-11-14",
+  "timezone": "Europe/Moscow",
+  "provider": "GitHub connector public repository/file reads",
+  "repository_search": "user:uli spmp8000",
+  "repositories": [
+    {
+      "full_name": "uli/libspmp8k",
+      "url": "https://github.com/uli/libspmp8k",
+      "default_branch": "master"
+    },
+    {
+      "full_name": "uli/tgemu-spmp8000",
+      "url": "https://github.com/uli/tgemu-spmp8000",
+      "default_branch": "master"
+    },
+    {
+      "full_name": "uli/Frodo4-spmp8000",
+      "url": "https://github.com/uli/Frodo4-spmp8000",
+      "default_branch": "master"
+    },
+    {
+      "full_name": "uli/xpectrum-spmp8000",
+      "url": "https://github.com/uli/xpectrum-spmp8000",
+      "default_branch": "master"
+    },
+    {
+      "full_name": "uli/scummvm-spmp8000",
+      "url": "https://github.com/uli/scummvm-spmp8000",
+      "default_branch": "master"
+    },
+    {
+      "full_name": "uli/wiituka-spmp8000",
+      "url": "https://github.com/uli/wiituka-spmp8000",
+      "default_branch": "master"
+    },
+    {
+      "full_name": "uli/xrick-spmp8000",
+      "url": "https://github.com/uli/xrick-spmp8000",
+      "default_branch": "master"
+    }
+  ],
+  "directory_metadata": [
+    {
+      "key": "uli_discovery_0",
+      "rows": [
+        {
+          "path": ".indent.pro",
+          "git_blob_or_tree_sha": "6461cf611fce683e6096168cabe0ac131e77a870",
+          "type": "file"
+        },
+        {
+          "path": "Makefile",
+          "git_blob_or_tree_sha": "d0f588dea5f893d0b6f7954e9490051abdf9aec2",
+          "type": "file"
+        },
+        {
+          "path": "game.c",
+          "git_blob_or_tree_sha": "43cf533745683aa772ebbeb9d42dc37f5630e90f",
+          "type": "file"
+        },
+        {
+          "path": "pc_engine.png",
+          "git_blob_or_tree_sha": "32436846f4c7c4293b546d5a08c125d9313baa88",
+          "type": "file"
+        },
+        {
+          "path": "pce.pce",
+          "git_blob_or_tree_sha": "91ae3293a68fc8c09cdcbe59ae9df67620c7665a",
+          "type": "file"
+        },
+        {
+          "path": "profile.c",
+          "git_blob_or_tree_sha": "fb720cd7f2f4ee629317016f300b316ae4b3cdf8",
+          "type": "file"
+        },
+        {
+          "path": "src",
+          "git_blob_or_tree_sha": "9268ee3904ce7d341514dc083ec911d38d8c77d3",
+          "type": "dir"
+        },
+        {
+          "path": "tgemu_logo.png",
+          "git_blob_or_tree_sha": "ebbf92a263ad0c8a5b4ba35cee82e23108169584",
+          "type": "file"
+        },
+        {
+          "path": "ui.c",
+          "git_blob_or_tree_sha": "ddc25c742a6aac8b44868c52130ad0fd271e7930",
+          "type": "file"
+        },
+        {
+          "path": "ui.h",
+          "git_blob_or_tree_sha": "2205724b75e06254df075ffdb5ee615ab510b6d8",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "key": "uli_path_2",
+      "rows": [
+        {
+          "path": "demos/Makefile",
+          "git_blob_or_tree_sha": "b5995692910082d2d5c667007bc84c1339d028ce",
+          "type": "file"
+        },
+        {
+          "path": "demos/adbg",
+          "git_blob_or_tree_sha": "2e8a0893ebd0b04484d07731bb13734eebc91f5c",
+          "type": "dir"
+        },
+        {
+          "path": "demos/audio",
+          "git_blob_or_tree_sha": "bd00ee5c5f1f42c41585202fd6ea80efc2e548cc",
+          "type": "dir"
+        },
+        {
+          "path": "demos/diag",
+          "git_blob_or_tree_sha": "e9b38787256fec6b93a45d6652a18910d8cf5dab",
+          "type": "dir"
+        },
+        {
+          "path": "demos/doom110",
+          "git_blob_or_tree_sha": "7b8d13fb5baa3e43638e25e76a83c68c4cc2dd6d",
+          "type": "dir"
+        },
+        {
+          "path": "demos/keydemo",
+          "git_blob_or_tree_sha": "f7b8e61f6a4296a8f33bc886890e8b0f585c12f7",
+          "type": "dir"
+        },
+        {
+          "path": "demos/rgbgame",
+          "git_blob_or_tree_sha": "8ffe27116f0a4c18d321d2a2903252474df155f3",
+          "type": "dir"
+        },
+        {
+          "path": "demos/thread",
+          "git_blob_or_tree_sha": "ca97f9677c9faf987010618adf1476176cf2e3e6",
+          "type": "dir"
+        },
+        {
+          "path": "demos/uarttest",
+          "git_blob_or_tree_sha": "4dcbc359314d815f2a113c5345d4df1650166ec8",
+          "type": "dir"
+        },
+        {
+          "path": "demos/usb",
+          "git_blob_or_tree_sha": "7ffab41e169daccc2d567df68bc184e860b3a1fd",
+          "type": "dir"
+        },
+        {
+          "path": "demos/z26",
+          "git_blob_or_tree_sha": "f1791b50150ee16882453cb709c5e7457db57233",
+          "type": "dir"
+        }
+      ]
+    },
+    {
+      "key": "uli_path_3",
+      "rows": [
+        {
+          "path": "libgame/.indent.pro",
+          "git_blob_or_tree_sha": "46b93dd5e0a534f1e69a0a791d6ee11f9171cc08",
+          "type": "file"
+        },
+        {
+          "path": "libgame/Doxyfile",
+          "git_blob_or_tree_sha": "e884c7257f72e5153f8038feddab3eade5f0144c",
+          "type": "file"
+        },
+        {
+          "path": "libgame/Makefile",
+          "git_blob_or_tree_sha": "50e4dae4e81bb79e006f38d14a8d3be601dad2d7",
+          "type": "file"
+        },
+        {
+          "path": "libgame/adbg.c",
+          "git_blob_or_tree_sha": "f31c32d90bcbc5f1ca92e3c9f4d95337d66e137d",
+          "type": "file"
+        },
+        {
+          "path": "libgame/adbg.h",
+          "git_blob_or_tree_sha": "54dd4edfae365d97fd3e58f0379c4029736ae4fd",
+          "type": "file"
+        },
+        {
+          "path": "libgame/chinese",
+          "git_blob_or_tree_sha": "d278f6171356c8820c8f8084748e2a4e92052ce3",
+          "type": "dir"
+        },
+        {
+          "path": "libgame/dmsg.c",
+          "git_blob_or_tree_sha": "aeccb849abcc38a915fe07babe1b9bcbcdd59345",
+          "type": "file"
+        },
+        {
+          "path": "libgame/dmsg.h",
+          "git_blob_or_tree_sha": "13f9a67b74e128e74aff93b91e3d817f13a61d4e",
+          "type": "file"
+        },
+        {
+          "path": "libgame/ecos_codes.h",
+          "git_blob_or_tree_sha": "fd65ed5353229865d675543c4b9f243713424c56",
+          "type": "file"
+        },
+        {
+          "path": "libgame/font6x8.c",
+          "git_blob_or_tree_sha": "845e7899d3575d9cc3fafa2edf414df3b3dd0307",
+          "type": "file"
+        },
+        {
+          "path": "libgame/ftab.txt",
+          "git_blob_or_tree_sha": "b26d00a24080aa39d91932e9094fc9916f992850",
+          "type": "file"
+        },
+        {
+          "path": "libgame/glue.c",
+          "git_blob_or_tree_sha": "6a75b35a2fb97bf2129f7f1c614834200f30fd1c",
+          "type": "file"
+        },
+        {
+          "path": "libgame/libgame.c",
+          "git_blob_or_tree_sha": "bfa0a394bcec6602e8c0f93a906a5ed23377e867",
+          "type": "file"
+        },
+        {
+          "path": "libgame/libgame.h",
+          "git_blob_or_tree_sha": "4da89549f790cb461530df984158b4adb07778e2",
+          "type": "file"
+        },
+        {
+          "path": "libgame/libgame.ld",
+          "git_blob_or_tree_sha": "d9bf6743a01f7b5e082599b11025cedc8f7b74a6",
+          "type": "file"
+        },
+        {
+          "path": "libgame/libgame.mk",
+          "git_blob_or_tree_sha": "46d4b142b05487714f8e0550d4f60ba56336df43",
+          "type": "file"
+        },
+        {
+          "path": "libgame/main.dox",
+          "git_blob_or_tree_sha": "a2c4898ccc0d0c136f9581b7a0da0b3ac30b62f2",
+          "type": "file"
+        },
+        {
+          "path": "libgame/mcatch_cmd.h",
+          "git_blob_or_tree_sha": "66da655cea936668f3a43aff70423a66b081e28f",
+          "type": "file"
+        },
+        {
+          "path": "libgame/mcatch_types.h",
+          "git_blob_or_tree_sha": "df56e9482d4cc1e9d9169147e3688ee2ec798bd0",
+          "type": "file"
+        },
+        {
+          "path": "libgame/run_test",
+          "git_blob_or_tree_sha": "1f259ad0a54f95201ba7486855fd038f18ecf165",
+          "type": "file"
+        },
+        {
+          "path": "libgame/start.s",
+          "git_blob_or_tree_sha": "60bfef1afd36fbbb9da0907bd41496bfa989edac",
+          "type": "file"
+        },
+        {
+          "path": "libgame/test_abi.c",
+          "git_blob_or_tree_sha": "c7dfdc8afc82dfb59309588edec7f9a2cba6d5e6",
+          "type": "file"
+        },
+        {
+          "path": "libgame/test_fw",
+          "git_blob_or_tree_sha": "10dea7b8d28336af8c2fa962f7c20153cc6a1c9f",
+          "type": "dir"
+        },
+        {
+          "path": "libgame/text.c",
+          "git_blob_or_tree_sha": "277d12aa5693f95a5a46d176060ce9b00d82d776",
+          "type": "file"
+        },
+        {
+          "path": "libgame/text.h",
+          "git_blob_or_tree_sha": "bb14a36f76212fdc5faa26ad5afff2c6c7dd09e2",
+          "type": "file"
+        },
+        {
+          "path": "libgame/ui.c",
+          "git_blob_or_tree_sha": "03b2a9bf3ff8303dbf83a1bec99645eef4ddd6b6",
+          "type": "file"
+        },
+        {
+          "path": "libgame/usbdbg.c",
+          "git_blob_or_tree_sha": "360ea00598567d77bbac49dbabb8a8fd1c272bda",
+          "type": "file"
+        },
+        {
+          "path": "libgame/usbdbg.h",
+          "git_blob_or_tree_sha": "46f2b49989595f7ac0020bc3e5f47b5d2c854977",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "key": "uli_doom_listing",
+      "rows": [
+        {
+          "path": "demos/doom110/Makefile",
+          "git_blob_or_tree_sha": "3f6d98d752af407e56b6ed2669c02d34c2ef1a18",
+          "type": "file"
+        },
+        {
+          "path": "demos/doom110/i_sound.c",
+          "git_blob_or_tree_sha": "80c0244beac9be63101c628895125dd2bd57ffb3",
+          "type": "file"
+        },
+        {
+          "path": "demos/doom110/i_spmp.c",
+          "git_blob_or_tree_sha": "949007a2f8d0cb7e662916873035ff04e8723f7d",
+          "type": "file"
+        },
+        {
+          "path": "demos/doom110/i_video.c",
+          "git_blob_or_tree_sha": "ce833247d90a53f179baea87eab0a7462183c1ac",
+          "type": "file"
+        }
+      ]
+    }
+  ],
+  "limited_extra_repository_searches": [
+    {
+      "query": "spmp8000 quake",
+      "returned_repository_count": 0,
+      "limit": "No matching result in this search is not proof that sources or ports do not exist."
+    },
+    {
+      "query": "spmp8000 neogeo",
+      "returned_repository_count": 0,
+      "limit": "No matching result in this search is not proof that sources or ports do not exist."
+    },
+    {
+      "query": "spmp8000 msx",
+      "returned_repository_count": 0,
+      "limit": "No matching result in this search is not proof that sources or ports do not exist."
+    }
+  ],
+  "observations": [
+    "TGEmu Makefile uses libspmp8k/libgame.mk and game.c uses emulator graphics/audio/key init and cleanup.",
+    "libspmp8k/demos contains doom110 and z26.",
+    "doom110 Makefile contains -DNO_SOUND.",
+    "libgame.h documents emu_keymap.controller usually 0 or 1 and per-controller emuIfKeyGetInput.",
+    "demos/usb/usb.c is a debug-output redirection demo, not evidence of USB HID/host controllers.",
+    "User reports additional Doom/Quake1/Atari2600/PCE/SMS/GG/NGP/MSX ports. NGP is not currently in our static registry."
+  ],
+  "limits": [
+    "No fetched code was built or executed.",
+    "No bulk source/assets imported; names and git object provenance only.",
+    "No console compatibility or performance proved by upstream discovery."
+  ]
+}
