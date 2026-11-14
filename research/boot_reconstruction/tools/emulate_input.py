@@ -142,5 +142,8 @@ if __name__=='__main__':
  if a.rap:
   if produce(a.rap.read_bytes())!=INPUT:raise ValueError('Input profile differs from original RAP')
   r=private_rap(a.elf,a.rap,observer_class=InputObserver,title='SPMP INPUT',cases=[{'name':'guided'},{'name':'no_sd','fault':'no_sd'},{'name':'short_write','fault':'short_write'}])
+  r['execution']='Actual RAP ARM926 BIN loader through source-built interactive input app and normal return'
+  r['mocked'].append('all six input app services: time/delay/absolute open/write/seek/close')
+  r['limits'].append('App SD and clock are synthetic; no physical card is accessed.')
  else:r=synthetic(a.elf,a.preview,a.log)
  a.output.write_text(json.dumps(r,indent=2)+'\n');print('PASS:',r['case_count'],'compiled input scenarios')

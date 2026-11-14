@@ -1,6 +1,6 @@
 {
   "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
-  "execution": "Actual RAP ARM926 BIN loader through own source-built NGame, binder/probe, normal return",
+  "execution": "Actual RAP ARM926 BIN loader through source-built interactive input app and normal return",
   "case_count": 3,
   "package": {
     "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
@@ -173,11 +173,13 @@
     "clock/delay",
     "sound start/stop and thread suspend",
     "command/message backends",
-    "all nine graphics/input API calls"
+    "all nine graphics/input API calls",
+    "all six input app services: time/delay/absolute open/write/seek/close"
   ],
   "limits": [
     "Synthetic pool RAM and launch state, not a board memory capture.",
     "No physical cache/LCD/GPU/input/audio/RTOS behavior tested.",
-    "Runtime compatibility checks are not full-image SHA validation."
+    "Runtime compatibility checks are not full-image SHA validation.",
+    "App SD and clock are synthetic; no physical card is accessed."
   ]
 }

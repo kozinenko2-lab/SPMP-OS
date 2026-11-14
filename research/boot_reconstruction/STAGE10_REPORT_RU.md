@@ -145,6 +145,16 @@ CI собирает свой ELF/BIN и кладёт конкретный SHA в
 **spmp-input-test-vm-tested**, retention 14 дней: BIN, ELF/map, manifest,
 public traces, preview/example и самостоятельный CSV decoder.
 
+Опубликованный пакет: [artifact 14088835633](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43532969624/artifacts/14088835633),
+source commit `103549d395752d1d8f2c9e004f720238a8b7091f`. CI завершился успешно.
+Скачанный ZIP SHA сверён с GitHub, BIN побайтно совпал с повторно упакованным ELF.
+Пакет CI — **9488 байт**, SHA
+`a04a104a548658ac9d5923ddab15a0c07b3f006c84bf0db5315ede7e0903af7c`.
+Этот ELF/BIN отдельно прошёл те же три full-RAP сценария;
+доказательство и provenance — `evidence/input_ci_rap_vm.json`.
+Размер и SHA отличаются от локального Clang19 build из-за версии компилятора.
+Это не аппаратная проверка SD: шесть дополнительных app services также подменены.
+
 Никаких модификаций original RedBoot/RAP, NAND/ROMFS или Flash image нет.
 Следующая аппаратная проверка — запуск, кнопки по подсказкам, наличие CSV на SD,
 выход и повторный сеанс с сохранением предыдущих строк.

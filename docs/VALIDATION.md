@@ -10,6 +10,10 @@
 - 73 Python tests: 68 PASS/5 optional SKIP without private inputs;
   73 PASS with exact RAP/control game/native ELF.
 - Ghidra: 287 exports, all original GZF hashes/mapped bytes verified.
+- Published CI artifact 14088835633 (9488 bytes) independently downloaded:
+  ZIP digest/ELF repack identity and 3 original-RAP cases — PASS.
+  BIN SHA `a04a104a548658ac9d5923ddab15a0c07b3f006c84bf0db5315ede7e0903af7c`;
+  provenance: `research/boot_reconstruction/evidence/input_ci_rap_vm.json`.
 
 New interactive/SD hardware status is VM_TESTED_ONLY. The user's previous
 three-bar frame/exit report applies to artifact 14076639604 only.
