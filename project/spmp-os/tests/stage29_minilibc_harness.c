@@ -12,6 +12,7 @@ extern void __aeabi_memset(void *,size_t,int);
 extern void __aeabi_memset4(void *,size_t,int);
 extern void __aeabi_memclr(void *,size_t);
 extern void __aeabi_memclr4(void *,size_t);
+extern void __aeabi_memclr8(void *,size_t);
 static unsigned long checks;
 static void insist(int x, const char *msg) { ++checks; if(!x){ fprintf(stderr,"FAIL %s\n",msg); exit(1); } }
 int main(void) {
@@ -43,6 +44,8 @@ int main(void) {
   __aeabi_memcpy4(b,a,128);insist(memcmp(b,a,128)==0,"copy4");
   __aeabi_memcpy8(b,a,128);insist(memcmp(b,a,128)==0,"copy8");
   __aeabi_memclr(b,128);for(int i=0;i<128;i++)insist(b[i]==0,"clr");
+  memset(b,0x53,128);__aeabi_memclr8(b,120);
+  for(int i=0;i<128;i++)insist(b[i]==(i<120?0:0x53),"clr8 boundary");
   char s[64];strcpy(s,"abc");strcat(s,"XYZ");
   insist(strcmp(s,"abcXYZ")==0,"strings");
   insist(strlen(s)==6,"strlen");

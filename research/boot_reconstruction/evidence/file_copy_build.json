@@ -1,0 +1,27 @@
+{
+  "status": "HOST_AND_ARM_VM_ONLY",
+  "compiler": "Clang/LLD19 ARMv5TE EABI5 soft-float; host GCC",
+  "source_files": {
+    "project/spmp-os/include/spmp_file_copy.h": "210d65837de2049e580a3451c4a412a6364fae783421d35203e9cf178ea16da3",
+    "project/spmp-os/include/spmp_fm02_copy.h": "e79ce514dd0939fd918a3e655178a98b2d01aef0e1a87336eab33db16794b7f8",
+    "project/spmp-os/src/platform/spmp_file_copy.c": "826458328e1f9cb24cc502ca2ef690bcaf8d1d4e025cacd38ac41d7e204e886c",
+    "project/spmp-os/src/platform/spmp_fm02_copy.c": "2b590528c7268b760e0051cb65aab476f86f5435d11e2a98c2770c602ed98127",
+    "project/spmp-os/tests/ui/file_copy_bridge.c": "f92199e0d23f58d680a133ee5a131b8f9f7cea91860953c017a0720f79357db1",
+    "project/spmp-os/src/runtime/spmp_minilibc.c": "6a697ebf4ad42751fb39ee70888f2b38542a68f6f1548ad56422a2bea59db56a",
+    "research/boot_reconstruction/tools/test_file_copy.py": "e70cf87c998b50382f4fa6d34fea4a8c6070b8bb8ed15f82ce1734807296b646",
+    "research/boot_reconstruction/tools/audit_file_mutations.py": "47fe7bd943b1bb52985e86cde179b6a2550e53634b34864843204b987ecfe05c"
+  },
+  "tests": {
+    "host": 50,
+    "sanitizers": 50,
+    "compiled_arm": 50,
+    "original_fat_wrappers": 22,
+    "minilibc_checks": 54026
+  },
+  "arm_task_bytes": 5740,
+  "maximum_test_stack_bytes": 2784,
+  "stack_budget": 8192,
+  "scope": "Regular file COPY and FM02 callback bridge; no live SD mutation binding, device UI or new BIN. Linux test backend enforces no-follow/exclusive-create/atomic no-replace.",
+  "original_reference_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "cleanup_retry": "PASS: failed cleanup retried, original cancellation retained, next task allowed"
+}

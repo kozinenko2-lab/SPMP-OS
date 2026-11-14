@@ -1,3 +1,19 @@
+# Stage16 copy engine and FAT mutation research
+
+- Same 50 scenarios PASS on host, host ASan/UBSan and compiled ARM926, with
+  real temporary Linux files and explicit no-follow/exclusive/no-replace backend.
+- FM02 callback integration, read-back mismatch, cancellation at publication,
+  orphan cleanup reporting, partial IO, path limits and descriptor cleanup covered.
+- Task5740 bytes, maximum measured test stack2784 bytes; no heap/FPU/MMIO.
+- 22 original RAP ARM mutation wrapper/coordinator cases PASS; disk/locks mocked.
+- Original FAT fsync is no-op; driver NOREPLACE and live FAT backend unverified.
+- Public Python89 tests: 83 PASS, 6 optional SKIP. This stage adds no device BIN.
+
+[Full report](../research/boot_reconstruction/STAGE16_REPORT_RU.md),
+[build provenance](../research/boot_reconstruction/evidence/file_copy_build.json).
+
+---
+
 # Проверки этапа 15: FM и прямой TTF
 
 - FM01 integration/MMI buttons/paged ordering/UTF-8 path/ошибки/закрытие — host

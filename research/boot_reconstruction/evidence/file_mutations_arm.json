@@ -1,0 +1,164 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "case_count": 22,
+  "cases": [
+    {
+      "case": "fatfs_unlink",
+      "entry": "0x283858",
+      "disk_error_get": 0,
+      "wrapper_return_u32": 0,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_unlink",
+      "entry": "0x283858",
+      "disk_error_get": -8,
+      "wrapper_return_u32": 21,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_unlink",
+      "entry": "0x283858",
+      "disk_error_get": -17,
+      "wrapper_return_u32": 200,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_unlink",
+      "entry": "0x283858",
+      "disk_error_get": -123,
+      "wrapper_return_u32": 5,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_mkdir",
+      "entry": "0x2838e8",
+      "disk_error_get": 0,
+      "wrapper_return_u32": 0,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_mkdir",
+      "entry": "0x2838e8",
+      "disk_error_get": -7,
+      "wrapper_return_u32": 20,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_mkdir",
+      "entry": "0x2838e8",
+      "disk_error_get": -20,
+      "wrapper_return_u32": 302,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_mkdir",
+      "entry": "0x2838e8",
+      "disk_error_get": -123,
+      "wrapper_return_u32": 5,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_rmdir",
+      "entry": "0x2839a4",
+      "disk_error_get": 0,
+      "wrapper_return_u32": 0,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_rmdir",
+      "entry": "0x2839a4",
+      "disk_error_get": -7,
+      "wrapper_return_u32": 20,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_rmdir",
+      "entry": "0x2839a4",
+      "disk_error_get": -1609,
+      "wrapper_return_u32": 22,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_rmdir",
+      "entry": "0x2839a4",
+      "disk_error_get": -123,
+      "wrapper_return_u32": 5,
+      "translated_paths": 1
+    },
+    {
+      "case": "fatfs_rename",
+      "entry": "0x283a34",
+      "disk_error_get": 0,
+      "wrapper_return_u32": 0,
+      "translated_paths": 2
+    },
+    {
+      "case": "fatfs_rename",
+      "entry": "0x283a34",
+      "disk_error_get": -17,
+      "wrapper_return_u32": 200,
+      "translated_paths": 2
+    },
+    {
+      "case": "fatfs_rename",
+      "entry": "0x283a34",
+      "disk_error_get": -20,
+      "wrapper_return_u32": 302,
+      "translated_paths": 2
+    },
+    {
+      "case": "fatfs_rename",
+      "entry": "0x283a34",
+      "disk_error_get": -16,
+      "wrapper_return_u32": 4294967280,
+      "translated_paths": 2
+    },
+    {
+      "case": "fatfs_rename",
+      "entry": "0x283a34",
+      "disk_error_get": -123,
+      "wrapper_return_u32": 4294967173,
+      "translated_paths": 2
+    },
+    {
+      "case": "fatfs_fsync_noop",
+      "entry": "0x284100",
+      "return": 0,
+      "backend_calls": 0
+    },
+    {
+      "case": "fatfs_fsync_noop",
+      "entry": "0x284100",
+      "return": 0,
+      "backend_calls": 0
+    },
+    {
+      "case": "rename_driver_dispatch",
+      "same_volume": true,
+      "driver_return": 0,
+      "return_u32": 0,
+      "driver_called": true
+    },
+    {
+      "case": "rename_driver_dispatch",
+      "same_volume": true,
+      "driver_return": -1,
+      "return_u32": 4294967295,
+      "driver_called": true
+    },
+    {
+      "case": "rename_driver_dispatch",
+      "same_volume": false,
+      "driver_return": 0,
+      "return_u32": 4294967295,
+      "driver_called": false
+    }
+  ],
+  "limits": [
+    "Original ARM wrapper/coordinator instructions; path translation, locks and disk/volume-driver calls are simulated.",
+    "No actual file, SD, NAND, Flash, GPIO or MMIO access.",
+    "OEM errors are not assumed to be Linux errno. No tested atomic NOREPLACE/durability binding yet.",
+    "The driver behind rename +0x6c still needs separate recovery; coordinator lock alone does not prove no-overwrite semantics."
+  ]
+}

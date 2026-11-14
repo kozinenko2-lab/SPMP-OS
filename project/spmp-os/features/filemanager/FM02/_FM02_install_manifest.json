@@ -3,7 +3,7 @@
   "version": "FM-02",
   "depends_on": "spmp-fm01 FM-01",
   "files": {
-    "README_RU.md": "4674f95c97ea211b507f153ac3d589c33396d9bca0fd3de067de4053b95dfa3c",
+    "README_RU.md": "f9123e8f1bbf5cd64e624fcd3d44eb9a070b23dd3c991fdea6e705a51e1f348a",
     "build/core.o": "b75f653cdf7821f9cb5e47020e9ebcf4e1b12449df8b7f9cbfe1c127d8380c78",
     "build/fm01_fm02_combined_armv5.o": "21322bbdf6288ae1968cc9df0c6ace9433af7699d52b41a317249700a7d9feb3",
     "build/fm02_combined_armv5.o": "3630898f7cd55793c5e3da66156aa39e3dcc2553c644b28f651d028daeafa843",

@@ -1,3 +1,24 @@
+# Этап 16: разработка без доступной консоли
+
+По просьбе пользователя аппаратная проверка FILES отложена; она не блокирует
+работу на ПК/ARM VM. Добавлен пошаговый copy engine обычных файлов внутри
+SPMP-OS/User и callback для FM02: exclusive staging, побайтное сравнение после
+закрытия записи, atomic no-replace publication, отмена/очистка/отдельные ошибки.
+50 сценариев на реальных временных файлах Linux в host, sanitizer и compiled
+ARM926 вариантах — PASS. Task5740 байт, измеренный test stack2784 байта.
+
+22 оригинальных ARM случая FAT unlink/mkdir/rmdir/rename/fsync и rename dispatch
+уточняют интерфейсы записи: ошибки 200/302 нельзя трактовать как Linux errno,
+fsync — no-op, rename driver method +0x6c пока не даёт доказанного NOREPLACE.
+[Отчёт](../research/boot_reconstruction/STAGE16_REPORT_RU.md).
+
+Это библиотека и анализ, без нового BIN и без live FAT mutation binding.
+Предыдущий FILES остаётся read-only/VM_TESTED_ONLY. Следующая разработка —
+восстановить driver rename/create/error mapping и подключить пошаговую задачу
+к UI; затем расширять операции и Atari runtime. HOLD отложена.
+
+---
+
 # Этап 15: файловый менеджер первым, Atari первым эмулятором
 
 Новый RAM SPMP_OS_FILES.bin: настоящий FM01 model, две панели SD, явный

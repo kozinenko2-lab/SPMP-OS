@@ -2,6 +2,13 @@
 
 **Состояние:** 14 ноября 2026 г. **Целевая консоль:** Defender MultiMix Magic, Sunplus SPMP8000, ARMv5TE / ARM926EJ-S, eCos. **Цель:** восстановить архитектуру RedBoot и `8000_MMI.RAP`, создать SPMP-OS и/или модернизировать оригинальную оболочку, сохраняя безопасный заводской запуск.
 
+[Этап 16: проверяемое копирование и анализ FAT](research/boot_reconstruction/STAGE16_REPORT_RU.md).
+Пошаговый copy engine связан с FM02: временный файл, read-back comparison,
+отмена и явные ошибки очистки. По 50 сценариев host/ASan/ARM, 22 случая
+оригинальных FAT wrappers. Это общий компонент без live FAT write binding;
+последний пакет для консоли — read-only FILES ниже. Аппаратная проверка отложена,
+разработка продолжается без ожидания доступа к устройству.
+
 [Этап 15: файловый менеджер и прямой Roboto TTF](research/boot_reconstruction/STAGE15_REPORT_RU.md).
 Новый **SPMP_OS_FILES.bin**: две SD-панели FM01, кнопки, сведения о файле,
 разделение System/User, журнал. **Просмотр без файловых операций и запуска ROM**;

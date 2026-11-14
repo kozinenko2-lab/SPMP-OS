@@ -41,6 +41,16 @@ FM02_TEST_BINARY="$PWD/build/fm02_ops_asan" ASAN_OPTIONS=detect_leaks=1:halt_on_
 
 `fm02_model` ~17.2 КБ (в основном 64 отмеченных имени), поверх `fm01_model`; **общий RGB565 framebuffer** выделяет ОС — второй экранный буфер не нужен. Для большого каталога FM-01 по-прежнему подгружает 9 записей на панель. Для копирования используется буфер 8192 байт в хостовом backend, не в ядре ARMv5; при переносе на FAT использовать небольшой буфер и предсказуемое выделение в HAL.
 
+## Новый общий механизм копирования (Stage16)
+
+В основной системе добавлены [spmp_file_copy](../../../include/spmp_file_copy.h)
+и callback `spmp_fm02_copy_action`: 2-КиБ шаги, временный файл, побайтное чтение
+обратно, отмена, no-replace publication и явные ошибки очистки. По 50 host,
+ASan/UBSan и compiled ARM926 сценариев, включая вызовы через эту модель FM02.
+Он пока обслуживает только COPY обычного файла; Linux backend ниже сохранён.
+Живой FAT mutation backend и меню операций в FILES BIN ещё не подключены.
+[Отчёт](../../../../../research/boot_reconstruction/STAGE16_REPORT_RU.md).
+
 ## Backend для реальной консоли
 
 `fm02_backend_action` — абстрактный backend; `fm02_posix.c` — **только Linux/PC**, с openat(), no-follow, fsync(), renameat2() и защищённым rootfd. Его нельзя линковать в прошивку. Для Defender нужен самостоятельный тестированный FAT backend: конечная запись на SD, обработка извлечения, FAT timestamps, free-space, flush, и безопасное обновление каталога. Пока отсутствует — файловые операции на реальной плате НЕ включать.

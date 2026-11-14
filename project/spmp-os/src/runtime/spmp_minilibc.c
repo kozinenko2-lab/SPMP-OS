@@ -78,3 +78,4 @@ void __aeabi_memset(void *d, size_t n, int c) { (void)memset(d,c,n); }
 void __aeabi_memset4(void *d, size_t n, int c) { (void)memset(d,c,n); }
 void __aeabi_memclr(void *d, size_t n) { (void)memset(d,0,n); }
 void __aeabi_memclr4(void *d, size_t n) { (void)memset(d,0,n); }
+void __aeabi_memclr8(void *d, size_t n) { (void)memset(d,0,n); }

@@ -546,3 +546,31 @@ ttf-check: build/ttf_harness
 mmi-input-arm: | build
 	$(CLANG) $(ARM_FLAGS) -std=c11 -Wall -Wextra -Werror -Iinclude -c src/platform/spmp_mmi_input.c -o build/spmp_mmi_input_armv5.o
 	$(CLANG) $(ARM_FLAGS) -std=c11 -Wall -Wextra -Werror -Iinclude -c src/ui/spmp_mmi_shell.c -o build/spmp_mmi_shell_armv5.o
+
+# Shared copy engine: test callbacks only, not linked into the device FILES app.
+COPY_INC = -Iinclude -Ifeatures/filemanager/FM01/include -Ifeatures/filemanager/FM02/include
+COPY_SRC = src/platform/spmp_file_copy.c src/platform/spmp_fm02_copy.c tests/ui/file_copy_bridge.c features/filemanager/FM01/src/fm01_core.c features/filemanager/FM02/src/fm02_core.c
+COPY_HEADERS = include/spmp_file_copy.h include/spmp_fm02_copy.h features/filemanager/FM01/include/spmp_fm01.h features/filemanager/FM02/include/spmp_fm02.h
+COPY_VM_PYTHON ?= python3
+COPY_ASAN_RUNTIME ?= $(shell $(CC) -print-file-name=libasan.so)
+.PHONY: file-copy-check file-copy-arm-check file-copy-sanitize-check
+build/libfilecopy_test.so: $(COPY_SRC) $(COPY_HEADERS) | build
+	$(CC) $(CFLAGS) $(COPY_INC) -fPIC -shared $(COPY_SRC) -o $@
+file-copy-check: build/libfilecopy_test.so
+	python3 ../../research/boot_reconstruction/tools/test_file_copy.py --library $< --output build/file_copy_host.json
+build/libfilecopy_test_asan.so: $(COPY_SRC) $(COPY_HEADERS) | build
+	$(CC) $(CFLAGS) $(COPY_INC) -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -fPIC -shared $(COPY_SRC) -o $@
+file-copy-sanitize-check: build/libfilecopy_test_asan.so
+	LD_PRELOAD="$(COPY_ASAN_RUNTIME)" ASAN_OPTIONS=detect_leaks=0:halt_on_error=1 UBSAN_OPTIONS=halt_on_error=1 python3 ../../research/boot_reconstruction/tools/test_file_copy.py --library $< --output build/file_copy_sanitizers.json
+build/file_copy_arm/copy.elf: $(COPY_SRC) $(COPY_HEADERS) src/runtime/spmp_minilibc.c ../../research/boot_reconstruction/examples/native_startup/entry.S ../../research/boot_reconstruction/examples/native_startup/research.ld | build
+	mkdir -p build/file_copy_arm
+	$(CLANG) $(ARM_FLAGS) -std=c11 -O2 -Wall -Wextra -Werror $(COPY_INC) -c src/platform/spmp_file_copy.c -o build/file_copy_arm/copy.o
+	$(CLANG) $(ARM_FLAGS) -std=c11 -O2 -Wall -Wextra -Werror $(COPY_INC) -c src/platform/spmp_fm02_copy.c -o build/file_copy_arm/bridge.o
+	$(CLANG) $(ARM_FLAGS) -std=c11 -O2 -Wall -Wextra -Werror $(COPY_INC) -c tests/ui/file_copy_bridge.c -o build/file_copy_arm/test.o
+	$(CLANG) $(ARM_FLAGS) -std=c11 -O2 -Wall -Wextra -Werror $(COPY_INC) -c features/filemanager/FM01/src/fm01_core.c -o build/file_copy_arm/fm01.o
+	$(CLANG) $(ARM_FLAGS) -std=c11 -O2 -Wall -Wextra -Werror $(COPY_INC) -c features/filemanager/FM02/src/fm02_core.c -o build/file_copy_arm/fm02.o
+	$(CLANG) $(ARM_FLAGS) -std=c11 -O2 -Wall -Wextra -Werror -Iinclude -Itools/arm_shim -c src/runtime/spmp_minilibc.c -o build/file_copy_arm/libc.o
+	$(CLANG) $(ARM_FLAGS) -c ../../research/boot_reconstruction/examples/native_startup/entry.S -o build/file_copy_arm/entry.o
+	ld.lld -T ../../research/boot_reconstruction/examples/native_startup/research.ld --no-undefined --fatal-warnings -Map=build/file_copy_arm/copy.map -o $@ build/file_copy_arm/copy.o build/file_copy_arm/bridge.o build/file_copy_arm/test.o build/file_copy_arm/fm01.o build/file_copy_arm/fm02.o build/file_copy_arm/libc.o build/file_copy_arm/entry.o
+file-copy-arm-check: build/file_copy_arm/copy.elf
+	$(COPY_VM_PYTHON) ../../research/boot_reconstruction/tools/test_file_copy.py --elf $< --output build/file_copy_arm/copy_vm.json
