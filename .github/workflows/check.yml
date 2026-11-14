@@ -12,6 +12,10 @@ jobs:
         run: python3 tools/verify_integrity.py --full
       - name: Test recovered boot, NGame and native ABI (no private firmware)
         run: make -C research/boot_reconstruction test
+      - name: Test media loader and MMPi traversal (synthetic public fixtures)
+        run: |
+          python3 -m unittest discover -s research/Stage56_MediaLoader/tests -v
+          make -C project/spmp-os/features/multimedia/codec_lab check
       - name: Build host prototype
         run: make -C project/spmp-os host
       - name: Test measured MMI input and shell navigation

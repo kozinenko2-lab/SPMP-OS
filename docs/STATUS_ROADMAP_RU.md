@@ -1,3 +1,30 @@
+# Stage56: восстановлена цепочка штатного видео/JPEG loader
+
+В точном `8000_MMI.RAP` найдены и проверены 28 ARM callsites цепочки
+`media_Start -> video selector -> read triplet -> MMPi parser -> CEVA loader`.
+Восстановлена таблица 11 семейств: MPEG-4 HD/ASP, RV8/9, MJPEG, H.263/H.264,
+VC-1, MPEG-2, DivX3 и WMV7/8. Для каждого MMI выбирает `OS_INT`, `OS_EXT` и
+codec; JPEG формирует такую же тройку и вызывает общий loader.
+
+В 52 приватных IMG из нового штатного архива безопасно пройдены все
+`MMPd/MMPs`: 1–4 дескриптора и 13–192 сегмента на файл. Исправлен публичный
+`spmp_mmpi_inspect`: прежние байты «family/slot» оказались старшим байтом flags
+и числом сегментов; теперь проверяются все записи и извлекаются entry/modes.
+Host decoder tests PASS, ARMv5 soft-float archive собран. Код IMG не исполнялся,
+MMIO не трогался. [Отчёт](../research/Stage56_MediaLoader/REPORT_RU.md).
+
+Нижний transport продолжен до команды mailbox `0x90`, cache synchronization и
+точной стартовой MMIO-последовательности. Восстановлены IRQ 31, ISR/DSR,
+ожидание reply через event flag, адресный alias `0x10000000` и отдельный
+`dspCmdDispatcher`; в OEM также найдены опасные debug-spin ветви. Следующее
+исследование — структуры LCD/scale callbacks, ready-state, cache/buffer
+ownership. Таблица из 256 callback-слотов проверена целиком: заполнены только
+`0x40..0x46` (LCD, scaler, malloc/free и debug). Только
+затем возможен безопасный MMI-hosted JPEG probe. Основной
+порядок продукта (файловый менеджер и Atari) этим исследованием не заменён.
+
+---
+
 # Этап 16: разработка без доступной консоли
 
 По просьбе пользователя аппаратная проверка FILES отложена; она не блокирует

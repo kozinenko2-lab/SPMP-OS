@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define CHECK(x) do {if(!(x)){fprintf(stderr,"FAIL %s:%d: %s\n",__FILE__,__LINE__,#x);return 1;}}while(0)
+static void put32(uint8_t *p,uint32_t v){p[0]=(uint8_t)v;p[1]=(uint8_t)(v>>8);p[2]=(uint8_t)(v>>16);p[3]=(uint8_t)(v>>24);}
 static int check_stock(void){
  uint32_t a,b;
  CHECK(spmp_stock_mp3_working_ram_recovered(0,&a,&b)==0 && a==18476 && b==0);
@@ -44,10 +45,19 @@ static int check_headers(void){
 }
 static int check_mmpi(void){
  uint8_t h[128]={0};spmp_mmpi m;
- memcpy(h,"MMPi",4);h[4]=128;memcpy(h+16,"MMPd",4);h[20]=36;
- h[35]=0x61;h[36]=12;h[42]=0x10;
- CHECK(spmp_mmpi_inspect(h,sizeof(h),&m)==0 && m.module_family==0x61 && m.module_slot==12);
- h[4]=127;CHECK(spmp_mmpi_inspect(h,sizeof(h),&m)!=0);
+ memcpy(h,"MMPi",4);put32(h+4,128);put32(h+8,0x11223344);put32(h+12,0x55667788);
+ memcpy(h+16,"MMPd",4);put32(h+20,36);put32(h+24,0x01000001);
+ put32(h+32,0x61000200);put32(h+36,2);put32(h+40,0x00100000);
+ memcpy(h+52,"MMPs",4);put32(h+56,28);put32(h+60,0x00000000);put32(h+76,0xaabbccdd);
+ memcpy(h+80,"MMPs",4);put32(h+84,48);put32(h+88,0x000f0000);
+ CHECK(spmp_mmpi_inspect(h,sizeof(h),&m)==0);
+ CHECK(m.total_size==128 && m.checksum_a==0x11223344 && m.checksum_b==0x55667788);
+ CHECK(m.descriptor_count==1 && m.segment_count==2 && m.payload_bytes==28);
+ CHECK(m.has_entry && m.selected_entry==0x00100000 && m.descriptor_mode_mask==1);
+ h[4]=127;CHECK(spmp_mmpi_inspect(h,sizeof(h),&m)!=0);h[4]=128;
+ h[80]='X';CHECK(spmp_mmpi_inspect(h,sizeof(h),&m)!=0);h[80]='M';
+ put32(h+84,44);CHECK(spmp_mmpi_inspect(h,sizeof(h),&m)!=0);put32(h+84,48);
+ put32(h+36,3);CHECK(spmp_mmpi_inspect(h,sizeof(h),&m)!=0);
  return 0;
 }
 static int check_crc(void){

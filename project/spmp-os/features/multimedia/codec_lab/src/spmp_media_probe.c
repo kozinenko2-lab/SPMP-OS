@@ -71,13 +71,34 @@ int spmp_aac_adts_header(const uint8_t *p,size_t n,spmp_aac_adts *out){
  out->header_bytes=(uint8_t)header;return 0;
 }
 int spmp_mmpi_inspect(const uint8_t *p,size_t n,spmp_mmpi *o){
- uint32_t total,record;
+ size_t at;uint64_t payload=0;uint32_t total,descriptors=0,segments=0,modes=0,entry=0;
+ int has_entry=0;
  if(!p||!o||n<52||n>0xffffffffu)return -1;
- if(p[0]!='M'||p[1]!='M'||p[2]!='P'||p[3]!='i'||
-    p[16]!='M'||p[17]!='M'||p[18]!='P'||p[19]!='d')return -1;
- total=le32(p+4);record=le32(p+20);
- if(total!=n||record!=36||le32(p+40)!=0x00100000u)return -1;
- o->total_size=total;o->header_tag=le32(p+8);o->header_value=le32(p+12);
- o->block_record_size=record;o->module_family=p[35];o->module_slot=p[36];
+ if(p[0]!='M'||p[1]!='M'||p[2]!='P'||p[3]!='i')return -1;
+ total=le32(p+4);if(total!=n || ((n-16u)&3u)!=0)return -1;
+ at=16;
+ while(at<n){
+  uint32_t record,flags,count,item_entry,mode;size_t i;
+  if(n-at<36 || p[at]!='M'||p[at+1]!='M'||p[at+2]!='P'||p[at+3]!='d')return -1;
+  record=le32(p+at+4);if(record!=36)return -1;
+  flags=le32(p+at+16);count=le32(p+at+20);item_entry=le32(p+at+24);
+  mode=(flags>>16)&3u;modes|=1u<<mode;
+  if((flags&0x000f0000u)==0 && item_entry!=0xffffffffu){entry=item_entry;has_entry=1;}
+  at+=36;if(count>(n-at)/24u || UINT32_MAX-segments<count)return -1;
+  descriptors++;segments+=count;
+  for(i=0;i<count;i++){
+   uint32_t bytes;
+   if(n-at<24 || p[at]!='M'||p[at+1]!='M'||p[at+2]!='P'||p[at+3]!='s')return -1;
+   bytes=le32(p+at+4);
+   if(bytes<24 || (bytes&3u)!=0 || (size_t)bytes>n-at)return -1;
+   payload+=(uint64_t)bytes-24u;if(payload>UINT32_MAX)return -1;
+   at+=(size_t)bytes;
+  }
+ }
+ if(!descriptors || at!=n)return -1;
+ o->total_size=total;o->checksum_a=le32(p+8);o->checksum_b=le32(p+12);
+ o->descriptor_record_size=36;o->descriptor_count=descriptors;o->segment_count=segments;
+ o->payload_bytes=(uint32_t)payload;o->selected_entry=entry;
+ o->descriptor_mode_mask=modes;o->has_entry=(uint8_t)has_entry;
  return 0;
 }

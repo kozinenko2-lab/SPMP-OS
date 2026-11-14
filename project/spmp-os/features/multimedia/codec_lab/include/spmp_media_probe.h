@@ -22,10 +22,14 @@ int spmp_aac_adts_header(const uint8_t *p,size_t len,spmp_aac_adts *out);
    NOT interchangeable with full original decoder ABI or PCM decoding. */
 int spmp_stock_mp3_working_ram_recovered(uint32_t available,uint32_t *a,uint32_t *b);
 uint32_t spmp_stock_flac_working_ram_recovered(void);
-/* Untrusted stock codec IMG header; validated without loading executable bytes. */
+/* Untrusted stock MMPi image; traversed without loading executable bytes.
+   The OEM media loader may skip checksum verification for codec triplets, so
+   this helper validates record boundaries/magics rather than claiming trust. */
 typedef struct spmp_mmpi {
- uint32_t total_size, header_tag, header_value, block_record_size;
- uint8_t module_family, module_slot;
+ uint32_t total_size, checksum_a, checksum_b, descriptor_record_size;
+ uint32_t descriptor_count, segment_count, payload_bytes;
+ uint32_t selected_entry, descriptor_mode_mask;
+ uint8_t has_entry;
 } spmp_mmpi;
 int spmp_mmpi_inspect(const uint8_t *bytes,size_t len,spmp_mmpi *out);
 #ifdef __cplusplus

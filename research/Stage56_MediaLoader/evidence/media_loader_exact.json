@@ -1,0 +1,3357 @@
+{
+  "research_only": true,
+  "source_rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified_calls": {
+    "media_start_to_video_selector": {
+      "callsite": "0x002e193c",
+      "target": "0x0031b588"
+    },
+    "selector_to_read_triplet": {
+      "callsite": "0x0031ba64",
+      "target": "0x0034b1a8"
+    },
+    "selector_to_load_triplet": {
+      "callsite": "0x0031ba98",
+      "target": "0x0034b400"
+    },
+    "parse_os_ext": {
+      "callsite": "0x0034b454",
+      "target": "0x0034a7b8"
+    },
+    "start_ceva": {
+      "callsite": "0x0034b494",
+      "target": "0x003491c8"
+    },
+    "wait_ceva_ready": {
+      "callsite": "0x0034b49c",
+      "target": "0x00348dc8"
+    },
+    "parse_os_int_mode_0x10": {
+      "callsite": "0x0034b4d0",
+      "target": "0x0034a7b8"
+    },
+    "send_codec_stage_command": {
+      "callsite": "0x0034b4e8",
+      "target": "0x0034884c"
+    },
+    "wait_codec_ready": {
+      "callsite": "0x0034b4f0",
+      "target": "0x00348e94"
+    },
+    "parse_codec_mode_0x10": {
+      "callsite": "0x0034b56c",
+      "target": "0x0034a7b8"
+    },
+    "jpeg_to_read_triplet": {
+      "callsite": "0x00323434",
+      "target": "0x0034b1a8"
+    },
+    "jpeg_to_load_triplet": {
+      "callsite": "0x00323444",
+      "target": "0x0034b400"
+    },
+    "mmpi_to_ceva_segment_writer": {
+      "callsite": "0x0034a6dc",
+      "target": "0x003486b8"
+    },
+    "segment_writer_to_mailbox": {
+      "callsite": "0x003487c0",
+      "target": "0x0034a034"
+    },
+    "ceva_start_wrapper_to_entry": {
+      "callsite": "0x00349298",
+      "target": "0x003488f8"
+    },
+    "piu_reply_wait_to_timed_flag": {
+      "callsite": "0x0034a170",
+      "target": "0x00339f98"
+    },
+    "piu_reply_wait_to_ack": {
+      "callsite": "0x0034a1dc",
+      "target": "0x00349f28"
+    },
+    "piu_init_clear_interrupt_mask": {
+      "callsite": "0x0034a424",
+      "target": "0x00349f0c"
+    },
+    "piu_init_ack_pending": {
+      "callsite": "0x0034a42c",
+      "target": "0x00349f28"
+    },
+    "piu_init_set_interrupt_mask": {
+      "callsite": "0x0034a43c",
+      "target": "0x00349ef0"
+    },
+    "piu_init_event_flag": {
+      "callsite": "0x0034a460",
+      "target": "0x00339f10"
+    },
+    "piu_init_create_interrupt": {
+      "callsite": "0x0034a484",
+      "target": "0x00339c10"
+    },
+    "piu_init_create_dispatcher_thread": {
+      "callsite": "0x0034a4d0",
+      "target": "0x00339aac"
+    },
+    "piu_isr_read_status": {
+      "callsite": "0x00349f54",
+      "target": "0x00349f38"
+    },
+    "piu_isr_ack_reply": {
+      "callsite": "0x00349f7c",
+      "target": "0x00349f28"
+    },
+    "piu_isr_ack_command": {
+      "callsite": "0x00349fa4",
+      "target": "0x00349f28"
+    },
+    "piu_dsr_signal_reply": {
+      "callsite": "0x00349fe0",
+      "target": "0x00339f3c"
+    },
+    "piu_dsr_wake_dispatcher": {
+      "callsite": "0x0034a00c",
+      "target": "0x00339efc"
+    }
+  },
+  "media_type_map": {
+    "1": "mpeg4_asp when width<721, otherwise mpeg4_hd",
+    "2": "mpeg4_asp",
+    "3": "mjpeg",
+    "4,5": "h263 or built-in ARM callbacks when available",
+    "6": "h264",
+    "9,10": "wmv78",
+    "11,12": "vc1",
+    "13,14": "mpeg2",
+    "17": "realvideo_8",
+    "18": "realvideo_9",
+    "19": "divx3"
+  },
+  "video_triplets": {
+    "mpeg4_hd": {
+      "rom": {
+        "os_int": "/Rom/Image/mpg4_hd_int.img",
+        "os_ext": "/Rom/Image/mpg4_hd_ext.img",
+        "codec": "/Rom/Image/mpg4hddec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/mpg4_hd_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/mpg4_hd_ext.img",
+        "codec": "/fat20a2/hda2/xyz/mpg4hddec.img"
+      }
+    },
+    "mpeg4_asp": {
+      "rom": {
+        "os_int": "/Rom/Image/mpg4asp_int.img",
+        "os_ext": "/Rom/Image/mpg4asp_ext.img",
+        "codec": "/Rom/Image/mpg4aspdec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/mpg4asp_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/mpg4asp_ext.img",
+        "codec": "/fat20a2/hda2/xyz/mpg4aspdec.img"
+      }
+    },
+    "realvideo_8": {
+      "rom": {
+        "os_int": "/Rom/Image/rv8_os_int.img",
+        "os_ext": "/Rom/Image/rv8_os_ext.img",
+        "codec": "/Rom/Image/rv8dec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/rv8_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/rv8_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/rv8dec.img"
+      }
+    },
+    "realvideo_9": {
+      "rom": {
+        "os_int": "/Rom/Image/rv9_os_int.img",
+        "os_ext": "/Rom/Image/rv9_os_ext.img",
+        "codec": "/Rom/Image/rv9dec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/rv9_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/rv9_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/rv9dec.img"
+      }
+    },
+    "mjpeg": {
+      "rom": {
+        "os_int": "/Rom/Image/mjpg_os_int.img",
+        "os_ext": "/Rom/Image/mjpg_os_ext.img",
+        "codec": "/Rom/Image/mjpgdec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/mjpg_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/mjpg_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/mjpgdec.img"
+      }
+    },
+    "h264": {
+      "rom": {
+        "os_int": "/Rom/Image/h264_os_int.img",
+        "os_ext": "/Rom/Image/h264_os_ext.img",
+        "codec": "/Rom/Image/h264_codec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/h264_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/h264_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/h264_codec.img"
+      }
+    },
+    "h263": {
+      "rom": {
+        "os_int": "/Rom/Image/h263dec_os_int.img",
+        "os_ext": "/Rom/Image/h263dec_os_ext.img",
+        "codec": "/Rom/Image/h263dec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/h263dec_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/h263dec_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/h263dec.img"
+      }
+    },
+    "vc1": {
+      "rom": {
+        "os_int": "/Rom/Image/vc1_os_int.img",
+        "os_ext": "/Rom/Image/vc1_os_ext.img",
+        "codec": "/Rom/Image/vc1dec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/vc1_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/vc1_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/vc1dec.img"
+      }
+    },
+    "mpeg2": {
+      "rom": {
+        "os_int": "/Rom/Image/mpg2dec_os_int.img",
+        "os_ext": "/Rom/Image/mpg2dec_os_ext.img",
+        "codec": "/Rom/Image/mpg2dec_codec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/mpg2dec_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/mpg2dec_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/mpg2dec_codec.img"
+      }
+    },
+    "divx3": {
+      "rom": {
+        "os_int": "/Rom/Image/divx3_os_int.img",
+        "os_ext": "/Rom/Image/divx3_os_ext.img",
+        "codec": "/Rom/Image/divx3dec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/divx3_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/divx3_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/divx3dec.img"
+      }
+    },
+    "wmv78": {
+      "rom": {
+        "os_int": "/Rom/Image/wmv78_os_int.img",
+        "os_ext": "/Rom/Image/wmv78_os_ext.img",
+        "codec": "/Rom/Image/wmv78dec.img"
+      },
+      "fallback": {
+        "os_int": "/fat20a2/hda2/xyz/wmv78_os_int.img",
+        "os_ext": "/fat20a2/hda2/xyz/wmv78_os_ext.img",
+        "codec": "/fat20a2/hda2/xyz/wmv78dec.img"
+      }
+    }
+  },
+  "jpeg_relative_triplet": {
+    "os_ext": "/jpgdec_os_ext.img",
+    "os_int": "/jpgdec_os_int.img",
+    "codec": "/jpgdec.img"
+  },
+  "loader_sequence": [
+    "read OS_INT, OS_EXT and codec files; each fallback path is tried before the ROM path",
+    "parse OS_EXT with mode argument 0 and keep its selected entry",
+    "start CEVA and wait up to 30 polling iterations, delaying 10 OEM time units per iteration",
+    "parse/copy OS_INT with mode argument 0x10",
+    "send command bytes 81 01 00 00 and wait up to 30 polling iterations",
+    "parse/copy the codec image with mode argument 0x10",
+    "optionally free the three aligned file buffers when context flag bit 0 is set"
+  ],
+  "mmpd_contract": {
+    "record_bytes": 36,
+    "flags_offset": 16,
+    "segment_count_offset": 20,
+    "entry_offset": 24,
+    "entry_accept_condition": "(flags & 0x000f0000) == 0 and entry != 0xffffffff",
+    "mode_argument": "(flags >> 16) & 3",
+    "segment_record": "MMPs: 24-byte header; +4 total bytes; +8 destination"
+  },
+  "ceva_command_contract": {
+    "segment_write_command": {
+      "opcode": "0x90",
+      "bytes_1_to_3": "00 10 00 for the observed caller",
+      "mode_nonzero_at_offset_4": true,
+      "destination_offset": 8,
+      "payload_bytes_offset": 12,
+      "source_pointer_offset": 16
+    },
+    "codec_stage_command": "81 01 00 00",
+    "start_register_writes": {
+      "0x9053200c": "zeroed; later polled for ready-state transition",
+      "0x90532044": "zeroed",
+      "0x90532804": "zeroed",
+      "0x90532808": "zeroed",
+      "0x90530468": "0 -> OR 1 -> 0x101 start sequence",
+      "0x9053046c": "selected OS_EXT entry"
+    },
+    "synchronization": "OEM code masks IRQ/FIQ around a CP15 cache-drain/synchronization sequence before mailbox publication"
+  },
+  "piu_reply_irq_contract": {
+    "registers": {
+      "0x90532030": "ARM-to-CEVA command pointer",
+      "0x90532034": "ARM response pointer for a CEVA-to-ARM command",
+      "0x9053203c": "CEVA reply pointer; OEM returns pointer OR 0x10000000",
+      "0x90532040": "CEVA-to-ARM command pointer",
+      "0x90532048": "interrupt mask; helper functions atomically set or clear selected bits",
+      "0x9053204c": "interrupt status/acknowledge; read for pending bits and written to acknowledge them"
+    },
+    "interrupt": {
+      "vector": 31,
+      "priority": 12,
+      "reply_status_bit": "0x08",
+      "command_status_bit": "0x10",
+      "isr": "0x00349f48 reads status, increments per-bit pending counters, acknowledges bits and returns 2",
+      "dsr": "0x00349fbc signals reply event bit 1 and wakes the command dispatcher from the pending counters"
+    },
+    "reply_wait": {
+      "function": "0x0034a124",
+      "polling_mode": "busy-waits for status bit 0x08 and acknowledges it",
+      "rtos_mode": "waits for event bit 1 with an absolute deadline of current time + 0x0bb8 OEM time units",
+      "result": "reads the pointer from 0x9053203c and maps it through the 0x10000000 alias"
+    },
+    "initialization": {
+      "function": "0x0034a3f4",
+      "mask_and_ack": "clear/ack 0x38, then enable status bit 0x10",
+      "dispatcher_entry": "0x0034a2c4",
+      "dispatcher_name": "dspCmdDispatcher",
+      "dispatcher_priority": 8,
+      "dispatcher_stack_bytes": 8192
+    },
+    "incoming_request_layout": {
+      "opcode_offset": 0,
+      "no_reply_offset": 1,
+      "payload_bytes_u16_offset": 2,
+      "payload_offset": 4
+    },
+    "incoming_handlers": {
+      "0x40": {
+        "handler": "0x003499f8",
+        "inferred_role": "lcd_geometry"
+      },
+      "0x41": {
+        "handler": "0x00349b7c",
+        "inferred_role": "scale_engine"
+      },
+      "0x42": {
+        "handler": "0x00349974",
+        "inferred_role": "lcd_clear"
+      },
+      "0x43": {
+        "handler": "0x00349cc8",
+        "inferred_role": "allocate_arm_memory"
+      },
+      "0x44": {
+        "handler": "0x00349d34",
+        "inferred_role": "free_arm_memory"
+      },
+      "0x45": {
+        "handler": "0x00349db8",
+        "inferred_role": "debug_message"
+      },
+      "0x46": {
+        "handler": "0x00349e3c",
+        "inferred_role": "read_debug_flags"
+      }
+    },
+    "handler_table": "0x0055b7e0; all 256 entries checked, only opcodes 0x40..0x46 are populated",
+    "response_path": "handler publishes its ARM response pointer through 0x90532034, performs cache synchronization and acknowledges/notifies status bit 0x02",
+    "ownership_note": "The original has one synchronous reply path plus a permanent CEVA-to-ARM command dispatcher; buffers and callbacks are shared global state."
+  },
+  "safety": [
+    "Static exact-build analysis only; no firmware or IMG code was executed.",
+    "The OEM codec path passes parser modes 0/0x10, so MMPi checksum words are not authenticated there.",
+    "The wait-ready code reads 0x9053200c; no SPMP-OS code should touch this image-specific MMIO before board validation.",
+    "Several OEM timeout/error branches can deliberately spin forever under debug flags; a new provider must replace them with bounded failures.",
+    "The PIU ISR/DSR and 0x10000000 pointer alias are exact-build observations, not a portable address map or permission to install an SPMP-OS interrupt handler.",
+    "Paths under /fat20a2/hda2/xyz are OEM development fallbacks, not the user SD layout selected for SPMP-OS."
+  ],
+  "private_image_inventory": {
+    "DIVX3DEC.IMG": {
+      "bytes": 156536,
+      "checksum_words_unverified": [
+        "0x039f3b9a",
+        "0x00001ad1"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 42,
+      "payload_bytes": 155368,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 4,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 28576,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00004d00"
+        },
+        {
+          "offset": "0x00007034",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 11,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 20128,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x0000c000",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 13,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 48056,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x0019fc08"
+        },
+        {
+          "offset": "0x00017d14",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 14,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 58608,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000fe18"
+        }
+      ],
+      "sha256": "5b38f9a1bb58d490b2128fdc2bfbb1be6eb323309f6fb3ed5cb6e6e9a291fa8d"
+    },
+    "DIVX3_OS_EXT.IMG": {
+      "bytes": 145592,
+      "checksum_words_unverified": [
+        "0x97e02e48",
+        "0x00002abe"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 141328,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95616,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x000181fc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "04a6a04ea343f5aa8aad1d740b53bd1e14d9d33108a4544090b75f297949b6f5"
+    },
+    "DIVX3_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9504b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "1b1f76ce20770857d06d3538e32984afbd7b863ab1e16531e71dc891fd4d08d0"
+    },
+    "GAME/KGBVIDEO.IMG": {
+      "bytes": 130592,
+      "checksum_words_unverified": [
+        "0x9679d66b",
+        "0x0000078c"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 13,
+      "payload_bytes": 130120,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 1,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 1056,
+          "destination_min": "0x000046e0",
+          "destination_max": "0x000046e0"
+        },
+        {
+          "offset": "0x0000046c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 5,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 16128,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00004408",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 2,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 102432,
+          "destination_min": "0x0019a000",
+          "destination_max": "0x0019a020"
+        },
+        {
+          "offset": "0x0001d47c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 5,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 10504,
+          "destination_min": "0x00001c40",
+          "destination_max": "0x00002e80"
+        }
+      ],
+      "sha256": "ade48d019a579cf1e20cd587e8cc37e060e1434257b707ffb8174b48b53b31e2"
+    },
+    "GAME/KGBVIDEO_OS_EXT.IMG": {
+      "bytes": 141824,
+      "checksum_words_unverified": [
+        "0xdb9e8b53",
+        "0x00002a22"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 168,
+      "payload_bytes": 137704,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 129,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 94464,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8c0"
+        },
+        {
+          "offset": "0x00017d4c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 39,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 43240,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x00189580"
+        }
+      ],
+      "sha256": "9f5d9501cb24b67765448c59f241b8b853064e0b30fa998ec5f55fc5e1afc349"
+    },
+    "GAME/KGBVIDEO_OS_INT.IMG": {
+      "bytes": 24848,
+      "checksum_words_unverified": [
+        "0xd44157be",
+        "0x00000784"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 24,
+      "payload_bytes": 24184,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 11,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 17984,
+          "destination_min": "0x00000000",
+          "destination_max": "0x00000de0"
+        },
+        {
+          "offset": "0x0000477c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 13,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 6200,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00001bc0"
+        }
+      ],
+      "sha256": "efcfd82b3d356c2fa72e4861af49cd712543615476c01d8aae2a14f56effd358"
+    },
+    "H263DEC.IMG": {
+      "bytes": 103480,
+      "checksum_words_unverified": [
+        "0x4e643584",
+        "0x000016c5"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 48,
+      "payload_bytes": 102168,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 6,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 29280,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00005ba0"
+        },
+        {
+          "offset": "0x00007324",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 7,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 11808,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x0000a210",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 5,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 20736,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x0019a100"
+        },
+        {
+          "offset": "0x0000f3ac",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 30,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 40344,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000c508"
+        }
+      ],
+      "sha256": "4381da0c94a6831500ef3762386228cb6a35828486759426b97e158ef7cef594"
+    },
+    "H263DEC_OS_EXT.IMG": {
+      "bytes": 145592,
+      "checksum_words_unverified": [
+        "0x97e7ab08",
+        "0x00002abe"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 141328,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95616,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x000181fc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "24c83bd1eaf1ae7b737b85ce39fa598286d691dc9954b6f617d0ff349b70d7c8"
+    },
+    "H263DEC_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9504b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "1b1f76ce20770857d06d3538e32984afbd7b863ab1e16531e71dc891fd4d08d0"
+    },
+    "H264_CODEC.IMG": {
+      "bytes": 223440,
+      "checksum_words_unverified": [
+        "0x9cc5943f",
+        "0x000025bf"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 150,
+      "payload_bytes": 219680,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 12,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31616,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00007d40"
+        },
+        {
+          "offset": "0x00007cd4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 72,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 54176,
+          "destination_min": "0x00130000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00015758",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 26,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 73680,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001a52f8"
+        },
+        {
+          "offset": "0x000279bc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 40,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 60208,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000fd78"
+        }
+      ],
+      "sha256": "826a5399d403398b2e443b40c35b597cfac4ce757405a14c5ca4c19c2b9e1c8a"
+    },
+    "H264_OS_EXT.IMG": {
+      "bytes": 145888,
+      "checksum_words_unverified": [
+        "0xac1597a4",
+        "0x00002ad6"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 175,
+      "payload_bytes": 141600,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 132,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95872,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x00018314",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45728,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898c0"
+        }
+      ],
+      "sha256": "4cb5c7082f31a52bd6a86779d0c56ff0911ec7808febe40d0d6b59a5692fecf3"
+    },
+    "H264_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9804b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "230319d42fb5818950c201e788b453a171d8c05c66665a803b92127d389b8bc8"
+    },
+    "JPGDEC.IMG": {
+      "bytes": 110144,
+      "checksum_words_unverified": [
+        "0x58bed2c8",
+        "0x00001b63"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 23,
+      "payload_bytes": 109432,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 1,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 30336,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00000260"
+        },
+        {
+          "offset": "0x000076cc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 7,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 30464,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001af000"
+        },
+        {
+          "offset": "0x0000ee98",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 7,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4264,
+          "destination_min": "0x0017a000",
+          "destination_max": "0x0017b090"
+        },
+        {
+          "offset": "0x0001000c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 44368,
+          "destination_min": "0x000014e0",
+          "destination_max": "0x0000ae30"
+        }
+      ],
+      "sha256": "3f15acaf6b89b87a025a0d2316c0347a89bc8fe227f260579c3658ca407a197f"
+    },
+    "JPGDEC_OS_EXT.IMG": {
+      "bytes": 145624,
+      "checksum_words_unverified": [
+        "0x7b0ea2e5",
+        "0x00002abe"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 141360,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95616,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x000181fc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45744,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001698d0"
+        }
+      ],
+      "sha256": "51b662c699b0132c7e18d6a15eed60a9e56bb9e6e7fb525dc3970465b4812f85"
+    },
+    "JPGDEC_OS_INT.IMG": {
+      "bytes": 5256,
+      "checksum_words_unverified": [
+        "0x92e521f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 4736,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4288,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00001460"
+        }
+      ],
+      "sha256": "1067b9bbcf78dc1158f68663fa951e357cb65fe5ee811f9e6f01d0faf1fcabbf"
+    },
+    "JPGENC_CODEC.IMG": {
+      "bytes": 59952,
+      "checksum_words_unverified": [
+        "0x49c2a0df",
+        "0x00000cd7"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 29,
+      "payload_bytes": 59096,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 9,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 27584,
+          "destination_min": "0x000004c0",
+          "destination_max": "0x00006c80"
+        },
+        {
+          "offset": "0x00006ccc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 4,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 1664,
+          "destination_min": "0x001fd000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x000073d0",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 5,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 320,
+          "destination_min": "0x0019a000",
+          "destination_max": "0x0019a128"
+        },
+        {
+          "offset": "0x000075ac",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 11,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 29528,
+          "destination_min": "0x00001640",
+          "destination_max": "0x0000c400"
+        }
+      ],
+      "sha256": "f16a89fbf34d8319367daaee45263ba0311162b4ac5c6093c68aa7e4ac882d6b"
+    },
+    "JPGENC_OS_EXT.IMG": {
+      "bytes": 143552,
+      "checksum_words_unverified": [
+        "0x5ed38ae6",
+        "0x00002a30"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 170,
+      "payload_bytes": 139384,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 130,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 94816,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x00017ec4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 40,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 44568,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001894b0"
+        }
+      ],
+      "sha256": "1c3e6bf4b98f3a560ae0ac78eda6195a289cc7ee2372ad55adea30e9ef716617"
+    },
+    "JPGENC_OS_INT.IMG": {
+      "bytes": 6336,
+      "checksum_words_unverified": [
+        "0xe9d6b4c5",
+        "0x00000073"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 22,
+      "payload_bytes": 5720,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 1056,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x00000544",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 12,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4664,
+          "destination_min": "0x00000408",
+          "destination_max": "0x000015c0"
+        }
+      ],
+      "sha256": "cd454a6a1ab23ca5d8bd122899ce63581f15a56609e77a1e5760fb71923eaf2f"
+    },
+    "MJPGDEC.IMG": {
+      "bytes": 65256,
+      "checksum_words_unverified": [
+        "0x0784d329",
+        "0x00000e25"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 26,
+      "payload_bytes": 64472,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 9,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 26944,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00006320"
+        },
+        {
+          "offset": "0x00006a4c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 4,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2464,
+          "destination_min": "0x001fd000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00007470",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4736,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x0019b0b8"
+        },
+        {
+          "offset": "0x000087d4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 5,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 30328,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000c000"
+        }
+      ],
+      "sha256": "92f9d5d46d17cf318d393abe7d9f3f0a55423ba375753555d061089356996e47"
+    },
+    "MJPGENC_CODEC.IMG": {
+      "bytes": 78312,
+      "checksum_words_unverified": [
+        "0x32487e0b",
+        "0x000007e4"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 33,
+      "payload_bytes": 77360,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 8,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 14464,
+          "destination_min": "0x000004c0",
+          "destination_max": "0x00003b80"
+        },
+        {
+          "offset": "0x00003974",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 7,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 3968,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x000049c0",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 3,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 288,
+          "destination_min": "0x0019a000",
+          "destination_max": "0x0019a0e0"
+        },
+        {
+          "offset": "0x00004b4c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 15,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 58640,
+          "destination_min": "0x00001540",
+          "destination_max": "0x0000fa38"
+        }
+      ],
+      "sha256": "11792e7bc264f9c0d11ed1449be08aae41b2debe113175247a710dd023baf873"
+    },
+    "MJPGENC_OS_EXT.IMG": {
+      "bytes": 141816,
+      "checksum_words_unverified": [
+        "0x00883ef2",
+        "0x00002a39"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 169,
+      "payload_bytes": 137672,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 130,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 94624,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8c0"
+        },
+        {
+          "offset": "0x00017e04",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 39,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 43048,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001894c0"
+        }
+      ],
+      "sha256": "ae23d034ff29e28e107ffd51cb9be80a5d93c95c13e8c15d5c0383a046681b59"
+    },
+    "MJPGENC_OS_INT.IMG": {
+      "bytes": 6104,
+      "checksum_words_unverified": [
+        "0x802580ab",
+        "0x00000074"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 23,
+      "payload_bytes": 5464,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 1056,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x00000544",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 13,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4408,
+          "destination_min": "0x00000408",
+          "destination_max": "0x000014c0"
+        }
+      ],
+      "sha256": "4f0a98badc5883c1717b66fff67528ee0bababe98e17ddf1fea47f7b18b4e6ee"
+    },
+    "MJPG_OS_EXT.IMG": {
+      "bytes": 145872,
+      "checksum_words_unverified": [
+        "0x4c143b32",
+        "0x00002ad5"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 175,
+      "payload_bytes": 141584,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 132,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95872,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x00018314",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "61ee84433e8d9609d0fffd4445d5f4053d4567733996840e67c54dcf6eea8329"
+    },
+    "MJPG_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9504b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "1b1f76ce20770857d06d3538e32984afbd7b863ab1e16531e71dc891fd4d08d0"
+    },
+    "MPG2DEC_CODEC.IMG": {
+      "bytes": 107600,
+      "checksum_words_unverified": [
+        "0xabe4467a",
+        "0x00001d10"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 56,
+      "payload_bytes": 106096,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 11,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31872,
+          "destination_min": "0x00000260",
+          "destination_max": "0x000064a0"
+        },
+        {
+          "offset": "0x00007dbc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 11,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 28960,
+          "destination_min": "0x0012de60",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x0000f008",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 1,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2560,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x000fa000"
+        },
+        {
+          "offset": "0x0000fa44",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 33,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 42704,
+          "destination_min": "0x000014e0",
+          "destination_max": "0x0000cc40"
+        }
+      ],
+      "sha256": "8c7f134eca7f20a613795e74df0e8e4691aae7f7223e78dc006bfdddfee6b1d1"
+    },
+    "MPG2DEC_OS_EXT.IMG": {
+      "bytes": 145872,
+      "checksum_words_unverified": [
+        "0x4e7d3b72",
+        "0x00002ad5"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 175,
+      "payload_bytes": 141584,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 132,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95872,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x00018314",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "e930fe77a62c4a7e43f19d7b38e58ef505b7bef92919eeb837a8d489d84d9cfb"
+    },
+    "MPG2DEC_OS_INT.IMG": {
+      "bytes": 5256,
+      "checksum_words_unverified": [
+        "0x950521f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 4736,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4288,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00001460"
+        }
+      ],
+      "sha256": "cc89f2b6891393ebfa3390bb342b8c50df6a37c04237f7c522b9674d0c425ba9"
+    },
+    "MPG4ASPDEC.IMG": {
+      "bytes": 294064,
+      "checksum_words_unverified": [
+        "0xe6bec71a",
+        "0x0000299f"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 61,
+      "payload_bytes": 292440,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 9,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31776,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00007c20"
+        },
+        {
+          "offset": "0x00007d2c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 13,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 52640,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00014c28",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 10,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 164592,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x001bae20"
+        },
+        {
+          "offset": "0x0003d02c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 29,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 43432,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000c000"
+        }
+      ],
+      "sha256": "c0ddd25ddf6c77155ff3c453cd60ce3b26e826b9e8edc69322d0c34fd0d618ee"
+    },
+    "MPG4ASP_EXT.IMG": {
+      "bytes": 153176,
+      "checksum_words_unverified": [
+        "0xd7549185",
+        "0x00002dc9"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 148912,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 102496,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x00019cdc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 46416,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x00189b70"
+        }
+      ],
+      "sha256": "1fa42f52e85329cd2fd0495df47e54a12bafde991d3d53e2c4b8fc71413726cd"
+    },
+    "MPG4ASP_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0xed0fb9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "989cd40e9bdd96bafd1fe8b60995bb3bd3e2c2f409540f4afa6ac6cd5f67e5b8"
+    },
+    "MPG4HDDEC.IMG": {
+      "bytes": 125864,
+      "checksum_words_unverified": [
+        "0xacfb1978",
+        "0x000019af"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 76,
+      "payload_bytes": 123880,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 11,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31424,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00006fc0"
+        },
+        {
+          "offset": "0x00007bfc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 7,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 16640,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x0000bdc8",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 6,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 19120,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x0019a0b0"
+        },
+        {
+          "offset": "0x0001092c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 52,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 56696,
+          "destination_min": "0x000014e0",
+          "destination_max": "0x0000fcc0"
+        }
+      ],
+      "sha256": "79bb699560d8a8bd87939f4bbbd13fd935d41229b76a5d8ca10bb945d16a5c51"
+    },
+    "MPG4SPDEC.IMG": {
+      "bytes": 125952,
+      "checksum_words_unverified": [
+        "0x2d23de87",
+        "0x0000195d"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 73,
+      "payload_bytes": 124040,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 8,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 30976,
+          "destination_min": "0x000004c0",
+          "destination_max": "0x00007060"
+        },
+        {
+          "offset": "0x000079f4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 7,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 17248,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x0000be20",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 6,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 19120,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x0019a0b0"
+        },
+        {
+          "offset": "0x00010984",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 52,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 56696,
+          "destination_min": "0x00001c40",
+          "destination_max": "0x0000fcc0"
+        }
+      ],
+      "sha256": "5d2eba5a005f3e0fd7832c3e87d3c87f26a7df388221277bd6732b59ffc3212e"
+    },
+    "MPG4SPENC_CODEC.IMG": {
+      "bytes": 113608,
+      "checksum_words_unverified": [
+        "0x5ac232a8",
+        "0x00001cb9"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 61,
+      "payload_bytes": 111984,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 7,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 32160,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00007e20"
+        },
+        {
+          "offset": "0x00007e7c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 7,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 26688,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x0000e788",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 4,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2056,
+          "destination_min": "0x0019a000",
+          "destination_max": "0x0019a7e0"
+        },
+        {
+          "offset": "0x0000f014",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 51080,
+          "destination_min": "0x000014e0",
+          "destination_max": "0x0000f758"
+        }
+      ],
+      "sha256": "dfec06a397654c953f7e54fc1563a7fba1b28758cf082611d560a30f6d3f5563"
+    },
+    "MPG4SPENC_OS_EXT.IMG": {
+      "bytes": 145384,
+      "checksum_words_unverified": [
+        "0x62ccc399",
+        "0x00002a93"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 141120,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95680,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x0001823c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45440,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001897a0"
+        }
+      ],
+      "sha256": "acff76a41bdf438decd8ee8f355fe3a5a2e57d75a63cb92f9377fe341ceb8f44"
+    },
+    "MPG4SPENC_OS_INT.IMG": {
+      "bytes": 5256,
+      "checksum_words_unverified": [
+        "0x71ffea72",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 4736,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4288,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00001460"
+        }
+      ],
+      "sha256": "1d6bd3717da7224a20ac79b014785377a9a4663e3e90c0e6124c20a730121fd7"
+    },
+    "MPG4_HD_EXT.IMG": {
+      "bytes": 145872,
+      "checksum_words_unverified": [
+        "0x4e57f442",
+        "0x00002ad5"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 175,
+      "payload_bytes": 141584,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 132,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95872,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x00018314",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "66672b2b77953e84660685420d8dea5260adb2be333e5f6d3a866a4f437dee47"
+    },
+    "MPG4_HD_INT.IMG": {
+      "bytes": 5256,
+      "checksum_words_unverified": [
+        "0x950521f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 4736,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 4288,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00001460"
+        }
+      ],
+      "sha256": "cc89f2b6891393ebfa3390bb342b8c50df6a37c04237f7c522b9674d0c425ba9"
+    },
+    "MPG4_OS_EXT.IMG": {
+      "bytes": 285456,
+      "checksum_words_unverified": [
+        "0x4baf296a",
+        "0x00004601"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 192,
+      "payload_bytes": 280760,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 144,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 148960,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00025394",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 48,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 131800,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001a8bc0"
+        }
+      ],
+      "sha256": "08d08bc4ac0e356978a1d2e11499a92e1e3bc0b7cfadf2dda05dca15fc58eefc"
+    },
+    "MPG4_OS_INT.IMG": {
+      "bytes": 92816,
+      "checksum_words_unverified": [
+        "0x2285e3d1",
+        "0x00000f43"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 83,
+      "payload_bytes": 90736,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 16,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 32160,
+          "destination_min": "0x00000000",
+          "destination_max": "0x00007320"
+        },
+        {
+          "offset": "0x00007f54",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 67,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 58576,
+          "destination_min": "0x00000408",
+          "destination_max": "0x0000e640"
+        }
+      ],
+      "sha256": "0bed2af597aa29f3817ca33c31a267c793b429f702521167a00c4a62f4caba05"
+    },
+    "RV8DEC.IMG": {
+      "bytes": 380824,
+      "checksum_words_unverified": [
+        "0x307283e2",
+        "0x0000266c"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 108,
+      "payload_bytes": 378072,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 9,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31808,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00006100"
+        },
+        {
+          "offset": "0x00007d4c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 57,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 37472,
+          "destination_min": "0x00130000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00011528",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 257808,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001cfc00"
+        },
+        {
+          "offset": "0x0005051c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 34,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 50984,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000c600"
+        }
+      ],
+      "sha256": "5e8d0ec86dfb74b85ce9e35695f5c1cf2fb48a9468196002c6ba76646c3733c6"
+    },
+    "RV8_OS_EXT.IMG": {
+      "bytes": 145592,
+      "checksum_words_unverified": [
+        "0xa823077b",
+        "0x00002abc"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 141328,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95616,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x000181fc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "9e63477b771453654f81cb055b774530faaac8f8e33c5c35be0b8180b2a46826"
+    },
+    "RV8_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9504b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "1b1f76ce20770857d06d3538e32984afbd7b863ab1e16531e71dc891fd4d08d0"
+    },
+    "RV9DEC.IMG": {
+      "bytes": 393784,
+      "checksum_words_unverified": [
+        "0xe54219f4",
+        "0x00002925"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 134,
+      "payload_bytes": 390408,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 9,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31808,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00007e60"
+        },
+        {
+          "offset": "0x00007d4c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 60,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 40736,
+          "destination_min": "0x00130000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00012230",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 11,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 257832,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001cfc60"
+        },
+        {
+          "offset": "0x00051284",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 54,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 60032,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000ff00"
+        }
+      ],
+      "sha256": "2909b749eea8ab16741bbac9e3f67db6ca32344f455d79ca7b00e95183d82eb4"
+    },
+    "RV9DEC_NORMAL.IMG": {
+      "bytes": 392640,
+      "checksum_words_unverified": [
+        "0x37796e17",
+        "0x0000289d"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 133,
+      "payload_bytes": 389288,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 8,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31808,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00007e60"
+        },
+        {
+          "offset": "0x00007d34",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 60,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 39616,
+          "destination_min": "0x00130000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00011db8",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 11,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 257832,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001cfc60"
+        },
+        {
+          "offset": "0x00050e0c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 54,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 60032,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000ff00"
+        }
+      ],
+      "sha256": "c1821a8aa9db45983a15454344990b338203d79b90597a60b0ed8dd2eed8e6b1"
+    },
+    "RV9_OS_EXT.IMG": {
+      "bytes": 145872,
+      "checksum_words_unverified": [
+        "0xf7dd333f",
+        "0x00002ad6"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 175,
+      "payload_bytes": 141584,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 132,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95872,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x00018314",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "0532e2bd781170bce9550962b32e843fe0fbb79af239c3c4ed4268b160029da3"
+    },
+    "RV9_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9504b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "1b1f76ce20770857d06d3538e32984afbd7b863ab1e16531e71dc891fd4d08d0"
+    },
+    "VC1DEC.IMG": {
+      "bytes": 345184,
+      "checksum_words_unverified": [
+        "0x23aa6eac",
+        "0x0000612b"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 94,
+      "payload_bytes": 342768,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 9,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 31488,
+          "destination_min": "0x00000260",
+          "destination_max": "0x000074e0"
+        },
+        {
+          "offset": "0x00007c0c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 24,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 189696,
+          "destination_min": "0x000f2000",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00036370",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 30,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 61952,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x001a3c80"
+        },
+        {
+          "offset": "0x00045864",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 31,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 59632,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000fbd0"
+        }
+      ],
+      "sha256": "96a3031c34587ad444e34ff27446acbdff4e3858835b1b536c03ee5ab6d91a8d"
+    },
+    "VC1_OS_EXT.IMG": {
+      "bytes": 145592,
+      "checksum_words_unverified": [
+        "0xa822ad7b",
+        "0x00002abc"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 141328,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95616,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x000181fc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "19a120036eaab2c5017efa29b3fd2cec48d7a3e426183af75c1f233d671ea78c"
+    },
+    "VC1_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9504b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "1b1f76ce20770857d06d3538e32984afbd7b863ab1e16531e71dc891fd4d08d0"
+    },
+    "WMV78DEC.IMG": {
+      "bytes": 273464,
+      "checksum_words_unverified": [
+        "0x1738974c",
+        "0x0000319a"
+      ],
+      "descriptor_count": 4,
+      "segment_count": 28,
+      "payload_bytes": 272632,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 1,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 30784,
+          "destination_min": "0x00000260",
+          "destination_max": "0x00000260"
+        },
+        {
+          "offset": "0x0000788c",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 6,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 60448,
+          "destination_min": "0x0012de60",
+          "destination_max": "0x001ff000"
+        },
+        {
+          "offset": "0x00016560",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 9,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 122736,
+          "destination_min": "0x000fa000",
+          "destination_max": "0x0019aa80"
+        },
+        {
+          "offset": "0x000345cc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 12,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 58664,
+          "destination_min": "0x00000ce0",
+          "destination_max": "0x0000fa20"
+        }
+      ],
+      "sha256": "ad17e7e796339e47f27d03d9d4e6a01d1807e1b561d98af95ce5cc404979a997"
+    },
+    "WMV78_OS_EXT.IMG": {
+      "bytes": 145592,
+      "checksum_words_unverified": [
+        "0xa823ad7b",
+        "0x00002abc"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 174,
+      "payload_bytes": 141328,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 131,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 95616,
+          "destination_min": "0x000f0000",
+          "destination_max": "0x0012c8e0"
+        },
+        {
+          "offset": "0x000181fc",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 43,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 45712,
+          "destination_min": "0x000f8000",
+          "destination_max": "0x001898b0"
+        }
+      ],
+      "sha256": "fee11d2c4eaba623fc4f72bcfcd6846521412035f07dffca36a25982c4699ebd"
+    },
+    "WMV78_OS_INT.IMG": {
+      "bytes": 3208,
+      "checksum_words_unverified": [
+        "0x9504b9f2",
+        "0x00000029"
+      ],
+      "descriptor_count": 2,
+      "segment_count": 18,
+      "payload_bytes": 2688,
+      "selected_entry": "0x00100000",
+      "descriptors": [
+        {
+          "offset": "0x00000010",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61000200",
+          "mode": 0,
+          "segment_count": 10,
+          "entry": "0x00100000",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 448,
+          "destination_min": "0x00000000",
+          "destination_max": "0x000001c0"
+        },
+        {
+          "offset": "0x000002e4",
+          "version": "0x01000001",
+          "reserved": "0x00000000",
+          "flags": "0x61010200",
+          "mode": 1,
+          "segment_count": 8,
+          "entry": "0xffffffff",
+          "aux": [
+            "0x00000000",
+            "0x00000000"
+          ],
+          "payload_bytes": 2240,
+          "destination_min": "0x00000408",
+          "destination_max": "0x00000c60"
+        }
+      ],
+      "sha256": "1b1f76ce20770857d06d3538e32984afbd7b863ab1e16531e71dc891fd4d08d0"
+    }
+  }
+}
