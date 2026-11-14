@@ -372,3 +372,15 @@ GitHub Actions настраивается отдельно; локальные �
 самого файла хешей. При изменении исходников обновляйте его через
 `python3 tools/update_public_manifest.py` после `git add`.
 Исторический FILE_SHA256.tsv относится к приватному входному архиву.
+
+### Published Stage15 package
+
+Source `19fad81496b75a3d0a34e6aab430ffe1f41cc7c8`,
+[workflow43575053229](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43575053229) PASS.
+Artifact14105733004 downloaded and checked against its SHA256 digest;
+repacking its real ELF reproduces the BIN and manifest exactly. Nested SD BIN,
+layout manifest and original Roboto TTF identities also PASS.
+20 public synthetic ARM cases PASS, then 3 original RAP loader/collector/return
+cases PASS on the exact published real ELF. Hardware remains VM_TESTED_ONLY.
+See [published proof](../research/boot_reconstruction/evidence/files_ci_rap_vm.json).
+Directory small-output-capacity guard regression and ASan/UBSan also PASS.

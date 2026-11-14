@@ -1,0 +1,691 @@
+{
+  "execution": "Compiled ARM926 FM01 integration, synthetic MMI services/read-only SD/graphics",
+  "case_count": 20,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "6a2e913e6c729e87abee49a38ab30b17d17ab994cc45148f92fd20fa416317de",
+    "container_sha256": "7be3be18a9a65035d3c2b7633f50bac49644d92124efa4755fc0f5d32c71e94f",
+    "payload_sha256": "dd47d3a7fd981e93ecac569cc81f31e0ba5cef83c26a48de4ddd16abcc817e93",
+    "container_bytes": 36736,
+    "payload_bytes": 36608,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa14354",
+    "bss_bytes": 46164,
+    "structural_check": {
+      "payload_bytes": 36608,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "navigate_select",
+      "status": 0,
+      "polls": 22,
+      "collector_calls": 23,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 2312,
+      "input_ram_reads": {
+        "0x556144": 46,
+        "0x556148": 46,
+        "0x556aa0": 46,
+        "0x561078": 46
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "74faf9148bb09cc5a25c607fbc0cc22247a1ac0835019a9e514985da9c40c4e4",
+      "directory_opens": 5,
+      "directory_closes": 5,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User",
+        "/fat20a0/hda0/SPMP-OS/User/ROMs",
+        "/fat20a0/hda0/SPMP-OS/User/ROMs/Atari2600"
+      ],
+      "selected_path": "SPMP-OS/User/ROMs/Atari2600/\u041f\u0440\u0438\u043c\u0435\u0440 renamed.a26",
+      "user_file_payload_reads": 0,
+      "font_reads": 222,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "power_continue_exit",
+      "status": 0,
+      "polls": 16,
+      "collector_calls": 17,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        3,
+        4,
+        5
+      ],
+      "power_rows": 2,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 1000,
+      "input_ram_reads": {
+        "0x556144": 34,
+        "0x556148": 34,
+        "0x556aa0": 34,
+        "0x561078": 34
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "f94e91441f1a3d4c79c5956b65686ef76b4f6afaae03feb1bcf4baca179c5525",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 179,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "refresh_panels",
+      "status": 0,
+      "polls": 12,
+      "collector_calls": 13,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 1348,
+      "input_ram_reads": {
+        "0x556144": 26,
+        "0x556148": 26,
+        "0x556aa0": 26,
+        "0x561078": 26
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "65dcc5a629a170eccc74f47b0731472c0d0233c980a1c86e8cec67d26f8ffa6f",
+      "directory_opens": 4,
+      "directory_closes": 4,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 179,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "clock_wrap",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 652,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "6923ddf7d9b6eda5f00e59f9000b4a335dd6139f75c1ff48ab6fc69cf7827e9c",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 179,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "font_missing",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 647,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "ece87b72fb510c1fac522396d9b7338df484fe189732f02b171e4d7f246feabe",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 0,
+      "font_mode": 0,
+      "font_opens": 0,
+      "font_closes": 0,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "font_bad",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 647,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "ece87b72fb510c1fac522396d9b7338df484fe189732f02b171e4d7f246feabe",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 1,
+      "font_mode": 0,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "no_sd",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 1,
+      "log_errno": 2,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170",
+      "directory_opens": 0,
+      "directory_closes": 0,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 0,
+      "font_mode": 0,
+      "font_opens": 0,
+      "font_closes": 0,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "short_write",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 652,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "6923ddf7d9b6eda5f00e59f9000b4a335dd6139f75c1ff48ab6fc69cf7827e9c",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 179,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "write",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 3,
+      "log_errno": 28,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 192,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "close",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 4,
+      "log_errno": 9,
+      "logged_bytes": 81,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "500cf22f29dc72c0431df2c4748f5d19bd14c108042a44b5a723051d3350646e",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 187,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "directory_read",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 652,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "6923ddf7d9b6eda5f00e59f9000b4a335dd6139f75c1ff48ab6fc69cf7827e9c",
+      "directory_opens": 6,
+      "directory_closes": 6,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 171,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "directory_stat",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 647,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "ece87b72fb510c1fac522396d9b7338df484fe189732f02b171e4d7f246feabe",
+      "directory_opens": 6,
+      "directory_closes": 6,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 0,
+      "font_mode": 0,
+      "font_opens": 0,
+      "font_closes": 0,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "directory_close",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 652,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "6923ddf7d9b6eda5f00e59f9000b4a335dd6139f75c1ff48ab6fc69cf7827e9c",
+      "directory_opens": 6,
+      "directory_closes": 6,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 171,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "bad_name",
+      "status": 0,
+      "polls": 4,
+      "collector_calls": 5,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 1,
+      "views": [
+        0,
+        4,
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 652,
+      "input_ram_reads": {
+        "0x556144": 10,
+        "0x556148": 10,
+        "0x556aa0": 10,
+        "0x561078": 10
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "6923ddf7d9b6eda5f00e59f9000b4a335dd6139f75c1ff48ab6fc69cf7827e9c",
+      "directory_opens": 6,
+      "directory_closes": 6,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 175,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "time_cap",
+      "status": 0,
+      "polls": 38,
+      "collector_calls": 38,
+      "cooked_getkeys_calls": 0,
+      "exit_reason": 2,
+      "views": [
+        5
+      ],
+      "power_rows": 0,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 391,
+      "input_ram_reads": {
+        "0x556144": 76,
+        "0x556148": 76,
+        "0x556aa0": 76,
+        "0x561078": 76
+      },
+      "fg_restored": true,
+      "close_attempted_for_every_open": true,
+      "previous_content_preserved": true,
+      "file_sha256": "a4817b4dfd6a0013561c91ec4db0bf7d1be744b6106bbbb9cb7308f23a5e6ab1",
+      "directory_opens": 3,
+      "directory_closes": 3,
+      "visited_directories": [
+        "/fat20a0/hda0",
+        "/fat20a0/hda0/SPMP-OS/System",
+        "/fat20a0/hda0/SPMP-OS/User"
+      ],
+      "selected_path": "",
+      "user_file_payload_reads": 0,
+      "font_reads": 175,
+      "font_mode": 1,
+      "font_opens": 1,
+      "font_closes": 1,
+      "filesystem_mode": "directory/stat and system TTF reads; journal appends separately"
+    },
+    {
+      "case": "files_prefix_0",
+      "status": 2314,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "files_prefix_1",
+      "status": 2314,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "files_prefix_2",
+      "status": 2314,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "files_prefix_3",
+      "status": 2314,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "files_prefix_4",
+      "status": 2314,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    }
+  ],
+  "limits": [
+    "No physical console/card accessed. Directory, stat, clock and graphics backends simulated.",
+    "No write/move/delete application operation; only diagnostic journal appends."
+  ],
+  "source_revision": "19fad81496b75a3d0a34e6aab430ffe1f41cc7c8",
+  "run_id": 43575053229,
+  "note": "Public synthetic bindings; the separate files_ci_rap_vm.json tests the published real ELF and BIN identity."
+}

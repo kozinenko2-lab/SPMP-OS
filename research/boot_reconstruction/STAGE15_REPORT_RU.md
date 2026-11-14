@@ -124,3 +124,24 @@ missing/bad-font fallback. Скорость и читаемость на физ�
 с отдельными проверками копирования/отмены/ошибок и подключать Atari runtime
 к выбранному внешнему пути. Остальные существующие ядра сохраняются кандидатами
 для адаптации ARMv5 по общей модели; новый пакет не выдаёт их за готовые.
+
+## Опубликованный пакет
+
+[Скачать FILES](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43575053229/artifacts/14105733004).
+Исходники `19fad81496b75a3d0a34e6aab430ffe1f41cc7c8`, workflow43575053229 — PASS.
+Внутри `build/mmi_files/SPMP-OS-SD.zip`; распаковать его содержимое в корень SD.
+Опубликованный BIN — 36736 байт, SHA256
+`f352e98ab1f0e2fb6c50f8b96a231ffe78ed55268e92d6e8bd615c9936bb5f8e`.
+Скачанный artifact ZIP проверен по GitHub digest, BIN заново упакован из
+приложенного ELF побайтно; manifest и BIN вложенного SD ZIP совпали.
+Roboto SHA совпал с оригиналом; ROM/OEM отсутствуют.
+
+[20 публичных CI случаев](evidence/files_ci_vm.json) используют synthetic bindings.
+**Именно опубликованный реальный ELF** отдельно прошёл 3 случая оригинального
+RAP loader/collector/normal return: [результат и provenance](evidence/files_ci_rap_vm.json).
+Графика, SD и время в этих проверках виртуальные; статус остаётся VM_TESTED_ONLY.
+Локальные evidence/files_package.json и files_build.json относятся к Clang19;
+размер и SHA опубликованной CI-сборки указаны отдельно выше.
+
+Исправлена также граница `list_page`: при малой ёмкости caller получает
+не больше `cap` записей. Host regression с guard-entry и ASan/UBSan — PASS.

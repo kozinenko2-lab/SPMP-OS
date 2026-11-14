@@ -8,6 +8,7 @@
 Atari 2600 — следующий первый эмулятор. Шрифт читается напрямую из TTF,
 с кэшем; аппаратный статус пакета VM_TESTED_ONLY.
 [Установка SD-пакета](research/boot_reconstruction/examples/mmi_files/README_RU.md).
+[Скачать проверенный пакет FILES](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43575053229/artifacts/14105733004) — внутри `build/mmi_files/SPMP-OS-SD.zip`.
 
 [Основное ТЗ](docs/PRODUCT_REQUIREMENTS_RU.md),
 [аудит текущего кода](docs/PRODUCT_AUDIT_2026-11-14_RU.md) и

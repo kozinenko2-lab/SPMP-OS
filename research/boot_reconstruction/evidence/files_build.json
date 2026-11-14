@@ -14,7 +14,7 @@
     "project/spmp-os/include/spmp_sd_directory.h": "7efb198b929c3fa887e98190723ae0735e8cb4da3d7b3f4e32a599eb1ca55df7",
     "project/spmp-os/include/spmp_mmi_files.h": "33cd6753594e3da26dba8a5ed0da0e9df14f3304e3b0113105d5952cf78c2725",
     "project/spmp-os/include/spmp_ttf.h": "7058ce8691dd60185608e7cb51166058d03ff67a996713bbd95527d5106c3703",
-    "project/spmp-os/src/platform/spmp_sd_directory.c": "5fd39e56e0518c2cbc3998e71b7942dfd2f03cf81c8ecd2730239fbb704b45fe",
+    "project/spmp-os/src/platform/spmp_sd_directory.c": "01fb5e9e6f9f1cef611e03afd85ddee523180423217dcfb32f2a9c4d41aafd91",
     "project/spmp-os/src/ui/spmp_mmi_files.c": "4d4c3fd257628c0ddea0dadc5f016dd5372a3a29e4a22795483eb5d04f10a0be",
     "project/spmp-os/src/ui/spmp_ttf.c": "260ca3fd8dcdc956b920d6c52dc8bc9ec047e77ee78f5bf57ebe1fee77f6a002",
     "project/spmp-os/src/ui/spmp_ui_router.c": "6ced5434a727f0d73a09d31558dde2519c6c84c4d8e8dc6eadbaac8dc72312c5",
@@ -38,7 +38,7 @@
   "hardware_status": "VM_TESTED_ONLY",
   "device_scope": "read-only directory/stat and system TTF reads; journal append; no ROM execution or user-file operations",
   "legacy_mini_local_bin_unchanged_sha256": "ee855060e635b2973805a6a1a3452f2e10b104a2442d72fea97254698b160041",
-  "local_sd_zip_sha256": "387c6842038ee01ede745a183138d5bfc594d3910b07b9e732d06cbce33ce368",
-  "source_revision": "ce5f83fa7d398f6fea2fa0eb1e494ac7df40ecab",
-  "note": "Local evidence pins the initial Stage15 build; directory output-capacity regression is checked separately in the following commit and its CI artifact."
+  "local_sd_zip_sha256": "ff123e7992d541d3caa4adb6f8baa8b9edec3cd241104891ed897722b22f7fd5",
+  "source_revision": "19fad81496b75a3d0a34e6aab430ffe1f41cc7c8",
+  "note": "Local final build includes caller-capacity regression and ASan/UBSan guard test."
 }

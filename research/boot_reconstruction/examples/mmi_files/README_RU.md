@@ -8,6 +8,10 @@
 
 ## Установка
 
+[Скачать spmp-os-files-vm-tested](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43575053229/artifacts/14105733004).
+Исходники пакета: `19fad81496b75a3d0a34e6aab430ffe1f41cc7c8`; CI — PASS.
+BIN: 36736 байт, SHA256 `f352e98ab1f0e2fb6c50f8b96a231ffe78ed55268e92d6e8bd615c9936bb5f8e`.
+
 В скачанном artifact найдите **build/mmi_files/SPMP-OS-SD.zip** и распакуйте
 его **содержимое в корень SD**. Нужны BIN и дерево каталогов вместе:
 
