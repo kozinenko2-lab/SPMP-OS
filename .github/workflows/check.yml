@@ -19,6 +19,7 @@ jobs:
           python3 -m unittest discover -s research/Stage56_MediaLoader/tests -v
           python3 -m unittest discover -s research/Stage57_CevaAbi/tests -v
           python3 -m unittest discover -s research/Stage58_CevaLifecycle/tests -v
+          python3 -m unittest discover -s research/Stage59_CevaCommands/tests -v
           make -C project/spmp-os/features/multimedia/codec_lab check
       - name: Build host prototype
         run: make -C project/spmp-os host
@@ -113,6 +114,23 @@ jobs:
             research/boot_reconstruction/examples/input_test/README_RU.md
             research/boot_reconstruction/examples/input_test/preview.png
             research/boot_reconstruction/tools/input_log_decode.py
+      - name: Build read-only RAM alias test and run ARM VM checks
+        run: make -C research/boot_reconstruction arm-alias-check ARM_VM_PYTHON=/tmp/spmp-startup-vm/bin/python
+      - name: Save Defender RAM alias test package
+        uses: actions/upload-artifact@v4
+        with:
+          name: spmp-alias-test-vm-tested
+          retention-days: 14
+          path: |
+            research/boot_reconstruction/build/alias_test/SPMP_ALIAS_TEST.bin
+            research/boot_reconstruction/build/alias_test/alias.elf
+            research/boot_reconstruction/build/alias_test/alias.map
+            research/boot_reconstruction/build/alias_test/alias_layout.json
+            research/boot_reconstruction/build/alias_test/alias_package.json
+            research/boot_reconstruction/build/alias_test/alias_vm.json
+            research/boot_reconstruction/build/alias_test/preview.ppm
+            research/boot_reconstruction/build/alias_test/example.csv
+            research/boot_reconstruction/examples/alias_test/README_RU.md
       - name: Build raw input observer and verify ARM RAM snapshots
         run: make -C research/boot_reconstruction arm-raw-check ARM_VM_PYTHON=/tmp/spmp-startup-vm/bin/python
       - name: Save raw key test package and decoder

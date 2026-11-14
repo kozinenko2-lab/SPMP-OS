@@ -112,6 +112,21 @@ arm-input-check: arm-input
 	$(ARM_VM_PYTHON) tools/emulate_input.py --elf $(INPUT_DIR)/input_synthetic.elf --output $(INPUT_DIR)/input_vm.json --preview $(INPUT_DIR)/input_preview.ppm --log $(INPUT_DIR)/example.csv
 	python3 tools/input_log_decode.py $(INPUT_DIR)/example.csv --device "SYNTHETIC VM" --output $(INPUT_DIR)/example_decoded.json
 
+ALIAS_DIR = build/alias_test
+.PHONY: arm-alias arm-alias-check
+arm-alias: arm-input
+	mkdir -p $(ALIAS_DIR)
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/alias_test -c examples/alias_test/alias_test.c -o $(ALIAS_DIR)/alias_test.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/alias_test -c examples/alias_test/main.c -o $(ALIAS_DIR)/main.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(ALIAS_DIR)/alias.map -o $(ALIAS_DIR)/alias.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_binding.o $(INPUT_DIR)/binding.o $(ALIAS_DIR)/alias_test.o $(ALIAS_DIR)/main.o $(STARTUP_DIR)/adapter.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -o $(ALIAS_DIR)/alias_synthetic.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_synthetic.o $(INPUT_DIR)/binding_synthetic.o $(ALIAS_DIR)/alias_test.o $(ALIAS_DIR)/main.o $(STARTUP_DIR)/adapter.o
+	$(ARM_NM) -u $(ALIAS_DIR)/alias.elf > $(ALIAS_DIR)/undefined.txt
+	test ! -s $(ALIAS_DIR)/undefined.txt
+	python3 tools/startup_elf.py $(ALIAS_DIR)/alias.elf > $(ALIAS_DIR)/alias_layout.json
+	python3 tools/ngame_pack.py $(ALIAS_DIR)/alias.elf --output $(ALIAS_DIR)/SPMP_ALIAS_TEST.bin --manifest $(ALIAS_DIR)/alias_package.json --title "SPMP ALIAS TEST"
+arm-alias-check: arm-alias
+	$(ARM_VM_PYTHON) tools/emulate_alias_test.py --elf $(ALIAS_DIR)/alias_synthetic.elf --output $(ALIAS_DIR)/alias_vm.json --preview $(ALIAS_DIR)/preview.ppm --log $(ALIAS_DIR)/example.csv
+
 RAW_DIR = build/raw_input
 .PHONY: arm-raw arm-raw-check
 arm-raw: arm-input

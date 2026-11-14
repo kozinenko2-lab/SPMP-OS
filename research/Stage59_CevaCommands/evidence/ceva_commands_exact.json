@@ -1,0 +1,300 @@
+{
+  "research_only": true,
+  "source_rap_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "verified_calls": {
+    "c0_mailbox": {
+      "callsite": "0x00349510",
+      "target": "0x0034a034"
+    },
+    "c1_mailbox": {
+      "callsite": "0x003495e0",
+      "target": "0x0034a034"
+    },
+    "c2_mailbox": {
+      "callsite": "0x00349674",
+      "target": "0x0034a034"
+    },
+    "c0_copy_60": {
+      "callsite": "0x00349544",
+      "target": "0x00298c6c"
+    },
+    "c1_copy_60": {
+      "callsite": "0x00349610",
+      "target": "0x00298c6c"
+    },
+    "c2_copy_60": {
+      "callsite": "0x003496a8",
+      "target": "0x00298c6c"
+    },
+    "encoder_init_c1": {
+      "callsite": "0x00321578",
+      "target": "0x0034955c"
+    },
+    "init_retry_cleanup_c2": {
+      "callsite": "0x0032159c",
+      "target": "0x00349638"
+    },
+    "init_retry_c1": {
+      "callsite": "0x003215b0",
+      "target": "0x0034955c"
+    },
+    "frame_c0": {
+      "callsite": "0x003218cc",
+      "target": "0x003494d4"
+    },
+    "frame_report": {
+      "callsite": "0x003218d0",
+      "target": "0x00321298"
+    },
+    "normal_close_c2": {
+      "callsite": "0x00321670",
+      "target": "0x00349638"
+    },
+    "worker_init": {
+      "callsite": "0x00321810",
+      "target": "0x00321304"
+    },
+    "controller_close": {
+      "callsite": "0x00321e00",
+      "target": "0x00321644"
+    },
+    "legacy_c0_mailbox": {
+      "callsite": "0x00348a48",
+      "target": "0x0034a034"
+    },
+    "legacy_c1_mailbox": {
+      "callsite": "0x00348b30",
+      "target": "0x0034a034"
+    },
+    "legacy_c2_mailbox": {
+      "callsite": "0x00348c04",
+      "target": "0x0034a034"
+    }
+  },
+  "verified_words": {
+    "c0_opcode": {
+      "address": "0x003494f8",
+      "value": "0xe3e0303f"
+    },
+    "c0_payload_length": {
+      "address": "0x00349504",
+      "value": "0xe2833044"
+    },
+    "c0_control_pointer": {
+      "address": "0x0034950c",
+      "value": "0xe5805004"
+    },
+    "c0_alias": {
+      "address": "0x0034953c",
+      "value": "0xe3851201"
+    },
+    "c0_copy_bytes": {
+      "address": "0x00349540",
+      "value": "0xe3a02060"
+    },
+    "c1_opcode": {
+      "address": "0x003495c8",
+      "value": "0xe3e0303e"
+    },
+    "c1_payload_length": {
+      "address": "0x003495d4",
+      "value": "0xe2833043"
+    },
+    "c1_control_pointer": {
+      "address": "0x003495dc",
+      "value": "0xe5804004"
+    },
+    "c1_alias": {
+      "address": "0x00349608",
+      "value": "0xe3841201"
+    },
+    "c1_copy_bytes": {
+      "address": "0x0034960c",
+      "value": "0xe3a02060"
+    },
+    "c2_opcode": {
+      "address": "0x0034965c",
+      "value": "0xe3e0303d"
+    },
+    "c2_payload_length": {
+      "address": "0x00349668",
+      "value": "0xe2833042"
+    },
+    "c2_control_pointer": {
+      "address": "0x00349670",
+      "value": "0xe5805004"
+    },
+    "c2_alias": {
+      "address": "0x003496a0",
+      "value": "0xe3851201"
+    },
+    "c2_copy_bytes": {
+      "address": "0x003496a4",
+      "value": "0xe3a02060"
+    },
+    "control_global_init": {
+      "address": "0x00321618",
+      "value": "0x0055866c"
+    },
+    "control_global_worker": {
+      "address": "0x00321978",
+      "value": "0x0055866c"
+    },
+    "init_zero_60": {
+      "address": "0x0032132c",
+      "value": "0xebfdde80"
+    },
+    "field_width_18": {
+      "address": "0x0032133c",
+      "value": "0xe5841018"
+    },
+    "field_height_1c": {
+      "address": "0x00321344",
+      "value": "0xe584201c"
+    },
+    "field_fps_24": {
+      "address": "0x0032134c",
+      "value": "0xe5843024"
+    },
+    "field_allocation_10": {
+      "address": "0x00321388",
+      "value": "0xe5840010"
+    },
+    "field_result_58": {
+      "address": "0x00321580",
+      "value": "0xe5933058"
+    },
+    "frame_output_4c": {
+      "address": "0x003218bc",
+      "value": "0xe586304c"
+    },
+    "frame_input_04": {
+      "address": "0x003218c4",
+      "value": "0xe5863004"
+    },
+    "frame_size_50": {
+      "address": "0x003218d8",
+      "value": "0xe5961050"
+    },
+    "legacy_c0_copy_44": {
+      "address": "0x00348a78",
+      "value": "0xe3a02044"
+    },
+    "legacy_c1_copy_44": {
+      "address": "0x00348b5c",
+      "value": "0xe3a02044"
+    },
+    "legacy_c2_copy_44": {
+      "address": "0x00348c30",
+      "value": "0xe3a02044"
+    }
+  },
+  "verified_strings": {
+    "encoder_os_ext": {
+      "address": "0x004eb538",
+      "text": "/Rom/image/mjpgenc_os_ext.img"
+    },
+    "encoder_os_int": {
+      "address": "0x004eb5b0",
+      "text": "/Rom/image/mjpgenc_os_int.img"
+    },
+    "encoder_codec": {
+      "address": "0x004eb628",
+      "text": "/Rom/image/mjpgenc_codec.img"
+    },
+    "frame_error": {
+      "address": "0x004eb780",
+      "text": "cx_test: Encode1Frame() err=%d\n"
+    },
+    "frame_failed": {
+      "address": "0x004eb7a0",
+      "text": "cx_test: Encode1Frame() failed. err=%d\n"
+    },
+    "init_dimensions": {
+      "address": "0x004eb7f0",
+      "text": "wid: %d, hei: %d, fps: %d, buff: 0x%x \n"
+    },
+    "init_rate": {
+      "address": "0x004eb818",
+      "text": "rcMode: %d, gopLen: %d, bitRate: %d, flags: 0x%x \n"
+    },
+    "null_handle": {
+      "address": "0x004eb84c",
+      "text": "[video_rec_codec_init] g_st_vid_enc.pEncHandle = NULL\n"
+    },
+    "encode_init": {
+      "address": "0x004eb884",
+      "text": "cx_test: EncodeInit() err=%d\n"
+    },
+    "encode_init_return": {
+      "address": "0x004eb8a4",
+      "text": "cx_test: EncodeInit() returns %d\n"
+    },
+    "encode_init_failed": {
+      "address": "0x004eb8c8",
+      "text": "cx_test: EncodeInit() failed. err=%d\n"
+    },
+    "vlc_warning": {
+      "address": "0x004eb8f0",
+      "text": "Warning !! vlcSize = %d > maxVlcSize\n"
+    },
+    "legacy_jpeg_os_ext": {
+      "address": "0x004ec028",
+      "text": "/jpgdec_os_ext.img"
+    },
+    "legacy_jpeg_os_int": {
+      "address": "0x004ec03c",
+      "text": "/jpgdec_os_int.img"
+    },
+    "legacy_jpeg_codec": {
+      "address": "0x004ec050",
+      "text": "/jpgdec.img"
+    }
+  },
+  "mjpeg_encoder_abi": {
+    "commands": {
+      "0xc1": "EncodeInit",
+      "0xc0": "Encode1Frame",
+      "0xc2": "close/free"
+    },
+    "wire": "8 bytes: opcode u8, zero u8, payload length u16 LE = 4, cached ARM pointer u32 LE",
+    "reply": "copy 0x60 bytes from pointer | 0x10000000 to the cached control structure",
+    "control_fields": {
+      "0x04": "input frame pointer",
+      "0x10": "allocated encoder workspace/handle",
+      "0x14": "workspace size",
+      "0x18": "width",
+      "0x1c": "height",
+      "0x20": "bit rate/config value",
+      "0x24": "fps",
+      "0x28": "GOP length",
+      "0x44": "rate-control mode",
+      "0x4c": "VLC output buffer",
+      "0x50": "produced VLC bytes",
+      "0x54": "flags",
+      "0x58": "init result/handle-ready flag"
+    },
+    "control_global": "0x0055866c",
+    "init_retry": "unbounded in OEM code while +0x58 is zero"
+  },
+  "separate_legacy_abi": {
+    "control_bytes": 68,
+    "commands": [
+      "0xc0",
+      "0xc1",
+      "0xc2"
+    ],
+    "identity": "JPEG decoder paths and callers; same opcodes do not imply the same structure"
+  },
+  "provider_requirements": [
+    "configured physical shared pool must remain below 0x10000000",
+    "validate alignment, overflow and complete [pointer,pointer+size) containment before adding the alias bit",
+    "finite mailbox and init timeouts; never copy the OEM unbounded retry loop",
+    "keep the 0x44 JPEG decoder and 0x60 MJPEG encoder layouts as distinct typed ABIs"
+  ],
+  "limits": [
+    "No CEVA IMG, mailbox, MMIO or codec was executed.",
+    "Dynamic shared-pool bounds were not recovered, so no production pool address is guessed.",
+    "The OEM close path frees +0x10 before C2; this ordering is recorded, not recommended for blind reuse."
+  ]
+}

@@ -1,3 +1,26 @@
+# Stage59: восстановлен MJPEG ABI, подготовлен read-only alias-тест
+
+Команды `C1/C0/C2` с 0x60-байтным control block точно связаны с
+`EncodeInit/Encode1Frame/close` штатной видеозаписи и файлами
+`mjpgenc_os_ext.img`, `mjpgenc_os_int.img`, `mjpgenc_codec.img`. Восстановлены
+поля входного кадра, рабочей памяти, размеров, fps/GOP/rate control, выходного
+VLC-буфера и результата. Exact-аудит проверяет 17 вызовов, 29 ARM-слов и 15
+строк. Отдельная 0x44-байтная группа тех же opcode относится к JPEG decoder и
+не совместима по структуре. [Отчёт](../research/Stage59_CevaCommands/REPORT_RU.md).
+
+OEM mailbox NULL и повторный EncodeInit способны зависать без срока, поэтому
+CEVA пока не запускается на устройстве. Вместо опасного codec probe создан
+`SPMP_ALIAS_TEST.bin`: он только читает собственный контрольный блок через
+`address | 0x10000000`, пишет `SPMPALI.CSV`, показывает PASS/FAIL и возвращается
+в MMI. Flash, MMIO, CEVA и таблицы MMU не изменяются. Пакет должен сначала
+пройти ARM926 VM и затем реальную Defender.
+
+Следующее после аппаратного CSV: зафиксировать alias на устройстве, восстановить
+границы shared pool и сделать bounded mailbox provider. Только затем возможен
+ограниченный аппаратный JPEG/MJPEG probe.
+
+---
+
 # Stage58: доказана MMU-карта alias и восстановлено закрытие CEVA
 
 Все пять RedBoot-кандидатов содержат одинаковую таблицу MMU: диапазон
