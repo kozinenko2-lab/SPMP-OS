@@ -73,7 +73,7 @@ class AliasObserver(ProbeObserver):
   if self.opened!=self.closed:raise AssertionError('File handle leak')
   if expected_log==0:
    if not self.file.startswith(b'PREVIOUS\nALIAS_V1,'):raise AssertionError('Log was not appended')
-   if len(self.file.splitlines()[-1].split(b','))!=12:raise AssertionError('CSV columns')
+   if len(self.file.splitlines()[-1].split(b','))!=13:raise AssertionError('CSV columns')
   if self.color!=[8,128,248]:raise AssertionError('Foreground not restored')
   if self.get32(self.image.bss_end)!=0xdecafbad:raise AssertionError('BSS guard')
   return {'status':value,'alias_result':result,'mismatch_mask':hex(mask),'source':hex(source),'alias':hex(alias),

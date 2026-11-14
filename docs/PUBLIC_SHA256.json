@@ -4969,7 +4969,7 @@
   "research/boot_reconstruction/tools/check_startup_link_limits.py": "fff51708ce098f7665133b0f4ccbb4db6c6d7b96f87a63a43a81b6adf558d867",
   "research/boot_reconstruction/tools/control_game_inspect.py": "7d676dde337b50c4d25d65c81fac3027a553618b8e39ef740db750afafd59fc4",
   "research/boot_reconstruction/tools/display_pcm_models.py": "6f19191aae05dc950ed98ccd1d4a02a316a29cb9b467e875d8fc2485599890b3",
-  "research/boot_reconstruction/tools/emulate_alias_test.py": "077bcd9f6422ca66035b1cc3bdd8333c1aa7b3ddadb36071b13863337d98e133",
+  "research/boot_reconstruction/tools/emulate_alias_test.py": "8533c19e4665d88103f755c15c23c4dbf48b35ef1302194e5f063068f716cd5a",
   "research/boot_reconstruction/tools/emulate_control_game.py": "328f70679a43d55bb2c4b3d08fbb030257daf1f5681c5e75f0c2790f21362fe1",
   "research/boot_reconstruction/tools/emulate_display_pcm.py": "4c494d342d27e70505062f645180cc09be41ffe4d93d3af2af444f05ca3ca356",
   "research/boot_reconstruction/tools/emulate_input.py": "3cae005cb0e4767f4b1de51248e55cd067a0436495a3427abb7880ba14e0617a",
