@@ -12,6 +12,11 @@
 - Python: public 68 PASS/5 SKIP, private 73 PASS. Ghidra: 291 selected exports,
   original GZF/source hashes and mapped bytes verified.
 
+- Exact published SD0 artifact 14090758906: GitHub ZIP digest, ELF repack/BIN
+  identity and three original-RAP cases — PASS. BIN 9728 bytes, SHA
+  `ad9ad0c793c58ae3a8b628c28ccf4b02d88a634fcaf1bac5ddfb60576ec5a081`.
+  Provenance: `research/boot_reconstruction/evidence/input_sd0_ci_rap_vm.json`.
+
 Hardware: user reports previous input test runs, but SD Open Error and no CSV.
 Corrected SD0 build is VM_TESTED_ONLY; actual SD write remains pending.
 [Отчёт](../research/boot_reconstruction/STAGE11_REPORT_RU.md).

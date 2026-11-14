@@ -95,3 +95,11 @@ CI artifact **spmp-input-sd0-vm-tested** содержит BIN, ELF/map, manifest
 пример CSV, preview и decoder. После запуска ожидаются **SD LOG OK** и файл
 `SPMPKEYS.CSV` в корне карты. Если ошибка останется, нужен полный текст с восьмью
 HEX-цифрами. RedBoot/RAP/Flash/NAND/ROMFS не изменялись.
+
+Опубликованный [SD0 artifact 14090758906](https://github.com/kozinenko2-lab/SPMP-OS/actions/runs/43538932112/artifacts/14090758906)
+собран из `79e5d1f270510243c57793421f16841dceb9b725`; CI завершился успешно.
+Скачанный ZIP прошёл проверку SHA GitHub, BIN совпал с repack ELF/manifest и
+отдельно прошёл все три original-RAP сценария. CI BIN — **9728 байт**, SHA
+`ad9ad0c793c58ae3a8b628c28ccf4b02d88a634fcaf1bac5ddfb60576ec5a081`.
+Доказательство: `evidence/input_sd0_ci_rap_vm.json`. Физическая SD по-прежнему
+не проверена; это проверка точных опубликованных байтов в VM.
