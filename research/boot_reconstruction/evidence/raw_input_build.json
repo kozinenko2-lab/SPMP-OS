@@ -1,0 +1,29 @@
+{
+  "compiler": "Debian Clang/LLD 19.1.7",
+  "source_files": {
+    "examples/raw_input/raw_input.c": "59ecba672ee01b17a246194129388f90175976323a25ceb81c99276e92805cab",
+    "examples/raw_input/raw_input.h": "2d2b8e23f68eeefe6145fc0d8c79c6c4ac0f0fe421441009421ea310b31ef522",
+    "examples/raw_input/raw_binding.c": "265cc96ed190af639fe6870783523a56ffac31394e3d274c56d9ed0e573824c1",
+    "examples/raw_input/raw_profile.h": "97769eece61615cbf6f0d0b83160af46faae3a86857f784ffdfe041e6dda73aa",
+    "examples/raw_input/main.c": "5ea87a37269ef673d22e349adca8f4e9d7c21d78ebaafeb05ebff58bec00f759",
+    "examples/input_test/input_test.c": "7b453c20cc2b763c6f8a9530377e83fd37994b95dbecfcc5d3e2d77e71cb0355",
+    "examples/input_test/input_test.h": "40f088bac98c77d40fc54b5dc640f596a1991b2ce9aab8d2bd2b5940ccf18297",
+    "examples/input_test/input_binding.c": "496a2637a3b785da1eecbb5c7adc9ad23135b4632f107a1c6070dd9e8a75aa1d",
+    "examples/input_test/input_profile.h": "40e975b08d17a5190a26ffa255081dbc6cc0a5f6a326ed07a1a2733694b10a7a",
+    "examples/input_test/font5x7.h": "e3a2cdb5630e417be2f02356ffd43060ead06fb0ec2343336a555977babf54a9",
+    "examples/native_startup/entry.S": "2ffcd9daa3ee01afeceb9fe15cdc991ac7e3159173bf65dcf1d6661172673b19",
+    "examples/native_startup/native_binding.c": "6a1292a09b7d0571ea65b1d0037fcb1d09cf40b0ac79512f09e0a3e5f787cd3a",
+    "examples/native_startup/native_binding.h": "479252f48d09b929e2be2317d2d30547ce2b6fe6ef3c737df840304076a9da25",
+    "examples/native_startup/binding_profile.h": "e38552c7acf0a7caea45ca3c6a49f36ab2eacd13eb4c53083addd1a92f1c65a0",
+    "examples/native_startup/startup.h": "8748510fe78cc7d5b309cad371ef41f63bfe160e7200aea890f30674e21bfeaf",
+    "examples/native_startup/research.ld": "6cc0d6cd8578d9743381ec745353f81af6f805a7d6a4de37e52e10b8948b93b1",
+    "examples/native_probe/oem_adapter.c": "05b9cd28813c0050eb1d5f9c063192a8ad6572d9e96700451ab7a52e7c108bb4",
+    "examples/native_probe/oem_adapter.h": "26ed2fc60e2c0f48138a2df4c44363b441efbda9db978f8f7608e5b9e499f5bf",
+    "examples/native_probe/probe.h": "712da964b78cfe8ae687c1a8fbb17135d0a4edf540c3f39e478ec73964cacc29",
+    "src/mmi_native_abi.h": "178848e1b139ca5643a56d38ac9b4c5e76c4138e93cd23fe0813c7aa3b658119"
+  },
+  "hardware_status": "VM_TESTED_ONLY; preceding SD0 V1 journal was retrieved from user console",
+  "package": "raw_input_package.json",
+  "public_vm": "raw_input_vm.json",
+  "private_rap": "raw_input_rap_vm.json"
+}

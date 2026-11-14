@@ -30,13 +30,14 @@ arm-probe:
 	llvm-nm -u build/native_probe_adapter_armv5.o >> build/native_probe_undefined.txt
 	test ! -s build/native_probe_undefined.txt
 	llvm-readelf -h -A build/native_probe_armv5.o
-test: all build/test_boot_policy build/test_reloc_model build/test_flag_model build/native_probe_host build/test_native_probe_adapter build/test_input_host
+test: all build/test_boot_policy build/test_reloc_model build/test_flag_model build/native_probe_host build/test_native_probe_adapter build/test_input_host build/test_raw_host
 	./build/test_reloc_model
 	./build/test_flag_model
 	./build/test_boot_policy
 	./build/native_probe_host --frame build/native_probe_frame.ppm
 	./build/test_native_probe_adapter
 	./build/test_input_host
+	./build/test_raw_host
 	python3 -m unittest discover -s tests -v
 clean:
 	rm -rf build
@@ -110,3 +111,24 @@ build/test_input_host: examples/input_test/input_test.c examples/input_test/inpu
 arm-input-check: arm-input
 	$(ARM_VM_PYTHON) tools/emulate_input.py --elf $(INPUT_DIR)/input_synthetic.elf --output $(INPUT_DIR)/input_vm.json --preview $(INPUT_DIR)/input_preview.ppm --log $(INPUT_DIR)/example.csv
 	python3 tools/input_log_decode.py $(INPUT_DIR)/example.csv --device "SYNTHETIC VM" --output $(INPUT_DIR)/example_decoded.json
+
+RAW_DIR = build/raw_input
+.PHONY: arm-raw arm-raw-check
+arm-raw: arm-input
+	mkdir -p $(RAW_DIR)
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Itests -DSPMP_RAW_BUILD -c examples/input_test/input_binding.c -o $(RAW_DIR)/binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Itests -DSPMP_RAW_BUILD -DSPMP_BINDING_SYNTHETIC -c examples/input_test/input_binding.c -o $(RAW_DIR)/binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/raw_input -Itests -c examples/raw_input/raw_binding.c -o $(RAW_DIR)/raw_binding.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/raw_input -Itests -DSPMP_BINDING_SYNTHETIC -c examples/raw_input/raw_binding.c -o $(RAW_DIR)/raw_binding_synthetic.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/raw_input -c examples/raw_input/raw_input.c -o $(RAW_DIR)/raw_input.o
+	$(ARM_CC) $(STARTUP_FLAGS) $(STARTUP_INCLUDES) -Iexamples/input_test -Iexamples/raw_input -c examples/raw_input/main.c -o $(RAW_DIR)/main.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -Map=$(RAW_DIR)/raw.map -o $(RAW_DIR)/raw.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_binding.o $(RAW_DIR)/binding.o $(RAW_DIR)/raw_binding.o $(RAW_DIR)/raw_input.o $(RAW_DIR)/main.o $(INPUT_DIR)/input.o $(STARTUP_DIR)/adapter.o
+	$(ARM_LD) -T examples/native_startup/research.ld --no-undefined --fatal-warnings --gc-sections -o $(RAW_DIR)/raw_synthetic.elf $(STARTUP_DIR)/entry_bound.o $(INPUT_DIR)/base_synthetic.o $(RAW_DIR)/binding_synthetic.o $(RAW_DIR)/raw_binding_synthetic.o $(RAW_DIR)/raw_input.o $(RAW_DIR)/main.o $(INPUT_DIR)/input.o $(STARTUP_DIR)/adapter.o
+	python3 tools/ngame_pack.py $(RAW_DIR)/raw.elf --output $(RAW_DIR)/SPMP_KEYS_RAW.bin --manifest $(RAW_DIR)/raw_package.json --title "SPMP KEYS RAW"
+arm-raw-check: arm-raw
+	$(ARM_VM_PYTHON) tools/emulate_raw_input.py --elf $(RAW_DIR)/raw_synthetic.elf --output $(RAW_DIR)/raw_vm.json --preview $(RAW_DIR)/preview.ppm --log $(RAW_DIR)/example.csv
+	python3 tools/raw_log_decode.py $(RAW_DIR)/example.csv --device "SYNTHETIC VM" --output $(RAW_DIR)/example_decoded.json
+
+build/test_raw_host: examples/raw_input/raw_input.c examples/raw_input/raw_input.h examples/input_test/input_test.c examples/input_test/input_test.h examples/input_test/font5x7.h examples/native_probe/oem_adapter.c tests/test_raw_host.c tests/test_input_host.c
+	mkdir -p build
+	$(CC) $(CFLAGS) -Isrc -Iexamples/native_probe -Iexamples/input_test -Iexamples/raw_input examples/raw_input/raw_input.c examples/input_test/input_test.c examples/native_probe/oem_adapter.c tests/test_raw_host.c -o $@

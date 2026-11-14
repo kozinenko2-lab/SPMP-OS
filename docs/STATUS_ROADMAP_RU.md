@@ -1,3 +1,22 @@
+# Этап 13: новый пакет raw input / POWER / HOLD
+
+SPMP_KEYS_RAW.bin: 16 органов управления; BACK уточнён как POWER, HOLD отдельный.
+Короткий POWER стоит последним и открывает штатное меню, надо выбрать Продолжить.
+Долгого POWER нет в сценарии. Короткий HOLD, HOLD lock/unlock и SELECT+VOL±
+измеряются; яркость и штатные обработчики тестом не переназначаются.
+
+CSV V2 SPMPRAW.CSV: state/event RAM до и после единственного GetKeys, cooked,
+PRE до вызова, SAMPLE/TICK/GAP/PROMPT/END. Новые профили и literals проверяются
+до BSS; наблюдатель не пишет globals/MMIO. Ограничения 80000 units / 4000 polls.
+29 compiled ARM cases +29 original RAM pipeline cases +3 original RAP wrapper
+cases — PASS, 78 Python (public 73 PASS/5 SKIP), host raw и прежний input — PASS.
+Прежние 20 SD0 ARM cases проходят после выделения общего journal helper.
+Пакет VM_TESTED_ONLY; следующий аппаратный результат — SPMPRAW.CSV и наблюдения
+за HOLD/POWER. [Отчёт](../research/boot_reconstruction/STAGE13_REPORT_RU.md),
+[инструкция](../research/boot_reconstruction/examples/raw_input/README_RU.md).
+
+---
+
 # Этап 12: журнал SD сохранён; cooked API не даёт полной карты
 
 Пользователь прислал 4380-байтовый SD0_R2 CSV: 1 сеанс, 76 валидных событий,

@@ -1,0 +1,150 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "execution": "Original RAP ARM926 loader -> own raw RAM observer -> normal return",
+  "case_count": 3,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "86dd8ed5dbfa85300d47b46facea718b0d4b7043d3885c956ae151f0203fe72f",
+    "container_sha256": "f08e3ef36a8b9e2ecb23fd9f0fb8d7a96467fe417e3541792d5eb94a9f112ce9",
+    "payload_sha256": "ab9608a98e142e53fb4cfee5fb364c9ebb0f9566608cf47c105226ba72577fab",
+    "container_bytes": 9888,
+    "payload_bytes": 9760,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa026e8",
+    "bss_bytes": 200,
+    "structural_check": {
+      "payload_bytes": 9760,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "hidden",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 20,
+        "getkeys_calls": 21,
+        "log_status": 0,
+        "log_errno": 0,
+        "logged_bytes": 5767,
+        "input_ram_reads": {
+          "0x556144": 63,
+          "0x556148": 63
+        },
+        "previous_content_preserved": true,
+        "close_attempted_for_every_open": true,
+        "fg_restored": true,
+        "pause_pre_record_verified": false,
+        "file_sha256": "cec4e351b678bcd7e5a2714636efa8cdf1926c9c47fbd65a8545d8651d51b5aa"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "no_sd",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 20,
+        "getkeys_calls": 21,
+        "log_status": 1,
+        "log_errno": 2,
+        "logged_bytes": 0,
+        "input_ram_reads": {
+          "0x556144": 63,
+          "0x556148": 63
+        },
+        "previous_content_preserved": true,
+        "close_attempted_for_every_open": true,
+        "fg_restored": true,
+        "pause_pre_record_verified": false,
+        "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    },
+    {
+      "case": "short_write",
+      "mmi_wrapper_return": 0,
+      "entry_reached": true,
+      "application": {
+        "status": 0,
+        "polls": 20,
+        "getkeys_calls": 21,
+        "log_status": 0,
+        "log_errno": 0,
+        "logged_bytes": 5767,
+        "input_ram_reads": {
+          "0x556144": 63,
+          "0x556148": 63
+        },
+        "previous_content_preserved": true,
+        "close_attempted_for_every_open": true,
+        "fg_restored": true,
+        "pause_pre_record_verified": false,
+        "file_sha256": "cec4e351b678bcd7e5a2714636efa8cdf1926c9c47fbd65a8545d8651d51b5aa"
+      },
+      "commands": [
+        "0xd06",
+        "0xd08",
+        "0xd07",
+        "0xd07"
+      ],
+      "sp_and_r4_r11_restored": true,
+      "actual_pool_layout_matches_model": true
+    }
+  ],
+  "original_code_executed": [
+    "game-pool constructor/allocator/info",
+    "native_bin_loader 0x460800",
+    "native_read_file 0x45ffcc with mocked file backends",
+    "header parser, all memcpy, cipher and footer compare",
+    "native API initializer 0x2d32b0",
+    "negative-mode native_exit_control 0x4619ac"
+  ],
+  "mocked": [
+    "cache/CP15",
+    "virtual file open/stat/read/close",
+    "general heap decoder scratch",
+    "clock/delay",
+    "sound start/stop and thread suspend",
+    "command/message backends",
+    "all nine graphics/input API calls",
+    "all seven app time/SD/errno services",
+    "upstream input RAM contents and cooked GetKeys results"
+  ],
+  "limits": [
+    "Synthetic pool RAM and launch state, not a board memory capture.",
+    "No physical cache/LCD/GPU/input/audio/RTOS behavior tested.",
+    "Runtime compatibility checks are not full-image SHA validation.",
+    "POWER/HOLD/volume physical behavior is not tested. Direct RAM snapshot code runs against simulated inputs."
+  ]
+}

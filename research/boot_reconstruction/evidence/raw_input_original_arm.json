@@ -1,0 +1,215 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "cpu": "ARM926",
+  "case_count": 29,
+  "cases": [
+    {
+      "case": "state_get",
+      "value": "0x0",
+      "latch_and_ttl_unchanged": true
+    },
+    {
+      "case": "event_set_vm_only",
+      "value": "0x0",
+      "state_unchanged": true
+    },
+    {
+      "case": "state_get",
+      "value": "0x40",
+      "latch_and_ttl_unchanged": true
+    },
+    {
+      "case": "event_set_vm_only",
+      "value": "0x40",
+      "state_unchanged": true
+    },
+    {
+      "case": "state_get",
+      "value": "0x340",
+      "latch_and_ttl_unchanged": true
+    },
+    {
+      "case": "event_set_vm_only",
+      "value": "0x340",
+      "state_unchanged": true
+    },
+    {
+      "case": "state_get",
+      "value": "0xffffffff",
+      "latch_and_ttl_unchanged": true
+    },
+    {
+      "case": "event_set_vm_only",
+      "value": "0xffffffff",
+      "state_unchanged": true
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 0,
+      "state": "0x1",
+      "collector": "0x1",
+      "cooked": "0x1"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 1,
+      "state": "0x2",
+      "collector": "0x8",
+      "cooked": "0x8"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 2,
+      "state": "0x4",
+      "collector": "0x2",
+      "cooked": "0x2"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 3,
+      "state": "0x8",
+      "collector": "0x4",
+      "cooked": "0x4"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 4,
+      "state": "0x10",
+      "collector": "0x40",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 5,
+      "state": "0x20",
+      "collector": "0x10",
+      "cooked": "0x10000"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 6,
+      "state": "0x40",
+      "collector": "0x80",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 7,
+      "state": "0x80",
+      "collector": "0x20",
+      "cooked": "0x20000"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 8,
+      "state": "0x100",
+      "collector": "0x200",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 9,
+      "state": "0x200",
+      "collector": "0x100",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 10,
+      "state": "0x400",
+      "collector": "0x100",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 11,
+      "state": "0x800",
+      "collector": "0x200",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 12,
+      "state": "0x1000",
+      "collector": "0x0",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 13,
+      "state": "0x2000",
+      "collector": "0x400",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 14,
+      "state": "0x4000",
+      "collector": "0x0",
+      "cooked": "0x0"
+    },
+    {
+      "case": "state_to_collector_to_cooked",
+      "state_bit": 15,
+      "state": "0x8000",
+      "collector": "0x1",
+      "cooked": "0x1"
+    },
+    {
+      "case": "latch_ttl",
+      "event": "0x40",
+      "collector_returns": [
+        "0x40",
+        "0x40",
+        "0x40",
+        "0x40",
+        "0x0"
+      ]
+    },
+    {
+      "case": "latch_ttl",
+      "event": "0x400",
+      "collector_returns": [
+        "0x400",
+        "0x400",
+        "0x400",
+        "0x400",
+        "0x0"
+      ]
+    },
+    {
+      "case": "latch_ttl",
+      "event": "0x800",
+      "collector_returns": [
+        "0x800",
+        "0x800",
+        "0x800",
+        "0x800",
+        "0x0"
+      ]
+    },
+    {
+      "case": "latch_ttl",
+      "event": "0x1000",
+      "collector_returns": [
+        "0x1000",
+        "0x1000",
+        "0x1000",
+        "0x1000",
+        "0x0"
+      ]
+    },
+    {
+      "case": "menu_clear",
+      "before_state": "0x40",
+      "before_event": "0x400",
+      "after_state": 0,
+      "after_event": 0
+    }
+  ],
+  "limits": [
+    "Original RAM state/event pipeline only. No physical key labels inferred from table indices.",
+    "Event setter executes only in this RAM VM; device app snapshot only reads these globals.",
+    "Menu flag/native kind/OS/system actions mocked; no GPIO, firmware writes or console execution."
+  ]
+}

@@ -130,5 +130,11 @@
   "present_but_not_prompted": [
     "VOLUME_UP",
     "VOLUME_DOWN"
-  ]
+  ],
+  "later_physical_label_clarifications": {
+    "legacy_BACK": "POWER short",
+    "HOLD": "Separate key lock/unlock button; not prompted in V1",
+    "volume_plus_minus": "Separate from L/R",
+    "controls_count": 16
+  }
 }

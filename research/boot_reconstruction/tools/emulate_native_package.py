@@ -147,7 +147,7 @@ def synthetic(image_path):
                   'All nine API functions are intercepted; no real graphics/input/RTOS.',
                   'Compatibility CRC32 is not full-image identity or a security boundary.']}
 
-def private_rap(image_path,rap_path,*,observer_class=ProbeObserver,title="SPMP Probe",cases=None):
+def private_rap(image_path,rap_path,*,observer_class=ProbeObserver,title="SPMP Probe",cases=None,max_instructions=20000000,timeout_us=30000000):
     from unicorn.arm_const import UC_CPU_ARM_926
     from emulate_native_lifecycle import new_vm,pool_info
     from make_binding_profile import extract
@@ -193,7 +193,7 @@ def private_rap(image_path,rap_path,*,observer_class=ProbeObserver,title="SPMP P
         observer=observer_class(v.u,image,DEFAULT_SP,case,original=True)
         observer.firmware_vm=v
         v.calls=[];result=v.run(0x460800,[0x1001000],initial_sp=DEFAULT_SP,
-            max_instructions=20000000,timeout_us=30000000)
+            max_instructions=max_instructions,timeout_us=timeout_us)
         rejected=case.get('corrupt_magic') or case.get('corrupt_footer')
         if rejected:
             if result!=0xfffffffe or observer.entered:raise AssertionError('Malformed container reached entry')

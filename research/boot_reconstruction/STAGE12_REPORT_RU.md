@@ -1,5 +1,9 @@
 # Этап 12: аппаратный журнал SD0 и ограничение native GetKeys
 
+**Позднее уточнение:** BACK — короткий POWER; HOLD отдельный. Итого 16, а не
+предварительные 15 органов управления. [Этап 13](STAGE13_REPORT_RU.md) содержит
+новый RAM observer и исправленный сценарий POWER/HOLD. Ниже — история этапа 12.
+
 14 ноября 2026. Пользователь прислал `SPMPKEYS.CSV` после исправления SD path.
 Исходный файл сохранён без изменений в
 [evidence/hardware/input_sd0_user_console_01.csv](evidence/hardware/input_sd0_user_console_01.csv).

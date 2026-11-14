@@ -36,6 +36,7 @@ struct input_state {
 _Static_assert(sizeof(struct input_state)==172,"Input state trace layout");
 _Static_assert(offsetof(struct input_state,menu_choice)==152,"Input menu trace offset");
 extern const char input_log_path[];
+void input_journal_append(struct input_state *,const struct input_services *,const char *path,const char *row);
 const char *input_prompt(uint32_t index);
 uint32_t input_test_run(struct input_state *,const struct input_services *,const struct input_config *);
 #endif

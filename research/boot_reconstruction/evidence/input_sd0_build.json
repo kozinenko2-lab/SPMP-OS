@@ -21,5 +21,6 @@
   "hardware_status": "VM_TESTED_ONLY for corrected SD0 package; preceding input test ran but SD open failed",
   "package": "input_sd0_package.json",
   "private_rap": "input_sd0_rap_vm.json",
-  "public_vm": "input_sd0_vm.json"
+  "public_vm": "input_sd0_vm.json",
+  "source_revision": "79e5d1f270510243c57793421f16841dceb9b725"
 }

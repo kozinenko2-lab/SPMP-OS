@@ -1,3 +1,24 @@
+# Проверки этапа 13
+
+- Original ARM926 RAM pipeline: getter/event setter VM-only, 16 state bits,
+  collector TTL and menu clear — PASS, 29 cases. No physical GPIO accessed.
+- Compiled raw observer: 29 cases; hidden RAM masks/cooked0, all phases, chords,
+  PRE saved before simulated blocked API, GAP, clock wrap/poll limits, SD errors,
+  7 old /3 raw prefix /4 literal corruption rejections before BSS — PASS.
+- Actual RAP loader/cipher/footer/API-init -> own raw app -> return: 3 cases —
+  PASS. Device/app services and input RAM contents mocked.
+- Host raw C and existing input C — PASS. Old SD0 ARM regression — 20 PASS.
+- Python: 78 total, public 73 PASS/5 SKIP; exact private inputs 78 PASS.
+  Parser keeps PRE unknown fields,
+  layers/sessions separate and distinct POWER/HOLD/chord prompts.
+- Public manifest and source/build/package identity verified locally.
+
+Raw package hardware status is VM_TESTED_ONLY; POWER/HOLD/chords on the real
+console remain pending. Previous SD0 V1 CSV does not certify this new app.
+[Отчёт](../research/boot_reconstruction/STAGE13_REPORT_RU.md).
+
+---
+
 # Проверки этапа 12
 
 - User hardware CSV: SHA preserved, 4380 bytes, 1 SD0_R2 session, 76 valid events;

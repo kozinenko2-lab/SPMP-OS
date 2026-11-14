@@ -2,15 +2,12 @@
 
 Статический анализ оригинальных образов; не реализация полной прошивки.
 
-**Текущий этап:** [STAGE12_REPORT_RU.md](STAGE12_REPORT_RU.md) — пользовательский
-полный CSV подтверждает один SD0 journal session; семь cooked-кандидатов
-сохранены в неполный [профиль устройства](device_profiles/README_RU.md).
-Ещё шесть кнопок пользователь нажимал, но текущий API их не зафиксировал;
-отдельные volume +/− пока не измерены. Оригинальный cooked filter проверен
-на 32 входных битах. Новый BIN на этом этапе не выпускается; далее — upstream
-RAM input observation. OEM exports остаются 291.
-[SD0 fix](STAGE11_REPORT_RU.md), [input test](STAGE10_REPORT_RU.md),
-[native binding](STAGE9_REPORT_RU.md), [startup](STAGE8_REPORT_RU.md).
+**Текущий этап:** [STAGE13_REPORT_RU.md](STAGE13_REPORT_RU.md) — отдельный raw RAM
+input observer для 16 органов управления, POWER/HOLD/volume chords. Новый BIN
+VM_TESTED_ONLY; [инструкция](examples/raw_input/README_RU.md). Запись в SPMPRAW.CSV
+сохраняет upstream/cooked слои и PRE перед системным вызовом.
+[Пользовательский журнал SD0](STAGE12_REPORT_RU.md), [SD0 fix](STAGE11_REPORT_RU.md),
+[native binding](STAGE9_REPORT_RU.md). OEM exports остаются 291.
 Псевдокод: `decompiled/`. Предыдущие результаты:
 [память/ресурсы/возврат](STAGE5_REPORT_RU.md),
 [файлы/графика/ввод](STAGE4_REPORT_RU.md),

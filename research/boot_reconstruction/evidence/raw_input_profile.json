@@ -1,0 +1,33 @@
+{
+  "source_sha256": "5529b173b3fb612b2e7f516af807f1342d24ea6f7101be034e1e0d08fed25c4e",
+  "prefixes": [
+    {
+      "name": "state_get",
+      "address": 2960960,
+      "bytes": 16,
+      "crc32": 739610022
+    },
+    {
+      "name": "event_set",
+      "address": 2960976,
+      "bytes": 20,
+      "crc32": 3268351831
+    },
+    {
+      "name": "collector",
+      "address": 2961004,
+      "bytes": 32,
+      "crc32": 1866029003
+    }
+  ],
+  "literals": {
+    "0x2d2e4c": 5595460,
+    "0x2d2e60": 5595464,
+    "0x2d2f4c": 5595464,
+    "0x2d2f50": 5595460
+  },
+  "state_address": 5595460,
+  "event_address": 5595464,
+  "log_path": "/fat20a0/hda0/SPMPRAW.CSV",
+  "limits": "Non-atomic read-only MMI RAM snapshots; not GPIO or all physical buttons. CRC checks are compatibility checks."
+}

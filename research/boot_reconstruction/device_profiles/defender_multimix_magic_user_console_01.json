@@ -44,7 +44,21 @@
     "BACK"
   ],
   "user_confirmed_present_not_prompted": [
+    "HOLD",
     "VOLUME_UP",
     "VOLUME_DOWN"
-  ]
+  ],
+  "physical_label_clarifications": {
+    "legacy_BACK_prompt": "POWER short: stock application/emulator menu",
+    "HOLD": "Separate physical button; long toggles keyboard lock, short requested for app use",
+    "physical_controls_count": 16
+  },
+  "requested_future_bindings": {
+    "hold_short": "App action pending raw code/behavior discovery",
+    "select_volume_plus": "Brightness increase; not implemented by diagnostic",
+    "select_volume_minus": "Brightness decrease; not implemented by diagnostic",
+    "hold_long": "Preserve stock keyboard lock/unlock",
+    "power_short": "Stock application/emulator menu",
+    "power_long": "Stock power off; excluded from guided test"
+  }
 }

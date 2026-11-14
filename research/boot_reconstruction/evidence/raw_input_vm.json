@@ -1,0 +1,406 @@
+{
+  "execution": "Compiled ARM926 raw RAM observer, synthetic clock/input/SD/graphics",
+  "case_count": 29,
+  "package": {
+    "status": "EXPERIMENTAL_RAM_NGAME_VM_ONLY",
+    "source_elf_sha256": "d2ec6067b3d368dc638a816f051d66dab46e18477f8b6b5baca11fa8d53e3a06",
+    "container_sha256": "d35f6a13564c8abdb206c2da2fc9eae626e2153ae05accd9ef581d6eaee2ec80",
+    "payload_sha256": "35147bcdc8fb70423afbe41bc77d959cd30416cfe137b3c6f69c90f95a1d308a",
+    "container_bytes": 9888,
+    "payload_bytes": 9760,
+    "header_bytes": 128,
+    "tail_bytes": 0,
+    "lcm_index": 5,
+    "entry": "0xa00000",
+    "runtime_end": "0xa026e8",
+    "bss_bytes": 200,
+    "structural_check": {
+      "payload_bytes": 9760,
+      "extra_bytes": 0,
+      "lcm_index": 5,
+      "limits": "Structural match only; entry ABI, code, API tables and target RAM are not certified.",
+      "status": "structural_match",
+      "decoded_prefix_bytes": 1024
+    },
+    "limits": [
+      "Own header; no private game header or assets copied.",
+      "LCM byte 5 is observed in user working game, not a verified universal panel descriptor.",
+      "Top-level loader structural acceptance does not certify frontend metadata, hardware or RTOS behavior.",
+      "RAM application, no Flash/NAND image or write path."
+    ]
+  },
+  "cases": [
+    {
+      "case": "hidden_guided",
+      "status": 0,
+      "polls": 80,
+      "getkeys_calls": 81,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 16631,
+      "input_ram_reads": {
+        "0x556144": 243,
+        "0x556148": 243
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "bb023f5572e3a670f8d048237c96a903d0232e567ff77f54fbcf0165cc5aaece"
+    },
+    {
+      "case": "chord_raw",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 5767,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "f531a5737e43581ab6f443b20de8431bb880835e15e2358219eca2ce5b690ec7"
+    },
+    {
+      "case": "cooked_pair",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 5767,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "35f950777b790dbe03ce651f55db9eaf8f991973ad19477ac35d03642a3f4fde"
+    },
+    {
+      "case": "short_write",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 5767,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "cec4e351b678bcd7e5a2714636efa8cdf1926c9c47fbd65a8545d8651d51b5aa"
+    },
+    {
+      "case": "clock_wrap",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 5767,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "cec4e351b678bcd7e5a2714636efa8cdf1926c9c47fbd65a8545d8651d51b5aa"
+    },
+    {
+      "case": "held_raw_launcher",
+      "status": 2,
+      "polls": 0,
+      "getkeys_calls": 2,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 786,
+      "input_ram_reads": {
+        "0x556144": 6,
+        "0x556148": 6
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "7a10d865caec6238f8619b2b0c7fa90160fc38112bf6464ef9b2dd065c793673"
+    },
+    {
+      "case": "pause_gap",
+      "status": 0,
+      "polls": 15,
+      "getkeys_calls": 16,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 4531,
+      "input_ram_reads": {
+        "0x556144": 48,
+        "0x556148": 48
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": true,
+      "file_sha256": "315cde1aed5d7e98891ea4ba4f1ae2defd370ce81e475b8e9423b2fe6fdfdaf3"
+    },
+    {
+      "case": "keys_error",
+      "status": 2,
+      "polls": 0,
+      "getkeys_calls": 2,
+      "log_status": 0,
+      "log_errno": 0,
+      "logged_bytes": 716,
+      "input_ram_reads": {
+        "0x556144": 6,
+        "0x556148": 6
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "406fb7187ea4b5ba2cf6d33e2120a258dc4127133303eb48738d50c09c128c10"
+    },
+    {
+      "case": "no_sd",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 1,
+      "log_errno": 2,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "seek",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 2,
+      "log_errno": 5,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "write",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 3,
+      "log_errno": 28,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "zero_write",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 3,
+      "log_errno": 0,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "close",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 4,
+      "log_errno": 9,
+      "logged_bytes": 196,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "08b6f379bc916aa7bb9e57905b687bd4fa22718f9f52ac9716d3cc876741f90a"
+    },
+    {
+      "case": "file_limit",
+      "status": 0,
+      "polls": 20,
+      "getkeys_calls": 21,
+      "log_status": 5,
+      "log_errno": 0,
+      "logged_bytes": 0,
+      "input_ram_reads": {
+        "0x556144": 63,
+        "0x556148": 63
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "8400ac5c1b08375626f3bbd3b380f36a6cb29276bf31615d302f6f0619a16170"
+    },
+    {
+      "case": "stalled_clock",
+      "status": 0,
+      "polls": 4000,
+      "getkeys_calls": 4001,
+      "log_status": 5,
+      "log_errno": 0,
+      "logged_bytes": 65476,
+      "input_ram_reads": {
+        "0x556144": 12003,
+        "0x556148": 12003
+      },
+      "previous_content_preserved": true,
+      "close_attempted_for_every_open": true,
+      "fg_restored": true,
+      "pause_pre_record_verified": false,
+      "file_sha256": "2e4626cedac018537b72a1747218a3cffed0f33b776d2dc09684f287d0ecc52b"
+    },
+    {
+      "case": "input_prefix_0",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "input_prefix_1",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "input_prefix_2",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "input_prefix_3",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "input_prefix_4",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "input_prefix_5",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "input_prefix_6",
+      "status": 2311,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_prefix_0",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_prefix_1",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_prefix_2",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_literal_0x2d2e4c",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_literal_0x2d2e60",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_literal_0x2d2f4c",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    },
+    {
+      "case": "raw_literal_0x2d2f50",
+      "status": 2312,
+      "bss_untouched": true,
+      "api_calls": 0,
+      "input_ram_reads": 0
+    }
+  ],
+  "limits": [
+    "No console/GPIO accessed. Input RAM and every OS/graphics/filesystem callback are simulated.",
+    "RAM snapshots execute compiled code; app stores limited to its BSS/inherited stack."
+  ]
+}

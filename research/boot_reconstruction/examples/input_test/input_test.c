@@ -41,7 +41,7 @@ static int log_line(const struct input_state *s,const struct input_services *io)
  if(s->log_status>=1&&s->log_status<=4)return number_line(io,118,label[s->log_status],s->log_errno);
  return line(io,118,log_caption(s));
 }
-static void journal(struct input_state *s,const struct input_services *io,const char *row)
+void input_journal_append(struct input_state *s,const struct input_services *io,const char *path,const char *row)
 {
  if(s->log_status)return;
  uint32_t n=length(row);
@@ -49,7 +49,7 @@ static void journal(struct input_state *s,const struct input_services *io,const 
  /* O_WRONLY|O_CREAT, no TRUNC. Seek to end explicitly before every record.
   * Absolute SD path only; never the native fsOpen prefix or internal fallback.
   */
- int32_t fd=io->open(input_log_path,0xau,0600u);
+ int32_t fd=io->open(path,0xau,0600u);
  if(fd<0){s->log_errno=io->error_number();s->log_status=INPUT_LOG_OPEN_ERROR;return;}
  int32_t end=io->seek(fd,0,2);
  if(end<0){s->log_errno=io->error_number();s->log_status=INPUT_LOG_SEEK_ERROR;}
@@ -64,6 +64,8 @@ static void journal(struct input_state *s,const struct input_services *io,const 
  if(io->close(fd)<0&&s->log_status==INPUT_LOG_OK){s->log_errno=io->error_number();s->log_status=INPUT_LOG_CLOSE_ERROR;}
  if(s->log_status==INPUT_LOG_OK)s->log_records++;
 }
+static void journal(struct input_state *s,const struct input_services *io,const char *row)
+{input_journal_append(s,io,input_log_path,row);}
 static void event(struct input_state *s,const struct input_services *io,const char *kind)
 {
  char row[128];char *p=copy(row,kind);*p++=',';p=hex32(p,s->polls);*p++=',';

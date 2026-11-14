@@ -17,7 +17,12 @@ uint32_t spmp_input_preflight_extra(void)
   }
   if((~crc)!=input_prefixes[i].crc32)return 0x907;
  }
+#ifdef SPMP_RAW_BUILD
+ extern uint32_t spmp_raw_preflight(void);
+ return spmp_raw_preflight();
+#else
  return 0;
+#endif
 }
 static uint32_t error_number(void)
 {

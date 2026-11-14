@@ -84,6 +84,25 @@ jobs:
             research/boot_reconstruction/examples/input_test/README_RU.md
             research/boot_reconstruction/examples/input_test/preview.png
             research/boot_reconstruction/tools/input_log_decode.py
+      - name: Build raw input observer and verify ARM RAM snapshots
+        run: make -C research/boot_reconstruction arm-raw-check ARM_VM_PYTHON=/tmp/spmp-startup-vm/bin/python
+      - name: Save raw key test package and decoder
+        uses: actions/upload-artifact@v4
+        with:
+          name: spmp-keys-raw-vm-tested
+          retention-days: 14
+          path: |
+            research/boot_reconstruction/build/raw_input/SPMP_KEYS_RAW.bin
+            research/boot_reconstruction/build/raw_input/raw.elf
+            research/boot_reconstruction/build/raw_input/raw.map
+            research/boot_reconstruction/build/raw_input/raw_package.json
+            research/boot_reconstruction/build/raw_input/raw_vm.json
+            research/boot_reconstruction/build/raw_input/preview.ppm
+            research/boot_reconstruction/build/raw_input/example.csv
+            research/boot_reconstruction/build/raw_input/example_decoded.json
+            research/boot_reconstruction/examples/raw_input/README_RU.md
+            research/boot_reconstruction/examples/raw_input/preview.png
+            research/boot_reconstruction/tools/raw_log_decode.py
       - name: File manager component checks
         run: |
           for n in 01 02 03 04 05; do
